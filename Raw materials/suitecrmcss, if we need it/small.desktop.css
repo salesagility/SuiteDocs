@@ -1,0 +1,34 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+.gkPage {
+	padding: 0 10px;
+}
+
+.imageBg #gkHeaderMod {
+	padding: 120px 0 90px 0;
+}
+
+#gkFooter {
+	text-align: center;
+}
+
+#gkFooterNav,
+#gkCopyrights {
+	clear: both;
+	display: block;
+	float: none!important;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+#gkFooterNav > ul {
+	display: inline-block;
+}

@@ -1,0 +1,276 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+/* Base for all menus */
+#gkMainMenu,
+.imageBg #gkMenuWrap #gkMainMenu {
+	float: right;
+	padding: 0;
+	width: auto;
+}
+.imageBg #gkMainMenu {
+	margin: 11px 0 0 0;
+}
+#gkMainMenu,
+#gkMenuWrap #gkMainMenu {
+	margin-top: 0;
+}
+#gkMainMenu .gkMenu {
+	display: block;
+	margin: 0;
+	position: relative;
+}
+.gkMenu > ul > li {
+	clear: none!important;
+	float: left;
+	font-size: 13px;
+	font-weight: 600;
+	height: 70px;
+	line-height: 70px;
+	text-transform: uppercase;
+	width: auto;
+}
+.gkMenu > ul > li > a,
+.imageBg #gkMenuWrap .gkMenu > ul > li > a {
+	color: #333;
+	display: block;
+	height: 70px;
+	line-height: 70px;
+	padding: 0 13px;
+}
+
+.imageBg .gkMenu > ul > li > a {
+	color: #fff;
+}
+.gkMenu > ul > li a small {
+	display: block;
+	font-size: 11px;
+	line-height: 12px;
+}
+.gkMenu > ul > li > .childcontent,
+.gkMenu > ul > li > .childcontent .childcontent {
+	-webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, .26);
+	-moz-box-shadow: 0 5px 6px rgba(0, 0, 0, .26);
+	box-shadow: 0 5px 6px rgba(0, 0, 0, .26);
+	position: absolute;
+	left: -999em;
+	z-index: 999;
+}
+.gkMenu > ul > li > .childcontent .gkcol {
+	float: left;
+}
+.gkMenu > ul > li:hover > .childcontent,
+.gkMenu > ul > li:hover > .childcontent li:hover > .childcontent {
+	left: inherit;
+}
+.gkMenu > ul > li .childcontent {
+	margin-left: 0;
+	margin-top: 0;
+}
+.gkMenu > ul > li .childcontent .childcontent {
+	margin-left: 160px;
+	margin-top: -35px!important;
+}
+
+/* main menu CSS */
+.gkMenu > ul {
+	margin: 0;
+	padding: 0;
+}
+.gkMenu ul li {
+	clear: both;
+	font-size: 13px;
+	line-height: 30px;
+	margin: 0;
+}
+.gkMenu > ul > li {
+	float: left;
+}
+.gkMenu > ul > li.active > a {
+	color: #fec54c;	
+}
+.gkMenu > ul > li > a {
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+	    -ms-transition: all 0.3s ease-out;
+	        transition: all 0.3s ease-out;
+}
+.gkMenu a:hover,
+.gkMenu a:active,
+.gkMenu a:focus,
+.gkMenu li.active > a {
+	color: #fec54c;
+}
+.gkMenu > ul li div.childcontent {
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: 0;
+	text-transform: none;
+}
+.gkMenu > ul li div.childcontent-inner {
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.gkMenu > ul li > .childcontent .gkcol {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-bottom: 0;
+}
+.gkMenu > ul li div.childcontent li {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-weight: 400;
+	margin: 0;
+	padding: 0 20px;  
+	-webkit-transition: background .2s ease-out;
+	-moz-transition: background .2s ease-out;
+	-ms-transition: background .2s ease-out;
+	-o-transition: background .2s ease-out;
+	transition: background .2s ease-out;
+}
+.gkMenu > ul li div.childcontent li:hover {
+	 background: #fec54c;
+}
+.gkMenu > ul li div.childcontent li:hover > a {
+	border-top-color: #fec54c;
+}
+.gkMenu > ul li div.childcontent li:hover + li > a {
+	border-top-color: #fff;
+}
+.gkMenu > ul li div.childcontent li:hover > a,
+.gkMenu > ul li div.childcontent li:hover > a small {
+	color: #fff;	
+	-webkit-transition: color .2s ease-out;
+	-moz-transition: color .2s ease-out;
+	-ms-transition: color .2s ease-out;
+	-o-transition: color .2s ease-out;
+	transition: color .2s ease-out;
+}
+.gkMenu > ul li div.childcontent li:first-child > a { 
+	border: none;
+}
+.gkMenu > ul li div.childcontent a {
+	border-top: 1px solid #eee;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #555;
+	display: block;
+	padding: 7px 0; 
+}
+.gkMenu > ul li li div.childcontent small {
+	color: #aaa;
+	font-weight: normal;
+	padding-bottom: 5px;
+}
+.gkMenu > ul li div.childcontent li.group {
+	padding: 0;
+	margin: 0;
+	height: auto;
+	border: none !important;
+	background: none;
+}
+.gkMenu > ul li div.childcontent header {
+	padding: 10px 16px 6px 16px;
+	display: block;
+	color: #fff;
+	margin: 0;
+	font-weight: 400!important;
+}
+.gkMenu > ul li div.childcontent header a {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px 0 4px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #e5e5e5;
+}
+.gkMenu > ul li div.childcontent header small {
+	display: block;
+	text-transform: none;
+}
+.gkMenu .childcontent.active,
+.gkMenu > ul > li:hover > .childcontent {
+    pointer-events: auto;
+}
+.gkMenu .childcontent {
+    pointer-events: none;
+}
+.gkMenu li .module p {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+/* hide mobile menu */
+#gkMobileMenu {
+	display: none;
+}
+
+/* normal menu */
+#gkHeader > div:first-child {
+	background: #fff;
+	-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+	box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+	min-height: 70px;
+}
+
+.imageBg #gkHeader > div {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	min-height: auto;
+}
+
+.imageBg #gkHeader > div:first-child {
+	background: transparent;
+}
+
+/* Fixed menu */
+#gkMenuWrap {
+    background: #fff;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+    height: 70px;
+    left: 0;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    z-index: 1001;
+}
+.imageBg #gkMenuWrap {
+    -webkit-transition: top .2s ease-out;
+    -moz-transition: top .2s ease-out;
+    -ms-transition: top .2s ease-out;
+    -o-transition: top .2s ease-out;
+    transition: top .2s ease-out;
+}
+#gkMenuWrap.active {
+	top: 0;
+}
+#gkHeader.gkNoMenu {
+	padding-top: 70px;
+}
+#gkMenuWrap .gkMenu a:hover,
+#gkMenuWrap .gkMenu a:active,
+#gkMenuWrap .gkMenu a:focus,
+#gkMenuWrap .gkMenu li.active > a,
+#gkMenuWrap .gkMenu > ul > li.active > a {
+	color: #fec54c;
+}
+#gkMenuWrap .gkMenu ul ul li:hover > a {
+	color: #fff!important;
+}

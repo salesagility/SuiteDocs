@@ -1,0 +1,154 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+.gkPage {
+	padding: 0 20px;
+}
+.itemsContainer .itemsContainerWrap, 
+.itemContainer .itemsContainerWrap {
+	margin: 0!important;	
+}
+.nsphover .nspHoverOverlay {
+	display: none;
+}
+#gkContentWrap > section:first-child {
+	padding-top: 20px;
+}
+#k2Container article header h2 {
+	font-size: 32px;
+	line-height: 32px;
+}
+.demo-typo-col2,
+.demo-typo-col3,
+.demo-typo-col4 {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+.imageBg #gkHeaderMod {
+	padding: 70px 0 50px 0;
+}
+.imageBg #gkHeaderMod input[type="email"] {
+	width: 290px;
+}
+.gkIcons > div {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	max-width: 300px;
+	width: 100%;
+}
+.imageBg #gkHeaderMod h1 {
+	font-size: 28px;
+}
+.imageBg #gkHeaderMod h2 {
+	font-size: 17px;
+	line-height: 16px;
+}
+.imageBg #gkHeaderMod .gk-form {
+	width: 300px;
+}
+.imageBg #gkHeaderMod input[type="email"] {
+	margin-bottom: 10px;
+	width: 300px;
+}
+.imageBg #gkHeaderMod input[type="submit"] {
+	margin: 0; 
+	width: 300px;
+}
+.gkNspPM-NewsGallery .gkImagesWrapper > a { 
+	padding: 0 3px;
+}
+.gkNspPM-NewsGallery .gkImagesWrapper > a img {
+	padding: 3px;
+}
+.gkTestimonials > div {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	max-width: 300px;
+	width: 100%;
+}
+.gkHorizontalSlideLeftColumn {
+	width: 63%;
+}
+.gkHorizontalSlideRightColumn {
+	width: 35%;
+}
+.gkButtonArea {
+	text-align: center;
+}
+.gkButtonArea h3 {
+	text-align: center;
+	width: 100%;
+}
+.gkButtonArea a {
+	display: inline-block;
+	float: none;
+	margin: 10px 0 0 0;
+}
+.gkPriceTable dl {
+	padding: 20px 10px;
+}
+.gkPriceTable dt {
+	font-size: 22px;
+}
+.gkPriceTable dl.gkPremium dd.gkPrice {
+	font-size: 40px;
+}
+.gkPriceTable dl dd.gkPrice {
+	font-size: 32px;
+}
+.gkPriceTable dl.gkPremium dd {
+	padding: 5px 0;
+}
+.gkPriceTable dd a {
+	margin: 10px 0;
+	padding: 0 20px;
+}
+.gkPriceTable dl.gkPremium {
+	margin-top: -2px;
+}
+@media (max-width: 660px) {
+    body #cc-notification h2, 
+    body #cc-notification h3, 
+    body #cc-notification p {
+        font-size: 12px!important;
+        margin-bottom:0!important;
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+
+    body #cc-notification h2 span, 
+    body #cc-notification h2 {
+        font-size: 12px!important;
+    }
+
+    body #cc-notification #cc-notification-wrapper {
+        padding: 10px 32px 0!important;
+    }
+
+    body #cc-notification ul.cc-notification-buttons {
+        clear: both!important;
+        width: 100%!important;
+        position: static!important;
+        text-align: center;
+    }
+
+    body #cc-notification ul.cc-notification-buttons li {
+        float: none!important;
+        display: inline-block;
+    }
+
+    body #cc-notification a, 
+    body #cc-notification a:visited {
+        font-size: 12px!important;
+    }
+}

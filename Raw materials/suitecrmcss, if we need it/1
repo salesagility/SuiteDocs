@@ -1,0 +1,385 @@
+simplcity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+/* Here you can include your override CSS styles */
+
+.gkMenu li.active > a {
+
+    color:#c93265;
+
+}
+
+#gkMenuWrap .gkMenu > ul > li.active > a {
+    color: #c93265;
+}
+
+#gkMenuWrap .gkMenu > ul > li:hover > a {
+    color: #c93265;
+}
+
+#gkMenuWrap .gkMenu > ul > li:hover {
+    color: #c93265;
+}
+
+.imageBg #gkHeader {
+    background: #000 url('http://www.sugarcrmdev.co.uk/suitenew/images/stampcard.png') no-repeat center 0;
+    background-attachment: fixed;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+.gkButtonArea {
+    padding:50px 000;
+}
+
+.gkIcons > div p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#gkLogo {
+    margin:15px 000;
+}
+
+.gkPriceTable dl.gkPremium {
+    background:#c93265
+}
+
+.gkMenu li.active > a {
+
+    color:#c93265;
+
+}
+
+#gkMenuWrap .gkMenu > ul > li.active > a {
+    color: #c93265;
+}
+
+#gkMenuWrap .gkMenu > ul > li:hover > a {
+    color: #c93265;
+}
+
+#gkMenuWrap .gkMenu > ul > li:hover {
+    color: #c93265;
+}
+
+.imageBg #gkHeader {
+    background: #000 url('http://www.sugarcrmdev.co.uk/suitenew/images/stampcard.png') no-repeat center 0;
+    background-attachment: fixed;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+
+.gkButtonArea {
+    padding:50px 000;
+}
+
+.gkIcons > div p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#gkLogo {
+    margin:15px 000;
+}
+
+.gkPriceTable dl.gkPremium {
+    background:#c93265
+}
+.gkMenu li.active > a {
+
+    color:#c93265;
+
+}
+
+#gkMenuWrap .gkMenu > ul > li.active > a {
+    color: #c93265;
+}
+
+#gkMenuWrap .gkMenu > ul > li:hover > a {
+    color: #c93265;
+}
+
+#gkMenuWrap .gkMenu > ul > li:hover {
+    color: #c93265;
+}
+
+.imageBg #gkHeader {
+    background: #000 url('http://www.sugarcrmdev.co.uk/suitenew/images/stampcard.png') no-repeat center 0;
+    background-attachment: fixed;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.gkButtonArea {
+    padding:50px 000;
+}
+
+.gkIcons > div p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#gkLogo {
+    margin:15px 000;
+}
+
+.gkPriceTable dl.gkPremium {
+    background:#c93265
+}
+.gkPriceTable .gkPremium dd a {
+    background:#eeeeee;
+    color:#565656;
+}
+
+.gkPriceTable dd a {
+    background: #c93265;
+}
+
+.gkPriceTable dd a:hover {
+    background: #565656;
+}
+
+.gkPriceTable dd.gkPrice {
+    /* color: #fec54d; */
+}
+.gkPriceTable dd.gkPrice {
+    color: #c93265;
+    font-size: 68px;
+    font-weight: 600;
+}
+
+.gkMenu > ul > li.active > a {
+    color:#c93265;
+}
+
+.gkMenu > ul > li.active > a:hover {
+    color:#565656;
+}
+
+.level1 > li:hover {
+    background:#c93265;
+}
+
+.imageBg #gkHeaderMod input[type="submit"] {
+    background: #c93265;
+}
+.imageBg #gkHeaderMod input[type="submit"]:active,
+.imageBg #gkHeaderMod input[type="submit"]:focus,
+.imageBg #gkHeaderMod input[type="submit"]:hover {
+    background: #565656;
+}
+
+.imageBg #gkHeaderMod .gk-video-link:hover {
+    color: #c93265;
+}
+
+#gkHeader .gkPage { max-width: none; width: 100%;}
+#gkHeader { padding: 0; }
+
+#sliderTextPosition{
+    position:absolute;
+    right:29px;
+    z-index:1000;
+    top: 15%;
+    width:55%;
+    height:30px;
+    padding:1px 0 0 16px;
+    text-align:center;
+}
+
+.sliderTextFormat{
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: 400px;
+    line-height: 56px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.sliderTextFormat small{
+    font-size: 20px;
+    color: #cccccc;
+
+}
+
+.bannerTextFormat{
+    color:#FFFFFF;
+    font-size:30px;
+    padding-top:90px;
+}
+
+.bannerTextPosition{
+    float:right;
+    z-index:1000;
+    width:50%;
+    height:558px;
+    padding:1px 0 0 16px;
+    text-align:center;
+}
+
+button, .button, input.button, span.button, button.button, div.button, input[type="submit"], input[type="button"], .pagenav-prev a, .pagenav-next a, .readon {
+    background: none repeat scroll 0 0 #c93265;
+}
+
+#sliderTextPosition input[type="submit"] {
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #C93265;
+    border: medium none !important;
+    border-radius: 3px;
+    display: list-item;
+    float: none;
+    font-size: 22px;
+    font-weight: 200;
+    height: 45px;
+    margin: 5px 0 0 9px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+#sliderTextPosition div{
+	margin-top:10px;
+}
+
+#sliderTextPosition div a {
+-moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #C93265;
+    border: medium none !important;
+    border-radius: 3px;
+    font-size: 22px;
+    font-weight: 200;
+    height: 45px;
+    margin: 5px 0 0 9px;
+    padding: 12px 25px;
+    line-height:22px;
+    width:30%;
+    text-align:center;
+    margin: 3px auto;
+    color:#FFF;
+}
+
+#sliderTextPosition a:hover {
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #777777;
+}
+
+#gkHeader {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.gkButtonArea a {
+    background: none repeat scroll 0 0 #C93265;
+}
+
+.gkButtonArea a:hover {
+    background: none repeat scroll 0 0 #C93265;
+}
+
+.gkCrop {
+    background-image: url('../images/line_chart.png');
+}
+	.active > a {
+        color: #C93265;
+}
+.gkMenu a:hover,
+.gkMenu a:active,
+.gkMenu a:focus,
+.gkMenu li.active > a {
+        color: #C93265;
+}
+.gkMenu > ul li div.childcontent li:hover {
+         background: #C93265;
+}
+.gkMenu > ul li div.childcontent li:hover > a {
+        border-top-color: #C93265;
+}
+#gkMenuWrap .gkMenu a:hover,
+#gkMenuWrap .gkMenu a:active,
+#gkMenuWrap .gkMenu a:focus,
+#gkMenuWrap .gkMenu li.active > a,
+#gkMenuWrap .gkMenu > ul > li.active > a {
+        color: #C93265;
+}
+.gkCrop:hover {
+    background-color: #C93265;
+}
+.gkRocket {
+    background-image: url('../images/costs.png');
+}
+.gkRocket:hover {
+    background-color: #C93265;
+}
+.gkMobile {
+    background-image: url('../images/security.png');
+}
+
+.gkMobile:hover {
+    background-color: #C93265;
+}
+
+#gkMenuWrap .gkMenu a:hover, #gkMenuWrap .gkMenu a:active, #gkMenuWrap .gkMenu a:focus, #gkMenuWrap .gkMenu li.active > a, #gkMenuWrap .gkMenu > ul > li.active > a {
+    color: #C93265;
+}
+
+.sideBarRelated{
+border-bottom: 1px solid #E5E5E5;
+margin-bottom: 10px;
+}
+
+.sideBarRelated a {
+    background: none repeat scroll 0 0 #C93265;
+}
+
+.sideBarRelated a {
+
+    background: none repeat scroll 0 0 #C93265;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 54px;
+    line-height: 55px;
+    padding: 6px 10px;
+    transition: background 0.3s ease-out 0s;
+}
+
+.sideBarRelated p {
+
+margin: 0;
+}
+#gkSidebar .box a {
+    color: #FFFFFF;
+}
+
+.gkTestimonials figcaption{
+border: 0px;
+}
+
+.gkTestimonials p{
+text-align:right;
+font-weight:bold;
+}
+
+
+@media (max-width: 640px){
+	{
+	#sliderTextPosition div{
+		display:none;}
+}	
+
+}
+(min-width: 641px) and (max-width: 800px)
+(min-width: 801px) and (max-width: 1024px)
+(min-width: 1025px)
+

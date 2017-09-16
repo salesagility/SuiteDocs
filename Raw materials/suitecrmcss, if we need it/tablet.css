@@ -1,0 +1,369 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+body {
+	font-size: 14px;
+}
+.gkPage {
+	padding: 0 15px;
+}
+/* Containers */
+#gkPageContent {
+	background-image: none!important;
+}
+#gkContent, 
+#gkSidebar,
+#gkContentWrap {
+	width: 100% !important;
+}
+#gkContentWrap {
+	margin-top: 20px;
+	padding: 0!important;
+}
+#gkSidebar .box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px!important;
+}
+#gkSidebar {
+	padding: 0!important;
+}
+#gkSidebar .box:first-child {
+	padding-top: 10px!important;
+}
+#gkSidebar .box {
+	border-top: none!important;
+	float: left;
+	margin-top: 0!important;
+	margin-bottom: 30px!important;
+	width: 50%;
+}
+#gkSidebar.gkOnlyOne .box,
+#gkInset.gkOnlyOne .box {
+	width: 100%!important;
+}
+
+#gkSidebar .box:nth-child(2n+1) {
+	clear: both!important;
+}
+
+/* Limitation suffixes */
+.onlydesktop {
+	display: none!important;
+}
+.notablet {
+	display: none!important;
+}
+.nomobile {
+	display: block!important;
+}
+.onlytablet {
+	display: block!important;
+}
+.onlymobile {
+	display: none!important;
+}
+.notablet.nomobile {
+	display: none!important;
+}
+
+/* Fix for the contact page */
+.contact .contact-image {
+	float: left !important;
+}
+.contact .contact-address {
+	clear: both !important;
+	padding-top: 20px !important;
+}
+.contact .contact-form input[type="text"],
+.contact .contact-form input[type="email"],
+.contact .contact-form textarea {
+	width: 100% !important;
+}
+
+/* K2 edit popup */
+#sbox-window,
+#sbox-window iframe {
+	width: 720px!important;
+	max-width: 720px!important;
+	left: 10px!important;
+}
+
+/* menu */
+#gkMobileMenu {
+	background: transparent url('../images/tablet_menu.png') no-repeat 0 0;
+	float: right;
+	margin: 24px 0 0 0;
+	position: relative;
+}
+#gkExtraMenu {
+	display: none!important;
+}
+#gkMainMenu {
+	display: none;
+}
+#gkMobileMenu select {
+	width: 44px;
+	height: 44px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#gkMobileMenu {
+	display: block!important;
+	font-size: 18px;
+	height: 44px;
+	line-height: 44px;
+	position: relative;
+	text-indent: -9999px;
+	width: 44px;
+}
+#gkMenuWrap #gkMobileMenu {
+	background: transparent url('../images/tablet_menu_white.png') no-repeat 0 0;
+	margin: 13px 0 0 0;
+}
+
+/* top/bottom modules */
+
+/* 4-column layout */
+body .gkCols4 .box {
+	margin-bottom: 30px!important;
+}
+body .gkCols4 .box.gkmod-1 {
+	width: 100%;	
+}
+body .gkCols4 .box.gkmod-2 {
+	width: 50%;
+}
+body .gkCols4 .box.gkmod-3 {
+	width: 50%;
+}
+body .gkCols4 .box.gkmod-4,
+body .gkCols4 .box.gkmod-more {
+	width: 50%;
+}
+body .gkCols4 .box:nth-child(2n+1) {
+	clear: both;
+}
+body .gkCols4 .box.gkmod-more.gkmod-last-1:last-child {
+	width: 100%!important;
+}
+body .gkCols4 .box.gkmod-more.gkmod-last-2:last-child,
+body .gkCols4 .box.gkmod-more.gkmod-last-2:nth-last-child(2) {
+	width: 50%!important;
+}
+body .gkCols4 .box.gkmod-more.gkmod-last-3:last-child,
+body .gkCols4 .box.gkmod-more.gkmod-last-3:nth-last-child(2),
+body .gkCols4 .box.gkmod-more.gkmod-last-3:nth-last-child(3) {
+	width: 50%!important;
+}
+
+/* 6-column layout */
+body .gkCols6 .box {
+	margin-bottom: 30px!important;
+}
+body .gkCols6 .box.gkmod-1 {
+	width: 100%;	
+}
+body .gkCols6 .box.gkmod-2 {
+	width: 50%;
+}
+body .gkCols6 .box.gkmod-3 {
+	width: 33.3%;
+}
+body .gkCols6 .box.gkmod-4,
+body .gkCols6 .box.gkmod-more {
+	width: 33.3%;
+}
+body .gkCols6 .box.gkmod-5,
+body .gkCols6 .box.gkmod-more {
+	width: 33.3%;
+}
+body .gkCols6 .box.gkmod-6,
+body .gkCols6 .box.gkmod-more {
+	width: 33.3%;
+}
+body .gkCols6 .box:nth-child(3n+1) {
+	clear: both;
+}
+body .gkCols6 .box.gkmod-more.gkmod-last-1:last-child {
+	width: 100%!important;
+}
+body .gkCols6 .box.gkmod-more.gkmod-last-2:last-child,
+body .gkCols6 .box.gkmod-more.gkmod-last-2:nth-last-child(2) {
+	width: 50%!important;
+}
+body .gkCols6 .box.gkmod-more.gkmod-last-3:last-child,
+body .gkCols6 .box.gkmod-more.gkmod-last-3:nth-last-child(2),
+body .gkCols6 .box.gkmod-more.gkmod-last-3:nth-last-child(3) {
+	width: 33.3%!important;
+}
+body .gkCols6 .box.gkmod-more.gkmod-last-4:last-child,
+body .gkCols6 .box.gkmod-more.gkmod-last-4:nth-last-child(2),
+body .gkCols6 .box.gkmod-more.gkmod-last-4:nth-last-child(3),
+body .gkCols6 .box.gkmod-more.gkmod-last-4:nth-last-child(4) {
+	width: 33.3%!important;
+}
+body .gkCols6 .box.gkmod-more.gkmod-last-5:last-child,
+body .gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(2),
+body .gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(3),
+body .gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(4),
+body .gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(5) {
+	width: 33.3%!important;
+}
+
+.items-row > div {
+	margin-bottom: 50px;
+	padding: 0!important;
+}
+
+/* Suffixes and other elements */
+
+/* Page elements */
+.imageBg #gkHeader {
+	background-image: url('../images/header_tablet.jpg');
+}
+h1 {
+	font-size: 36px;
+}
+.gkHorizontalSlideLeftColumn {
+	padding-top: 40px;
+}
+#gkHeader {
+	margin-bottom: 20px;
+}
+#gkHeader h1 {
+	font-size: 28px;
+}
+#gkHeader h1 small {
+	font-size: 15px;
+}
+.imageBg #gkHeaderMod h1 {
+	font-size: 44px;
+}
+.imageBg #gkHeaderMod h2 {
+	font-size: 20px;
+}
+.imageBg #gkHeaderMod .gk-form {
+	margin: 36px 0 45px 0;
+}
+.imageBg #gkHeaderMod input[type="email"],
+.imageBg #gkHeaderMod input[type="submit"] {
+	height: 56px;
+}
+.box.centered h2.header {
+	font-size: 36px;
+	line-height: 40px;
+}
+.gkCentered {
+	font-size: 16px;
+}
+.gkIcons > div h2 {
+	font-size: 24px;
+}
+.gkIcons > div p {
+	font-size: 16px;
+}
+.box.centered {
+	padding: 30px 0!important;
+}
+.gkHorizontalSlideLeftColumn h2 {
+	color: #333;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 34px;
+	margin-bottom: 12px;
+}
+.gkNspPM-NewsGallery {
+	padding: 24px 32px;
+}
+.box.layered {
+	padding: 150px 0 30px!important;
+}
+.box.layered .gkTextBlock h2 {
+	font-size: 32px;
+	line-height: 38px;
+	margin-bottom: 18px;
+}
+.box.layered .gkTextBlock p {
+	font-size: 15px;
+	line-height: 22px;
+	margin-bottom: 20px;
+}
+.gkTestimonials > div {
+	padding: 0 15px;
+}
+.gkTestimonials {
+	margin: 30px -15px 0 -15px;
+}
+.gkTestimonials figcaption q {
+	font-size: 15px;
+}
+.gkPriceTable dd.gkPrice {
+	font-size: 56px;
+}
+.gkPriceTable dl.gkPremium dd.gkPrice {
+	font-size: 76px;
+}
+.imageBg #gkHeaderMod input[type="email"]::-webkit-input-placeholder {
+    font-size: 16px;
+}
+.imageBg #gkHeaderMod input[type="email"]:-moz-placeholder {
+    font-size: 16px;
+}
+.imageBg #gkHeaderMod input[type="email"]::-moz-placeholder { 
+    font-size: 16px;
+}
+.imageBg #gkHeaderMod input[type="email"]:-ms-input-placeholder {
+    font-size: 16px;
+}
+.imageBg #gkHeaderMod input[type="email"] {
+	font-size: 16px;
+	width: 360px;
+}
+.imageBg #gkHeaderMod input[type="submit"] {
+	font-size: 22px;
+	margin: 0 0 0 6px;
+	padding: 0 17px;
+}
+.gkHorizontalSlideLeftColumn a.button {
+	margin-top: 0;
+}
+.gkHorizontalSlideLeftColumn p {
+	font-size: 15px;
+}
+.gkHorizontalSlideRightColumn {
+	margin-bottom: -140px;
+}
+#gkMainbody .box.centered {
+	padding-top: 50px!important;
+}
+body .gkPage .box.nomargin {
+	margin: 0!important;
+}
+body .gkPage .box.nomargin.layered {
+	margin-top: -30px!important;
+}
+#gkBottom1, 
+#gkBottom2, 
+#gkBottom3, 
+#gkBottom4, 
+#gkBottom5, 
+#gkBottom6 {
+	padding: 30px 0;
+}
+.gkIconArea {
+	background-size: 100% 100%;
+	height: 220px;
+	width: 220px;
+}

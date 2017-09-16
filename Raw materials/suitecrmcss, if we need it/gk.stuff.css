@@ -1,0 +1,843 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License:  Copyrighted Commercial Software
+# Website:  http://www.gavick.com
+# Support:  support@gavick.com
+ */
+ 
+/*
+ * News Show Pro GK5
+ */
+
+.nspMain { 
+	position: relative;
+}
+
+/* Pagination */
+.nspBotInterface,
+.nspTopInterface { 
+	clear: both; 
+	float: right;
+	margin: 5px 0;
+	overflow: hidden; 
+}
+
+.nspTopInterface {
+	position: absolute;
+	right: 0;
+	top: -57px;
+}
+
+.nspBotInterface .nspPagination {
+	margin-top: 0;
+}
+
+/* 
+	Interface - for different looking Top and Bottom interface use the following classes:  
+	.nspTopInterface
+	.nspBotInterface (e.g.: .nspTopInterface .nspPagination li ...)
+*/
+.nspPagination { 
+	float: left;
+	list-style-type: none!important; 
+	margin: 5px 0 0 0!important; 
+	padding: 0!important; 
+}
+.nspPagination li { 
+	background: #ddd;
+	border: none!important;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	        border-radius: 50%;
+	cursor:pointer; 
+	display: block;
+	float:left; 
+	height: 10px; 
+	margin: 6px 4px 0 0!important; 
+	padding: 0;
+	text-indent:-999em; 
+	width: 10px; 
+}
+.nspPagination li:hover,
+.nspPagination li.active { 
+	background-color: #aaa;
+}
+.nspNext,
+.nspPrev { 
+	background: url('../images/nsp_interface.png') no-repeat -11px 0; 
+	cursor: pointer;
+	float: left; 
+	height: 21px; 
+	margin: 0 4px;
+	text-indent: -999em;
+	width: 11px;
+}
+.nspPrev {
+	background-position: 0 0;
+}
+.nspNext:hover,
+.nspPrev:hover { 
+	background-position: -11px -21px;
+}
+.nspPrev:hover {
+	background-position: 0 -21px;
+}
+
+/* Articles layout */
+.nspArts { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden; 
+	padding: 3px;
+}
+.nspArtPage { 
+	float: left; 
+}
+.nspArt { 
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box; 
+	float:left; 
+}
+.nspArt div { 
+	overflow: hidden; 
+}
+.nspArt h4.nspHeader { 
+	font-size: 24px;
+	margin: 0;
+	padding: 10px 0 15px 0;
+}
+.nspArt h4.nspHeader a { 
+	text-decoration: none;
+}
+.nspArt h4.nspHeader a:hover { }
+.nspArt img.nspImage { 
+	border: none;
+	display: block;
+}
+.nspArt .nspImageWrapper {
+	display: block;
+}
+.nspArt p.nspText { 
+	display: block!important;
+	margin: 0;
+	padding: 0!important;
+}
+.nspArt p.nspText a { }
+.nspArt p.nspText a:hover { }
+.nspArt p.nspInfo {
+	color: #aaa; 
+	display: block!important;
+	font-size: 12px;
+	padding: 5px 0; 
+}
+.nspArt p.nspInfo a { }
+.nspArt p.nspInfo a:hover { }
+.nspArt .tleft { 
+	text-align: left; 
+}
+.nspArt .tright { 
+	text-align: right; 
+}
+.nspArt .tcenter { 
+	text-align: center;
+}
+.nspArt .tjustify { 
+	text-align: justify; 
+}
+.nspArt .fleft { 
+	float: left; 
+}
+.nspArt .fright { 
+	float: right; 
+}
+.nspArt .fnone { 
+	clear: both; 
+	float: none;
+	width: 100%; 
+}
+.readon.left,
+.readon.right,
+.readon.center { 
+	clear: both; 
+}
+.readon.left { 
+	float: left; 
+}
+.readon.right { 
+	float: right; 
+}
+.readon.center { 
+	display: inline; 
+	float: none; 
+}
+.nspAvatar { }
+
+/* Links layout */
+.nspLinks { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 3px;
+}
+.nspList { 
+	float: left; 
+}
+.nspLinks ul { 
+	list-style-type: none!important; 
+	padding: 0!important; 
+}
+.nspLinks .nspLinkScroll1 ul li { 
+	margin: 0!important;
+	padding: 10px 0;
+}
+.nspLinks .nspLinkScroll1 ul li:first-child {
+	border-top: none;
+}
+.nspLinks ul li:hover { }
+.nspLinks ul li h4 { }
+.nspLinks ul li h4 a { 
+	text-decoration: none; 
+}
+.nspLinks ul li h4 a:hover { }
+.nspLinks ul li p { }
+
+/* positioning */
+.nspArts.left { 
+	float: right; 
+}
+.nspLinksWrap.left { 
+	float: left;
+}
+.nspArts.right { 
+	float: left; 
+}
+.nspLinksWrap.right { 
+	float: right; 
+}
+
+/* make element unvisible */
+.nspMain .unvisible {  
+	left: -9999px;  
+	position: absolute; 
+	top: auto; 
+}
+
+/* Responsive layout */
+.gkResponsive img.nspImage,
+img.nspImage.gkResponsive { 
+	height: auto;
+	width: 100%!important; 
+}
+.nspArt img.nspImage { 
+	max-width: 100%; 
+}
+.nspArtScroll1,
+.nspLinkScroll1 { 
+	overflow: hidden;
+	width: 100%; 
+}
+.nspPages1 { width: 100%; }
+.nspPages2 { width: 200%; }
+.nspPages3 { width: 300%; }
+.nspPages4 { width: 400%; }
+.nspPages5 { width: 500%; }
+.nspPages6 { width: 600%; }
+.nspPages7 { width: 700%; }
+.nspPages8 { width: 800%; }
+.nspPages9 { width: 900%; }
+.nspPages10 { width: 1000%; }
+.nspCol1 { width: 100%; }
+.nspCol2 { width: 50%; }
+.nspCol3 { width: 33.3%; }
+.nspCol4 { width: 25%; }
+.nspCol5 { width: 20%; }
+.nspCol6 { width: 16.66%; }
+.nspCol7 { width: 14.285%; }
+.nspCol8 { width: 12.5%; }
+.nspCol9 { width: 11.1%; }
+.nspCol10 { width: 10%; }
+.nspCol11 { width: 9.09%; }
+.nspCol12 { width: 8.33%; }
+.nspCol13 { width: 7.69%; }
+.nspCol14 { width: 7.14%; }
+.nspCol15 { width: 6.66%; }
+.nspCol16 { width: 6.25%; }
+.nspCol17 { width: 5.88%; }
+.nspCol18 { width: 5.55%; }
+.nspCol19 { width: 5.26%; }
+.nspCol20 { width: 5%; }
+
+/* Animation */
+.nspList,
+.nspArtPage { 
+	opacity: 0; 
+	-webkit-transition: opacity 0.5s ease-out; 
+	   -moz-transition: opacity 0.5s ease-out; 
+	    -ms-transition: opacity 0.5s ease-out; 
+      	 -o-transition: opacity 0.5s ease-out; 
+	        transition: opacity 0.5s ease-out;
+}
+.nspList.active,
+.nspArtPage.active { 
+	opacity: 1; 
+}
+
+/* Suffix dark */
+.dark .nspLinks .nspLinkScroll1 ul li {
+	border-top-color: #555;
+}
+
+/* 
+ * Portal Mode - News Gallery 
+ */
+
+.gkNspPM-NewsGallery {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 50px 72px;
+	position: relative;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper {
+	width: 100%;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: none;
+	float: left;
+	padding: 0 12px;
+	position: relative;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-moz-transition: -moz-transform .3s ease-out;
+	-ms-transition: -ms-transform .3s ease-out;
+	-o-transition: -o-transform .3s ease-out;
+	transition: transform .3s ease-out;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a.active {
+	display: block;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a.show {
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols1 > a { width: 100%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols2 > a { width: 50%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols3 > a { width: 33.3%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols4 > a { width: 25%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols5 > a { width: 20%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols6 > a { width: 16.66%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols7 > a { width: 14.28%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols8 > a { width: 12.5%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols9 > a { width: 11.11%; }
+.gkNspPM-NewsGallery .gkImagesWrapper.gkImagesCols10 > a { width: 10%; }
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a img {
+	border: 1px solid #eee;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 10px;
+}
+
+.gkNspPM-NewsGallery .gkPrevBtn,
+.gkNspPM-NewsGallery .gkNextBtn {
+	background: transparent url('../images/news_gallery_interface.png') no-repeat 0 0;
+	height: 41px;
+	margin-top: -21px;
+	position: absolute;
+	text-indent: -9999px;
+	top: 50%;
+	width: 21px;
+}
+
+.gkNspPM-NewsGallery .gkPrevBtn {
+	left: 0;
+}
+
+.gkNspPM-NewsGallery .gkNextBtn {
+	background-position: -21px 0;
+	right: 0;
+}
+
+.gkNspPM-NewsGallery .gkPrevBtn:active,
+.gkNspPM-NewsGallery .gkPrevBtn:focus,
+.gkNspPM-NewsGallery .gkPrevBtn:hover {
+	background-position: 0 -41px;
+}
+
+.gkNspPM-NewsGallery .gkNextBtn:active,
+.gkNspPM-NewsGallery .gkNextBtn:focus,
+.gkNspPM-NewsGallery .gkNextBtn:hover {
+	background-position: -21px -41px;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a > .gkImgOverlay {
+	background: #fff;
+	border: 1px solid #eee;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	filter: alpha(opacity=0);
+	height: 100%;
+	left: 50%;
+	opacity:0; 
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	-webkit-transition: opacity .3s ease-out;
+	-moz-transition: opacity .3s ease-out;
+	-ms-transition: opacity .3s ease-out;
+	-o-transition: opacity .3s ease-out;
+	transition: opacity .3s ease-out;
+	width: 100%;
+	z-index: 1;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a > .gkImgOverlay > span {
+	background: #fec54c url('../images/news_gallery_overlay.png') no-repeat center center;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.gkNspPM-NewsGallery .gkImagesWrapper > a > .gkImgOverlay.active {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.gkNspPM-NewsGallery .gkPagination li { display: inline-block; width: auto; padding: 3px 10px }
+.gkNspPM-NewsGallery .gkPagination li.active { font-weight: bold}
+.gkNspPM-NewsGallery .gkPagination li:hover { cursor: pointer } 
+/* 
+ * Special Typography elements 
+ */
+
+/* Area with button */
+.gkButtonArea {
+	margin: 0 auto;
+	max-width: 780px;
+	padding: 0;
+}
+.gkButtonArea h3 {
+	float: left;
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 30px;
+}
+.gkButtonArea h3 small {
+	clear: both;
+	color: #999;
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0;
+	line-height: 32px;
+}
+.gkButtonArea a {
+	background: #fec54d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font-size: 18px;
+	font-weight: 600;	
+	height: 54px;
+	line-height: 55px;
+	padding: 0 50px;
+	-webkit-transition: background .3s ease-out;
+	-moz-transition: background .3s ease-out;
+	-ms-transition: background .3s ease-out;
+	-o-transition: background .3s ease-out;
+	transition: background .3s ease-out;
+}
+.gkButtonArea a:active,
+.gkButtonArea a:focus,
+.gkButtonArea a:hover {
+	background: #4c90fe;
+	color: #fff;
+}
+
+/* Horizontal slide */
+.gkHorizontalSlide {
+	clear: both;
+}
+.gkHorizontalSlideLeftColumn {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	padding: 120px 0 0 0;
+	width: 38%;
+}
+.gkHorizontalSlideLeftColumn h2 {
+	color: #333;
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 38px;
+	margin-bottom: 40px;	
+}
+.gkHorizontalSlideLeftColumn p {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 28px;
+}
+.gkHorizontalSlideLeftColumn a.button {
+	background: #4c90fe;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 18px;
+	height: 54px;
+	line-height: 55px;
+	margin-top: 20px;
+	padding: 0 36px;
+}
+.gkHorizontalSlideLeftColumn a.button:active,
+.gkHorizontalSlideLeftColumn a.button:focus,
+.gkHorizontalSlideLeftColumn a.button:hover {
+	background: #fec54c;
+}
+.gkHorizontalSlideRightColumn {
+	border-right: 1px solid #ddd;
+	float: right;
+	margin: 0 0 -170px 0;
+	overflow: hidden;
+	padding: 50px 0 60px 0;
+	width: 60%;
+}
+.gkHorizontalSlideRightColumn img {
+	display: block;
+	margin-left: 100%;
+	max-width: 100%;
+	-webkit-transition: margin-left .6s ease;
+	-moz-transition: margin-left .6s ease;
+	-ms-transition: margin-left .6s ease;
+	-o-transition: margin-left .6s ease;
+	transition: margin-left .6s ease;
+}
+.gkHorizontalSlideRightColumn.loaded img {
+	margin-left: 0;
+}
+
+/* Suffix layered */
+.box.layered {
+	margin: -40px 0!important;
+	overflow: hidden;
+	padding: 200px 0 90px!important;
+	position: relative;
+}
+.box.layered .gkTextBlock {
+	max-width: 500px;
+	position: relative;
+	z-index: 2;
+}
+.box.layered .gkTextBlock h2 {
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 48px;
+	margin-bottom: 30px;
+}
+.box.layered .gkTextBlock p {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 28px;
+	margin-bottom: 30px;
+}
+.box.layered .gkImageBlock {
+	left: 0;
+	position: absolute;
+	top: -400px;
+	-webkit-transition: top .6s ease;
+	-moz-transition: top .6s ease;
+	-ms-transition: top .6s ease;
+	-o-transition: top .6s ease;
+	transition: top .6s ease;
+	z-index: 1;
+}
+.box.layered.loaded .gkImageBlock {
+	top: 0;
+}
+
+/* Testimonials */
+.gkTestimonials {
+	margin: 30px -50px 0 -50px;
+}
+.gkTestimonials > div {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	padding: 0 50px;
+	width: 33.3%;
+}
+.gkTestimonials figure {
+	text-align: center;
+}
+.gkTestimonials figure img {
+	border: 28px solid #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 auto -75px auto;
+}
+.gkTestimonials figcaption {
+	background: transparent url('../images/testimonial_quote.png') no-repeat right bottom;
+	border-top: 1px solid #ddd;
+	padding: 66px 0 18px 0;
+	text-align: left;
+}
+.gkTestimonials figcaption q {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 300;
+}
+
+/* Price Table */
+.gkPriceTable {
+	padding: 60px 0 48px 0;
+}
+.gkPriceTable::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+.gkPriceTable.col1 dl {
+	width: 100%;
+}
+.gkPriceTable.col2 dl {
+	float: left;
+	width: 50%;
+}
+.gkPriceTable.col3 dl {
+	float: left;
+	width: 33.3%;
+}
+.gkPriceTable.col4 dl {
+	float: left;
+	width: 25%;
+}
+.gkPriceTable.col5 dl {
+	float: left;
+	width: 20%;
+}
+.gkPriceTable dl {
+	background: #fff;
+	border: 1px solid #ddd;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: -1px;
+	padding: 25px;
+}
+.gkPriceTable.gkWhite dl {
+	background: #f8f8f8;
+}
+.gkPriceTable dt {
+	border-bottom: 1px solid #ddd;
+	font-size: 27px;
+	font-weight: 400;
+	line-height: 65px;
+	margin-top: -20px;
+	text-align: center;
+}
+.gkPriceTable dd {
+	font-size: 16px;
+	font-weight: 36px;
+	padding: 8px 0;
+	text-align: center;
+}
+.gkPriceTable dd a {
+	background: #4c90fe;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 600;	
+	height: 54px;
+	line-height: 55px;
+	margin: 20px auto;
+	padding: 0 50px;
+	-webkit-transition: background .3s ease-out;
+	-moz-transition: background .3s ease-out;
+	-ms-transition: background .3s ease-out;
+	-o-transition: background .3s ease-out;
+	transition: background .3s ease-out;	
+}
+.gkPriceTable dd a:active,
+.gkPriceTable dd a:focus,
+.gkPriceTable dd a:hover,
+.gkPriceTable .gkPremium dd a {
+	background: #fec54d;
+}
+.gkPriceTable .gkPremium dd a:active,
+.gkPriceTable .gkPremium dd a:focus,
+.gkPriceTable .gkPremium dd a:hover {
+	background: #fff;
+	color: #777;
+}
+.gkPriceTable dd.gkPrice {
+	color: #fec54d;
+	font-size: 68px;
+	font-weight: 600;
+}
+.gkPriceTable dd.gkPrice small {
+	color: #999;
+	font-size: 16px;
+	font-weight: 300;
+}
+.gkPriceTable dl.gkPremium {
+	background: #4c90fe;
+	margin: -34px -10px 0 -10px;
+	position: relative;
+	z-index: 1;
+}
+.gkPriceTable dl.gkPremium dt {
+	border-bottom: 1px solid #80b1ff; 
+	color: #fff;
+}
+.gkPriceTable dl.gkPremium dd,
+.gkPriceTable dl.gkPremium dd.gkPrice small {
+	color: #fff;
+}
+.gkPriceTable dl.gkPremium dd.gkPrice {
+	font-size: 90px;
+}
+.gkPriceTable dl.gkPremium dd {
+	font-weight: 400;
+	padding: 10px 0;
+}
+.gkPriceTableAnimated dl {
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: -webkit-transform .6s ease;
+	-moz-transition: -moz-transform .6s ease;
+	-ms-transition: -ms-transform .6s ease;
+	-o-transition: -o-transform .6s ease;
+	transition: transform .6s ease;
+}
+.gkPriceTableAnimated dl.loaded {
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
+}
+/* Disclaimer */
+.gkDisclaimer {
+	color: #999;
+	font-size: 15px;
+	font-weight: 300;
+	text-align: center;
+}
+.gkDisclaimer strong {
+	color: #fec54c;
+	font-size: 25px;
+	font-weight: 600;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+}
+
+/* Icons */
+.gkIcons {
+	margin: 70px 0 0 0;
+}
+.gkIcons > div {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	padding: 0 10px;
+	width: 33.3%;
+}
+.gkIcons > div h2 {
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 38px;
+	margin-bottom: 22px;
+	text-align: center;
+}
+.gkIcons > div p {
+	font-size: 18px;
+	font-weight: 300;
+	text-align: center;
+}
+.gkIconArea {
+	background: transparent url('../images/icon_borders.png') no-repeat 0 0;
+	height: 270px;
+	margin: 0 auto 40px auto;
+	position: relative;
+	width: 270px;
+}
+.gkIconArea > a {
+	height: 126px;
+	left: 50%;
+	margin: -63px 0 0 -63px;
+	position: absolute;
+	text-indent: -9999px;
+	top: 50%;
+	-webkit-transition: all .3s ease-out!important;
+	-moz-transition: all .3s ease-out!important;
+	-ms-transition: all .3s ease-out!important;
+	-o-transition: all .3s ease-out!important;
+	transition: all .3s ease-out!important;
+	width: 126px;
+}
+.gkCrop {
+	background-color: #fff;
+	background-image: url('../images/style1/gkcrop.png');
+	background-position: center top;
+}
+.gkCrop:hover {
+	background-color: #fe654c;
+	background-position: center bottom;
+}
+.gkRocket {
+	background-color: #fff;
+	background-image: url('../images/style1/gkrocket.png');
+	background-position: center top;
+}
+.gkRocket:hover {
+	background-color: #4c90fe;
+	background-position: center bottom;
+}
+.gkMobile {
+	background-color: #fff;
+	background-image: url('../images/style1/gkmobile.png');
+	background-position: center top;
+}
+.gkMobile:hover {
+	background-color: #fec54c;
+	background-position: center bottom;
+}

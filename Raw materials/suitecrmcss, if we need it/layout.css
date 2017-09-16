@@ -1,0 +1,319 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+/* Base elements and classes */
+html {
+	border-bottom: 1px solid transparent;
+	min-height: 100%;
+}
+body > div > footer,
+body > div > header,
+body > div > section,
+body > footer,
+body > header,
+body > section {
+	/* class used in the full template-width containers */
+	clear: both;
+	margin: 0 auto;
+}
+section#gkPageTop {
+	overflow: visible; /* Necessary to make menu working */
+	width: 100%; /* Necessary to achieve full background width */
+}
+#gkTop1,
+#gkTop2,
+#gkBottom1,
+#gkBottom2 {
+	/* Positions blocks -clearing */
+	clear: both;
+}
+
+#gkTop1,
+#gkTop2 {
+	overflow: hidden;
+}
+
+#gkTop1 + #gkBreadcrumb,
+#gkTop2 + #gkBreadcrumb {
+	border-top: 1px solid #e5e5e5;
+	margin-top: 0;
+}
+
+/* clearfix */
+#gkPageContent::after,
+#gkContent::after,
+#gkSidebar::after,
+footer::after,
+header::after,
+section::after,
+aside::after,
+article::after,
+.box::after,
+article header::after,
+.itemSocialSharing::after,
+#gkTopMenu::after,
+article header ul::after,
+#gkTop1 > div::after,
+#gkTop2 > div::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/* Columns */
+section#gkContent,
+section#gkComponentWrap,
+aside#gkSidebar {
+	/* Main columns */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+}
+#gkSidebar {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-left: 80px;
+}
+#gkContentWrap {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+}
+#gkContentWrap.gkSidebarLeft {
+	float: right;
+}
+#gkContentWrap.gkSidebarLeft + #gkSidebar {
+	float: left;
+	padding-left: 0;
+	padding-right: 50px;
+}
+#gkMainbodyTop .box,
+#gkMainbodyBottom .box {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#gkMainbody .box {
+	padding-left: 0!important;
+	padding-right: 0!important;
+	width: 100%;
+}
+
+#gkMainbodyTop + #gkMainbody {
+	margin-top: 0;
+	padding-top: 10px;
+}
+
+#gkMainbody + #gkMainbodyBottom {
+	margin-top: 0;
+	padding-top: 10px;
+}
+
+/* Module groups */
+#gkTop1 .box,
+#gkTop2 .box,
+#gkBottom1 .box,
+#gkBottom2 .box {
+	/* Columns in the positions blocks */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+}
+/* Joomla columns */
+.cols-2 .column-1,
+.cols-2 .column-2 {
+	width: 50%;
+}
+.cols-3 .column-1,
+.cols-3 .column-2,
+.cols-3 .column-3 {
+	float: left;
+	width: 33.3%;
+}
+.column-1,
+.column-2,
+.column-3 {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: left;
+}
+/*
+Layout calculations
+ */
+#gkMainbody .box {
+	margin-bottom: 30px;
+} 
+
+/* base spaces */
+body > footer:first-child,
+body > header:first-child,
+body > section:first-child,
+section#gkPage > section:first-child,
+section#gkContent > section:first-child,
+section#gkComponentWrap > section:first-child {
+	margin-top: 0;
+}
+/* Joomla columns */
+.cols-2 .column-1,
+.cols-3 .column-1 {
+	padding-right: 10px;
+}
+.cols-2 .column-2,
+.cols-3 .column-3 {
+	padding-left: 10px;
+}
+.cols-3 .column-2 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/* top/bottom modules */
+
+/* 3-column layout */
+.gkCols3 .box.gkmod-1,
+.gkCols3 .box.gkmod-2,
+.gkCols3 .box.gkmod-3,
+.gkCols3 .box.gkmod-more {
+	float: left;
+	padding: 0 10px;	
+}
+.gkCols3 .box.gkmod-1 {
+	width: 100%;	
+}
+.gkCols3 .box.gkmod-2 {
+	width: 50%;
+}
+.gkCols3 .box.gkmod-3,
+.gkCols3 .box.gkmod-more {
+	width: 33.3%;
+}
+.gkCols3 .box.gkmod-more:nth-child(3n+1) {
+	clear: both;
+}
+.gkCols3 .box.gkmod-more.gkmod-last-1:last-child {
+	width: 100%!important;
+}
+.gkCols3 .box.gkmod-more.gkmod-last-2:last-child,
+.gkCols3 .box.gkmod-more.gkmod-last-2:nth-last-child(2) {
+	width: 50%!important;
+}
+
+/* 4-column layout */
+.gkCols4 .box.gkmod-1,
+.gkCols4 .box.gkmod-2,
+.gkCols4 .box.gkmod-3,
+.gkCols4 .box.gkmod-4,
+.gkCols4 .box.gkmod-more {
+	float: left;
+	padding: 0 10px;	
+}
+.gkCols4 .box.gkmod-1 {
+	width: 100%;	
+}
+.gkCols4 .box.gkmod-2 {
+	width: 50%;
+}
+.gkCols4 .box.gkmod-3 {
+	width: 33.3%;
+}
+.gkCols4 .box.gkmod-4,
+.gkCols4 .box.gkmod-more {
+	width: 25%;
+}
+.gkCols4 .box.gkmod-more:nth-child(4n+1) {
+	clear: both;
+}
+.gkCols4 .box.gkmod-more.gkmod-last-1:last-child {
+	width: 100%!important;
+}
+.gkCols4 .box.gkmod-more.gkmod-last-2:last-child,
+.gkCols4 .box.gkmod-more.gkmod-last-2:nth-last-child(2) {
+	width: 50%!important;
+}
+.gkCols4 .box.gkmod-more.gkmod-last-3:last-child,
+.gkCols4 .box.gkmod-more.gkmod-last-3:nth-last-child(2),
+.gkCols4 .box.gkmod-more.gkmod-last-3:nth-last-child(3) {
+	width: 33.3%!important;
+}
+
+/* 6-column layout */
+.gkCols6 .box.gkmod-1,
+.gkCols6 .box.gkmod-2,
+.gkCols6 .box.gkmod-3,
+.gkCols6 .box.gkmod-4,
+.gkCols6 .box.gkmod-5,
+.gkCols6 .box.gkmod-6,
+.gkCols6 .box.gkmod-more {
+	float: left;
+	padding: 0 10px;	
+}
+.gkCols6 .box.gkmod-1 {
+	width: 100%;	
+}
+.gkCols6 .box.gkmod-2 {
+	width: 50%;
+}
+.gkCols6 .box.gkmod-3 {
+	width: 33.3%;
+}
+.gkCols6 .box.gkmod-4,
+.gkCols6 .box.gkmod-more {
+	width: 25%;
+}
+.gkCols6 .box.gkmod-5,
+.gkCols6 .box.gkmod-more {
+	width: 20%;
+}
+.gkCols6 .box.gkmod-6,
+.gkCols6 .box.gkmod-more {
+	width: 16.66%;
+}
+.gkCols6 .box.gkmod-more:nth-child(6n+1) {
+	clear: both;
+}
+.gkCols6 .box.gkmod-more.gkmod-last-1:last-child {
+	width: 100%!important;
+}
+.gkCols6 .box.gkmod-more.gkmod-last-2:last-child,
+.gkCols6 .box.gkmod-more.gkmod-last-2:nth-last-child(2) {
+	width: 50%!important;
+}
+.gkCols6 .box.gkmod-more.gkmod-last-3:last-child,
+.gkCols6 .box.gkmod-more.gkmod-last-3:nth-last-child(2),
+.gkCols6 .box.gkmod-more.gkmod-last-3:nth-last-child(3) {
+	width: 33.3%!important;
+}
+.gkCols6 .box.gkmod-more.gkmod-last-4:last-child,
+.gkCols6 .box.gkmod-more.gkmod-last-4:nth-last-child(2),
+.gkCols6 .box.gkmod-more.gkmod-last-4:nth-last-child(3),
+.gkCols6 .box.gkmod-more.gkmod-last-4:nth-last-child(4) {
+	width: 20%!important;
+}
+.gkCols6 .box.gkmod-more.gkmod-last-5:last-child,
+.gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(2),
+.gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(3),
+.gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(4),
+.gkCols6 .box.gkmod-more.gkmod-last-5:nth-last-child(5) {
+	width: 16.66%!important;
+}

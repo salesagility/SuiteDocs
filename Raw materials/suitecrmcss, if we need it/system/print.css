@@ -1,0 +1,231 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+body { 
+	background: #fff; 
+	font:normal 14px/18px Tahoma, sans-serif; 
+	color:#444; 
+	max-width: 665px;
+}
+a { 
+	text-decoration: none; 
+	color: #000; 
+	border-bottom: 1px dotted #000; 
+}
+#gkPrintTop { 
+	border-bottom: none; 
+	padding: 10px 0; 
+	margin: 0 0 10px 0; 
+}
+#gkPrintBottom { 
+	border-top: 3px solid #eee; 
+	padding: 10px 0 20px 0; 
+	font: italic 11px/14px Veradna, Arial, sans-serif;
+	margin: 10px 0 0 0; 
+}
+#gkComponent h1{ 
+	margin-bottom: 32px; 
+	font: normal 250%/120% "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+}
+dt.article-info-term,
+ul.actions { 
+	display: none; 
+}
+.articleContent img { 
+	display: block; 
+	margin: 20px auto;
+}
+dd {
+	display: inline; 
+	margin: 0 5px 0 0; 
+	padding: 0 5px 0 0; 
+	border-right: 1px solid #E0E0E0;
+}
+dd:last-child {
+	border-right: none;
+}
+dl.article-info {
+	width: 100%; 
+	clear: both; 
+	display: block; 
+	margin: 10px 0;
+}
+.articleContent img { 
+	float: left; 
+	margin: 0 10px 10px 0; 
+	display: block; 
+	padding: 0; 
+	background: #fff; 
+}
+img.caption { 
+	margin-top:5px; 
+}
+.img_caption { 
+	margin-bottom:10px; 
+	background: #fff; 
+	padding:3px; 
+	border: 1px solid #e0e0e0; 
+}
+.article-content img { 
+	margin:5px; 
+}
+.img_caption img { 
+	margin:0; 
+}
+p.img_caption { 
+	margin:0 10px; 
+	padding:6px 6px 0; 
+	text-align:center; 
+	border: none; 
+}
+.img_caption.left { 
+	float:left; 
+	margin-right: 1.5em; 
+}
+.img_caption.right { 
+	float:right; 
+	margin-left: 1.5em;
+}
+#printBtn { 
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff; 
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff; 
+	box-shadow:inset 0px 1px 0px 0px #ffffff; 
+	background-color:#ededed; 
+	-moz-border-radius:6px; 
+	-webkit-border-radius:6px; 
+	border-radius:6px;
+	border:1px solid #dcdcdc; 
+	display:inline-block; 
+	color:#777777; 
+	font-family:Arial; 
+	font-size:21px; 
+	font-weight:bold; 
+	padding:6px 24px; 
+	text-decoration:none; 
+	text-shadow:1px 1px 0px #ffffff; 
+	margin: 0 auto;
+}
+#printBtn:hover { 
+	background-color:#dfdfdf; 
+}
+#printBtn:active { 
+	position:relative;
+	top:1px; 
+}
+div#btnWrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* K2 code hide */
+.itemComments,
+article time,
+.itemBottom,
+.itemLinks,
+.itemExtraFields,
+.itemResizer,
+.itemAuthorContent { 
+	display: none; 
+}
+.itemAuthorBlock > .gkAvatar { 
+	padding: 12px 32px 32px 12px; 
+	max-height: 80px; 
+}
+
+/* latest improvements */
+article.item-page > header h1 { 
+	font-size: 32px; 
+	line-height: 1.2; 
+	font-weight: normal; 
+	font-family: Georgia, serif; 
+}
+article.item-page > header h1 a { 
+	border-bottom: none!important; 
+}
+article.item-page > header > ul { 
+	padding: 10px 0; 
+	margin: 10px 0; 
+	border: 3px solid #ccc; 
+	border-left: none; 
+	border-right: none; 
+	overflow: hidden; 
+}
+article.item-page > header > ul li { 
+	display: none; 
+}
+article.item-page img { 
+	min-width: 100%; 
+	max-width: 100%; 
+	height: auto; 
+	display: block; 
+	margin: 20px 0; 
+}
+li.category-name,
+li.createdby,
+li.hits { 
+	display: block!important; 
+	float: left; 
+	margin-right: 20px; 
+}
+#gkPrintBottom { 
+	text-align: center; 
+}
+#gkPrintTop > img { 
+	display: block; 
+	margin: 0 auto; 
+}
+article.itemView img { 
+	min-width: 100%; 
+	max-width: 100%; 
+	height: auto; 
+	display: block; 
+	margin: 20px 0; 
+}
+article.itemView .itemImage img {
+	margin: 0;
+}
+.itemBody.containsItemInfo {
+	margin-left: 0;
+}
+.itemAsideInfo {
+	display: none;
+}
+.itemBody header ul {
+	clear: both;
+	display: block;
+	margin: 20px 0;
+	overflow: hidden;
+	padding: 0;
+}
+.itemBody header ul li,
+.itemBody header ul li > time {
+	display: block;
+}
+.itemBody header ul li {
+	clear: both;
+	float: left;
+	margin: 0 20px 0 0!important;
+	padding: 5px 0!important;
+}
+.itemBody header h1,
+.itemBody header h2 {
+	clear: both;
+}
+
+.itemBody pre {
+	max-width: 100%;
+	word-break: break-word;
+}
+
+/* K2 adjustments */
+.itemFeature,
+.itemPrintThisPage {
+	display: none;
+}

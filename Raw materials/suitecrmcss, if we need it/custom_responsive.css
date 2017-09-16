@@ -1,0 +1,227 @@
+@media only screen and (max-width: 1280px) {
+   #homepage_header_container{
+       width:100%;
+   }
+
+   .hide_tablet{
+       display:none !important;
+   }
+
+   .homepage_header_cont70{
+       width:100%;
+       height: 100%;
+       padding: 0 !important;
+       margin: 0 !important;
+
+   }
+
+   .homepage_boxes_container{
+       width:100%;
+   }
+
+    .custom_newsfeed{
+        width:100%;
+        margin: 0;
+    }
+
+    .download_container_67, .suiteaccount_container{
+        width:100%;
+    }
+
+    .suiteaccount_signup, .suiteaccount_existing{
+        width:50%;
+    }
+
+    .login_form_field, .login_guest, .login_remember_me{
+        width:100%;
+    }
+
+    .login_buttons{
+        width:35%;
+        margin-bottom: 10px;
+    }
+
+    .content_box_long{
+        width:100%;
+        height: auto;
+        padding-bottom: 20px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .content_box_long .content_box_text{
+        height:auto;
+    }
+
+    .user_prompt_container{
+        width:98%
+    }
+
+    .user_prompt_button_container{
+        font-size:18px;
+        width:95%;
+        padding:20px;
+    }
+
+    .user_prompt_text{
+        padding:20px;
+        width:95%;
+    }
+
+    .column4{
+        width:50%;
+    }
+
+    .column5, .column8, .column3, .column2{
+        width:100%;
+    }
+
+
+    .column_box_text_smaller{
+        width:80% !important;
+    }
+    
+    .content_box_text a{
+        font-size: 12px !important;
+    }
+
+    .user_prompt_button{
+        font-size:18px;
+    }
+
+    .heading_container{
+        width:80%;
+    }
+
+    .heading_container a{
+        font-size: 18px !important;
+    }
+
+    .contact_links a{
+        width:100%;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .feature_text{
+        width:100%;
+    }
+
+}
+
+@media only screen and (max-width: 775px) {
+
+    #gkMainbody{
+        padding-top:0 !important;
+    }
+
+    .itemBody header{
+        display:none;
+    }
+
+    #homepage_header{
+      height:330px !important;
+    }
+
+    #sdb_button{
+        font-size: 25px;
+        height: 140px;
+        line-height: 32px;
+        width: 140px;
+    }
+
+    #homepage_header h1{
+        font-size:20px !important;
+    }
+
+    #homepage_header_container p{
+        display:none;
+    }
+
+    .content_box, .big_content_box, .column4{
+        width:100%;
+        padding: 0 !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+    .custom_newsfeed_img_container{
+        display:none;
+    }
+
+    .custom_newsfeed_title{
+        width:100%;
+    }
+
+    .termsconditions, .social_media, .footer{
+        width:100%;
+    }
+
+    .suiteaccount_signup, .suiteaccount_existing{
+        width:100%;
+    }
+
+    .login-container{
+        width:100%;
+    }
+
+    .register_form_container, .register_text{
+        width:100%;
+    }
+
+    .container50{
+        width:100%;
+    }
+
+    .demo_signup{
+        float:left;
+        width:100%;
+    }
+
+    .user_prompt_container{
+        width:96%
+    }
+
+    .user_prompt_button_container{
+        font-size:18px;
+        width:88%;
+        padding:20px;
+    }
+
+    .user_prompt_text{
+        padding:20px;
+        width:88%;
+    }
+
+    .column4{
+        width:100%;
+    }
+
+    .product_tour_sidebar{
+        width:100%;
+        float:left;
+        position: inherit;
+        padding: 0;
+        height:auto;
+    }
+
+    .product_tour_text, .product_tour_content, .product_tour_image, .product_overview_links, .product_tour_overview{
+        width:100%;
+        float:left;
+        height:auto;
+        margin: 0;
+        padding-bottom:10px;
+        padding-top:20px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+
+    .registration_form input{
+        width:91%;
+    }
+}

@@ -1,0 +1,343 @@
+/*
+--------------------------------------------------------------
+Product Name: Golden - Responsive Flat Dropdown Menu
+Product Version: 1.0
+Author: Igga Elia (elflaire)
+Author URL: http://doptiq.com 
+Author Portifolio: http://codecanyon.net/user/elflaire/portfolio 
+E-mail: hello@doptiq.com 
+Updates: Initial Release - 28th/Aug/2013
+-------------------------------------------------------------- */
+
+/* Resets for Demo 
+------------------------------------------------- */
+html { 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+}
+
+
+html, body{ 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	font-size: 100%; 
+	vertical-align: baseline;
+}
+
+.container { }
+.clear:before,.clear:after{content:'';display:table; }
+.clear:after{clear:both;}
+.clear{zoom:1;}
+
+/* Start Menu Styling 
+--------------------------------------------- */
+
+.nav3{ 
+	/*height:49px;*/
+	height:100px; 
+	position:relative; 
+	z-index:999;
+	font-family: 'Lato', serif;
+	text-align:right;
+}
+
+
+.nav3 ul, 
+.nav3 ol, 
+.nav3 dl, 
+.nav3 li { 
+	line-height:1.5em;
+	list-style:none; 
+}
+
+.nav3 li.parent a {z-index:9999999;}
+
+/* Hide responsive menu trigger 
+--------------------------------------------- */
+.menu-icon { display:none; }
+
+/* Start dropdown menu styling 
+--------------------------------------------- */
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul { 
+	margin: 0; 
+	padding: 0; 
+	
+}
+
+ul.dropdown{
+	float:left;
+	width:100%; 
+	position: relative; 
+}
+
+ul.dropdown li { 
+	/*float: left; */
+	vertical-align: middle; 
+	zoom: 1; /* IE6 */
+}
+
+/* General list styling 
+-------------------------------------------- */
+ul.dropdown li {  
+	font-size:14px;
+	letter-spacing:1px; 
+}
+
+/* General links styling 
+-------------------------------------------- */
+ul.dropdown a,
+ul.dropdown a:visited,	
+ul.dropdown a:hover, 		
+ul.dropdown a:active { 
+	text-decoration: none; 
+}
+
+ul.dropdown a, 
+ul.dropdown span { 
+	display: block;
+	outline:none; 
+	cursor:pointer; 
+	padding:13px 15px; 
+}
+
+ul.dropdown ul a,
+ul.dropdown ul span {  
+	padding:12px 15px; 
+}	
+
+ul.dropdown li:hover, 
+ul.dropdown li.hover { 
+	position: relative; 
+	cursor:pointer; 
+}
+
+/* Level I+ 
+--------------------------------------- */
+ul.dropdown ul { 
+	display:none; 
+	position: absolute;
+	z-index: 598;
+	width: 220px; 
+	top: 100%; 
+	left: 0; 
+}
+
+ 
+ul.dropdown li:hover > ul{ 
+	display:block;
+}
+
+ul.dropdown ul li { 
+	float: none;
+	font-size:13px;
+	font-weight: normal; 
+	text-transform:none;
+	position:relative; 
+}
+
+ul.dropdown ul li.deeper {
+	color:red;
+	background-image: url('../images/menu_arrow2.png');
+	background-repeat: no-repeat;
+	background-position: 190px center;
+}
+
+ul.dropdown ul li.deeper ul li a {color:#fff;}
+
+
+ul.dropdown ul li.hover, 
+ul.dropdown ul li:hover { /* background-color:#34495E; color: #fff; */ }
+ul.dropdown ul li a:hover { /* color: #fff; */ }
+	
+/* Level II +  
+---------------------------------------- */
+/*ul.dropdown ul ul { top:0; left:100%; }*/
+
+ul.dropdown ul ul { top:0; left:-100%;}
+ul.dropdown ul ul li {background-color:#716C7E;}
+
+/* Add trailing arrows 
+---------------------------------------- */	
+ul.dropdown *.parent { 
+	/*padding-right:15px; */
+	/*background-image: url(../images/nav-arrow-down-thin.gif); 
+	background-position: 95% 50%; 
+	background-repeat: no-repeat; */
+}
+
+ul.dropdown ul *.parent { 
+	padding-right: 15px; 
+	/*background-image: url(../images/nav-arrow-right-thin.gif);
+	background-position: 100% 50%; 									  
+	background-repeat: no-repeat; */
+}
+
+/* Change trailing arrows on :hover IE7+
+--------------------------------------------------------- */
+/*ul.dropdown li.parent:hover{  background-image: url(../images/nav-arrow-down.gif); } 
+ul.dropdown ul li.parent:hover{ background-image: url(../images/nav-arrow-right.gif);  }*/
+
+/* Main menu seperator 
+---------------------------------------------- */																		  								  
+ul.dropdown li.divider{ 
+	padding:0!important; 
+	margin:0!important; 
+	border:0!important;
+	display:block; 
+	height:49px; 
+	float:left;
+	width:1px; 
+}
+
+ul.dropdown li.rtl ul { position: absolute; top: 100%; right:0; z-index: 598; left:auto; }
+ul.dropdown li.rtl ul ul { top:0; right:100%; left:auto; }
+ul.dropdown li.ltr ul, ul.dropdown li.ltr ul ul { top:0; left:100%!important; right:auto!important; }
+
+/* Theme settings - Change your menu colors, bgcolors, border-colors
+---------------------------------------------------------------------- */
+
+/* Theme black black */
+.black-black, 
+.black-black ul.dropdown { background:#464154;height:110px;line-height:110px; }
+.black-black ul.dropdown ul { background:#3B3747; }
+
+.black-black ul.dropdown ul a,
+.black-black ul.dropdown ul a:visited,	
+.black-black ul.dropdown ul a:hover, 		
+.black-black ul.dropdown ul a:active, 
+.black-black ul.dropdown ul li  { color: #fff;width:auto;display:block;text-align:left;}
+
+.black-black ul.dropdown a,
+.black-black ul.dropdown a:visited,	
+.black-black ul.dropdown a:hover, 		
+.black-black ul.dropdown a:active, 
+.black-black ul.dropdown li  { color: #fff;width:auto;display:inline-block; }
+
+.black-black ul.dropdown li.active a {color:#E5A100;}
+.black-black ul.dropdown li.active li a {color:#fff;}
+
+.black-black ul.dropdown li:hover, 
+.black-black ul.dropdown li.hover {  background-color:#3B3747; color: #fff; }
+.black-black ul.dropdown ul li {   border-bottom:1px solid #464154;  }
+
+.black-black ul.dropdown ul li.hover, 
+.black-black ul.dropdown ul li:hover { background-color:#27252E;  color: #fff; }
+.black-black ul.dropdown ul li a:hover { color: #fff; }
+.black-black ul.dropdown li.divider{ background:#3C536A;  }
+
+
+/* Responsiveness 
+------------------------------------- */
+
+/* All device screens < = 768px */
+@media screen and (max-width: 1180px) {
+
+/* Responsive menu trigger 
+------------------------------------ */
+
+
+
+
+.black-black, 
+.black-black ul.dropdown {height:auto; }
+
+
+
+.nav3 {height:auto;}
+.menu-icon, .menu-icon span, .menu-icon {margin-top:-40px;height:30px;}
+
+.submenu {display:none;}
+
+.container {width:100%;}
+
+.black-black ul.dropdown a,
+.black-black ul.dropdown a:visited,	
+.black-black ul.dropdown a:hover, 		
+.black-black ul.dropdown a:active, 
+.black-black ul.dropdown li  { color: #fff;width:auto;display:block;text-align:left; }
+
+
+.menu-icon, 
+.menu-icon span, 
+.menu-icon { 
+	color: #fff; 
+	width:100%; 
+	height:30px; 
+	line-height:30px; 
+	padding:5px; 
+	font-size:1.3em; 
+	font-weight:bold; 
+	cursor: pointer; 
+	display:block;
+	position:relative;	
+}
+
+.menu-icon span{ 
+	width: auto;
+	padding:0 15px;
+	padding-left:40px; 
+	height:40px; 
+	background:#415972 url('../images/nav-toggle.png') center no-repeat ; 
+	background-color:transparent;
+	color:#FFFFFF;
+	text-align: center;
+	text-indent:-999em; 
+	display: inline-block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	 
+}
+
+/* Style these as desired 
+ * - colors, bgclors etc 
+------------------------------- */
+.menu-icon:hover { }
+.menu-icon:hover span{ }
+.menu-icon.active { }
+.menu-icon.active span{ }
+
+
+/* Responsive menu styling  
+--------------------------------- */
+.nav3{ position:relative;  }
+.nav3,
+ul.dropdown, 
+.menu-icon, 
+.menu-icon span, 
+ul.dropdown *{ box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; } 	
+ul.dropdown{  display:none; position: relative; top:-1px; border-top:1px solid #565263 ; }
+ul.dropdown  li { position:relative; float:none; display:block; border-bottom:1px solid #565263 ;}
+ul.dropdown  li li{ border-top:0;}
+ul.dropdown  ul a{ padding-left:25px; }
+ul.dropdown  ul ul a{ padding-left:45px; }
+ul.dropdown  ul a:hover  { background-color:#27252E;}
+ul.dropdown  li.parent ul > li{ /*border-top:1px solid;*/ }
+ul.dropdown *.parent { padding:0!important; background-image: none!important; }
+ul.dropdown ul{ overflow: hidden; max-height: 0; width:auto; display:block; position: static; }
+ul.dropdown ul.current { display:block; max-height:100em; }
+ul.dropdown li.parent > a{ padding-right:25px; }
+ul.dropdown li.parent > a.current{ background:#2E2B36;  }
+ul.dropdown li.parent > ul a.current{ background:#1E2935;  }
+ul.dropdown li.parent > a:after, 
+ul.dropdown li.parent > a.current:after { position: absolute; top: 0; right: 0; display: block; font-size: 1.5em; padding: 0.55em 0.5em; }
+ul.dropdown li.parent > a:after { content: '\002B'; }	
+ul.dropdown li.parent > a.current:after { content: "\2013"; top:-2px; }	
+ul.dropdown li.rtl ul, 
+ul.dropdown li.ltr ul, 
+ul.dropdown li.ltr ul ul, 
+ul.dropdown li.rtl ul ul { position:static; }
+ul.dropdown li.divider{ display:none!important; }
+
+}
+
+/* All device screens >  768px */
+@media screen and (min-width: 1181px) {
+	/* Avoid responsive menu hiding on browser window resize 
+	-------------------------------------------------------------- */
+	ul.dropdown{ display:block !important ; }
+	 
+}

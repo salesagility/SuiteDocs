@@ -1,0 +1,180 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+/* Basic elements */
+html {
+	height: 100%;
+}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	min-height: 100%;
+	background: #fff;
+	font-size: 16px;
+	line-height: 2;
+	color: #777;
+	padding: 0;
+	font-weight: 300;
+	word-wrap: break-word;
+}
+a {
+	color: #de5643;
+	-webkit-transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	   -moz-transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	     -o-transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	        transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+	color: #363636;
+}
+
+/* containers */
+#gkPage {
+	padding: 0;
+	margin: 0 auto;
+}
+#gkPageTop {
+	width: 100%;
+}
+#gkPageWrap {
+	background: transparent;
+	padding: 0 0 30px 0;
+}
+#frame {
+	margin: 0;
+	overflow: hidden;
+	padding: 0 15px 10px 15px;
+	clear: both;
+	text-align: center;
+}
+
+#errorNumber {
+	float: left;
+	padding: 31px 0 0;
+	width: 39%;
+}
+
+/* Logo  */
+#gkLogo {
+	height: 35px;
+	margin: 20px auto 50px auto;
+	padding: 0;
+	text-indent: -999em;
+	text-shadow: none;
+	width: 140px;
+	display: block;
+	float: none;
+	-webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-ms-transition: background-color .3s linear;
+	-o-transition: background-color .3s linear;
+	transition: background-color .3s linear;
+}
+
+#gkLogo img {
+	display: block;
+	margin: 0;
+}
+
+#gkLogo.cssLogo {
+	background: transparent url('../../images/style3/logo_white_bg.png') no-repeat 0 0;
+	/* You can specify there logo size and background */
+	height: 44px;
+	margin: 20px auto 50px auto;
+	width: 198px;
+}
+
+#gkLogo.text {
+	color: #fff;
+	display: block;
+	font-size: 36px;
+	font-style: italic;
+	font-weight: 700;
+	height: auto;
+	margin: 20px 0 0 0;
+	overflow: hidden;
+	padding: 10px 5px;
+	text-align: center;
+	text-indent: 0;
+}
+
+#gkLogo.text > span {
+	display: block;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+	padding: 0;
+}
+
+#gkLogo.text .gkLogoSlogan {
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+}
+
+/* Other elements */
+h2 {
+	font-size: 32px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #555;
+	margin: 0;
+	padding: 0;
+}
+h3 {
+	margin: 0 0 32px;
+	font-size: 20px;
+	font-weight: 300;
+	color: #737373;
+}
+h2 span {
+	color: #de5643;
+    display: block;
+    font-size: 280px;
+    font-weight: 600;
+}
+#errorboxbody {
+	text-align: center;
+	padding: 0 0 36px 0;
+}
+
+@media (max-width:1000px) {
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	h2 span {
+		font-size: 120px;
+	}
+}
+
+@media (max-width:720px) {
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 14px;
+	}
+	h2 span {
+		font-size: 100px;
+	}
+}

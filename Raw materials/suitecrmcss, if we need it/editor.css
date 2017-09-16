@@ -1,0 +1,29 @@
+/*
+#------------------------------------------------------------------------
+# Magazine - January Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+/* K2 front-end editing styles */
+/* Header */
+.icon-48-k2 {background: url(../../../media/k2/assets/images/system/K2_Logo_105x40_24.png) no-repeat 0 50%;
+color: #222 !important;
+padding-left: 120px !important;
+font-size: 24px !important;}
+.icon-48-k2 h2 {color:#222!important; font-size:24px!important; margin-left:10px!important;}
+
+/* Joomla! 3.0 header */
+body.com_k2 .page-title {background:url(../../../media/k2/assets/images/system/K2_Logo_85x36_24.png) no-repeat 0 50%;padding-left:100px;}
+@media (max-width: 767px) { body.com_k2 .page-title {background:url(../../../media/k2/assets/images/system/K2_Logo_85x36_24.png) no-repeat center center;padding-left:0; text-indent: -800px} }
+
+/* Footer */
+#k2AdminFooter {text-align:center;margin:20px auto 4px auto;}
+
+/* Common for Joomla! 2.5 */
+div.isJ25 table.admintable {}
+div.isJ25 table.admintable td.key {background:#f6f6f6;/*border-bottom:1px solid #e9e9e9;border-right:1px solid #e9e9e9;*/color:#666;font-weight:bold;text-align:right;font-size:11px;width:140px;}
+div.isJ25 table.admintable td.key label {margin:0;padding:0;}

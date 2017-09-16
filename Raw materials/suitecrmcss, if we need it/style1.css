@@ -1,0 +1,254 @@
+/*
+#------------------------------------------------------------------------
+# Simplicity - February Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+/* Style 1 */
+
+/* template.css */
+a:hover,
+a:active,
+a:focus,
+#gkMainbody a,
+#gkMainbody header h1 a:active,
+#gkMainbody header h1 a:focus,
+#gkMainbody header h1 a:hover,
+#gkMainbody header h2 a:active,
+#gkMainbody header h2 a:focus,
+#gkMainbody header h2 a:hover,
+#k2Container article header h2 a:active,
+#k2Container article header h2 a:focus,
+#k2Container article header h2 a:hover,
+#gkMainbody div.tags a:hover,
+#gkSidebar .box a:hover {
+	color: #4c90fe;
+}
+#gkLogo.cssLogo,
+#gkMenuWrap #gkLogo.cssLogo {
+	background-image: url('../images/style1/logo_white_bg.png');
+}
+.imageBg #gkLogo.cssLogo {
+	background-image: url('../images/style1/logo_normal.png');
+}
+.imageBg #gkHeaderMod input[type="submit"] {
+	background: #4c90fe;
+}
+.imageBg #gkHeaderMod input[type="submit"]:active,
+.imageBg #gkHeaderMod input[type="submit"]:focus,
+.imageBg #gkHeaderMod input[type="submit"]:hover {
+	background: #fec54c;
+}
+.imageBg #gkHeaderMod .gk-video-link:hover {
+	color: #fec54c;
+}
+#gkFooterNav li:hover,
+#gkFooterNav a:hover {
+	color: #4c90fe;
+}
+.box .header em {
+	color: #fec54c;
+}
+.box.dark a:active,
+.box.dark a:focus,
+.box.dark a:hover {
+	color: #fec54c!important;
+}
+
+/* joomla.css */
+button,
+.button,
+input.button,
+span.button,
+button.button,
+div.button,
+input[type="submit"],
+input[type="button"],
+.pagenav-prev a,
+.pagenav-next a,
+.readon{
+	background: #4c90fe;
+}
+button:hover,
+.button:hover,
+input.button:hover,
+span.button:hover,
+button.button:hover,
+div.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.pagenav-prev a:hover,
+.pagenav-next a:hover,
+.readon:hover {
+	background: #fec64d;
+}
+#gkMainbody .itemReadMore,
+#gkMainbody .readmore > a {
+	background: #4c90fe;
+}
+#gkMainbody .itemReadMore:active,
+#gkMainbody .itemReadMore:focus,
+#gkMainbody .itemReadMore:hover,
+#gkMainbody .readmore > a:active,
+#gkMainbody .readmore > a:focus,
+#gkMainbody .readmore > a:hover {
+	background-color: #fec64d;
+}
+th a:active,
+th a:focus,
+th a:hover {
+	color: #4c90fe!important;
+}
+article header li a:hover {
+	color: #4c90fe;
+}
+.tooltip-inner strong  {
+	background: #4c90fe;
+}
+#system-message div.alert {
+	background: #fec54c;
+}
+#system-message div.alert-error {
+	background: #fe654c;
+}
+#system-message div.alert-notice {
+	background: #4c90fe;
+}
+.pagination,
+.pager {
+	border-top-color: #4C90FE;
+}
+div.bannerfooter {
+	color: #4c90fe;
+}
+.autocompleter-queried {
+	color: #4c90fe!important
+}
+.box.menu li {
+	background-image: url('../images/style1/typography/bullet3.png');
+}
+th a:active,
+th a:focus,
+th a:hover,
+article header h1 a:hover,
+article header h2 a:hover {
+	color: #4c90fe;
+}
+
+/* gk_stuff.css */
+.gkNspPM-NewsGallery .gkImagesWrapper > a > .gkImgOverlay > span {
+	background-color: #fec54c;
+}
+.gkButtonArea a {
+	background: #fec54d;
+}
+.gkButtonArea a:active,
+.gkButtonArea a:focus,
+.gkButtonArea a:hover {
+	background: #4c90fe;
+}
+.gkHorizontalSlideLeftColumn a.button {
+	background: #4c90fe;
+}
+.gkHorizontalSlideLeftColumn a.button:active,
+.gkHorizontalSlideLeftColumn a.button:focus,
+.gkHorizontalSlideLeftColumn a.button:hover {
+	background: #fec54c;
+}
+.gkPriceTable dd a {
+	background: #4c90fe;
+}
+.gkPriceTable dd a:active,
+.gkPriceTable dd a:focus,
+.gkPriceTable dd a:hover,
+.gkPriceTable .gkPremium dd a {
+	background: #fec54d;
+}
+.gkPriceTable dd.gkPrice {
+	color: #fec54d;
+}
+.gkPriceTable dl.gkPremium {
+	background: #4c90fe;
+}
+.gkPriceTable dl.gkPremium dt {
+	border-bottom: 1px solid #80b1ff; 
+}
+.gkDisclaimer strong {
+	color: #fec54c;
+}
+.gkCrop {
+	background-image: url('../images/style1/gkcrop.png');
+}
+.gkCrop:hover {
+	background-color: #fe654c;
+}
+.gkRocket {
+	background-image: url('../images/style1/gkrocket.png');
+}
+.gkRocket:hover {
+	background-color: #4c90fe;
+}
+.gkMobile {
+	background-image: url('../images/style1/gkmobile.png');
+}
+.gkMobile:hover {
+	background-color: #fec54c;
+}
+
+/* menu.css */
+.gkMenu > ul > li.active > a {
+	color: #fec54c;	
+}
+.gkMenu a:hover,
+.gkMenu a:active,
+.gkMenu a:focus,
+.gkMenu li.active > a {
+	color: #fec54c;
+}
+.gkMenu > ul li div.childcontent li:hover {
+	 background: #fec54c;
+}
+.gkMenu > ul li div.childcontent li:hover > a {
+	border-top-color: #fec54c;
+}
+#gkMenuWrap .gkMenu a:hover,
+#gkMenuWrap .gkMenu a:active,
+#gkMenuWrap .gkMenu a:focus,
+#gkMenuWrap .gkMenu li.active > a,
+#gkMenuWrap .gkMenu > ul > li.active > a {
+	color: #fec54c;
+}
+
+/* k2.css */
+.itemFeature {
+	background: #fe654c;
+}
+span#formLog {
+	background: #4c90fe;
+}
+.itemAttachmentsBlock {
+	background-image: url('../images/style1/typography/tips.png');
+}
+a:hover.itemCommentsAuthor {
+	color: #4C90FE
+}
+.genericView header h1 { 
+	font-size: 24px; 
+	color: #FE654C;
+}
+#itemListLinks li {
+	background-image: url('../images/style1/typography/bullet-square2.png');
+}
+.k2CalendarBlock table.calendar tr td.calendarToday {
+	background: #4C90FE;
+}
+table.calendar tr td.calendarTodayLinked a {
+	color: #4c90fe;
+}
+.calendarNavLink {
+	color: #4c90fe;
+}

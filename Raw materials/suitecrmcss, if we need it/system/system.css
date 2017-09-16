@@ -1,0 +1,110 @@
+/* Fix for the editor */
+.item-page.edit .formelm {
+	clear: both;
+	float: left;
+}
+.item-page.edit .formelm .button2-left {
+	margin-top: 6px;
+}
+.item-page.edit .formelm-area label {
+	display: block;
+	width: 100%;
+}
+.item-page.edit .formelm-buttons {
+	margin-top: 5px;
+	overflow: hidden;
+}
+.item-page.edit .fltlft {
+	float: left;
+}
+.item-page.edit legend {
+	font-size: 140%;
+	font-style: italic;
+}
+.item-page.edit .toggle-editor {
+	margin-top: -5px;
+}
+
+/* Buttons */
+#editor-xtd-buttons {
+	padding: 5px;
+}
+.button2-left,
+.button2-right,
+.button2-left div,
+.button2-right div {
+	float: left;
+}
+
+.button2-left a,
+.button2-right a,
+.button2-left span,
+.button2-right span {
+	display: block;
+	height: 22px;
+	float: left;
+	line-height: 22px;
+	font-size: 11px;
+	color: #666;
+	cursor: pointer;
+}
+.button2-left span,
+.button2-right span {
+	cursor: default;
+	color: #999;
+}
+.button2-left .page a,
+.button2-right .page a,
+.button2-left .page span,
+.button2-right .page span {
+	padding: 0 6px;
+}
+.button2-left a:hover,
+.button2-right a:hover {
+	text-decoration: none;
+	color: #0B55C4;
+}
+
+.button2-left a,
+.button2-left span {
+	padding: 0 30px 0 10px;
+	font-size: 12px;
+	line-height: 23px;
+}
+
+.button2-right a,
+.button2-right span {
+	padding: 0 6px 0 24px;
+}
+.button2-left {
+	background: url(../../images/joomla/j_button2_left.png) no-repeat;
+	float: left;
+	margin-left: 5px;
+}
+.button2-right {
+	background: url(../../images/joomla/j_button2_right.png) 100% 0 no-repeat;
+	float: left;
+	margin-left: 5px;
+}
+.button2-left .image {
+	background: url(../../images/joomla/j_button2_image.png) 100% 0 no-repeat;
+}
+.button2-left .readmore,
+.button2-left .article {
+	background: url(../../images/joomla/j_button2_readmore.png) 100% 0 no-repeat;
+}
+.button2-left .pagebreak {
+	background: url(../../images/joomla/j_button2_pagebreak.png) 100% 0 no-repeat;
+}
+.button2-left .blank {
+	background: url(../../images/joomla/j_button2_blank.png) 100% 0 no-repeat;
+}
+/* Calendar */
+a img.calendar {
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+	background: url(../../images/joomla/calendar.png) no-repeat;
+	cursor: pointer;
+	vertical-align: middle;
+}
