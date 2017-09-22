@@ -1,6 +1,7 @@
 ---
 title: Chapter 01
-date: 2017-09-22T15:22:13+02:00
+date: 2017-08-22T15:22:13+02:00
+weight: 1
 ---
 
 ## Introduction
@@ -77,7 +78,7 @@ The default log level of SuiteCRM is <code>fatal</code>. This is a good default
 for production instances but you may want to increase the log level to
 <code>info</code> or <code>debug</code>. This will make the log output more
 verbose so, should anything go wrong, you’ll have something to refer to. See the
-[[#chap10.xhtml#logging-chapter|chapter on logging]] for more information.
+[chapter on logging](chap10.xhtml#logging-chapter) for more information.
 
 #### Display errors ####
 
