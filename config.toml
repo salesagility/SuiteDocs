@@ -3,7 +3,7 @@ languageCode = "en-US"
 defaultContentLanguage = "en"
 
 title = "Suite CRM Documentation"
-theme = "Learn"
+theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
@@ -15,7 +15,8 @@ defaultContentLanguageInSubdir= true
   themeVariant = "suitecrm"
 
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "AMP", "RSS", "JSON"]
+section = [ "HTML", "AMP", "RSS", "JSON"]
 
 [Languages]
 [Languages.en]
@@ -24,15 +25,16 @@ weight = 1
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fa fa-github'></i> Github repo"
-identifier = "ds"
-url = "https://github.com/Accendere/SuiteDocs"
+name = "<i class='fa fa-newspaper-o'></i> Blog"
+url = "blog"
 weight = 10
 
-# [[Languages.en.menu.shortcuts]]
-# name = "<i class='fa fa-camera'></i> Showcases"
-# url = "showcase"
-# weight = 11
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/salesagility/SuiteCRM"
+weight = 11
+
 
 # [[Languages.en.menu.shortcuts]]
 # name = "<i class='fa fa-bookmark'></i> Hugo Documentation"
@@ -53,7 +55,7 @@ languageName = "Français"
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fa fa-github'></i> Repo Github"
 identifier = "ds"
-url = "https://github.com/Accendere/SuiteDocs"
+url = "https://github.com/salesagility/SuiteCRM"
 weight = 10
 
 # [[Languages.fr.menu.shortcuts]]
