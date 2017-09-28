@@ -1,5 +1,5 @@
 ---
-title: "Learn Theme for Hugo"
+title: "Suite CRM Documentation"
 ---
 
 # Hugo learn theme
@@ -8,7 +8,7 @@ title: "Learn Theme for Hugo"
 
 This theme is a partial porting of the [Learn theme](http://learn.getgrav.org/) of [Grav](https://getgrav.org/), a modern flat-file CMS written in PHP.
 
-{{% notice tip %}}Learn theme works with a _page tree structure_ to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "cont/pages/_index.md"%}}) 
+{{% notice tip %}}Learn theme works with a _page tree structure_ to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "cont/pages/_index.md"%}})
 {{% /notice %}}
 
 ## Main features
