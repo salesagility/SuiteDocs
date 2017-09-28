@@ -22,7 +22,7 @@
     --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
 
     --MENU-VISITED-color: #4c90fe; /* Color of 'page visited' icons in menu */
-    --MENU-SECTION-HR-color: #18211c; /* Color of <hr> separator in menu */
+    --MENU-SECTION-HR-color: rgba(50, 50, 50, 0.1); /* Color of <hr> separator in menu */
 
 }
 
