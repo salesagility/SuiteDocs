@@ -30,7 +30,7 @@ url = "blog"
 weight = 10
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fa fa-github'></i> Github repo"
+name = "<i class='fa fa-github'></i> Github"
 identifier = "ds"
 url = "https://github.com/salesagility/SuiteCRM"
 weight = 11
@@ -53,7 +53,7 @@ weight = 2
 languageName = "Français"
 
 [[Languages.fr.menu.shortcuts]]
-name = "<i class='fa fa-github'></i> Repo Github"
+name = "<i class='fa fa-github'></i> Github"
 identifier = "ds"
 url = "https://github.com/salesagility/SuiteCRM"
 weight = 10
