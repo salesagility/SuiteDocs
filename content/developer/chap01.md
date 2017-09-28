@@ -5,7 +5,7 @@ weight: 1
 
 ### What is SuiteCRM
 
-The story of \[https://www.suitecrm.com SuiteCRM\] starts with SugarCRM.
+The story of [SuiteCRM](https://www.suitecrm.com) starts with SugarCRM.
 SugarCRM was founded in 2004 and consisted of an open source version
 (called Community Edition) and various paid for versions. However
 trouble started brewing when it appeared that SugarCRM would not be
@@ -27,7 +27,7 @@ changes you need in 99% of situations. There is a further resources
 chapter at the end of this book to help out in those 1% of cases. With
 that being said if you feel there is anything important I have left out
 (or worse, anything incorrect in the book) please let me know. I can be
-contacted at \[http://www.jsmackin.co.uk JSMackin.co.uk\].
+contacted at [JSMackin.co.uk](http://www.jsmackin.co.uk).
 
 ### Reading this book
 
@@ -47,21 +47,17 @@ cases you can substitute something appropriate (such as
 
 In this book we’ll be using SuiteCRM v7.1.5 which is the latest at time
 of writing. For up to date versions of the installation instructions see
-the SuiteCRM wiki at \[https://suitecrm.com/wiki/index.php/Installation
-suitecrm.com/wiki/index.php/Installation\].
+the SuiteCRM wiki at [https://suitecrm.com/wiki/index.php/Installation](https://suitecrm.com/wiki/index.php/Installation)
 
 #### Website
 
-The SuiteCRM installer can be found at \[https://suitecrm.com/
-SuiteCRM.com\]. I would recommend SuiteCRM MAX as I prefer to start with
-a full interface and customise it as needed.
+The SuiteCRM installer can be found at [SuitCRM](https://suitecrm.com/). I would recommend SuiteCRM MAX as I prefer to start with a full interface and customise it as needed.
 
 #### GitHub
 
-SuiteCRM is also available on \[http://github.com GitHub\] at
-\[https://github.com/salesagility/SuiteCRM
-github.com/salesagility/SuiteCRM\]. Each SuiteCRM version is tagged so
-you can easily grab the version you need.
+SuiteCRM is also available on [GitHub](http://github.com) at
+[https://github.com/salesagility/SuiteCRM](https://github.com/salesagility/SuiteCRM).
+Each SuiteCRM version is tagged so you can easily grab the version you need.
 
 ### Initial Tweaks
 
@@ -76,7 +72,7 @@ SuiteCRM will cache various files that it processes, such as Smarty
 templates. Developer mode will turn off some of the caching so that
 changes to files will be seen immediately (though this isn’t always the
 case - as is the case with
-\[\[\#chap13.xhtml\#extensions-chapter|extensions\]\]). This can be
+[extensions](../chap13/). This can be
 enabled either through the config file or via the General settings page
 inside admin.
 
@@ -86,8 +82,7 @@ The default log level of SuiteCRM is <code>fatal</code>. This is a good
 default for production instances but you may want to increase the log
 level to <code>info</code> or <code>debug</code>. This will make the log
 output more verbose so, should anything go wrong, you’ll have something
-to refer to. See the \[\[\#chap10.xhtml\#logging-chapter|chapter on
-logging\]\] for more information.
+to refer to. See the [../chap10/](chapter on logging) for more information.
 
 #### Display errors
 
@@ -103,7 +98,7 @@ or errors.
 
 #### XDebug
 
-\[http://xdebug.org XDebug\] is a PHP extension which provides profiling
+[http://xdebug.org XDebug] is a PHP extension which provides profiling
 and debugging capabilities to PHP. This can massively improve developer
 productivity by simplifying development and, particularly, tracking down
 any issues. See the XDebug site for information on XDebug.
