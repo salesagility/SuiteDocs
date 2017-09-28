@@ -1,5 +1,5 @@
 ---
-title: "Learn Theme for Hugo"
+title: "Documentation Suite CRM "
 ---
 
 # Thème Hugo learn
@@ -8,7 +8,7 @@ title: "Learn Theme for Hugo"
 
 Ce thème est un portage partiel du [thème Learn](http://learn.getgrav.org/) de [Grav](https://getgrav.org/), un CMS modern écrit en PHP.
 
-{{% notice tip %}}Le thème Learn fonctionne grâce à la structure de page aborescentes pour organiser le contenu: tous les contenus sont des pages qui appartiennent à d'autres pages. [Plus d'infos]({{%relref "cont/pages/_index.md"%}}) 
+{{% notice tip %}}Le thème Learn fonctionne grâce à la structure de page aborescentes pour organiser le contenu: tous les contenus sont des pages qui appartiennent à d'autres pages. [Plus d'infos]({{%relref "cont/pages/_index.md"%}})
 {{% /notice %}}
 
 ## Fonctionnalités principales

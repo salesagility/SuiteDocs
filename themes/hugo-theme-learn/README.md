@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # SuiteDocs
 
 A repo to try out SuiteCRM Documentation with Hugo and Netlify.
@@ -41,7 +41,7 @@ Check that your Hugo version is minimum `0.25` with `hugo version`.
 
 ## Download old versions (prior to 2.0.0)
 
-If you need old version for compatibility purpose, either download [theme source code from releases](https://github.com/matcornic/hugo-theme-learn/releases) or use the right git tag. For example, with `1.1.0` 
+If you need old version for compatibility purpose, either download [theme source code from releases](https://github.com/matcornic/hugo-theme-learn/releases) or use the right git tag. For example, with `1.1.0`
 
 - Direct download way: https://github.com/matcornic/hugo-theme-learn/archive/1.1.0.zip
 - Git way:
@@ -56,4 +56,3 @@ For both solutions, the documentation is available at https://github.com/matcorn
 ## Credits
 
 Many thanks to [@vjeantet](https://github.com/vjeantet/) for the fork [docdock](https://github.com/vjeantet/hugo-theme-docdock). The v2 of this theme is mainly based on his work !
->>>>>>> 0d9c29be674920d36c4015fbeaed871535a0a5e5
