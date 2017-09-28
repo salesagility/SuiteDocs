@@ -1,4 +1,73 @@
-baseurl = "https://suitecrm-docs.netlify.com"
-languageCode = "en-us"
-title = "SuiteCRM Documentation"
+baseURL = "https://suitecrm-docs.netlify.comhg"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Suite CRM Documentation"
 theme = "Learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+[params]
+  editURL = "https://github.com/Accendere/SuiteDocs.git/edit/master/content/"
+  description = "Documentation for SuiteCRM"
+  author = "Frank Taillandier"
+  showVisitedLinks = false
+  themeVariant = "suitecrm"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "SuiteCRM Documentation"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/Accendere/SuiteDocs"
+weight = 10
+
+# [[Languages.en.menu.shortcuts]]
+# name = "<i class='fa fa-camera'></i> Showcases"
+# url = "showcase"
+# weight = 11
+
+# [[Languages.en.menu.shortcuts]]
+# name = "<i class='fa fa-bookmark'></i> Hugo Documentation"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
+
+# [[Languages.en.menu.shortcuts]]
+# name = "<i class='fa fa-bullhorn'></i> Credits"
+# url = "/credits"
+# weight = 30
+
+[Languages.fr]
+title = "Documentation de SuiteCRM"
+weight = 2
+languageName = "Français"
+
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Repo Github"
+identifier = "ds"
+url = "https://github.com/Accendere/SuiteDocs"
+weight = 10
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fa fa-camera'></i> Vitrine"
+# url = "/showcase"
+# weight = 11
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fa fa-bookmark'></i> Documentation Hugo"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fa fa-bullhorn'></i> Crédits"
+# url = "/credits"
+# weight = 30
