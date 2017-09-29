@@ -13,7 +13,7 @@
 		  //prepend front-matter:
 		  $chapter = '---'
 		     //.PHP_EOL.'permalink: "/chap'.sprintf('%02d', $chapnum).'.html"'
-		     .PHP_EOL.'layout: page'
+		     .PHP_EOL."weight: $chapnum"
 		     .PHP_EOL.'title: "Chapter '.sprintf('%02d', $chapnum).'"'
 			 .PHP_EOL.'---'.PHP_EOL.$chapter;
  
@@ -34,8 +34,8 @@
   }
 
   foreach ($chapters as $c => $out) {
-     echo PHP_EOL.__DIR__.'/output/chap'.sprintf('%02d', $c).'.md';
-     file_put_contents(__DIR__.'/output/chap'.sprintf('%02d', $c).'.md', $chapters[$c]);   //,FILE_APPEND);
+     echo PHP_EOL.__DIR__.'/../content/developer-ascii/chap'.sprintf('%02d', $c).'.adoc';
+     file_put_contents(__DIR__.'/../content/developer-ascii/chap'.sprintf('%02d', $c).'.adoc', $chapters[$c]);   //,FILE_APPEND);
   }
 ?>
 
