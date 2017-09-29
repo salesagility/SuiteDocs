@@ -424,7 +424,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     max-width: 80%;
 }
 #chapter h3 {
-    font-family: "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
     font-weight: 300;
     text-align: center;
 }
@@ -445,22 +445,22 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin: 0;
 }
 body {
-    font-family: "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
     font-weight: 300;
     line-height: 1.6;
     font-size: 18px !important;
 }
 h2, h3, h4, h5, h6 {
-    font-family: "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
     font-weight: 400;
     letter-spacing: -1px;
 }
 h1 {
-    font-family: "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #222;
     font-weight: 200;
 }
@@ -1118,7 +1118,7 @@ pre .copy-to-clipboard:hover {
 }
 
 #sidebar #shortcuts h3 {
-    font-family: "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
     color: white ;
     margin-top:1rem;
     padding-left: 1rem;
