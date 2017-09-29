@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>6. Metadata</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="metadata-chapter">
+<span class="section-number">6. </span>Metadata</h2>
+
+<h3 id="leanpub-auto-intro">Intro</h3>
+<p>Module metadata are used to describe how various views behave in the module.
+The main use of this is providing field and layout information but this can also
+be used to filter subpanels and to describe what fields are used in the search.</p>
+
+<h3 id="leanpub-auto-location-1">Location</h3>
+<p>Module metadata can be found in:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.1: Module metadata location</p>
+
+  <hr /><div class="highlight"><pre>modules/&lt;TheModule&gt;/metadata/
+</pre></div>
+
+  <hr /></div>
+
+<h3 id="leanpub-auto-customising-1">Customising</h3>
+<p>Usually studio is the best way of customising metadata. Even when you do wish
+to make customisations that are not possible through studio it can be simpler to
+set everything up in studio first. This is particularly true for layout based
+metadata. However if you are customising metadata it is as simple as placing,
+or editing, the file in the custom directory. For example to override the Accounts
+detailviewdefs (found in <code>modules/Accounts/metadata/detailviewdefs.php</code>) we would
+place (or edit) the file in <code>custom/modules/Accounts/metadata/detailviewdefs.php</code>.
+One exception to this rule is the studio.php file. The modules metadata folder is
+the only location checked - any version in <code>custom/&lt;TheModule&gt;/metadata/studio.php</code> is ignored.</p>
+
+<h3 id="leanpub-auto-different-metadata">Different metadata</h3>
+
+<h4 id="leanpub-auto-detailviewdefsphp">detailviewdefs.php</h4>
+<p>detailviewdefs.php provides information on the layout and fields of the detail view
+for this module. This file uses the same structure as editviewdefs.php. Let’s look
+at an example for a fictional module <code>ABC_Vehicles</code>:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.2: DetailView metadata definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno"> 2</code> <code class="nv">$viewdefs</code> <code class="p">[</code><code class="s1">'ABC_Vehicles'</code><code class="p">]</code> <code class="p">[</code><code class="s1">'DetailView'</code><code class="p">]</code> <code class="o">=</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 3</code> 	<code class="s1">'templateMeta'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 4</code> 		<code class="s1">'form'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 5</code> 			<code class="s1">'buttons'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 6</code> 				<code class="s1">'EDIT'</code><code class="p">,</code>
+<code class="lineno"> 7</code> 				<code class="s1">'DUPLICATE'</code><code class="p">,</code>
+<code class="lineno"> 8</code> 				<code class="s1">'DELETE'</code><code class="p">,</code>
+<code class="lineno"> 9</code> 				<code class="s1">'FIND_DUPLICATES'</code>
+<code class="lineno">10</code> 			<code class="p">)</code>
+<code class="lineno">11</code> 		<code class="p">),</code>
+<code class="lineno">12</code> 		<code class="s1">'maxColumns'</code> <code class="o">=&gt;</code> <code class="s1">'2'</code><code class="p">,</code>
+<code class="lineno">13</code> 		<code class="s1">'widths'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">14</code> 			<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">15</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'10'</code><code class="p">,</code>
+<code class="lineno">16</code> 				<code class="s1">'field'</code> <code class="o">=&gt;</code> <code class="s1">'30'</code>
+<code class="lineno">17</code> 			<code class="p">),</code>
+<code class="lineno">18</code> 			<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">19</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'10'</code><code class="p">,</code>
+<code class="lineno">20</code> 				<code class="s1">'field'</code> <code class="o">=&gt;</code> <code class="s1">'30'</code>
+<code class="lineno">21</code> 			<code class="p">)</code>
+<code class="lineno">22</code> 		<code class="p">),</code>
+<code class="lineno">23</code> 		<code class="s1">'includes'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">24</code> 			<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">25</code> 				<code class="s1">'file'</code> <code class="o">=&gt;</code> <code class="s1">'modules/ABC_Vehicles/ABC_VehiclesDetail.js'</code>
+<code class="lineno">26</code> 			<code class="p">)</code>
+<code class="lineno">27</code> 		<code class="p">)</code>
+<code class="lineno">28</code> 	<code class="p">),</code>
+<code class="lineno">29</code> 	<code class="s1">'panels'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">30</code> 		<code class="s1">'LBL_ABC_VEHICLES_INFO'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">31</code> 			<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">32</code> 				<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">33</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno">34</code> 					<code class="s1">'comment'</code> <code class="o">=&gt;</code> <code class="s1">'The Name of the Vehicle'</code><code class="p">,</code>
+<code class="lineno">35</code> 					<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_NAME'</code><code class="p">,</code>
+<code class="lineno">36</code> 				<code class="p">),</code>
+<code class="lineno">37</code> 				<code class="s1">'reg_number'</code>
+<code class="lineno">38</code> 			<code class="p">),</code>
+<code class="lineno">39</code> 			<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">40</code> 				<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">41</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'type'</code><code class="p">,</code>
+<code class="lineno">42</code> 					<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_TYPE'</code><code class="p">,</code>
+<code class="lineno">43</code> 				<code class="p">),</code>
+<code class="lineno">44</code> 				<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">45</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'phone_fax'</code><code class="p">,</code>
+<code class="lineno">46</code> 					<code class="s1">'comment'</code> <code class="o">=&gt;</code> <code class="s1">'The fax phone number of this company'</code><code class="p">,</code>
+<code class="lineno">47</code> 					<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_FAX'</code>
+<code class="lineno">48</code> 				<code class="p">)</code>
+<code class="lineno">49</code> 			<code class="p">),</code>
+<code class="lineno">50</code> 			<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">51</code> 				<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">52</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'registered_address_street'</code><code class="p">,</code>
+<code class="lineno">53</code> 					<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_REGISTERED_ADDRESS'</code><code class="p">,</code>
+<code class="lineno">54</code> 					<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'address'</code><code class="p">,</code>
+<code class="lineno">55</code> 					<code class="s1">'displayParams'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">56</code> 						<code class="s1">'key'</code> <code class="o">=&gt;</code> <code class="s1">'registered'</code>
+<code class="lineno">57</code> 					<code class="p">)</code>
+<code class="lineno">58</code> 				<code class="p">),</code>
+<code class="lineno">59</code> 			<code class="p">),</code>
+<code class="lineno">60</code> 		<code class="p">),</code>
+<code class="lineno">61</code> 		<code class="s1">'LBL_PANEL_ADVANCED'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">62</code>       <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">63</code> 				<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">64</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'assigned_user_name'</code><code class="p">,</code>
+<code class="lineno">65</code> 					<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ASSIGNED_TO'</code>
+<code class="lineno">66</code> 				<code class="p">),</code>
+<code class="lineno">67</code> 				<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">68</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'date_modified'</code><code class="p">,</code>
+<code class="lineno">69</code> 					<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_DATE_MODIFIED'</code><code class="p">,</code>
+<code class="lineno">70</code> 					<code class="s1">'customCode'</code> <code class="o">=&gt;</code> <code class="s1">'{$fields.date_modified.value} '</code>
+<code class="lineno">71</code> 							<code class="o">+</code> <code class="s1">'{$APP.LBL_BY} '</code>
+<code class="lineno">72</code> 							<code class="o">+</code> <code class="s1">'{$fields.modified_by_name.value}'</code><code class="p">,</code>
+<code class="lineno">73</code> 				<code class="p">)</code>
+<code class="lineno">74</code> 			<code class="p">),</code>
+<code class="lineno">75</code> 		<code class="p">),</code>
+<code class="lineno">76</code> 	<code class="p">)</code>
+<code class="lineno">77</code> <code class="p">);</code>
+<code class="lineno">78</code> <code class="cp">?&gt;</code><code class="x"></code>
+</pre></div>
+
+  <hr /></div>
+<p>We see that line 2 defines an array <code>$viewdefs['ABC_Vehicles']['DetailView']</code> which
+places a DetailView entry for the module ABC_Vehicles into <code>$viewdefs</code> (DetailView
+will be EditView or QuickCreateView as appropriate). This array has two main
+keys defined here:</p>
+
+<h5 id="leanpub-auto-templatemeta">templateMeta</h5>
+<p>The templateMeta key provides information about the view in general. The
+<code>['form']['buttons']</code> entries define the buttons that should appear in this view.</p>
+
+<dl><dt><code>maxColumns</code></dt>
+  <dd>Defines the number of columns to use for this view. It is unusual for this to be more
+than 2.</dd>
+  <dt><code>widths</code></dt>
+  <dd>An array defining the width of the label and field for each column.</dd>
+  <dt><code>includes</code></dt>
+  <dd>An array of additional JavaScript files to include. This is useful for adding custom
+JavaScript behaviour to the page.</dd>
+</dl><h5 id="leanpub-auto-panels">panels</h5>
+<p>The panels entry defines the actual layout of the Detail (or Edit) view. Each
+entry is a new panel in the view with the key being the label for that panel.
+We can see in our example that we have 2 panels. One uses the label defined by
+the language string <code>LBL_ABC_VEHICLES_INFO</code>, the other uses <code>LBL_PANEL_ADVANCED</code>.</p>
+
+<p>Each panel has an array entry for each row, with each array containing an entry
+for each column. For example we can see that the first row has the following definition:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.3: DetailView metadata row definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">31</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">32</code> 	<code class="k">array</code> <code class="p">(</code>
+<code class="lineno">33</code> 		<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno">34</code> 		<code class="s1">'comment'</code> <code class="o">=&gt;</code> <code class="s1">'The Name of the Vehicle'</code><code class="p">,</code>
+<code class="lineno">35</code> 		<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_NAME'</code><code class="p">,</code>
+<code class="lineno">36</code> 	<code class="p">),</code>
+<code class="lineno">37</code> 	<code class="s1">'reg_number'</code><code class="p">,</code>
+<code class="lineno">38</code> <code class="p">),</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>This has an array definition for the first row, first column and a string definition
+for the first row, second column. The string definition is very straightforward
+and simply displays the detail (or edit, as appropriate) view for that field. It will use the default
+label, type, etc. In our example we are displaying the field named <code>reg_number</code>.</p>
+
+<p>The array definition for the first row, first column is a little more complex. Each array
+definition must have a <code>name</code> value. In our example we are displaying the <code>name</code> field.
+However we also supply some other values. Values most commonly used are:</p>
+
+<dl><dt><code>comment</code></dt>
+  <dd>Used to note the purpose of the field.</dd>
+  <dt><code>label</code></dt>
+  <dd>The language key for this label. If the language key is not recognised then this
+value will be used instead (see the <a href="chap08.xhtml#language-chapter">chapter on language</a>).</dd>
+  <dt><code>displayParams</code></dt>
+  <dd>An array used to pass extra arguments for the field display. For the options
+and how they are used you can have a look into the appropriate field type in
+<code>include/SugarFields/Fields</code> or <code>custom/include/SugarFields/Fields</code>. An example
+is setting the size of a textarea:</dd>
+</dl><div class="code-block">
+  <p class="codeblock-title">Example 6.4: DetailView metadata displayParams</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="s1">'displayParams'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">2</code>     <code class="s1">'rows'</code> <code class="o">=&gt;</code> <code class="mi">2</code><code class="p">,</code>
+<code class="lineno">3</code>     <code class="s1">'cols'</code> <code class="o">=&gt;</code> <code class="mi">30</code><code class="p">,</code>
+<code class="lineno">4</code> <code class="p">),</code>
+</pre></div>
+
+  <hr /></div>
+
+<dl><dt>customCode</dt>
+  <dd>Allows supplying custom smarty code to be used for the display. The code here can
+include any valid smarty code and this will also have access to the current
+fields in this view via <code>$fields</code>. An example of outputing the ID field would be
+<code>{$fields.id.value}</code>.
+Additionally the module labels and app labels can be accessed via <code>$MOD</code> and <code>$APP</code>
+respectively.
+Finally you can use <code>@@FIELD@@</code> to output the value of the field that would have been
+used. For example <code>{if $someCondition}@@FIELD@@{/if}</code> will conditionally show the field.</dd>
+</dl><h4 id="leanpub-auto-editviewdefsphp">editviewdefs.php</h4>
+<p><code>editviewdefs.php</code> provides information on the layout and fields of the edit view
+for this module. This file uses the same structure as detailviewdefs.php. Please
+see the information on detailviewdefs.php.</p>
+
+<h4 id="leanpub-auto-listviewdefsphp">listviewdefs.php</h4>
+<p>The <code>listviewdefs.php</code> file for a module defines what fields the list view for
+that module will display. Let’s take a look at an example:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.5: ListView metadata definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="nv">$listViewDefs</code> <code class="p">[</code><code class="s1">'AOR_Reports'</code><code class="p">]</code> <code class="o">=</code>
+<code class="lineno"> 2</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 3</code>   <code class="s1">'NAME'</code> <code class="o">=&gt;</code>
+<code class="lineno"> 4</code>   <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 5</code>     <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'15%'</code><code class="p">,</code>
+<code class="lineno"> 6</code>     <code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_NAME'</code><code class="p">,</code>
+<code class="lineno"> 7</code>     <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 8</code>     <code class="s1">'link'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 9</code>   <code class="p">),</code>
+<code class="lineno">10</code>   <code class="s1">'REPORT_MODULE'</code> <code class="o">=&gt;</code>
+<code class="lineno">11</code>   <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">12</code>     <code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'enum'</code><code class="p">,</code>
+<code class="lineno">13</code>     <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">14</code>     <code class="s1">'studio'</code> <code class="o">=&gt;</code> <code class="s1">'visible'</code><code class="p">,</code>
+<code class="lineno">15</code>     <code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_REPORT_MODULE'</code><code class="p">,</code>
+<code class="lineno">16</code>     <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'15%'</code><code class="p">,</code>
+<code class="lineno">17</code>   <code class="p">),</code>
+<code class="lineno">18</code>   <code class="s1">'ASSIGNED_USER_NAME'</code> <code class="o">=&gt;</code>
+<code class="lineno">19</code>   <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">20</code>     <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'15%'</code><code class="p">,</code>
+<code class="lineno">21</code>     <code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ASSIGNED_TO_NAME'</code><code class="p">,</code>
+<code class="lineno">22</code>     <code class="s1">'module'</code> <code class="o">=&gt;</code> <code class="s1">'Employees'</code><code class="p">,</code>
+<code class="lineno">23</code>     <code class="s1">'id'</code> <code class="o">=&gt;</code> <code class="s1">'ASSIGNED_USER_ID'</code><code class="p">,</code>
+<code class="lineno">24</code>     <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">25</code>   <code class="p">),</code>
+<code class="lineno">26</code>   <code class="s1">'DATE_ENTERED'</code> <code class="o">=&gt;</code>
+<code class="lineno">27</code>   <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">28</code>     <code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'datetime'</code><code class="p">,</code>
+<code class="lineno">29</code>     <code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_DATE_ENTERED'</code><code class="p">,</code>
+<code class="lineno">30</code>     <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'15%'</code><code class="p">,</code>
+<code class="lineno">31</code>     <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">32</code>   <code class="p">),</code>
+<code class="lineno">33</code>   <code class="s1">'DATE_MODIFIED'</code> <code class="o">=&gt;</code>
+<code class="lineno">34</code>   <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">35</code>     <code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'datetime'</code><code class="p">,</code>
+<code class="lineno">36</code>     <code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_DATE_MODIFIED'</code><code class="p">,</code>
+<code class="lineno">37</code>     <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'15%'</code><code class="p">,</code>
+<code class="lineno">38</code>     <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">39</code>   <code class="p">),</code>
+<code class="lineno">40</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+<p>To define the list view defs we simply add a key to the <code>$listViewDefs</code> array.
+In this case we add an entry for <code>AOR_Reports</code> This array contains an entry for
+each field that we wish to show in the list view and is keyed by the upper case
+name of the field. For example, the <code>REPORT_MODULE</code> key refers to the <code>report_module</code>
+field of AOR_Reports.</p>
+
+<dl><dt>type</dt>
+  <dd>The type of the field. This can be used to override how a field is displayed.</dd>
+  <dt>default</dt>
+  <dd>Whether this field should be shown in the list view by default. If false then the
+field will appear in the available columns list in studio.</dd>
+  <dt>studio</dt>
+  <dd>Whether or not this field should be displayed in studio. This can be useful to ensure
+that a critical field is not removed.</dd>
+  <dt>label</dt>
+  <dd>The label to be used for this field. If this is not supplied then the default
+label for that field will be used.</dd>
+  <dt>width</dt>
+  <dd>The width of the field in the list view. Note that, although this is usually given
+as a percentage it is treated as a proportion. The example above has five columns
+with a width of <code>15%</code> but these will actually be <code>20%</code> since this is a ratio.</dd>
+</dl><h4 id="leanpub-auto-popupdefsphp">popupdefs.php</h4>
+
+<p>popupdefs.php provides information on the layout, fields and search options
+of the module popup that is usually used when selecting a related record.</p>
+
+<p>Let’s look at the default popupdefs.php for the Accounts module:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.6: PopupView metadata definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="nv">$popupMeta</code> <code class="o">=</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 2</code> 	<code class="s1">'moduleMain'</code> <code class="o">=&gt;</code> <code class="s1">'Case'</code><code class="p">,</code>
+<code class="lineno"> 3</code> 	<code class="s1">'varName'</code> <code class="o">=&gt;</code> <code class="s1">'CASE'</code><code class="p">,</code>
+<code class="lineno"> 4</code> 	<code class="s1">'className'</code> <code class="o">=&gt;</code> <code class="s1">'aCase'</code><code class="p">,</code>
+<code class="lineno"> 5</code> 	<code class="s1">'orderBy'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 6</code> 	<code class="s1">'whereClauses'</code> <code class="o">=&gt;</code>
+<code class="lineno"> 7</code> 		<code class="k">array</code><code class="p">(</code><code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'cases.name'</code><code class="p">,</code>
+<code class="lineno"> 8</code> 				<code class="s1">'case_number'</code> <code class="o">=&gt;</code> <code class="s1">'cases.case_number'</code><code class="p">,</code>
+<code class="lineno"> 9</code> 				<code class="s1">'account_name'</code> <code class="o">=&gt;</code> <code class="s1">'accounts.name'</code><code class="p">),</code>
+<code class="lineno">10</code> 	<code class="s1">'listviewdefs'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">11</code> 		<code class="s1">'CASE_NUMBER'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">12</code> 			<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'5'</code><code class="p">,</code>
+<code class="lineno">13</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_NUMBER'</code><code class="p">,</code>
+<code class="lineno">14</code> 	        <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">),</code>
+<code class="lineno">15</code> 		<code class="s1">'NAME'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">16</code> 			<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'35'</code><code class="p">,</code>
+<code class="lineno">17</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_SUBJECT'</code><code class="p">,</code>
+<code class="lineno">18</code> 			<code class="s1">'link'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">19</code> 	        <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">),</code>
+<code class="lineno">20</code> 		<code class="s1">'ACCOUNT_NAME'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">21</code> 			<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'25'</code><code class="p">,</code>
+<code class="lineno">22</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_ACCOUNT_NAME'</code><code class="p">,</code>
+<code class="lineno">23</code> 			<code class="s1">'module'</code> <code class="o">=&gt;</code> <code class="s1">'Accounts'</code><code class="p">,</code>
+<code class="lineno">24</code> 			<code class="s1">'id'</code> <code class="o">=&gt;</code> <code class="s1">'ACCOUNT_ID'</code><code class="p">,</code>
+<code class="lineno">25</code> 			<code class="s1">'link'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">26</code> 	        <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">27</code> 	        <code class="s1">'ACLTag'</code> <code class="o">=&gt;</code> <code class="s1">'ACCOUNT'</code><code class="p">,</code>
+<code class="lineno">28</code> 	        <code class="s1">'related_fields'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code><code class="s1">'account_id'</code><code class="p">)),</code>
+<code class="lineno">29</code> 		<code class="s1">'PRIORITY'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">30</code> 			<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'8'</code><code class="p">,</code>
+<code class="lineno">31</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_PRIORITY'</code><code class="p">,</code>
+<code class="lineno">32</code> 	        <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">),</code>
+<code class="lineno">33</code> 		<code class="s1">'STATUS'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">34</code> 			<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'8'</code><code class="p">,</code>
+<code class="lineno">35</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_STATUS'</code><code class="p">,</code>
+<code class="lineno">36</code> 	        <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">),</code>
+<code class="lineno">37</code> 	    <code class="s1">'ASSIGNED_USER_NAME'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">38</code> 	        <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'2'</code><code class="p">,</code>
+<code class="lineno">39</code> 	        <code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_ASSIGNED_USER'</code><code class="p">,</code>
+<code class="lineno">40</code> 	        <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">41</code> 	       <code class="p">),</code>
+<code class="lineno">42</code> 		<code class="p">),</code>
+<code class="lineno">43</code> 	<code class="s1">'searchdefs'</code>   <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">44</code> 	 	<code class="s1">'case_number'</code><code class="p">,</code>
+<code class="lineno">45</code> 		<code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno">46</code> 		<code class="k">array</code><code class="p">(</code>
+<code class="lineno">47</code> 			<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'account_name'</code><code class="p">,</code>
+<code class="lineno">48</code> 			<code class="s1">'displayParams'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">49</code> 				<code class="s1">'hideButtons'</code><code class="o">=&gt;</code><code class="s1">'true'</code><code class="p">,</code>
+<code class="lineno">50</code> 				<code class="s1">'size'</code><code class="o">=&gt;</code><code class="mi">30</code><code class="p">,</code>
+<code class="lineno">51</code> 				<code class="s1">'class'</code><code class="o">=&gt;</code><code class="s1">'sqsEnabled sqsNoAutofill'</code>
+<code class="lineno">52</code> 			<code class="p">)</code>
+<code class="lineno">53</code> 		<code class="p">),</code>
+<code class="lineno">54</code> 		<code class="s1">'priority'</code><code class="p">,</code>
+<code class="lineno">55</code> 		<code class="s1">'status'</code><code class="p">,</code>
+<code class="lineno">56</code> 		<code class="k">array</code><code class="p">(</code>
+<code class="lineno">57</code> 			<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'assigned_user_id'</code><code class="p">,</code>
+<code class="lineno">58</code> 			<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'enum'</code><code class="p">,</code>
+<code class="lineno">59</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ASSIGNED_TO'</code><code class="p">,</code>
+<code class="lineno">60</code> 			<code class="s1">'function'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno">61</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'get_user_array'</code><code class="p">,</code>
+<code class="lineno">62</code> 				<code class="s1">'params'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code><code class="k">false</code><code class="p">))</code>
+<code class="lineno">63</code> 			<code class="p">),</code>
+<code class="lineno">64</code> 	  <code class="p">)</code>
+<code class="lineno">65</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>The popupdefs.php specifies a <code>$popupMeta</code> array with the following keys:</p>
+
+<dl><dt><code>moduleMain</code></dt>
+  <dd>The module that will be displayed by this popup.</dd>
+  <dt><code>varName</code></dt>
+  <dd>The variable name used to store the search preferences etc. This will usually simply
+the upper case module name.</dd>
+  <dt><code>className</code></dt>
+  <dd>The class name of the SugarBean for this module. If this is not supplied then
+<code>moduleMain</code> will be used. This is only really required for classes where the class
+name and module name differ (such as Cases).</dd>
+  <dt><code>orderBy</code></dt>
+  <dd>The default field the list of records will be sorted by.</dd>
+  <dt><code>whereClauses</code></dt>
+  <dd>Legacy option. This is only used as a fallback when there are no searchdefs. Defines
+the names of fields to allow searching for and their database representation.</dd>
+  <dt><code>listviewdefs</code></dt>
+  <dd>The list of fields displayed in the popup list view. See <code>listviewdefs.php</code>.</dd>
+  <dt><code>searchdefs</code></dt>
+  <dd>An array of the fields that should be available for searching in the popup.
+See the individual search defs in the searchdefs.php section (for example the
+<code>basic_search</code> array).</dd>
+</dl><h4 id="leanpub-auto-quickcreatedefsphp">quickcreatedefs.php</h4>
+<p><code>quickcreatedefs.php</code> provides information on the layout and fields of the quick
+create view for this module (this is the view that appears when creating a record
+from a subpanel). This file uses the same structure as <code>detailviewdefs.php</code>. Please
+see the information on <code>detailviewdefs.php</code>.</p>
+
+<h4 id="leanpub-auto-searchdefsphp">searchdefs.php</h4>
+<p>The search defs of a module define how searching in that module looks and behaves.</p>
+
+<p>Let’s look at an example.</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.7: Search View metadata definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">  1</code> <code class="nv">$searchdefs</code> <code class="p">[</code><code class="s1">'Accounts'</code><code class="p">]</code> <code class="o">=</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">  2</code> 	<code class="s1">'templateMeta'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">  3</code> 		<code class="s1">'maxColumns'</code> <code class="o">=&gt;</code> <code class="s1">'3'</code><code class="p">,</code>
+<code class="lineno">  4</code> 		<code class="s1">'maxColumnsBasic'</code> <code class="o">=&gt;</code> <code class="s1">'4'</code><code class="p">,</code>
+<code class="lineno">  5</code> 		<code class="s1">'widths'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">  6</code> 			<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'10'</code><code class="p">,</code>
+<code class="lineno">  7</code> 			<code class="s1">'field'</code> <code class="o">=&gt;</code> <code class="s1">'30'</code>
+<code class="lineno">  8</code> 		<code class="p">)</code>
+<code class="lineno">  9</code> 	<code class="p">),</code>
+<code class="lineno"> 10</code> 	<code class="s1">'layout'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 11</code> 		<code class="s1">'basic_search'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 12</code> 			<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 13</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 14</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 15</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 16</code> 			<code class="p">),</code>
+<code class="lineno"> 17</code> 			<code class="s1">'current_user_only'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 18</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'current_user_only'</code><code class="p">,</code>
+<code class="lineno"> 19</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_CURRENT_USER_FILTER'</code><code class="p">,</code>
+<code class="lineno"> 20</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'bool'</code><code class="p">,</code>
+<code class="lineno"> 21</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 22</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 23</code> 			<code class="p">)</code>
+<code class="lineno"> 24</code> 		<code class="p">)</code>
+<code class="lineno"> 25</code> 		<code class="p">,</code>
+<code class="lineno"> 26</code> 		<code class="s1">'advanced_search'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 27</code> 			<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 28</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 29</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 30</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 31</code> 			<code class="p">),</code>
+<code class="lineno"> 32</code> 			<code class="s1">'website'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 33</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'website'</code><code class="p">,</code>
+<code class="lineno"> 34</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 35</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 36</code> 			<code class="p">),</code>
+<code class="lineno"> 37</code> 			<code class="s1">'phone'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 38</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'phone'</code><code class="p">,</code>
+<code class="lineno"> 39</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ANY_PHONE'</code><code class="p">,</code>
+<code class="lineno"> 40</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 41</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 42</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 43</code> 			<code class="p">),</code>
+<code class="lineno"> 44</code> 			<code class="s1">'email'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 45</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'email'</code><code class="p">,</code>
+<code class="lineno"> 46</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ANY_EMAIL'</code><code class="p">,</code>
+<code class="lineno"> 47</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 48</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 49</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 50</code> 			<code class="p">),</code>
+<code class="lineno"> 51</code> 			<code class="s1">'address_street'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 52</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'address_street'</code><code class="p">,</code>
+<code class="lineno"> 53</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ANY_ADDRESS'</code><code class="p">,</code>
+<code class="lineno"> 54</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 55</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 56</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 57</code> 			<code class="p">),</code>
+<code class="lineno"> 58</code> 			<code class="s1">'address_city'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 59</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'address_city'</code><code class="p">,</code>
+<code class="lineno"> 60</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_CITY'</code><code class="p">,</code>
+<code class="lineno"> 61</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 62</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 63</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 64</code> 			<code class="p">),</code>
+<code class="lineno"> 65</code> 			<code class="s1">'address_state'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 66</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'address_state'</code><code class="p">,</code>
+<code class="lineno"> 67</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_STATE'</code><code class="p">,</code>
+<code class="lineno"> 68</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 69</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 70</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 71</code> 			<code class="p">),</code>
+<code class="lineno"> 72</code> 			<code class="s1">'address_postalcode'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 73</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'address_postalcode'</code><code class="p">,</code>
+<code class="lineno"> 74</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_POSTAL_CODE'</code><code class="p">,</code>
+<code class="lineno"> 75</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 76</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 77</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 78</code> 			<code class="p">),</code>
+<code class="lineno"> 79</code> 			<code class="s1">'billing_address_country'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 80</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'billing_address_country'</code><code class="p">,</code>
+<code class="lineno"> 81</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_COUNTRY'</code><code class="p">,</code>
+<code class="lineno"> 82</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'name'</code><code class="p">,</code>
+<code class="lineno"> 83</code> 				<code class="s1">'options'</code> <code class="o">=&gt;</code> <code class="s1">'countries_dom'</code><code class="p">,</code>
+<code class="lineno"> 84</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 85</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 86</code> 			<code class="p">),</code>
+<code class="lineno"> 87</code> 			<code class="s1">'account_type'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 88</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'account_type'</code><code class="p">,</code>
+<code class="lineno"> 89</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 90</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 91</code> 			<code class="p">),</code>
+<code class="lineno"> 92</code> 			<code class="s1">'industry'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 93</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'industry'</code><code class="p">,</code>
+<code class="lineno"> 94</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 95</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno"> 96</code> 			<code class="p">),</code>
+<code class="lineno"> 97</code> 			<code class="s1">'assigned_user_id'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 98</code> 				<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'assigned_user_id'</code><code class="p">,</code>
+<code class="lineno"> 99</code> 				<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'enum'</code><code class="p">,</code>
+<code class="lineno">100</code> 				<code class="s1">'label'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_ASSIGNED_TO'</code><code class="p">,</code>
+<code class="lineno">101</code> 				<code class="s1">'function'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">102</code> 					<code class="s1">'name'</code> <code class="o">=&gt;</code> <code class="s1">'get_user_array'</code><code class="p">,</code>
+<code class="lineno">103</code> 					<code class="s1">'params'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">104</code> 							<code class="mi">0</code> <code class="o">=&gt;</code> <code class="k">false</code>
+<code class="lineno">105</code> 					<code class="p">)</code>
+<code class="lineno">106</code> 				<code class="p">),</code>
+<code class="lineno">107</code> 				<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">108</code> 				<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'10%'</code>
+<code class="lineno">109</code> 			<code class="p">)</code>
+<code class="lineno">110</code> 		<code class="p">)</code>
+<code class="lineno">111</code> 	<code class="p">)</code>
+<code class="lineno">112</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+<p>Here we setup a new array for <code>Accounts</code> in the <code>$searchdefs</code> array. This has two keys:</p>
+
+<h5 id="leanpub-auto-templatemeta-1">templateMeta</h5>
+<p>The <code>templateMeta</code> key controls the basic look of the search forms. Here we define
+some overall layout info such as the maximum columns (3) and the maximum number
+of columns for the basic search (4). Finally we set the widths for the search fields
+and their labels.</p>
+
+<h5 id="leanpub-auto-layout">layout</h5>
+<p>The <code>layout</code> key contains the layout definitions for the basic search and advanced
+search. This is simply a list of array definition of the fields. See the section
+on listviewdefs.php for a description of some of the options.</p>
+
+<h4 id="leanpub-auto-subpaneldefsphp">
+  <code>subpaneldefs.php</code>
+</h4>
+<p>The subpaneldefs.php file provides definitions for the subpanels that appear in
+the detail view of a module. Let’s look at an example:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.8: Subpanel metadata definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="nv">$layout_defs</code><code class="p">[</code><code class="s1">'AOS_Quotes'</code><code class="p">]</code> <code class="o">=</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 2</code> 	<code class="s1">'subpanel_setup'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 3</code> 		<code class="s1">'aos_quotes_aos_contracts'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 4</code> 			<code class="s1">'order'</code> <code class="o">=&gt;</code> <code class="mi">100</code><code class="p">,</code>
+<code class="lineno"> 5</code> 			<code class="s1">'module'</code> <code class="o">=&gt;</code> <code class="s1">'AOS_Contracts'</code><code class="p">,</code>
+<code class="lineno"> 6</code> 			<code class="s1">'subpanel_name'</code> <code class="o">=&gt;</code> <code class="s1">'default'</code><code class="p">,</code>
+<code class="lineno"> 7</code> 			<code class="s1">'sort_order'</code> <code class="o">=&gt;</code> <code class="s1">'asc'</code><code class="p">,</code>
+<code class="lineno"> 8</code> 			<code class="s1">'sort_by'</code> <code class="o">=&gt;</code> <code class="s1">'id'</code><code class="p">,</code>
+<code class="lineno"> 9</code> 			<code class="s1">'title_key'</code> <code class="o">=&gt;</code> <code class="s1">'AOS_Contracts'</code><code class="p">,</code>
+<code class="lineno">10</code> 			<code class="s1">'get_subpanel_data'</code> <code class="o">=&gt;</code> <code class="s1">'aos_quotes_aos_contracts'</code><code class="p">,</code>
+<code class="lineno">11</code> 			<code class="s1">'top_buttons'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">12</code> 				<code class="mi">0</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">13</code> 					<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopCreateButton'</code>
+<code class="lineno">14</code> 				<code class="p">),</code>
+<code class="lineno">15</code> 				<code class="mi">1</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">16</code> 					<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopSelectButton'</code><code class="p">,</code>
+<code class="lineno">17</code> 					<code class="s1">'popup_module'</code> <code class="o">=&gt;</code> <code class="s1">'AOS_Contracts'</code><code class="p">,</code>
+<code class="lineno">18</code> 					<code class="s1">'mode'</code> <code class="o">=&gt;</code> <code class="s1">'MultiSelect'</code>
+<code class="lineno">19</code> 				<code class="p">)</code>
+<code class="lineno">20</code> 			<code class="p">)</code>
+<code class="lineno">21</code> 		<code class="p">),</code>
+<code class="lineno">22</code> 		<code class="s1">'aos_quotes_aos_invoices'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">23</code> 			<code class="s1">'order'</code> <code class="o">=&gt;</code> <code class="mi">100</code><code class="p">,</code>
+<code class="lineno">24</code> 			<code class="s1">'module'</code> <code class="o">=&gt;</code> <code class="s1">'AOS_Invoices'</code><code class="p">,</code>
+<code class="lineno">25</code> 			<code class="s1">'subpanel_name'</code> <code class="o">=&gt;</code> <code class="s1">'default'</code><code class="p">,</code>
+<code class="lineno">26</code> 			<code class="s1">'sort_order'</code> <code class="o">=&gt;</code> <code class="s1">'asc'</code><code class="p">,</code>
+<code class="lineno">27</code> 			<code class="s1">'sort_by'</code> <code class="o">=&gt;</code> <code class="s1">'id'</code><code class="p">,</code>
+<code class="lineno">28</code> 			<code class="s1">'title_key'</code> <code class="o">=&gt;</code> <code class="s1">'AOS_Invoices'</code><code class="p">,</code>
+<code class="lineno">29</code> 			<code class="s1">'get_subpanel_data'</code> <code class="o">=&gt;</code> <code class="s1">'aos_quotes_aos_invoices'</code><code class="p">,</code>
+<code class="lineno">30</code> 			<code class="s1">'top_buttons'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">31</code> 				<code class="mi">0</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">32</code> 					<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopCreateButton'</code>
+<code class="lineno">33</code> 				<code class="p">),</code>
+<code class="lineno">34</code> 				<code class="mi">1</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">35</code> 					<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopSelectButton'</code><code class="p">,</code>
+<code class="lineno">36</code> 					<code class="s1">'popup_module'</code> <code class="o">=&gt;</code> <code class="s1">'AOS_Invoices'</code><code class="p">,</code>
+<code class="lineno">37</code> 					<code class="s1">'mode'</code> <code class="o">=&gt;</code> <code class="s1">'MultiSelect'</code>
+<code class="lineno">38</code> 				<code class="p">)</code>
+<code class="lineno">39</code> 			<code class="p">)</code>
+<code class="lineno">40</code> 		<code class="p">),</code>
+<code class="lineno">41</code> 		<code class="s1">'aos_quotes_project'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">42</code> 			<code class="s1">'order'</code> <code class="o">=&gt;</code> <code class="mi">100</code><code class="p">,</code>
+<code class="lineno">43</code> 			<code class="s1">'module'</code> <code class="o">=&gt;</code> <code class="s1">'Project'</code><code class="p">,</code>
+<code class="lineno">44</code> 			<code class="s1">'subpanel_name'</code> <code class="o">=&gt;</code> <code class="s1">'default'</code><code class="p">,</code>
+<code class="lineno">45</code> 			<code class="s1">'sort_order'</code> <code class="o">=&gt;</code> <code class="s1">'asc'</code><code class="p">,</code>
+<code class="lineno">46</code> 			<code class="s1">'sort_by'</code> <code class="o">=&gt;</code> <code class="s1">'id'</code><code class="p">,</code>
+<code class="lineno">47</code> 			<code class="s1">'title_key'</code> <code class="o">=&gt;</code> <code class="s1">'Project'</code><code class="p">,</code>
+<code class="lineno">48</code> 			<code class="s1">'get_subpanel_data'</code> <code class="o">=&gt;</code> <code class="s1">'aos_quotes_project'</code><code class="p">,</code>
+<code class="lineno">49</code> 			<code class="s1">'top_buttons'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">50</code> 				<code class="mi">0</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">51</code> 					<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopCreateButton'</code>
+<code class="lineno">52</code> 				<code class="p">),</code>
+<code class="lineno">53</code> 				<code class="mi">1</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">54</code> 					<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopSelectButton'</code><code class="p">,</code>
+<code class="lineno">55</code> 					<code class="s1">'popup_module'</code> <code class="o">=&gt;</code> <code class="s1">'Accounts'</code><code class="p">,</code>
+<code class="lineno">56</code> 					<code class="s1">'mode'</code> <code class="o">=&gt;</code> <code class="s1">'MultiSelect'</code>
+<code class="lineno">57</code> 				<code class="p">)</code>
+<code class="lineno">58</code> 			<code class="p">)</code>
+<code class="lineno">59</code> 		<code class="p">)</code>
+<code class="lineno">60</code> 	<code class="p">)</code>
+<code class="lineno">61</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>In the example above we set up a definition for a module (in this case <code>AOS_Quotes</code>)
+in the <code>$layout_defs</code> array. This has a single key <code>subpanel_setup</code> which is an
+array of each of the subpanel definitions keyed by a name. This name should be something
+recognisable. In the case above it is the name of the link field displayed by the
+subpanel. The entry for each subpanel usually has the following defined:</p>
+
+<dl><dt>order</dt>
+  <dd>A number used for sorting the subpanels. The values themselves are arbitrary
+and are only used relative to other subpanels.</dd>
+  <dt>module</dt>
+  <dd>The module which will be displayed by this subpanel. For example the
+<code>aos_quotes_project</code> def in the example above will display a list of <code>Project</code>
+records.</dd>
+  <dt>subpanel_name</dt>
+  <dd>The subpanel from the displayed module which will be used. See the subpanels
+section of this chapter.</dd>
+  <dt>sort_by</dt>
+  <dd>The field to sort the records on.</dd>
+  <dt>sort_order</dt>
+  <dd>The order in which to sort the <code>sort_by</code> field. <code>asc</code> for ascending <code>desc</code> for
+descending.</dd>
+  <dt>title_key</dt>
+  <dd>The language key to be used for the label of this subpanel.</dd>
+  <dt>get_subpanel_data</dt>
+  <dd>Used to specify where to retrieve the subpanel records. Usually this is just a
+link name for the current module. In this case the related records will be
+displayed in the subpanel. However, for more complex links, it is possible
+to specify a function to call. When specifying a function you should ensure
+that the <code>get_subpanel_data</code> entry is in the form <code>function:theFunctionName</code>.
+Additionally you can specify the location of the function and any additional
+parameters that are needed by using the <code>function_parameters</code> key. An example of
+a subpanel which uses a function can be found in <a href="chap19.xhtml#appendix-a">Appendix A</a>.</dd>
+  <dt>function_parameters</dt>
+  <dd>Specifies the parameters for a subpanel which gets it’s information from
+a function (see<br /><code>get_subpanel_data</code>). This is an array which allows specifying
+where the function is by using the <code>import_function_file</code> key (if this is absent
+but <code>get_subpanel_data</code> defines a function then the function will be called
+on the bean for the parent of the subpanel). Additionally
+this array will be passed as an argument to the function defined in
+<code>get_subpanel_data</code> which allows passing in arguments to the function.</dd>
+  <dt>generate_select</dt>
+  <dd>For function subpanels (see <code>get_subpanel_data</code>) whether or not the function 
+will return an array representing the query to be used
+(for <code>generate_select = true</code>) or whether it will simply return the query
+to be used as a string.</dd>
+  <dt>get_distinct_data</dt>
+  <dd>Whether or not to only return distinct rows. Relationships do not allow linking
+two records more than once therefore this only really applies if the subpanel source
+is a function. See<br /><code>get_subpanel_data</code> for information on function subpanel sources.</dd>
+  <dt>top_buttons</dt>
+  <dd>Allows defining the buttons to appear on the subpanel. This is simply an array
+of the button definitions. These definitions have, at least, the <code>widget_class</code>
+defined which decides the button class to use in <code>include/generic/SugarWidgets</code>.
+Depending on the button this array may also be used to pass in extra arguments
+to the widget class.</dd>
+</dl><h4 id="leanpub-auto-subpanels">subpanels</h4>
+<p>Inside the metadata folder is the <code>subpanels</code> folder. This allows creating different
+subpanel layouts for different parent modules. For example, the Contacts module
+will display differently in the subpanel on an account than it will in the subpanel
+of a case. The files inside the <code>subpanels</code> folder can be named anything. All
+that matters is that it can be referenced in the <code>subpanel_name</code> of the
+<code>subpaneldefs.php</code> of the parent module. The usual subpanel file is simply called
+<code>default.php</code>. Let’s look at the <code>modules/Accounts/metadata/subpanels/default.php</code>
+file:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 6.8: Module Subpanels definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="nv">$subpanel_layout</code> <code class="o">=</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 2</code> 	<code class="s1">'top_buttons'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 3</code> 		<code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 4</code> 			<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopCreateButton'</code>
+<code class="lineno"> 5</code> 		<code class="p">),</code>
+<code class="lineno"> 6</code> 		<code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 7</code> 			<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelTopSelectButton'</code><code class="p">,</code> 
+<code class="lineno"> 8</code> 			<code class="s1">'popup_module'</code> <code class="o">=&gt;</code> <code class="s1">'Accounts'</code>
+<code class="lineno"> 9</code> 		<code class="p">),</code>
+<code class="lineno">10</code> 	<code class="p">),</code>
+<code class="lineno">11</code> 	<code class="s1">'where'</code> <code class="o">=&gt;</code> <code class="s1">''</code><code class="p">,</code>
+<code class="lineno">12</code> 	<code class="s1">'list_fields'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">13</code> 	  <code class="s1">'name'</code> <code class="o">=&gt;</code>
+<code class="lineno">14</code> 	  <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">15</code> 	   <code class="s1">'vname'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_ACCOUNT_NAME'</code><code class="p">,</code>
+<code class="lineno">16</code> 	   <code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelDetailViewLink'</code><code class="p">,</code>
+<code class="lineno">17</code> 	   <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'45%'</code><code class="p">,</code>
+<code class="lineno">18</code> 	   <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">19</code> 	  <code class="p">),</code>
+<code class="lineno">20</code> 	  <code class="s1">'billing_address_city'</code> <code class="o">=&gt;</code>
+<code class="lineno">21</code> 	  <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">22</code>     	<code class="s1">'vname'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_CITY'</code><code class="p">,</code>
+<code class="lineno">23</code>     	<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'20%'</code><code class="p">,</code>
+<code class="lineno">24</code>     	<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">25</code> 	  <code class="p">),</code>
+<code class="lineno">26</code> 	  <code class="s1">'billing_address_country'</code> <code class="o">=&gt;</code>
+<code class="lineno">27</code> 	  <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">28</code> 	  	<code class="s1">'type'</code> <code class="o">=&gt;</code> <code class="s1">'varchar'</code><code class="p">,</code>
+<code class="lineno">29</code>     	<code class="s1">'vname'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_BILLING_ADDRESS_COUNTRY'</code><code class="p">,</code>
+<code class="lineno">30</code>     	<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'7%'</code><code class="p">,</code>
+<code class="lineno">31</code>     	<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">32</code> 	  <code class="p">),</code>
+<code class="lineno">33</code> 	  <code class="s1">'phone_office'</code> <code class="o">=&gt;</code>
+<code class="lineno">34</code> 	  <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">35</code> 	  	<code class="s1">'vname'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_LIST_PHONE'</code><code class="p">,</code>
+<code class="lineno">36</code> 	  	<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'20%'</code><code class="p">,</code>
+<code class="lineno">37</code> 	  	<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">38</code> 	  <code class="p">),</code>
+<code class="lineno">39</code> 	  <code class="s1">'edit_button'</code> <code class="o">=&gt;</code>
+<code class="lineno">40</code> 	  <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">41</code> 	  	<code class="s1">'vname'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_EDIT_BUTTON'</code><code class="p">,</code>
+<code class="lineno">42</code> 	  	<code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelEditButton'</code><code class="p">,</code>
+<code class="lineno">43</code> 	  	<code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'4%'</code><code class="p">,</code>
+<code class="lineno">44</code> 	  	<code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">45</code> 	  <code class="p">),</code>
+<code class="lineno">46</code> 	  <code class="s1">'remove_button'</code> <code class="o">=&gt;</code>
+<code class="lineno">47</code> 	  <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">48</code> 	    <code class="s1">'vname'</code> <code class="o">=&gt;</code> <code class="s1">'LBL_REMOVE'</code><code class="p">,</code>
+<code class="lineno">49</code> 	    <code class="s1">'widget_class'</code> <code class="o">=&gt;</code> <code class="s1">'SubPanelRemoveButtonAccount'</code><code class="p">,</code>
+<code class="lineno">50</code> 	    <code class="s1">'width'</code> <code class="o">=&gt;</code> <code class="s1">'4%'</code><code class="p">,</code>
+<code class="lineno">51</code> 	    <code class="s1">'default'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno">52</code> 	  <code class="p">),</code>
+<code class="lineno">53</code>    <code class="p">)</code>
+<code class="lineno">54</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+<p>There are three keys in the <code>$subpanel_layout</code> variable for this subpanel.
+These are:</p>
+
+<dl><dt><code>top_buttons</code></dt>
+  <dd>Defines the buttons that will appear at the top of the subpanel. See the
+<code>top_buttons</code> key in <code>subpaneldefs.php</code>.</dd>
+  <dt><code>where</code></dt>
+  <dd>Allows the addition of conditions to the <code>where</code> clause. For example this could
+be used to exclude Cases that are closed (<code>cases.state != "Closed"</code>) or only
+include Accounts of a specific industry (<code>accounts.industry = "Media"</code>). Note that
+in these examples we specify the table to remove any ambiguity in the query.</dd>
+  <dt><code>list_fields</code></dt>
+  <dd>Defines the list of fields to be displayed in this subpanel. See the section on
+<code>listviewdefs.php</code> for more information.</dd>
+</dl><h4 id="leanpub-auto-studiophp">studio.php</h4>
+<p>studio.php is the simplest file in metadata and it’s existence is simply used to
+confirm if a module should be shown in studio for user tweaking. Note that,
+unlike other metadata files, the file in <code>modules/&lt;TheModule&gt;/metadata/studio.php</code>
+will be the only one checked. A file in <code>custom/modules/&lt;TheModule&gt;/metadata/studio.php</code>
+will have no effect.</p>
+</div>
+</body>
+</html>

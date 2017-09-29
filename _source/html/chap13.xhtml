@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>14. Extension Framework</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="extensions-chapter">
+<span class="section-number">14. </span>Extension Framework</h2>
+
+<h3 id="leanpub-auto-introduction-1">Introduction</h3>
+<p>The extension framework provides a means to modify various application data
+inside SuiteCRM. For example it provides a way to add or modify vardefs, scheduled
+tasks, language strings and more. In general a folder is provided in
+<code>custom/Extension</code>  (the exact path depends on the extension). This folder is then
+scanned for files which will be consolidated into a single ext file which SuiteCRM
+will then read and use. In this way it is possible for developers to add a new file
+to affect the behaviour of SuiteCRM rather than altering existing files. This makes
+the changes more modular and allows the easy addition or removal of changes.
+Additionally, because these files are all consolidated it means that there is no
+affect on performance of checking a (possibly large) number of files. This is only done
+when performing a repair and rebuild in the admin menu.</p>
+
+<h3 id="leanpub-auto-standard-extensions">Standard Extensions</h3>
+
+
+<p class="table-title">List of standard SuiteCRM extensions</p>
+
+<table width="wide" style="width: 100%;">
+  <thead>
+    <tr><th>Extension Directory</th>
+      <th>Compiled file</th>
+      <th>Module</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>ActionViewMap</td>
+      <td>action_view_map.ext.php</td>
+      <td> </td>
+      <td>Used to map actions for a module to a specified view.</td>
+    </tr>
+    <tr><td>ActionFileMap</td>
+      <td>action_file_map.ext.php</td>
+      <td> </td>
+      <td>Used to map actions for a module to a specified file.</td>
+    </tr>
+    <tr><td>ActionReMap</td>
+      <td>action_remap.ext.php</td>
+      <td> </td>
+      <td>Used to map actions for a module to existing actions.</td>
+    </tr>
+    <tr><td>Administration</td>
+      <td>administration.ext.php</td>
+      <td>Administration</td>
+      <td>Used to add new sections to the administration panel.</td>
+    </tr>
+    <tr><td>EntryPointRegistry</td>
+      <td>entry_point_registry.ext.php</td>
+      <td>application</td>
+      <td>Used to add new entry points to SuiteCRM. See the chapter on <a href="chap07.xhtml#entry-point-chapter">Entry Points</a>.</td>
+    </tr>
+    <tr><td>Extensions</td>
+      <td>extensions.ext.php</td>
+      <td>application</td>
+      <td>Used to add new extension types.</td>
+    </tr>
+    <tr><td>FileAccessControlMap</td>
+      <td>file_access_control_map.ext.php</td>
+      <td> </td>
+      <td>Used to add, update or delete entries in the access control lists for files.</td>
+    </tr>
+    <tr><td>Language</td>
+      <td>N/A<sup id="fnref-langNote"><a href="chap13.xhtml#fn-langNote" rel="footnote">1</a></sup></td>
+      <td> </td>
+      <td>Used to add, update or delete language strings for both modules and app strings. See the chapter on <a href="chap08.xhtml#language-chapter">Language Strings</a>.</td>
+    </tr>
+    <tr><td>Layoutdefs</td>
+      <td>layoutdefs.ext.php</td>
+      <td> </td>
+      <td>Used to add, update or delete subpanel definitions for a module.</td>
+    </tr>
+    <tr><td>GlobalLinks</td>
+      <td>links.ext.php</td>
+      <td>application</td>
+      <td>Used to add, update or delete global links (the list of links that appear in the top right of the SuiteCRM UI).</td>
+    </tr>
+    <tr><td>LogicHooks</td>
+      <td>logichooks.ext.php</td>
+      <td> </td>
+      <td>Used to add, update or delete logic hooks. See the chapter on <a href="chap11.xhtml#logic-hooks-chapter">Logic Hooks</a>.</td>
+    </tr>
+    <tr><td>Include</td>
+      <td>modules.ext.php</td>
+      <td>application</td>
+      <td>Used to register new beans and modules.</td>
+    </tr>
+    <tr><td>Menus</td>
+      <td>menu.ext.php</td>
+      <td> </td>
+      <td>Used to add, update or delete the menu links for each module.</td>
+    </tr>
+    <tr><td>ScheduledTasks</td>
+      <td>scheduledtasks.ext.php</td>
+      <td>Schedulers</td>
+      <td>Used to add new scheduled tasks. See the chapter on <a href="chap12.xhtml#scheduled-tasks-chapter">Scheduled Tasks</a>.</td>
+    </tr>
+    <tr><td>UserPage</td>
+      <td>userpage.ext.php</td>
+      <td>Users</td>
+      <td>Unused</td>
+    </tr>
+    <tr><td>Utils</td>
+      <td>custom_utils.ext.php</td>
+      <td>application</td>
+      <td>Used to add new utility methods.</td>
+    </tr>
+    <tr><td>Vardefs</td>
+      <td>vardefs.ext.php</td>
+      <td> </td>
+      <td>Used to add, update or delete vardefs for a module. See the section on <a href="chap03.xhtml#vardefs-chapter">Vardefs</a>.</td>
+    </tr>
+    <tr><td>JSGroupings</td>
+      <td>jsgroups.ext.php</td>
+      <td> </td>
+      <td>Used to add, update or delete JavaScript groupings.</td>
+    </tr>
+    <tr><td>Actions</td>
+      <td>actions.ext.php</td>
+      <td>AOW_Actions</td>
+      <td>Used to add new WorkFlow actions.</td>
+    </tr>
+  </tbody>
+</table><h3 id="leanpub-auto-custom-extensions">Custom Extensions</h3>
+<p>Interestingly the extension framework can be used to add new extensions. This
+allows you to create customisations that are easily customised by others
+(in a similar manner to, for example, how vardefs can be added - see the chapter on <a href="chap03.xhtml#vardefs-chapter">Vardefs</a>).</p>
+
+<p>To create a custom extension you simply add a new file in<br /><code>custom/Extension/application/Ext/Extensions</code>. This can be given a name of your choosing.
+Our example will use<br /><code>custom/Extension/application/Ext/Extensions/SportsList.php</code>
+and will look like:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 14.1: Adding an entry point entry</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno">2</code> <code class="nv">$extensions</code><code class="p">[</code><code class="s2">"sports_list"</code><code class="p">]</code> <code class="o">=</code>  <code class="k">array</code><code class="p">(</code>
+<code class="lineno">3</code>                 <code class="s2">"section"</code> <code class="o">=&gt;</code> <code class="s2">"sports_list"</code><code class="p">,</code>
+<code class="lineno">4</code>                 <code class="s2">"extdir"</code> <code class="o">=&gt;</code> <code class="s2">"SportsList"</code><code class="p">,</code>
+<code class="lineno">5</code>                 <code class="s2">"file"</code> <code class="o">=&gt;</code> <code class="s1">'sportslist.ext.php'</code><code class="p">,</code>
+<code class="lineno">6</code>                 <code class="s2">"module"</code> <code class="o">=&gt;</code> <code class="s2">""</code><code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>Now when a Quick Repair and rebuild is run any files in<br /><code>custom/Extension/application/Ext/SportsList/</code> will be consolidated into<br /><code>custom/application/Ext/SportsList/sportslist.ext.php</code>. On it’s own this file
+will not do anything but you are now able to write custom code that checks the consolidated
+file rather than having to worry about searching for customisations.</p>
+
+
+
+
+
+<div class="footnotes">
+  <ol><li id="fn-langNote">The language extensions are treated specially and, as such, aren’t compiled to a single file.<a href="chap13.xhtml#fnref-langNote" rev="footnote">↩</a>
+</li>
+  </ol></div>
+</div>
+</body>
+</html>

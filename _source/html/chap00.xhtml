@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>1. Introduction</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="leanpub-auto-introduction">
+<span class="section-number">1. </span>Introduction</h2>
+
+<h3 id="leanpub-auto-what-is-suitecrm">What is SuiteCRM</h3>
+<p>The story of <a href="https://www.suitecrm.com">SuiteCRM</a> starts with SugarCRM. SugarCRM was founded in 2004 and
+consisted of an open source version (called Community Edition) and various paid
+for versions. However trouble started brewing when it appeared that SugarCRM would
+not be releasing a Community Edition of SugarCRM 7 and would be providing limited,
+if any, updates to the Community Edition.</p>
+
+<p>Enter SuiteCRM. SalesAgility forked Community Edition to create SuiteCRM and also
+added various open source plugins to add improved functionality.</p>
+
+<h3 id="leanpub-auto-this-book">This book</h3>
+<p>This book is intended for developers who are familiar (or at least acquainted)
+with using SuiteCRM but want to perform their own customisations. SuiteCRM
+is a large and mature piece of software so it is impractical for a book to cover all
+aspects of the software. I’ve tried to add the most important parts which should allow you
+to make the changes you need in 99% of situations. There is a further resources chapter
+at the end of this book to help out in those 1% of cases. With that being said
+if you feel there is anything important I have left out (or worse, anything
+incorrect in the book) please let me know. I can be contacted at
+<a href="http://www.jsmackin.co.uk">JSMackin.co.uk</a>.</p>
+
+<h3 id="leanpub-auto-reading-this-book">Reading this book</h3>
+<p>Each chapter in this book is intended to be self contained so the reader can
+jump to interesting chapters. Where there is some overlap this is usually indicated
+with links to the relevant chapters.</p>
+
+<p>Some parts of this book may refer to file paths or other parts of code that can
+have a variable value, for example controller names contain the module name
+or a file with an arbitrary name. In this case these will be marked in the form
+<code>&lt;TheModuleName&gt;</code>, <code>&lt;TheFileName&gt;</code> or something else suitable. In these cases
+you can substitute something appropriate (such as <code>Accounts</code> or <code>MyNewFile</code>).</p>
+
+<h3 id="leanpub-auto-setting-up-suitecrm">Setting up SuiteCRM</h3>
+<p>In this book we’ll be using SuiteCRM v7.1.5 which is the latest at time of writing.
+For up to date versions of the installation instructions see the SuiteCRM wiki at
+<a href="https://suitecrm.com/wiki/index.php/Installation">suitecrm.com/wiki/index.php/Installation</a>.</p>
+
+<h4 id="leanpub-auto-website">Website</h4>
+<p>The SuiteCRM installer can be found at <a href="https://suitecrm.com/">SuiteCRM.com</a>.
+I would recommend SuiteCRM MAX as I prefer to start with a full interface and
+customise it as needed.</p>
+
+<h4 id="leanpub-auto-github">GitHub</h4>
+<p>SuiteCRM is also available on <a href="http://github.com">GitHub</a> at <a href="https://github.com/salesagility/SuiteCRM">github.com/salesagility/SuiteCRM</a>.
+Each SuiteCRM version is tagged so you can easily grab the version you need.</p>
+
+<h3 id="leanpub-auto-initial-tweaks">Initial Tweaks</h3>
+<p>After the initial install there are a few tweaks you may want to make on an
+instance you are developing on. These changes should improve your development
+flow and productivity as well as help identify issues if they occur.</p>
+
+<h4 id="leanpub-auto-developer-mode">Developer Mode</h4>
+<p>SuiteCRM will cache various files that it processes, such as Smarty templates.
+Developer mode will turn off some of the caching so that changes to files will be
+seen immediately (though this isn’t always the case - as is the case with <a href="chap13.xhtml#extensions-chapter">extensions</a>). This can be enabled either through the
+config file or via the General settings page inside admin.</p>
+
+<h4 id="leanpub-auto-log-level">Log Level</h4>
+<p>The default log level of SuiteCRM is <code>fatal</code>. This is a good default for
+production instances but you may want to increase the log level to <code>info</code> or
+<code>debug</code>. This will make the log output more verbose so, should anything go wrong,
+you’ll have something to refer to. See the <a href="chap10.xhtml#logging-chapter">chapter on logging</a> for more information.</p>
+
+<h4 id="leanpub-auto-display-errors">Display errors</h4>
+<p>You’ll also want to turn off display errors. Unfortunately at the moment
+SuiteCRM has various notices and warnings out of the box. With <code>display_errors</code> on this can
+sometimes cause AJAX pages and the link to break.</p>
+
+<p>With this being said you should be checking the PHP error logs or selectively
+enabling<br /><code>display_errors</code> to ensure that the code you are creating is not creating
+additional notices, warnings or errors.</p>
+
+<h4 id="leanpub-auto-xdebug">XDebug</h4>
+<p><a href="http://xdebug.org">XDebug</a> is a PHP extension which provides profiling and
+debugging capabilities to PHP. This can massively improve developer productivity
+by simplifying development and, particularly, tracking down any issues. See the
+XDebug site for information on XDebug.</p>
+</div>
+</body>
+</html>

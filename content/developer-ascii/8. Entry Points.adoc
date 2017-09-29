@@ -1,0 +1,110 @@
+---
+weight: 8
+title: "8. Entry Points"
+---
+[[entry-point-chapter]]
+8. Entry Points
+~~~~~~~~~~~~~~~
+
+Entry points are simply a page which provides access to SuiteCRM. These
+can be used for a variety of purposes such as allowing an external form
+simple access to SuiteCRM or, as is the case with the stock Events
+module, allowing an event invite to be responded to by clicking a link
+in an email.
+
+[[leanpub-auto-creating-an-entry-point]]
+Creating an entry point
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Let’s create a simple entry point to display the time. First we define
+this entry point in a new file in:
+
+Example 8.1: Entry point registry location
+
+'''''
+
+....
+custom/Extension/application/Ext/EntryPointRegistry/
+....
+
+'''''
+
+For our example we’ll call our new file MyTimeEntryPoint.php
+
+Example 8.2: Example entry point location
+
+'''''
+
+....
+custom/Extension/application/Ext/EntryPointRegistry/MyTimeEntryPoint.php
+....
+
+'''''
+
+In this file we will add a new entry to the `$entry_point_registry`. We
+supply the file that should be called. Here we are simply placing the
+file in custom if the entry point is related to a specific module it is
+usually a good idea to place this somewhere inside
+`custom/<TheModule>/`.
+
+In addition we supply an “auth” parameter. If “auth” is true then anyone
+accessing the entry point will need to be logged into SuiteCRM.
+
+Example 8.3: Adding an entry point entry
+
+'''''
+
+....
+1 <?php
+2   $entry_point_registry['MyTimeEntryPoint'] = array(
+3       'file' => 'custom/MyTimeEntryPoint.php',
+4       'auth' => true,
+5   );
+....
+
+'''''
+
+Finally we add the actual logic itself inside
+custom/MyTimeEntryPoint.php:
+
+Example 8.4: Example entry point that outputs the current time
+
+'''''
+
+....
+1 <?php
+2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+3 $date = new DateTime();
+4 echo $date->format('r');
+....
+
+'''''
+
+After a Quick Repair and Rebuild we can access our entry point:
+
+Example 8.5: Custom entry point URL
+
+'''''
+
+....
+example.com/index.php?entryPoint=MyTimeEntryPoint
+....
+
+'''''
+
+and we should see something similar to:
+
+Example 8.6: MyTimeEntryPoint
+
+'''''
+
+....
+Sun, 15 Mar 2015 13:03:03 +0000
+....
+
+'''''
+
+Obviously this is a contrived example but any logic that can be
+performed elsewhere in SuiteCRM can be performed in an entry poiny (for
+example creating or editing
+link:chap02.xhtml#working-with-beans-chapter[SugarBeans]).

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>5. Views</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="leanpub-auto-views">
+<span class="section-number">5. </span>Views</h2>
+
+<p>SuiteCRM follows the MVC (Model-View-Controller) pattern and as such has the concept
+of views. Views are responsible for gathering and displaying data . There
+are a number of default views in SuiteCRM. These include</p>
+
+<dl><dt>ListView</dt>
+  <dd>Displays a list of records and provides links to the EditViews and DetailViews
+of those records. The ListView also allows some operations such as deleting and mass updating records.
+This is (usually) the default view for a module.</dd>
+  <dt>DetailView</dt>
+  <dd>Displays the details of a single record and also displays subpanels of related records.</dd>
+  <dt>EditView</dt>
+  <dd>The EditView allows editing the various fields of a record and provides validation
+on these values.</dd>
+</dl><h3 id="leanpub-auto-location">Location</h3>
+<p>Views can be found in <code>modules/&lt;TheModule&gt;/views/</code> or, for custom views,<br /><code>custom/modules/&lt;TheModule&gt;/views/</code>, and are named in the following
+format: <code>view.&lt;viewname&gt;.php</code>. For example, the Accounts DetailView can be found
+in <code>modules/Accounts/views/view.detail.php</code> with a customised version in
+<code>custom/modules/Accounts/views/view.detail.php</code>. The custom version is used if
+it exists. If it doesn’t then the module version is used. Finally, if neither
+of these exist then the SuiteCRM default is used in <code>include/MVC/View/views/</code>.</p>
+
+<h3 id="leanpub-auto-customising">Customising</h3>
+<p>In order to customise a View we first need to create the appropriate view file.
+This will vary depending on the module we wish to target.</p>
+
+<h4 id="leanpub-auto-custom-module">Custom module</h4>
+<p>In this case we can place the file directly into our module. Create a new file
+(if it doesn’t exist) at <code>modules/&lt;TheModule&gt;/views/view.&lt;viewname&gt;.php</code>.
+The contents will look similar to:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 5.1: View for a custom module</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno">2</code> 
+<code class="lineno">3</code> <code class="k">require_once</code> <code class="s1">'include/MVC/View/views/view.&lt;viewname&gt;.php'</code><code class="p">;</code>
+<code class="lineno">4</code> 
+<code class="lineno">5</code> <code class="k">if</code><code class="p">(</code><code class="o">!</code><code class="nb">defined</code><code class="p">(</code><code class="s1">'sugarEntry'</code><code class="p">)</code> <code class="o">||</code> <code class="o">!</code><code class="nx">sugarEntry</code><code class="p">)</code> <code class="k">die</code><code class="p">(</code><code class="s1">'Not A Valid Entry Point'</code><code class="p">);</code>
+<code class="lineno">6</code> <code class="k">class</code> <code class="err">&lt;</code><code class="nc">TheModule</code><code class="o">&gt;</code><code class="nx">View</code><code class="o">&lt;</code><code class="nx">ViewName</code><code class="o">&gt;</code> <code class="k">extends</code> <code class="nx">View</code><code class="o">&lt;</code><code class="nx">ViewName</code><code class="o">&gt;</code>
+<code class="lineno">7</code> <code class="p">{</code>
+<code class="lineno">8</code> 
+<code class="lineno">9</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>A more concrete example would be for the detail view for a custom module called
+ABC_Vehicles:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 5.2: Detail view for a custom module, ABC_Vehicles</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno">2</code> 
+<code class="lineno">3</code> <code class="k">require_once</code> <code class="s1">'include/MVC/View/views/view.detail.php'</code><code class="p">;</code>
+<code class="lineno">4</code> 
+<code class="lineno">5</code> <code class="k">if</code><code class="p">(</code><code class="o">!</code><code class="nb">defined</code><code class="p">(</code><code class="s1">'sugarEntry'</code><code class="p">)</code> <code class="o">||</code> <code class="o">!</code><code class="nx">sugarEntry</code><code class="p">)</code> <code class="k">die</code><code class="p">(</code><code class="s1">'Not A Valid Entry Point'</code><code class="p">);</code>
+<code class="lineno">6</code> <code class="k">class</code> <code class="nc">ABC_VehiclesViewDetail</code> <code class="k">extends</code> <code class="nx">ViewDetail</code>
+<code class="lineno">7</code> <code class="p">{</code>
+<code class="lineno">8</code> 
+<code class="lineno">9</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<h4 id="leanpub-auto-preexisting-modules">Preexisting modules</h4>
+<p>For preexisting modules you will want to add the view to<br /><code>custom/modules/&lt;TheModule&gt;/views/view.&lt;viewname&gt;.php</code>.</p>
+
+<p>The contents of this file will vary depending on whether you wish to extend the
+existing view (if it exists) or create your own version completely. It is usually
+best to extend the existing view, since this will retain important logic.
+Note the naming convention here. We name the class<br /><code>Custom&lt;TheModule&gt;View&lt;ViewName&gt;</code> (for example <code>CustomAccountsViewDetail</code>).</p>
+
+<p>Here we don’t extend the existing view or no such view exists:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 5.3: Custom view for an existing module</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno">2</code> <code class="k">if</code><code class="p">(</code><code class="o">!</code><code class="nb">defined</code><code class="p">(</code><code class="s1">'sugarEntry'</code><code class="p">)</code> <code class="o">||</code> <code class="o">!</code><code class="nx">sugarEntry</code><code class="p">)</code> <code class="k">die</code><code class="p">(</code><code class="s1">'Not A Valid Entry Point'</code><code class="p">);</code>
+<code class="lineno">3</code> 
+<code class="lineno">4</code> <code class="k">require_once</code> <code class="s1">'include/MVC/View/views/view.&lt;viewname&gt;.php'</code><code class="p">;</code>
+<code class="lineno">5</code> 
+<code class="lineno">6</code> <code class="k">class</code> <code class="nc">Custom</code><code class="o">&lt;</code><code class="nx">TheModule</code><code class="o">&gt;</code><code class="nx">View</code><code class="o">&lt;</code><code class="nx">ViewName</code><code class="o">&gt;</code> <code class="k">extends</code> <code class="nx">ViewDetail</code>
+<code class="lineno">7</code> <code class="p">{</code>
+<code class="lineno">8</code> 
+<code class="lineno">9</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>Otherwise we extend the existing view. Note that we are requiring the
+existing view:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 5.4: Overriding a view for an existing module</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno">2</code> <code class="k">if</code><code class="p">(</code><code class="o">!</code><code class="nb">defined</code><code class="p">(</code><code class="s1">'sugarEntry'</code><code class="p">)</code> <code class="o">||</code> <code class="o">!</code><code class="nx">sugarEntry</code><code class="p">)</code> <code class="k">die</code><code class="p">(</code><code class="s1">'Not A Valid Entry Point'</code><code class="p">);</code>
+<code class="lineno">3</code> 
+<code class="lineno">4</code> <code class="k">require_once</code> <code class="s1">'modules/&lt;TheModule&gt;/views/view.&lt;viewname&gt;.php'</code><code class="p">;</code>
+<code class="lineno">5</code> 
+<code class="lineno">6</code> <code class="k">class</code> <code class="nc">Custom</code><code class="o">&lt;</code><code class="nx">TheModule</code><code class="o">&gt;</code><code class="nx">View</code><code class="o">&lt;</code><code class="nx">ViewName</code><code class="o">&gt;</code> <code class="k">extends</code> <code class="o">&lt;</code><code class="nx">TheModule</code><code class="o">&gt;</code><code class="nx">View</code><code class="o">&lt;</code><code class="nx">ViewName</code><code class="o">&gt;</code>
+<code class="lineno">7</code> <code class="p">{</code>
+<code class="lineno">8</code> 
+<code class="lineno">9</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>For example, overriding the List View of Accounts:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 5.5: Overriding the Accounts List View</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno">2</code> <code class="k">if</code><code class="p">(</code><code class="o">!</code><code class="nb">defined</code><code class="p">(</code><code class="s1">'sugarEntry'</code><code class="p">)</code> <code class="o">||</code> <code class="o">!</code><code class="nx">sugarEntry</code><code class="p">)</code> <code class="k">die</code><code class="p">(</code><code class="s1">'Not A Valid Entry Point'</code><code class="p">);</code>
+<code class="lineno">3</code> 
+<code class="lineno">4</code> <code class="k">require_once</code> <code class="s1">'modules/Accounts/views/view.list.php'</code><code class="p">;</code>
+<code class="lineno">5</code> 
+<code class="lineno">6</code> <code class="k">class</code> <code class="nc">CustomAccountsViewList</code> <code class="k">extends</code> <code class="nx">AccountsViewList</code>
+<code class="lineno">7</code> <code class="p">{</code>
+<code class="lineno">8</code> 
+<code class="lineno">9</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<h4 id="leanpub-auto-making-changes">Making changes</h4>
+
+<p>Now that we have a custom view what can we actually do? The views have various methods
+which we can now override to change/add behaviour. The most common ones to override
+are:</p>
+
+<dl><dt>preDisplay</dt>
+  <dd>Explicitly intended to allow logic to be called before display() is called. This
+can be used to alter arguments to the list view or to output anything to appear before
+the main display code (such as, for example, adding JavaScript).</dd>
+  <dt>display</dt>
+  <dd>Does the actual work of displaying the view. Can be overridden to alter this behaviour
+or to output anything after the main display. You usually want to call parent::display();
+to ensure that the display code is run (unless, of course, you are adding your
+own display logic).</dd>
+</dl>
+</div>
+</body>
+</html>
