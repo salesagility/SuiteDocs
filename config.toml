@@ -8,7 +8,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
-  editURL = "https://github.com/Accendere/SuiteDocs.git/edit/master/content/"
+  editURL = "https://github.com/Accendere/SuiteDocs/edit/master/content/"
   description = "Documentation for SuiteCRM"
   author = "Frank Taillandier"
   showVisitedLinks = false
