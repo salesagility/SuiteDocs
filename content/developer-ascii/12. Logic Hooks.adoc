@@ -111,11 +111,11 @@ hooks these hooks must be defined in the top level logic hook (i.e.
 job_failure::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception and it will not be retried. See the section on
-  link:chap12.xhtml#scheduled-tasks-chapter[Scheduled Tasks].
+  link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 job_failure_retry::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception but it will be retried. See the section on
-  link:chap12.xhtml#scheduled-tasks-chapter[Scheduled Tasks].
+  link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 
 [[leanpub-auto-implementing]]
 Implementing

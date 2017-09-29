@@ -318,7 +318,7 @@ Example 13.6: Setting the retry count on a scheduled job
 
 '''''
 
-See the section on link:chap11.xhtml#logic-hooks-chapter[logic hooks]
+See the section on link:../12.-logic-hooks#logic-hooks-chapter[logic hooks]
 for more information on how job failures can be handled.
 
 [[leanpub-auto-debugging]]

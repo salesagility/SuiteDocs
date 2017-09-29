@@ -11,7 +11,7 @@ Metadata
 ^^^^^^^^
 
 This is an example of setting up a function subpanel (see the
-link:chap05.xhtml#metadata-chapter[Metadata] chapter for more
+link:../6.-metadata#metadata-chapter[Metadata] chapter for more
 information).
 
 In this example the cases module has a custom field `incident_code_c`
@@ -75,7 +75,7 @@ Module Installer
 ^^^^^^^^^^^^^^^^
 
 The following is a basic example manifest file. See the
-link:chap14.xhtml#module-installer-chapter[Module Installer] chapter.
+link:../15.-module-installer#module-installer-chapter[Module Installer] chapter.
 
 Example A.3: Example manifest file
 

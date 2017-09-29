@@ -22,7 +22,7 @@ manifest.php
 
 The `manifest.php` file contains the definition of three arrays. Let’s
 look at each of these arrays in turn. See
-link:chap19.xhtml#appendix-a[Appendix A] for the full sample
+link:../20.-appendix-a---code-examples#appendix-a[Appendix A] for the full sample
 `manifest.php` file.
 
 [width="100%",cols="50%,50%",]
@@ -210,7 +210,7 @@ the following keys:
 |`language` |The language that this file is for (i.e. en_us or es_es).
 |=======================================================================
 
-See the chapter on link:chap08.xhtml#language-chapter[Language Strings]
+See the chapter on link:../9.-language-strings#language-chapter[Language Strings]
 for more information.
 
 [[leanpub-auto-layoutdefs]]
@@ -293,7 +293,7 @@ array with the following keys:
 `custom_fields`
 
 An array of new custom fields to be installed (See the
-link:chap03.xhtml#vardefs-chapter[Vardefs] chapter for more information
+link:../4.-vardefs#vardefs-chapter[Vardefs] chapter for more information
 on this). Each entry is an array with the following keys:
 
 [cols=",",options="header",]
@@ -338,7 +338,7 @@ added.
 `logic_hooks`
 
 An array of logic hooks to be installed. See the
-link:chap11.xhtml#logic-hooks-chapter[Logic Hooks] chapter for more
+link:../12.-logic-hooks#logic-hooks-chapter[Logic Hooks] chapter for more
 information. Each entry is an array with the following keys:
 
 [cols=",",options="header",]

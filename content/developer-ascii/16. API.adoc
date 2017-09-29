@@ -127,7 +127,7 @@ a post argument.
 The arguments to the REST API calls are: +
 method::
   The method which will be called, i.e. `login` or `get_entry_list`. See
-  link:chap20.xhtml#appendix-b[Appendix B] for a list of API methods.
+  link:../21.-appendix-b---api-methods#appendix-b[Appendix B] for a list of API methods.
 input_type::
   The input type of the rest_data. This is usually `JSON` but can also
   be `Serialize`.
@@ -228,7 +228,7 @@ Example 16.4: Accessing the REST API
 '''''
 
 For a full list of API methods and their arguments see
-link:chap20.xhtml#appendix-b[Appendix B].
+link:../21.-appendix-b---api-methods#appendix-b[Appendix B].
 
 [[leanpub-auto-adding-custom-api-methods]]
 Adding custom API methods

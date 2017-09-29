@@ -94,7 +94,7 @@ SuiteCRM will cache various files that it processes, such as Smarty
 templates. Developer mode will turn off some of the caching so that
 changes to files will be seen immediately (though this isn’t always the
 case - as is the case with
-link:chap13.xhtml#extensions-chapter[extensions]). This can be enabled
+link:../14.-extension-framework#extensions-chapter[extensions]). This can be enabled
 either through the config file or via the General settings page inside
 admin.
 
@@ -106,7 +106,7 @@ The default log level of SuiteCRM is `fatal`. This is a good default for
 production instances but you may want to increase the log level to
 `info` or `debug`. This will make the log output more verbose so, should
 anything go wrong, you’ll have something to refer to. See the
-link:chap10.xhtml#logging-chapter[chapter on logging] for more
+link:../11.-logging#logging-chapter[chapter on logging] for more
 information.
 
 [[leanpub-auto-display-errors]]
