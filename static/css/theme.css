@@ -40,16 +40,16 @@ body {
     color: #777;
 }
 body #chapter h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
     body #chapter h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 @media only all and (max-width: 47.938em) {
     body #chapter h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 a {
@@ -410,7 +410,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     right: 300px;
 }
 #body-inner {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 #chapter {
     display: flex;
@@ -420,7 +420,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding: 2rem 0;
 }
 #chapter #body-inner {
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
     max-width: 80%;
 }
 #chapter h3 {
@@ -429,7 +429,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     text-align: center;
 }
 #chapter h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     border-bottom: 4px solid #F0F2F4;
 }
 #chapter p {
