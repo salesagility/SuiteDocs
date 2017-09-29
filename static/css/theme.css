@@ -81,7 +81,7 @@ b, strong, label, th {
     fill: #fff !important;
 }
 #sidebar {
-    font-weight: 300 !important;
+    /*font-weight: 300 !important;*/
 }
 fieldset {
     border: 1px solid #ddd;
@@ -425,7 +425,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #chapter h3 {
     font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
-    font-weight: 300;
+    /*font-weight: 300;*/
     text-align: center;
 }
 #chapter h1 {
@@ -446,7 +446,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 body {
     font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
-    font-weight: 300;
+    /*font-weight: 300;*/
     line-height: 1.6;
     font-size: 18px !important;
 }
@@ -454,7 +454,7 @@ h2, h3, h4, h5, h6 {
     font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
-    font-weight: 400;
+    /*font-weight: 400;*/
     letter-spacing: -1px;
 }
 h1 {
@@ -462,7 +462,7 @@ h1 {
     text-align: center;
     /* text-transform: uppercase; */
     color: #222;
-    font-weight: 200;
+    /*font-weight: 200;*/
 }
 blockquote {
     border-left: 10px solid #F0F2F4;
