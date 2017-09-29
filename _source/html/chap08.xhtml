@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>9. Language Strings</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="language-chapter">
+<span class="section-number">9. </span>Language Strings</h2>
+<p>Language strings provide an element of internationalisation to SuiteCRM. It allows
+specifying different strings to be used in different languages making it much
+easier to provide translations for modules and customisations. Even if you are
+only targeting a single language it is still worth using the language string
+functionality in SuiteCRM because it allows the simple changing of strings
+within SuiteCRM and it also allows users to customise the labels used in your
+customisations. There are three main types of language strings that we will cover
+here.</p>
+
+<p>At the core, the language strings are a key value store. The keys are used throughout
+SuiteCRM and the values are loaded based on the current language.</p>
+
+<p>Languages are handled in SuiteCRM by prefixing the file name with the IETF language
+code for the language that this file contains. Here are some examples
+of different language file names:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 9.1: Example language file names</p>
+
+  <hr /><div class="highlight"><pre># Core Accounts language file for en_us (United States English)
+modules/Accounts/language/en_us.lang.php
+
+# Core Cases language file for es_es (Spanish as spoken in Spain)
+modules/Cases/language/es_es.lang.php
+
+# Custom language file for de_de (German)
+custom/Extension/application/Ext/Language/de_de.SomeCustomPackage.php
+</pre></div>
+
+  <hr /></div>
+
+<p>SuiteCRM will choose the language prefix to be used based on the language the user
+selected when logging in or the default language if none was selected.
+Generally when a language file is loaded the default language files and the
+<code>en_us</code> files will also be loaded. These files are then merged. This ensures that
+there will still be a definition if
+there are language keys in either <code>en_us</code> or the default language that don’t have
+definitions in the current language. In
+essence the language “falls back” to the default language and <code>en_us</code> if there
+are missing keys.</p>
+
+<h3 id="leanpub-auto-module-strings">Module Strings</h3>
+
+<h4 id="leanpub-auto-use">Use</h4>
+<p>Module strings are strings associated with a particular module. These are usually,
+for example, field labels and panel name labels, but they may be used for anything
+that is specific to a single module.</p>
+
+<h4 id="leanpub-auto-definition-location">Definition location</h4>
+<p>Module strings are defined in the <code>$mod_strings</code> array. This is initially defined
+in<br /><code>modules/&lt;TheModule&gt;/language/&lt;LanguageTag&gt;.lang.php</code>, for example<br /><code>modules/Accounts/language/en_us.lang.php</code>.</p>
+
+<h4 id="leanpub-auto-customisation-location">Customisation location</h4>
+<p>Customisations can be made to the module strings by adding a new file in<br /><code>custom/Extension/modules/&lt;TheModule&gt;/Ext/Language/&lt;LanguageTag&gt;.&lt;Name&gt;.php</code> (<code>&lt;Name&gt;</code>
+in this case should be used to give it a descriptive name). An example is 
+<code>custom/Extension/modules/Accounts/Ext/Language/en_us.MyLanguageFile.php</code>. See the Extensions
+section for more information on the Extensions folder.</p>
+
+<h3 id="leanpub-auto-application-strings">Application Strings</h3>
+
+<h4 id="leanpub-auto-use-1">Use</h4>
+<p>Application strings are used for language strings and labels that are not specific
+to a single module. Examples of these may include labels that will appear
+in the headers or footers, labels that appear on search buttons throughout SuiteCRM
+or labels for pagination controls.</p>
+
+<h4 id="leanpub-auto-definition-location-1">Definition location</h4>
+<p>The application strings are defined in the <code>$app_strings</code> array. This is
+initially defined in<br /><code>include/language/&lt;LanguageTag&gt;.lang.php</code>.</p>
+
+<h4 id="leanpub-auto-customisation-location-1">Customisation location</h4>
+<p>Customisations can be made to the application strings in two ways. Firstly you
+can edit the file<br /><code>custom/include/language/&lt;LanguageTag&gt;.lang.php</code>. However
+to promote modularity it is recommended that you add a new file in the location<br /><code>custom/Extension/application/Ext/Language/&lt;LanguageTag&gt;.&lt;Name&gt;.php</code>. For example<br /><code>custom/Extension/application/Ext/Language/es_es.MyAppLanguageFile.php</code>.
+<code>&lt;Name&gt;</code> should be used to give the file a descriptive name. See the Extensions
+section for more information on the Extensions folder.</p>
+
+<h3 id="leanpub-auto-application-list-strings">Application List Strings</h3>
+
+<h4 id="leanpub-auto-use-2">Use</h4>
+<p>Application list strings are used to store the various dropdowns and lists
+used in SuiteCRM. Most of these are used as options for the various enum fields
+in SuiteCRM e.g the account type or the opportunity sales stage.</p>
+
+<h4 id="leanpub-auto-definition-location-2">Definition location</h4>
+<p>The application list strings are defined in the <code>$app_list_strings</code> array. Similar to
+the <code>$app_strings</code> array this is initially defined in
+<code>include/language/en_us.lang.php</code>.</p>
+
+<h4 id="leanpub-auto-customisation-location-2">Customisation location</h4>
+<p>Customisations can be made to the application list strings in two ways. Firstly you
+can edit the file<br /><code>custom/include/language/&lt;LanguageTag&gt;.lang.php</code>. However
+to promote modularity it is recommended that you add a new file in the location<br /><code>custom/Extension/application/Ext/Language/&lt;LanguageTag&gt;.&lt;Name&gt;.php</code> (<code>&lt;Name&gt;</code> 
+should be used to give the file a descriptive name). For example<br /><code>custom/Extension/application/Ext/Language/es_es.MyAppListLanguageFile.php</code>.
+ See the Extensions
+section for more information on the Extensions folder.</p>
+
+<h3 id="leanpub-auto-why-and-when-to-customise">Why and when to customise</h3>
+<p>Generally language strings should be changed from within SuiteCRM using the
+studio tool. However there are times when it can be simpler to add or modify
+language strings as described in the previous section. If you are importing
+a large number of language strings or dropdown options it can be simpler to
+create a new file to add these values. Similarly if you are adding entirely new
+functionality, it is usually best to simply add these language strings as new values.</p>
+
+<h3 id="leanpub-auto-usage">Usage</h3>
+<p>Language strings are used automatically throughout SuiteCRM. For example in
+metadata you can specify the language strings to display for fields. However
+in some cases you will want to access and use the language strings in custom
+code. There are several ways to do this.</p>
+
+<h4 id="leanpub-auto-globals">Globals</h4>
+
+<p>The <code>$mod_strings</code>, <code>$app_strings</code> and <code>$app_list_strings</code> variables are all
+global and can be accessed as such. <code>$app_strings</code> and <code>$app_list_strings</code> will
+always be available. However <code>$mod_strings</code> will only contain the
+strings for the current module (see the next section
+for other ways of accessing <code>$mod_strings</code>).</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 9.2: Accessing language strings globally</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="k">function</code> <code class="nf">someFunction</code><code class="p">(){</code>
+<code class="lineno"> 2</code>     <code class="k">global</code> <code class="nv">$mod_strings</code><code class="p">,</code> <code class="nv">$app_strings</code><code class="p">,</code> <code class="nv">$app_list_strings</code><code class="p">;</code>
+<code class="lineno"> 3</code>     <code class="cm">/*</code>
+<code class="lineno"> 4</code> <code class="cm">     * Grab the label LBL_NAME for the current module</code>
+<code class="lineno"> 5</code> <code class="cm">     * In most modules this will be the label for the</code>
+<code class="lineno"> 6</code> <code class="cm">     * name field of the module.</code>
+<code class="lineno"> 7</code> <code class="cm">     */</code>
+<code class="lineno"> 8</code>     <code class="nv">$modLabel</code> <code class="o">=</code> <code class="nv">$mod_strings</code><code class="p">[</code><code class="s1">'LBL_NAME'</code><code class="p">];</code>
+<code class="lineno"> 9</code> 
+<code class="lineno">10</code>     <code class="nv">$appLabel</code> <code class="o">=</code> <code class="nv">$app_strings</code><code class="p">[</code><code class="s1">'LBL_GENERATE_LETTER'</code><code class="p">];</code>
+<code class="lineno">11</code> 
+<code class="lineno">12</code>     <code class="cm">/*</code>
+<code class="lineno">13</code> <code class="cm">     * Unlike the previous two examples $appListLabel will be an</code>
+<code class="lineno">14</code> <code class="cm">     * array of the dropdowns keys to it's display labels.</code>
+<code class="lineno">15</code> <code class="cm">     */</code>
+<code class="lineno">16</code>     <code class="nv">$appListLabel</code> <code class="o">=</code> <code class="nv">$app_list_strings</code><code class="p">[</code><code class="s1">'aos_quotes_type_dom'</code><code class="p">];</code>
+<code class="lineno">17</code> 
+<code class="lineno">18</code>     <code class="c1">//Here we just log out the strings</code>
+<code class="lineno">19</code>     <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The module label is </code><code class="si">$modLabel</code><code class="s2">"</code><code class="p">);</code>
+<code class="lineno">20</code>     <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The app label is </code><code class="si">$appLabel</code><code class="s2">"</code><code class="p">);</code>
+<code class="lineno">21</code>     <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The app list label is "</code><code class="o">.</code><code class="nb">print_r</code><code class="p">(</code><code class="nv">$appListLabel</code><code class="p">,</code><code class="mi">1</code><code class="p">));</code>
+<code class="lineno">22</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<h4 id="leanpub-auto-translate">Translate</h4>
+<p>As an alternative to using globals or, if you are in a different module than the
+language string you wish to retrieve you can use the <code>translate</code> method.</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 9.3: <code>translate</code> method signature</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="nx">translate</code><code class="p">(</code>
+<code class="lineno">2</code>         <code class="nv">$string</code><code class="p">,</code>
+<code class="lineno">3</code>         <code class="nv">$mod</code><code class="o">=</code><code class="s1">''</code><code class="p">,</code>
+<code class="lineno">4</code>         <code class="nv">$selectedValue</code><code class="o">=</code><code class="s1">''</code><code class="p">)</code>
+</pre></div>
+
+  <hr /></div>
+
+<dl><dt>$string</dt>
+  <dd>The language string to be translated.</dd>
+  <dt>$mod</dt>
+  <dd>The module this string should come from. Defaults to the current module if empty.</dd>
+  <dt>$selectedValue</dt>
+  <dd>For dropdown strings. This will return the label for the key <code>$selectedValue</code>
+</dd>
+</dl><p>Here is an example of the above in action. Note that we do not have to worry about
+whether the label is a Module string, an Application string or an Application list
+string, as all of these will be checked (in that order - the first matching value
+will be returned).</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 9.4: Example <code>translate</code> method calls</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="k">function</code> <code class="nf">someFunction</code><code class="p">(){</code>
+<code class="lineno"> 2</code>   <code class="c1">//Grab the label LBL_NAME for the current module</code>
+<code class="lineno"> 3</code>   <code class="nv">$modLabel</code> <code class="o">=</code> <code class="nx">translate</code><code class="p">(</code><code class="s1">'LBL_NAME'</code><code class="p">);</code>
+<code class="lineno"> 4</code> 
+<code class="lineno"> 5</code>   <code class="c1">//Grab the label LBL_NAME for the AOS_Products module</code>
+<code class="lineno"> 6</code>   <code class="nv">$productModLabel</code> <code class="o">=</code> <code class="nx">translate</code><code class="p">(</code><code class="s1">'LBL_NAME'</code><code class="p">,</code><code class="s1">'AOS_Products'</code><code class="p">);</code>
+<code class="lineno"> 7</code> 
+<code class="lineno"> 8</code>   <code class="nv">$appLabel</code> <code class="o">=</code> <code class="nx">translate</code><code class="p">(</code><code class="s1">'LBL_GENERATE_LETTER'</code><code class="p">);</code>
+<code class="lineno"> 9</code> 
+<code class="lineno">10</code>   <code class="cm">/*</code>
+<code class="lineno">11</code> <code class="cm">   * Return the label for the `Other` option of the `aos_quotes_type_dom`</code>
+<code class="lineno">12</code> <code class="cm">   * We don't care about the module so this is left blank.</code>
+<code class="lineno">13</code> <code class="cm">   */</code>
+<code class="lineno">14</code>   <code class="nv">$appListLabel</code> <code class="o">=</code> <code class="nx">translate</code><code class="p">(</code><code class="s1">'aos_quotes_type_dom'</code><code class="p">,</code><code class="s1">''</code><code class="p">,</code><code class="s1">'Other'</code><code class="p">);</code>
+<code class="lineno">15</code> 
+<code class="lineno">16</code>   <code class="c1">//Here we just log out the strings</code>
+<code class="lineno">17</code>   <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The module label is </code><code class="si">$modLabel</code><code class="s2">"</code><code class="p">);</code>
+<code class="lineno">18</code>   <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The module label for Products is </code><code class="si">$productModLabel</code><code class="s2">"</code><code class="p">);</code>
+<code class="lineno">19</code>   <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The app label is </code><code class="si">$appLabel</code><code class="s2">"</code><code class="p">);</code>
+<code class="lineno">20</code>   <code class="nv">$GLOBALS</code><code class="p">[</code><code class="s1">'log'</code><code class="p">]</code><code class="o">-&gt;</code><code class="na">debug</code><code class="p">(</code><code class="s2">"The app list label is "</code><code class="o">.</code><code class="nb">print_r</code><code class="p">(</code><code class="nv">$appListLabel</code><code class="p">,</code><code class="mi">1</code><code class="p">));</code>
+<code class="lineno">21</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<h4 id="leanpub-auto-javascript">JavaScript</h4>
+<p>Finally, you may be using JavaScript (for example in a view), and wish to display
+a language string. For this you can use the <code>SUGAR.language.get</code> method, which
+is similar to the <code>translate</code> method in example 9.3.</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 9.5: <code>SUGAR.language.get</code> method signature</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code> <code class="nx">SUGAR</code><code class="p">.</code><code class="nx">language</code><code class="p">.</code><code class="nx">get</code><code class="p">(</code>
+<code class="lineno">2</code>               <code class="nx">module</code><code class="p">,</code>
+<code class="lineno">3</code>               <code class="nx">str</code>
+<code class="lineno">4</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<dl><dt>module</dt>
+  <dd>The module a language string will be returned for. You should supply <code>app_strings</code> or<br /><code>app_list_strings</code> if the label you wish to retrieve is not a module string.</dd>
+  <dt>str</dt>
+  <dd>The key you want to retrieve a label for.</dd>
+</dl><div class="code-block">
+  <p class="codeblock-title">Example 9.6: Example <code>SUGAR.language.get</code> method calls</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="kd">function</code> <code class="nx">someFunction</code><code class="p">(){</code>
+<code class="lineno"> 2</code> 
+<code class="lineno"> 3</code>   <code class="cm">/*</code>
+<code class="lineno"> 4</code> <code class="cm">   * Grab the label LBL_NAME for AOS_Products</code>
+<code class="lineno"> 5</code> <code class="cm">   * Note that, unlike the translate function in example 9.3</code>
+<code class="lineno"> 6</code> <code class="cm">   * the module name is required.</code>
+<code class="lineno"> 7</code> <code class="cm">   */</code>
+<code class="lineno"> 8</code> 
+<code class="lineno"> 9</code>   <code class="kd">var</code> <code class="nx">modLabel</code> <code class="o">=</code> <code class="nx">SUGAR</code><code class="p">.</code><code class="nx">language</code><code class="p">.</code><code class="nx">get</code><code class="p">(</code><code class="s1">'AOS_Products'</code><code class="p">,</code> <code class="s1">'LBL_NAME'</code><code class="p">);</code>
+<code class="lineno">10</code> 
+<code class="lineno">11</code>   <code class="cm">/*</code>
+<code class="lineno">12</code> <code class="cm">   * As mentioned above we explicitly need to pass if we are retrieving</code>
+<code class="lineno">13</code> <code class="cm">   * an app_string or app_list_string</code>
+<code class="lineno">14</code> <code class="cm">   */</code>
+<code class="lineno">15</code>   <code class="kd">var</code> <code class="nx">appLabel</code> <code class="o">=</code> <code class="nx">SUGAR</code><code class="p">.</code><code class="nx">language</code><code class="p">.</code><code class="nx">get</code><code class="p">(</code><code class="s1">'app_strings'</code><code class="p">,</code> <code class="s1">'LBL_GENERATE_LETTER'</code><code class="p">);</code>
+<code class="lineno">16</code>   <code class="kd">var</code> <code class="nx">appListLabel</code> <code class="o">=</code> <code class="nx">SUGAR</code><code class="p">.</code><code class="nx">language</code><code class="p">.</code><code class="nx">get</code><code class="p">(</code><code class="s1">'app_list_strings'</code><code class="p">,</code>
+<code class="lineno">17</code>                                         <code class="s1">'aos_quotes_type_dom'</code><code class="p">);</code>
+<code class="lineno">18</code> 
+<code class="lineno">19</code>   <code class="c1">//Here we just log out the strings</code>
+<code class="lineno">20</code>   <code class="nx">console</code><code class="p">.</code><code class="nx">log</code><code class="p">(</code><code class="s2">"The module label is "</code><code class="o">+</code><code class="nx">modLabel</code><code class="p">);</code>
+<code class="lineno">21</code>   <code class="nx">console</code><code class="p">.</code><code class="nx">log</code><code class="p">(</code><code class="s2">"The app label is "</code><code class="o">+</code><code class="nx">appLabel</code><code class="p">);</code>
+<code class="lineno">22</code>   <code class="nx">console</code><code class="p">.</code><code class="nx">log</code><code class="p">(</code><code class="s2">"The app list label is "</code><code class="o">+</code><code class="nx">appListLabel</code><code class="p">);</code>
+<code class="lineno">23</code> <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+</div>
+</body>
+</html>

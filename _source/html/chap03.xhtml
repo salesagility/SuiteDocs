@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>4. Vardefs</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="vardefs-chapter">
+<span class="section-number">4. </span>Vardefs</h2>
+
+<h3 id="leanpub-auto-what-are-vardefs">What are Vardefs</h3>
+<p>The Vardefs are used to supply information to SuiteCRM about a particular bean.
+These generally specify the fields, relationships and indexes in a given module as
+well as additional information such as whether it is audited, the table name etc.</p>
+
+<h3 id="leanpub-auto-defining-vardefs">Defining Vardefs</h3>
+
+<h4 id="leanpub-auto-module">Module</h4>
+<p>Vardefs are initially defined in their respective modules folder. For the Accounts
+module this will be in modules/Accounts/vardefs.php. The information is stored
+in an array named $dictionary using the module name as the key. For Accounts this
+will be <code>$dictionary['Account']</code>. Let’s look at the Account vardefs (which have been edited
+for brevity):</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 4.1: Account Vardefs</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="nv">$dictionary</code><code class="p">[</code><code class="s1">'Account'</code><code class="p">]</code> <code class="o">=</code>
+<code class="lineno"> 2</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 3</code> 	<code class="s1">'table'</code> <code class="o">=&gt;</code> <code class="s1">'accounts'</code><code class="p">,</code>
+<code class="lineno"> 4</code> 	<code class="s1">'audited'</code><code class="o">=&gt;</code><code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 5</code> 	<code class="s1">'unified_search'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 6</code> 	<code class="s1">'unified_search_default_enabled'</code> <code class="o">=&gt;</code> <code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 7</code> 	<code class="s1">'duplicate_merge'</code><code class="o">=&gt;</code><code class="k">true</code><code class="p">,</code>
+<code class="lineno"> 8</code> 	<code class="s1">'comment'</code> <code class="o">=&gt;</code> <code class="s1">'Accounts are organizations or entities that ...'</code><code class="p">,</code>
+<code class="lineno"> 9</code> 	<code class="s1">'fields'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">10</code> 	  <code class="c1">//Snipped for brevity. See the fields section.</code>
+<code class="lineno">11</code> 	<code class="p">),</code>
+<code class="lineno">12</code> 	<code class="s1">'indices'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">13</code> 	  <code class="c1">//Snipped for brevity. See the indices section.</code>
+<code class="lineno">14</code> 	<code class="p">),</code>
+<code class="lineno">15</code> 	<code class="s1">'relationships'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno">16</code> 	  <code class="c1">//Snipped for brevity. See the relationship section.</code>
+<code class="lineno">17</code> 	<code class="p">),</code>
+<code class="lineno">18</code> 	<code class="c1">//This enables optimistic locking for Saves From EditView</code>
+<code class="lineno">19</code> 	<code class="s1">'optimistic_locking'</code><code class="o">=&gt;</code><code class="k">true</code><code class="p">,</code>
+<code class="lineno">20</code> <code class="p">);</code>
+<code class="lineno">21</code> 
+<code class="lineno">22</code> <code class="nx">VardefManager</code><code class="o">::</code><code class="na">createVardef</code><code class="p">(</code>
+<code class="lineno">23</code> 	<code class="s1">'Accounts'</code><code class="p">,</code>
+<code class="lineno">24</code> 	<code class="s1">'Account'</code><code class="p">,</code>
+<code class="lineno">25</code> 	<code class="k">array</code><code class="p">(</code><code class="s1">'default'</code><code class="p">,</code> <code class="s1">'assignable'</code><code class="p">,</code><code class="s1">'company'</code><code class="p">,)</code>
+<code class="lineno">26</code> <code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<h5 id="leanpub-auto-keys">Keys</h5>
+<p>The following are some of the keys that can be specified for the vardefs.
+Fields, indices and relationships are covered in their own sections.</p>
+
+<dl><dt><code>table</code></dt>
+  <dd>The database table name for this module.</dd>
+  <dt><code>audited</code></dt>
+  <dd>Whether or not this module should be audited. Note that <code>audited</code> must also be
+set at the fields level for a field to be audited.</dd>
+  <dt><code>unified_search</code></dt>
+  <dd>Whether this module can be searchable via the global search.</dd>
+  <dt><code>unified_search_default_enabled</code></dt>
+  <dd>Whether this module is searchable via the global search by default.</dd>
+  <dt><code>duplicate_merge</code></dt>
+  <dd>Whether or not duplicate merging functionality is enabled for this module.</dd>
+  <dt><code>comment</code></dt>
+  <dd>A description of this module.</dd>
+  <dt><code>optimistic_locking</code></dt>
+  <dd>Whether optimistic should be enabled for this module. Optimistic locking locks
+concurrent edits on a record by assuming that there will be no conflict. On save
+the last modified timestamp on the record will be checked. If it is different
+then an edit has occurred since this record was loaded. If this is the case then
+the user will be prompted with a page showing the differences in the two edits
+and asked to choose which edits are to be used.</dd>
+</dl><h5 id="leanpub-auto-fields">Fields</h5>
+<p>The field defines the behaviour and attributes of each field in the module.</p>
+
+<dl><dt><code>name</code></dt>
+  <dd>The name of the field.</dd>
+  <dt><code>vname</code></dt>
+  <dd>The name of the language label to be used for this field.</dd>
+  <dt><code>type</code></dt>
+  <dd>The type of the field. See the field types section.</dd>
+  <dt><code>isnull</code></dt>
+  <dd>Whether null values are allowed</dd>
+  <dt><code>len</code></dt>
+  <dd>If the field is a string type, the max number of characters allowed.</dd>
+  <dt><code>options</code></dt>
+  <dd>For enum fields the language label for the dropdown values for this field</dd>
+  <dt><code>dbtype</code></dt>
+  <dd>The type to be used by the database to store this field. This is not required as the
+appropriate type is usually chosen.</dd>
+  <dt><code>default</code></dt>
+  <dd>The default value of this field.</dd>
+  <dt><code>massupdate</code></dt>
+  <dd>Whether or not this field should be mass updatable. Note that some field types are
+always restricted from mass updates.</dd>
+  <dt><code>rname</code></dt>
+  <dd>For related fields only. The name of the field to be taken from the related module.</dd>
+  <dt><code>id_name</code></dt>
+  <dd>For related fields only. The field in this bean which contains the related id.</dd>
+  <dt><code>source</code></dt>
+  <dd>The source of this field. Can be set to ‘non-db’ if the field is not stored in
+the database - for example for link fields, fields populated by logic hooks or by other means.</dd>
+  <dt><code>sort_on</code></dt>
+  <dd>For concatenated fields (i.e. name fields) the field which should be used to sort.</dd>
+  <dt><code>fields</code></dt>
+  <dd>For concatenated fields (i.e. name fields) an array of the fields which should be concatenated.</dd>
+  <dt><code>db_concat_fields</code></dt>
+  <dd>For concatenated fields (i.e. name fields) an array of the fields which should be concatenated in the database.
+Usually this is the same as fields.</dd>
+  <dt><code>unified_search</code></dt>
+  <dd>True if this field should be searchable via the global search.</dd>
+  <dt><code>enable_range_search</code></dt>
+  <dd>Whether the list view search should allow a range search of this field.
+This is used for date and numeric fields.</dd>
+  <dt><code>studio</code></dt>
+  <dd>Whether the field should display in studio.</dd>
+  <dt><code>audited</code></dt>
+  <dd>Whether or not changes to this field should be audited.</dd>
+</dl><h5 id="leanpub-auto-field-types">Field types</h5>
+<p>The following are common field types used:</p>
+
+<dl><dt><code>id</code></dt>
+  <dd>An id field.</dd>
+  <dt><code>name</code></dt>
+  <dd>A name field. This is usually a concatenation of other fields.</dd>
+  <dt><code>bool</code></dt>
+  <dd>A boolean field.</dd>
+  <dt><code>varchar</code></dt>
+  <dd>A variable length string field.</dd>
+  <dt><code>char</code></dt>
+  <dd>A character field.</dd>
+  <dt><code>text</code></dt>
+  <dd>A text area field.</dd>
+  <dt><code>decimal</code></dt>
+  <dd>A decimal field.</dd>
+  <dt><code>date</code></dt>
+  <dd>A date field.</dd>
+  <dt><code>datetime</code></dt>
+  <dd>A date and time field.</dd>
+  <dt><code>enum</code></dt>
+  <dd>A dropdown field.</dd>
+  <dt><code>phone</code></dt>
+  <dd>A phone number field.</dd>
+  <dt><code>link</code></dt>
+  <dd>A link to another module via a relationship.</dd>
+  <dt><code>relate</code></dt>
+  <dd>A related bean field.</dd>
+</dl><h5 id="leanpub-auto-indices">Indices</h5>
+<p>The indices array allows defining any database indexes that should be in place
+on the database table for this module. Let’s look at an example:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 4.2: Example indices definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="s1">'indices'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 2</code> 	<code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 3</code> 		<code class="s1">'name'</code> <code class="o">=&gt;</code><code class="s1">'idx_mymod_id_del'</code><code class="p">,</code>
+<code class="lineno"> 4</code> 		<code class="s1">'type'</code> <code class="o">=&gt;</code><code class="s1">'index'</code><code class="p">,</code>
+<code class="lineno"> 5</code> 		<code class="s1">'fields'</code><code class="o">=&gt;</code><code class="k">array</code><code class="p">(</code><code class="s1">'id'</code><code class="p">,</code> <code class="s1">'deleted'</code><code class="p">)),</code>
+<code class="lineno"> 6</code> 	<code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 7</code> 		<code class="s1">'name'</code> <code class="o">=&gt;</code><code class="s1">'idx_mymod_parent_id'</code><code class="p">,</code>
+<code class="lineno"> 8</code> 		<code class="s1">'type'</code> <code class="o">=&gt;</code><code class="s1">'index'</code><code class="p">,</code>
+<code class="lineno"> 9</code> 		<code class="s1">'fields'</code><code class="o">=&gt;</code><code class="k">array</code><code class="p">(</code> <code class="s1">'parent_id'</code><code class="p">)),</code>
+<code class="lineno">10</code> 	<code class="k">array</code><code class="p">(</code>
+<code class="lineno">11</code> 		<code class="s1">'name'</code> <code class="o">=&gt;</code><code class="s1">'idx_mymod_parent_id'</code><code class="p">,</code>
+<code class="lineno">12</code> 		<code class="s1">'type'</code> <code class="o">=&gt;</code><code class="s1">'unique'</code><code class="p">,</code>
+<code class="lineno">13</code> 		<code class="s1">'fields'</code><code class="o">=&gt;</code><code class="k">array</code><code class="p">(</code> <code class="s1">'third_party_id'</code><code class="p">)),</code>
+<code class="lineno">14</code> 	<code class="p">),</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>Each array entry should have, at least, the following entries:</p>
+
+<dl><dt>name</dt>
+  <dd>The name of the index. This is usually used by the database to reference the index. Most
+databases require that these are unique.</dd>
+  <dt>type</dt>
+  <dd>The type of the index to create. <code>index</code> will simply add an index on the fields,
+<code>unique</code> will add a unique constraint on the fields, <code>primary</code> will add the fields
+as a primary key.</dd>
+  <dt>fields</dt>
+  <dd>An array of the fields to be indexed. The order of this array will be used as the
+order of the fields in the index.</dd>
+</dl><h5 id="leanpub-auto-relationships-1">Relationships</h5>
+<p>The Vardefs also specify the relationships within this module. Here’s an
+edited example from the Accounts module:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 4.3: Example relationships definition</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="s1">'relationships'</code> <code class="o">=&gt;</code> <code class="k">array</code> <code class="p">(</code>
+<code class="lineno"> 2</code> 	<code class="s1">'account_cases'</code> <code class="o">=&gt;</code> <code class="k">array</code><code class="p">(</code>
+<code class="lineno"> 3</code> 		<code class="s1">'lhs_module'</code><code class="o">=&gt;</code> <code class="s1">'Accounts'</code><code class="p">,</code>
+<code class="lineno"> 4</code> 		<code class="s1">'lhs_table'</code><code class="o">=&gt;</code> <code class="s1">'accounts'</code><code class="p">,</code>
+<code class="lineno"> 5</code> 		<code class="s1">'lhs_key'</code> <code class="o">=&gt;</code> <code class="s1">'id'</code><code class="p">,</code>
+<code class="lineno"> 6</code> 		<code class="s1">'rhs_module'</code><code class="o">=&gt;</code> <code class="s1">'Cases'</code><code class="p">,</code>
+<code class="lineno"> 7</code> 		<code class="s1">'rhs_table'</code><code class="o">=&gt;</code> <code class="s1">'cases'</code><code class="p">,</code>
+<code class="lineno"> 8</code> 		<code class="s1">'rhs_key'</code> <code class="o">=&gt;</code> <code class="s1">'account_id'</code><code class="p">,</code>
+<code class="lineno"> 9</code> 		<code class="s1">'relationship_type'</code> <code class="o">=&gt;</code> <code class="s1">'one-to-many'</code><code class="p">),</code>
+<code class="lineno">10</code> <code class="p">),</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>Here we see the link between accounts and cases. This is specified with the following
+keys:</p>
+
+<dl><dt><code>lhs_module</code></dt>
+  <dd>The module on the left hand side of this relationship. For a one to many relationship
+this will be the “One” side.</dd>
+  <dt><code>lhs_table</code></dt>
+  <dd>The table for the left hand side module. If you are unsure the table for a module
+can be found in it’s vardefs.</dd>
+  <dt><code>lhs_key</code></dt>
+  <dd>The field to use for the left hand side of this link. In this case it is the
+<code>id</code> of the account.</dd>
+  <dt><code>rhs_module</code></dt>
+  <dd>The right hand side module. In this case the “many” side of the relationship.</dd>
+  <dt><code>rhs_table</code></dt>
+  <dd>The table for the right hand side module. As stated previously you can find the
+table for a module can be found in it’s vardefs.</dd>
+  <dt><code>rhs_key</code></dt>
+  <dd>The field to use on the right hand side. In this case the <code>account_id</code> field on cases.</dd>
+  <dt><code>relationship_type</code></dt>
+  <dd>The type of relationship - “one-to-many” or “many-to-many”. Since this is a
+one to many relationship it means a case is related to a single account but a
+single account can have multiple cases.</dd>
+</dl><p>For many to many relationship fields the following keys are also available:</p>
+
+<dl><dt><code>join_table</code></dt>
+  <dd>The name of the join table for this relationship.</dd>
+  <dt><code>join_key_lhs</code></dt>
+  <dd>The name of the field on the join table for the left hand side.</dd>
+  <dt><code>join_key_rhs</code></dt>
+  <dd>The name of the field on the join table for the right hand side.</dd>
+</dl><h4 id="leanpub-auto-vardef-templates">Vardef templates</h4>
+
+<p>Vardef templates provide a shortcut for defining common vardefs. This is done by
+calling <code>VardefManager::createVardef</code> and passing the module name, object name
+and an array of templates to be assigned. The following is an example from the accounts
+vardefs:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 4.4: Example vardef template</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">22</code> <code class="nx">VardefManager</code><code class="o">::</code><code class="na">createVardef</code><code class="p">(</code>
+<code class="lineno">23</code> 		<code class="s1">'Accounts'</code><code class="p">,</code>
+<code class="lineno">24</code> 		<code class="s1">'Account'</code><code class="p">,</code>
+<code class="lineno">25</code> 		<code class="k">array</code><code class="p">(</code><code class="s1">'default'</code><code class="p">,</code> <code class="s1">'assignable'</code><code class="p">,</code><code class="s1">'company'</code><code class="p">,)</code>
+<code class="lineno">26</code> 		<code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>In this example the <code>default</code>, <code>assignable</code> and <code>company</code> templates are used. The following
+are some of the available templates:</p>
+
+<dl><dt><code>basic</code></dt>
+  <dt><code>default</code></dt>
+  <dd>Adds the common base fields such as <code>id</code>, <code>name</code>, <code>date_entered</code>, etc.</dd>
+  <dt><code>assignable</code></dt>
+  <dd>Adds the fields and relationships necessary to assign a record to a user.</dd>
+  <dt><code>person</code></dt>
+  <dd>Adds fields common to people records such as <code>first_name</code>, <code>last_name</code>, address, etc.</dd>
+  <dt><code>company</code></dt>
+  <dd>Adds fields common to companies such as an industry dropdown, address, etc.</dd>
+</dl><h4 id="leanpub-auto-customising-vardefs">Customising vardefs</h4>
+<p>Vardefs can be customised by adding a file into</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 4.5: Custom vardef location</p>
+
+  <hr /><div class="highlight"><pre>custom/Extension/modules/&lt;TheModule&gt;/Ext/SomeFile.php
+</pre></div>
+
+  <hr /></div>
+
+<p>This file can then be used to add a new field definition or customise an existing
+one e.g changing a field type:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 4.6: Example overriding an existing vardef</p>
+
+  <hr /><div class="highlight"><pre><code class="nv">$dictionary</code><code class="p">[</code><code class="s2">"TheModule"</code><code class="p">][</code><code class="s2">"fields"</code><code class="p">][</code><code class="s2">"some_field"</code><code class="p">][</code><code class="s1">'type'</code><code class="p">]</code> <code class="o">=</code> <code class="s1">'int'</code><code class="p">;</code>
+</pre></div>
+
+  <hr /></div>
+</div>
+</body>
+</html>

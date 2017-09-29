@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>12. Logic Hooks</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div>
+<h2 id="logic-hooks-chapter">
+<span class="section-number">12. </span>Logic Hooks</h2>
+
+<h3 id="leanpub-auto-intro-1">Intro</h3>
+<p>Logic hooks allow you to hook into various events in SuiteCRM to fire custom
+code. This can allow you to, for example, make a call to an external API, or to create a
+new record if certain events occur.</p>
+
+<h3 id="leanpub-auto-types">Types</h3>
+<p>Logic hooks can occur in three contexts. These contexts are Application Hooks,
+Module Hooks and User Hooks. These are detailed below.</p>
+
+<h3 id="leanpub-auto-application-hooks">Application Hooks</h3>
+<p>Application hooks are hooks which are fired in the application context (that is,
+they are not fired against a particular module). These
+hooks must be defined in the top level logic hook (i.e.
+<code>custom/modules/logic_hooks.php</code>).</p>
+
+<dl><dt>after_entry_point</dt>
+  <dd>Called after SuiteCRM has initialised but before any other processing is carried out.</dd>
+  <dt>after_ui_footer</dt>
+  <dd>Called after the UI footer.</dd>
+  <dt>after_ui_frame</dt>
+  <dd>Fired after the UI has been displayed but before the footer has been displayed.</dd>
+  <dt>server_round_trip</dt>
+  <dd>Fired at the end of every page request.</dd>
+</dl><h3 id="leanpub-auto-user-hooks">User Hooks</h3>
+<p>User hooks are fired for certain login/logout actions.
+Similar to Application Hooks, these hooks must be defined in the top level logic hook
+(i.e. custom/modules/logic_hooks.php).</p>
+
+<dl><dt>after_login</dt>
+  <dd>Fired after a user logs in to SuiteCRM .</dd>
+  <dt>after_logout</dt>
+  <dd>Fired when a user logs out of SuiteCRM.</dd>
+  <dt>before_logout</dt>
+  <dd>Fired before a user logs out of SuiteCRM.</dd>
+  <dt>login_failed</dt>
+  <dd>Fired when a user attempts to login to SuiteCRM but the login fails.</dd>
+</dl><h3 id="leanpub-auto-module-hooks">Module Hooks</h3>
+<p>Module Hooks are called on various record actions for a specific module.</p>
+
+<dl><dt>after_delete</dt>
+  <dd>Fired when a record is deleted.</dd>
+  <dt>after_relationship_add</dt>
+  <dd>Fired after a relationship is added between two records. Note that this may be called twice, once for each side of the relationship.</dd>
+  <dt>after_relationship_delete</dt>
+  <dd>Fired after a relationship between two records is deleted.</dd>
+  <dt>after_restore</dt>
+  <dd>Fired after a record is undeleted.</dd>
+  <dt>after_retrieve</dt>
+  <dd>Fired after a record is retrieved from the DB.</dd>
+  <dt>after_save</dt>
+  <dd>Fired after a record is saved. Note that due to some peculiarities some related
+modules may not be persisted to the database. The logic hook is fired within the
+SugarBean classes save method. Some implementing classes may save related beans
+after this method returns. A notable example of this is the saving of email addresses in Company modules.</dd>
+  <dt>before_delete</dt>
+  <dd>Fired before a record is deleted.</dd>
+  <dt>before_relationship_add</dt>
+  <dd>Fired before a relationship is added between two records. Note that this may be called twice, once for each side of the relationship.</dd>
+  <dt>before_relationship_delete</dt>
+  <dd>Fired before a relationship between two records is deleted. Note that this may be called twice, once for each side of the relationship.</dd>
+  <dt>before_restore</dt>
+  <dd>Fired before a record is undeleted.</dd>
+  <dt>before_save</dt>
+  <dd>Fired before a record is saved.</dd>
+  <dt>handle_exception</dt>
+  <dd>Fired when an exception occurs in a record.</dd>
+  <dt>process_record</dt>
+  <dd>Fired when a record is processed ready to be displayed in list views or dashlets.</dd>
+</dl><h3 id="leanpub-auto-job-queue-hooks">Job Queue Hooks</h3>
+<p>Job queue hooks are fired for scheduler jobs. Similar to application hooks these
+hooks must be defined in the top level logic hook (i.e.
+<code>custom/modules/logic_hooks.php</code>).</p>
+
+<dl><dt>job_failure</dt>
+  <dd>Fired when a scheduled job either returns false to signify failure or throws
+an exception and it will not be retried. See the section on <a href="chap12.xhtml#scheduled-tasks-chapter">Scheduled Tasks</a>.</dd>
+  <dt>job_failure_retry</dt>
+  <dd>Fired when a scheduled job either returns false to signify failure or throws
+an exception but it will be retried. See the section on <a href="chap12.xhtml#scheduled-tasks-chapter">Scheduled Tasks</a>.</dd>
+</dl><h3 id="leanpub-auto-implementing">Implementing</h3>
+<p>Depending on the Logic Hook type logic hooks are either placed into<br /><code>custom/modules/Logic_Hooks.php</code> or <code>custom/modules/&lt;TargetModule&gt;/Logic_Hooks.php</code>.</p>
+
+<h4 id="leanpub-auto-logichooksphp">Logic_Hooks.php</h4>
+<p>The logic hook file itself specifies which logic hooks to fire on this event. It looks something like this:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 12.1: Logic hook file</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno"> 1</code> <code class="o">&lt;?</code><code class="nx">php</code>
+<code class="lineno"> 2</code> <code class="c1">// Do not store anything in this file that is not part of the array or the hook</code>
+<code class="lineno"> 3</code> <code class="c1">//version.  This file will be automatically rebuilt in the future.</code>
+<code class="lineno"> 4</code>  <code class="nv">$hook_version</code> <code class="o">=</code> <code class="mi">1</code><code class="p">;</code>
+<code class="lineno"> 5</code> <code class="nv">$hook_array</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+<code class="lineno"> 6</code> <code class="c1">// position, file, function</code>
+<code class="lineno"> 7</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+<code class="lineno"> 8</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno"> 9</code>                               <code class="mi">77</code><code class="p">,</code>
+<code class="lineno">10</code>                               <code class="s1">'updateGeocodeInfo'</code><code class="p">,</code>
+<code class="lineno">11</code>                               <code class="s1">'custom/modules/Cases/CasesJjwg_MapsLogicHook.php'</code><code class="p">,</code>
+<code class="lineno">12</code>                               <code class="s1">'CasesJjwg_MapsLogicHook'</code><code class="p">,</code>
+<code class="lineno">13</code>                               <code class="s1">'updateGeocodeInfo'</code><code class="p">);</code>
+<code class="lineno">14</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">15</code>                               <code class="mi">10</code><code class="p">,</code>
+<code class="lineno">16</code>                               <code class="s1">'Save case updates'</code><code class="p">,</code>
+<code class="lineno">17</code>                               <code class="s1">'modules/AOP_Case_Updates/CaseUpdatesHook.php'</code><code class="p">,</code>
+<code class="lineno">18</code>                               <code class="s1">'CaseUpdatesHook'</code><code class="p">,</code>
+<code class="lineno">19</code>                               <code class="s1">'saveUpdate'</code><code class="p">);</code>
+<code class="lineno">20</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">21</code>                               <code class="mi">11</code><code class="p">,</code>
+<code class="lineno">22</code>                               <code class="s1">'Save case events'</code><code class="p">,</code>
+<code class="lineno">23</code>                               <code class="s1">'modules/AOP_Case_Events/CaseEventsHook.php'</code><code class="p">,</code>
+<code class="lineno">24</code>                               <code class="s1">'CaseEventsHook'</code><code class="p">,</code>
+<code class="lineno">25</code>                               <code class="s1">'saveUpdate'</code><code class="p">);</code>
+<code class="lineno">26</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">27</code>                               <code class="mi">12</code><code class="p">,</code>
+<code class="lineno">28</code>                               <code class="s1">'Case closure prep'</code><code class="p">,</code>
+<code class="lineno">29</code>                               <code class="s1">'modules/AOP_Case_Updates/CaseUpdatesHook.php'</code><code class="p">,</code>
+<code class="lineno">30</code>                               <code class="s1">'CaseUpdatesHook'</code><code class="p">,</code>
+<code class="lineno">31</code>                               <code class="s1">'closureNotifyPrep'</code><code class="p">);</code>
+<code class="lineno">32</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">33</code>                               <code class="mi">1</code><code class="p">,</code>
+<code class="lineno">34</code>                               <code class="s1">'Cases push feed'</code><code class="p">,</code>
+<code class="lineno">35</code>                               <code class="s1">'custom/modules/Cases/SugarFeeds/CaseFeed.php'</code><code class="p">,</code>
+<code class="lineno">36</code>                               <code class="s1">'CaseFeed'</code><code class="p">,</code>
+<code class="lineno">37</code>                               <code class="s1">'pushFeed'</code><code class="p">);</code>
+<code class="lineno">38</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_save'</code><code class="p">]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+<code class="lineno">39</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">40</code>                               <code class="mi">77</code><code class="p">,</code>
+<code class="lineno">41</code>                               <code class="s1">'updateRelatedMeetingsGeocodeInfo'</code><code class="p">,</code>
+<code class="lineno">42</code>                               <code class="s1">'custom/modules/Cases/CasesJjwg_MapsLogicHook.php'</code><code class="p">,</code>
+<code class="lineno">43</code>                               <code class="s1">'CasesJjwg_MapsLogicHook'</code><code class="p">,</code>
+<code class="lineno">44</code>                               <code class="s1">'updateRelatedMeetingsGeocodeInfo'</code><code class="p">);</code>
+<code class="lineno">45</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">46</code>                               <code class="mi">10</code><code class="p">,</code>
+<code class="lineno">47</code>                               <code class="s1">'Send contact case closure email'</code><code class="p">,</code>
+<code class="lineno">48</code>                               <code class="s1">'modules/AOP_Case_Updates/CaseUpdatesHook.php'</code><code class="p">,</code>
+<code class="lineno">49</code>                               <code class="s1">'CaseUpdatesHook'</code><code class="p">,</code>
+<code class="lineno">50</code>                               <code class="s1">'closureNotify'</code><code class="p">);</code>
+<code class="lineno">51</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_relationship_add'</code><code class="p">]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+<code class="lineno">52</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_relationship_add'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">53</code>                               <code class="mi">77</code><code class="p">,</code>
+<code class="lineno">54</code>                               <code class="s1">'addRelationship'</code><code class="p">,</code>
+<code class="lineno">55</code>                               <code class="s1">'custom/modules/Cases/CasesJjwg_MapsLogicHook.php'</code><code class="p">,</code>
+<code class="lineno">56</code>                               <code class="s1">'CasesJjwg_MapsLogicHook'</code><code class="p">,</code>
+<code class="lineno">57</code>                               <code class="s1">'addRelationship'</code><code class="p">);</code>
+<code class="lineno">58</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_relationship_add'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">59</code>                               <code class="mi">9</code><code class="p">,</code>
+<code class="lineno">60</code>                               <code class="s1">'Assign account'</code><code class="p">,</code>
+<code class="lineno">61</code>                               <code class="s1">'modules/AOP_Case_Updates/CaseUpdatesHook.php'</code><code class="p">,</code>
+<code class="lineno">62</code>                               <code class="s1">'CaseUpdatesHook'</code><code class="p">,</code>
+<code class="lineno">63</code>                               <code class="s1">'assignAccount'</code><code class="p">);</code>
+<code class="lineno">64</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_relationship_add'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">65</code>                               <code class="mi">10</code><code class="p">,</code>
+<code class="lineno">66</code>                               <code class="s1">'Send contact case email'</code><code class="p">,</code>
+<code class="lineno">67</code>                               <code class="s1">'modules/AOP_Case_Updates/CaseUpdatesHook.php'</code><code class="p">,</code>
+<code class="lineno">68</code>                               <code class="s1">'CaseUpdatesHook'</code><code class="p">,</code>
+<code class="lineno">69</code>                               <code class="s1">'creationNotify'</code><code class="p">);</code>
+<code class="lineno">70</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_relationship_delete'</code><code class="p">]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+<code class="lineno">71</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'after_relationship_delete'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno">72</code>                               <code class="mi">77</code><code class="p">,</code>
+<code class="lineno">73</code>                               <code class="s1">'deleteRelationship'</code><code class="p">,</code>
+<code class="lineno">74</code>                               <code class="s1">'custom/modules/Cases/CasesJjwg_MapsLogicHook.php'</code><code class="p">,</code>
+<code class="lineno">75</code>                               <code class="s1">'CasesJjwg_MapsLogicHook'</code><code class="p">,</code>
+<code class="lineno">76</code>                               <code class="s1">'deleteRelationship'</code><code class="p">);</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>Let’s go through each part of the file.</p>
+
+<div class="code-block">
+<div class="highlight"><pre><code class="lineno">4</code> <code class="nv">$hook_version</code> <code class="o">=</code> <code class="mi">1</code><code class="p">;</code>
+</pre></div>
+
+</div>
+
+<p>This sets the hook version that we are using. Currently there is only one
+version so this line is unused.</p>
+
+<div class="code-block">
+<div class="highlight"><pre><code class="lineno">5</code> <code class="nv">$hook_array</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+</pre></div>
+
+</div>
+
+<p>Here we set up an empty array for our Logic Hooks. This should always be
+called $hook_array.</p>
+
+<div class="code-block">
+<div class="highlight"><pre><code class="lineno">7</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">();</code>
+</pre></div>
+
+</div>
+
+<p>Here we are going to be adding some before_save hooks so we add an empty array for that
+key.</p>
+
+<div class="code-block">
+<div class="highlight"><pre><code class="lineno"> 8</code> <code class="nv">$hook_array</code><code class="p">[</code><code class="s1">'before_save'</code><code class="p">][]</code> <code class="o">=</code> <code class="k">Array</code><code class="p">(</code>
+<code class="lineno"> 9</code>                               <code class="mi">77</code><code class="p">,</code>
+<code class="lineno">10</code>                               <code class="s1">'updateGeocodeInfo'</code><code class="p">,</code>
+<code class="lineno">11</code>                               <code class="s1">'custom/modules/Cases/CasesJjwg_MapsLogicHook.php'</code><code class="p">,</code>
+<code class="lineno">12</code>                               <code class="s1">'CasesJjwg_MapsLogicHook'</code><code class="p">,</code>
+<code class="lineno">13</code>                               <code class="s1">'updateGeocodeInfo'</code><code class="p">);</code>
+</pre></div>
+
+</div>
+
+<p>Finally we reach an interesting line. This adds a new logic hook to the before_save
+hooks. This array contains 5 entries which define this hook. These are:</p>
+
+<h5 id="leanpub-auto-sort-order">Sort order</h5>
+<p>The first argument (77) is the sort order for this hook. The logic hook
+array is sorted by this value. If you wish for a hook to fire earlier you should use a
+lower number. If you wish for a hook to be fired later you should use a higher number.
+The numbers themselves are arbitrary.</p>
+
+<h5 id="leanpub-auto-hook-label">Hook label</h5>
+<p>The second argument (‘updateGeocodeInfo’) is simply a label for the logic hook.
+This should be something short but descriptive.</p>
+
+<h5 id="leanpub-auto-hook-file">Hook file</h5>
+<p>The third argument is where the actual class for this hook is. In this case
+it is in a file called <code>custom/modules/Cases/CasesJjwg_MapsLogicHook.php</code>.
+Generally you will want the files to be somewhere in custom and it is usual to have them
+in <code>custom/modules/&lt;TheModule&gt;/&lt;SomeDescriptiveName&gt;.php</code> or <code>custom/modules/&lt;SomeDescriptiveName&gt;.php</code>
+for Logic Hooks not targeting a specific module. However the files can be placed anywhere.</p>
+
+<h5 id="leanpub-auto-hook-class">Hook class</h5>
+<p>The fourth argument is the class name for the Logic Hook class. In this case<br /><code>CasesJjwg_MapsLogicHook</code>. It is usual for the class name to match the file name but this is
+not required.</p>
+
+<h5 id="leanpub-auto-hook-method">Hook method</h5>
+<p>The fifth, and final, argument is the method that will be called on the class.
+In this case <code>updateGeocodeInfo</code>.</p>
+
+<h4 id="leanpub-auto-adding-your-own-logic-hooks">Adding your own logic hooks</h4>
+<p>When adding logic hooks you should make full use of the Extensions framework
+(see the section on Extensions). This involves creating a file in<br /><code>custom/Extension/application/Ext/LogicHooks/</code> for application hooks and<br /><code>custom/Extension/modules/&lt;TheModule&gt;/Ext/LogicHooks/</code> for module specific
+hooks. These files can then add to/alter the <code>$hook_array</code> as appropriate.</p>
+
+<table class="information sidebarish">
+  <tbody>
+    <tr><td class="sidebar-icon">
+      <img class="sidebar-image" src="images/leanpub_info-circle.png" alt="information" width="50px" /></td>
+    <td>
+      <p>After adding a new logic hook it is necessary to perform a quick repair and rebuild in the
+admin menu for this to be picked up.</p>
+
+    </td>
+  </tr>
+  </tbody>
+</table><h4 id="leanpub-auto-logic-hook-function">Logic Hook function</h4>
+<p>The logic hook function itself will vary slightly based on the logic hook type.
+For module hooks it will appear similar to:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 12.2: Example logic hook method</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code>     <code class="k">class</code> <code class="nc">SomeClass</code>
+<code class="lineno">2</code>     <code class="p">{</code>
+<code class="lineno">3</code>         <code class="k">function</code> <code class="nf">someMethod</code><code class="p">(</code><code class="nv">$bean</code><code class="p">,</code> <code class="nv">$event</code><code class="p">,</code> <code class="nv">$arguments</code><code class="p">)</code>
+<code class="lineno">4</code>         <code class="p">{</code>
+<code class="lineno">5</code>           <code class="c1">//Custom Logic</code>
+<code class="lineno">6</code>         <code class="p">}</code>
+<code class="lineno">7</code>     <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<p>Application logic hooks omit the $bean argument:</p>
+
+<div class="code-block">
+  <p class="codeblock-title">Example 12.3: Example logic hook method for application hooks</p>
+
+  <hr /><div class="highlight"><pre><code class="lineno">1</code>     <code class="k">class</code> <code class="nc">SomeClass</code>
+<code class="lineno">2</code>     <code class="p">{</code>
+<code class="lineno">3</code>         <code class="k">function</code> <code class="nf">someMethod</code><code class="p">(</code><code class="nv">$event</code><code class="p">,</code> <code class="nv">$arguments</code><code class="p">)</code>
+<code class="lineno">4</code>         <code class="p">{</code>
+<code class="lineno">5</code>           <code class="c1">//Custom Logic</code>
+<code class="lineno">6</code>         <code class="p">}</code>
+<code class="lineno">7</code>     <code class="p">}</code>
+</pre></div>
+
+  <hr /></div>
+
+<h5 id="leanpub-auto-bean-sugarbean">$bean (<code>SugarBean</code>)</h5>
+<p>The $bean argument passed to your logic hook is usually the bean that the logic
+hook is being performed on. For User Logic Hooks this will be the current User
+object. For module logic hooks (such as <code>before_save</code>) this will be the record that is being saved.
+For job queue logic hooks this will be the SchedulersJob bean.
+Note that for Application Logic Hook this argument is not present.</p>
+
+<h5 id="leanpub-auto-event-string">$event (<code>string</code>)</h5>
+<p>The $event argument contains the logic hook event e.g <code>process_record</code>, <code>before_save</code>,<br /><code>after_delete</code> etc.</p>
+
+<h5 id="leanpub-auto-arguments-array">$arguments (<code>array</code>)</h5>
+<p>The $arguments argument contains any additional details of the logic hook event.
+I.e. in the case of before_relationship_add this will contain details of the related modules.</p>
+
+<h3 id="leanpub-auto-tips">Tips</h3>
+
+<table class="information sidebarish">
+  <tbody>
+    <tr><td class="sidebar-icon">
+      <img class="sidebar-image" src="images/leanpub_info-circle.png" alt="information" width="50px" /></td>
+    <td>
+      <h4 id="leanpub-auto-triggering-extra-logic-hooks">Triggering extra logic hooks</h4>
+  <p>If you are performing certain actions that may trigger another logic hook (such as
+saving a bean) then you need to be aware that this will trigger the logic hooks
+associated with that bean and action. This can be troublesome if this causes
+a logic hook loop of saves causing further saves. One way around this is
+to simply be careful of the hooks that you may trigger. If doing
+so is unavoidable you can usually set an appropriate flag on the bean and then
+check for that flag in subsequent hooks.</p>
+
+    </td>
+  </tr>
+  </tbody>
+</table><table class="information sidebarish">
+  <tbody>
+    <tr><td class="sidebar-icon">
+      <img class="sidebar-image" src="images/leanpub_info-circle.png" alt="information" width="50px" /></td>
+    <td>
+      <h4 id="leanpub-auto-think-of-the-user">Think of the user</h4>
+  <p>Most logic hooks will cause additional code which can degrade the users experience.
+If you have long running code in the after_save the user will need to wait for
+that code to run. This can be avoided by either ensuring the code runs quickly or
+by using the Job Queue (see the Job Queue chapter for more information).</p>
+
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>

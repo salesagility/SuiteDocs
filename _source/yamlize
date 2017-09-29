@@ -1,0 +1,25 @@
+,#!/usr/bin/env bash
+
+# Get all source files into a loop
+
+files=_source/html/*.xhtml
+
+for f in $files; do
+  
+  # Get name of file
+  filename="${f##*/}"
+  extension="${filename##*.}"
+  basefilename="${filename%.*}"
+  numfile="${filename//[^0-9]/}"
+  numchap=$[10#$numfile+1]
+  echo $f $extension $basefilename $numfile
+
+  # Add header and pandocized markdown
+  echo -e "$(pandoc $f -f html -t asciidoc)" > temp_yamlize.txt
+  title="$(head -n 2 temp_yamlize.txt | tail -n 1)"
+  echo $title
+  echo -e "---\nweight: $numchap\ntitle: \"$title\"\n---\n$(cat temp_yamlize.txt)" > "content/developer-ascii/$title.adoc"
+  
+  #rm temp_yamlize.txt
+
+done 
