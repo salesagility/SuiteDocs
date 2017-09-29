@@ -6,112 +6,112 @@ title: "Table of Contents"
 Table of Contents
 ~~~~~~~~~~~~~~~~~
 
-* link:chap00.xhtml#leanpub-auto-introduction[1. Introduction]
-** link:chap00.xhtml#leanpub-auto-what-is-suitecrm[What is SuiteCRM]
-** link:chap00.xhtml#leanpub-auto-this-book[This book]
-** link:chap00.xhtml#leanpub-auto-reading-this-book[Reading this book]
-** link:chap00.xhtml#leanpub-auto-setting-up-suitecrm[Setting up
+* link:../1.-introduction#leanpub-auto-introduction[1. Introduction]
+** link:../1.-introduction#leanpub-auto-what-is-suitecrm[What is SuiteCRM]
+** link:../1.-introduction#leanpub-auto-this-book[This book]
+** link:../1.-introduction#leanpub-auto-reading-this-book[Reading this book]
+** link:../1.-introduction#leanpub-auto-setting-up-suitecrm[Setting up
 SuiteCRM]
-** link:chap00.xhtml#leanpub-auto-initial-tweaks[Initial Tweaks]
-* link:chap01.xhtml#leanpub-auto-suitecrm-directory-structure[2.
+** link:../1.-introduction#leanpub-auto-initial-tweaks[Initial Tweaks]
+* link:../2.-suitecrm-directory-structure#leanpub-auto-suitecrm-directory-structure[2.
 SuiteCRM Directory Structure]
-* link:chap02.xhtml#working-with-beans-chapter[3. Working with Beans]
-** link:chap02.xhtml#leanpub-auto-beanfactory[BeanFactory]
-** link:chap02.xhtml#leanpub-auto-sugarbean[SugarBean]
-** link:chap02.xhtml#leanpub-auto-searching-for-beans[Searching for
+* link:../3.-working-with-beans#working-with-beans-chapter[3. Working with Beans]
+** link:../3.-working-with-beans#leanpub-auto-beanfactory[BeanFactory]
+** link:../3.-working-with-beans#leanpub-auto-sugarbean[SugarBean]
+** link:../3.-working-with-beans#leanpub-auto-searching-for-beans[Searching for
 beans]
-** link:chap02.xhtml#leanpub-auto-accessing-fields[Accessing fields]
-** link:chap02.xhtml#leanpub-auto-related-beans[Related beans]
-* link:chap03.xhtml#vardefs-chapter[4. Vardefs]
-** link:chap03.xhtml#leanpub-auto-what-are-vardefs[What are Vardefs]
-** link:chap03.xhtml#leanpub-auto-defining-vardefs[Defining Vardefs]
-* link:chap04.xhtml#leanpub-auto-views[5. Views]
-** link:chap04.xhtml#leanpub-auto-location[Location]
-** link:chap04.xhtml#leanpub-auto-customising[Customising]
-* link:chap05.xhtml#metadata-chapter[6. Metadata]
-** link:chap05.xhtml#leanpub-auto-intro[Intro]
-** link:chap05.xhtml#leanpub-auto-location-1[Location]
-** link:chap05.xhtml#leanpub-auto-customising-1[Customising]
-** link:chap05.xhtml#leanpub-auto-different-metadata[Different metadata]
-* link:chap06.xhtml#leanpub-auto-controllers[7. Controllers]
-** link:chap06.xhtml#leanpub-auto-customising-controllers[Customising
+** link:../3.-working-with-beans#leanpub-auto-accessing-fields[Accessing fields]
+** link:../3.-working-with-beans#leanpub-auto-related-beans[Related beans]
+* link:../4.-vardefs#vardefs-chapter[4. Vardefs]
+** link:../4.-vardefs#leanpub-auto-what-are-vardefs[What are Vardefs]
+** link:../4.-vardefs#leanpub-auto-defining-vardefs[Defining Vardefs]
+* link:../5.-views#leanpub-auto-views[5. Views]
+** link:../5.-views#leanpub-auto-location[Location]
+** link:../5.-views#leanpub-auto-customising[Customising]
+* link:../6.-metadata#metadata-chapter[6. Metadata]
+** link:../6.-metadata#leanpub-auto-intro[Intro]
+** link:../6.-metadata#leanpub-auto-location-1[Location]
+** link:../6.-metadata#leanpub-auto-customising-1[Customising]
+** link:../6.-metadata#leanpub-auto-different-metadata[Different metadata]
+* link:../7.-controllers#leanpub-auto-controllers[7. Controllers]
+** link:../7.-controllers#leanpub-auto-customising-controllers[Customising
 controllers]
-* link:chap07.xhtml#entry-point-chapter[8. Entry Points]
-** link:chap07.xhtml#leanpub-auto-creating-an-entry-point[Creating an
+* link:../8.-entry-points#entry-point-chapter[8. Entry Points]
+** link:../8.-entry-points#leanpub-auto-creating-an-entry-point[Creating an
 entry point]
-* link:chap08.xhtml#language-chapter[9. Language Strings]
-** link:chap08.xhtml#leanpub-auto-module-strings[Module Strings]
-** link:chap08.xhtml#leanpub-auto-application-strings[Application
+* link:../9.-language-strings#language-chapter[9. Language Strings]
+** link:../9.-language-strings#leanpub-auto-module-strings[Module Strings]
+** link:../9.-language-strings#leanpub-auto-application-strings[Application
 Strings]
-** link:chap08.xhtml#leanpub-auto-application-list-strings[Application
+** link:../9.-language-strings#leanpub-auto-application-list-strings[Application
 List Strings]
-** link:chap08.xhtml#leanpub-auto-why-and-when-to-customise[Why and when
+** link:../9.-language-strings#leanpub-auto-why-and-when-to-customise[Why and when
 to customise]
-** link:chap08.xhtml#leanpub-auto-usage[Usage]
-* link:chap09.xhtml#config-chapter[10. Config]
-** link:chap09.xhtml#leanpub-auto-the-config-files[The config files]
-** link:chap09.xhtml#leanpub-auto-using-config-options[Using config
+** link:../9.-language-strings#leanpub-auto-usage[Usage]
+* link:../10.-config#config-chapter[10. Config]
+** link:../10.-config#leanpub-auto-the-config-files[The config files]
+** link:../10.-config#leanpub-auto-using-config-options[Using config
 options]
-* link:chap10.xhtml#logging-chapter[11. Logging]
-** link:chap10.xhtml#leanpub-auto-logging-messages[Logging messages]
-** link:chap10.xhtml#leanpub-auto-logging-output[Logging output]
-** link:chap10.xhtml#leanpub-auto-log-levels[Log levels]
-* link:chap11.xhtml#logic-hooks-chapter[12. Logic Hooks]
-** link:chap11.xhtml#leanpub-auto-intro-1[Intro]
-** link:chap11.xhtml#leanpub-auto-types[Types]
-** link:chap11.xhtml#leanpub-auto-application-hooks[Application Hooks]
-** link:chap11.xhtml#leanpub-auto-user-hooks[User Hooks]
-** link:chap11.xhtml#leanpub-auto-module-hooks[Module Hooks]
-** link:chap11.xhtml#leanpub-auto-job-queue-hooks[Job Queue Hooks]
-** link:chap11.xhtml#leanpub-auto-implementing[Implementing]
-** link:chap11.xhtml#leanpub-auto-tips[Tips]
-* link:chap12.xhtml#scheduled-tasks-chapter[13. Scheduled Tasks]
-** link:chap12.xhtml#leanpub-auto-intro-2[Intro]
-** link:chap12.xhtml#leanpub-auto-scheduler[Scheduler]
-** link:chap12.xhtml#leanpub-auto-job-queue[Job Queue]
-** link:chap12.xhtml#leanpub-auto-debugging[Debugging]
-* link:chap13.xhtml#extensions-chapter[14. Extension Framework]
-** link:chap13.xhtml#leanpub-auto-introduction-1[Introduction]
-** link:chap13.xhtml#leanpub-auto-standard-extensions[Standard
+* link:../11.-logging#logging-chapter[11. Logging]
+** link:../11.-logging#leanpub-auto-logging-messages[Logging messages]
+** link:../11.-logging#leanpub-auto-logging-output[Logging output]
+** link:../11.-logging#leanpub-auto-log-levels[Log levels]
+* link:../12.-logic-hooks#logic-hooks-chapter[12. Logic Hooks]
+** link:../12.-logic-hooks#leanpub-auto-intro-1[Intro]
+** link:../12.-logic-hooks#leanpub-auto-types[Types]
+** link:../12.-logic-hooks#leanpub-auto-application-hooks[Application Hooks]
+** link:../12.-logic-hooks#leanpub-auto-user-hooks[User Hooks]
+** link:../12.-logic-hooks#leanpub-auto-module-hooks[Module Hooks]
+** link:../12.-logic-hooks#leanpub-auto-job-queue-hooks[Job Queue Hooks]
+** link:../12.-logic-hooks#leanpub-auto-implementing[Implementing]
+** link:../12.-logic-hooks#leanpub-auto-tips[Tips]
+* link:../13.-scheduled-tasks#scheduled-tasks-chapter[13. Scheduled Tasks]
+** link:../13.-scheduled-tasks#leanpub-auto-intro-2[Intro]
+** link:../13.-scheduled-tasks#leanpub-auto-scheduler[Scheduler]
+** link:../13.-scheduled-tasks#leanpub-auto-job-queue[Job Queue]
+** link:../13.-scheduled-tasks#leanpub-auto-debugging[Debugging]
+* link:../14.-extension-framework#extensions-chapter[14. Extension Framework]
+** link:../14.-extension-framework#leanpub-auto-introduction-1[Introduction]
+** link:../14.-extension-framework#leanpub-auto-standard-extensions[Standard
 Extensions]
-** link:chap13.xhtml#leanpub-auto-custom-extensions[Custom Extensions]
-* link:chap14.xhtml#module-installer-chapter[15. Module Installer]
-** link:chap14.xhtml#leanpub-auto-manifestphp[manifest.php]
-** link:chap14.xhtml#leanpub-auto-types-1[Types]
-* link:chap15.xhtml#leanpub-auto-api[16. API]
-** link:chap15.xhtml#leanpub-auto-using-the-api[Using the API]
-** link:chap15.xhtml#leanpub-auto-adding-custom-api-methods[Adding
+** link:../14.-extension-framework#leanpub-auto-custom-extensions[Custom Extensions]
+* link:../15.-module-installer#module-installer-chapter[15. Module Installer]
+** link:../15.-module-installer#leanpub-auto-manifestphp[manifest.php]
+** link:../15.-module-installer#leanpub-auto-types-1[Types]
+* link:../16.-api#leanpub-auto-api[16. API]
+** link:../16.-api#leanpub-auto-using-the-api[Using the API]
+** link:../16.-api#leanpub-auto-adding-custom-api-methods[Adding
 custom API methods]
-* link:chap16.xhtml#leanpub-auto-best-practices[17. Best Practices]
-** link:chap16.xhtml#leanpub-auto-development-instances[Development
+* link:../17.-best-practices#leanpub-auto-best-practices[17. Best Practices]
+** link:../17.-best-practices#leanpub-auto-development-instances[Development
 instances]
-** link:chap16.xhtml#leanpub-auto-version-control[Version control]
-** link:chap16.xhtml#leanpub-auto-backup[Backup]
-** link:chap16.xhtml#leanpub-auto-be-upgrade-safe[Be upgrade safe]
-** link:chap16.xhtml#leanpub-auto-use-appropriate-log-levels[Use
+** link:../17.-best-practices#leanpub-auto-version-control[Version control]
+** link:../17.-best-practices#leanpub-auto-backup[Backup]
+** link:../17.-best-practices#leanpub-auto-be-upgrade-safe[Be upgrade safe]
+** link:../17.-best-practices#leanpub-auto-use-appropriate-log-levels[Use
 appropriate log levels]
-** link:chap16.xhtml#leanpub-auto-long-running-logic-hooks[Long running
+** link:../17.-best-practices#leanpub-auto-long-running-logic-hooks[Long running
 logic hooks]
-** link:chap16.xhtml#leanpub-auto-minimise-sql[Minimise SQL]
-** link:chap16.xhtml#leanpub-auto-sql-use[SQL Use]
-** link:chap16.xhtml#leanpub-auto-entry-check[Entry check]
-** link:chap16.xhtml#leanpub-auto-redirect-after-post[Redirect after
+** link:../17.-best-practices#leanpub-auto-minimise-sql[Minimise SQL]
+** link:../17.-best-practices#leanpub-auto-sql-use[SQL Use]
+** link:../17.-best-practices#leanpub-auto-entry-check[Entry check]
+** link:../17.-best-practices#leanpub-auto-redirect-after-post[Redirect after
 post]
-* link:chap17.xhtml#leanpub-auto-performance-tweaks[18. Performance
+* link:../18.-performance-tweaks#leanpub-auto-performance-tweaks[18. Performance
 Tweaks]
-** link:chap17.xhtml#leanpub-auto-server[Server]
-** link:chap17.xhtml#leanpub-auto-indexes[Indexes]
-** link:chap17.xhtml#leanpub-auto-config-changes[Config Changes]
-* link:chap18.xhtml#leanpub-auto-further-resources[19. Further
+** link:../18.-performance-tweaks#leanpub-auto-server[Server]
+** link:../18.-performance-tweaks#leanpub-auto-indexes[Indexes]
+** link:../18.-performance-tweaks#leanpub-auto-config-changes[Config Changes]
+* link:../19.-further-resources#leanpub-auto-further-resources[19. Further
 Resources]
-** link:chap18.xhtml#leanpub-auto-suitecrm-website[SuiteCRM Website]
-** link:chap18.xhtml#leanpub-auto-external-suitecrm-resources[External
+** link:../19.-further-resources#leanpub-auto-suitecrm-website[SuiteCRM Website]
+** link:../19.-further-resources#leanpub-auto-external-suitecrm-resources[External
 SuiteCRM Resources]
-** link:chap18.xhtml#leanpub-auto-sugarcrm-resources[SugarCRM Resources]
-** link:chap18.xhtml#leanpub-auto-technical-links[Technical Links]
-** link:chap18.xhtml#leanpub-auto-other-links[Other Links]
-* link:chap19.xhtml#appendix-a[20. Appendix A - Code Examples]
-** link:chap19.xhtml#leanpub-auto-metadata[Metadata]
-** link:chap19.xhtml#leanpub-auto-module-installer[Module Installer]
-* link:chap20.xhtml#appendix-b[21. Appendix B - API Methods]
-** link:chap20.xhtml#leanpub-auto-methods-1[Methods]
+** link:../19.-further-resources#leanpub-auto-sugarcrm-resources[SugarCRM Resources]
+** link:../19.-further-resources#leanpub-auto-technical-links[Technical Links]
+** link:../19.-further-resources#leanpub-auto-other-links[Other Links]
+* link:../20.-appendix-a---code-examples#appendix-a[20. Appendix A - Code Examples]
+** link:../20.-appendix-a---code-examples#leanpub-auto-metadata[Metadata]
+** link:../20.-appendix-a---code-examples#leanpub-auto-module-installer[Module Installer]
+* link:../21.-appendix-b---api-methods#appendix-b[21. Appendix B - API Methods]
+** link:../21.-appendix-b---api-methods#leanpub-auto-methods-1[Methods]

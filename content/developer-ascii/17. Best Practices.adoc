@@ -78,7 +78,7 @@ mistake is as simple as removing the customisation.
 However the main advantage to using `custom` is that, when you upgrade
 SuiteCRM in the future you will not have your changes overwritten by the
 updated SuiteCRM files. See the
-link:chap13.xhtml#extensions-chapter[Extensions] chapter for more
+link:../14.-extension-framework#extensions-chapter[Extensions] chapter for more
 information.
 
 [[leanpub-auto-use-appropriate-log-levels]]
@@ -86,7 +86,7 @@ Use appropriate log levels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using appropriate log levels (See the chapter on
-link:chap10.xhtml#logging-chapter[Logging]) makes it easier to track
+link:../11.-logging#logging-chapter[Logging]) makes it easier to track
 down issues. You do not want very important messages to be logged as
 `debug` since this will make them difficult to find. Likewise you don’t
 want unimportant log messages cluttering up the `fatal` log output.
@@ -96,8 +96,8 @@ Long running logic hooks
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a logic hook task is long running then you should place it into the
-job queue (see the link:chap11.xhtml#logic-hooks-chapter[Logic Hook] and
-link:chap12.xhtml#scheduled-tasks-chapter[Scheduled Tasks] chapters).
+job queue (see the link:../12.-logic-hooks#logic-hooks-chapter[Logic Hook] and
+link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks] chapters).
 
 [[leanpub-auto-minimise-sql]]
 Minimise SQL
@@ -106,7 +106,7 @@ Minimise SQL
 Where possible you should strive to use the SuiteCRM supplied methods of
 accessing data. This includes using beans and the BeanFactory where
 possible (see the chapter on
-link:chap02.xhtml#working-with-beans-chapter[Working with beans]). There
+link:../3.-working-with-beans#working-with-beans-chapter[Working with beans]). There
 are a few reasons for this. The first is that SQL is usually either
 hardcoded or has to be dynamically built. In the case where the SQL is
 hardcoded this means that changes to fields will not be reflected
@@ -183,7 +183,7 @@ Redirect after post
 
 Sometimes you may have custom controller actions (see the controller
 section) or custom entry points (see the
-link:chap07.xhtml#entry-point-chapter[Entry Points] chapter). These
+link:../8.-entry-points#entry-point-chapter[Entry Points] chapter). These
 actions and entry points or other pages are usually accessed using POST.
 After a POST request it is a web best practice to redirect to a
 different page, especially if your page makes any changes. This prevents
