@@ -6,12 +6,12 @@ title: "17. Best Practices"
 
 = 17. Best Practices
 
-=== Development instances
+== Development instances
 
 When making changes you should always use a development or test instance
 first. This allows you to fully and safely test any changes.
 
-=== Version control
+== Version control
 
 When developing customisations it is prudent to use some form of version
 control. Version control allows tracking changes to your codebase in
@@ -25,7 +25,7 @@ to tag releases. This provides a way of pushing changes to live or test
 instances safely. Crucially it also means that, should there be major
 problems with a version then this can be easily rolled back.
 
-=== Backup
+== Backup
 
 SuiteCRM has been developed to be customisable. However, mistakes, bugs
 and other unpleasantness can (and thanks to Murphy’s law, will) happen.
@@ -56,7 +56,7 @@ mysqldump suitecrmdatabase -u databaseuser -p | gzip -c | cat > suitecrm.sql.gz
 
 
 
-=== Be upgrade safe
+== Be upgrade safe
 
 Unless you are making changes to a custom module you should strive in
 all cases to use the custom framework and make changes in the custom
@@ -69,7 +69,7 @@ updated SuiteCRM files. See the
 link:../14.-extension-framework#extensions-chapter[Extensions] chapter for more
 information.
 
-=== Use appropriate log levels
+== Use appropriate log levels
 
 Using appropriate log levels (See the chapter on
 link:../11.-logging#logging-chapter[Logging]) makes it easier to track
@@ -77,13 +77,13 @@ down issues. You do not want very important messages to be logged as
 `debug` since this will make them difficult to find. Likewise you don’t
 want unimportant log messages cluttering up the `fatal` log output.
 
-=== Long running logic hooks
+== Long running logic hooks
 
 If a logic hook task is long running then you should place it into the
 job queue (see the link:../12.-logic-hooks#logic-hooks-chapter[Logic Hook] and
 link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks] chapters).
 
-=== Minimise SQL
+== Minimise SQL
 
 Where possible you should strive to use the SuiteCRM supplied methods of
 accessing data. This includes using beans and the BeanFactory where
@@ -107,7 +107,7 @@ Finally any custom logic (such as Logic Hooks) which would usually be
 fired for saving beans or relationships will not be fired for SQL
 queries.
 
-=== SQL Use
+== SQL Use
 
 In some cases using raw SQL is unavoidable. If that is the case then you
 should strive to use standard compliant SQL. If database engine specific
@@ -134,7 +134,7 @@ Example 17.1: Checking for the database engine
 
 
 
-=== Entry check
+== Entry check
 
 The majority of SuiteCRM files will start with some variation of the
 following line:
@@ -151,7 +151,7 @@ This prevents direct access to the file by ensuring that SuiteCRM has
 been loaded through a valid entry point (i.e. it has been loaded through
 index.php, cron.php or a custom entry point).
 
-=== Redirect after post
+== Redirect after post
 
 Sometimes you may have custom controller actions (see the controller
 section) or custom entry points (see the

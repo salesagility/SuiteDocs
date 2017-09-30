@@ -6,16 +6,16 @@ title: "4. Vardefs"
 
 = 4. Vardefs
 
-=== What are Vardefs
+== What are Vardefs
 
 The Vardefs are used to supply information to SuiteCRM about a
 particular bean. These generally specify the fields, relationships and
 indexes in a given module as well as additional information such as
 whether it is audited, the table name etc.
 
-=== Defining Vardefs
+== Defining Vardefs
 
-==== Module
+=== Module
 
 Vardefs are initially defined in their respective modules folder. For
 the Accounts module this will be in modules/Accounts/vardefs.php. The
@@ -270,7 +270,7 @@ available:
 `join_key_rhs`::
   The name of the field on the join table for the right hand side.
 
-==== Vardef templates
+=== Vardef templates
 
 Vardef templates provide a shortcut for defining common vardefs. This is
 done by calling `VardefManager::createVardef` and passing the module
@@ -305,7 +305,7 @@ used. The following are some of the available templates:
   Adds fields common to companies such as an industry dropdown, address,
   etc.
 
-==== Customising vardefs
+=== Customising vardefs
 
 Vardefs can be customised by adding a file into
 

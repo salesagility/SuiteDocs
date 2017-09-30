@@ -6,14 +6,14 @@ title: "6. Metadata"
 
 = 6. Metadata
 
-=== Intro
+== Intro
 
 Module metadata are used to describe how various views behave in the
 module. The main use of this is providing field and layout information
 but this can also be used to filter subpanels and to describe what
 fields are used in the search.
 
-=== Location
+== Location
 
 Module metadata can be found in:
 
@@ -25,7 +25,7 @@ modules/<TheModule>/metadata/
 
 
 
-=== Customising
+== Customising
 
 Usually studio is the best way of customising metadata. Even when you do
 wish to make customisations that are not possible through studio it can
@@ -39,9 +39,9 @@ exception to this rule is the studio.php file. The modules metadata
 folder is the only location checked - any version in
 `custom/<TheModule>/metadata/studio.php` is ignored.
 
-=== Different metadata
+== Different metadata
 
-==== detailviewdefs.php
+=== detailviewdefs.php
 
 detailviewdefs.php provides information on the layout and fields of the
 detail view for this module. This file uses the same structure as
@@ -227,13 +227,13 @@ customCode::
   the field that would have been used. For example
   `{if $someCondition}@@FIELD@@{/if}` will conditionally show the field.
 
-==== editviewdefs.php
+=== editviewdefs.php
 
 `editviewdefs.php` provides information on the layout and fields of the
 edit view for this module. This file uses the same structure as
 detailviewdefs.php. Please see the information on detailviewdefs.php.
 
-==== listviewdefs.php
+=== listviewdefs.php
 
 The `listviewdefs.php` file for a module defines what fields the list
 view for that module will display. Let’s take a look at an example:
@@ -310,7 +310,7 @@ width::
   example above has five columns with a width of `15%` but these will
   actually be `20%` since this is a ratio.
 
-==== popupdefs.php
+=== popupdefs.php
 
 popupdefs.php provides information on the layout, fields and search
 options of the module popup that is usually used when selecting a
@@ -417,7 +417,7 @@ keys:
   popup. See the individual search defs in the searchdefs.php section
   (for example the `basic_search` array).
 
-==== quickcreatedefs.php
+=== quickcreatedefs.php
 
 `quickcreatedefs.php` provides information on the layout and fields of
 the quick create view for this module (this is the view that appears
@@ -425,7 +425,7 @@ when creating a record from a subpanel). This file uses the same
 structure as `detailviewdefs.php`. Please see the information on
 `detailviewdefs.php`.
 
-==== searchdefs.php
+=== searchdefs.php
 
 The search defs of a module define how searching in that module looks
 and behaves.
@@ -568,7 +568,7 @@ and advanced search. This is simply a list of array definition of the
 fields. See the section on listviewdefs.php for a description of some of
 the options.
 
-==== `subpaneldefs.php`
+=== `subpaneldefs.php`
 
 The subpaneldefs.php file provides definitions for the subpanels that
 appear in the detail view of a module. Let’s look at an example:
@@ -703,7 +703,7 @@ top_buttons::
   `include/generic/SugarWidgets`. Depending on the button this array may
   also be used to pass in extra arguments to the widget class.
 
-==== subpanels
+=== subpanels
 
 Inside the metadata folder is the `subpanels` folder. This allows
 creating different subpanel layouts for different parent modules. For
@@ -792,7 +792,7 @@ subpanel. These are:
   Defines the list of fields to be displayed in this subpanel. See the
   section on `listviewdefs.php` for more information.
 
-==== studio.php
+=== studio.php
 
 studio.php is the simplest file in metadata and it’s existence is simply
 used to confirm if a module should be shown in studio for user tweaking.

@@ -22,7 +22,7 @@ EditView::
   The EditView allows editing the various fields of a record and
   provides validation on these values.
 
-=== Location
+== Location
 
 Views can be found in `modules/<TheModule>/views/` or, for custom
 views, +
@@ -34,12 +34,12 @@ version is used if it exists. If it doesn’t then the module version is
 used. Finally, if neither of these exist then the SuiteCRM default is
 used in `include/MVC/View/views/`.
 
-=== Customising
+== Customising
 
 In order to customise a View we first need to create the appropriate
 view file. This will vary depending on the module we wish to target.
 
-==== Custom module
+=== Custom module
 
 In this case we can place the file directly into our module. Create a
 new file (if it doesn’t exist) at
@@ -81,7 +81,7 @@ Example 5.2: Detail view for a custom module, ABC_Vehicles
 
 
 
-==== Preexisting modules
+=== Preexisting modules
 
 For preexisting modules you will want to add the view to +
 `custom/modules/<TheModule>/views/view.<viewname>.php`.
@@ -149,7 +149,7 @@ Example 5.5: Overriding the Accounts List View
 
 
 
-==== Making changes
+=== Making changes
 
 Now that we have a custom view what can we actually do? The views have
 various methods which we can now override to change/add behaviour. The

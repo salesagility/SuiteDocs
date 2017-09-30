@@ -27,13 +27,13 @@ Example 9.1: Example language file names
 
 
 [source,php]
-# Core Accounts language file for en_us (United States English)
+• Core Accounts language file for en_us (United States English)
 modules/Accounts/language/en_us.lang.php
 
-# Core Cases language file for es_es (Spanish as spoken in Spain)
+• Core Cases language file for es_es (Spanish as spoken in Spain)
 modules/Cases/language/es_es.lang.php
 
-# Custom language file for de_de (German)
+• Custom language file for de_de (German)
 custom/Extension/application/Ext/Language/de_de.SomeCustomPackage.php
 
 
@@ -48,22 +48,22 @@ don’t have definitions in the current language. In essence the language
 “falls back” to the default language and `en_us` if there are missing
 keys.
 
-=== Module Strings
+== Module Strings
 
-==== Use
+=== Use
 
 Module strings are strings associated with a particular module. These
 are usually, for example, field labels and panel name labels, but they
 may be used for anything that is specific to a single module.
 
-==== Definition location
+=== Definition location
 
 Module strings are defined in the `$mod_strings` array. This is
 initially defined in +
 `modules/<TheModule>/language/<LanguageTag>.lang.php`, for example +
 `modules/Accounts/language/en_us.lang.php`.
 
-==== Customisation location
+=== Customisation location
 
 Customisations can be made to the module strings by adding a new file
 in +
@@ -74,22 +74,22 @@ example is
 See the Extensions section for more information on the Extensions
 folder.
 
-=== Application Strings
+== Application Strings
 
-==== Use
+=== Use
 
 Application strings are used for language strings and labels that are
 not specific to a single module. Examples of these may include labels
 that will appear in the headers or footers, labels that appear on search
 buttons throughout SuiteCRM or labels for pagination controls.
 
-==== Definition location
+=== Definition location
 
 The application strings are defined in the `$app_strings` array. This is
 initially defined in +
 `include/language/<LanguageTag>.lang.php`.
 
-==== Customisation location
+=== Customisation location
 
 Customisations can be made to the application strings in two ways.
 Firstly you can edit the file +
@@ -101,22 +101,22 @@ For example +
 `<Name>` should be used to give the file a descriptive name. See the
 Extensions section for more information on the Extensions folder.
 
-=== Application List Strings
+== Application List Strings
 
-==== Use
+=== Use
 
 Application list strings are used to store the various dropdowns and
 lists used in SuiteCRM. Most of these are used as options for the
 various enum fields in SuiteCRM e.g the account type or the opportunity
 sales stage.
 
-==== Definition location
+=== Definition location
 
 The application list strings are defined in the `$app_list_strings`
 array. Similar to the `$app_strings` array this is initially defined in
 `include/language/en_us.lang.php`.
 
-==== Customisation location
+=== Customisation location
 
 Customisations can be made to the application list strings in two ways.
 Firstly you can edit the file +
@@ -129,7 +129,7 @@ example +
 See the Extensions section for more information on the Extensions
 folder.
 
-=== Why and when to customise
+== Why and when to customise
 
 Generally language strings should be changed from within SuiteCRM using
 the studio tool. However there are times when it can be simpler to add
@@ -139,14 +139,14 @@ can be simpler to create a new file to add these values. Similarly if
 you are adding entirely new functionality, it is usually best to simply
 add these language strings as new values.
 
-=== Usage
+== Usage
 
 Language strings are used automatically throughout SuiteCRM. For example
 in metadata you can specify the language strings to display for fields.
 However in some cases you will want to access and use the language
 strings in custom code. There are several ways to do this.
 
-==== Globals
+=== Globals
 
 The `$mod_strings`, `$app_strings` and `$app_list_strings` variables are
 all global and can be accessed as such. `$app_strings` and
@@ -183,7 +183,7 @@ Example 9.2: Accessing language strings globally
 
 
 
-==== Translate
+=== Translate
 
 As an alternative to using globals or, if you are in a different module
 than the language string you wish to retrieve you can use the
@@ -242,7 +242,7 @@ Example 9.4: Example `translate` method calls
 
 
 
-==== JavaScript
+=== JavaScript
 
 Finally, you may be using JavaScript (for example in a view), and wish
 to display a language string. For this you can use the

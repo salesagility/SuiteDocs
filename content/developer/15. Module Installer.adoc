@@ -16,7 +16,7 @@ file in it’s root. The manifest file is responsible for providing
 information about the installer as well as providing information on how
 to install the package.
 
-=== manifest.php
+== manifest.php
 
 The `manifest.php` file contains the definition of three arrays. Let’s
 look at each of these arrays in turn. See
@@ -31,7 +31,7 @@ directory of the installer. For example `<basepath>/Foo.txt` will refer
 to the `Foo.txt` file in the root of the installer package.
 |=======================================================================
 
-==== `$manifest`
+=== `$manifest`
 
 The `$manifest` array provides information on the package itself such as
 it’s name, readme etc. (it also defines the `copy` array for `patch`
@@ -124,7 +124,7 @@ Example 15.1: Example `$manifest` array definition
   The type of the installer, one of `langpack`, `module`, `patch` or
   `theme`. See the types section.
 
-==== `$install_defs`
+=== `$install_defs`
 
 Provides information on how the package is to be installed, which files
 go where and any additional information such as logic hooks, custom
@@ -392,12 +392,12 @@ Defines an array of files to be executed after the package is
 uninstalled. Each entry is a path to a file within the package. Any
 output will be displayed to the user in the uninstall log.
 
-==== `$upgrade_manifest`
+=== `$upgrade_manifest`
 
 Provides a means of upgrading an already installed package by providing
 different `install_defs`.
 
-=== Types
+== Types
 
 [cols=",",options="header",]
 |=======================================================================
@@ -413,7 +413,7 @@ functionality.
 |theme |A theme installer. This will add a new option to the themes.
 |=======================================================================
 
-==== Other files
+=== Other files
 
 `README.txt`::
   Contains the readme for this package. If `README.txt` and a readme

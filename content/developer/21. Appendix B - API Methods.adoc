@@ -6,9 +6,9 @@ title: "21. Appendix B - API Methods"
 
 [[appendix-b]]= 21. Appendix B - API Methods
 
-=== Methods
+== Methods
 
-==== login
+=== login
 
 Logs into SuiteCRM and returns a session id used for subsequent API
 calls.
@@ -93,7 +93,7 @@ for the logged in user(simply grabs the wl_list_max_entries_per_subpanel
 config key)
 |=======================================================================
 
-==== logout
+=== logout
 
 Logs the web user out of SuiteCRM and destroys the session.
 
@@ -111,7 +111,7 @@ Response
 
 No response.
 
-==== get_available_modules
+=== get_available_modules
 
 Returns a list of the modules available for use. Also returns the ACL
 (Access Control List) for each module.
@@ -154,7 +154,7 @@ etc.
 |modules[][acls][][access] |bool |Whether or not access is allowed.
 |=======================================================================
 
-==== get_document_revision
+=== get_document_revision
 
 Returns the details for a specific document revision.
 
@@ -192,7 +192,7 @@ revision.
 |document_revision[file] |binary string |The full contents of the file
 |=======================================================================
 
-==== get_entries
+=== get_entries
 
 Gets a list of entries for a specific module and list of module ids.
 Optionally allows returning related records.
@@ -291,7 +291,7 @@ value pair for this particular field.
 |The value of the field.
 |=======================================================================
 
-==== get_entries_count
+=== get_entries_count
 
 Returns a count of entries matching the given query.
 
@@ -318,7 +318,7 @@ get_entries_count response
 |result_count |int |The count of matching entries.
 |=================================================
 
-==== get_entry
+=== get_entry
 
 Returns the details for a single record. Optionally allows returning
 related records.
@@ -360,7 +360,7 @@ Response
 Identical to the response by `get_entries` except only one record will
 be returned.
 
-==== `get_entry_list`
+=== `get_entry_list`
 
 
 Arguments
@@ -471,7 +471,7 @@ value pair for this particular field.
 |The value of the field.
 |=======================================================================
 
-==== get_language_definition
+=== get_language_definition
 
 Returns
 
@@ -503,7 +503,7 @@ get_language_definition response
 or an md5 string for <modulename />
 |=======================================================================
 
-==== `get_last_viewed`
+=== `get_last_viewed`
 
 Returns a list of the most recently viewed modules for the current user.
 
@@ -546,7 +546,7 @@ and unused.
 |result[][date_modified] |string |The date that this record was viewed.
 |=======================================================================
 
-==== `get_modified_relationships`
+=== `get_modified_relationships`
 
 Returns a list of the modified relationships for the current user
 between one of the Calls, Meetings or Contacts modules.
@@ -632,7 +632,7 @@ information.
 |error[description] |string |A description of the error that occurred.
 |=======================================================================
 
-==== `get_module_fields`
+=== `get_module_fields`
 
 Returns the field definitions for a given module.
 
@@ -724,7 +724,7 @@ for this link if appropriate.
 |link_fields[bean_name] |string |The bean that this field links to.
 |=======================================================================
 
-==== `get_module_fields_md5`
+=== `get_module_fields_md5`
 
 Returns an md5 of the a modules field definitions. Useful for caching.
 
@@ -756,7 +756,7 @@ get_module_fields_md5 response
 <modulename />
 |=======================================================================
 
-==== `get_module_layout`
+=== `get_module_layout`
 
 Returns the layout for specified modules and views. Optionally returns
 an md5 of the layouts.
@@ -812,7 +812,7 @@ layouts keyed by the view name.
 the layout format.</modulename></viewname>
 |=======================================================================
 
-==== `get_module_layout_md5`
+=== `get_module_layout_md5`
 
 Returns the md5 of the specified views for the specified modules.
 Behaves identically to get_module_layout with the md5 parameter set to
@@ -865,7 +865,7 @@ keyed by the view name.
 <modulename>.</modulename></viewname>
 |=======================================================================
 
-==== `get_relationships`
+=== `get_relationships`
 
 Returns related records given a specific module, record and list of
 links. ####Arguments
@@ -919,7 +919,7 @@ Response
 
 Identical to the response by `get_entries`.
 
-==== `get_server_info`
+=== `get_server_info`
 
 Returns information about the SuiteCRM server. Currently still returns
 information about the SugarCRM flavor and versions.
@@ -943,10 +943,10 @@ the SuiteCRM version
 |gmt_time |string |The server time in UTC.
 |=======================================================================
 
-==== `get_upcoming_activities`
+=== `get_upcoming_activities`
 
-== Returns a list of the 10 upcoming activities (Meetings, Calls and Tasks
- also includes Opportunities) for the currently logged in user.
+Returns a list of the 10 upcoming activities (Meetings, Calls and Tasks
+- also includes Opportunities) for the currently logged in user.
 
 Arguments
 
@@ -979,7 +979,7 @@ get_upcoming_activities response
 it’s name.
 |=======================================================================
 
-==== `get_user_id`
+=== `get_user_id`
 
 Returns the id of the currently logged in user.
 
@@ -1003,7 +1003,7 @@ get_user_id response
 |id |string |The id of the current user.
 |=======================================
 
-==== `seamless_login`
+=== `seamless_login`
 
 Marks a session as allowing a seamless login. If successful then the
 session id (see the login call) can be used in a URL (as MSID) to log
@@ -1032,7 +1032,7 @@ seamless_login response
 |result |bool |Boolean indicating success
 |========================================
 
-==== `search_by_module`
+=== `search_by_module`
 
 Allows searching for records that contain a specific search string.
 
@@ -1097,7 +1097,7 @@ of this record.
 name of this record.
 |=======================================================================
 
-==== `set_document_revision`
+=== `set_document_revision`
 
 Creates a new document revision for a document.
 
@@ -1132,7 +1132,7 @@ set_document_revision response
 |id |string |The id of the newly created document revision.
 |==========================================================
 
-==== `set_entries`
+=== `set_entries`
 
 Creates or updates a list of records.
 
@@ -1176,7 +1176,7 @@ as specified in the call to `set_entries`.
 |ids[] |array |The id for this record.
 |=======================================================================
 
-==== `set_entry`
+=== `set_entry`
 
 Creates or updates a single record.
 
@@ -1215,7 +1215,7 @@ set_entries response
 |id |string |The id of the newly created or updated record.
 |==========================================================
 
-==== `get_note_attachment`
+=== `get_note_attachment`
 
 Returns the details of a given note attachment.
 
@@ -1253,7 +1253,7 @@ this attachment is related to.
 that this attachment is related to.
 |=======================================================================
 
-==== `set_note_attachment`
+=== `set_note_attachment`
 
 Creates a not attachment for a specified record.
 
@@ -1286,7 +1286,7 @@ set_entries response
 |id |string |The id of the note for this attachment.
 |===================================================
 
-==== `set_relationship`
+=== `set_relationship`
 
 Sets a relationship between a record and other records.
 
@@ -1339,7 +1339,7 @@ created/deleted.
 |deleted |int |The number of relationships deleted.
 |=======================================================================
 
-==== `set_relationships`
+=== `set_relationships`
 
 Sets relationships between multiple records.
 

@@ -31,7 +31,7 @@ neither of these controllers exist then the default controller will be
 used. The default controller can be found in
 `include/MVC/Controller/SugarController.php`.
 
-=== Customising controllers
+== Customising controllers
 
 Ordinarily the default controller handles the request and delegates to
 the appropriate views etc. However custom controllers can be used to add
@@ -40,7 +40,7 @@ or alter functionality. Let’s look at adding a new action.
 In the first instance we will have to add our custom controller. This
 will vary slightly depending on the nature of the module.
 
-==== Custom module
+=== Custom module
 
 In this case we can place the file directly into our module. You should
 create a new file (if it doesn’t exist) at
@@ -59,7 +59,7 @@ Example 7.2: Creating a custom controller for a custom module
 
 
 
-==== Pre-existing modules
+=== Pre-existing modules
 
 For pre-existing modules you should add the controller to +
 `custom/modules/<TheModule>/controller.php`.
@@ -107,7 +107,7 @@ existing controller
 
 
 
-==== Adding the action
+=== Adding the action
 
 Now we can add a new action to our controller. Actions are created as
 methods on the controller with the name `action_<actionName>`. For
@@ -127,7 +127,7 @@ Example 7.5: Adding a custom controller action method
 
 
 
-==== Legacy Style
+=== Legacy Style
 
 In previous versions of SugarCRM a new action was added by creating a
 file in either `modules/<TheModule>/<actionname>.php` or
