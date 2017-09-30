@@ -1,27 +1,21 @@
+
 ---
 weight: 4
 title: "4. Vardefs"
 ---
-[[vardefs-chapter]]
-4. Vardefs
-~~~~~~~~~~
 
-[[leanpub-auto-what-are-vardefs]]
-What are Vardefs
-^^^^^^^^^^^^^^^^
+= 4. Vardefs
+
+=== What are Vardefs
 
 The Vardefs are used to supply information to SuiteCRM about a
 particular bean. These generally specify the fields, relationships and
 indexes in a given module as well as additional information such as
 whether it is audited, the table name etc.
 
-[[leanpub-auto-defining-vardefs]]
-Defining Vardefs
-^^^^^^^^^^^^^^^^
+=== Defining Vardefs
 
-[[leanpub-auto-module]]
-Module
-++++++
+==== Module
 
 Vardefs are initially defined in their respective modules folder. For
 the Accounts module this will be in modules/Accounts/vardefs.php. The
@@ -31,9 +25,8 @@ Let’s look at the Account vardefs (which have been edited for brevity):
 
 Example 4.1: Account Vardefs
 
-'''''
 
-....
+[source,php]
  1 $dictionary['Account'] =
  2 array(
  3  'table' => 'accounts',
@@ -60,11 +53,10 @@ Example 4.1: Account Vardefs
 24  'Account',
 25  array('default', 'assignable','company',)
 26 );
-....
 
-'''''
 
-[[leanpub-auto-keys]]
+
+
 Keys
 
 The following are some of the keys that can be specified for the
@@ -94,7 +86,6 @@ sections.
   with a page showing the differences in the two edits and asked to
   choose which edits are to be used.
 
-[[leanpub-auto-fields]]
 Fields
 
 The field defines the behaviour and attributes of each field in the
@@ -151,7 +142,6 @@ module.
 `audited`::
   Whether or not changes to this field should be audited.
 
-[[leanpub-auto-field-types]]
 Field types
 
 The following are common field types used:
@@ -183,7 +173,6 @@ The following are common field types used:
 `relate`::
   A related bean field.
 
-[[leanpub-auto-indices]]
 Indices
 
 The indices array allows defining any database indexes that should be in
@@ -191,9 +180,8 @@ place on the database table for this module. Let’s look at an example:
 
 Example 4.2: Example indices definition
 
-'''''
 
-....
+[source,php]
  1 'indices' => array (
  2  array(
  3      'name' =>'idx_mymod_id_del',
@@ -208,9 +196,8 @@ Example 4.2: Example indices definition
 12      'type' =>'unique',
 13      'fields'=>array( 'third_party_id')),
 14  ),
-....
 
-'''''
+
 
 Each array entry should have, at least, the following entries:
 
@@ -225,7 +212,6 @@ fields::
   An array of the fields to be indexed. The order of this array will be
   used as the order of the fields in the index.
 
-[[leanpub-auto-relationships-1]]
 Relationships
 
 The Vardefs also specify the relationships within this module. Here’s an
@@ -233,9 +219,8 @@ edited example from the Accounts module:
 
 Example 4.3: Example relationships definition
 
-'''''
 
-....
+[source,php]
  1 'relationships' => array (
  2  'account_cases' => array(
  3      'lhs_module'=> 'Accounts',
@@ -246,9 +231,8 @@ Example 4.3: Example relationships definition
  8      'rhs_key' => 'account_id',
  9      'relationship_type' => 'one-to-many'),
 10 ),
-....
 
-'''''
+
 
 Here we see the link between accounts and cases. This is specified with
 the following keys:
@@ -286,9 +270,7 @@ available:
 `join_key_rhs`::
   The name of the field on the join table for the right hand side.
 
-[[leanpub-auto-vardef-templates]]
-Vardef templates
-++++++++++++++++
+==== Vardef templates
 
 Vardef templates provide a shortcut for defining common vardefs. This is
 done by calling `VardefManager::createVardef` and passing the module
@@ -297,17 +279,15 @@ following is an example from the accounts vardefs:
 
 Example 4.4: Example vardef template
 
-'''''
 
-....
+[source,php]
 22 VardefManager::createVardef(
 23      'Accounts',
 24      'Account',
 25      array('default', 'assignable','company',)
 26      );
-....
 
-'''''
+
 
 In this example the `default`, `assignable` and `company` templates are
 used. The following are some of the available templates:
@@ -325,31 +305,25 @@ used. The following are some of the available templates:
   Adds fields common to companies such as an industry dropdown, address,
   etc.
 
-[[leanpub-auto-customising-vardefs]]
-Customising vardefs
-+++++++++++++++++++
+==== Customising vardefs
 
 Vardefs can be customised by adding a file into
 
 Example 4.5: Custom vardef location
 
-'''''
 
-....
+[source,php]
 custom/Extension/modules/<TheModule>/Ext/SomeFile.php
-....
 
-'''''
+
 
 This file can then be used to add a new field definition or customise an
 existing one e.g changing a field type:
 
 Example 4.6: Example overriding an existing vardef
 
-'''''
 
-....
+[source,php]
 $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
-....
 
-'''''
+

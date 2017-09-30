@@ -1,10 +1,10 @@
+
 ---
 weight: 5
 title: "5. Views"
 ---
-[[leanpub-auto-views]]
-5. Views
-~~~~~~~~
+
+= 5. Views
 
 SuiteCRM follows the MVC (Model-View-Controller) pattern and as such has
 the concept of views. Views are responsible for gathering and displaying
@@ -22,9 +22,7 @@ EditView::
   The EditView allows editing the various fields of a record and
   provides validation on these values.
 
-[[leanpub-auto-location]]
-Location
-^^^^^^^^
+=== Location
 
 Views can be found in `modules/<TheModule>/views/` or, for custom
 views, +
@@ -36,16 +34,12 @@ version is used if it exists. If it doesn’t then the module version is
 used. Finally, if neither of these exist then the SuiteCRM default is
 used in `include/MVC/View/views/`.
 
-[[leanpub-auto-customising]]
-Customising
-^^^^^^^^^^^
+=== Customising
 
 In order to customise a View we first need to create the appropriate
 view file. This will vary depending on the module we wish to target.
 
-[[leanpub-auto-custom-module]]
-Custom module
-+++++++++++++
+==== Custom module
 
 In this case we can place the file directly into our module. Create a
 new file (if it doesn’t exist) at
@@ -54,9 +48,8 @@ similar to:
 
 Example 5.1: View for a custom module
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 
 3 require_once 'include/MVC/View/views/view.<viewname>.php';
@@ -66,18 +59,16 @@ Example 5.1: View for a custom module
 7 {
 8 
 9 }
-....
 
-'''''
+
 
 A more concrete example would be for the detail view for a custom module
 called ABC_Vehicles:
 
 Example 5.2: Detail view for a custom module, ABC_Vehicles
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 
 3 require_once 'include/MVC/View/views/view.detail.php';
@@ -87,13 +78,10 @@ Example 5.2: Detail view for a custom module, ABC_Vehicles
 7 {
 8 
 9 }
-....
 
-'''''
 
-[[leanpub-auto-preexisting-modules]]
-Preexisting modules
-+++++++++++++++++++
+
+==== Preexisting modules
 
 For preexisting modules you will want to add the view to +
 `custom/modules/<TheModule>/views/view.<viewname>.php`.
@@ -110,9 +98,8 @@ Here we don’t extend the existing view or no such view exists:
 
 Example 5.3: Custom view for an existing module
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 3 
@@ -122,18 +109,16 @@ Example 5.3: Custom view for an existing module
 7 {
 8 
 9 }
-....
 
-'''''
+
 
 Otherwise we extend the existing view. Note that we are requiring the
 existing view:
 
 Example 5.4: Overriding a view for an existing module
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 3 
@@ -143,17 +128,15 @@ Example 5.4: Overriding a view for an existing module
 7 {
 8 
 9 }
-....
 
-'''''
+
 
 For example, overriding the List View of Accounts:
 
 Example 5.5: Overriding the Accounts List View
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 3 
@@ -163,13 +146,10 @@ Example 5.5: Overriding the Accounts List View
 7 {
 8 
 9 }
-....
 
-'''''
 
-[[leanpub-auto-making-changes]]
-Making changes
-++++++++++++++
+
+==== Making changes
 
 Now that we have a custom view what can we actually do? The views have
 various methods which we can now override to change/add behaviour. The

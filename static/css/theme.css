@@ -15,6 +15,7 @@
 .button:active, .button-secondary:active {
     margin: 2px 0 -2px 0;
 }
+/*
 @font-face {
     font-family: 'Novacento Sans Wide';
     src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
@@ -34,22 +35,24 @@
     font-weight: 500;
     src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype");
 }
+*/
 
 body {
     background: #fff;
     color: #777;
 }
 body #chapter h1 {
-    font-size: 2.5rem;
+    font-size: 3.0rem;
+    visibility: hidden;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
     body #chapter h1 {
-        font-size: 2.5rem;
+        font-size: 3.0rem;
     }
 }
 @media only all and (max-width: 47.938em) {
     body #chapter h1 {
-        font-size: 1.5rem;
+        font-size: 2.0rem;
     }
 }
 a {
@@ -429,7 +432,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     text-align: center;
 }
 #chapter h1 {
-    font-size: 3.5rem;
+    font-size: 4.0rem;
     border-bottom: 4px solid #F0F2F4;
 }
 #chapter p {
@@ -445,20 +448,21 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin: 0;
 }
 body {
-    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Merriweather", serif;
     /*font-weight: 300;*/
     line-height: 1.6;
     font-size: 18px !important;
 }
 h2, h3, h4, h5, h6 {
-    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Merriweather", serif;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
     /*font-weight: 400;*/
     letter-spacing: -1px;
+    margin: 0.50rem 0 1.0rem 0 !important;
 }
 h1 {
-    font-family: "Lato", "Arial", "Helvetica", "Tahoma", "Geneva", sans-serif;
+    font-family: "Merriweather", serif;
     text-align: center;
     /* text-transform: uppercase; */
     color: #222;

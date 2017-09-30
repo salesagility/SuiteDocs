@@ -1,29 +1,23 @@
+
 ---
 weight: 12
 title: "12. Logic Hooks"
 ---
-[[logic-hooks-chapter]]
-12. Logic Hooks
-~~~~~~~~~~~~~~~
 
-[[leanpub-auto-intro-1]]
-Intro
-^^^^^
+= 12. Logic Hooks
+
+=== Intro
 
 Logic hooks allow you to hook into various events in SuiteCRM to fire
 custom code. This can allow you to, for example, make a call to an
 external API, or to create a new record if certain events occur.
 
-[[leanpub-auto-types]]
-Types
-^^^^^
+=== Types
 
 Logic hooks can occur in three contexts. These contexts are Application
 Hooks, Module Hooks and User Hooks. These are detailed below.
 
-[[leanpub-auto-application-hooks]]
-Application Hooks
-^^^^^^^^^^^^^^^^^
+=== Application Hooks
 
 Application hooks are hooks which are fired in the application context
 (that is, they are not fired against a particular module). These hooks
@@ -41,9 +35,7 @@ after_ui_frame::
 server_round_trip::
   Fired at the end of every page request.
 
-[[leanpub-auto-user-hooks]]
-User Hooks
-^^^^^^^^^^
+=== User Hooks
 
 User hooks are fired for certain login/logout actions. Similar to
 Application Hooks, these hooks must be defined in the top level logic
@@ -58,9 +50,7 @@ before_logout::
 login_failed::
   Fired when a user attempts to login to SuiteCRM but the login fails.
 
-[[leanpub-auto-module-hooks]]
-Module Hooks
-^^^^^^^^^^^^
+=== Module Hooks
 
 Module Hooks are called on various record actions for a specific module.
 
@@ -100,9 +90,7 @@ process_record::
   Fired when a record is processed ready to be displayed in list views
   or dashlets.
 
-[[leanpub-auto-job-queue-hooks]]
-Job Queue Hooks
-^^^^^^^^^^^^^^^
+=== Job Queue Hooks
 
 Job queue hooks are fired for scheduler jobs. Similar to application
 hooks these hooks must be defined in the top level logic hook (i.e.
@@ -117,26 +105,21 @@ job_failure_retry::
   throws an exception but it will be retried. See the section on
   link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 
-[[leanpub-auto-implementing]]
-Implementing
-^^^^^^^^^^^^
+=== Implementing
 
 Depending on the Logic Hook type logic hooks are either placed into +
 `custom/modules/Logic_Hooks.php` or
 `custom/modules/<TargetModule>/Logic_Hooks.php`.
 
-[[leanpub-auto-logichooksphp]]
-Logic_Hooks.php
-+++++++++++++++
+==== Logic_Hooks.php
 
 The logic hook file itself specifies which logic hooks to fire on this
 event. It looks something like this:
 
 Example 12.1: Logic hook file
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 // Do not store anything in this file that is not part of the array or the hook
  3 //version.  This file will be automatically rebuilt in the future.
@@ -213,47 +196,45 @@ Example 12.1: Logic hook file
 74                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
 75                               'CasesJjwg_MapsLogicHook',
 76                               'deleteRelationship');
-....
 
-'''''
+
 
 Let’s go through each part of the file.
 
-....
+[source,php]
 4 $hook_version = 1;
-....
+
 
 This sets the hook version that we are using. Currently there is only
 one version so this line is unused.
 
-....
+[source,php]
 5 $hook_array = Array();
-....
+
 
 Here we set up an empty array for our Logic Hooks. This should always be
 called $hook_array.
 
-....
+[source,php]
 7 $hook_array['before_save'] = Array();
-....
+
 
 Here we are going to be adding some before_save hooks so we add an empty
 array for that key.
 
-....
+[source,php]
  8 $hook_array['before_save'][] = Array(
  9                               77,
 10                               'updateGeocodeInfo',
 11                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
 12                               'CasesJjwg_MapsLogicHook',
 13                               'updateGeocodeInfo');
-....
+
 
 Finally we reach an interesting line. This adds a new logic hook to the
 before_save hooks. This array contains 5 entries which define this hook.
 These are:
 
-[[leanpub-auto-sort-order]]
 Sort order
 
 The first argument (77) is the sort order for this hook. The logic hook
@@ -261,13 +242,11 @@ array is sorted by this value. If you wish for a hook to fire earlier
 you should use a lower number. If you wish for a hook to be fired later
 you should use a higher number. The numbers themselves are arbitrary.
 
-[[leanpub-auto-hook-label]]
 Hook label
 
 The second argument (‘updateGeocodeInfo’) is simply a label for the
 logic hook. This should be something short but descriptive.
 
-[[leanpub-auto-hook-file]]
 Hook file
 
 The third argument is where the actual class for this hook is. In this
@@ -278,7 +257,6 @@ want the files to be somewhere in custom and it is usual to have them in
 `custom/modules/<SomeDescriptiveName>.php` for Logic Hooks not targeting
 a specific module. However the files can be placed anywhere.
 
-[[leanpub-auto-hook-class]]
 Hook class
 
 The fourth argument is the class name for the Logic Hook class. In this
@@ -286,15 +264,12 @@ case +
 `CasesJjwg_MapsLogicHook`. It is usual for the class name to match the
 file name but this is not required.
 
-[[leanpub-auto-hook-method]]
 Hook method
 
 The fifth, and final, argument is the method that will be called on the
 class. In this case `updateGeocodeInfo`.
 
-[[leanpub-auto-adding-your-own-logic-hooks]]
-Adding your own logic hooks
-+++++++++++++++++++++++++++
+==== Adding your own logic hooks
 
 When adding logic hooks you should make full use of the Extensions
 framework (see the section on Extensions). This involves creating a file
@@ -312,18 +287,15 @@ adding a new logic hook it is necessary to perform a quick repair and
 rebuild in the admin menu for this to be picked up.
 |=======================================================================
 
-[[leanpub-auto-logic-hook-function]]
-Logic Hook function
-+++++++++++++++++++
+==== Logic Hook function
 
 The logic hook function itself will vary slightly based on the logic
 hook type. For module hooks it will appear similar to:
 
 Example 12.2: Example logic hook method
 
-'''''
 
-....
+[source,php]
 1     class SomeClass
 2     {
 3         function someMethod($bean, $event, $arguments)
@@ -331,17 +303,15 @@ Example 12.2: Example logic hook method
 5           //Custom Logic
 6         }
 7     }
-....
 
-'''''
+
 
 Application logic hooks omit the $bean argument:
 
 Example 12.3: Example logic hook method for application hooks
 
-'''''
 
-....
+[source,php]
 1     class SomeClass
 2     {
 3         function someMethod($event, $arguments)
@@ -349,11 +319,10 @@ Example 12.3: Example logic hook method for application hooks
 5           //Custom Logic
 6         }
 7     }
-....
 
-'''''
 
-[[leanpub-auto-bean-sugarbean]]
+
+
 $bean (`SugarBean`)
 
 The $bean argument passed to your logic hook is usually the bean that
@@ -363,30 +332,24 @@ this will be the record that is being saved. For job queue logic hooks
 this will be the SchedulersJob bean. Note that for Application Logic
 Hook this argument is not present.
 
-[[leanpub-auto-event-string]]
 $event (`string`)
 
 The $event argument contains the logic hook event e.g `process_record`,
 `before_save`, +
 `after_delete` etc.
 
-[[leanpub-auto-arguments-array]]
 $arguments (`array`)
 
 The $arguments argument contains any additional details of the logic
 hook event. I.e. in the case of before_relationship_add this will
 contain details of the related modules.
 
-[[leanpub-auto-tips]]
-Tips
-^^^^
+=== Tips
 
 [width="100%",cols="50%,50%",]
 |=======================================================================
 |image:images/leanpub_info-circle.png[information,width=50] a|
-[[leanpub-auto-triggering-extra-logic-hooks]]
-Triggering extra logic hooks
-++++++++++++++++++++++++++++
+==== Triggering extra logic hooks
 
 If you are performing certain actions that may trigger another logic
 hook (such as saving a bean) then you need to be aware that this will
@@ -402,9 +365,7 @@ hooks.
 [width="100%",cols="50%,50%",]
 |=======================================================================
 |image:images/leanpub_info-circle.png[information,width=50] a|
-[[leanpub-auto-think-of-the-user]]
-Think of the user
-+++++++++++++++++
+==== Think of the user
 
 Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user

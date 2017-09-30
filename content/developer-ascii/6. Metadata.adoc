@@ -1,39 +1,31 @@
+
 ---
 weight: 6
 title: "6. Metadata"
 ---
-[[metadata-chapter]]
-6. Metadata
-~~~~~~~~~~~
 
-[[leanpub-auto-intro]]
-Intro
-^^^^^
+= 6. Metadata
+
+=== Intro
 
 Module metadata are used to describe how various views behave in the
 module. The main use of this is providing field and layout information
 but this can also be used to filter subpanels and to describe what
 fields are used in the search.
 
-[[leanpub-auto-location-1]]
-Location
-^^^^^^^^
+=== Location
 
 Module metadata can be found in:
 
 Example 6.1: Module metadata location
 
-'''''
 
-....
+[source,php]
 modules/<TheModule>/metadata/
-....
 
-'''''
 
-[[leanpub-auto-customising-1]]
-Customising
-^^^^^^^^^^^
+
+=== Customising
 
 Usually studio is the best way of customising metadata. Even when you do
 wish to make customisations that are not possible through studio it can
@@ -47,13 +39,9 @@ exception to this rule is the studio.php file. The modules metadata
 folder is the only location checked - any version in
 `custom/<TheModule>/metadata/studio.php` is ignored.
 
-[[leanpub-auto-different-metadata]]
-Different metadata
-^^^^^^^^^^^^^^^^^^
+=== Different metadata
 
-[[leanpub-auto-detailviewdefsphp]]
-detailviewdefs.php
-++++++++++++++++++
+==== detailviewdefs.php
 
 detailviewdefs.php provides information on the layout and fields of the
 detail view for this module. This file uses the same structure as
@@ -62,9 +50,8 @@ editviewdefs.php. Let’s look at an example for a fictional module
 
 Example 6.2: DetailView metadata definition
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 $viewdefs ['ABC_Vehicles'] ['DetailView'] = array (
  3  'templateMeta' => array (
@@ -143,9 +130,8 @@ Example 6.2: DetailView metadata definition
 76  )
 77 );
 78 ?>
-....
 
-'''''
+
 
 We see that line 2 defines an array
 `$viewdefs['ABC_Vehicles']['DetailView']` which places a DetailView
@@ -153,7 +139,6 @@ entry for the module ABC_Vehicles into `$viewdefs` (DetailView will be
 EditView or QuickCreateView as appropriate). This array has two main
 keys defined here:
 
-[[leanpub-auto-templatemeta]]
 templateMeta
 
 The templateMeta key provides information about the view in general. The
@@ -169,7 +154,6 @@ this view.
   An array of additional JavaScript files to include. This is useful for
   adding custom JavaScript behaviour to the page.
 
-[[leanpub-auto-panels]]
 panels
 
 The panels entry defines the actual layout of the Detail (or Edit) view.
@@ -184,9 +168,8 @@ the following definition:
 
 Example 6.3: DetailView metadata row definition
 
-'''''
 
-....
+[source,php]
 31 array(
 32  array (
 33      'name' => 'name',
@@ -195,9 +178,8 @@ Example 6.3: DetailView metadata row definition
 36  ),
 37  'reg_number',
 38 ),
-....
 
-'''''
+
 
 This has an array definition for the first row, first column and a
 string definition for the first row, second column. The string
@@ -226,16 +208,14 @@ values. Values most commonly used are:
 
 Example 6.4: DetailView metadata displayParams
 
-'''''
 
-....
+[source,php]
 1 'displayParams' => array(
 2     'rows' => 2,
 3     'cols' => 30,
 4 ),
-....
 
-'''''
+
 
 customCode::
   Allows supplying custom smarty code to be used for the display. The
@@ -247,26 +227,21 @@ customCode::
   the field that would have been used. For example
   `{if $someCondition}@@FIELD@@{/if}` will conditionally show the field.
 
-[[leanpub-auto-editviewdefsphp]]
-editviewdefs.php
-++++++++++++++++
+==== editviewdefs.php
 
 `editviewdefs.php` provides information on the layout and fields of the
 edit view for this module. This file uses the same structure as
 detailviewdefs.php. Please see the information on detailviewdefs.php.
 
-[[leanpub-auto-listviewdefsphp]]
-listviewdefs.php
-++++++++++++++++
+==== listviewdefs.php
 
 The `listviewdefs.php` file for a module defines what fields the list
 view for that module will display. Let’s take a look at an example:
 
 Example 6.5: ListView metadata definition
 
-'''''
 
-....
+[source,php]
  1 $listViewDefs ['AOR_Reports'] =
  2 array (
  3   'NAME' =>
@@ -307,9 +282,8 @@ Example 6.5: ListView metadata definition
 38     'default' => true,
 39   ),
 40 );
-....
 
-'''''
+
 
 To define the list view defs we simply add a key to the `$listViewDefs`
 array. In this case we add an entry for `AOR_Reports` This array
@@ -336,9 +310,7 @@ width::
   example above has five columns with a width of `15%` but these will
   actually be `20%` since this is a ratio.
 
-[[leanpub-auto-popupdefsphp]]
-popupdefs.php
-+++++++++++++
+==== popupdefs.php
 
 popupdefs.php provides information on the layout, fields and search
 options of the module popup that is usually used when selecting a
@@ -348,9 +320,8 @@ Let’s look at the default popupdefs.php for the Accounts module:
 
 Example 6.6: PopupView metadata definition
 
-'''''
 
-....
+[source,php]
  1 $popupMeta = array(
  2  'moduleMain' => 'Case',
  3  'varName' => 'CASE',
@@ -416,9 +387,8 @@ Example 6.6: PopupView metadata definition
 63          ),
 64    )
 65 );
-....
 
-'''''
+
 
 The popupdefs.php specifies a `$popupMeta` array with the following
 keys:
@@ -447,9 +417,7 @@ keys:
   popup. See the individual search defs in the searchdefs.php section
   (for example the `basic_search` array).
 
-[[leanpub-auto-quickcreatedefsphp]]
-quickcreatedefs.php
-+++++++++++++++++++
+==== quickcreatedefs.php
 
 `quickcreatedefs.php` provides information on the layout and fields of
 the quick create view for this module (this is the view that appears
@@ -457,9 +425,7 @@ when creating a record from a subpanel). This file uses the same
 structure as `detailviewdefs.php`. Please see the information on
 `detailviewdefs.php`.
 
-[[leanpub-auto-searchdefsphp]]
-searchdefs.php
-++++++++++++++
+==== searchdefs.php
 
 The search defs of a module define how searching in that module looks
 and behaves.
@@ -468,9 +434,8 @@ Let’s look at an example.
 
 Example 6.7: Search View metadata definition
 
-'''''
 
-....
+[source,php]
   1 $searchdefs ['Accounts'] = array (
   2     'templateMeta' => array (
   3         'maxColumns' => '3',
@@ -583,14 +548,12 @@ Example 6.7: Search View metadata definition
 110         )
 111     )
 112 );
-....
 
-'''''
+
 
 Here we setup a new array for `Accounts` in the `$searchdefs` array.
 This has two keys:
 
-[[leanpub-auto-templatemeta-1]]
 templateMeta
 
 The `templateMeta` key controls the basic look of the search forms. Here
@@ -598,7 +561,6 @@ we define some overall layout info such as the maximum columns (3) and
 the maximum number of columns for the basic search (4). Finally we set
 the widths for the search fields and their labels.
 
-[[leanpub-auto-layout]]
 layout
 
 The `layout` key contains the layout definitions for the basic search
@@ -606,18 +568,15 @@ and advanced search. This is simply a list of array definition of the
 fields. See the section on listviewdefs.php for a description of some of
 the options.
 
-[[leanpub-auto-subpaneldefsphp]]
-`subpaneldefs.php`
-++++++++++++++++++
+==== `subpaneldefs.php`
 
 The subpaneldefs.php file provides definitions for the subpanels that
 appear in the detail view of a module. Let’s look at an example:
 
 Example 6.8: Subpanel metadata definition
 
-'''''
 
-....
+[source,php]
  1 $layout_defs['AOS_Quotes'] = array (
  2  'subpanel_setup' => array (
  3      'aos_quotes_aos_contracts' => array (
@@ -679,9 +638,8 @@ Example 6.8: Subpanel metadata definition
 59      )
 60  )
 61 );
-....
 
-'''''
+
 
 In the example above we set up a definition for a module (in this case
 `AOS_Quotes`) in the `$layout_defs` array. This has a single key
@@ -745,9 +703,7 @@ top_buttons::
   `include/generic/SugarWidgets`. Depending on the button this array may
   also be used to pass in extra arguments to the widget class.
 
-[[leanpub-auto-subpanels]]
-subpanels
-+++++++++
+==== subpanels
 
 Inside the metadata folder is the `subpanels` folder. This allows
 creating different subpanel layouts for different parent modules. For
@@ -761,9 +717,8 @@ the parent module. The usual subpanel file is simply called
 
 Example 6.8: Module Subpanels definition
 
-'''''
 
-....
+[source,php]
  1 $subpanel_layout = array(
  2  'top_buttons' => array(
  3      array(
@@ -818,9 +773,8 @@ Example 6.8: Module Subpanels definition
 52    ),
 53    )
 54 );
-....
 
-'''''
+
 
 There are three keys in the `$subpanel_layout` variable for this
 subpanel. These are:
@@ -838,9 +792,7 @@ subpanel. These are:
   Defines the list of fields to be displayed in this subpanel. See the
   section on `listviewdefs.php` for more information.
 
-[[leanpub-auto-studiophp]]
-studio.php
-++++++++++
+==== studio.php
 
 studio.php is the simplest file in metadata and it’s existence is simply
 used to confirm if a module should be shown in studio for user tweaking.

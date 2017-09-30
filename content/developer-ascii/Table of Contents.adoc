@@ -1,10 +1,10 @@
+
 ---
 weight: 1
 title: "Table of Contents"
 ---
-[[toc]]
-Table of Contents
-~~~~~~~~~~~~~~~~~
+
+[[toc]]= Table of Contents
 
 * link:../1.-introduction#leanpub-auto-introduction[1. Introduction]
 ** link:../1.-introduction#leanpub-auto-what-is-suitecrm[What is SuiteCRM]

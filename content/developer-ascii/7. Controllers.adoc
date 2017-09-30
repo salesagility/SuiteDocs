@@ -1,10 +1,10 @@
+
 ---
 weight: 7
 title: "7. Controllers"
 ---
-[[leanpub-auto-controllers]]
-7. Controllers
-~~~~~~~~~~~~~~
+
+= 7. Controllers
 
 SuiteCRM follows the MVC (Model-View-Controller) pattern and as such has
 the concept of controllers. The controller is responsible for making
@@ -14,13 +14,11 @@ will be taken by the controller. Let’s take a look at a SuiteCRM URL:
 
 Example 7.1: Example SuiteCRM URL
 
-'''''
 
-....
+[source,php]
 example.com/index.php?module=Accounts&action=index
-....
 
-'''''
+
 
 In this (rather boring) example we see that the module is Accounts. This
 will determine which controller to use and then call the index action on
@@ -33,9 +31,7 @@ neither of these controllers exist then the default controller will be
 used. The default controller can be found in
 `include/MVC/Controller/SugarController.php`.
 
-[[leanpub-auto-customising-controllers]]
-Customising controllers
-^^^^^^^^^^^^^^^^^^^^^^^
+=== Customising controllers
 
 Ordinarily the default controller handles the request and delegates to
 the appropriate views etc. However custom controllers can be used to add
@@ -44,9 +40,7 @@ or alter functionality. Let’s look at adding a new action.
 In the first instance we will have to add our custom controller. This
 will vary slightly depending on the nature of the module.
 
-[[leanpub-auto-custom-module-1]]
-Custom module
-+++++++++++++
+==== Custom module
 
 In this case we can place the file directly into our module. You should
 create a new file (if it doesn’t exist) at
@@ -54,22 +48,18 @@ create a new file (if it doesn’t exist) at
 
 Example 7.2: Creating a custom controller for a custom module
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 3 class <TheModule>Controller extends SugarController
 4 {
 5 
 6 }
-....
 
-'''''
 
-[[leanpub-auto-pre-existing-modules]]
-Pre-existing modules
-++++++++++++++++++++
+
+==== Pre-existing modules
 
 For pre-existing modules you should add the controller to +
 `custom/modules/<TheModule>/controller.php`.
@@ -86,18 +76,16 @@ exists:
 
 Example 7.3: Creating a custom controller for an existing module
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 3 class Custom<TheModule>Controller extends SugarController
 4 {
 5 
 6 }
-....
 
-'''''
+
 
 Alternatively we extend the existing controller. Note that we are
 requiring the existing controller:
@@ -105,9 +93,8 @@ requiring the existing controller:
 Example 7.4: Creating a custom controller for an existing module with an
 existing controller
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 3 
@@ -117,13 +104,10 @@ existing controller
 7 {
 8 
 9 }
-....
 
-'''''
 
-[[leanpub-auto-adding-the-action]]
-Adding the action
-+++++++++++++++++
+
+==== Adding the action
 
 Now we can add a new action to our controller. Actions are created as
 methods on the controller with the name `action_<actionName>`. For
@@ -134,20 +118,16 @@ log the REQUEST and simply redirect:
 
 Example 7.5: Adding a custom controller action method
 
-'''''
 
-....
+[source,php]
 1 public function action_echo(){
 2   $GLOBALS['log']->debug("Echo called with request: ".print_r($_REQUEST,1));
 3   SugarApplication::redirect('index.php');
 4 }
-....
 
-'''''
 
-[[leanpub-auto-legacy-style]]
-Legacy Style
-++++++++++++
+
+==== Legacy Style
 
 In previous versions of SugarCRM a new action was added by creating a
 file in either `modules/<TheModule>/<actionname>.php` or

@@ -1,28 +1,24 @@
+
 ---
 weight: 18
 title: "18. Performance Tweaks"
 ---
-[[leanpub-auto-performance-tweaks]]
-18. Performance Tweaks
-~~~~~~~~~~~~~~~~~~~~~~
+
+= 18. Performance Tweaks
 
 In most cases the performance of SuiteCRM should not be an issue.
 However in the case of large datasets or systems with many users you may
 notice some performance degradation. These changes can help improve
 performance.
 
-[[leanpub-auto-server]]
-Server
-^^^^^^
+=== Server
 
 The server that SuiteCRM runs on is, of course, very important when it
 comes to the kind of performance you can expect. A full guide on server
 setup is outside the scope of this book. However there are some things
 you can do to ensure that you get the best performance out of SuiteCRM.
 
-[[leanpub-auto-php]]
-PHP
-+++
+==== PHP
 
 Installing a PHP opcode cache will increase the performance of all PHP
 files. These work by caching the compilation of PHP files resulting in
@@ -32,9 +28,7 @@ are using Linux then http://php.net/manual/en/book.apc.php[APC] is the
 usual choice. Windows users should check out
 http://php.net/manual/en/book.wincache.php[WinCache].
 
-[[leanpub-auto-mysql]]
-MySQL
-+++++
+==== MySQL
 
 MySQL is notorious for having small default settings. Fully optimising
 MySQL is outside the scope of this book (however checkout
@@ -47,9 +41,7 @@ If you have migrated or imported a significant amount of data it is
 possible that some tables will be fragmented. Running
 `OPTIMIZE TABLE tablename` can increase performance.
 
-[[leanpub-auto-indexes]]
-Indexes
-^^^^^^^
+=== Indexes
 
 Adding indexes on the fields of modules can improve database
 performance. The core modules usually have important fields indexed.
@@ -58,9 +50,7 @@ fields to a module then these fields may benefit from being indexed. See
 the link:../4.-vardefs#vardefs-chapter[Vardef] chapter for adding
 indexes.
 
-[[leanpub-auto-config-changes]]
-Config Changes
-^^^^^^^^^^^^^^
+=== Config Changes
 
 The following are some config settings that can be used to improve
 performance. Please note that in most cases you will have better
@@ -69,43 +59,43 @@ These settings should be set in the config_override.php file. See the
 chapter on the link:../10.-config#config-chapter[Config] files for more
 information.
 
-....
+[source,php]
 $sugar_config['developerMode'] = false;
-....
+
 
 Unless you are actively developing on an instance developerMode should
 be off. Otherwise each page request will cause cached files to be
 reloaded.
 
-....
+[source,php]
 $sugar_config['disable_count_query'] = true;
-....
+
 
 For systems with large amounts of data the count queries on subpanels
 used for the pagination controls can become slow thereby causing the
 page to be sluggish or outright slow to load. Disabling these queries
 can improve performance dramatically on some pages.
 
-....
+[source,php]
 $sugar_config['disable_vcr'] = true;
-....
+
 
 By default opening the detail view of a record from the list view will
 also load the other records in the list to allow for easy moving through
 records. If you do not use this feature, or, if loading the detail view
 for some records has become slow, you can disable this feature.
 
-....
+[source,php]
 $sugar_config['list_max_entries_per_page'] = '10';
-....
+
 
 The number of records shown in each page of the list view can be
 decreased. This will result in a slight increase in performance on list
 view pages.
 
-....
+[source,php]
 $sugar_config['logger']['level'] = 'fatal';
-....
+
 
 Lowering the log level means that there will be less log messages to
 write to disk on each request. This will slightly (very slightly)

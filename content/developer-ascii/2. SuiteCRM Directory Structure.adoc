@@ -1,10 +1,10 @@
+
 ---
 weight: 2
 title: "2. SuiteCRM Directory Structure"
 ---
-[[leanpub-auto-suitecrm-directory-structure]]
-2. SuiteCRM Directory Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+= 2. SuiteCRM Directory Structure
 
 `cache`::
   Contains cache files used by SuiteCRM including compiled smarty

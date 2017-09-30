@@ -1,14 +1,12 @@
+
 ---
 weight: 13
 title: "13. Scheduled Tasks"
 ---
-[[scheduled-tasks-chapter]]
-13. Scheduled Tasks
-~~~~~~~~~~~~~~~~~~~
 
-[[leanpub-auto-intro-2]]
-Intro
-^^^^^
+= 13. Scheduled Tasks
+
+=== Intro
 
 Scheduled tasks are performed in SuiteCRM by the scheduler module. Jobs
 are placed into the queue either through the defined scheduled tasks or,
@@ -19,9 +17,7 @@ requires adding an entry either to Cron (for Linux systems) or to the
 windows scheduled tasks (for windows). Opening the scheduled tasks page
 within SuiteCRM will let you know the format for the entry.
 
-[[leanpub-auto-scheduler]]
-Scheduler
-^^^^^^^^^
+=== Scheduler
 
 Scheduled tasks allow SuiteCRM to perform recurring tasks. Examples of
 these which ship with SuiteCRM include checking for incoming mail,
@@ -39,9 +35,8 @@ scheduler will call:
 
 Example 13.1: Example Clean Meetings Scheduler
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 /*
  3  * We add the method name to the $job_strings array.
@@ -76,9 +71,8 @@ Example 13.1: Example Clean Meetings Scheduler
 32   //Signify we have successfully ran
 33   return true;
 34 }
-....
 
-'''''
+
 
 We also make sure that we add a language file in +
 `custom/Extension/modules/Schedulers/Ext/Language/en_us.cleanMeetingsScheduler.php`
@@ -92,16 +86,14 @@ LBL_UPPERMETHODNAME. In our case our method name is
 
 Example 13.2: Example Language string for Clean Meetings Scheduler
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 //We add the mod string for our method here.
 3 $mod_strings['LBL_CLEANMEETINGSSCHEDULER'] = 'Mark old, planned meetings as Not \
 4 Held';
-....
 
-'''''
+
 
 If we perform a repair and rebuild our method will now be packaged up
 into the scheduler ext file (see the Extensions section for more
@@ -121,9 +113,7 @@ default frequency is every one minute. If your task is heavy duty or
 long running this may not be what you would prefer. Here we settle for
 once a day.
 
-[[leanpub-auto-job-queue]]
-Job Queue
-^^^^^^^^^
+=== Job Queue
 
 Sometimes you will require code to perform a long running task but you
 do not need the user to wait for this to be completed. A good example of
@@ -132,9 +122,8 @@ for information on these). Assuming we have the following logic hook:
 
 Example 13.3: Example Email sending Logic Hook
 
-'''''
 
-....
+[source,php]
  1 class SomeClass
  2 {
  3     function SomeMethod($bean, $event, $arguments)
@@ -163,9 +152,8 @@ Example 13.3: Example Email sending Logic Hook
 26         return $mailer->Send();
 27     }
 28 }
-....
 
-'''''
+
 
 This will work fine. However you do not want the user to have to wait
 for the email to be sent out as this can cause the UI to feel sluggish.
@@ -177,9 +165,8 @@ First we want our Logic Hook class to create the scheduled job:
 
 Example 13.4: Example Scheduled Job Creation
 
-'''''
 
-....
+[source,php]
  1 class SomeClass
  2 {
  3     function SomeMethod($bean, $event, $arguments)
@@ -209,9 +196,8 @@ Example 13.4: Example Scheduled Job Creation
 27       $queue->submitJob($scheduledJob);
 28     }
 29 }
-....
 
-'''''
+
 
 Next we create the BeanEmailJob class. This is placed into the +
 `custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/` directory
@@ -220,9 +206,8 @@ with the same name as the class. So in our example we will have: +
 
 Example 13.5: Example Scheduler job
 
-'''''
 
-....
+[source,php]
  1 class BeanEmailJob implements RunnableSchedulerJob
  2 {
  3   public function run($arguments)
@@ -259,17 +244,14 @@ Example 13.5: Example Scheduler job
 34     $this->job = $job;
 35   }
 36 }
-....
 
-'''''
+
 
 Now whenever a user triggers the hook it will be much quicker since we
 are simply persisting a little info to the database. The scheduler will
 run this in the background.
 
-[[leanpub-auto-retries]]
-Retries
-+++++++
+==== Retries
 
 Occasionally you may have scheduled jobs which could fail
 intermittently. Perhaps you have a job which calls an external API. If
@@ -288,9 +270,8 @@ We can revisit our previous example and add two retries:
 
 Example 13.6: Setting the retry count on a scheduled job
 
-'''''
 
-....
+[source,php]
  6       $scheduledJob = new SchedulersJob();
  7 
  8       //Give it a useful name
@@ -314,16 +295,13 @@ Example 13.6: Setting the retry count on a scheduled job
 26       //Mark this job for 2 retries.
 27       $scheduledJob->requeue = true;
 28       $scheduledJob->retry = 2;
-....
 
-'''''
+
 
 See the section on link:../12.-logic-hooks#logic-hooks-chapter[logic hooks]
 for more information on how job failures can be handled.
 
-[[leanpub-auto-debugging]]
-Debugging
-^^^^^^^^^
+=== Debugging
 
 With Scheduled tasks and jobs running in the background it can sometimes
 be difficult to determine what is going on when things go wrong. If you
@@ -334,34 +312,29 @@ last five scheduled jobs:
 
 Example 13.7: Example MySQL query for listing jobs
 
-'''''
 
-....
+[source,php]
 SELECT * FROM job_queue ORDER BY date_entered DESC LIMIT 5
-....
 
-'''''
+
 
 This will give us information on the last five jobs. Alternatively we
 can check on specific jobs:
 
 Example 13.8: Example MySQL query for listing BeanEmailJobs
 
-'''''
 
-....
+[source,php]
 SELECT * FROM job_queue WHERE target = 'class::BeanEmailJob'
-....
 
-'''''
+
 
 In either case this will give details for the job(s):
 
 Example 13.9: Example MySQL list of jobs
 
-'''''
 
-....
+[source,php]
 *************************** 1. row ***************************
 assigned_user_id: 1
               id: 6cdf13d5-55e9-946e-9c98-55044c5cecee
@@ -384,9 +357,8 @@ s"}
           client: CRON3b06401793b3975cd00c0447c071ef9a:7781
 percent_complete: NULL
 1 row in set (0.00 sec)
-....
 
-'''''
+
 
 Here we can check the status, resolution and message fields. If the
 status is `queued` then either the scheduler has not yet run or it isn’t
@@ -407,13 +379,11 @@ directory using:
 
 Example 13.10: Running the scheduler manually
 
-'''''
 
-....
+[source,php]
 php -f cron.php
-....
 
-'''''
+
 
 Using this in addition to outputting any useful information should track
 down even the oddest of bugs.
