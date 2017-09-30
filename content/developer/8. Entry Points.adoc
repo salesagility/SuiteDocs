@@ -12,7 +12,7 @@ simple access to SuiteCRM or, as is the case with the stock Events
 module, allowing an event invite to be responded to by clicking a link
 in an email.
 
-=== Creating an entry point
+== Creating an entry point
 
 Let’s create a simple entry point to display the time. First we define
 this entry point in a new file in:

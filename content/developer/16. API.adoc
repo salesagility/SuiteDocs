@@ -9,7 +9,7 @@ title: "16. API"
 The SuiteCRM API allows third party code to access and edit SuiteCRM
 data and functionality.
 
-=== Using the API
+== Using the API
 
 SuiteCRM has both a REST and a SOAP API. Which API you want to use will
 largely come down to personal preference and the support for SOAP/REST
@@ -18,7 +18,7 @@ libraries in whichever language you will be using.
 Both APIs will require a username and password. It is usual to create a
 user specifically for the API.
 
-==== SOAP
+=== SOAP
 
 The WSDL for the SOAP API can be found at:
 
@@ -91,7 +91,7 @@ Example 16.2: Accessing the SOAP API
 
 
 
-==== REST
+=== REST
 
 The SuiteCRM REST API can be found at:
 
@@ -214,7 +214,7 @@ Example 16.4: Accessing the REST API
 For a full list of API methods and their arguments see
 link:../21.-appendix-b---api-methods#appendix-b[Appendix B].
 
-=== Adding custom API methods
+== Adding custom API methods
 
 Sometimes the existing API methods are not sufficient or using them for
 a task would be overly complex. SuiteCRM allows the web services to be
@@ -331,7 +331,7 @@ Example 16.8: Custom v4_1 SOAP Entry point
 
 
 
-==== Usage
+=== Usage
 
 We can now use our custom endpoint. This is identical to using the API
 as detailed above, except that we use our custom entry point for either

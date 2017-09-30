@@ -2,7 +2,7 @@
 
   require_once('replacements.php');
 
-  $dirname='./content/developer-ascii';
+  $dirname='./content/developer';
 
 
   $dir = new DirectoryIterator($dirname);
@@ -27,9 +27,9 @@ echo PHP.EOL.'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
 
        	  $rest=preg_replace('/\n(.*\n)([\~]+)/', '= $1', $rest);
-     	  $rest=preg_replace('/\n(.*\n)([\-]+)/', '== $1', $rest);
-     	  $rest=preg_replace('/\n(.*\n)([\^]+)/', '=== $1', $rest);
- 	  $rest=preg_replace('/\n(.*\n)([\+]+)/', '==== $1', $rest);
+//     	  $rest=preg_replace('/\n(.*\n)([\-]+)/', '== $1', $rest);
+     	  $rest=preg_replace('/\n(.*\n)([\^]+)/', '== $1', $rest);
+ 	  $rest=preg_replace('/\n(.*\n)([\+]+)/', '=== $1', $rest);
  	  $chapter = $front.PHP_EOL.$rest;
  	  $chapter=preg_replace('/\n\n\n/', "\n\n", $chapter);
 

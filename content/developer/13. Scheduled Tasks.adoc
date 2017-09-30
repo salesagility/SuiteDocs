@@ -6,7 +6,7 @@ title: "13. Scheduled Tasks"
 
 = 13. Scheduled Tasks
 
-=== Intro
+== Intro
 
 Scheduled tasks are performed in SuiteCRM by the scheduler module. Jobs
 are placed into the queue either through the defined scheduled tasks or,
@@ -17,7 +17,7 @@ requires adding an entry either to Cron (for Linux systems) or to the
 windows scheduled tasks (for windows). Opening the scheduled tasks page
 within SuiteCRM will let you know the format for the entry.
 
-=== Scheduler
+== Scheduler
 
 Scheduled tasks allow SuiteCRM to perform recurring tasks. Examples of
 these which ship with SuiteCRM include checking for incoming mail,
@@ -113,7 +113,7 @@ default frequency is every one minute. If your task is heavy duty or
 long running this may not be what you would prefer. Here we settle for
 once a day.
 
-=== Job Queue
+== Job Queue
 
 Sometimes you will require code to perform a long running task but you
 do not need the user to wait for this to be completed. A good example of
@@ -251,7 +251,7 @@ Now whenever a user triggers the hook it will be much quicker since we
 are simply persisting a little info to the database. The scheduler will
 run this in the background.
 
-==== Retries
+=== Retries
 
 Occasionally you may have scheduled jobs which could fail
 intermittently. Perhaps you have a job which calls an external API. If
@@ -301,7 +301,7 @@ Example 13.6: Setting the retry count on a scheduled job
 See the section on link:../12.-logic-hooks#logic-hooks-chapter[logic hooks]
 for more information on how job failures can be handled.
 
-=== Debugging
+== Debugging
 
 With Scheduled tasks and jobs running in the background it can sometimes
 be difficult to determine what is going on when things go wrong. If you

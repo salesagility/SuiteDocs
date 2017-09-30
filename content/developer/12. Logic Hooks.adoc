@@ -6,18 +6,18 @@ title: "12. Logic Hooks"
 
 = 12. Logic Hooks
 
-=== Intro
+== Intro
 
 Logic hooks allow you to hook into various events in SuiteCRM to fire
 custom code. This can allow you to, for example, make a call to an
 external API, or to create a new record if certain events occur.
 
-=== Types
+== Types
 
 Logic hooks can occur in three contexts. These contexts are Application
 Hooks, Module Hooks and User Hooks. These are detailed below.
 
-=== Application Hooks
+== Application Hooks
 
 Application hooks are hooks which are fired in the application context
 (that is, they are not fired against a particular module). These hooks
@@ -35,7 +35,7 @@ after_ui_frame::
 server_round_trip::
   Fired at the end of every page request.
 
-=== User Hooks
+== User Hooks
 
 User hooks are fired for certain login/logout actions. Similar to
 Application Hooks, these hooks must be defined in the top level logic
@@ -50,7 +50,7 @@ before_logout::
 login_failed::
   Fired when a user attempts to login to SuiteCRM but the login fails.
 
-=== Module Hooks
+== Module Hooks
 
 Module Hooks are called on various record actions for a specific module.
 
@@ -90,7 +90,7 @@ process_record::
   Fired when a record is processed ready to be displayed in list views
   or dashlets.
 
-=== Job Queue Hooks
+== Job Queue Hooks
 
 Job queue hooks are fired for scheduler jobs. Similar to application
 hooks these hooks must be defined in the top level logic hook (i.e.
@@ -105,13 +105,13 @@ job_failure_retry::
   throws an exception but it will be retried. See the section on
   link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 
-=== Implementing
+== Implementing
 
 Depending on the Logic Hook type logic hooks are either placed into +
 `custom/modules/Logic_Hooks.php` or
 `custom/modules/<TargetModule>/Logic_Hooks.php`.
 
-==== Logic_Hooks.php
+=== Logic_Hooks.php
 
 The logic hook file itself specifies which logic hooks to fire on this
 event. It looks something like this:
@@ -269,7 +269,7 @@ Hook method
 The fifth, and final, argument is the method that will be called on the
 class. In this case `updateGeocodeInfo`.
 
-==== Adding your own logic hooks
+=== Adding your own logic hooks
 
 When adding logic hooks you should make full use of the Extensions
 framework (see the section on Extensions). This involves creating a file
@@ -287,7 +287,7 @@ adding a new logic hook it is necessary to perform a quick repair and
 rebuild in the admin menu for this to be picked up.
 |=======================================================================
 
-==== Logic Hook function
+=== Logic Hook function
 
 The logic hook function itself will vary slightly based on the logic
 hook type. For module hooks it will appear similar to:
@@ -344,12 +344,12 @@ The $arguments argument contains any additional details of the logic
 hook event. I.e. in the case of before_relationship_add this will
 contain details of the related modules.
 
-=== Tips
+== Tips
 
 [width="100%",cols="50%,50%",]
 |=======================================================================
 |image:images/leanpub_info-circle.png[information,width=50] a|
-==== Triggering extra logic hooks
+=== Triggering extra logic hooks
 
 If you are performing certain actions that may trigger another logic
 hook (such as saving a bean) then you need to be aware that this will
@@ -365,7 +365,7 @@ hooks.
 [width="100%",cols="50%,50%",]
 |=======================================================================
 |image:images/leanpub_info-circle.png[information,width=50] a|
-==== Think of the user
+=== Think of the user
 
 Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user

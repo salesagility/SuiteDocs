@@ -6,7 +6,7 @@ title: "14. Extension Framework"
 
 = 14. Extension Framework
 
-=== Introduction
+== Introduction
 
 The extension framework provides a means to modify various application
 data inside SuiteCRM. For example it provides a way to add or modify
@@ -22,7 +22,7 @@ consolidated it means that there is no affect on performance of checking
 a (possibly large) number of files. This is only done when performing a
 repair and rebuild in the admin menu.
 
-=== Standard Extensions
+== Standard Extensions
 
 List of standard SuiteCRM extensions
 
@@ -91,7 +91,7 @@ JavaScript groupings.
 actions.
 |=======================================================================
 
-=== Custom Extensions
+== Custom Extensions
 
 Interestingly the extension framework can be used to add new extensions.
 This allows you to create customisations that are easily customised by
@@ -124,7 +124,7 @@ into +
 file will not do anything but you are now able to write custom code that
 checks the consolidated file rather than having to worry about searching
 for customisations.
-==== 1.  [[fn-langNote]]
+=== 1.  [[fn-langNote]]
 
 The language extensions are treated specially and, as such, aren’t
 compiled to a single file.link:../14.-extension-framework#fnref-langNote[↩]

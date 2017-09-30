@@ -11,7 +11,7 @@ architecture. They allow retrieving data from the database as objects
 and allow persisting and editing records. This section will go over the
 various ways of working with beans.
 
-=== BeanFactory
+== BeanFactory
 
 The BeanFactory allows dynamically loading bean instances or creating
 new records. For example to create a new bean you can use:
@@ -65,13 +65,13 @@ of the beans will be reflected in all the results.
 Using BeanFactory ensures that the bean is correctly set up and the
 necessary files are included etc.
 
-=== SugarBean
+== SugarBean
 
 The SugarBean is the parent bean class and all beans in SuiteCRM extend
 this class. It provides various ways of retrieving and interacting with
 records.
 
-=== Searching for beans
+== Searching for beans
 
 The following examples show how to search for beans using a bean class.
 The examples provided assume that an account bean is available names
@@ -86,7 +86,7 @@ $accountBean = BeanFactory::getBean('Accounts');
 
 
 
-==== get_list
+=== get_list
 
 The get_list method allows getting a list of matching beans and allows
 paginating the results.
@@ -195,7 +195,7 @@ Example 3.7: Example get_list results
 
 
 
-==== get_full_list
+=== get_full_list
 
 `get_list` is useful when you need paginated results. However if you are
 just interested in getting a list of all matching beans you can use
@@ -240,7 +240,7 @@ Example 3.9: Example get_full_list call
 
 
 
-==== retrieve_by_string_fields
+=== retrieve_by_string_fields
 
 Sometimes you only want to retrieve one row but may not have the id of
 the record. `retrieve_by_string_fields` allows retrieving a single
@@ -296,7 +296,7 @@ Example 3.11: Example retrieve_by_string_fields call
 
 
 
-=== Accessing fields
+== Accessing fields
 
 If you have used one of the above methods we now have a bean record.
 This bean represents the record that we have retrieved. We can access
@@ -361,7 +361,7 @@ record is new (perhaps in a custom import script) then you can set
 is new.
 |=======================================================================
 
-=== Related beans
+== Related beans
 
 We have seen how to save single records but, in a CRM system,
 relationships between records are as important as the records
@@ -369,7 +369,7 @@ themselves. For example an account may have a list of cases associated
 with it, a contact will have an account that it falls under etc. We can
 get and set relationships between beans using several methods.
 
-==== get_linked_beans
+=== get_linked_beans
 
 The `get_linked_beans` method allows retrieving a list of related beans
 for a given record.
@@ -432,7 +432,7 @@ Example 3.15: Example get_linked_beans call
 
 
 
-==== relationships
+=== relationships
 
 In addition to the `get_linked_beans` call you can also load and access
 the relationships more directly.

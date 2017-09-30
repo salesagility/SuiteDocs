@@ -6,7 +6,7 @@ title: "10. Config"
 
 = 10. Config
 
-=== The config files
+== The config files
 
 There are two main config files in SuiteCRM, both of which are in the
 root SuiteCRM folder. These are `config.php` and `config_override.php`.
@@ -16,7 +16,7 @@ how many entries to show per page in the list view. Most of these
 options are accessible from the SuiteCRM administration page. However
 some are only definable in the config files.
 
-==== config.php
+=== config.php
 
 This is the main SuiteCRM config file and includes important information
 like the database settings and the current SuiteCRM version.
@@ -67,7 +67,7 @@ change `config.php`. For other changes you would either make the change
 through SuiteCRM itself or you would use the +
 `config_override.php` file.
 
-==== config_override.php
+=== config_override.php
 
 `config_override.php` allows you to make config changes without risking
 breaking the main config file. This is achieved quite simply by adding,
@@ -95,7 +95,7 @@ $sugar_config['logger']['level'] = 'debug';
 
 
 
-=== Using config options
+== Using config options
 
 We may want to access config options in custom code (or as detailed
 above if we have created our own config setting we may want to use

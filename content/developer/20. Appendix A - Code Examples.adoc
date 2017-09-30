@@ -6,7 +6,7 @@ title: "20. Appendix A - Code Examples"
 
 [[appendix-a]]= 20. Appendix A - Code Examples
 
-=== Metadata
+== Metadata
 
 This is an example of setting up a function subpanel (see the
 link:../6.-metadata#metadata-chapter[Metadata] chapter for more
@@ -64,7 +64,7 @@ Example A.2: `IncidentUtils.php`
 
 
 
-=== Module Installer
+== Module Installer
 
 The following is a basic example manifest file. See the
 link:../15.-module-installer#module-installer-chapter[Module Installer] chapter.
