@@ -1,23 +1,18 @@
+
 ---
 weight: 21
 title: "21. Appendix B - API Methods"
 ---
-[[appendix-b]]
-21. Appendix B - API Methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[[leanpub-auto-methods-1]]
-Methods
-^^^^^^^
+[[appendix-b]]= 21. Appendix B - API Methods
 
-[[leanpub-auto-login]]
-login
-+++++
+=== Methods
+
+==== login
 
 Logs into SuiteCRM and returns a session id used for subsequent API
 calls.
 
-[[leanpub-auto-arguments]]
 Arguments
 
 login arguments
@@ -44,7 +39,6 @@ the API
 new record is saved and assigned to a user
 |=======================================================================
 
-[[leanpub-auto-response]]
 Response
 
 login response
@@ -99,13 +93,10 @@ for the logged in user(simply grabs the wl_list_max_entries_per_subpanel
 config key)
 |=======================================================================
 
-[[leanpub-auto-logout]]
-logout
-++++++
+==== logout
 
 Logs the web user out of SuiteCRM and destroys the session.
 
-[[leanpub-auto-arguments-1]]
 Arguments
 
 logout arguments
@@ -116,19 +107,15 @@ logout arguments
 |session |string |The session id. See login.
 |===========================================
 
-[[leanpub-auto-response-1]]
 Response
 
 No response.
 
-[[leanpub-auto-getavailablemodules]]
-get_available_modules
-+++++++++++++++++++++
+==== get_available_modules
 
 Returns a list of the modules available for use. Also returns the ACL
 (Access Control List) for each module.
 
-[[leanpub-auto-arguments-2]]
 Arguments
 
 get_available_modules arguments
@@ -142,7 +129,6 @@ get_available_modules arguments
 or ‘all’.
 |=======================================================================
 
-[[leanpub-auto-response-2]]
 Response
 
 get_available_modules response
@@ -168,13 +154,10 @@ etc.
 |modules[][acls][][access] |bool |Whether or not access is allowed.
 |=======================================================================
 
-[[leanpub-auto-getdocumentrevision]]
-get_document_revision
-+++++++++++++++++++++
+==== get_document_revision
 
 Returns the details for a specific document revision.
 
-[[leanpub-auto-arguments-3]]
 Arguments
 
 get_document_revision arguments
@@ -186,7 +169,6 @@ get_document_revision arguments
 |i |string |The id of the document revision to retrieve
 |======================================================
 
-[[leanpub-auto-response-3]]
 Response
 
 get_document_revision response
@@ -210,14 +192,11 @@ revision.
 |document_revision[file] |binary string |The full contents of the file
 |=======================================================================
 
-[[leanpub-auto-getentries]]
-get_entries
-+++++++++++
+==== get_entries
 
 Gets a list of entries for a specific module and list of module ids.
 Optionally allows returning related records.
 
-[[leanpub-auto-arguments-4]]
 Arguments
 
 get_entries arguments
@@ -252,7 +231,6 @@ return for this related module.
 |track_view |bool |Whether to mark these records as recently viewed.
 |=======================================================================
 
-[[leanpub-auto-response-4]]
 Response
 
 get_entries response
@@ -313,13 +291,10 @@ value pair for this particular field.
 |The value of the field.
 |=======================================================================
 
-[[leanpub-auto-getentriescount]]
-get_entries_count
-+++++++++++++++++
+==== get_entries_count
 
 Returns a count of entries matching the given query.
 
-[[leanpub-auto-arguments-5]]
 Arguments
 
 get_entries_count arguments
@@ -333,7 +308,6 @@ get_entries_count arguments
 |deleted |bool |Whether to include deleted records
 |===================================================================
 
-[[leanpub-auto-response-5]]
 Response
 
 get_entries_count response
@@ -344,14 +318,11 @@ get_entries_count response
 |result_count |int |The count of matching entries.
 |=================================================
 
-[[leanpub-auto-getentry]]
-get_entry
-+++++++++
+==== get_entry
 
 Returns the details for a single record. Optionally allows returning
 related records.
 
-[[leanpub-auto-arguments-6]]
 Arguments
 
 get_entry arguments
@@ -384,17 +355,14 @@ return for this related module.
 |track_view |bool |Whether to mark these records as recently viewed.
 |=======================================================================
 
-[[leanpub-auto-response-6]]
 Response
 
 Identical to the response by `get_entries` except only one record will
 be returned.
 
-[[leanpub-auto-getentrylist]]
-`get_entry_list`
-++++++++++++++++
+==== `get_entry_list`
 
-[[leanpub-auto-arguments-7]]
+
 Arguments
 
 get_entry_list arguments
@@ -437,7 +405,6 @@ pagination.
 This is unused.
 |=======================================================================
 
-[[leanpub-auto-response-7]]
 Response
 
 get_entry_list response
@@ -504,13 +471,10 @@ value pair for this particular field.
 |The value of the field.
 |=======================================================================
 
-[[leanpub-auto-getlanguagedefinition]]
-get_language_definition
-+++++++++++++++++++++++
+==== get_language_definition
 
 Returns
 
-[[leanpub-auto-arguments-8]]
 Arguments
 
 get_language_definition arguments
@@ -528,7 +492,6 @@ get_language_definition arguments
 caching responses.
 |=======================================================================
 
-[[leanpub-auto-response-8]]
 Response
 
 get_language_definition response
@@ -540,13 +503,10 @@ get_language_definition response
 or an md5 string for <modulename />
 |=======================================================================
 
-[[leanpub-auto-getlastviewed]]
-`get_last_viewed`
-+++++++++++++++++
+==== `get_last_viewed`
 
 Returns a list of the most recently viewed modules for the current user.
 
-[[leanpub-auto-arguments-9]]
 Arguments
 
 get_last_viewed arguments
@@ -562,7 +522,6 @@ records for.
 |module_names[] |string |The modules name.
 |=======================================================================
 
-[[leanpub-auto-response-9]]
 Response
 
 get_last_viewed response
@@ -587,14 +546,11 @@ and unused.
 |result[][date_modified] |string |The date that this record was viewed.
 |=======================================================================
 
-[[leanpub-auto-getmodifiedrelationships]]
-`get_modified_relationships`
-++++++++++++++++++++++++++++
+==== `get_modified_relationships`
 
 Returns a list of the modified relationships for the current user
 between one of the Calls, Meetings or Contacts modules.
 
-[[leanpub-auto-arguments-10]]
 Arguments
 
 get_modified_relationships arguments
@@ -637,7 +593,6 @@ relationship record. An empty array will return all fields.
 deleted records. In the format `Y-m-d H:i:s`.
 |=======================================================================
 
-[[leanpub-auto-response-10]]
 Response
 
 get_modified_relationships response
@@ -677,13 +632,10 @@ information.
 |error[description] |string |A description of the error that occurred.
 |=======================================================================
 
-[[leanpub-auto-getmodulefields]]
-`get_module_fields`
-+++++++++++++++++++
+==== `get_module_fields`
 
 Returns the field definitions for a given module.
 
-[[leanpub-auto-arguments-11]]
 Arguments
 
 get_module_fields arguments
@@ -702,7 +654,6 @@ array will return all fields.
 |fields[] |string |The name of the field.
 |=======================================================================
 
-[[leanpub-auto-response-11]]
 Response
 
 get_module_fields response
@@ -773,13 +724,10 @@ for this link if appropriate.
 |link_fields[bean_name] |string |The bean that this field links to.
 |=======================================================================
 
-[[leanpub-auto-getmodulefieldsmd5]]
-`get_module_fields_md5`
-+++++++++++++++++++++++
+==== `get_module_fields_md5`
 
 Returns an md5 of the a modules field definitions. Useful for caching.
 
-[[leanpub-auto-arguments-12]]
 Arguments
 
 get_module_fields_md5 arguments
@@ -795,7 +743,6 @@ get_module_fields_md5 arguments
 definitions md5 for.
 |=======================================================================
 
-[[leanpub-auto-response-12]]
 Response
 
 get_module_fields_md5 response
@@ -809,14 +756,11 @@ get_module_fields_md5 response
 <modulename />
 |=======================================================================
 
-[[leanpub-auto-getmodulelayout]]
-`get_module_layout`
-+++++++++++++++++++
+==== `get_module_layout`
 
 Returns the layout for specified modules and views. Optionally returns
 an md5 of the layouts.
 
-[[leanpub-auto-arguments-13]]
 Arguments
 
 get_module_layout arguments
@@ -847,7 +791,6 @@ access to this module and view.
 for caching.
 |=======================================================================
 
-[[leanpub-auto-response-13]]
 Response
 
 get_module_layout response
@@ -869,15 +812,12 @@ layouts keyed by the view name.
 the layout format.</modulename></viewname>
 |=======================================================================
 
-[[leanpub-auto-getmodulelayoutmd5]]
-`get_module_layout_md5`
-+++++++++++++++++++++++
+==== `get_module_layout_md5`
 
 Returns the md5 of the specified views for the specified modules.
 Behaves identically to get_module_layout with the md5 parameter set to
 true.
 
-[[leanpub-auto-arguments-14]]
 Arguments
 
 get_module_layout arguments
@@ -905,7 +845,6 @@ is supported.
 access to this module and view.
 |=======================================================================
 
-[[leanpub-auto-response-14]]
 Response
 
 get_module_layout_md5 response
@@ -926,9 +865,7 @@ keyed by the view name.
 <modulename>.</modulename></viewname>
 |=======================================================================
 
-[[leanpub-auto-getrelationships]]
-`get_relationships`
-+++++++++++++++++++
+==== `get_relationships`
 
 Returns related records given a specific module, record and list of
 links. ####Arguments
@@ -978,24 +915,19 @@ name. | 
 |limit |int |The maximum number of results to return. | 
 |=======================================================================
 
-[[leanpub-auto-response-15]]
 Response
 
 Identical to the response by `get_entries`.
 
-[[leanpub-auto-getserverinfo]]
-`get_server_info`
-+++++++++++++++++
+==== `get_server_info`
 
 Returns information about the SuiteCRM server. Currently still returns
 information about the SugarCRM flavor and versions.
 
-[[leanpub-auto-arguments-15]]
 Arguments
 
 No arguments.
 
-[[leanpub-auto-response-16]]
 Response
 
 get_server_info response
@@ -1011,14 +943,11 @@ the SuiteCRM version
 |gmt_time |string |The server time in UTC.
 |=======================================================================
 
-[[leanpub-auto-getupcomingactivities]]
-`get_upcoming_activities`
-+++++++++++++++++++++++++
+==== `get_upcoming_activities`
 
-Returns a list of the 10 upcoming activities (Meetings, Calls and Tasks
-- also includes Opportunities) for the currently logged in user.
+== Returns a list of the 10 upcoming activities (Meetings, Calls and Tasks
+ also includes Opportunities) for the currently logged in user.
 
-[[leanpub-auto-arguments-16]]
 Arguments
 
 get_upcoming_activities arguments
@@ -1029,7 +958,6 @@ get_upcoming_activities arguments
 |session |string |The session id. See login.
 |===========================================
 
-[[leanpub-auto-response-17]]
 Response
 
 get_upcoming_activities response
@@ -1051,13 +979,10 @@ get_upcoming_activities response
 it’s name.
 |=======================================================================
 
-[[leanpub-auto-getuserid]]
-`get_user_id`
-+++++++++++++
+==== `get_user_id`
 
 Returns the id of the currently logged in user.
 
-[[leanpub-auto-arguments-17]]
 Arguments
 
 get_user_id arguments
@@ -1068,7 +993,6 @@ get_user_id arguments
 |session |string |The session id. See login.
 |===========================================
 
-[[leanpub-auto-response-18]]
 Response
 
 get_user_id response
@@ -1079,9 +1003,7 @@ get_user_id response
 |id |string |The id of the current user.
 |=======================================
 
-[[leanpub-auto-seamlesslogin]]
-`seamless_login`
-++++++++++++++++
+==== `seamless_login`
 
 Marks a session as allowing a seamless login. If successful then the
 session id (see the login call) can be used in a URL (as MSID) to log
@@ -1090,7 +1012,6 @@ have the session id `1234` then accessing the URL
 `example.com/index.php?MSID=1234`. The MSID parameter can be used in any
 valid SuiteCRM URL.
 
-[[leanpub-auto-arguments-18]]
 Arguments
 
 seamless_login arguments
@@ -1101,7 +1022,6 @@ seamless_login arguments
 |session |string |The session id. See login.
 |===========================================
 
-[[leanpub-auto-response-19]]
 Response
 
 seamless_login response
@@ -1112,13 +1032,10 @@ seamless_login response
 |result |bool |Boolean indicating success
 |========================================
 
-[[leanpub-auto-searchbymodule]]
-`search_by_module`
-++++++++++++++++++
+==== `search_by_module`
 
 Allows searching for records that contain a specific search string.
 
-[[leanpub-auto-arguments-19]]
 Arguments
 
 search_by_module arguments
@@ -1154,7 +1071,6 @@ that participate in the global search.
 This is unused.
 |=======================================================================
 
-[[leanpub-auto-response-20]]
 Response
 
 search_by_module response
@@ -1181,13 +1097,10 @@ of this record.
 name of this record.
 |=======================================================================
 
-[[leanpub-auto-setdocumentrevision]]
-`set_document_revision`
-+++++++++++++++++++++++
+==== `set_document_revision`
 
 Creates a new document revision for a document.
 
-[[leanpub-auto-arguments-20]]
 Arguments
 
 set_document_revision arguments
@@ -1209,7 +1122,6 @@ encoded.
 |note[revision] |int |The revision number for this revision.
 |=======================================================================
 
-[[leanpub-auto-response-21]]
 Response
 
 set_document_revision response
@@ -1220,13 +1132,10 @@ set_document_revision response
 |id |string |The id of the newly created document revision.
 |==========================================================
 
-[[leanpub-auto-setentries]]
-`set_entries`
-+++++++++++++
+==== `set_entries`
 
 Creates or updates a list of records.
 
-[[leanpub-auto-arguments-21]]
 Arguments
 
 Note: Supplying a value for the id field will perform an update for that
@@ -1254,7 +1163,6 @@ record to create/update.
 |name_value_lists[][][value] |array |The value for the field.
 |=======================================================================
 
-[[leanpub-auto-response-22]]
 Response
 
 set_entries response
@@ -1268,13 +1176,10 @@ as specified in the call to `set_entries`.
 |ids[] |array |The id for this record.
 |=======================================================================
 
-[[leanpub-auto-setentry]]
-`set_entry`
-+++++++++++
+==== `set_entry`
 
 Creates or updates a single record.
 
-[[leanpub-auto-arguments-22]]
 Arguments
 
 Note: Supplying a value for the id field will perform an update for that
@@ -1300,7 +1205,6 @@ new/updated record.
 |name_value_lists[][value] |array |The value for the field.
 |=======================================================================
 
-[[leanpub-auto-response-23]]
 Response
 
 set_entries response
@@ -1311,13 +1215,10 @@ set_entries response
 |id |string |The id of the newly created or updated record.
 |==========================================================
 
-[[leanpub-auto-getnoteattachment]]
-`get_note_attachment`
-+++++++++++++++++++++
+==== `get_note_attachment`
 
 Returns the details of a given note attachment.
 
-[[leanpub-auto-arguments-23]]
 Arguments
 
 get_note_attachment arguments
@@ -1329,7 +1230,6 @@ get_note_attachment arguments
 |id |string |The id of the note to retrieve information for.
 |===========================================================
 
-[[leanpub-auto-response-24]]
 Response
 
 get_note_attachment response
@@ -1353,13 +1253,10 @@ this attachment is related to.
 that this attachment is related to.
 |=======================================================================
 
-[[leanpub-auto-setnoteattachment]]
-`set_note_attachment`
-+++++++++++++++++++++
+==== `set_note_attachment`
 
 Creates a not attachment for a specified record.
 
-[[leanpub-auto-arguments-24]]
 Arguments
 
 set_note_attachment arguments
@@ -1379,7 +1276,6 @@ set_note_attachment arguments
 encoded.
 |=======================================================================
 
-[[leanpub-auto-response-25]]
 Response
 
 set_entries response
@@ -1390,13 +1286,10 @@ set_entries response
 |id |string |The id of the note for this attachment.
 |===================================================
 
-[[leanpub-auto-setrelationship]]
-`set_relationship`
-++++++++++++++++++
+==== `set_relationship`
 
 Sets a relationship between a record and other records.
 
-[[leanpub-auto-arguments-25]]
 Arguments
 
 set_relationship arguments
@@ -1431,7 +1324,6 @@ set.
 instead of creating/updating it.
 |=======================================================================
 
-[[leanpub-auto-response-26]]
 Response
 
 set_relationship response
@@ -1447,13 +1339,10 @@ created/deleted.
 |deleted |int |The number of relationships deleted.
 |=======================================================================
 
-[[leanpub-auto-setrelationships]]
-`set_relationships`
-+++++++++++++++++++
+==== `set_relationships`
 
 Sets relationships between multiple records.
 
-[[leanpub-auto-arguments-26]]
 Arguments
 
 set_relationships arguments
@@ -1503,7 +1392,6 @@ relationship should be deleted for each module. | 
 relationship instead of creating/updating it. | 
 |=======================================================================
 
-[[leanpub-auto-response-27]]
 Response
 
 set_relationships response

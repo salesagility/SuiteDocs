@@ -1,10 +1,10 @@
+
 ---
 weight: 15
 title: "15. Module Installer"
 ---
-[[module-installer-chapter]]
-15. Module Installer
-~~~~~~~~~~~~~~~~~~~~
+
+= 15. Module Installer
 
 As detailed in the other chapters of this book there are many ways to
 customise SuiteCRM. The module installer allows you to package these
@@ -16,9 +16,7 @@ file in it’s root. The manifest file is responsible for providing
 information about the installer as well as providing information on how
 to install the package.
 
-[[leanpub-auto-manifestphp]]
-manifest.php
-^^^^^^^^^^^^
+=== manifest.php
 
 The `manifest.php` file contains the definition of three arrays. Let’s
 look at each of these arrays in turn. See
@@ -33,9 +31,7 @@ directory of the installer. For example `<basepath>/Foo.txt` will refer
 to the `Foo.txt` file in the root of the installer package.
 |=======================================================================
 
-[[leanpub-auto-manifest]]
-`$manifest`
-+++++++++++
+==== `$manifest`
 
 The `$manifest` array provides information on the package itself such as
 it’s name, readme etc. (it also defines the `copy` array for `patch`
@@ -44,9 +40,8 @@ something like this:
 
 Example 15.1: Example `$manifest` array definition
 
-'''''
 
-....
+[source,php]
  1 $manifest = array(
  2   'name' => 'My First Package',
  3   'description' => 'This is a simple package example manifest file',
@@ -70,9 +65,8 @@ Example 15.1: Example `$manifest` array definition
 21     ),
 22   ),
 23 );
-....
 
-'''''
+
 
 `name`::
   The name of the package. This is how the package will appear to the
@@ -130,20 +124,16 @@ Example 15.1: Example `$manifest` array definition
   The type of the installer, one of `langpack`, `module`, `patch` or
   `theme`. See the types section.
 
-[[leanpub-auto-installdefs]]
-`$install_defs`
-+++++++++++++++
+==== `$install_defs`
 
 Provides information on how the package is to be installed, which files
 go where and any additional information such as logic hooks, custom
 fields etc.
 
-[[leanpub-auto-id]]
 `id`
 
 A unique identifier for the module.
 
-[[leanpub-auto-connectors]]
 `connectors`
 
 An array of connectors to be installed. Each entry is an array with the
@@ -157,7 +147,6 @@ following keys:
 |`formatter` |The directory to copy the connector formatter files from.
 |======================================================================
 
-[[leanpub-auto-copy]]
 `copy`
 
 An array of files and directories to be copied on install. Each entry is
@@ -178,7 +167,6 @@ be used. For example new admin entries should be copied using the
 `administration` key rather than using the `copy` key.
 |=======================================================================
 
-[[leanpub-auto-dashlets]]
 `dashlets`
 
 An array of dashlets to be installed. Each entry is an array with the
@@ -193,7 +181,6 @@ following keys:
 will be copied.
 |=======================================================================
 
-[[leanpub-auto-language]]
 `language`
 
 An array of language files to be installed. Each entry is an array with
@@ -213,7 +200,6 @@ the following keys:
 See the chapter on link:../9.-language-strings#language-chapter[Language Strings]
 for more information.
 
-[[leanpub-auto-layoutdefs]]
 `layoutdefs`
 
 An array of layoutdef files which are used to add, remove or edit
@@ -226,7 +212,6 @@ subpanels. Each entry is an array with the following keys:
 |`to_module` |The module that this file will be installed to.
 |============================================================
 
-[[leanpub-auto-vardefs]]
 `vardefs`
 
 An array of the vardefs to be added to specific modules. Each entry is
@@ -247,7 +232,6 @@ this key can be used to alter existing fields or add more complex
 fields.
 |=======================================================================
 
-[[leanpub-auto-menu]]
 `menu`
 
 An array of menus to be installed. Each entry is an array with the
@@ -260,7 +244,6 @@ following keys:
 |`to_module` |The destination module for this menu.
 |=====================================================
 
-[[leanpub-auto-beans]]
 `beans`
 
 An array of beans to be installed. Each entry is an array with the
@@ -275,7 +258,6 @@ following keys:
 |`tab` |Whether or not a tab should be added for this module.
 |============================================================
 
-[[leanpub-auto-relationships-2]]
 `relationships`
 
 An array detailing any new relationships added (in particular
@@ -289,7 +271,6 @@ array with the following keys:
 |`meta_data` |The location of the metadata file for this relationship.
 |=====================================================================
 
-[[leanpub-auto-customfields]]
 `custom_fields`
 
 An array of new custom fields to be installed (See the
@@ -334,7 +315,6 @@ value differently. For HTML field types this will store the HTML.
 added.
 |=======================================================================
 
-[[leanpub-auto-logichooks]]
 `logic_hooks`
 
 An array of logic hooks to be installed. See the
@@ -362,12 +342,10 @@ called by this hook.
 |`function` |The function to be invoked when this hook is triggered.
 |=======================================================================
 
-[[leanpub-auto-imagedir]]
 `image_dir`
 
 A path to a directory of images to be included in the install.
 
-[[leanpub-auto-schedulers]]
 `schedulers`
 
 An array of schedulers to be installed. Each entry is an array with a
@@ -379,7 +357,6 @@ single key:
 |`from` |The file containing the new scheduled task.
 |===================================================
 
-[[leanpub-auto-administration]]
 `administration`
 
 An array of admin panels to be installed. Each entry is an array with a
@@ -391,44 +368,36 @@ single key:
 |`from` |The file containing the new admin panel definition.
 |===========================================================
 
-[[leanpub-auto-preexecute]]
 `pre_execute`
 
 Defines an array of files to be executed before the package is
 installed. Each entry is a path to a file within the package. Any output
 will be displayed to the user in the install log.
 
-[[leanpub-auto-postexecute]]
 `post_execute`
 
 Defines an array of files to be executed after the package is installed.
 Each entry is a path to a file within the package. Any output will be
 displayed to the user in the install log.
 
-[[leanpub-auto-preuninstall]]
 `pre_uninstall`
 
 Defines an array of files to be executed before the package is
 uninstalled. Each entry is a path to a file within the package. Any
 output will be displayed to the user in the uninstall log.
 
-[[leanpub-auto-postuninstall]]
 `post_uninstall`
 
 Defines an array of files to be executed after the package is
 uninstalled. Each entry is a path to a file within the package. Any
 output will be displayed to the user in the uninstall log.
 
-[[leanpub-auto-upgrademanifest]]
-`$upgrade_manifest`
-+++++++++++++++++++
+==== `$upgrade_manifest`
 
 Provides a means of upgrading an already installed package by providing
 different `install_defs`.
 
-[[leanpub-auto-types-1]]
-Types
-^^^^^
+=== Types
 
 [cols=",",options="header",]
 |=======================================================================
@@ -444,9 +413,7 @@ functionality.
 |theme |A theme installer. This will add a new option to the themes.
 |=======================================================================
 
-[[leanpub-auto-other-files]]
-Other files
-+++++++++++
+==== Other files
 
 `README.txt`::
   Contains the readme for this package. If `README.txt` and a readme

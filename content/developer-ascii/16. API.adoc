@@ -1,17 +1,15 @@
+
 ---
 weight: 16
 title: "16. API"
 ---
-[[leanpub-auto-api]]
-16. API
-~~~~~~~
+
+= 16. API
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
 data and functionality.
 
-[[leanpub-auto-using-the-api]]
-Using the API
-^^^^^^^^^^^^^
+=== Using the API
 
 SuiteCRM has both a REST and a SOAP API. Which API you want to use will
 largely come down to personal preference and the support for SOAP/REST
@@ -20,36 +18,30 @@ libraries in whichever language you will be using.
 Both APIs will require a username and password. It is usual to create a
 user specifically for the API.
 
-[[leanpub-auto-soap]]
-SOAP
-++++
+==== SOAP
 
 The WSDL for the SOAP API can be found at:
 
 Example 16.1: SOAP API WSDL Location
 
-'''''
 
-....
+[source,php]
 example.com/suitecrm/service/v4_1/soap.php?wsdl
-....
 
-'''''
+
 
 Where `example.com/suitecrm` is the address of your SuiteCRM instance.
 `v4_1` is the version of the API and can be changed, `v4_1` is the
 latest version at the time of writing.
 
-[[leanpub-auto-soap-example]]
 SOAP Example
 
 The following PHP example uses the built in SoapClient class.
 
 Example 16.2: Accessing the SOAP API
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 //Create a new SoapClient
  3 $wsdlURL = "http://example.com/suitecrm/service/v4_1/soap.php?wsdl";
@@ -96,25 +88,20 @@ Example 16.2: Accessing the SOAP API
 44         0
 45 );
 46 print_r($results);
-....
 
-'''''
 
-[[leanpub-auto-rest]]
-REST
-++++
+
+==== REST
 
 The SuiteCRM REST API can be found at:
 
 Example 16.3: REST API Endpoint Location
 
-'''''
 
-....
+[source,php]
 example.com/suitecrm/service/v4_1/rest.php
-....
 
-'''''
+
 
 Where example.com/suitecrm is the address of your SuiteCRM instance.
 v4_1 is the version of the API and can be changed, v4_1 is the latest
@@ -145,14 +132,12 @@ requests it is the order of the arguments that matter in `rest_data` and
 not the name.
 |=======================================================================
 
-[[leanpub-auto-examples]]
 Examples
 
 Example 16.4: Accessing the REST API
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 
  3 $url = "http://example.com/suitecrm/service/v4_1/rest.php";
@@ -223,16 +208,13 @@ Example 16.4: Accessing the REST API
 68 $result = restRequest('get_entry_list',$entryArgs);
 69 
 70 print_r($result);
-....
 
-'''''
+
 
 For a full list of API methods and their arguments see
 link:../21.-appendix-b---api-methods#appendix-b[Appendix B].
 
-[[leanpub-auto-adding-custom-api-methods]]
-Adding custom API methods
-^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Adding custom API methods
 
 Sometimes the existing API methods are not sufficient or using them for
 a task would be overly complex. SuiteCRM allows the web services to be
@@ -250,9 +232,8 @@ SuiteCRM log We will call this method +
 
 Example 16.5: Custom v4_1 Web Service Implementation
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 if(!defined('sugarEntry')){
  3   define('sugarEntry', true);
@@ -281,17 +262,15 @@ Example 16.5: Custom v4_1 Web Service Implementation
 26     return true;
 27   }
 28 }
-....
 
-'''''
+
 
 Next we create the registry file which will register our new method.
 
 Example 16.6: Custom v4_1 web service registry
 
-'''''
 
-....
+[source,php]
  1 <?php
  2     require_once 'service/v4_1/registry.php';
  3     class registry_v4_1_custom extends registry_v4_1
@@ -308,9 +287,8 @@ Example 16.6: Custom v4_1 web service registry
 14                                                   );
 15         }
 16     }
-....
 
-'''''
+
 
 Finally we create the entry point. This is the actual file that will be
 called by our API clients. This will reference the two files which we
@@ -318,9 +296,8 @@ have created and will call the webservice implementation with our files.
 
 Example 16.7: Custom v4_1 REST Entry point
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 chdir('../../..');
  3 
@@ -334,15 +311,13 @@ Example 16.7: Custom v4_1 REST Entry point
 11 $location = 'custom/service/v4_1_custom/rest.php';
 12 
 13 require_once 'service/core/webservice.php';
-....
 
-'''''
+
 
 Example 16.8: Custom v4_1 SOAP Entry point
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 chdir('../../..');
  3 require_once('SugarWebServiceImplv4_1_custom.php');
@@ -353,13 +328,10 @@ Example 16.8: Custom v4_1 SOAP Entry point
  8 $registry_path = 'custom/service/v4_1_custom/registry.php';
  9 $location = 'custom/service/v4_1_custom/soap.php';
 10 require_once('service/core/webservice.php');
-....
 
-'''''
 
-[[leanpub-auto-usage-1]]
-Usage
-+++++
+
+==== Usage
 
 We can now use our custom endpoint. This is identical to using the API
 as detailed above, except that we use our custom entry point for either
@@ -369,13 +341,11 @@ would use the following
 
 Example 16.9: Custom v4_1 URLS
 
-'''''
 
-....
+[source,php]
 1 //SOAP WSDL
 2 example.com/suitecrm/custom/service/v4_1_custom/soap.php?wsdl
 3 //REST URL
 4 example.com/suitecrm/custom/service/v4_1_custom/rest.php
-....
 
-'''''
+

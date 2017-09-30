@@ -1,14 +1,12 @@
+
 ---
 weight: 20
 title: "20. Appendix A - Code Examples"
 ---
-[[appendix-a]]
-20. Appendix A - Code Examples
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[[leanpub-auto-metadata]]
-Metadata
-^^^^^^^^
+[[appendix-a]]= 20. Appendix A - Code Examples
+
+=== Metadata
 
 This is an example of setting up a function subpanel (see the
 link:../6.-metadata#metadata-chapter[Metadata] chapter for more
@@ -24,9 +22,8 @@ the following file in
 
 Example A.1: `IncidentLayoutdefs.php`
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 $layout_defs["Cases"]["subpanel_setup"]['incident_cases'] = array(
  3   'module' => 'Cases',
@@ -37,18 +34,16 @@ Example A.1: `IncidentLayoutdefs.php`
  8           array('import_function_file' => 'custom/modules/Cases/IncidentUtils.ph\
  9 p',),
 10 );
-....
 
-'''''
+
 
 Next we create the file which will define our `get_cases_by_incident`
 function `custom/modules/Cases/IncidentUtils.php`.
 
 Example A.2: `IncidentUtils.php`
 
-'''''
 
-....
+[source,php]
  1 <?php
  2 function get_cases_by_incident(){
  3         global $db;
@@ -66,22 +61,18 @@ Example A.2: `IncidentUtils.php`
 15 '{$incidentCode}' AND cases.id != '{$bean->id}'";
 16         return $ret;
 17 }
-....
 
-'''''
 
-[[leanpub-auto-module-installer]]
-Module Installer
-^^^^^^^^^^^^^^^^
+
+=== Module Installer
 
 The following is a basic example manifest file. See the
 link:../15.-module-installer#module-installer-chapter[Module Installer] chapter.
 
 Example A.3: Example manifest file
 
-'''''
 
-....
+[source,php]
   1 $manifest = array(
   2   'name' => 'Example manifest',
   3   'description' => 'A basic manifest example',
@@ -182,6 +173,5 @@ Example A.3: Example manifest file
  98 );
  99 $upgrade_manifest = array(
 100 );
-....
 
-'''''
+

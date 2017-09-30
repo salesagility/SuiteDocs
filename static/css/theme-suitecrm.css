@@ -2,7 +2,7 @@
 :root{
 
     --MAIN-TEXT-color:#333; /* Color of text by default */
-    --MAIN-TITLES-TEXT-color: #666; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-TITLES-TEXT-color: #9B1B3A; /* Color of titles h2-h3-h4-h5 */
     --MAIN-LINK-color:#4c90fe; /* Color of links */
     --MAIN-LINK-HOVER-color:#B41C4F; /* Color of hovered links */
     --MAIN-ANCHOR-color: #4c90fe; /* color of anchors on titles */
@@ -17,7 +17,7 @@
     --MENU-SECTIONS-ACTIVE-BG-color:#fff; /* Background color of the active section and its childs */
     --MENU-SECTIONS-BG-color:#f6f6f6; /* Background color of other sections */
     --MENU-SECTIONS-LINK-color: #666; /* Color of links in menu */
-    --MENU-SECTIONS-LINK-HOVER-color: #C93265;  /* Color of links in menu, when hovered */
+    --MENU-SECTIONS-LINK-HOVER-color: #9B1B3A;  /* Color of links in menu, when hovered */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
     --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
 
@@ -37,6 +37,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 
 h2, h3, h4, h5 {
     color: var(--MAIN-TITLES-TEXT-color) !important;
+    font-family: 'Merriweather', serif;
 }
 
 a {

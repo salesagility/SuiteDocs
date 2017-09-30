@@ -1,21 +1,17 @@
+
 ---
 weight: 17
 title: "17. Best Practices"
 ---
-[[leanpub-auto-best-practices]]
-17. Best Practices
-~~~~~~~~~~~~~~~~~~
 
-[[leanpub-auto-development-instances]]
-Development instances
-^^^^^^^^^^^^^^^^^^^^^
+= 17. Best Practices
+
+=== Development instances
 
 When making changes you should always use a development or test instance
 first. This allows you to fully and safely test any changes.
 
-[[leanpub-auto-version-control]]
-Version control
-^^^^^^^^^^^^^^^
+=== Version control
 
 When developing customisations it is prudent to use some form of version
 control. Version control allows tracking changes to your codebase in
@@ -29,9 +25,7 @@ to tag releases. This provides a way of pushing changes to live or test
 instances safely. Crucially it also means that, should there be major
 problems with a version then this can be easily rolled back.
 
-[[leanpub-auto-backup]]
-Backup
-^^^^^^
+=== Backup
 
 SuiteCRM has been developed to be customisable. However, mistakes, bugs
 and other unpleasantness can (and thanks to Murphy’s law, will) happen.
@@ -44,13 +38,11 @@ performed using the following:
 
 Example 17.1: File backup
 
-'''''
 
-....
+[source,php]
 tar -czvf suitecrmfilebackup.tar.gz /path/to/suitecrm
-....
 
-'''''
+
 
 Backing up the SuiteCRM database will vary depending on which database
 you are using. However MySQL backups can be performed using the
@@ -58,17 +50,13 @@ you are using. However MySQL backups can be performed using the
 
 Example 17.2: MySQL Database backup
 
-'''''
 
-....
+[source,php]
 mysqldump suitecrmdatabase -u databaseuser -p | gzip -c | cat > suitecrm.sql.gz
-....
 
-'''''
 
-[[leanpub-auto-be-upgrade-safe]]
-Be upgrade safe
-^^^^^^^^^^^^^^^
+
+=== Be upgrade safe
 
 Unless you are making changes to a custom module you should strive in
 all cases to use the custom framework and make changes in the custom
@@ -81,9 +69,7 @@ updated SuiteCRM files. See the
 link:../14.-extension-framework#extensions-chapter[Extensions] chapter for more
 information.
 
-[[leanpub-auto-use-appropriate-log-levels]]
-Use appropriate log levels
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Use appropriate log levels
 
 Using appropriate log levels (See the chapter on
 link:../11.-logging#logging-chapter[Logging]) makes it easier to track
@@ -91,17 +77,13 @@ down issues. You do not want very important messages to be logged as
 `debug` since this will make them difficult to find. Likewise you don’t
 want unimportant log messages cluttering up the `fatal` log output.
 
-[[leanpub-auto-long-running-logic-hooks]]
-Long running logic hooks
-^^^^^^^^^^^^^^^^^^^^^^^^
+=== Long running logic hooks
 
 If a logic hook task is long running then you should place it into the
 job queue (see the link:../12.-logic-hooks#logic-hooks-chapter[Logic Hook] and
 link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks] chapters).
 
-[[leanpub-auto-minimise-sql]]
-Minimise SQL
-^^^^^^^^^^^^
+=== Minimise SQL
 
 Where possible you should strive to use the SuiteCRM supplied methods of
 accessing data. This includes using beans and the BeanFactory where
@@ -125,9 +107,7 @@ Finally any custom logic (such as Logic Hooks) which would usually be
 fired for saving beans or relationships will not be fired for SQL
 queries.
 
-[[leanpub-auto-sql-use]]
-SQL Use
-^^^^^^^
+=== SQL Use
 
 In some cases using raw SQL is unavoidable. If that is the case then you
 should strive to use standard compliant SQL. If database engine specific
@@ -136,9 +116,8 @@ you can check for the DB type. For example:
 
 Example 17.1: Checking for the database engine
 
-'''''
 
-....
+[source,php]
  1 function getSomeSQLQuery(){
  2     global $sugar_config;
  3     switch($sugar_config['dbconfig']['db_type']){
@@ -152,34 +131,27 @@ Example 17.1: Checking for the database engine
 11     }
 12     return $sql;
 13 }
-....
 
-'''''
 
-[[leanpub-auto-entry-check]]
-Entry check
-^^^^^^^^^^^
+
+=== Entry check
 
 The majority of SuiteCRM files will start with some variation of the
 following line:
 
 Example 17.2: Entry check
 
-'''''
 
-....
+[source,php]
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-....
 
-'''''
+
 
 This prevents direct access to the file by ensuring that SuiteCRM has
 been loaded through a valid entry point (i.e. it has been loaded through
 index.php, cron.php or a custom entry point).
 
-[[leanpub-auto-redirect-after-post]]
-Redirect after post
-^^^^^^^^^^^^^^^^^^^
+=== Redirect after post
 
 Sometimes you may have custom controller actions (see the controller
 section) or custom entry points (see the
@@ -193,10 +165,8 @@ redirect. This simply accepts a URL. As follows:
 
 Example 17.3: Redirecting within SuiteCRM
 
-'''''
 
-....
+[source,php]
 SugarApplication::redirect('index.php?module=<TheModule>');
-....
 
-'''''
+

@@ -1,10 +1,10 @@
+
 ---
 weight: 9
 title: "9. Language Strings"
 ---
-[[language-chapter]]
-9. Language Strings
-~~~~~~~~~~~~~~~~~~~
+
+= 9. Language Strings
 
 Language strings provide an element of internationalisation to SuiteCRM.
 It allows specifying different strings to be used in different languages
@@ -25,9 +25,8 @@ some examples of different language file names:
 
 Example 9.1: Example language file names
 
-'''''
 
-....
+[source,php]
 # Core Accounts language file for en_us (United States English)
 modules/Accounts/language/en_us.lang.php
 
@@ -36,9 +35,8 @@ modules/Cases/language/es_es.lang.php
 
 # Custom language file for de_de (German)
 custom/Extension/application/Ext/Language/de_de.SomeCustomPackage.php
-....
 
-'''''
+
 
 SuiteCRM will choose the language prefix to be used based on the
 language the user selected when logging in or the default language if
@@ -50,30 +48,22 @@ don’t have definitions in the current language. In essence the language
 “falls back” to the default language and `en_us` if there are missing
 keys.
 
-[[leanpub-auto-module-strings]]
-Module Strings
-^^^^^^^^^^^^^^
+=== Module Strings
 
-[[leanpub-auto-use]]
-Use
-+++
+==== Use
 
 Module strings are strings associated with a particular module. These
 are usually, for example, field labels and panel name labels, but they
 may be used for anything that is specific to a single module.
 
-[[leanpub-auto-definition-location]]
-Definition location
-+++++++++++++++++++
+==== Definition location
 
 Module strings are defined in the `$mod_strings` array. This is
 initially defined in +
 `modules/<TheModule>/language/<LanguageTag>.lang.php`, for example +
 `modules/Accounts/language/en_us.lang.php`.
 
-[[leanpub-auto-customisation-location]]
-Customisation location
-++++++++++++++++++++++
+==== Customisation location
 
 Customisations can be made to the module strings by adding a new file
 in +
@@ -84,30 +74,22 @@ example is
 See the Extensions section for more information on the Extensions
 folder.
 
-[[leanpub-auto-application-strings]]
-Application Strings
-^^^^^^^^^^^^^^^^^^^
+=== Application Strings
 
-[[leanpub-auto-use-1]]
-Use
-+++
+==== Use
 
 Application strings are used for language strings and labels that are
 not specific to a single module. Examples of these may include labels
 that will appear in the headers or footers, labels that appear on search
 buttons throughout SuiteCRM or labels for pagination controls.
 
-[[leanpub-auto-definition-location-1]]
-Definition location
-+++++++++++++++++++
+==== Definition location
 
 The application strings are defined in the `$app_strings` array. This is
 initially defined in +
 `include/language/<LanguageTag>.lang.php`.
 
-[[leanpub-auto-customisation-location-1]]
-Customisation location
-++++++++++++++++++++++
+==== Customisation location
 
 Customisations can be made to the application strings in two ways.
 Firstly you can edit the file +
@@ -119,30 +101,22 @@ For example +
 `<Name>` should be used to give the file a descriptive name. See the
 Extensions section for more information on the Extensions folder.
 
-[[leanpub-auto-application-list-strings]]
-Application List Strings
-^^^^^^^^^^^^^^^^^^^^^^^^
+=== Application List Strings
 
-[[leanpub-auto-use-2]]
-Use
-+++
+==== Use
 
 Application list strings are used to store the various dropdowns and
 lists used in SuiteCRM. Most of these are used as options for the
 various enum fields in SuiteCRM e.g the account type or the opportunity
 sales stage.
 
-[[leanpub-auto-definition-location-2]]
-Definition location
-+++++++++++++++++++
+==== Definition location
 
 The application list strings are defined in the `$app_list_strings`
 array. Similar to the `$app_strings` array this is initially defined in
 `include/language/en_us.lang.php`.
 
-[[leanpub-auto-customisation-location-2]]
-Customisation location
-++++++++++++++++++++++
+==== Customisation location
 
 Customisations can be made to the application list strings in two ways.
 Firstly you can edit the file +
@@ -155,9 +129,7 @@ example +
 See the Extensions section for more information on the Extensions
 folder.
 
-[[leanpub-auto-why-and-when-to-customise]]
-Why and when to customise
-^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Why and when to customise
 
 Generally language strings should be changed from within SuiteCRM using
 the studio tool. However there are times when it can be simpler to add
@@ -167,18 +139,14 @@ can be simpler to create a new file to add these values. Similarly if
 you are adding entirely new functionality, it is usually best to simply
 add these language strings as new values.
 
-[[leanpub-auto-usage]]
-Usage
-^^^^^
+=== Usage
 
 Language strings are used automatically throughout SuiteCRM. For example
 in metadata you can specify the language strings to display for fields.
 However in some cases you will want to access and use the language
 strings in custom code. There are several ways to do this.
 
-[[leanpub-auto-globals]]
-Globals
-+++++++
+==== Globals
 
 The `$mod_strings`, `$app_strings` and `$app_list_strings` variables are
 all global and can be accessed as such. `$app_strings` and
@@ -188,9 +156,8 @@ section for other ways of accessing `$mod_strings`).
 
 Example 9.2: Accessing language strings globally
 
-'''''
 
-....
+[source,php]
  1 function someFunction(){
  2     global $mod_strings, $app_strings, $app_list_strings;
  3     /*
@@ -213,13 +180,10 @@ Example 9.2: Accessing language strings globally
 20     $GLOBALS['log']->debug("The app label is $appLabel");
 21     $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
 22 }
-....
 
-'''''
 
-[[leanpub-auto-translate]]
-Translate
-+++++++++
+
+==== Translate
 
 As an alternative to using globals or, if you are in a different module
 than the language string you wish to retrieve you can use the
@@ -227,16 +191,14 @@ than the language string you wish to retrieve you can use the
 
 Example 9.3: `translate` method signature
 
-'''''
 
-....
+[source,php]
 1 translate(
 2         $string,
 3         $mod='',
 4         $selectedValue='')
-....
 
-'''''
+
 
 $string::
   The language string to be translated.
@@ -254,9 +216,8 @@ order - the first matching value will be returned).
 
 Example 9.4: Example `translate` method calls
 
-'''''
 
-....
+[source,php]
  1 function someFunction(){
  2   //Grab the label LBL_NAME for the current module
  3   $modLabel = translate('LBL_NAME');
@@ -278,13 +239,10 @@ Example 9.4: Example `translate` method calls
 19   $GLOBALS['log']->debug("The app label is $appLabel");
 20   $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
 21 }
-....
 
-'''''
 
-[[leanpub-auto-javascript]]
-JavaScript
-++++++++++
+
+==== JavaScript
 
 Finally, you may be using JavaScript (for example in a view), and wish
 to display a language string. For this you can use the
@@ -293,16 +251,14 @@ in example 9.3.
 
 Example 9.5: `SUGAR.language.get` method signature
 
-'''''
 
-....
+[source,php]
 1 SUGAR.language.get(
 2               module,
 3               str
 4 );
-....
 
-'''''
+
 
 module::
   The module a language string will be returned for. You should supply
@@ -314,9 +270,8 @@ str::
 
 Example 9.6: Example `SUGAR.language.get` method calls
 
-'''''
 
-....
+[source,php]
  1 function someFunction(){
  2 
  3   /*
@@ -340,6 +295,5 @@ Example 9.6: Example `SUGAR.language.get` method calls
 21   console.log("The app label is "+appLabel);
 22   console.log("The app list label is "+appListLabel);
 23 }
-....
 
-'''''
+

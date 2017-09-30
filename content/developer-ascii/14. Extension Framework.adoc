@@ -1,14 +1,12 @@
+
 ---
 weight: 14
 title: "14. Extension Framework"
 ---
-[[extensions-chapter]]
-14. Extension Framework
-~~~~~~~~~~~~~~~~~~~~~~~
 
-[[leanpub-auto-introduction-1]]
-Introduction
-^^^^^^^^^^^^
+= 14. Extension Framework
+
+=== Introduction
 
 The extension framework provides a means to modify various application
 data inside SuiteCRM. For example it provides a way to add or modify
@@ -24,9 +22,7 @@ consolidated it means that there is no affect on performance of checking
 a (possibly large) number of files. This is only done when performing a
 repair and rebuild in the admin menu.
 
-[[leanpub-auto-standard-extensions]]
-Standard Extensions
-^^^^^^^^^^^^^^^^^^^
+=== Standard Extensions
 
 List of standard SuiteCRM extensions
 
@@ -95,9 +91,7 @@ JavaScript groupings.
 actions.
 |=======================================================================
 
-[[leanpub-auto-custom-extensions]]
-Custom Extensions
-^^^^^^^^^^^^^^^^^
+=== Custom Extensions
 
 Interestingly the extension framework can be used to add new extensions.
 This allows you to create customisations that are easily customised by
@@ -112,18 +106,16 @@ look like:
 
 Example 14.1: Adding an entry point entry
 
-'''''
 
-....
+[source,php]
 1 <?php
 2 $extensions["sports_list"] =  array(
 3                 "section" => "sports_list",
 4                 "extdir" => "SportsList",
 5                 "file" => 'sportslist.ext.php',
 6                 "module" => "");
-....
 
-'''''
+
 
 Now when a Quick Repair and rebuild is run any files in +
 `custom/Extension/application/Ext/SportsList/` will be consolidated
@@ -132,8 +124,7 @@ into +
 file will not do anything but you are now able to write custom code that
 checks the consolidated file rather than having to worry about searching
 for customisations.
+==== 1.  [[fn-langNote]]
 
-1.  [[fn-langNote]]
-+
 The language extensions are treated specially and, as such, aren’t
 compiled to a single file.link:../14.-extension-framework#fnref-langNote[↩]

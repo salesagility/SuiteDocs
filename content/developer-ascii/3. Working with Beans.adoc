@@ -1,48 +1,42 @@
+
 ---
 weight: 3
 title: "3. Working with Beans"
 ---
-[[working-with-beans-chapter]]
-3. Working with Beans
-~~~~~~~~~~~~~~~~~~~~~
+
+= 3. Working with Beans
 
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
 architecture. They allow retrieving data from the database as objects
 and allow persisting and editing records. This section will go over the
 various ways of working with beans.
 
-[[leanpub-auto-beanfactory]]
-BeanFactory
-^^^^^^^^^^^
+=== BeanFactory
 
 The BeanFactory allows dynamically loading bean instances or creating
 new records. For example to create a new bean you can use:
 
 Example 3.1: Creating a new Bean using the BeanFactory
 
-'''''
 
-....
+[source,php]
 1 $bean = BeanFactory::newBean('<TheModule>');
 2 //For example a new account bean:
 3 $accountBean = BeanFactory::newBean('Accounts');
-....
 
-'''''
+
 
 Retrieving an existing bean can be achieved in a similar manner:
 
 Example 3.2: Retrieving a bean with the BeanFactory
 
-'''''
 
-....
+[source,php]
 1 $bean = BeanFactory::getBean('<TheModule>', $beanId);
 2 //For example to retrieve an account id
 3 $bean = BeanFactory::getBean('Accounts', $beanId);
-....
 
-'''''
+
 
 `getBean` will return an unpopulated bean object if `$beanId` is not
 supplied or if there’s no such record. Retrieving an unpopulated bean
@@ -53,13 +47,11 @@ call. I.e.
 
 Example 3.3: Retrieving an unpopulated bean
 
-'''''
 
-....
+[source,php]
 1 $bean = BeanFactory::getBean('<TheModule>');
-....
 
-'''''
+
 
 [width="100%",cols="50%,50%",]
 |=======================================================================
@@ -73,17 +65,13 @@ of the beans will be reflected in all the results.
 Using BeanFactory ensures that the bean is correctly set up and the
 necessary files are included etc.
 
-[[leanpub-auto-sugarbean]]
-SugarBean
-^^^^^^^^^
+=== SugarBean
 
 The SugarBean is the parent bean class and all beans in SuiteCRM extend
 this class. It provides various ways of retrieving and interacting with
 records.
 
-[[leanpub-auto-searching-for-beans]]
-Searching for beans
-^^^^^^^^^^^^^^^^^^^
+=== Searching for beans
 
 The following examples show how to search for beans using a bean class.
 The examples provided assume that an account bean is available names
@@ -92,26 +80,21 @@ mentioned in the BeanFactory section e.g.
 
 Example 3.4: Retrieving an unpopulated account bean
 
-'''''
 
-....
+[source,php]
 $accountBean = BeanFactory::getBean('Accounts');
-....
 
-'''''
 
-[[leanpub-auto-getlist]]
-get_list
-++++++++
+
+==== get_list
 
 The get_list method allows getting a list of matching beans and allows
 paginating the results.
 
 Example 3.5: get_list method signature
 
-'''''
 
-....
+[source,php]
 1 get_list(
 2     $order_by = "",
 3     $where = "",
@@ -119,9 +102,8 @@ Example 3.5: get_list method signature
 5     $limit=-1,
 6     $max=-1,
 7     $show_deleted = 0)
-....
 
-'''''
+
 
 $order_by::
   Controls the ordering of the returned list. `$order_by` is specified
@@ -148,7 +130,6 @@ $max::
 $show_deleted::
   Whether to include deleted results.
 
-[[leanpub-auto-results]]
 Results
 
 get_list will return an array. This will contain the paging information
@@ -168,7 +149,6 @@ previous_offset::
 current_offset::
   The offset used for the current results.
 
-[[leanpub-auto-example]]
 Example
 
 Let’s look at a concrete example. We will return the third page of all
@@ -177,9 +157,8 @@ by name.
 
 Example 3.6: Example get_list call
 
-'''''
 
-....
+[source,php]
  1 $beanList = $accountBean->get_list(
  2                                 //Order by the accounts name
  3                                 'name',
@@ -191,17 +170,15 @@ Example 3.6: Example get_list call
  9                                 -1,
 10                                 //10 items per page
 11                                 10);
-....
 
-'''''
+
 
 This will return:
 
 Example 3.7: Example get_list results
 
-'''''
 
-....
+[source,php]
  1 Array
  2 (
  3     //Snipped for brevity - the list of Account SugarBeans
@@ -215,13 +192,10 @@ Example 3.7: Example get_list results
 11     //The offset used for these results
 12     [current_offset] => 30
 13 )
-....
 
-'''''
 
-[[leanpub-auto-getfulllist]]
-get_full_list
-+++++++++++++
+
+==== get_full_list
 
 `get_list` is useful when you need paginated results. However if you are
 just interested in getting a list of all matching beans you can use
@@ -229,29 +203,25 @@ just interested in getting a list of all matching beans you can use
 
 Example 3.8: get_full_list method signature
 
-'''''
 
-....
+[source,php]
 1 get_full_list(
 2             $order_by = "",
 3             $where = "",
 4             $check_dates=false,
 5             $show_deleted = 0
-....
 
-'''''
+
 
 These arguments are identical to their usage in `get_list` the only
 difference is the `$check_dates` argument. This is used to indicate
 whether the date fields should be converted to their display values
 (i.e. converted to the users date format).
 
-[[leanpub-auto-results-1]]
 Results
 
 The get_full_list call simply returns an array of the matching beans
 
-[[leanpub-auto-example-1]]
 Example
 
 Let’s rework our `get_list` example to get the full list of matching
@@ -259,22 +229,18 @@ accounts:
 
 Example 3.9: Example get_full_list call
 
-'''''
 
-....
+[source,php]
 1 $beanList = $accountBean->get_full_list(
 2                                 //Order by the accounts name
 3                                 'name',
 4                                 //Only accounts with industry 'Media'
 5                                 "accounts.industry = 'Media'"
 6                                 );
-....
 
-'''''
 
-[[leanpub-auto-retrievebystringfields]]
-retrieve_by_string_fields
-+++++++++++++++++++++++++
+
+==== retrieve_by_string_fields
 
 Sometimes you only want to retrieve one row but may not have the id of
 the record. `retrieve_by_string_fields` allows retrieving a single
@@ -282,16 +248,14 @@ record based on matching string fields.
 
 Example 3.10: retrieve_by_string_fields method signature
 
-'''''
 
-....
+[source,php]
 1 retrieve_by_string_fields(
 2                           $fields_array,
 3                           $encode=true,
 4                           $deleted=true)
-....
 
-'''''
+
 
 $fields_array::
   An array of field names to the desired value.
@@ -309,13 +273,11 @@ results. So if true is passed then the deleted results will _not_ be
 included.
 |=======================================================================
 
-[[leanpub-auto-results-2]]
 Results
 
 retrieve_by_string_fields returns a single bean as it’s result or null
 if there was no matching bean.
 
-[[leanpub-auto-example-2]]
 Example
 
 For example to retrieve the account with name `Tortoise Corp` and
@@ -323,22 +285,18 @@ account_type `Customer` we could use the following:
 
 Example 3.11: Example retrieve_by_string_fields call
 
-'''''
 
-....
+[source,php]
 1 $beanList = $accountBean->retrieve_by_string_fields(
 2                                 array(
 3                                   'name' => 'Tortoise Corp',
 4                                   'account_type' => 'Customer'
 5                                 )
 6                               );
-....
 
-'''''
 
-[[leanpub-auto-accessing-fields]]
-Accessing fields
-^^^^^^^^^^^^^^^^
+
+=== Accessing fields
 
 If you have used one of the above methods we now have a bean record.
 This bean represents the record that we have retrieved. We can access
@@ -348,9 +306,8 @@ set the values of beans. Some examples are as follows:
 
 Example 3.12: Accessing fields examples
 
-'''''
 
-....
+[source,php]
  1 //Get the Name field on account bean
  2 $accountBean->name;
  3 
@@ -365,9 +322,8 @@ Example 3.12: Accessing fields examples
 12 
 13 //Set the billing address post code of an account
 14 $accountBean->billing_address_postalcode = '12345';
-....
 
-'''''
+
 
 When changes are made to a bean instance they are not immediately
 persisted. We can save the changes to the database with a call to the
@@ -376,9 +332,8 @@ add that record to the database:
 
 Example 3.13: Persisting bean changes
 
-'''''
 
-....
+[source,php]
  1 //Get the Name field on account bean
  2 $accountBean->name = 'New account name';
  3 //Set the billing address post code of an account
@@ -391,9 +346,8 @@ Example 3.13: Persisting bean changes
 10 //Give it a name and save
 11 $caseBean->name = 'New Case name';
 12 $caseBean->save();
-....
 
-'''''
+
 
 [width="100%",cols="50%,50%",]
 |=======================================================================
@@ -407,9 +361,7 @@ record is new (perhaps in a custom import script) then you can set
 is new.
 |=======================================================================
 
-[[leanpub-auto-related-beans]]
-Related beans
-^^^^^^^^^^^^^
+=== Related beans
 
 We have seen how to save single records but, in a CRM system,
 relationships between records are as important as the records
@@ -417,18 +369,15 @@ themselves. For example an account may have a list of cases associated
 with it, a contact will have an account that it falls under etc. We can
 get and set relationships between beans using several methods.
 
-[[leanpub-auto-getlinkedbeans]]
-get_linked_beans
-++++++++++++++++
+==== get_linked_beans
 
 The `get_linked_beans` method allows retrieving a list of related beans
 for a given record.
 
 Example 3.14: get_linked_beans method signature
 
-'''''
 
-....
+[source,php]
 1 get_linked_beans(
 2                 $field_name,
 3                 $bean_name,
@@ -437,9 +386,8 @@ Example 3.14: get_linked_beans method signature
 6                 $end_index = -1,
 7                 $deleted=0,
 8                 $optional_where="");
-....
 
-'''''
+
 
 $field_name::
   The link field name for this link. Note that this is not the same as
@@ -463,19 +411,16 @@ $optional_where::
   Allows filtering the results using an SQL WHERE clause. See the
   `get_list` method for more details.
 
-[[leanpub-auto-results-3]]
 Results
 
 `get_linked_beans` returns an array of the linked beans.
 
-[[leanpub-auto-example-3]]
 Example
 
 Example 3.15: Example get_linked_beans call
 
-'''''
 
-....
+[source,php]
 1 $accountBean->get_linked_beans(
 2                 'contacts',
 3                 'Contacts',
@@ -484,18 +429,14 @@ Example 3.15: Example get_linked_beans call
 6                 10,
 7                 0,
 8                 "contacts.primary_address_country = 'USA'");
-....
 
-'''''
 
-[[leanpub-auto-relationships]]
-relationships
-+++++++++++++
+
+==== relationships
 
 In addition to the `get_linked_beans` call you can also load and access
 the relationships more directly.
 
-[[leanpub-auto-loading]]
 Loading
 
 Before accessing a relationship you must use the `load_relationship`
@@ -506,28 +447,24 @@ you can find the name of the link in
 
 Example 3.16: Loading a relationship
 
-'''''
 
-....
+[source,php]
 1 //Load the relationship
 2 $accountBean->load_relationship('contacts');
 3 //Can now call methods on the relationship object:
 4 $contactIds = $accountBean->contacts->get();
-....
 
-'''''
 
-[[leanpub-auto-methods]]
+
+
 Methods
 
-[[leanpub-auto-get]]
 `get`
 
 Returns the ids of the related records in this relationship e.g for the
 account - contacts relationship in the example above it will return the
 list of ids for contacts associated with the account.
 
-[[leanpub-auto-getbeans]]
 `getBeans`
 
 Similar to `get` but returns an array of beans instead of just ids.
@@ -539,7 +476,6 @@ load the full bean for each related record. This may cause poor
 performance for relationships with a large number of beans.
 |=======================================================================
 
-[[leanpub-auto-add]]
 `add`
 
 Allows relating records to the current bean. `add` takes a single id or
@@ -549,9 +485,8 @@ contact to the relationship in our example we can do the following:
 
 Example 3.18: Adding a new contact to a relationship
 
-'''''
 
-....
+[source,php]
  1 //Load the relationship
  2 $accountBean->load_relationship('contacts');
  3 
@@ -563,11 +498,10 @@ Example 3.18: Adding a new contact to a relationship
  9 
 10 //Link the bean to $accountBean
 11 $accountBean->contacts->add($contactBean);
-....
 
-'''''
 
-[[leanpub-auto-delete]]
+
+
 `delete`
 
 `delete` allows unrelating beans. Counter-intuitively it accepts the ids
@@ -577,18 +511,16 @@ contact:
 
 Example 3.19: Removing a new contact from a relationship
 
-'''''
 
-....
+[source,php]
 1 //Load the relationship
 2 $accountBean->load_relationship('contacts');
 3 
 4 //Unlink the contact from the account - assumes $contactBean is a Contact SugarB\
 5 ean
 6 $accountBean->contacts->delete($accountBean->id, $contactBean);
-....
 
-'''''
+
 
 [width="100%",cols="50%,50%",]
 |=======================================================================

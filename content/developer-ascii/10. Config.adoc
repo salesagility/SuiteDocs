@@ -1,14 +1,12 @@
+
 ---
 weight: 10
 title: "10. Config"
 ---
-[[config-chapter]]
-10. Config
-~~~~~~~~~~
 
-[[leanpub-auto-the-config-files]]
-The config files
-^^^^^^^^^^^^^^^^
+= 10. Config
+
+=== The config files
 
 There are two main config files in SuiteCRM, both of which are in the
 root SuiteCRM folder. These are `config.php` and `config_override.php`.
@@ -18,9 +16,7 @@ how many entries to show per page in the list view. Most of these
 options are accessible from the SuiteCRM administration page. However
 some are only definable in the config files.
 
-[[leanpub-auto-configphp]]
-config.php
-++++++++++
+==== config.php
 
 This is the main SuiteCRM config file and includes important information
 like the database settings and the current SuiteCRM version.
@@ -32,9 +28,8 @@ database settings first:
 
 Example 10.1: Database config definition
 
-'''''
 
-....
+[source,php]
  1 'dbconfig' =>
  2 array (
  3   'db_host_name' => 'localhost',
@@ -46,9 +41,8 @@ Example 10.1: Database config definition
  9   'db_port' => '',
 10   'db_manager' => 'MysqliManager',
 11 ),
-....
 
-'''''
+
 
 Here we can see this instance is setup to access a local MySQL instance
 using the username/password dbuser/dbpass and accessing the database
@@ -58,13 +52,11 @@ The site url settings are even simpler:
 
 Example 10.2: Setting the site URL
 
-'''''
 
-....
+[source,php]
   'site_url' => 'http://example.com/suitecrm',
-....
 
-'''''
+
 
 The site url for the above is simply ‘http://example.com/suitecrm’ if we
 were moving this instance to, for example, suite.example.org, then we
@@ -75,9 +67,7 @@ change `config.php`. For other changes you would either make the change
 through SuiteCRM itself or you would use the +
 `config_override.php` file.
 
-[[leanpub-auto-configoverridephp]]
-config_override.php
-+++++++++++++++++++
+==== config_override.php
 
 `config_override.php` allows you to make config changes without risking
 breaking the main config file. This is achieved quite simply by adding,
@@ -88,30 +78,24 @@ config_override.php we can add our own, new, config item:
 
 Example 10.3: Adding a custom config value
 
-'''''
 
-....
+[source,php]
 $sugar_config['enable_the_awesome'] = true;
-....
 
-'''''
+
 
 or we can edit an existing config option in a very similar manner by
 simply overwriting it:
 
 Example 10.4: Overwriting an existing config value
 
-'''''
 
-....
+[source,php]
 $sugar_config['logger']['level'] = 'debug';
-....
 
-'''''
 
-[[leanpub-auto-using-config-options]]
-Using config options
-^^^^^^^^^^^^^^^^^^^^
+
+=== Using config options
 
 We may want to access config options in custom code (or as detailed
 above if we have created our own config setting we may want to use
@@ -119,9 +103,8 @@ that). We can easily get the config using the php global keyword:
 
 Example 10.5: Accessing a config setting within SuiteCRM
 
-'''''
 
-....
+[source,php]
 1 function myCustomLogic(){
 2   //Get access to config
 3   global $sugar_config;
@@ -130,6 +113,5 @@ Example 10.5: Accessing a config setting within SuiteCRM
 6     doTheAwesome();
 7   }
 8 }
-....
 
-'''''
+
