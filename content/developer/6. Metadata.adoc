@@ -17,13 +17,9 @@ fields are used in the search.
 
 Module metadata can be found in:
 
-Example 6.1: Module metadata location
-
-
+.Example 6.1: Module metadata location
 [source,php]
 modules/<TheModule>/metadata/
-
-
 
 == Customising
 
