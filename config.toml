@@ -1,9 +1,8 @@
-baseURL = ""
-#baseURL = "https://suitecrm-docs.netlify.com"
+baseURL = "https://suitecrm-docs.netlify.com"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Suite CRM Documentation"
+title = "SuiteCRM Documentation"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
@@ -12,7 +11,7 @@ defaultContentLanguageInSubdir= true
   editURL = "https://github.com/Accendere/SuiteDocs/edit/master/content/"
   description = "Documentation for SuiteCRM"
   author = "Frank Taillandier"
-  showVisitedLinks = false
+  showVisitedLinks = true
   themeVariant = "suitecrm"
 
 [outputs]
