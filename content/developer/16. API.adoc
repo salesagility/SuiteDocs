@@ -9,7 +9,7 @@ title: "16. API"
 The SuiteCRM API allows third party code to access and edit SuiteCRM
 data and functionality.
 
-== Using the API
+== Using the API to access data
 
 SuiteCRM has both a REST and a SOAP API. Which API you want to use will
 largely come down to personal preference and the support for SOAP/REST
