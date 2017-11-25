@@ -1,5 +1,18 @@
 
 
+<nav id="topmenu" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
+ <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a><b>Documentation Guides:</b></a></li>
+  <li><a href="/user">User</a></li>
+  <li><a href="/developer">Developer</a></li>
+  <li><a href="/administrator">Administrator</a></li>
+  <li><a href="/community">Community</a></li>
+</ul> 
+
+</nav>
+
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 
 {{ $currentNode := . }}

@@ -9,7 +9,9 @@
 
     --MENU-HEADER-BG-color:#fff; /* Background color of menu header */
     --MENU-HEADER-BORDER-color:rgba(50, 50, 50, 0.1); /*Color of menu header border */
-
+  
+    --MENU-TOP-BG-color:#9B1B3A;
+ 
     --MENU-SEARCH-BG-color:#fff; /* Search field background color (by default borders + icons) */
     --MENU-SEARCH-BOX-color: #666; /* Override search field border color */
     --MENU-SEARCH-BOX-ICONS-color: #333; /* Override search field icons color */
@@ -101,4 +103,29 @@ a:hover {
 
 #sidebar hr {
     border-color: var(--MENU-SECTION-HR-color);
+}
+
+#topmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--MENU-TOP-BG-color);
+}
+
+#topmenu li {
+    float: left;
+}
+
+#topmenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#topmenu li a:hover {
+    background-color: #111;
 }
