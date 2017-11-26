@@ -5,7 +5,7 @@ defaultContentLanguage = "en"
 title = "Suite CRM Documentation"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
-defaultContentLanguageInSubdir= true
+defaultContentLanguageInSubdir= false
 
 [params]
   editURL = "https://github.com/Accendere/SuiteDocs/edit/master/content/"
