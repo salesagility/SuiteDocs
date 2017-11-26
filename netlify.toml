@@ -1,0 +1,21 @@
+[build]
+  publish = "public"
+  command = "bundle && hugo"
+
+[context.production.environment]
+  HUGO_VERSION = "0.31"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.31"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.31"
+
+[context.preview.environment]
+  HUGO_BASEURL = "https://preview--suitedocs.netlify.com/"
+  HUGO_ENABLEGITINFO = "true"
+
+
+
