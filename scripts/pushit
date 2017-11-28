@@ -1,6 +1,9 @@
 #!/bin/bash
+
+# this script asks for a commit message, adds everything changed to the commit, and immediately pushes to remote:
 read -p "Commit description: " desc
 git add . && \
 git add -u && \
 git commit -m "$desc" && \
-git push origin master
+# assumes branches are being tracked with remote:
+git push origin 
