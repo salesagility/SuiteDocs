@@ -1,6 +1,6 @@
 ---
-title: "Suite CRM Documentation"
+title: "SuiteCRM Documentation"
 chapter: true
 ---
 
-# Suite CRM Documentation
+# SuiteCRM Documentation

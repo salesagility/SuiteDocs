@@ -1,0 +1,2 @@
+grep --include=\*.{md,adoc,toml,php,ini,conf,cnf,js,css} -irn '.' -e "$1" | grep -v public | awk -F: '{if(f!=$1)print ""; f=$1; print $0;}'
+
