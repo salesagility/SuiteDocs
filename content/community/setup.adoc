@@ -7,37 +7,37 @@ weight: 1
 
 WARNING: this is very provisional and will be made into a proper Guide when time allows.
 
-sudo apt-get update
+`sudo apt-get update`
 
-sudo apt-get install git
+`sudo apt-get install git`
 
-wget https://github.com/gohugoio/hugo/releases/download/v0.31/hugo_0.31_Linux-64bit.deb
+`wget https://github.com/gohugoio/hugo/releases/download/v0.31/hugo_0.31_Linux-64bit.deb`
 
-sudo dpkg -i hugo_0.31_Linux-64bit.deb
+`sudo dpkg -i hugo_0.31_Linux-64bit.deb`
 
 Check Hugo is operational with 
 
-hugo version
+`hugo version`
 
 Go to some appropriate directory, and use this command to create the SuiteDocs subtree and download everything:
 
-git clone https://github.com/salesagility/SuiteDocs.git
+`git clone https://github.com/salesagility/SuiteDocs.git`
 
-cd SuiteDocs
+`cd SuiteDocs`
 
-bundle install
+`bundle install`
 
 This should pick up the local Gemfile asking for the "asciidoctor" package and install it. Check with:
 
-asciidoctor --version
+`asciidoctor --version`
 
 You're ready to go! To build the site you can simply type 
 
-hugo
+`hugo`
 
 But you won't be using that very often because it's enough to launch the local web server, and any outstanding changes will get rebuilt:
 
-hugo server --bind=0.0.0.0  --baseUrl=http://10.0.0.200
+`hugo server --bind=0.0.0.0  --baseUrl=http://10.0.0.200`
 
 (change that into whatever is your local IP address. This will be the URL you put in your browser to navigate the local website).
 
