@@ -27,7 +27,7 @@ Go to some appropriate directory, and use this command to create the SuiteDocs s
 
 `bundle install`
 
-This should pick up the local Gemfile asking for the "asciidoctor" package and install it. Check with:
+That should pick up the local Gemfile asking for the "asciidoctor" package and install it. Check with:
 
 `asciidoctor --version`
 
@@ -39,7 +39,7 @@ But you won't be using that very often because it's enough to launch the local w
 
 `hugo server --bind=0.0.0.0  --baseUrl=http://10.0.0.200`
 
-(change that into whatever is your local IP address. This will be the URL you put in your browser to navigate the local website).
+(change that `10.0.0.200` into whatever is your local IP address. This will be the URL you put in your browser to navigate the local website).
 
 
 
