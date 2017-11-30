@@ -1,9 +1,11 @@
 ---
-title: "Setting up Hugo to work on Documentation"
+title: "Local Setup to Contribute to Documentation"
 weight: 1
 ---
 
-= Setting up Hugo to work on Documentation
+= Local Setup to Contribute to Documentation
+
+In order to contribute to the Documentation efforts, you can edit pages directly on Github. But if you want a more powerful setup for a better work experience, you can choose to set up a local copy of the files, install our build engine Hugo, and build and serve the site locally.
 
 WARNING: this is very provisional and will be made into a proper Guide when time allows.
 

@@ -8,9 +8,9 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 
 [params]
-  editURL = "https://github.com/Accendere/SuiteDocs/edit/master/content/"
+  editURL = "https://github.com/salesagility/SuiteDocs/edit/master/content/"
   description = "Documentation for SuiteCRM"
-  author = "Frank Taillandier"
+  author = "SalesAgility"
   showVisitedLinks = true
   themeVariant = "suitecrm"
 
