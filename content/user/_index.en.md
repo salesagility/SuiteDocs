@@ -4,7 +4,7 @@ weight: 10
 pre: "<b>1. </b>"
 ---
 
-# The SuiteCRM Team and Community
+## The SuiteCRM Team and Community
 
 It is safe to say without the constant work from the SuiteCRM Team and
 Community, I would not have had the drive and commitment to sit down and
