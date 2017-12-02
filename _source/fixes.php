@@ -2,12 +2,13 @@
 
   require_once('replacements.php');
 
-  $dirname='./content/developer';
+  $dirname='.';
 
 
   $dir = new DirectoryIterator($dirname);
   foreach ($dir as $fileinfo) {
       if (!$fileinfo->isDot()) {
+        if (strcmp($fileinfo->getFilename(), 'userguide.adoc')) continue;
           var_dump($fileinfo->getFilename());
 	  // full file replacements:
 	  $chapter = file_get_contents($fileinfo->getPathname());
@@ -56,7 +57,8 @@ echo PHP.EOL.'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   	  }
 	  echo $count;	
            //$chapter = str_replace(
-           file_put_contents($fileinfo->getPathname(), $fixed);
+//           file_put_contents($fileinfo->getPathname(), $fixed);
+           file_put_contents('./../content/user/userguide.adoc', $fixed);
       } 
       // die();
   }
