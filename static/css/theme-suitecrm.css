@@ -44,7 +44,7 @@ dt {
 	font-weight:900;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
    color: var(--MAIN-TITLES-TEXT-color) !important;
    font-family: 'Lato', sans-serif;
    letter-spacing:0px;
@@ -83,6 +83,13 @@ h5 {
 	font-size:15px;
 	font-weight:900;
 	margin:30px 0 5px 0!important;
+	line-height:120%!important;
+}
+
+h6 {
+	font-size:15px;
+	font-weight:900;
+	margin:30px 0 10px 0!important;
 	line-height:120%!important;
 }
 
@@ -271,6 +278,7 @@ blockquote p {
 
 pre {
 	background-color:#44404F;
+	margin:0 0 2rem 0;
 }
 
 pre .hljs {
