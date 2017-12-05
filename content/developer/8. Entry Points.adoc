@@ -17,7 +17,7 @@ in an email.
 Let’s create a simple entry point to display the time. First we define
 this entry point in a new file in:
 
-Example 8.1: Entry point registry location
+*_Example 8.1: Entry point registry location_*
 
 
 [source,php]
@@ -27,7 +27,7 @@ custom/Extension/application/Ext/EntryPointRegistry/
 
 For our example we’ll call our new file MyTimeEntryPoint.php
 
-Example 8.2: Example entry point location
+*_Example 8.2: Example entry point location_*
 
 
 [source,php]
@@ -44,7 +44,7 @@ usually a good idea to place this somewhere inside
 In addition we supply an “auth” parameter. If “auth” is true then anyone
 accessing the entry point will need to be logged into SuiteCRM.
 
-Example 8.3: Adding an entry point entry
+*_Example 8.3: Adding an entry point entry_*
 
 
 [source,php]
@@ -59,7 +59,7 @@ Example 8.3: Adding an entry point entry
 Finally we add the actual logic itself inside
 custom/MyTimeEntryPoint.php:
 
-Example 8.4: Example entry point that outputs the current time
+*_Example 8.4: Example entry point that outputs the current time_*
 
 
 [source,php]
@@ -72,7 +72,7 @@ Example 8.4: Example entry point that outputs the current time
 
 After a Quick Repair and Rebuild we can access our entry point:
 
-Example 8.5: Custom entry point URL
+*_Example 8.5: Custom entry point URL_*
 
 
 [source,php]
@@ -82,7 +82,7 @@ example.com/index.php?entryPoint=MyTimeEntryPoint
 
 and we should see something similar to:
 
-Example 8.6: MyTimeEntryPoint
+*_Example 8.6: MyTimeEntryPoint_*
 
 
 [source,php]

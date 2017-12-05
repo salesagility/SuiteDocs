@@ -15,7 +15,8 @@ whether it is audited, the table name etc.
 
 == Defining Vardefs
 
-=== Module
+[discrete]
+==== Module
 
 Vardefs are initially defined in their respective modules folder. For
 the Accounts module this will be in modules/Accounts/vardefs.php. The
@@ -23,7 +24,7 @@ information is stored in an array named $dictionary using the module
 name as the key. For Accounts this will be `$dictionary['Account']`.
 Let’s look at the Account vardefs (which have been edited for brevity):
 
-Example 4.1: Account Vardefs
+*_Example 4.1: Account Vardefs_*
 
 
 [source,php]
@@ -57,8 +58,8 @@ Example 4.1: Account Vardefs
 
 
 
-Keys
-
+[discrete]
+==== Keys
 The following are some of the keys that can be specified for the
 vardefs. Fields, indices and relationships are covered in their own
 sections.
@@ -86,7 +87,8 @@ sections.
   with a page showing the differences in the two edits and asked to
   choose which edits are to be used.
 
-Fields
+[discrete]
+==== Fields
 
 The field defines the behaviour and attributes of each field in the
 module.
@@ -142,7 +144,8 @@ module.
 `audited`::
   Whether or not changes to this field should be audited.
 
-Field types
+[discrete]
+==== Field types
 
 The following are common field types used:
 
@@ -173,12 +176,13 @@ The following are common field types used:
 `relate`::
   A related bean field.
 
-Indices
+[discrete]
+==== Indices
 
 The indices array allows defining any database indexes that should be in
 place on the database table for this module. Let’s look at an example:
 
-Example 4.2: Example indices definition
+*_Example 4.2: Example indices definition_*
 
 
 [source,php]
@@ -201,23 +205,24 @@ Example 4.2: Example indices definition
 
 Each array entry should have, at least, the following entries:
 
-name::
+`name`::
   The name of the index. This is usually used by the database to
   reference the index. Most databases require that these are unique.
-type::
+`type`::
   The type of the index to create. `index` will simply add an index on
   the fields, `unique` will add a unique constraint on the fields,
   `primary` will add the fields as a primary key.
-fields::
+`fields`::
   An array of the fields to be indexed. The order of this array will be
   used as the order of the fields in the index.
 
-Relationships
+[discrete]
+==== Relationships
 
 The Vardefs also specify the relationships within this module. Here’s an
 edited example from the Accounts module:
 
-Example 4.3: Example relationships definition
+*_Example 4.3: Example relationships definition_*
 
 
 [source,php]
@@ -260,7 +265,7 @@ the following keys:
   is a one to many relationship it means a case is related to a single
   account but a single account can have multiple cases.
 
-For many to many relationship fields the following keys are also
+For *many to many* relationship fields the following keys are also
 available:
 
 `join_table`::
@@ -270,14 +275,15 @@ available:
 `join_key_rhs`::
   The name of the field on the join table for the right hand side.
 
-=== Vardef templates
+[discrete]
+==== Vardef templates
 
 Vardef templates provide a shortcut for defining common vardefs. This is
 done by calling `VardefManager::createVardef` and passing the module
 name, object name and an array of templates to be assigned. The
 following is an example from the accounts vardefs:
 
-Example 4.4: Example vardef template
+*_Example 4.4: Example vardef template_*
 
 
 [source,php]
@@ -292,7 +298,7 @@ Example 4.4: Example vardef template
 In this example the `default`, `assignable` and `company` templates are
 used. The following are some of the available templates:
 
-`basic` +
+`basic` ::
 `default`::
   Adds the common base fields such as `id`, `name`, `date_entered`, etc.
 `assignable`::
@@ -305,11 +311,12 @@ used. The following are some of the available templates:
   Adds fields common to companies such as an industry dropdown, address,
   etc.
 
-=== Customising vardefs
+[discrete]
+==== Customising vardefs
 
 Vardefs can be customised by adding a file into
 
-Example 4.5: Custom vardef location
+*_Example 4.5: Custom vardef location_*
 
 
 [source,php]
@@ -320,7 +327,7 @@ custom/Extension/modules/<TheModule>/Ext/SomeFile.php
 This file can then be used to add a new field definition or customise an
 existing one e.g changing a field type:
 
-Example 4.6: Example overriding an existing vardef
+*_Example 4.6: Example overriding an existing vardef_*
 
 
 [source,php]
