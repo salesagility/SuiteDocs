@@ -36,7 +36,7 @@ In order to back up files you can simply create a zip of the SuiteCRM
 directory and copy it to a safe place. On Linux systems this can be
 performed using the following:
 
-Example 17.1: File backup
+*_Example 17.1: File backup_*
 
 
 [source,php]
@@ -48,7 +48,7 @@ Backing up the SuiteCRM database will vary depending on which database
 you are using. However MySQL backups can be performed using the
 `mysqldump` command on Linux as seen here:
 
-Example 17.2: MySQL Database backup
+*_Example 17.2: MySQL Database backup_*
 
 
 [source,php]
@@ -114,7 +114,7 @@ should strive to use standard compliant SQL. If database engine specific
 features need to be used, and you wish to target other database engines,
 you can check for the DB type. For example:
 
-Example 17.1: Checking for the database engine
+*_Example 17.1: Checking for the database engine_*
 
 
 [source,php]
@@ -139,7 +139,7 @@ Example 17.1: Checking for the database engine
 The majority of SuiteCRM files will start with some variation of the
 following line:
 
-Example 17.2: Entry check
+*_Example 17.2: Entry check_*
 
 
 [source,php]
@@ -163,7 +163,7 @@ the user from refreshing the page and causing a duplicate action. Within
 SuiteCRM it is best to use the `SugarApplication::redirect` method to
 redirect. This simply accepts a URL. As follows:
 
-Example 17.3: Redirecting within SuiteCRM
+*_Example 17.3: Redirecting within SuiteCRM_*
 
 
 [source,php]
