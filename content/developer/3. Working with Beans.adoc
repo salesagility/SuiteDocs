@@ -16,9 +16,7 @@ various ways of working with beans.
 The BeanFactory allows dynamically loading bean instances or creating
 new records. For example to create a new bean you can use:
 
-Example 3.1: Creating a new Bean using the BeanFactory
-
-
+.Example 3.1: Creating a new Bean using the BeanFactory, MAN!
 [source,php]
 1 $bean = BeanFactory::newBean('<TheModule>');
 2 //For example a new account bean:
