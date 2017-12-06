@@ -1,0 +1,592 @@
+[cols="",]
+|=======
+|__TOC__
+|=======
+
+[[suitecrm-installation-guide]]
+SuiteCRM Installation Guide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[[introduction]]
+Introduction
+^^^^^^^^^^^^
+
+SuiteCRM is SugarCRM, Supercharged! SuiteCRM is a fork of the popular
+open source SugarCRM Community Edition. This release features a host of
+additional open source modules, along with the standard features and
+functionality found within SugarCRM CE.
+
+[[release-notes]]
+Release Notes
+^^^^^^^^^^^^^
+
+See the latest release notes for SuiteCRM <span
+style="font-size:110%;">**link:Versions[here]**</span>.<br />
+
+[[downloading-and-installing-suitecrm]]
+Downloading and installing SuiteCRM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are installing SuiteCRM for the first time, follow the
+instructions in this section. If you have an earlier version of SuiteCRM
+installed, refer to the upgrade section for instructions on how to
+upgrade your SuiteCRM instance. Follow the steps listed below to install
+SuiteCRM:
+
+1.  Install the platform-appropriate (Linux or Windows) version of PHP,
+web server, and database on your machine.
+2.  Download the SuiteCRM files from suitecrm.com(see “Downloading the
+latest SuiteCRM files” section).
+3.  Copy the SuiteCRM files to your web server.
+4.  Install SuiteCRM by following the SuiteCRM installation wizard.
+
+[[downloading-the-latest-suitecrm-files]]
+Downloading the latest SuiteCRM files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.  Navigate to the SuiteCRM Downloads section at
+http://suitecrm.com/download
+2.  Login using your username and password. If you do not have an
+account, you can register using the registration form.
+3.  Download your flavour of SuiteCRM. We advise that all users download
+the latest SuiteCRM release. The latest version will contain the latest
+features and bug fixes.
+4.  If you experience any issues during registering an account on our
+website or downloading SuiteCRM, please use our support forums.
+
+[[copying-suitecrm-files-to-web-server]]
+Copying SuiteCRM files to web server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once your SuiteCRM package has downloaded, you will need to unzip the
+files and set permissions required for the installation process. The
+following steps explain in detail the prerequisites to setting up your
+SuiteCRM files for installation:
+
+1.  Locate the directory on the web server in which the SuiteCRM
+directory will be located(most commonly the root directory, or within a
+subdirectory).
+2.  Unzip SuiteCRM into the directory selected in Step 1. This creates a
+“SuiteCRM” directory within your selected parent directory.
+3.  At this stage, you may wish to rename the default “SuiteCRM”
+directory.
+4.  Set ownership of the SuiteCRM directory:
+1.  chgrp ApacheUser.ApacheGroup <suitecrmroot> -R recursively sets
+ownership for root directory to Apache user and group.
+5.  The system user that your web server uses varies depending on your
+operating system. Common web server users are as follows:
+1.  apache (Linux/Apache)
+2.  nobody (Linux/Apache)
+3.  IUSR_computerName (Windows/IIS)
+
+If you are unsure how to set your web server user on your operating
+system, contact your web server host. If you are installing SuiteCRM
+locally and need assistance, visit our support forums.
+
+1.  Set the following permissions on the SuiteCRM directory(Linux):
+1.  sudo chown -R www-data:www-data .
+2.  sudo chmod -R 755 .
+3.  sudo chmod -R 775 cache custom modules themes data upload
+config_override.php
+
+The commands/steps taken to setting permissions differs dependant on
+your operating system. If you are experiencing issues with setting
+permissions on your SuiteCRM instance, visit our support forums.
+
+[[recommended-installation-pre-requisites]]
+Recommended installation pre-requisites
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* PHP
+* JSON
+* XML Parsing
+* MB Strings Module
+* Writable SugarCRM Configuration File (config.php)
+* Writeable Custom Directory
+* Writable Modules Sub-Directories and Files
+* Writable Upload Directory
+* Writable Data Sub-Directories
+* Writable Cache Sub-Directories
+* PHP Memory Limit (at least 128M)
+* ZLIB Compression Module
+* ZIP Handling Module
+* PCRE Library
+* IMAP Module
+* cURL Module
+* Upload File Size
+* Sprite Support
+
+[[installing-suitecrm]]
+Installing SuiteCRM
+^^^^^^^^^^^^^^^^^^^
+
+Once you have successfully copied the SuiteCRM files to your web server,
+you need to install SuiteCRM by following the on-screen installation
+wizard. You can navigate to the wizard by entering the following in your
+web browser:
+http://%3CyourServer%3E/%3CyourSuiteCRMDirectory%3E/install.php. You can
+perform a typical installation or a custom installation. Typical
+installation is recommended, but you can choose custom installation for
+the following reasons: The same Database Admin User should not be used
+as the SuiteCRM database administrator Locale settings should be
+specified during installation instead of after logging into SuiteCRM
+
+[[performing-a-typical-installation-of-suitecrm]]
+Performing a typical installation of SuiteCRM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.  Launch your browser and enter the following URL:
+http://%3CyourServer%3E/%3CyourSuiteCRMDirectory%3E/install.php
+* This displays the Welcome page.
+2.  Click Next.
+* The Installer displays installation instructions and requirements to
+help determine successful SuiteCRM installation.
+3.  Review the information and click Next.
+* This displays the SuiteCRM License Agreement.
+4.  Review the license, check I Accept, and click Next. The installer
+checks the system for compatibility and then displays the Installation
+Options page.
+* Note: You can modify any of your settings at any time prior to
+clicking Install in the Confirm Setting menu. To modify any settings,
+click the Back button on your browser to return to the appropriate page.
+5.  Select Typical Install.
+6.  Click Next. This displays the Database Type page.
+7.  Select the database that is installed on your system and click Next.
+This displays the Database Configuration page.
++
+a. Enter the database name. The Installer uses “suitecrm” as the default
+name for the database. You can specify a new name. +
+b. Enter the Host Name or the Host Instance for the MySQL, MariaDB or
+SQL Server. The host name is, by default, set to localhost if your
+database server is running on the same machine as your web server. +
+c. Enter the username and password for the Database Administrator and
+specify the SuiteCRM Database Username. +
+d. Ensure that the Database Administrator you specify has the
+permissions to create and write to the SuiteCRM database.::
+  For My SQL, MariaDB and SQL Server, by default, the Installer selects
+  the Admin User as the SuiteCRM Database User. The SuiteCRM application
+  uses SuiteCRM Database User to communicate with the SuiteCRM database.
+  You can create a different SuiteCRM Database user at this time.
+1.  1.  To select an existing user, choose Provide existing user from
+the SuiteCRM Database Username drop-down list. To create a new SuiteCRM
+Database user, choose Define user. Enter the database username and
+password in the relevant fields. Re-enter the password to confirm it.
+The new user information is displayed in System Credentials on the
+Confirm Settings page at the end of the installation process.
+* e. Accept No as the default value if you do not want the SuiteCRM Demo
+data. Select Yes to populate the database with the SuiteCRM Demo data.
+8.  Click Next. The Installer validates the credentials of the specified
+administrator. If a database with that name already exists, it displays
+a dialog box asking you to either accept the database name or choose a
+new database. If you use an existing database name, the database tables
+will be dropped.
+9.  Click Accept to accept the database name or click Cancel and enter a
+new name in the Database Name field.
+* This displays the Site Configuration page.
+10. Enter a name for the SuiteCRM administrator.
+* The SuiteCRM administrator (default name admin) has administrative
+privileges in SuiteCRM. You can change the default username.
+11. Enter a password for the SuiteCRM admin, re-enter it to confirm the
+password, and click Next.
+* This displays the Confirm Settings page. The Confirm Settings page
+displays a summary of the specified settings. Click Back on your browser
+to navigate to previous pages if you want to change the settings.
+12. Click Print Summary for a printout of the settings for your records.
+* Click Show Passwords and then click Print Summary to include the
+database user password and the SuiteCRM admin password in the printout.
+When you click Show Passwords, the system displays the passwords and
+changes the button name to Hide Passwords. You can click this button to
+hide the passwords again.
+13. Click Install.
+* This displays the Perform Setup page with the installation progress.
+14. Click Next when the setup is complete.
+* This displays the Registration page(registration is optional).
+15. Enter the necessary information and click Send Registration to
+register your SuiteCRM instance with SuiteCRM; or click No Thanks to
+skip registration.
+* This displays the SuiteCRM login page. You can now log into SuiteCRM
+with the SuiteCRM admin name and password that you specified during
+installation.
+
+[[performing-a-custom-installation-of-suitecrm]]
+Performing a custom installation of SuiteCRM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.  Launch your browser and go to your new SuiteCRM installation. The
+URL should be similar to the following:
++
+::
+  <tt><nowiki>http://crm.yourserver.com/Suite-CRM-Directory/install.php%3C/nowiki%3E%3C/tt%3E
+  +
+2.  The _Welcome to the SuiteCRM Setup Wizard_ screen
++
+::
+  You need to accept the licence agreement first. To do so:
+1.  Click the _I Accept_ checkbox.
+2.  Click _Next_ to continue.
++
+::
+3.  The _Pre-Installation requirements_ screen
++
+::
+  The installer will display installation instructions and requirements.
+1.  Please review the information and resolve any issues.
+2.  Click _Next_ to continue.
++
+::
+4.  The _Configuration_ screen
++
+::
+  This is where you will configure SuiteCRM to work with your customized
+  environment.
+1.  _Database Configuration_
+1.  _Specify Database Type_
++
+::
+  Select the type of database you will be using. If you do not see your
+  database here, please make sure you have installed the correct php
+  modules.
+  +
+2.  _Provide Database Name_
+1.  _Database Name_
++
+::
+  <tt>suitecrm</tt> is default name for the database. You can specify a
+  custom name as well.
+2.  _Host Name_
++
+::
+  It is set to <tt>localhost</tt> by default. If your database server is
+  running on a different machine as your web server, you can specify a
+  custom location.
+3.  _User_ & _Password_
++
+::
+  Enter the username and password for the Database Administrator and
+  specify the SuiteCRM Database Username. _Note_: You must ensure that
+  the Database Administrator you specify has the permissions to create
+  and write to the SuiteCRM database.
+4.  _SuiteCRM Database User_
++
+::
+  The SuiteCRM application uses the SuiteCRM Database user to
+  communicate with the SuiteCRM database. For MySQL, MariaDB and SQL
+  Server, the Installer selects the Admin user by default. You can also
+  select an existing database user or create a new one. To do so Enter
+  the database username and password in the relevant fields and re-enter
+  the password to confirm it. This new user information displays in
+  _System Credentials_ on the _Confirm Settings_ page at the end of the
+  installation process.
++
+::
+2.  _Site Configuration_
+1.  _Identify Administration User_
+1.  _SuiteCRM Application Admin Name_
++
+::
+  This is the username of the administrator account. Ex:
+  <tt>johnsmith</tt>
+2.  _SuiteCRM Admin User Password_
++
+::
+  This is the password of the administrator account. Please re-enter it
+  in the _Re-enter SuiteCRM Admin User Password_ section for validation.
+3.  _URL of SuiteCRM Instance_
++
+::
+  The URL to the CRM. Ex:
+  <tt><nowiki>http://crm.yourserver.com/Suite-CRM-Directory%3C/nowiki%3E%3C/tt%3E
+4.  _Email Address_
++
+::
+  This is the administrator's email address. Ex:
+  <tt>john.smith@yourserver.com</tt>
++
+::
+3.  _More Options_
++
+::
+  In this section you can opt to:
+* Populate SuiteCRM with semo data
+* Add SMTP server specifications
+* Add branding (Name and logo)
+* Set the system locale
+* Set security options
++
+::
+  Once you are happy with all the settings on the page click _Next_ to
+  begin installation.
+  +
+5.  The _Installation_ screen
++
+::
+  The Installer validates the credentials of the specified
+  administrator. If a database with the specified name already exists,
+  it displays a dialog box prompting you to either accept the database
+  name or choose a new database. If you use an existing database name,
+  the database tables will be dropped. Click Accept to drop current
+  tables or click Cancel and specify a new database name.
+6.  Login to your new SuiteCRM instance!
+
+[[upgrading-suitecrm]]
+Upgrading SuiteCRM
+^^^^^^^^^^^^^^^^^^
+
+Log into your SuiteCRM instance to use the Upgrade Wizard. There is
+currently no silent upgrade path available for SuiteCRM. CAUTION: It is
+strongly recommended that you run the upgrade process on a copy of your
+production system.
+
+[[compatibility-matrix-for-upgrade]]
+Compatibility matrix for upgrade
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SuiteCRM runs on a variety of Operating Systems, Web servers, databases
+and PHP versions. It supports many browsers.
+
+Check the link:Compatibility_Matrix[Compatibility Matrix] for complete
+information on compatible versions.
+
+[[operating-systems]]
+Operating systems
+^^^^^^^^^^^^^^^^^
+
+* Windows: SuiteCRM runs on any OS that runs PHP
+* Linux: SuiteCRM runs on any OS that runs PHP
+* Mac: SuiteCRM runs on any OS that runs PHP
+
+[[databases]]
+Databases
+^^^^^^^^^
+
+* MySQL
+* Microsoft SQL Server
+* MariaDB
+
+[[web-servers]]
+Web Servers
+^^^^^^^^^^^
+
+* Apache
+* Microsoft IIS
+
+[[browsers]]
+Browsers
+^^^^^^^^
+
+On the client side, you can access SuiteCRM using any of these browsers:
+
+* Chrome
+* Firefox
+* Internet Explorer
+* Edge
+* Safari
+
+It is likely that many other browsers will work correctly even if they
+are not officially supported.
+
+[[upgrading-to-suitecrm-from-sugarcrm-community-edition]]
+Upgrading to SuiteCRM from SugarCRM Community Edition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Upgrade paths are available for SugarCRM 6.5.x to SuiteCRM 7.1.8 from
+the SuiteCRM https://suitecrm.com/download%7Cdownloads[1] section of the
+SuiteCRM website.
+
+[[upgrade-prerequisites]]
+Upgrade prerequisites
+^^^^^^^^^^^^^^^^^^^^^
+
+* Backup your current SuiteCRM directory and database before beginning
+the upgrade process.
+* Disable op-code caching before upgrading your SuiteCRM installation if
+op-code caching is enabled in the PHP configuration file. You can enable
+it after the upgrade process is complete.
+* Increase the default value of the parameters listed below before you
+begin the upgrade process if you are using Zend Core 2.0:
+** Navigate to C:\Program Files\Zend\Core\etc\fastcgi.conf and increase
+the default value for ConnectionTimeout to 3000 seconds and
+RequestTimeout to 6000 seconds.
+** Navigate to the php.ini file and increase the default value of
+max_execution_time to 6000 seconds.
+* Perform the following for the large size of the upgrade files:
+** Modify and save the value of Maximum upload size to 21000000 (20MB)
+in the Advanced section of the System Settings page of your current
+SuiteCRM installation.
+** Navigate to the php.ini file on your web server and configure the
+parameters listed below in the Advanced section of the System Settings
+page of your current SuiteCRM installation:
+*** Set post_max_size to at least 60MB
+*** Set upload_max_filesize settings to at least 60MB
+*** Set max_input_time to a large number
+*** Set memory_limit to 256MB
+
+Restart the web server and begin the upgrade process.
+
+* Ensure that LimitRequestBody is set to a large number or use the
+default value of 2GB if you are using an Apache web server and
+LimitRequestBody is set in the httpd.conffile. Restart Apache and begin
+the upgrade process.
+* Ensure that the webserver user has write permissions to the SuiteCRM
+database. The upgrade to SuiteCRM 7.0.x will add and replace files in
+several locations including the SuiteCRM root directory. The webserver
+user must have write permissions for the root folder and all
+sub-directories during the upgrade process.
+* The process of upgrading can take up to 30 minutes. Set the CGI script
+timeout to more than the default 300 seconds to ensure that the CGI
+application does not time out if you are using the IIS web server.
+* Save PHP files for customized modules (for example, accounts.php) in
+the Customs directory and not within the main module. Existing
+customizations may be overridden by changes in SuiteCRM 7.0.x during
+upgrade.
+
+[[upgrade-considerations]]
+Upgrade considerations
+^^^^^^^^^^^^^^^^^^^^^^
+
+The Dynamic Teams feature requires some database schema changes across
+all modules as part of the upgrade process. For larger databases, this
+operation can take some time to complete. Follow the steps listed below
+to ensure a smooth upgrade process:
+
+1.  Test your upgrade on a development instance instead of the
+production instance.
+2.  Use the Silent Upgrade method through the command line interface to
+conduct the upgrade instead of the Upgrade Wizard inside the application
+if your database contains more than 10000 records per table.
+3.  Log into the application as an Administrator and use the Repair
+option to repair and rebuild the database after the upgrade is complete.
+
+[[using-the-upgrade-wizard]]
+Using the Upgrade Wizard
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Upgrade Wizard provides a quick way to upgrade to the latest version
+of the SuiteCRM application. It includes critical upgrade logic as well
+as the SQL commands needed to upgrade the application. Ensure that the
+config.php file for your installation, located in the SuiteCRM root
+directory, is writable, before using the Upgrade Wizard. Note: Manual
+upgrades by file replacements and running the upgrade SQL are not
+supported.
+
+[[upgrading-suitecrm-using-the-upgrade-wizard]]
+Upgrading SuiteCRM using the Upgrade Wizard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.  Download the appropriate SuiteCRM Upgrade zip file from the SuiteCRM
+website to your local machine. For example, download the
+SuiteCRMPro-Upgrade-6.4.x-to-6.5.0.zipfile to upgrade SuiteCRM
+Professional from version 6.4.x to 6.5.0. Download the appropriate
+conversion file to convert to SuiteCRM Professional or SuiteCRM
+Enterprise.
+2.  Log into your existing SuiteCRM application as the administrator and
+click admin on the right-hand corner of the page.
+3.  Click Upgrade Wizard in the Systems panel of the Administration Home
+page.
+* This displays the Upgrade Wizard page.
+4.  Click Next.
+* This displays the System Checks page. and SuiteCRM begins the system
+check process. The Systems Check page indicates that there were no
+issues if the system check process completes successfully. Issues with
+file permissions, database, and server settings are listed on the page
+if the system check process encountered any problems.
+5.  Click Next if the system check is successful.
+* This displays the Upload an Upgrade page.
+6.  Click Browse, and navigate to the location of the upgrade zip file
+and select it.
+* The path to the file displays in the Upload an upgrade field.
+7.  Click Upload Upgrade to upload the package to the SuiteCRM
+application.
+* The system uploads the package and displays it on the page. Use the
+Delete Package button to remove the package if necessary.
+8.  Click Next.
+* This displays the Preflight Check page.
+* Click Show Schema Change Script toview differences in the SuiteCRM
+databases schema between your current and new SuiteCRM versions.
+* By default, the Upgrade Wizard Runs SQL option is selected as the
+database update method. Select Manual SQL Queries from the Database
+Update Method drop-down list and select the Check when SQL has been
+manually run box, if you ran the SQL queries manually.
+9.  Click Recheck to rerun Preflight Check. Click Next to skip this
+step.
+* This displays the Commit Upgrade page.
+* You can also click Show to see a list of files that were copied and
+the rebuilt results. You can also view skipped queries.
+10. Click Next.
+* During the upgrade process, SuiteCRM performs a three-way merge
+between the customized instance on old version, default instance on old
+version, and default instance on new version. This three-way merge adds
+any fields that have been added to the default module layouts in the new
+version to the corresponding module layouts in the existing version, if
+the module layouts in the old version were not customized through Studio
+(or in the appropriate upgrade-safe way) prior to the upgrade. The
+three-way merge also changes the placement of fields in
+non-Studio-customized module layouts to match the placement in the
+default module layouts.
+* SuiteCRM displays the Confirm Layouts page as Step 5 of the upgrade
+process if the existing module layouts have been customized, and there
+are changes to the default fields and field placement in the new module
+layouts.
+* The Confirm Layouts page lists the module layouts that have changed in
+the new version. The administrator has the option of applying the
+changes to the existing module layouts. By default, all of the listed
+module layouts are selected to be merged during the upgrade.
+* For example, in 6.1.0, SuiteCRM added the Assigned To fields to the
+default Detail View and Edit View layouts for Notes and for Email
+Templates. If the instance being upgraded has a customized EditView
+layout for Notes, but no customized layouts for Email Templates, the
+following will occur during the upgrade:
++
+a. The Confirm Layouts page appears as Step 5 in the Upgrade Wizard +
+b. The Confirm Layouts page displays the Notes module with the EditView
+and DetailView layouts. The Email Templates layouts do not display on
+the Confirm Layouts page because the existing layouts were not
+customized. +
+c. The Administrator has the option of choosing to merge the changes in
+the Notes module with the existing customized EditView layout.::
+11. Uncheck the module if you do not want to add the new fields to a
+module.
+12. Click Next.
+* This displays a message confirming that the layouts were successfully
+merged (if you chose to update your modules).
+13. Click Next.
+14. The Debrief page confirms the upgrade installation. Complete the
+steps for manual merging of files or running SQL queries now.
+15. Click Done.
+* This displays the Home page indicating that the upgrade is complete.
+16. Click Repair and select the Rebuild Relationships andRebuild
+Extensions options in the Systems panel of the Administration Home page.
+* For more information, see Repair.
+17. Manually merge the files by extracting the skipped file from the
+patch zip file if you unchecked any files to prevent the Upgrade Wizard
+from overwriting them. Merge the file installed in the SuiteCRM
+application directory.
+* Note:Check the upgradeWizard.log file in the SuiteCRM folder for
+information on unsuccessful SuiteCRM upgrades.
+
+[[uninstalling-a-suitecrm-instance]]
+Uninstalling a SuiteCRM instance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Follow these steps to uninstall your SuiteCRM instance:
+
+1.  Navigate to the directory within your web server where SuiteCRM is
+located.
+2.  Remove the SuiteCRM directory(Linux: rm -r <suitedirectory> if you
+wish to be prompted, rm -rf <suitedirectory> if you wish to delete the
+directory without being prompted).
+3.  Delete the SuiteCRM database schema from your server
+database(default is “suitecrm”, this will differ if this has been
+renamed during the installation process)..
+
+[[troubleshooting-and-support]]
+Troubleshooting and Support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SuiteCRM is an open source project. As such please do not contact us
+directly via email or phone for SuiteCRM support. Instead please use our
+support forum. By using the forum the knowledge is shared with everyone
+in the community. Our developers answer questions on the forum daily but
+it also gives the other members of the community the opportunity to
+contribute. If you would like customisation's to specifically fit your
+SuiteCRM needs then please use our contact form.
