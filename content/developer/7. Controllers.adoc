@@ -12,7 +12,7 @@ changes to the Model as well as passing control to the view as
 appropriate. SuiteCRM has the concept of actions which are actions that
 will be taken by the controller. Let’s take a look at a SuiteCRM URL:
 
-Example 7.1: Example SuiteCRM URL
+*_Example 7.1: Example SuiteCRM URL_*
 
 
 [source,php]
@@ -40,13 +40,14 @@ or alter functionality. Let’s look at adding a new action.
 In the first instance we will have to add our custom controller. This
 will vary slightly depending on the nature of the module.
 
-=== Custom module
+[discrete]
+==== Custom module
 
 In this case we can place the file directly into our module. You should
 create a new file (if it doesn’t exist) at
 `modules/<TheModule>/controller.php`. The contents will look similar to:
 
-Example 7.2: Creating a custom controller for a custom module
+*_Example 7.2: Creating a custom controller for a custom module_*
 
 
 [source,php]
@@ -59,7 +60,8 @@ Example 7.2: Creating a custom controller for a custom module
 
 
 
-=== Pre-existing modules
+[discrete]
+==== Pre-existing modules
 
 For pre-existing modules you should add the controller to +
 `custom/modules/<TheModule>/controller.php`.
@@ -74,7 +76,7 @@ here. We name the class +
 Here we don’t extend the existing controller or no such controller
 exists:
 
-Example 7.3: Creating a custom controller for an existing module
+*_Example 7.3: Creating a custom controller for an existing module_*
 
 
 [source,php]
@@ -90,8 +92,8 @@ Example 7.3: Creating a custom controller for an existing module
 Alternatively we extend the existing controller. Note that we are
 requiring the existing controller:
 
-Example 7.4: Creating a custom controller for an existing module with an
-existing controller
+*_Example 7.4: Creating a custom controller for an existing module with an
+existing controller_*
 
 
 [source,php]
@@ -107,7 +109,8 @@ existing controller
 
 
 
-=== Adding the action
+[discrete]
+==== Adding the action
 
 Now we can add a new action to our controller. Actions are created as
 methods on the controller with the name `action_<actionName>`. For
@@ -116,7 +119,7 @@ following method in one of the controllers we have created above. This
 can then perform whatever logic that is needed. In our example we will
 log the REQUEST and simply redirect:
 
-Example 7.5: Adding a custom controller action method
+*_Example 7.5: Adding a custom controller action method_*
 
 
 [source,php]
@@ -127,7 +130,8 @@ Example 7.5: Adding a custom controller action method
 
 
 
-=== Legacy Style
+[discrete]
+==== Legacy Style
 
 In previous versions of SugarCRM a new action was added by creating a
 file in either `modules/<TheModule>/<actionname>.php` or

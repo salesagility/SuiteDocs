@@ -1,9 +1,12 @@
+
 ---
 title: "User Guide"
 weight: 10
 pre: "<b>1. </b>"
 ---
 
+<<<<<<< HEAD
+=======
 ## The SuiteCRM Team and Community
 
 It is safe to say without the constant work from the SuiteCRM Team and
@@ -5697,3 +5700,4 @@ Templates.png](https://suitecrm.com/wiki/images/c/c1/Email_Templates.png)
 
 ![Security
 Groups.png](https://suitecrm.com/wiki/images/8/8d/Security_Groups.png)
+>>>>>>> redesign
