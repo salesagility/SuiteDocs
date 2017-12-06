@@ -4,20 +4,19 @@ weight: 21
 title: "21. Appendix B - API Methods"
 ---
 
-[[appendix-b]]= 21. Appendix B - API Methods
+= 21. Appendix B - API Methods
 
 == Methods
 
-=== login
+[discrete]
+==== login
 
 Logs into SuiteCRM and returns a session id used for subsequent API
 calls.
 
-Arguments
+*_Arguments_*
 
-login arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |user_auth |array |Authentication details for the API User
@@ -39,11 +38,9 @@ the API
 new record is saved and assigned to a user
 |=======================================================================
 
-Response
+*_login response_*
 
-login response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |id |string |The session id for this login. Required for all other API
@@ -93,34 +90,31 @@ for the logged in user(simply grabs the wl_list_max_entries_per_subpanel
 config key)
 |=======================================================================
 
-=== logout
+[discrete]
+==== logout
 
 Logs the web user out of SuiteCRM and destroys the session.
 
-Arguments
+*_Arguments_*
 
-logout arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===========================================
 |Name |Type |Desc
 |session |string |The session id. See login.
 |===========================================
 
-Response
-
+*_Response_* +
 No response.
 
-=== get_available_modules
+[discrete]
+==== get_available_modules
 
 Returns a list of the modules available for use. Also returns the ACL
 (Access Control List) for each module.
 
-Arguments
+*_Arguments_*
 
-get_available_modules arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -129,11 +123,9 @@ get_available_modules arguments
 or ‘all’.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_available_modules response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |modules |array |An array containing the module details.
@@ -154,26 +146,23 @@ etc.
 |modules[][acls][][access] |bool |Whether or not access is allowed.
 |=======================================================================
 
-=== get_document_revision
+[discrete]
+==== get_document_revision
 
 Returns the details for a specific document revision.
 
-Arguments
+*_get_document_revision arguments_*
 
-get_document_revision arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |======================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
 |i |string |The id of the document revision to retrieve
 |======================================================
 
-Response
+*_Response_*
 
-get_document_revision response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |document_revision |array |An array containing the document revision
@@ -192,16 +181,15 @@ revision.
 |document_revision[file] |binary string |The full contents of the file
 |=======================================================================
 
-=== get_entries
+[discrete]
+==== get_entries
 
 Gets a list of entries for a specific module and list of module ids.
 Optionally allows returning related records.
 
-Arguments
+*_Arguments_*
 
-get_entries arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -231,11 +219,9 @@ return for this related module.
 |track_view |bool |Whether to mark these records as recently viewed.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_entries response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |entry_list |array |An array of records.
@@ -291,15 +277,14 @@ value pair for this particular field.
 |The value of the field.
 |=======================================================================
 
-=== get_entries_count
+[discrete]
+==== get_entries_count
 
 Returns a count of entries matching the given query.
 
-Arguments
+*_Arguments_*
 
-get_entries_count arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -308,26 +293,23 @@ get_entries_count arguments
 |deleted |bool |Whether to include deleted records
 |===================================================================
 
-Response
+*_Response_*
 
-get_entries_count response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=================================================
 |Name |Type |Desc
 |result_count |int |The count of matching entries.
 |=================================================
 
-=== get_entry
+[discrete]
+==== get_entry
 
 Returns the details for a single record. Optionally allows returning
 related records.
 
-Arguments
+*_Arguments_*
 
-get_entry arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -355,19 +337,16 @@ return for this related module.
 |track_view |bool |Whether to mark these records as recently viewed.
 |=======================================================================
 
-Response
-
+*_Response_* +
 Identical to the response by `get_entries` except only one record will
 be returned.
 
-=== `get_entry_list`
+[discrete]
+==== get_entry_list
 
+*_Arguments_*
 
-Arguments
-
-get_entry_list arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -405,11 +384,9 @@ pagination.
 This is unused.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_entry_list response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result_count |int |The number of returned records.
@@ -471,15 +448,14 @@ value pair for this particular field.
 |The value of the field.
 |=======================================================================
 
-=== get_language_definition
+[discrete]
+==== get_language_definition
 
 Returns
 
-Arguments
+*_Arguments_*
 
-get_language_definition arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -492,26 +468,23 @@ get_language_definition arguments
 caching responses.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_language_definition response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result[<modulename>]</modulename> |string/array |An array of the labels
 or an md5 string for <modulename />
 |=======================================================================
 
-=== `get_last_viewed`
+[discrete]
+==== get_last_viewed
 
 Returns a list of the most recently viewed modules for the current user.
 
-Arguments
+*_Arguments_*
 
-get_last_viewed arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -522,11 +495,9 @@ records for.
 |module_names[] |string |The modules name.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_last_viewed response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result[] |array |An array of the details of recently viewed records
@@ -546,16 +517,15 @@ and unused.
 |result[][date_modified] |string |The date that this record was viewed.
 |=======================================================================
 
-=== `get_modified_relationships`
+[discrete]
+==== get_modified_relationships
 
 Returns a list of the modified relationships for the current user
 between one of the Calls, Meetings or Contacts modules.
 
-Arguments
+*_Arguments_*
 
-get_modified_relationships arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -593,11 +563,9 @@ relationship record. An empty array will return all fields.
 deleted records. In the format `Y-m-d H:i:s`.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_modified_relationships response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result_count |int |The number of returned records.
@@ -632,15 +600,14 @@ information.
 |error[description] |string |A description of the error that occurred.
 |=======================================================================
 
-=== `get_module_fields`
+[discrete]
+==== get_module_fields
 
 Returns the field definitions for a given module.
 
-Arguments
+*_Arguments_*
 
-get_module_fields arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -654,11 +621,9 @@ array will return all fields.
 |fields[] |string |The name of the field.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_module_fields response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |module_name |string |The name of the module.
@@ -724,15 +689,14 @@ for this link if appropriate.
 |link_fields[bean_name] |string |The bean that this field links to.
 |=======================================================================
 
-=== `get_module_fields_md5`
+[discrete]
+==== get_module_fields_md5
 
 Returns an md5 of the a modules field definitions. Useful for caching.
 
-Arguments
+*_Arguments_*
 
-get_module_fields_md5 arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -743,11 +707,9 @@ get_module_fields_md5 arguments
 definitions md5 for.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_module_fields_md5 response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result[] |array |An array of the md5’s keyed by the module name.
@@ -756,16 +718,15 @@ get_module_fields_md5 response
 <modulename />
 |=======================================================================
 
-=== `get_module_layout`
+[discrete]
+==== get_module_layout
 
 Returns the layout for specified modules and views. Optionally returns
 an md5 of the layouts.
 
-Arguments
+*_Arguments_*
 
-get_module_layout arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -791,11 +752,9 @@ access to this module and view.
 for caching.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_module_layout response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result |array |The array of results keyed by module name.
@@ -812,17 +771,16 @@ layouts keyed by the view name.
 the layout format.</modulename></viewname>
 |=======================================================================
 
-=== `get_module_layout_md5`
+[discrete]
+==== get_module_layout_md5
 
 Returns the md5 of the specified views for the specified modules.
 Behaves identically to get_module_layout with the md5 parameter set to
 true.
 
-Arguments
+*_Arguments_*
 
-get_module_layout arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -845,11 +803,9 @@ is supported.
 access to this module and view.
 |=======================================================================
 
-Response
+*_Response_*
 
-get_module_layout_md5 response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |md5 |array |The array of results keyed by module name.
@@ -865,74 +821,72 @@ keyed by the view name.
 <modulename>.</modulename></viewname>
 |=======================================================================
 
-=== `get_relationships`
+[discrete]
+==== get_relationships
 
 Returns related records given a specific module, record and list of
-links. ####Arguments
+links. 
 
-get_relationships arguments
+*_Arguments_*
 
-[cols=",,,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
-|Name |Type |Desc | 
-|session |string |The session id. See login. | 
+|Name |Type |Desc
+|session |string |The session id. See login. 
 
-|module_name |string |The module to return relationships for. | 
+|module_name |string |The module to return relationships for.
 
-|module_id |string |The record to return relationships for. | 
+|module_id |string |The record to return relationships for. 
 
-|link_field_name |string |The link field to follow for this record. | 
+|link_field_name |string |The link field to follow for this record. 
 
 |related_module_query |string |A WHERE clause to use to filter the
-related modules by. | 
+related modules by. 
 
 |related_fields |array |An array of the fields to return for matching
-records. | 
+records. 
 
-|related_fields[] |string |The name of the field. | 
+|related_fields[] |string |The name of the field. 
 
 |related_module_link_name_to_fields_array |name_value_list |An array of
-related fields to return for matching records. | 
+related fields to return for matching records. 
 
 |related_module_link_name_to_fields_array[] |array |Details for a
-specific link. | 
+specific link.
 
 |related_module_link_name_to_fields_array[][name] |string |The name of
-the link to follow for matching records. | 
+the link to follow for matching records. 
 
 |related_module_link_name_to_fields_array[][value] |array |An array of
-fields to return for this link. | 
+fields to return for this link. 
 
 |related_module_link_name_to_fields_array[][value][] |string |The field
-name. | 
+name. 
 
-|deleted |bool |Whether to include deleted records. | 
+|deleted |bool |Whether to include deleted records. 
 
-|order_by |string |In theory for ordering results but this is unused. | 
+|order_by |string |In theory for ordering results but this is unused. 
 
-|offset |int |The record offset to start with. | 
+|offset |int |The record offset to start with. 
 
-|limit |int |The maximum number of results to return. | 
+|limit |int |The maximum number of results to return. 
 |=======================================================================
 
-Response
-
+*_Response_* +
 Identical to the response by `get_entries`.
 
-=== `get_server_info`
+[discrete]
+==== get_server_info
 
 Returns information about the SuiteCRM server. Currently still returns
 information about the SugarCRM flavor and versions.
 
-Arguments
-
+*_Arguments_* +
 No arguments.
 
-Response
+*_Response_*
 
-get_server_info response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |flavor |string |The SugarCRM flavor. For SuiteCRM will always be ‘CE’.
@@ -943,26 +897,22 @@ the SuiteCRM version
 |gmt_time |string |The server time in UTC.
 |=======================================================================
 
-=== `get_upcoming_activities`
+[discrete]
+==== get_upcoming_activities
 
-Returns a list of the 10 upcoming activities (Meetings, Calls and Tasks
-- also includes Opportunities) for the currently logged in user.
+Returns a list of the 10 upcoming activities (Meetings, Calls and Tasks - also includes Opportunities) for the currently logged in user.
 
-Arguments
+*_Arguments_*
 
-get_upcoming_activities arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===========================================
 |Name |Type |Desc
 |session |string |The session id. See login.
 |===========================================
 
-Response
+*_Response_*
 
-get_upcoming_activities response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |result |array |An array of the upcoming activities.
@@ -979,31 +929,29 @@ get_upcoming_activities response
 it’s name.
 |=======================================================================
 
-=== `get_user_id`
+[discrete]
+==== get_user_id
 
 Returns the id of the currently logged in user.
 
-Arguments
+*_Arguments_*
 
-get_user_id arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===========================================
 |Name |Type |Desc
 |session |string |The session id. See login.
 |===========================================
 
-Response
+*_Response_*
 
-get_user_id response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================
 |Name |Type |Desc
 |id |string |The id of the current user.
 |=======================================
 
-=== `seamless_login`
+[discrete]
+==== seamless_login
 
 Marks a session as allowing a seamless login. If successful then the
 session id (see the login call) can be used in a URL (as MSID) to log
@@ -1012,35 +960,30 @@ have the session id `1234` then accessing the URL
 `example.com/index.php?MSID=1234`. The MSID parameter can be used in any
 valid SuiteCRM URL.
 
-Arguments
+*_Arguments_*
 
-seamless_login arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===========================================
 |Name |Type |Desc
 |session |string |The session id. See login.
 |===========================================
 
-Response
+*_Response_*
 
-seamless_login response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |========================================
 |Name |Type |Desc
 |result |bool |Boolean indicating success
 |========================================
 
-=== `search_by_module`
+[discrete]
+==== search_by_module
 
 Allows searching for records that contain a specific search string.
 
-Arguments
+*_Arguments_*
 
-search_by_module arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -1071,11 +1014,9 @@ that participate in the global search.
 This is unused.
 |=======================================================================
 
-Response
+*_Response_*
 
-search_by_module response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |entry_list |array |An array of the results for each module.
@@ -1097,15 +1038,14 @@ of this record.
 name of this record.
 |=======================================================================
 
-=== `set_document_revision`
+[discrete]
+==== set_document_revision
 
 Creates a new document revision for a document.
 
-Arguments
+*_Arguments_*
 
-set_document_revision arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -1122,28 +1062,27 @@ encoded.
 |note[revision] |int |The revision number for this revision.
 |=======================================================================
 
-Response
+*_Response_*
 
-set_document_revision response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |==========================================================
 |Name |Type |Desc
 |id |string |The id of the newly created document revision.
 |==========================================================
 
-=== `set_entries`
+[discrete]
+==== set_entries
 
 Creates or updates a list of records.
 
-Arguments
+*_Arguments_*
 
-Note: Supplying a value for the id field will perform an update for that
+{{% notice note %}}
+Supplying a value for the id field will perform an update for that
 record.
+{{% /notice %}}
 
-set_entries arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -1163,11 +1102,9 @@ record to create/update.
 |name_value_lists[][][value] |array |The value for the field.
 |=======================================================================
 
-Response
+*_Response_*
 
-set_entries response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |ids |array |An array of the resulting ids. Returned in the same order
@@ -1176,18 +1113,20 @@ as specified in the call to `set_entries`.
 |ids[] |array |The id for this record.
 |=======================================================================
 
-=== `set_entry`
+[discrete]
+==== set_entry
 
 Creates or updates a single record.
 
-Arguments
+*_Arguments_*
 
-Note: Supplying a value for the id field will perform an update for that
+{{% notice note %}}
+Supplying a value for the id field will perform an update for that
 record.
+{{% /notice %}}
 
-set_entries arguments
 
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -1205,36 +1144,31 @@ new/updated record.
 |name_value_lists[][value] |array |The value for the field.
 |=======================================================================
 
-Response
+*_Response_*
 
-set_entries response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |==========================================================
 |Name |Type |Desc
 |id |string |The id of the newly created or updated record.
 |==========================================================
 
-=== `get_note_attachment`
+[discrete]
+==== get_note_attachment
 
 Returns the details of a given note attachment.
 
-Arguments
+*_Arguments_*
 
-get_note_attachment arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===========================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
 |id |string |The id of the note to retrieve information for.
 |===========================================================
 
-Response
+*_Response_*
 
-get_note_attachment response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |note_attachment |array |The details for the note attachment.
@@ -1253,15 +1187,14 @@ this attachment is related to.
 that this attachment is related to.
 |=======================================================================
 
-=== `set_note_attachment`
+[discrete]
+==== set_note_attachment
 
 Creates a not attachment for a specified record.
 
-Arguments
+*_Arguments_*
 
-set_note_attachment arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -1276,25 +1209,22 @@ set_note_attachment arguments
 encoded.
 |=======================================================================
 
-Response
+*_Response_*
 
-set_entries response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |===================================================
 |Name |Type |Desc
 |id |string |The id of the note for this attachment.
 |===================================================
 
-=== `set_relationship`
+[discrete]
+==== set_relationship
 
 Sets a relationship between a record and other records.
 
-Arguments
+*_Arguments_*
 
-set_relationship arguments
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |session |string |The session id. See login.
@@ -1324,11 +1254,9 @@ set.
 instead of creating/updating it.
 |=======================================================================
 
-Response
+*_Response_*
 
-set_relationship response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |created |int |The number of relationships created.
@@ -1339,64 +1267,61 @@ created/deleted.
 |deleted |int |The number of relationships deleted.
 |=======================================================================
 
-=== `set_relationships`
+[discrete]
+==== set_relationships
 
 Sets relationships between multiple records.
 
-Arguments
+*_Arguments_*
 
-set_relationships arguments
-
-[cols=",,,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
-|Name |Type |Desc | 
-|session |string |The session id. See login. | 
+|Name |Type |Desc  
+|session |string |The session id. See login.  
 
-|module_names |array |An array of modules to relate records to. | 
+|module_names |array |An array of modules to relate records to. 
 
-|module_names[] |string |The name of the module to relate records to. | 
+|module_names[] |string |The name of the module to relate records to. 
 
 |module_ids |array |An array of the ids of records to relate records to.
-| 
 
-|module_ids[] |string |The id of the record to relate records to. | 
+
+|module_ids[] |string |The id of the record to relate records to. 
 
 |link_field_names |string |An array of the link names through which
-records will be related. | 
+records will be related. 
 
 |link_field_names[] |string |The name of the link field on the module
-through which records will be related. | 
+through which records will be related.  
 
 |related_ids |array |An array of an array of record ids for each module
-specified. | 
+specified.  
 
 |related_ids[] |array |An array of record ids for the corresponding
-module. | 
+module. 
 
-|related_ids[][] |string |The record id. | 
+|related_ids[][] |string |The record id.  
 
 |name_value_lists |array |An array of an array of name value list of
-additional relationship fields to set. | 
+additional relationship fields to set. 
 
 |name_value_lists[] |name_value_list |An array of name value pairs for
-the relationship fields of the corresponding module. | 
+the relationship fields of the corresponding module.  
 
-|name_value_lists[][name] |string |The name of the field to set. | 
+|name_value_lists[][name] |string |The name of the field to set.  
 
-|name_value_lists[][value] |string |The value of the field to set. | 
+|name_value_lists[][value] |string |The value of the field to set. 
 
 |delete_array |array |An array of booleans indicating whether or not the
-relationship should be deleted for each module. | 
+relationship should be deleted for each module.  
 
 |delete_array[] |bool |Whether or not to delete the specified
-relationship instead of creating/updating it. | 
+relationship instead of creating/updating it.  
 |=======================================================================
 
-Response
+*_Response_*
 
-set_relationships response
-
-[cols=",,",options="header",]
+[cols="35%,15%,55%",options="header",]
 |=======================================================================
 |Name |Type |Desc
 |created |int |The number of relationships created.

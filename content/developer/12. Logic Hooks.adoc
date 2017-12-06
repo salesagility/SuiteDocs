@@ -24,15 +24,15 @@ Application hooks are hooks which are fired in the application context
 must be defined in the top level logic hook (i.e.
 `custom/modules/logic_hooks.php`).
 
-after_entry_point::
+`after_entry_point`::
   Called after SuiteCRM has initialised but before any other processing
   is carried out.
-after_ui_footer::
+`after_ui_footer`::
   Called after the UI footer.
-after_ui_frame::
+`after_ui_frame`::
   Fired after the UI has been displayed but before the footer has been
   displayed.
-server_round_trip::
+`server_round_trip`::
   Fired at the end of every page request.
 
 == User Hooks
@@ -41,52 +41,52 @@ User hooks are fired for certain login/logout actions. Similar to
 Application Hooks, these hooks must be defined in the top level logic
 hook (i.e. custom/modules/logic_hooks.php).
 
-after_login::
+`after_login`::
   Fired after a user logs in to SuiteCRM .
-after_logout::
+`after_logout`::
   Fired when a user logs out of SuiteCRM.
-before_logout::
+`before_logout`::
   Fired before a user logs out of SuiteCRM.
-login_failed::
+`login_failed`::
   Fired when a user attempts to login to SuiteCRM but the login fails.
 
 == Module Hooks
 
 Module Hooks are called on various record actions for a specific module.
 
-after_delete::
+`after_delete`::
   Fired when a record is deleted.
-after_relationship_add::
+`after_relationship_add`::
   Fired after a relationship is added between two records. Note that
   this may be called twice, once for each side of the relationship.
-after_relationship_delete::
+`after_relationship_delete`::
   Fired after a relationship between two records is deleted.
-after_restore::
+`after_restore`::
   Fired after a record is undeleted.
-after_retrieve::
+`after_retrieve`::
   Fired after a record is retrieved from the DB.
-after_save::
+`after_save`::
   Fired after a record is saved. Note that due to some peculiarities
   some related modules may not be persisted to the database. The logic
   hook is fired within the SugarBean classes save method. Some
   implementing classes may save related beans after this method returns.
   A notable example of this is the saving of email addresses in Company
   modules.
-before_delete::
+`before_delete`::
   Fired before a record is deleted.
-before_relationship_add::
+`before_relationship_add`::
   Fired before a relationship is added between two records. Note that
   this may be called twice, once for each side of the relationship.
-before_relationship_delete::
+`before_relationship_delete`::
   Fired before a relationship between two records is deleted. Note that
   this may be called twice, once for each side of the relationship.
-before_restore::
+`before_restore`::
   Fired before a record is undeleted.
-before_save::
+`before_save`::
   Fired before a record is saved.
-handle_exception::
+`handle_exception`::
   Fired when an exception occurs in a record.
-process_record::
+`process_record`::
   Fired when a record is processed ready to be displayed in list views
   or dashlets.
 
@@ -96,11 +96,11 @@ Job queue hooks are fired for scheduler jobs. Similar to application
 hooks these hooks must be defined in the top level logic hook (i.e.
 `custom/modules/logic_hooks.php`).
 
-job_failure::
+`job_failure`::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception and it will not be retried. See the section on
   link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
-job_failure_retry::
+`job_failure_retry`::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception but it will be retried. See the section on
   link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
@@ -111,12 +111,13 @@ Depending on the Logic Hook type logic hooks are either placed into +
 `custom/modules/Logic_Hooks.php` or
 `custom/modules/<TargetModule>/Logic_Hooks.php`.
 
-=== Logic_Hooks.php
+[discrete]
+==== Logic_Hooks.php
 
 The logic hook file itself specifies which logic hooks to fire on this
 event. It looks something like this:
 
-Example 12.1: Logic hook file
+*_Example 12.1: Logic hook file_*
 
 
 [source,php]
@@ -213,7 +214,7 @@ one version so this line is unused.
 
 
 Here we set up an empty array for our Logic Hooks. This should always be
-called $hook_array.
+called `$hook_array`.
 
 [source,php]
 7 $hook_array['before_save'] = Array();
@@ -235,20 +236,17 @@ Finally we reach an interesting line. This adds a new logic hook to the
 before_save hooks. This array contains 5 entries which define this hook.
 These are:
 
-Sort order
-
+*Sort order* +
 The first argument (77) is the sort order for this hook. The logic hook
 array is sorted by this value. If you wish for a hook to fire earlier
 you should use a lower number. If you wish for a hook to be fired later
 you should use a higher number. The numbers themselves are arbitrary.
 
-Hook label
-
+*Hook label* +
 The second argument (‘updateGeocodeInfo’) is simply a label for the
 logic hook. This should be something short but descriptive.
 
-Hook file
-
+*Hook file* +
 The third argument is where the actual class for this hook is. In this
 case it is in a file called
 `custom/modules/Cases/CasesJjwg_MapsLogicHook.php`. Generally you will
@@ -257,42 +255,36 @@ want the files to be somewhere in custom and it is usual to have them in
 `custom/modules/<SomeDescriptiveName>.php` for Logic Hooks not targeting
 a specific module. However the files can be placed anywhere.
 
-Hook class
-
+*Hook class* +
 The fourth argument is the class name for the Logic Hook class. In this
-case +
-`CasesJjwg_MapsLogicHook`. It is usual for the class name to match the
+case `CasesJjwg_MapsLogicHook`. It is usual for the class name to match the
 file name but this is not required.
 
-Hook method
-
+*Hook method* +
 The fifth, and final, argument is the method that will be called on the
 class. In this case `updateGeocodeInfo`.
 
-=== Adding your own logic hooks
-
+*Adding your own logic hooks* +
 When adding logic hooks you should make full use of the Extensions
 framework (see the section on Extensions). This involves creating a file
-in +
-`custom/Extension/application/Ext/LogicHooks/` for application hooks
-and +
-`custom/Extension/modules/<TheModule>/Ext/LogicHooks/` for module
+in `custom/Extension/application/Ext/LogicHooks/` for application hooks
+and `custom/Extension/modules/<TheModule>/Ext/LogicHooks/` for module
 specific hooks. These files can then add to/alter the `$hook_array` as
 appropriate.
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] |After
+{{% notice info %}}
+After
 adding a new logic hook it is necessary to perform a quick repair and
 rebuild in the admin menu for this to be picked up.
-|=======================================================================
+{{% /notice %}}
 
-=== Logic Hook function
+[discrete]
+==== Logic Hook function
 
 The logic hook function itself will vary slightly based on the logic
 hook type. For module hooks it will appear similar to:
 
-Example 12.2: Example logic hook method
+*_Example 12.2: Example logic hook method_*
 
 
 [source,php]
@@ -308,7 +300,7 @@ Example 12.2: Example logic hook method
 
 Application logic hooks omit the $bean argument:
 
-Example 12.3: Example logic hook method for application hooks
+*_Example 12.3: Example logic hook method for application hooks_*
 
 
 [source,php]
@@ -323,8 +315,7 @@ Example 12.3: Example logic hook method for application hooks
 
 
 
-$bean (`SugarBean`)
-
+$bean (`SugarBean`) ::
 The $bean argument passed to your logic hook is usually the bean that
 the logic hook is being performed on. For User Logic Hooks this will be
 the current User object. For module logic hooks (such as `before_save`)
@@ -332,25 +323,17 @@ this will be the record that is being saved. For job queue logic hooks
 this will be the SchedulersJob bean. Note that for Application Logic
 Hook this argument is not present.
 
-$event (`string`)
-
+$event (`string`) ::
 The $event argument contains the logic hook event e.g `process_record`,
 `before_save`, +
 `after_delete` etc.
 
-$arguments (`array`)
-
+$arguments (`array`) ::
 The $arguments argument contains any additional details of the logic
 hook event. I.e. in the case of before_relationship_add this will
 contain details of the related modules.
 
-== Tips
-
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] a|
-=== Triggering extra logic hooks
-
+{{% notice tip %}}
 If you are performing certain actions that may trigger another logic
 hook (such as saving a bean) then you need to be aware that this will
 trigger the logic hooks associated with that bean and action. This can
@@ -359,18 +342,12 @@ saves. One way around this is to simply be careful of the hooks that you
 may trigger. If doing so is unavoidable you can usually set an
 appropriate flag on the bean and then check for that flag in subsequent
 hooks.
+{{% /notice %}}
 
-|=======================================================================
-
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] a|
-=== Think of the user
-
+{{% notice tip %}}
 Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user
 will need to wait for that code to run. This can be avoided by either
 ensuring the code runs quickly or by using the Job Queue (see the Job
 Queue chapter for more information).
-
-|=======================================================================
+{{% /notice %}}

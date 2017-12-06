@@ -24,9 +24,9 @@ repair and rebuild in the admin menu.
 
 == Standard Extensions
 
-List of standard SuiteCRM extensions
+List of standard SuiteCRM extensions:
 
-[cols=",,,",options="header",]
+[cols="20,20,20,50",options="header",]
 |=======================================================================
 |Extension Directory |Compiled file |Module |Description
 |ActionViewMap |action_view_map.ext.php |  |Used to map actions for a
@@ -99,12 +99,13 @@ others (in a similar manner to, for example, how vardefs can be added -
 see the chapter on link:../4.-vardefs#vardefs-chapter[Vardefs]).
 
 To create a custom extension you simply add a new file in +
-`custom/Extension/application/Ext/Extensions`. This can be given a name
-of your choosing. Our example will use +
+`custom/Extension/application/Ext/Extensions`. 
+
+This can be given a name of your choosing. Our example will use +
 `custom/Extension/application/Ext/Extensions/SportsList.php` and will
 look like:
 
-Example 14.1: Adding an entry point entry
+*_Example 14.1: Adding an entry point entry_*
 
 
 [source,php]
@@ -117,14 +118,13 @@ Example 14.1: Adding an entry point entry
 
 
 
-Now when a Quick Repair and rebuild is run any files in +
-`custom/Extension/application/Ext/SportsList/` will be consolidated
-into +
-`custom/application/Ext/SportsList/sportslist.ext.php`. On it’s own this
+Now when a Quick Repair and rebuild is run any files in `custom/Extension/application/Ext/SportsList/` will be consolidated
+into `custom/application/Ext/SportsList/sportslist.ext.php`. 
+
+On it’s own this
 file will not do anything but you are now able to write custom code that
 checks the consolidated file rather than having to worry about searching
 for customisations.
-=== 1.  [[fn-langNote]]
 
 The language extensions are treated specially and, as such, aren’t
 compiled to a single file.link:../14.-extension-framework#fnref-langNote[↩]

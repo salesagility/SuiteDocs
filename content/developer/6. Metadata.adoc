@@ -17,7 +17,7 @@ fields are used in the search.
 
 Module metadata can be found in:
 
-.Example 6.1: Module metadata location
+*_Example 6.1: Module metadata location_*
 [source,php]
 modules/<TheModule>/metadata/
 
@@ -37,14 +37,15 @@ folder is the only location checked - any version in
 
 == Different metadata
 
-=== detailviewdefs.php
+[discrete]
+==== detailviewdefs.php
 
 detailviewdefs.php provides information on the layout and fields of the
 detail view for this module. This file uses the same structure as
 editviewdefs.php. Let’s look at an example for a fictional module
 `ABC_Vehicles`:
 
-Example 6.2: DetailView metadata definition
+*_Example 6.2: DetailView metadata definition_*
 
 
 [source,php]
@@ -135,8 +136,7 @@ entry for the module ABC_Vehicles into `$viewdefs` (DetailView will be
 EditView or QuickCreateView as appropriate). This array has two main
 keys defined here:
 
-templateMeta
-
+*templateMeta* +
 The templateMeta key provides information about the view in general. The
 `['form']['buttons']` entries define the buttons that should appear in
 this view.
@@ -150,8 +150,7 @@ this view.
   An array of additional JavaScript files to include. This is useful for
   adding custom JavaScript behaviour to the page.
 
-panels
-
+*panels* +
 The panels entry defines the actual layout of the Detail (or Edit) view.
 Each entry is a new panel in the view with the key being the label for
 that panel. We can see in our example that we have 2 panels. One uses
@@ -162,7 +161,7 @@ Each panel has an array entry for each row, with each array containing
 an entry for each column. For example we can see that the first row has
 the following definition:
 
-Example 6.3: DetailView metadata row definition
+*_Example 6.3: DetailView metadata row definition_*
 
 
 [source,php]
@@ -202,7 +201,7 @@ values. Values most commonly used are:
   `custom/include/SugarFields/Fields`. An example is setting the size of
   a textarea:
 
-Example 6.4: DetailView metadata displayParams
+*_Example 6.4: DetailView metadata displayParams_*
 
 
 [source,php]
@@ -213,7 +212,7 @@ Example 6.4: DetailView metadata displayParams
 
 
 
-customCode::
+`customCode`::
   Allows supplying custom smarty code to be used for the display. The
   code here can include any valid smarty code and this will also have
   access to the current fields in this view via `$fields`. An example of
@@ -223,18 +222,20 @@ customCode::
   the field that would have been used. For example
   `{if $someCondition}@@FIELD@@{/if}` will conditionally show the field.
 
-=== editviewdefs.php
+[discrete]
+==== editviewdefs.php
 
 `editviewdefs.php` provides information on the layout and fields of the
 edit view for this module. This file uses the same structure as
 detailviewdefs.php. Please see the information on detailviewdefs.php.
 
-=== listviewdefs.php
+[discrete]
+==== listviewdefs.php
 
 The `listviewdefs.php` file for a module defines what fields the list
 view for that module will display. Let’s take a look at an example:
 
-Example 6.5: ListView metadata definition
+*_Example 6.5: ListView metadata definition_*
 
 
 [source,php]
@@ -287,26 +288,27 @@ contains an entry for each field that we wish to show in the list view
 and is keyed by the upper case name of the field. For example, the
 `REPORT_MODULE` key refers to the `report_module` field of AOR_Reports.
 
-type::
+`type`::
   The type of the field. This can be used to override how a field is
   displayed.
-default::
+`default`::
   Whether this field should be shown in the list view by default. If
   false then the field will appear in the available columns list in
   studio.
-studio::
+`studio`::
   Whether or not this field should be displayed in studio. This can be
   useful to ensure that a critical field is not removed.
-label::
+`label`::
   The label to be used for this field. If this is not supplied then the
   default label for that field will be used.
-width::
+`width`::
   The width of the field in the list view. Note that, although this is
   usually given as a percentage it is treated as a proportion. The
   example above has five columns with a width of `15%` but these will
   actually be `20%` since this is a ratio.
 
-=== popupdefs.php
+[discrete]
+==== popupdefs.php
 
 popupdefs.php provides information on the layout, fields and search
 options of the module popup that is usually used when selecting a
@@ -314,7 +316,7 @@ related record.
 
 Let’s look at the default popupdefs.php for the Accounts module:
 
-Example 6.6: PopupView metadata definition
+*_Example 6.6: PopupView metadata definition_*
 
 
 [source,php]
@@ -413,7 +415,8 @@ keys:
   popup. See the individual search defs in the searchdefs.php section
   (for example the `basic_search` array).
 
-=== quickcreatedefs.php
+[discrete]
+==== quickcreatedefs.php
 
 `quickcreatedefs.php` provides information on the layout and fields of
 the quick create view for this module (this is the view that appears
@@ -421,14 +424,15 @@ when creating a record from a subpanel). This file uses the same
 structure as `detailviewdefs.php`. Please see the information on
 `detailviewdefs.php`.
 
-=== searchdefs.php
+[discrete]
+==== searchdefs.php
 
 The search defs of a module define how searching in that module looks
 and behaves.
 
 Let’s look at an example.
 
-Example 6.7: Search View metadata definition
+*_Example 6.7: Search View metadata definition_*
 
 
 [source,php]
@@ -550,26 +554,25 @@ Example 6.7: Search View metadata definition
 Here we setup a new array for `Accounts` in the `$searchdefs` array.
 This has two keys:
 
-templateMeta
-
+`templateMeta` ::
 The `templateMeta` key controls the basic look of the search forms. Here
 we define some overall layout info such as the maximum columns (3) and
 the maximum number of columns for the basic search (4). Finally we set
 the widths for the search fields and their labels.
 
-layout
-
+`layout` ::
 The `layout` key contains the layout definitions for the basic search
 and advanced search. This is simply a list of array definition of the
 fields. See the section on listviewdefs.php for a description of some of
 the options.
 
-=== `subpaneldefs.php`
+[discrete]
+==== subpaneldefs.php
 
 The subpaneldefs.php file provides definitions for the subpanels that
 appear in the detail view of a module. Let’s look at an example:
 
-Example 6.8: Subpanel metadata definition
+*_Example 6.8: Subpanel metadata definition_*
 
 
 [source,php]
@@ -644,24 +647,24 @@ keyed by a name. This name should be something recognisable. In the case
 above it is the name of the link field displayed by the subpanel. The
 entry for each subpanel usually has the following defined:
 
-order::
+`order`::
   A number used for sorting the subpanels. The values themselves are
   arbitrary and are only used relative to other subpanels.
-module::
+`module`::
   The module which will be displayed by this subpanel. For example the
   `aos_quotes_project` def in the example above will display a list of
   `Project` records.
-subpanel_name::
+`subpanel_name`::
   The subpanel from the displayed module which will be used. See the
   subpanels section of this chapter.
-sort_by::
+`sort_by`::
   The field to sort the records on.
-sort_order::
+`sort_order`::
   The order in which to sort the `sort_by` field. `asc` for ascending
   `desc` for descending.
-title_key::
+`title_key`::
   The language key to be used for the label of this subpanel.
-get_subpanel_data::
+`get_subpanel_data`::
   Used to specify where to retrieve the subpanel records. Usually this
   is just a link name for the current module. In this case the related
   records will be displayed in the subpanel. However, for more complex
@@ -672,7 +675,7 @@ get_subpanel_data::
   by using the `function_parameters` key. An example of a subpanel which
   uses a function can be found in link:../20.-appendix-a---code-examples#appendix-a[Appendix
   A].
-function_parameters::
+`function_parameters`::
   Specifies the parameters for a subpanel which gets it’s information
   from a function (see +
   `get_subpanel_data`). This is an array which allows specifying where
@@ -682,24 +685,25 @@ function_parameters::
   Additionally this array will be passed as an argument to the function
   defined in `get_subpanel_data` which allows passing in arguments to
   the function.
-generate_select::
+`generate_select`::
   For function subpanels (see `get_subpanel_data`) whether or not the
   function will return an array representing the query to be used (for
   `generate_select = true`) or whether it will simply return the query
   to be used as a string.
-get_distinct_data::
+`get_distinct_data`::
   Whether or not to only return distinct rows. Relationships do not
   allow linking two records more than once therefore this only really
   applies if the subpanel source is a function. See +
   `get_subpanel_data` for information on function subpanel sources.
-top_buttons::
+`top_buttons`::
   Allows defining the buttons to appear on the subpanel. This is simply
   an array of the button definitions. These definitions have, at least,
   the `widget_class` defined which decides the button class to use in
   `include/generic/SugarWidgets`. Depending on the button this array may
   also be used to pass in extra arguments to the widget class.
 
-=== subpanels
+[discrete]
+==== subpanels
 
 Inside the metadata folder is the `subpanels` folder. This allows
 creating different subpanel layouts for different parent modules. For
@@ -711,7 +715,7 @@ the parent module. The usual subpanel file is simply called
 `default.php`. Let’s look at the
 `modules/Accounts/metadata/subpanels/default.php` file:
 
-Example 6.8: Module Subpanels definition
+*_Example 6.8: Module Subpanels definition_*
 
 
 [source,php]
@@ -788,7 +792,8 @@ subpanel. These are:
   Defines the list of fields to be displayed in this subpanel. See the
   section on `listviewdefs.php` for more information.
 
-=== studio.php
+[discrete]
+==== studio.php
 
 studio.php is the simplest file in metadata and it’s existence is simply
 used to confirm if a module should be shown in studio for user tweaking.

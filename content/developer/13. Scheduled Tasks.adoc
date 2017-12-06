@@ -26,14 +26,16 @@ What if you want to create your own tasks?
 
 SuiteCRM lets you define your own Scheduler. We do this by creating a
 file in +
-`custom/Extension/modules/Schedulers/Ext/ScheduledTasks/`. You can give
-this file a name of your choice but it is more helpful to give it a
+`custom/Extension/modules/Schedulers/Ext/ScheduledTasks/`. 
+
+You can give this file a name of your choice but it is more helpful to give it a
 descriptive name. Let’s create a simple file named +
 `custom/Extension/modules/Schedulers/Ext/ScheduledTasks/CleanMeetingsScheduler.php`.
+
 This will add a new job to the job strings and a new method that the
 scheduler will call:
 
-Example 13.1: Example Clean Meetings Scheduler
+*_Example 13.1: Example Clean Meetings Scheduler_*
 
 
 [source,php]
@@ -74,8 +76,7 @@ Example 13.1: Example Clean Meetings Scheduler
 
 
 
-We also make sure that we add a language file in +
-`custom/Extension/modules/Schedulers/Ext/Language/en_us.cleanMeetingsScheduler.php`
+We also make sure that we add a language file in `custom/Extension/modules/Schedulers/Ext/Language/en_us.cleanMeetingsScheduler.php`
 again, the name of the file doesn’t matter but it is helpful to use
 something descriptive. This will define the language string for our job
 so the user sees a nice label. See the section on language strings for
@@ -84,7 +85,7 @@ LBL_UPPERMETHODNAME. In our case our method name is
 `cleanMeetingsScheduler` so our language label key will be
 `LBL_CLEANMEETINGSSCHEDULER`.
 
-Example 13.2: Example Language string for Clean Meetings Scheduler
+*_Example 13.2: Example Language string for Clean Meetings Scheduler_*
 
 
 [source,php]
@@ -105,8 +106,6 @@ can now create a new scheduler to call our new method:
 image:images/CreateMeetingsScheduler.png[Creating a scheduler that uses
 our new method]
 
-Creating a scheduler that uses our new method
-
 This will now behave just like any other scheduler and we can have this
 run as often (or as rarely) as we would like. Take care here. The
 default frequency is every one minute. If your task is heavy duty or
@@ -120,7 +119,7 @@ do not need the user to wait for this to be completed. A good example of
 this is sending an email in a logic hook (see the Logic Hooks chapter
 for information on these). Assuming we have the following logic hook:
 
-Example 13.3: Example Email sending Logic Hook
+*_Example 13.3: Example Email sending Logic Hook_*
 
 
 [source,php]
@@ -163,7 +162,7 @@ would do this.
 
 First we want our Logic Hook class to create the scheduled job:
 
-Example 13.4: Example Scheduled Job Creation
+*_Example 13.4: Example Scheduled Job Creation_*
 
 
 [source,php]
@@ -199,12 +198,11 @@ Example 13.4: Example Scheduled Job Creation
 
 
 
-Next we create the BeanEmailJob class. This is placed into the +
-`custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/` directory
+Next we create the BeanEmailJob class. This is placed into the `custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/` directory
 with the same name as the class. So in our example we will have: +
 `custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/BeanEmailJob.php`
 
-Example 13.5: Example Scheduler job
+*_Example 13.5: Example Scheduler job_*
 
 
 [source,php]
@@ -251,7 +249,8 @@ Now whenever a user triggers the hook it will be much quicker since we
 are simply persisting a little info to the database. The scheduler will
 run this in the background.
 
-=== Retries
+[discrete]
+==== Retries
 
 Occasionally you may have scheduled jobs which could fail
 intermittently. Perhaps you have a job which calls an external API. If
@@ -268,7 +267,7 @@ which govern how retries are handled. These are `requeue` and
 
 We can revisit our previous example and add two retries:
 
-Example 13.6: Setting the retry count on a scheduled job
+*_Example 13.6: Setting the retry count on a scheduled job_*
 
 
 [source,php]
@@ -310,7 +309,7 @@ place to start. For both scheduled tasks and job queue tasks you can
 also check the job_queue table. For example, in MySQL we can check the
 last five scheduled jobs:
 
-Example 13.7: Example MySQL query for listing jobs
+*_Example 13.7: Example MySQL query for listing jobs_*
 
 
 [source,php]
@@ -321,7 +320,7 @@ SELECT * FROM job_queue ORDER BY date_entered DESC LIMIT 5
 This will give us information on the last five jobs. Alternatively we
 can check on specific jobs:
 
-Example 13.8: Example MySQL query for listing BeanEmailJobs
+*_Example 13.8: Example MySQL query for listing BeanEmailJobs_*
 
 
 [source,php]
@@ -331,7 +330,7 @@ SELECT * FROM job_queue WHERE target = 'class::BeanEmailJob'
 
 In either case this will give details for the job(s):
 
-Example 13.9: Example MySQL list of jobs
+*_Example 13.9: Example MySQL list of jobs_*
 
 
 [source,php]
@@ -348,8 +347,7 @@ assigned_user_id: 1
       resolution: success
          message: NULL
           target: class::BeanEmailJob
-            data: {"id":"103c4c9b-336f-0e87-782e-5501defb5900","module":"Account\
-s"}
+            data: {"id":"103c4c9b-336f-0e87-782e-5501defb5900","module":"Accounts"}
          requeue: 0
      retry_count: NULL
    failure_count: NULL
@@ -377,7 +375,7 @@ you can usually check your PHP logs.
 As a last resort you can manually run the scheduler from the SuiteCRM
 directory using:
 
-Example 13.10: Running the scheduler manually
+*_Example 13.10: Running the scheduler manually_*
 
 
 [source,php]
