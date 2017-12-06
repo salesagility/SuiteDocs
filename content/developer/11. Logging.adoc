@@ -11,7 +11,7 @@ title: "11. Logging"
 Logging in SuiteCRM is achieved by accessing the log global. Accessing
 an instance of the logger is as simple as
 
-Example 11.1: Accessing the log
+*_Example 11.1: Accessing the log_*
 
 
 [source,php]
@@ -22,7 +22,7 @@ $GLOBALS['log']
 This can then be used to log a message. Each log level is available as a
 method. For example:
 
-Example 11.2: Logging messages
+*_Example 11.2: Logging messages_*
 
 
 [source,php]
@@ -33,7 +33,7 @@ Example 11.2: Logging messages
 
 This will produce the following output:
 
-Example 11.3: Logging messages example output
+*_Example 11.3: Logging messages example output_*
 
 
 [source,php]
@@ -46,7 +46,7 @@ Example 11.3: Logging messages example output
 
 The logging output displays the following information by default:
 
-Example 11.4: Logging messages example output
+*_Example 11.4: Logging messages example output_*
 
 
 [source,php]
@@ -81,7 +81,9 @@ The default log levels (in order of verbosity) are:
 * `fatal`
 * `security`
 
+{{% notice note %}}
 Generally on a production instance you will use the less verbose levels
 (probably `error` or `fatal`). However whilst you are developing you can
 use whatever level you prefer. I prefer the most verbose level -
 `debug`.
+{{% /notice %}}

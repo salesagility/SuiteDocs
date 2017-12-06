@@ -18,7 +18,8 @@ comes to the kind of performance you can expect. A full guide on server
 setup is outside the scope of this book. However there are some things
 you can do to ensure that you get the best performance out of SuiteCRM.
 
-=== PHP
+[discrete]
+==== PHP
 
 Installing a PHP opcode cache will increase the performance of all PHP
 files. These work by caching the compilation of PHP files resulting in
@@ -28,7 +29,8 @@ are using Linux then http://php.net/manual/en/book.apc.php[APC] is the
 usual choice. Windows users should check out
 http://php.net/manual/en/book.wincache.php[WinCache].
 
-=== MySQL
+[discrete]
+==== MySQL
 
 MySQL is notorious for having small default settings. Fully optimising
 MySQL is outside the scope of this book (however checkout
