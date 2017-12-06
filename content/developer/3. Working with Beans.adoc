@@ -16,7 +16,13 @@ various ways of working with beans.
 The BeanFactory allows dynamically loading bean instances or creating
 new records. For example to create a new bean you can use:
 
+<<<<<<< HEAD
 .Example 3.1: Creating a new Bean using the BeanFactory, MAN!
+=======
+*_Example 3.1: Creating a new Bean using the BeanFactory_*
+
+
+>>>>>>> 62b8844be4da84ab5761276c35bbe4f5145b6a0f
 [source,php]
 1 $bean = BeanFactory::newBean('<TheModule>');
 2 //For example a new account bean:
@@ -26,7 +32,7 @@ new records. For example to create a new bean you can use:
 
 Retrieving an existing bean can be achieved in a similar manner:
 
-Example 3.2: Retrieving a bean with the BeanFactory
+*_Example 3.2: Retrieving a bean with the BeanFactory_*
 
 
 [source,php]
@@ -43,7 +49,7 @@ example see the Searching for Beans section). To deliberately retrieve
 an unpopulated bean you can omit the second argument of the `getBean`
 call. I.e.
 
-Example 3.3: Retrieving an unpopulated bean
+*_Example 3.3: Retrieving an unpopulated bean_*
 
 
 [source,php]
@@ -51,14 +57,14 @@ Example 3.3: Retrieving an unpopulated bean
 
 
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_warning.png[warning,width=50]
-|`BeanFactory::getBean` caches ten results. This can cause odd behaviour
+{{% notice warning %}}
+`BeanFactory::getBean` caches ten results. This can cause odd behaviour
 if you call `getBean` again and get a cached copy. Any calls that return
 a cached copy will return the same instance. This means changes to one
 of the beans will be reflected in all the results.
-|=======================================================================
+{{% /notice %}}
+
+
 
 Using BeanFactory ensures that the bean is correctly set up and the
 necessary files are included etc.
@@ -76,7 +82,7 @@ The examples provided assume that an account bean is available names
 $accountBean. This may have been retrieved using the getBean call
 mentioned in the BeanFactory section e.g.
 
-Example 3.4: Retrieving an unpopulated account bean
+*_Example 3.4: Retrieving an unpopulated account bean_*
 
 
 [source,php]
@@ -84,12 +90,13 @@ $accountBean = BeanFactory::getBean('Accounts');
 
 
 
-=== get_list
+[discrete]
+==== get_list
 
 The get_list method allows getting a list of matching beans and allows
 paginating the results.
 
-Example 3.5: get_list method signature
+*_Example 3.5: get_list method signature_*
 
 
 [source,php]
@@ -103,57 +110,55 @@ Example 3.5: get_list method signature
 
 
 
-$order_by::
+`$order_by`::
   Controls the ordering of the returned list. `$order_by` is specified
   as a string that will be used in the SQL ORDER BY clause e.g. to sort
   by name you can simply pass `name`, to sort by date_entered descending
   use `date_entered DESC`. You can also sort by multiple fields. For
   example sorting by date_modified and id descending
   `date_modified, id DESC`.
-$where::
+`$where`::
   Allows filtering the results using an SQL WHERE clause. `$where`
   should be a string containing the SQL conditions. For example in the
   contacts module searching for contacts with specific first names we
   might use `contacts.first_name='Jim'`. Note that we specify the table,
   the query may end up joining onto other tables so we want to ensure
   that there is no ambiguity in which field we target.
-$row_offset::
+`$row_offset`::
   The row to start from. Can be used to paginate the results.
-$limit::
+`$limit`::
   The maximum number of records to be returned by the query. -1 means no
   limit.
-$max::
+`$max`::
   The maximum number of entries to be returned per page. -1 means the
   default max (usually 20).
-$show_deleted::
+`$show_deleted`::
   Whether to include deleted results.
 
-Results
-
+*Results* +
 get_list will return an array. This will contain the paging information
 and will also contain the list of beans. This array will contain the
 following keys:
 
-list::
+`list`::
   An array of the beans returned by the list query
-row_count::
+`row_count`::
   The total number of rows in the result
-next_offset::
+`next_offset`::
   The offset to be used for the next page or -1 if there are no further
   pages.
-previous_offset::
+`previous_offset`::
   The offset to be used for the previous page or -1 if this is the first
   page.
-current_offset::
+`current_offset`::
   The offset used for the current results.
 
-Example
-
+*Example* +
 Let’s look at a concrete example. We will return the third page of all
 accounts with the industry `Media` using 10 as a page size and ordered
 by name.
 
-Example 3.6: Example get_list call
+*_Example 3.6: Example get_list call_*
 
 
 [source,php]
@@ -173,7 +178,7 @@ Example 3.6: Example get_list call
 
 This will return:
 
-Example 3.7: Example get_list results
+*_Example 3.7: Example get_list results_*
 
 
 [source,php]
@@ -193,15 +198,14 @@ Example 3.7: Example get_list results
 
 
 
-=== get_full_list
+[discrete]
+==== get_full_list
 
 `get_list` is useful when you need paginated results. However if you are
 just interested in getting a list of all matching beans you can use
 `get_full_list`. The `get_full_list` method signature looks like this:
 
-Example 3.8: get_full_list method signature
-
-
+*_Example 3.8: get_full_list method signature_*
 [source,php]
 1 get_full_list(
 2             $order_by = "",
@@ -209,23 +213,19 @@ Example 3.8: get_full_list method signature
 4             $check_dates=false,
 5             $show_deleted = 0
 
-
-
 These arguments are identical to their usage in `get_list` the only
 difference is the `$check_dates` argument. This is used to indicate
 whether the date fields should be converted to their display values
 (i.e. converted to the users date format).
 
-Results
-
+*Results* +
 The get_full_list call simply returns an array of the matching beans
 
-Example
-
+*Example* +
 Let’s rework our `get_list` example to get the full list of matching
 accounts:
 
-Example 3.9: Example get_full_list call
+*_Example 3.9: Example get_full_list call_*
 
 
 [source,php]
@@ -238,13 +238,14 @@ Example 3.9: Example get_full_list call
 
 
 
-=== retrieve_by_string_fields
+[discrete]
+==== retrieve_by_string_fields
 
 Sometimes you only want to retrieve one row but may not have the id of
 the record. `retrieve_by_string_fields` allows retrieving a single
 record based on matching string fields.
 
-Example 3.10: retrieve_by_string_fields method signature
+*_Example 3.10: retrieve_by_string_fields method signature_*
 
 
 [source,php]
@@ -255,33 +256,30 @@ Example 3.10: retrieve_by_string_fields method signature
 
 
 
-$fields_array::
+`$fields_array`::
   An array of field names to the desired value.
-$encode::
+`$encode`::
   Whether or not the results should be HTML encoded.
-$deleted::
+`$deleted`::
   Whether or not to add the deleted filter.
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_warning.png[warning,width=50] |Note here that,
+{{% notice note %}}
+Note here that,
 confusingly, the deleted flag works differently to the other methods we
 have looked at. It flags whether or not we should filter out deleted
 results. So if true is passed then the deleted results will _not_ be
 included.
-|=======================================================================
+{{% /notice %}}
 
-Results
-
+*Results* +
 retrieve_by_string_fields returns a single bean as it’s result or null
 if there was no matching bean.
 
-Example
-
+*Example* +
 For example to retrieve the account with name `Tortoise Corp` and
 account_type `Customer` we could use the following:
 
-Example 3.11: Example retrieve_by_string_fields call
+*_Example 3.11: Example retrieve_by_string_fields call_*
 
 
 [source,php]
@@ -302,7 +300,7 @@ the fields of that record by simply accessing properties on the bean
 just like any other PHP object. Similarly we can use property access to
 set the values of beans. Some examples are as follows:
 
-Example 3.12: Accessing fields examples
+*_Example 3.12: Accessing fields examples_*
 
 
 [source,php]
@@ -328,7 +326,7 @@ persisted. We can save the changes to the database with a call to the
 beans `save` method. Likewise a call to `save` on a brand new bean will
 add that record to the database:
 
-Example 3.13: Persisting bean changes
+*_Example 3.13: Persisting bean changes_*
 
 
 [source,php]
@@ -346,10 +344,8 @@ Example 3.13: Persisting bean changes
 12 $caseBean->save();
 
 
-
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] |Whether to
+{{% notice info %}}
+Whether to
 save or update a bean is decided by checking the `id` field of the bean.
 If `id` is set then SuiteCRM will attempt to perform an update. If there
 is no `id` then one will be generated and a new record will be inserted
@@ -357,7 +353,7 @@ into the database. If for some reason you have supplied an `id` but the
 record is new (perhaps in a custom import script) then you can set
 `new_with_id` to true on the bean to let SuiteCRM know that this record
 is new.
-|=======================================================================
+{{% /notice %}}
 
 == Related beans
 
@@ -367,12 +363,13 @@ themselves. For example an account may have a list of cases associated
 with it, a contact will have an account that it falls under etc. We can
 get and set relationships between beans using several methods.
 
-=== get_linked_beans
+[discrete]
+==== get_linked_beans
 
 The `get_linked_beans` method allows retrieving a list of related beans
 for a given record.
 
-Example 3.14: get_linked_beans method signature
+*_Example 3.14: get_linked_beans method signature_*
 
 
 [source,php]
@@ -387,35 +384,32 @@ Example 3.14: get_linked_beans method signature
 
 
 
-$field_name::
+`$field_name`::
   The link field name for this link. Note that this is not the same as
   the name of the relationship. If you are unsure of what this should be
   you can take a look into the cached vardefs of a module in
   `cache/modules/<TheModule>/<TheModule>Vardefs.php` for the link
   definition.
-$bean_name::
+`$bean_name`::
   The name of the bean that we wish to retrieve.
-$sort_array::
+`$sort_array`::
   This is a legacy parameter and is unused.
-$begin_index::
+`$begin_index`::
   Skips the initial `$begin_index` results. Can be used to paginate.
-$end_index::
+`$end_index`::
   Return up to the `$end_index` result. Can be used to paginate.
-$deleted::
+`$deleted`::
   Controls whether deleted or non deleted records are shown. If true
   only deleted records will be returned. If false only non deleted
   records will be returned.
-$optional_where::
+`$optional_where`::
   Allows filtering the results using an SQL WHERE clause. See the
   `get_list` method for more details.
 
-Results
-
+*Results* +
 `get_linked_beans` returns an array of the linked beans.
 
-Example
-
-Example 3.15: Example get_linked_beans call
+*_Example 3.15: Example get_linked_beans call_*
 
 
 [source,php]
@@ -430,20 +424,20 @@ Example 3.15: Example get_linked_beans call
 
 
 
-=== relationships
+[discrete]
+==== relationships
 
 In addition to the `get_linked_beans` call you can also load and access
 the relationships more directly.
 
-Loading
-
+*Loading* +
 Before accessing a relationship you must use the `load_relationship`
 call to ensure it is available. This call takes the link name of the
 relationship (not the name of the relationship). As mentioned previously
 you can find the name of the link in
 `cache/modules/<TheModule>/<TheModule>Vardefs.php` if you’re not sure.
 
-Example 3.16: Loading a relationship
+*_Example 3.16: Loading a relationship_*
 
 
 [source,php]
@@ -455,33 +449,29 @@ Example 3.16: Loading a relationship
 
 
 
-Methods
+*Methods*
 
-`get`
-
+`get` ::
 Returns the ids of the related records in this relationship e.g for the
 account - contacts relationship in the example above it will return the
 list of ids for contacts associated with the account.
 
-`getBeans`
-
+`getBeans` ::
 Similar to `get` but returns an array of beans instead of just ids.
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_warning.png[warning,width=50] |`getBeans` will
+{{% notice warning %}}
+`getBeans` will
 load the full bean for each related record. This may cause poor
 performance for relationships with a large number of beans.
-|=======================================================================
+{{% /notice %}}
 
-`add`
-
+`add` ::
 Allows relating records to the current bean. `add` takes a single id or
 bean or an array of ids or beans. If the bean is available this should
 be used since it prevents reloading the bean. For example to add a
 contact to the relationship in our example we can do the following:
 
-Example 3.18: Adding a new contact to a relationship
+*_Example 3.18: Adding a new contact to a relationship_*
 
 
 [source,php]
@@ -500,14 +490,13 @@ Example 3.18: Adding a new contact to a relationship
 
 
 
-`delete`
-
+`delete` ::
 `delete` allows unrelating beans. Counter-intuitively it accepts the ids
 of both the bean and the related bean. For the related bean you should
 pass the bean if it is available e.g when unrelating an account and
 contact:
 
-Example 3.19: Removing a new contact from a relationship
+*_Example 3.19: Removing a new contact from a relationship_*
 
 
 [source,php]
@@ -519,10 +508,8 @@ Example 3.19: Removing a new contact from a relationship
 6 $accountBean->contacts->delete($accountBean->id, $contactBean);
 
 
-
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_warning.png[warning,width=50] |Be careful with the
+{{% notice warning %}}
+Be careful with the
 delete method. Omitting the second argument will cause all relationships
 for this link to be removed.
-|=======================================================================
+{{% /notice %}}

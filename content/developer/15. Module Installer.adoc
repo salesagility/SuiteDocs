@@ -23,22 +23,20 @@ look at each of these arrays in turn. See
 link:../20.-appendix-a---code-examples#appendix-a[Appendix A] for the full sample
 `manifest.php` file.
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] |Within path
+{{% notice info %}}
+Within path
 in the manifest file you can use `<basepath>` to refer to the base
 directory of the installer. For example `<basepath>/Foo.txt` will refer
 to the `Foo.txt` file in the root of the installer package.
-|=======================================================================
+{{% /notice %}}
 
-=== `$manifest`
-
+`$manifest` ::
 The `$manifest` array provides information on the package itself such as
 it’s name, readme etc. (it also defines the `copy` array for `patch`
 packages). A sample definition of the manifest array will appear
 something like this:
 
-Example 15.1: Example `$manifest` array definition
+*_Example 15.1: Example $manifest array definition_*
 
 
 [source,php]
@@ -101,8 +99,7 @@ Example 15.1: Example `$manifest` array definition
   key can be used to specify files that should be forcibly copied over.
 `dependencies`::
   An array of other packages that are relied on by this package. Each
-  entry is an array with `id_name` - the id of the package and `version`
-  - the required version of the package.
+  entry is an array with `id_name` - the id of the package and `version` the required version of the package.
 `icon`::
   The path (within the installer) to an icon to be displayed during
   installation.
@@ -124,18 +121,17 @@ Example 15.1: Example `$manifest` array definition
   The type of the installer, one of `langpack`, `module`, `patch` or
   `theme`. See the types section.
 
-=== `$install_defs`
+[discrete]
+==== $install_defs
 
 Provides information on how the package is to be installed, which files
 go where and any additional information such as logic hooks, custom
 fields etc.
 
-`id`
-
+`id` ::
 A unique identifier for the module.
 
-`connectors`
-
+`connectors` ::
 An array of connectors to be installed. Each entry is an array with the
 following keys:
 
@@ -147,8 +143,7 @@ following keys:
 |`formatter` |The directory to copy the connector formatter files from.
 |======================================================================
 
-`copy`
-
+`copy` ::
 An array of files and directories to be copied on install. Each entry is
 an array with the following keys:
 
@@ -159,16 +154,14 @@ an array with the following keys:
 |`to` |The destination file/directory.
 |=================================================
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] |In general
+{{% notice info %}}
+In general
 if a file can be handled by one of the other keys then that key should
 be used. For example new admin entries should be copied using the
 `administration` key rather than using the `copy` key.
-|=======================================================================
+{{% /notice %}}
 
-`dashlets`
-
+`dashlets` ::
 An array of dashlets to be installed. Each entry is an array with the
 following keys:
 
@@ -181,8 +174,7 @@ following keys:
 will be copied.
 |=======================================================================
 
-`language`
-
+`language` ::
 An array of language files to be installed. Each entry is an array with
 the following keys:
 
@@ -200,8 +192,7 @@ the following keys:
 See the chapter on link:../9.-language-strings#language-chapter[Language Strings]
 for more information.
 
-`layoutdefs`
-
+`layoutdefs` ::
 An array of layoutdef files which are used to add, remove or edit
 subpanels. Each entry is an array with the following keys:
 
@@ -212,8 +203,7 @@ subpanels. Each entry is an array with the following keys:
 |`to_module` |The module that this file will be installed to.
 |============================================================
 
-`vardefs`
-
+`vardefs` ::
 An array of the vardefs to be added to specific modules. Each entry is
 an array with the following keys:
 
@@ -224,16 +214,14 @@ an array with the following keys:
 |`to_module` |The destination module.
 |=======================================================
 
-[width="100%",cols="50%,50%",]
-|=======================================================================
-|image:images/leanpub_info-circle.png[information,width=50] |Generally
+{{% notice info %}}
+Generally
 you should install custom fields using the `custom_fields` key. However
 this key can be used to alter existing fields or add more complex
 fields.
-|=======================================================================
+{{% /notice %}}
 
-`menu`
-
+`menu` ::
 An array of menus to be installed. Each entry is an array with the
 following keys:
 
@@ -244,8 +232,7 @@ following keys:
 |`to_module` |The destination module for this menu.
 |=====================================================
 
-`beans`
-
+`beans` ::
 An array of beans to be installed. Each entry is an array with the
 following keys:
 
@@ -258,8 +245,7 @@ following keys:
 |`tab` |Whether or not a tab should be added for this module.
 |============================================================
 
-`relationships`
-
+`relationships` ::
 An array detailing any new relationships added (in particular
 relationships where one side is an existing module). Each entry is an
 array with the following keys:
@@ -271,8 +257,7 @@ array with the following keys:
 |`meta_data` |The location of the metadata file for this relationship.
 |=====================================================================
 
-`custom_fields`
-
+`custom_fields` ::
 An array of new custom fields to be installed (See the
 link:../4.-vardefs#vardefs-chapter[Vardefs] chapter for more information
 on this). Each entry is an array with the following keys:
@@ -315,8 +300,7 @@ value differently. For HTML field types this will store the HTML.
 added.
 |=======================================================================
 
-`logic_hooks`
-
+`logic_hooks` ::
 An array of logic hooks to be installed. See the
 link:../12.-logic-hooks#logic-hooks-chapter[Logic Hooks] chapter for more
 information. Each entry is an array with the following keys:
@@ -342,12 +326,10 @@ called by this hook.
 |`function` |The function to be invoked when this hook is triggered.
 |=======================================================================
 
-`image_dir`
-
+`image_dir` ::
 A path to a directory of images to be included in the install.
 
-`schedulers`
-
+`schedulers` ::
 An array of schedulers to be installed. Each entry is an array with a
 single key:
 
@@ -357,8 +339,7 @@ single key:
 |`from` |The file containing the new scheduled task.
 |===================================================
 
-`administration`
-
+`administration` ::
 An array of admin panels to be installed. Each entry is an array with a
 single key:
 
@@ -368,31 +349,28 @@ single key:
 |`from` |The file containing the new admin panel definition.
 |===========================================================
 
-`pre_execute`
-
+`pre_execute` ::
 Defines an array of files to be executed before the package is
 installed. Each entry is a path to a file within the package. Any output
 will be displayed to the user in the install log.
 
-`post_execute`
-
+`post_execute` ::
 Defines an array of files to be executed after the package is installed.
 Each entry is a path to a file within the package. Any output will be
 displayed to the user in the install log.
 
-`pre_uninstall`
-
+`pre_uninstall` ::
 Defines an array of files to be executed before the package is
 uninstalled. Each entry is a path to a file within the package. Any
 output will be displayed to the user in the uninstall log.
 
-`post_uninstall`
-
+`post_uninstall` ::
 Defines an array of files to be executed after the package is
 uninstalled. Each entry is a path to a file within the package. Any
 output will be displayed to the user in the uninstall log.
 
-=== `$upgrade_manifest`
+[discrete]
+==== $upgrade_manifest
 
 Provides a means of upgrading an already installed package by providing
 different `install_defs`.
@@ -413,7 +391,8 @@ functionality.
 |theme |A theme installer. This will add a new option to the themes.
 |=======================================================================
 
-=== Other files
+[discrete]
+==== Other files
 
 `README.txt`::
   Contains the readme for this package. If `README.txt` and a readme

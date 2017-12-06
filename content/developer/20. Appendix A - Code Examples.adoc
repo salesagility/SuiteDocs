@@ -4,7 +4,7 @@ weight: 20
 title: "20. Appendix A - Code Examples"
 ---
 
-[[appendix-a]]= 20. Appendix A - Code Examples
+= 20. Appendix A - Code Examples
 
 == Metadata
 
@@ -20,7 +20,7 @@ Initially we add to the `subpanel_setup` section of Cases by creating
 the following file in
 `custom/Extension/modules/Cases/Ext/Layoutdefs/IncidentLayoutdefs.php`
 
-Example A.1: `IncidentLayoutdefs.php`
+*_Example A.1: IncidentLayoutdefs.php_*
 
 
 [source,php]
@@ -40,7 +40,7 @@ Example A.1: `IncidentLayoutdefs.php`
 Next we create the file which will define our `get_cases_by_incident`
 function `custom/modules/Cases/IncidentUtils.php`.
 
-Example A.2: `IncidentUtils.php`
+*_Example A.2: IncidentUtils.php_*
 
 
 [source,php]
@@ -69,7 +69,7 @@ Example A.2: `IncidentUtils.php`
 The following is a basic example manifest file. See the
 link:../15.-module-installer#module-installer-chapter[Module Installer] chapter.
 
-Example A.3: Example manifest file
+*_Example A.3: Example manifest file_*
 
 
 [source,php]
