@@ -5,5 +5,5 @@ read -p "Commit description: " desc
 git add . && \
 git add -u && \
 git commit -m "$desc" && \
-# assumes branches are being tracked with remote:
-git push origin 
+# assumes branches are being tracked with remote, pushes to the current branch:
+git push origin HEAD
