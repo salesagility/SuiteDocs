@@ -111,15 +111,12 @@ Depending on the Logic Hook type logic hooks are either placed into +
 `custom/modules/Logic_Hooks.php` or
 `custom/modules/<TargetModule>/Logic_Hooks.php`.
 
-[discrete]
-==== Logic_Hooks.php
+=== Logic_Hooks.php
 
 The logic hook file itself specifies which logic hooks to fire on this
 event. It looks something like this:
 
-*_Example 12.1: Logic hook file_*
-
-
+.Example 12.1: Logic hook file
 [source,php]
  1 <?php
  2 // Do not store anything in this file that is not part of the array or the hook
@@ -236,17 +233,17 @@ Finally we reach an interesting line. This adds a new logic hook to the
 before_save hooks. This array contains 5 entries which define this hook.
 These are:
 
-*Sort order* +
+==== Sort order
 The first argument (77) is the sort order for this hook. The logic hook
 array is sorted by this value. If you wish for a hook to fire earlier
 you should use a lower number. If you wish for a hook to be fired later
 you should use a higher number. The numbers themselves are arbitrary.
 
-*Hook label* +
+==== Hook label
 The second argument (‘updateGeocodeInfo’) is simply a label for the
 logic hook. This should be something short but descriptive.
 
-*Hook file* +
+==== Hook file
 The third argument is where the actual class for this hook is. In this
 case it is in a file called
 `custom/modules/Cases/CasesJjwg_MapsLogicHook.php`. Generally you will
@@ -255,16 +252,16 @@ want the files to be somewhere in custom and it is usual to have them in
 `custom/modules/<SomeDescriptiveName>.php` for Logic Hooks not targeting
 a specific module. However the files can be placed anywhere.
 
-*Hook class* +
+==== Hook class
 The fourth argument is the class name for the Logic Hook class. In this
 case `CasesJjwg_MapsLogicHook`. It is usual for the class name to match the
 file name but this is not required.
 
-*Hook method* +
+==== Hook method
 The fifth, and final, argument is the method that will be called on the
 class. In this case `updateGeocodeInfo`.
 
-*Adding your own logic hooks* +
+==== Adding your own logic hooks
 When adding logic hooks you should make full use of the Extensions
 framework (see the section on Extensions). This involves creating a file
 in `custom/Extension/application/Ext/LogicHooks/` for application hooks
@@ -278,15 +275,12 @@ adding a new logic hook it is necessary to perform a quick repair and
 rebuild in the admin menu for this to be picked up.
 {{% /notice %}}
 
-[discrete]
-==== Logic Hook function
+=== Logic Hook function
 
 The logic hook function itself will vary slightly based on the logic
 hook type. For module hooks it will appear similar to:
 
-*_Example 12.2: Example logic hook method_*
-
-
+.Example 12.2: Example logic hook method
 [source,php]
 1     class SomeClass
 2     {
@@ -300,9 +294,7 @@ hook type. For module hooks it will appear similar to:
 
 Application logic hooks omit the $bean argument:
 
-*_Example 12.3: Example logic hook method for application hooks_*
-
-
+.Example 12.3: Example logic hook method for application hooks
 [source,php]
 1     class SomeClass
 2     {
@@ -349,5 +341,5 @@ Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user
 will need to wait for that code to run. This can be avoided by either
 ensuring the code runs quickly or by using the Job Queue (see the Job
-Queue chapter for more information).
+Queue chapter for more information). link:../12.-logic-hooks[↩]
 {{% /notice %}}

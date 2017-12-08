@@ -38,17 +38,14 @@ used in `include/MVC/View/views/`.
 In order to customise a View we first need to create the appropriate
 view file. This will vary depending on the module we wish to target.
 
-[discrete]
-==== Custom module
+=== Custom module
 
 In this case we can place the file directly into our module. Create a
 new file (if it doesn’t exist) at
 `modules/<TheModule>/views/view.<viewname>.php`. The contents will look
 similar to:
 
-*_Example 5.1: View for a custom module_*
-
-
+.Example 5.1: View for a custom module
 [source,php]
 1 <?php
 2 
@@ -65,9 +62,7 @@ similar to:
 A more concrete example would be for the detail view for a custom module
 called ABC_Vehicles:
 
-*_Example 5.2: Detail view for a custom module, ABC_Vehicles_*
-
-
+.Example 5.2: Detail view for a custom module, ABC_Vehicles
 [source,php]
 1 <?php
 2 
@@ -81,8 +76,7 @@ called ABC_Vehicles:
 
 
 
-[discrete]
-==== Preexisting modules
+=== Preexisting modules
 
 For preexisting modules you will want to add the view to +
 `custom/modules/<TheModule>/views/view.<viewname>.php`.
@@ -96,9 +90,7 @@ the class `Custom<TheModule>View<ViewName>` (for example
 
 Here we don’t extend the existing view or no such view exists:
 
-*_Example 5.3: Custom view for an existing module_*
-
-
+.Example 5.3: Custom view for an existing module
 [source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
@@ -115,9 +107,7 @@ Here we don’t extend the existing view or no such view exists:
 Otherwise we extend the existing view. Note that we are requiring the
 existing view:
 
-*_Example 5.4: Overriding a view for an existing module_*
-
-
+.Example 5.4: Overriding a view for an existing module
 [source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
@@ -133,9 +123,7 @@ existing view:
 
 For example, overriding the List View of Accounts:
 
-*_Example 5.5: Overriding the Accounts List View_*
-
-
+.Example 5.5: Overriding the Accounts List View
 [source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
@@ -149,8 +137,7 @@ For example, overriding the List View of Accounts:
 
 
 
-[discrete]
-==== Making changes
+=== Making changes
 
 Now that we have a custom view what can we actually do? The views have
 various methods which we can now override to change/add behaviour. The
@@ -166,4 +153,4 @@ most common ones to override are:
   alter this behaviour or to output anything after the main display. You
   usually want to call parent::display(); to ensure that the display
   code is run (unless, of course, you are adding your own display
-  logic).
+  logic). link:../5.-views[↩]

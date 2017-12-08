@@ -101,4 +101,4 @@ $sugar_config['logger']['level'] = 'fatal';
 
 Lowering the log level means that there will be less log messages to
 write to disk on each request. This will slightly (very slightly)
-increase performance.
+increase performance. link:../18.-performance-tweaks[↩]

@@ -49,4 +49,4 @@ title: "2. SuiteCRM Directory Structure"
   upgrade files and the packages of installed modules.
  `log4php`, `soap`, `XTemplate`, `Zend` ::
   Source code for various libraries used by SuiteCRM some of which are
-  deprecated.
+  deprecated. link:../2.-suitecrm-directory-structure[↩] 
