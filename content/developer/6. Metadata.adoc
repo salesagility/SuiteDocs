@@ -17,7 +17,7 @@ fields are used in the search.
 
 Module metadata can be found in:
 
-*_Example 6.1: Module metadata location_*
+.Example 6.1: Module metadata location
 [source,php]
 modules/<TheModule>/metadata/
 
@@ -37,17 +37,14 @@ folder is the only location checked - any version in
 
 == Different metadata
 
-[discrete]
-==== detailviewdefs.php
+=== detailviewdefs.php
 
 detailviewdefs.php provides information on the layout and fields of the
 detail view for this module. This file uses the same structure as
 editviewdefs.php. Let’s look at an example for a fictional module
 `ABC_Vehicles`:
 
-*_Example 6.2: DetailView metadata definition_*
-
-
+.Example 6.2: DetailView metadata definition
 [source,php]
  1 <?php
  2 $viewdefs ['ABC_Vehicles'] ['DetailView'] = array (
@@ -136,7 +133,7 @@ entry for the module ABC_Vehicles into `$viewdefs` (DetailView will be
 EditView or QuickCreateView as appropriate). This array has two main
 keys defined here:
 
-*templateMeta* +
+=== templateMeta
 The templateMeta key provides information about the view in general. The
 `['form']['buttons']` entries define the buttons that should appear in
 this view.
@@ -150,7 +147,7 @@ this view.
   An array of additional JavaScript files to include. This is useful for
   adding custom JavaScript behaviour to the page.
 
-*panels* +
+=== panels
 The panels entry defines the actual layout of the Detail (or Edit) view.
 Each entry is a new panel in the view with the key being the label for
 that panel. We can see in our example that we have 2 panels. One uses
@@ -161,9 +158,7 @@ Each panel has an array entry for each row, with each array containing
 an entry for each column. For example we can see that the first row has
 the following definition:
 
-*_Example 6.3: DetailView metadata row definition_*
-
-
+.Example 6.3: DetailView metadata row definition
 [source,php]
 31 array(
 32  array (
@@ -201,9 +196,7 @@ values. Values most commonly used are:
   `custom/include/SugarFields/Fields`. An example is setting the size of
   a textarea:
 
-*_Example 6.4: DetailView metadata displayParams_*
-
-
+.Example 6.4: DetailView metadata displayParams
 [source,php]
 1 'displayParams' => array(
 2     'rows' => 2,
@@ -222,22 +215,18 @@ values. Values most commonly used are:
   the field that would have been used. For example
   `{if $someCondition}@@FIELD@@{/if}` will conditionally show the field.
 
-[discrete]
-==== editviewdefs.php
+=== editviewdefs.php
 
 `editviewdefs.php` provides information on the layout and fields of the
 edit view for this module. This file uses the same structure as
 detailviewdefs.php. Please see the information on detailviewdefs.php.
 
-[discrete]
-==== listviewdefs.php
+=== listviewdefs.php
 
 The `listviewdefs.php` file for a module defines what fields the list
 view for that module will display. Let’s take a look at an example:
 
-*_Example 6.5: ListView metadata definition_*
-
-
+.Example 6.5: ListView metadata definition
 [source,php]
  1 $listViewDefs ['AOR_Reports'] =
  2 array (
@@ -307,8 +296,7 @@ and is keyed by the upper case name of the field. For example, the
   example above has five columns with a width of `15%` but these will
   actually be `20%` since this is a ratio.
 
-[discrete]
-==== popupdefs.php
+=== popupdefs.php
 
 popupdefs.php provides information on the layout, fields and search
 options of the module popup that is usually used when selecting a
@@ -316,9 +304,7 @@ related record.
 
 Let’s look at the default popupdefs.php for the Accounts module:
 
-*_Example 6.6: PopupView metadata definition_*
-
-
+.Example 6.6: PopupView metadata definition
 [source,php]
  1 $popupMeta = array(
  2  'moduleMain' => 'Case',
@@ -415,8 +401,7 @@ keys:
   popup. See the individual search defs in the searchdefs.php section
   (for example the `basic_search` array).
 
-[discrete]
-==== quickcreatedefs.php
+=== quickcreatedefs.php
 
 `quickcreatedefs.php` provides information on the layout and fields of
 the quick create view for this module (this is the view that appears
@@ -424,17 +409,14 @@ when creating a record from a subpanel). This file uses the same
 structure as `detailviewdefs.php`. Please see the information on
 `detailviewdefs.php`.
 
-[discrete]
-==== searchdefs.php
+=== searchdefs.php
 
 The search defs of a module define how searching in that module looks
 and behaves.
 
 Let’s look at an example.
 
-*_Example 6.7: Search View metadata definition_*
-
-
+.Example 6.7: Search View metadata definition
 [source,php]
   1 $searchdefs ['Accounts'] = array (
   2     'templateMeta' => array (
@@ -566,15 +548,12 @@ and advanced search. This is simply a list of array definition of the
 fields. See the section on listviewdefs.php for a description of some of
 the options.
 
-[discrete]
-==== subpaneldefs.php
+=== subpaneldefs.php
 
 The subpaneldefs.php file provides definitions for the subpanels that
 appear in the detail view of a module. Let’s look at an example:
 
-*_Example 6.8: Subpanel metadata definition_*
-
-
+.Example 6.8: Subpanel metadata definition
 [source,php]
  1 $layout_defs['AOS_Quotes'] = array (
  2  'subpanel_setup' => array (
@@ -702,8 +681,7 @@ entry for each subpanel usually has the following defined:
   `include/generic/SugarWidgets`. Depending on the button this array may
   also be used to pass in extra arguments to the widget class.
 
-[discrete]
-==== subpanels
+=== subpanels
 
 Inside the metadata folder is the `subpanels` folder. This allows
 creating different subpanel layouts for different parent modules. For
@@ -715,9 +693,7 @@ the parent module. The usual subpanel file is simply called
 `default.php`. Let’s look at the
 `modules/Accounts/metadata/subpanels/default.php` file:
 
-*_Example 6.8: Module Subpanels definition_*
-
-
+.Example 6.8: Module Subpanels definition
 [source,php]
  1 $subpanel_layout = array(
  2  'top_buttons' => array(
@@ -792,12 +768,11 @@ subpanel. These are:
   Defines the list of fields to be displayed in this subpanel. See the
   section on `listviewdefs.php` for more information.
 
-[discrete]
-==== studio.php
+=== studio.php
 
 studio.php is the simplest file in metadata and it’s existence is simply
 used to confirm if a module should be shown in studio for user tweaking.
 Note that, unlike other metadata files, the file in
 `modules/<TheModule>/metadata/studio.php` will be the only one checked.
 A file in `custom/modules/<TheModule>/metadata/studio.php` will have no
-effect.
+effect. link:../6.-metadata[↩]

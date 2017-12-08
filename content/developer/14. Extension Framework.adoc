@@ -105,9 +105,7 @@ This can be given a name of your choosing. Our example will use +
 `custom/Extension/application/Ext/Extensions/SportsList.php` and will
 look like:
 
-*_Example 14.1: Adding an entry point entry_*
-
-
+.Example 14.1: Adding an entry point entry
 [source,php]
 1 <?php
 2 $extensions["sports_list"] =  array(

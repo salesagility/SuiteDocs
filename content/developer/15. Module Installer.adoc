@@ -36,9 +36,7 @@ it’s name, readme etc. (it also defines the `copy` array for `patch`
 packages). A sample definition of the manifest array will appear
 something like this:
 
-*_Example 15.1: Example $manifest array definition_*
-
-
+.Example 15.1: Example $manifest array definition
 [source,php]
  1 $manifest = array(
  2   'name' => 'My First Package',
@@ -121,8 +119,7 @@ something like this:
   The type of the installer, one of `langpack`, `module`, `patch` or
   `theme`. See the types section.
 
-[discrete]
-==== $install_defs
+=== $install_defs
 
 Provides information on how the package is to be installed, which files
 go where and any additional information such as logic hooks, custom
@@ -135,7 +132,7 @@ A unique identifier for the module.
 An array of connectors to be installed. Each entry is an array with the
 following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |======================================================================
 |Key |Description
 |`name` |The name of the connector.
@@ -147,7 +144,7 @@ following keys:
 An array of files and directories to be copied on install. Each entry is
 an array with the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=================================================
 |Key |Description
 |`from` |The source file/directory in the package.
@@ -165,7 +162,7 @@ be used. For example new admin entries should be copied using the
 An array of dashlets to be installed. Each entry is an array with the
 following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=======================================================================
 |Key |Description
 |`name` |The name of the new dashlet.
@@ -178,7 +175,7 @@ will be copied.
 An array of language files to be installed. Each entry is an array with
 the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=======================================================================
 |Key |Description
 |`from` |The location of the language file inside the package.
@@ -196,7 +193,7 @@ for more information.
 An array of layoutdef files which are used to add, remove or edit
 subpanels. Each entry is an array with the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |============================================================
 |Key |Description
 |`from` |The path in the package to the file to be installed.
@@ -207,7 +204,7 @@ subpanels. Each entry is an array with the following keys:
 An array of the vardefs to be added to specific modules. Each entry is
 an array with the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=======================================================
 |Key |Description
 |`from` |The location of the vardef file in the package.
@@ -225,7 +222,7 @@ fields.
 An array of menus to be installed. Each entry is an array with the
 following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=====================================================
 |Key |Description
 |`from` |The location of the menu file in the package.
@@ -236,7 +233,7 @@ following keys:
 An array of beans to be installed. Each entry is an array with the
 following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |============================================================
 |Key |Description
 |`module` |The name of the module.
@@ -250,7 +247,7 @@ An array detailing any new relationships added (in particular
 relationships where one side is an existing module). Each entry is an
 array with the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=====================================================================
 |Key |Description
 |`module` |The module that this relationship will be attached to.
@@ -262,7 +259,7 @@ An array of new custom fields to be installed (See the
 link:../4.-vardefs#vardefs-chapter[Vardefs] chapter for more information
 on this). Each entry is an array with the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=======================================================================
 |Key |Description
 |`name` |The name of the new custom field.
@@ -305,7 +302,7 @@ An array of logic hooks to be installed. See the
 link:../12.-logic-hooks#logic-hooks-chapter[Logic Hooks] chapter for more
 information. Each entry is an array with the following keys:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=======================================================================
 |Key |Description
 |`module` |The module to where this logic hook should be installed.
@@ -333,7 +330,7 @@ A path to a directory of images to be included in the install.
 An array of schedulers to be installed. Each entry is an array with a
 single key:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |===================================================
 |Key |Description
 |`from` |The file containing the new scheduled task.
@@ -343,7 +340,7 @@ single key:
 An array of admin panels to be installed. Each entry is an array with a
 single key:
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |===========================================================
 |Key |Description
 |`from` |The file containing the new admin panel definition.
@@ -369,15 +366,14 @@ Defines an array of files to be executed after the package is
 uninstalled. Each entry is a path to a file within the package. Any
 output will be displayed to the user in the uninstall log.
 
-[discrete]
-==== $upgrade_manifest
+=== $upgrade_manifest
 
 Provides a means of upgrading an already installed package by providing
 different `install_defs`.
 
 == Types
 
-[cols=",",options="header",]
+[cols="20,80",options="header",]
 |=======================================================================
 |Type |Description
 |langpack |A language installer. This will add an entry to the language
@@ -411,4 +407,4 @@ functionality.
   will be called before the package is uninstalled.
 `scripts/post_uninstall.php`::
   A PHP script which defines a method `post_uninstall()`. This method
-  will be called after the package is uninstalled.
+  will be called after the package is uninstalled. link:../15.-module-installer[↩]
