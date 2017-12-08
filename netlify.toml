@@ -19,5 +19,5 @@
 
 # Besides these three predefined contexts, you can also use branch names as context names:
 [context.preview.environment]
-  HUGO_BASEURL = "https://preview--suitedocs.netlify.com/"
+  HUGO_BASEURL = "https://docs.suitecrm.com/"
   HUGO_ENABLEGITINFO = "true"
