@@ -7,6 +7,7 @@
 [context.production.environment]
   HUGO_VERSION = "0.31"
   HUGO_ENV = "production"
+  HUGO_BASEURL = "https://docs.suitecrm.com/"
   HUGO_ENABLEGITINFO = "true"
 
 # The Deploy Preview Context applies to every Deploy Preview you create: 
