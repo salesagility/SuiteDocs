@@ -1,3 +1,10 @@
 .DS_Store
 public/
 exampleSite/public
+
+# Microsoft Visual Studio exclusions
+*.sln
+*.suo
+*.phpproj
+
+node_modules/

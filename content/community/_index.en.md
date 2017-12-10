@@ -6,8 +6,9 @@ chapter: true
 pre: "<b>4. </b>"
 ---
 
-### Community Guide
-
+## Community Guide 
+#### Table of Contents
+{{% children depth="3" showhidden="true" %}}
 
 
 

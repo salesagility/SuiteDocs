@@ -6,6 +6,7 @@ chapter: true
 pre: "<b>2. </b>"
 ---
 
-### Developer guide
+## Developer Guide
 
-# SuiteCRM
+#### Table of Contents
+{{% children depth="3" showhidden="true" %}}
