@@ -1,6 +1,10 @@
+
+Introduction
+------------
+
 [[the-suitecrm-team-and-community]]
 The SuiteCRM Team and Community
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 It is safe to say without the constant work from the SuiteCRM Team and
 Community, I would not have had the drive and commitment to sit down and
@@ -17,7 +21,7 @@ ecosystem.
 
 [[what-is-suitecrm]]
 What is SuiteCRM?
------------------
+~~~~~~~~~~~~~~~~~ 
 
 SuiteCRM is a software fork of the popular
 https://en.wikipedia.org/wiki/Customer_relationship_management[Customer
@@ -58,7 +62,7 @@ versions.
 
 [[who-is-salesagility]]
 Who is SalesAgility?
---------------------
+~~~~~~~~~~~~~~~~~~~~ 
 
 SalesAgility is an ISO-accredited open source consultancy focused on
 Customer Relationship Management (CRM). An early adopter of SugarCRM
@@ -82,7 +86,8 @@ practice working models for the open source community."_
 
 [[what-is-in-the-user-guide]]
 What is in the User Guide?
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 The SuiteCRM User Guide has been written for the end user. This guide
 covers the SuiteCRM User Journey from end-to-end. We will explore all
@@ -2542,20 +2547,20 @@ a Project with multiple activities, Accounts, Opportunities, and Cases.
 You can also create Projects and Project Tasks from an Email’s detail
 page.
 
-1.  In the Actions bar, click Create Project.
-2.  On the Projects page, enter information for the following fields:
-1.  Name. Enter a name for the Project.
-2.  Status. From the drop-down list, select the Project status such as
+.  In the Actions bar, click Create Project.
+.  On the Projects page, enter information for the following fields:
+..  Name. Enter a name for the Project.
+..  Status. From the drop-down list, select the Project status such as
 Draft, In Review, or Published.
-3.  Start Date. Click the Calendar icon and select the Project start
+..  Start Date. Click the Calendar icon and select the Project start
 date.
-4.  End Date. Click the Calendar icon and select the Project end date.
-5.  Assigned to. Enter the name of you who has ownership of the Project.
+..  End Date. Click the Calendar icon and select the Project end date.
+..  Assigned to. Enter the name of you who has ownership of the Project.
 By default, it is assigned to you.
-6.  Priority. From the drop-down list, select the importance of the
+..  Priority. From the drop-down list, select the importance of the
 Project such as Low, Medium, or High.
-7.  Description. Enter a brief description of the Project.
-3.  Click Save to create the Project; click Cancel to exit the page
+..  Description. Enter a brief description of the Project.
+.  Click Save to create the Project; click Cancel to exit the page
 without creating the Project.
 
 When you save the Project, the Project’s detail page displays on the
@@ -2568,25 +2573,25 @@ and Opportunities.
 Creating Project Tasks
 ^^^^^^^^^^^^^^^^^^^^^^
 
-1.  In the Project Tasks sub-panel, click Create.
-2.  On the Project Tasks page, enter information for the following
+.  In the Project Tasks sub-panel, click Create.
+.  On the Project Tasks page, enter information for the following
 fields:
-1.  Name. Enter a name for the task.
-2.  Task ID. Enter a numerical value as the task identification number.
-3.  Start Date. Click the Calendar icon and select the date when the
+..  Name. Enter a name for the task.
+..  Task ID. Enter a numerical value as the task identification number.
+..  Start Date. Click the Calendar icon and select the date when the
 task is due to begin.
-4.  Finish Date. Click the Calendar icon and select a date when the task
+..  Finish Date. Click the Calendar icon and select a date when the task
 is due to be completed; enter the start time in the adjoining field.
-5.  Percentage Complete. Enter a numerical value to indicate what
+..  Percentage Complete. Enter a numerical value to indicate what
 percentage of the task has been completed.
-6.  Priority. From the drop-down list, select a priority level that
+..  Priority. From the drop-down list, select a priority level that
 reflects the importance of completing this task.
-7.  Milestone. Check this box if the completion on this task is
+..  Milestone. Check this box if the completion on this task is
 considered a milestone for project completion.
-8.  Project Name. Click Select and choose the project associated with
+..  Project Name. Click Select and choose the project associated with
 the task.
-9.  Description. Enter a brief description of the task.
-3.  Click Save to create the task; click Cancel to return to the project
+..  Description. Enter a brief description of the task.
+.  Click Save to create the task; click Cancel to return to the project
 detail page without creating the task.
 
 [[managing-projects-and-project-tasks]]
@@ -5234,7 +5239,7 @@ part of the SuiteCRM product. These third party modules provide
 additional functionality to you such as teams and location mapping.
 
 [[security-suitegroups]]
-Security Suite(Groups)
+Security Suite (Groups)
 ----------------------
 
 Security Suite allows control of what users can access. It allows

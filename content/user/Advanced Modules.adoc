@@ -1,0 +1,2518 @@
+---
+Title: Advanced Modules
+Weight: 70
+---
+
+:imagesdir: ./../../images/en/user
+
+= Advanced Modules
+
+By now, you should have a fundamental understanding of the SuiteCRM user
+interface, basic modules, layouts, creating, searching and managing
+records.
+
+The next section of this User Guide covers in detail the Advanced CRM
+modules. SuiteCRM has Advanced CRM modules which allow Users to further
+enhance your Sales Force Automation Capabilities and improve business
+processes.
+
+== Advanced Open Sales
+
+The first 'Suite' of advanced modules is AOS(Advanced Open Sales). The
+various modules that are part of the AOS suite of modules allow you to
+manage the Post-Opportunity Sales processes such as Quoting, Invoicing
+and recurring Contracting. This functionality is made available to you
+through the following modules:
+
+* Product Categories
+* Products
+* PDF Templates
+* Quotations
+* Invoices
+* Contracts
+
+== AOS Settings
+
+System Administrator users can alter the settings for AOS using the AOS
+Settings page under the Advanced OpenSales panel within the Admin Panel.
+
+image:172AOS_Settings.png[172AOS_Settings.png,title="172AOS_Settings.png"]
+
+You can customise the following settings within the AOS Settings:
+
+* Renewal Reminder Period – This defines how many days before the
+Contract End Date that a reminder call should be created.
+* Initial Invoice Number – Allows users to set the initial invoice
+number. For example 20001.
+* Initial Quote Number – Allows users to set the initial quote number.
+For example 456.
+* Enable Line Items Groups – If selected then users will be able to
+bundle line items into groups. If this is not selected then you will not
+be able to use the AOS Group functionality. _Note: This setting should
+be selected before using AOS – It is difficult to migrate from/to groups
+once Quotes/Invoices have been created._
+* Add Tax to Line Total – If this is selected then the Tax will be added
+into the Line Total on Line Items. If this is not the selected the Line
+Total will not include Tax.
+
+image:173AOS_settings_edit.png[173AOS_settings_edit.png,title="173AOS_settings_edit.png"]
+
+Once configured, click 'Save' to apply your AOS Settings.
+
+== Products Module
+
+You can create Product records using the Products module. Creating
+products allows users to select product lines when preparing Quotes
+using AOS. The products module allows users to specify the Products
+Name, Part Number, Category and Type. Additional fields for Products can
+be added using Studio.
+
+image:174Products_module.png[174Products_module.png,title="174Products_module.png"]
+
+The module also allows users to define a Cost and Price for the product.
+Price is the selling price which will be used in the quoting process. A
+related Contact can be associated to the product. This is the point of
+contact with the supplier concerning this product. If you have an Image
+of the product then this can be uploaded within the products record. A
+URL to the products page on your website can also be specified.
+
+== Products Categories Module
+
+The Product Categories module allows Users to structure Products into a
+hierarchical category structure. To create a Product Category record,
+navigate to the Product Categories module and click the 'Create Product
+Categories' button in the action bar.
+
+image:175Product_category.png[175Product_category.png,title="175Product_category.png"]
+
+The Parent Category field is a relationship field to another Product
+Categories record. If you check the 'Is Parent Category' field then this
+signifies that the category is the highest level. Once selected you will
+not be able to select a Parent Category using the relate field.
+
+== PDF Templates
+
+*Creating Templates*
+
+AOS allows users to generate PDF documents and merge data from SuiteCRM
+modules. You must however create a PDF template first.
+
+image:176PDF_template.png[176PDF_template.png,title="176PDF_template.png"]
+
+This module provides a WYSIWYG interface to create dynamic PDF
+templates. You must select a Type. This is the module you are building
+the PDF Template for. By default the modules you can select are: Quotes
+Invoices Accounts Contacts Leads
+
+System Administrator users can extend this list by editing the
+'pdf_template_type_dom' using the drop down editor functionality. Please
+note that the drop down 'Item Name' must be the name of the module
+directory.
+
+To insert fields into the Body of the template users will first select a
+module. This will be the either the same module as the Type or a related
+module to the Type module. This is selected using the first drop down on
+the Insert Fields row.
+
+image:177PDF_template_field.png[177PDF_template_field.png,title="177PDF_template_field.png"]
+
+This will populate the second drop down with all the fields found within
+that module. Once you have selected the field you wish to insert, the
+text field will populate with the field variable name. Click 'Insert' to
+place this field into the Body of the template. If the Active check box
+is selected then users will be able to generate PDFs from this template.
+If it is not selected you will not.
+
+*Loading Samples*
+
+image:178PDF_template_field.png[178PDF_template_field.png,title="178PDF_template_field.png"]
+
+AOS comes with seven pre-defined PDF templates to help you create your
+own. These can be loaded by selecting the appropriate template from the
+Load Sample drop down list.
+
+image:image86.png[image86.png,title="image86.png"]
+
+*Line Items*
+
+When using a sample to create a template for Quotes or Invoices the Line
+Items are formatted within a table. You can change the fields found in
+this table as well as add or remove columns. Please note that if you are
+creating the template from scratch you must format the Line Items
+section as a table.
+
+image:image87.png[image87.png,title="image87.png"]
+
+*Margins*
+
+At the bottom of the PDF Template Edit View, you can specify the margin
+width for the PDF output.
+
+image:187PDF_Margins.png[187PDF_Margins.png,title="187PDF_Margins.png"]
+
+*Header and Footer*
+
+Within the PDF Templates Edit View, you can also define a Header and a
+Footer for your templates. These can be completed using the Header and
+Footer text areas found below the Body text area.
+
+image:188PDF_footer.png[188PDF_footer.png,title="188PDF_footer.png"]
+
+*Generate Letter*
+
+You can generate PDF documents for Accounts, Contacts and Leads using
+the Generate Letter functionality.
+
+image:image90.png[image90.png,title="image90.png"]
+
+Clicking the 'Generate Letter' button found on these modules Detail View
+will prompt a pop-up asking to select a template.
+
+image:image91.png[image91.png,title="image91.png"]
+
+The template selector pop-up will show all the active templates which
+have the same Type as the module of the record. Clicking the template
+name will generate a PDF document with date populated from the record
+and it's related records. The Generate Letter functionality can also be
+actioned from the List View. This allows you to select multiple records
+and click the 'Generate Letter' button within the List View action menu.
+
+image:image92.png[image92.png,title="image92.png"]
+
+The process for generating PDFs for Quotes, Invoices and Contracts is
+described in your respective sections.
+
+== Quotes Module
+
+*Creating a Quote*
+
+You can create a Quote by going to the Quotes module and clicking
+'Create Quote' from within the actions bar. The first panel allows you
+to specify details concerning the quote such as the Title, related
+Opportunity, Stage and Payment Terms. The Quote Number field is
+calculated automatically.
+
+image:96Quotes_first_panel.png[96Quotes_first_panel.png,title="96Quotes_first_panel.png"]
+
+The second panel allows you to specify who the Quote is for by relating
+an Account and Contact to the Quote. When you select the Account, the
+Billing Address and Shipping Address are dynamically pulled from the
+Account and populated into the fields on the Quote record.
+
+image:97Quotes_2nd_panel.png[97Quotes_2nd_panel.png,title="97Quotes_2nd_panel.png"]
+
+*Line Items with Groups*
+
+The third panel allows users to specify the Quote Groups, Line Items and
+the Currency. A Group is a collection of Line Items with its own Group
+Total. A Line Item can be a Product Line or a Service Line. To add a
+Quote Group, click the 'Add Group' button.
+
+_Note: Add Group will be displayed if “Enable Line Item groups” is
+selected in Admin._
+
+image:98Quotes_add_group.png[98Quotes_add_group.png,title="98Quotes_add_group.png"]
+
+This will display the Group, allowing you to insert a Group Name and add
+a Product Line or Service Line. It will also display the Group Totals.
+
+image:200Add_group.png[200Add_group.png,title="200Add_group.png"]
+
+To add a Product Line, click the 'Add Product Line' button. This will
+allow users to quote for Products from the Products module.
+
+image:201Add_product_line.png[201Add_product_line.png,title="201Add_product_line.png"]
+
+To select a Product, you can start typing in the Product or Part Number
+field which will provide a list of results similar to any relate field.
+Alternatively click the arrow button next to the Part Number field. This
+will display a pop-up window allowing you to select from a list of
+Products.
+
+image:202Add_product1.png[202Add_product1.png,title="202Add_product1.png"]
+
+Once you have selected a Product, the List, Sale Price and Total will
+populate automatically. You can change the Quality, add Discounts
+(Percentage or Amount) and increase the Tax percentage. These will alter
+the Sale Price, Total Price and Group Total fields. To add a Service
+Line, click the 'Add Service Line' button. This will allow users to
+quote for Services.
+
+image:203Add_service_line.png[203Add_service_line.png,title="203Add_service_line.png"]
+
+For Service Lines, you must specify the List price. This will populate
+the Sale Price. Tax and Discounts can be added similarly to the Product
+Line. AOS will keep a Grand Total for each Group.
+
+image:204Total.png[204Total.png,title="204Total.png"]
+
+AOS will also keep a Grand Total for all Groups combined.
+
+image:205Total_total.png[205Total_total.png,title="205Total_total.png"]
+
+The Shipping field allows you to add a shipping cost. The Shipping Tax
+field allows you to add tax to this value. Once the Quote has been
+compiled, click 'Save' to save the Quote.
+
+Line Items without Groups
+
+Creating Quotes without Groups is very similar to creating Quotes with
+Groups. The only difference is you do not have to click 'Add Group'. You
+simply 'Add Product Line' and 'Add Service Line' to the quote. Without
+Groups you are cannot see the Group Total fields. You will only see the
+Grand Total fields.
+
+*Sending Quotations*
+
+To output a Quote you can select one of following three buttons from the
+Quote Detail View.
+
+image:99Sending_quotations.png[99Sending_quotations.png,title="99Sending_quotations.png"]
+
+AOS provides users with three methods of sending Quotes:
+
+* Print as PDF – Allows you to select a template and download or save a
+PDF of the Quote.
+* Email PDF – Allows you to select a template then directs you to the
+SuiteCRM email client 'Compose' screen. The Quote PDF will be attached
+to email and the email will be addressed to the related Contact of the
+Quote. This allows you to fill out the email body.
+* Email Quotation – This directs you to the SuiteCRM email client
+'Compose' screen. The email will be addressed to the related Contact of
+the Quote. There will be no attachment and the Quote will be displayed
+within the body of the email.
+
+*Convert To Invoice*
+
+With AOS you can convert Quotes to Invoices. This can be achieved by
+clicking the 'Convert to Invoice' button on the Quote Detail View.
+
+image:100Conver_to_invoice.png[100Conver_to_invoice.png,title="100Conver_to_invoice.png"]
+
+This functionality will redirect users to the Edit View of an Invoice
+record. Fields will be populated based on your Quote counterparts and
+Line Items will be copied over. When you are ready to create the
+Invoice, click the 'Save' button. Converting a Quote to an Invoice will
+set the Invoice Status of the quote to 'Invoiced'.
+
+*Create Contract*
+
+As well as converting to an Invoice, AOS allows users to create a
+Contract based on a Quote. This can be done by clicking the 'Create
+Contract' button on the Quote Detail View.
+
+image:101Create_contract.png[101Create_contract.png,title="101Create_contract.png"]
+
+This will redirect you to the Edit View of a Contract record, pulling
+through any appropriate fields from the Quote. This includes any Line
+Items on the Quote.
+
+== Invoices Module
+
+*Creating an Invoice*
+
+Creating an Invoice record is very similar to creating a Quote record.
+You can create an Invoice by going to the Invoices module and clicking
+'Create Invoice' from within the actions bar. The first panel allows you
+to specify details about the Invoice such as Status and Due Date.
+
+image:102Invoice_panel_1.png[102Invoice_panel_1.png,title="102Invoice_panel_1.png"]
+
+The second panel allows you to specify who the Invoice is for by
+relating an Account and Contact to the Invoice. When you select the
+Account, the Billing Address and Shipping Address are dynamically pulled
+from the Account and populated into the fields on the Invoice record.
+
+image:103Invoice_panel_2.png[103Invoice_panel_2.png,title="103Invoice_panel_2.png"]
+
+*Groups and Line Items*
+
+AOS allows users to add Groups and Line Items to Invoices. This is
+completed in the exact same way as Quotes. Please refer to Quotes
+section for details on how to create Groups and Line Items.
+
+Sending Invoices
+
+To output an Invoice you can select one of following three buttons from
+the Invoice Detail View.
+
+image:104Invoice_export.png[104Invoice_export.png,title="104Invoice_export.png"]
+
+AOS provides users with three methods of sending Invoices:
+
+* Print as PDF – Allows users to select a template and download or save
+a PDF of the Invoice.
+* Email PDF – Allows users to select a template then directs you to the
+SuiteCRM email client 'Compose' screen. The Invoice PDF will be attached
+to email and the email will be addressed to the related Contact of the
+Invoice. This allows user to fill out the email body.
+* Email Invoice – This directs you to the SuiteCRM email client
+'Compose' screen. The email will be addressed to the related Contact of
+the Invoice. There will be no attachment and the Invoice will be
+displayed within the body of the email.
+
+== Contracts Module
+
+*Creating a Contract*
+
+AOS allows users to create Contracts using the Contracts module.
+
+image:105Creating_a_contract.png[105Creating_a_contract.png,title="105Creating_a_contract.png"]
+
+When the Contract is created the Renewal Reminder Date will populate
+automatically based on the amount of days specified in the AOS Settings
+in Admin. A Call will be scheduled and assigned to the Contract Manger
+for this date.
+
+*Groups and Line Items*
+
+AOS allows users to add Groups and Line Items for Contracts. This is
+completed in the exact same way as Quotes. Please refer to Quotes
+section for details on how to create Groups and Line Items.
+
+== Advanced Open Workflow
+
+Advanced OpenWorkflow (AOW) is a module for SuiteCRM, allowing users to
+create custom workflow processes. This module allows users to trigger
+various system actions based on conditions from any SuiteCRM module.
+
+== Creating a Workflow Process
+
+You can create workflow processes by navigating to the 'WorkFlow' module
+within SuiteCRM. Click the 'Create WorkFlow' button within the action
+bar to start creating the process. The first panel allows users to set
+up the workflow process.
+
+image:106Creating_a_workflow.png[106Creating_a_workflow.png,title="106Creating_a_workflow.png"]
+
+This allows you to specify the following:
+
+* Name – The name of the process.
+* Assigned To - The assigned user of the workflow process.
+* WorkFlow Module – A drop down list of all the modules found within the
+SuiteCRM instance. This is the module the workflow is run against. For
+example, When an Account is created/edited.
+* Status – Active or Inactive. Only active processes will run.
+* Run – Always, On Save or On Scheduler.
+* Run On – All Records, Modified Records or New Records.
+* Repeated Runs – If checked, the process will continue to run over and
+over. Ideally this should only be checked if one of the specified
+Actions negates (or will lead to the negation) of one of the specified
+Conditions.
+* Description – A description of the process.
+
+== Conditions
+
+Adding Conditions
+
+Once set up, you can add conditions to a workflow process using the
+conditions panel. This allows users to specify the criteria that should
+trigger the workflow actions.
+
+image:107Adding_conditions.png[107Adding_conditions.png,title="107Adding_conditions.png"]
+
+To add a Condition Line you must click the 'Add Condition' button.
+
+_Note: You must select your WorkFlow Module on the first panel before
+adding a Condition Line._
+
+image:206Add_condition.png[206Add_condition.png,title="206Add_condition.png"]
+
+You can have an unlimited amount of Condition Lines. To add another line
+click the 'Add Condition' button again and it will appear. On the line
+you will have four fields; Field, Operator, Type and Value.
+
+*Field and Operator*
+
+Field is a drop down which automatically populates with all the fields
+found in the WorkFlow Module.
+
+image:109Field_box.png[109Field_box.png,title="109Field_box.png"]
+
+The Field selected will determine the options available for Operator and
+Type. If the field type is not a number or date then the operators
+available will be 'Equal To' or 'Not Equal To'. For number and date
+fields you can also choose from additional logical operators; 'Less
+Than', 'Greater Than', 'Less Than or Equal To' or 'Greater Than or Equal
+To'.
+
+image:110Operator_box.png[110Operator_box.png,title="110Operator_box.png"]
+
+*Condition Types*
+
+You can specify workflow processes to trigger on different condition
+types. These are as follows:
+
+Value – This is used to directly compare the Field to a value. The value
+type offered is dynamic to the field type of the Field selected. For
+example, if the field type is a drop down then the value field type will
+be the same drop down list.
+
+image:111Value_condition.png[111Value_condition.png,title="111Value_condition.png"]
+
+Field – This is used to action a workflow process when one field is
+compared to another field in the record.
+
+image:112Field_condition.png[112Field_condition.png,title="112Field_condition.png"]
+
+Multiple – This can be selected if the Field is a drop down/multiselect.
+This allows users to specify multiple values to action the workflow
+from.
+
+image:113Multiple_condition.png[113Multiple_condition.png,title="113Multiple_condition.png"]
+
+Date – This allows you to specify the workflow to occur after/before an
+amount of time from either another date field or 'Now'. For example,
+when the start date of a call is 'Now + 10 minutes'. This can only be
+used when the Field is a date field. The amount of time before or after
+the date can be specified in Minutes, Hours, Days, Weeks or Months.
+
+image:114Date_condition.png[114Date_condition.png,title="114Date_condition.png"]
+
+*Removing Conditions*
+
+You can remove Condition Lines by clicking the '-' button on the left
+hand side of the condition.
+
+image:115Removing_conditions.png[115Removing_conditions.png,title="115Removing_conditions.png"]
+
+== Actions
+
+*Adding Actions*
+
+Actions are defined in the third panel. These specify what events should
+occur when the conditions have been met. You can add an Action by
+clicking the 'Add Action' button.
+
+image:116Adding_actions.png[116Adding_actions.png,title="116Adding_actions.png"]
+
+This will cause the Action Line to appear.
+
+image:207Action_line.png[207Action_line.png,title="207Action_line.png"]
+
+From the Action Line you can Select Action and give it a Name. The
+actions available are; 'Create Record', 'Modify Record' and 'Send
+Email'. You can specify an unlimited amount of actions for each workflow
+process.
+
+*Create Record*
+
+If you select 'Create Record' you will be prompted to select a Record
+Type. This is the module type of the record you are looking to create.
+
+image:208Create_record.png[208Create_record.png,title="208Create_record.png"]
+
+Once selected you can add fields or relationships to this record using
+the 'Add Field' and 'Add Relationship' buttons.
+
+image:209Add_field-relationship1.png[209Add_field-relationship1.png,title="209Add_field-relationship1.png"]
+
+When Adding fields the first drop down in the line will populate with
+all the fields from that module. The second drop down allows you to
+specify how the value for that field is going to be derived. For most
+cases the options are as follows:
+
+* Value – This will allow you to input the value directly using the same
+field type as the field selected.
+* Field – This will make the field the same value as a field found in
+the WorkFlow Module.
+* Date – Only selectable if the field is a date field. This will allow
+you to specify the value as an amount of time after/before another date
+field or 'Now'.
+
+image:210Adding_fields.png[210Adding_fields.png,title="210Adding_fields.png"]
+
+Selecting the 'Assigned-To' field also gives you more options. As well
+as by value and field you can assign a user by:
+
+Round Robin – This will select each user in turn.
+
+Least Busy – This will select you with the least amount of records
+assigned to you for that module.
+
+Random – This will select a random user.
+
+For each of the above options you can choose if you want you to be
+selected from all users or users from a specific role. If you have the
+SecuritySuite module installed you can additionally choose if you want
+you to be selected from all users from a particular Security Group or
+all users from a particular security group with a particular role.
+
+image:121Assigned_field.png[121Assigned_field.png,title="121Assigned_field.png"]
+
+When adding relationships you must select the related module from the
+drop down list then select the record that the new record should be
+related to.
+
+image:212Add_relationship.png[212Add_relationship.png,title="212Add_relationship.png"]
+
+_Note: You must selected the related module using the arrow button – The
+auto completion on the text field is not currently developed._
+
+*Modify Record*
+
+This provides the same functionality as 'Create Record' but instead of
+creating a new record you are modifying the record which met the
+conditions of the workflow process. With this action you can modify any
+field found within the record or you can add a relationship to another
+record. This is completed in the same way as 'Create Record' except you
+are not required to specify the Record Type.
+
+*Send Email*
+
+The 'Send Email' action allows users to create workflow processes which
+will send an email based on an template to individuals. Using this
+action there are four different types of recipient.
+
+Email – This will send an email to a specific email address. You must
+specify the email address and the email template.
+
+image:213Send_email_to.png[213Send_email_to.png,title="213Send_email_to.png"]
+
+Record Email – This will send an email to the primary email address
+specified on the record which actioned the workflow process. This can
+only be used if the record has an email field such as Accounts and
+Contacts. For this option you only need to specify the template.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image127.png[https://suitecrm.com/wiki/media/image127.png]</span>
+
+User – This will send the email to a specified Users email address. You
+must specify the recipient user and the template of the email.
+
+image:214Send_email_to_user.png[214Send_email_to_user.png,title="214Send_email_to_user.png"]
+
+Related Field – This will send an email to the primary email address
+specified on a related modules record. In this case you must specify the
+related module (From a drop down list) and the email template.
+
+image:215Email_related_field.png[215Email_related_field.png,title="215Email_related_field.png"]
+
+=== Calculate Fields
+
+If you select 'Calculate Fields' from the Action dropdown the Calculate
+Fields user interface will be loaded after a second and looks like the
+picture below.
+
+image:216Calculate_fields.png[216Calculate_fields.png,title="216Calculate_fields.png"]
+
+*Calculate Fields - Adding parameters*
+
+It is possible to add parameters to the formulas by using the dropdown
+in the Parameters section of the Calculate Fields’s user interface. The
+dropdown contains all of the (basic and custom) fields which belongs to
+the module selected in the basic fields section.
+
+To add a parameter, select the field from the dropdown and click on the
+Add parameter button. After this action, a new line appears in the
+parameter table with the name of the field and the given identifier.
+
+For some fields (dropdowns and multi-selects) an additional dropdown
+shown up where the user can select if the raw or the formatted value
+should be used in Calculated Fields. The raw format means the value
+which is stored in the database and the formatted value means the label
+for that database value.
+
+To remove a parameter from the table, simply click on the minus button
+in the row of the parameter. Be aware, that if you remove a parameter,
+all of the identifiers are recalculated, so the identifiers could change
+for fields!
+
+image:217Add_parameter.png[217Add_parameter.png,title="217Add_parameter.png"]
+
+The identifier is used to reference this field when the user creates the
+formula. For example all appearances of the \{P0} identifier will be
+replaced with the Account’s name in the formula. All parameters are like
+\{Px} where x is the sequential order of the parameter. The amount of
+the parameters is not limited.
+
+*Calculate Fields - Adding relation parameters*
+
+Relation parameters are very similar to the regular parameters, the only
+difference is that the user first selects an entity which is in a
+one-to-one or one-to-many relationship with the actual entity.
+
+To add a relation parameter, select the relation first, and then select
+the field from the connected entity and push the Add relation parameter
+button. After this action, a new line appears in the relation parameter
+table with the name of the relationship, the name of the field and the
+given identifier.
+
+As for parameters for some relation parameter fields (dropdowns and
+multi-selects) an additional dropdown shown up where the user can select
+if the raw or the formatted value should be used in Calculate Fields.
+
+To remove a relation parameter from the table, simply click on the minus
+button in the row of the relation parameter. Be aware, that if you
+remove a relation parameter, all of the identifiers are recalculated, so
+the identifiers could change for fields!
+
+image:128Adding_relation_parameter.png[128Adding_relation_parameter.png,title="128Adding_relation_parameter.png"]
+
+The identifier is used to reference this field when the user creates the
+formula. For example all appearances of the \{R0} identifier will be
+replaced with the creator user‘s username in the formula. All relation
+parameters are like \{Rx} where x is the sequential order of the
+relation parameter. The amount of the relation parameters is not
+limited.
+
+*Calculate Fields - Creating formula for a field*
+
+In the Formulas part of the user interface the user can add formulas for
+fields of the actual entity.
+
+To add a formula, select a field from the dropdown first and then push
+the Add formula button. After this action, a new line appears in the
+formula table with the name of the field and with the place for the
+formula.
+
+To remove a formula from the table, simply click on the minus button in
+the row of the formula.
+
+image:129Add_formula.png[129Add_formula.png,title="129Add_formula.png"]
+
+The formula is a textbox where the user can write the formulas. The
+module evaluates the formula on the given time (on save, on scheduler
+run or both) and fills the selected field with the evaluated value.
+
+The formula can contain any text (with full UTF-8 support), but only the
+function parts (functions with parameters between ‘\{‘ and ‘}’) are
+evaluated. For example and with the parameters added in the previous
+sections, if we fill the formula like: Account \{P0} created by user
+name \{R0}, then the description field will have the following value
+after save: Account My Account created by user name MyUser (implying the
+account’s name is My Account and the creator user’s username is MyUser).
+
+The Calculate Fields has many built-in functions which allows the user
+to build complex formulas to achieve various goals. These functions are
+described in the next section.
+
+*Calculate Fields - Usable functions*
+
+As it is mentioned above, all of the functions are wrapped between ‘\{‘
+and ‘}’ signs, and they look like \{functionName(parameter1; parameter2;
+…)}. The count of the parameters are different for the different
+functions. The module evaluates the functions and changes them with
+their result in the formula.
+
+The functions can be embedded into each other (using a result of a
+function as a parameter for another function) like in this example:
+
+<pre style="white-space: pre; white-space: -moz-pre; white-space: -pre;
+white-space: -o-pre;"> \{power(\{subtract(\{divide(\{add(\{multiply(10;
+2)}; 12)}; 8)}; 1)}; 2)} </pre>
+
+This function is the formalised look of the following mathematical
+expression:
+
+<pre style="white-space: pre; white-space: -moz-pre; white-space: -pre;
+white-space: -o-pre;"> ((((10 * 2) + 12) / 8) – 1)2 </pre>
+
+The functions are divided to six groups. These groups are described in
+the next section of the document.
+
+Logical Functions
+
+Logical functions are returning true or false in the form of 1 and 0 so
+checkboxes typed fields can be filled with these functions. They can be
+also used as the logical condition for the ifThenElse function.
+
+*equal*
+
+[cols=",",]
+|================================================================
+|Signature |\{equal(parameter1;parameter2)}
+|Parameters |parameter1: can be any value of any type
+|parameter2: can be any value of any type
+|Description |Determines if *parameter1* equals with *parameter2*
+|Returns |1 if the two parameters are equal or 0 if not
+|Example call |\{equal(1; 2)} returns 0
+|================================================================
+
+*notEqual*
+
+[cols=",",]
+|====================================================================
+|Signature |\{notEqual(parameter1; parameter2)}
+|Parameters |parameter1: can be any value of any type
+|parameter2: can be any value of any type
+|Description |Determines if *parameter1* not equals with *parameter2*
+|Returns |0 if the two parameters are equal or 1 if not
+|Example call |\{notEqual(1; 2)} returns 1
+|====================================================================
+
+*greaterThan*
+
+[cols=",",]
+|=================================================================
+|Signature |\{greaterThan(parameter1; parameter2)}
+|Parameters |parameter1: can be any value of any type
+|parameter2: can be any value of any type
+|Description |Determines if *parameter1* greater than *parameter2*
+|Returns |1 if *parameter1* greater than *parameter2*, 0 if not
+|Example call |\{greaterThan(3; 3)} returns 0
+|=================================================================
+
+*greaterThanOrEqual*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{greaterThanOrEqual(parameter1; parameter2)}
+
+|Parameters |parameter1: can be any value of any type
+
+|parameter2: can be any value of any type
+
+|Description |Determines if *parameter1* greater than or equal
+*parameter2*
+
+|Returns |1 if *parameter1* greater than or equal *parameter2*, 0 if not
+
+|Example call |\{greaterThanOrEqual(3; 3)} returns 1
+|=======================================================================
+
+*lessThan*
+
+[cols=",",]
+|==============================================================
+|Signature |\{lessThan(parameter1; parameter2)}
+|Parameters |parameter1: can be any value of any type
+|parameter2: can be any value of any type
+|Description |Determines if *parameter1* less than *parameter2*
+|Returns |1 if *parameter1* less than *parameter2*, 0 if not
+|Example call |\{lessThan(3; 3)} returns 0
+|==============================================================
+
+*lessThanOrEqual*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{lessThanOrEqual(parameter1; parameter2)}
+|Parameters |parameter1: can be any value of any type
+|parameter2: can be any value of any type
+|Description |Determines if *parameter1* less than or equal *parameter2*
+|Returns |1 if *parameter1* less than or equal *parameter2*, 0 if not
+|Example call |\{lessThanOrEqual(3; 3)} returns 1
+|=======================================================================
+
+*empty*
+
+[cols=",",]
+|===============================================
+|Signature |\{empty(parameter)}
+|Parameters |parameter: text value
+|Description |Determines if *parameter* is empty
+|Returns |1 if *parameter* is empty, 0 if not
+|Example call |\{empty(any text)} returns 0
+|===============================================
+
+*notEmpty*
+
+[cols=",",]
+|===================================================
+|Signature |\{notEmpty(parameter)}
+|Parameters |parameter: text value
+|Description |Determines if *parameter* is not empty
+|Returns |1 if *parameter* is not empty, 0 if empty
+|Example call |\{notEmpty(any text)} returns 1
+|===================================================
+
+*not*
+
+[cols=",",]
+|=========================================================
+|Signature |\{not(parameter)}
+|Parameters |parameter: logical value
+|Description |Negates the logical value of the *parameter*
+|Returns |1 if *parameter* is 0, 0 if *parameter* is 1
+|Example call |\{not(0)} returns 1
+|=========================================================
+
+*and*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{and(parameter1; parameter2)}
+
+|Parameters |parameter1: logical value
+
+|parameter2: logical value
+
+|Description |Applies the AND logical operator to two logical values
+
+|Returns |1 if *parameter1* and *parameter2* is 1, 0 if any parameters
+are 0
+
+|Example call |\{and(1; 0)} returns 0
+|=======================================================================
+
+*or*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{or(parameter1; parameter2)}
+
+|Parameters |parameter1: logical value
+
+|parameter2: logical value
+
+|Description |Applies the OR logical operator to two logical values
+
+|Returns |1 if *parameter1* or *parameter2* is 1, 0 if both parameters
+are 0
+
+|Example call |\{or(1; 0)} returns 1
+|=======================================================================
+
+Text Functions
+
+Text functions are used to manipulate text in various ways. All the
+functions listed here are fully supports UTF-8 texts, so special
+characters should not raise any problems.
+
+*substring*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{substring(text; start; length)}
+
+|Parameters |text: text value
+
+|start: decimal value
+
+|length [optional parameter]: decimal value
+
+|Description |Cuts the substring of a text field from *start*. If the
+*length* optional parameter is not set, then it cuts all characters
+until the end of the string, otherwise cuts the provided *length*.
+Indexing of a text’s characters starting from 0.
+
+|Returns |Substring of the given text
+
+|Example call |\{substring(This is my text; 5)} returns is my text
+
+|\{substring(This is my text; 5; 5)} returns is my
+|=======================================================================
+
+*length*
+
+[cols=",",]
+|===============================================
+|Signature |\{length(parameter)}
+|Parameters |parameter: text value
+|Description |Count the characters in a text.
+|Returns |The count of the characters in a text.
+|Example call |\{length(sample text)} returns 11
+|===============================================
+
+*replace*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{replace(search; replace; subject)}
+
+|Parameters |search: text value
+
+|replace: text value
+
+|subject: text value
+
+|Description |Replace all occurrences of *search* to *replace* in the
+text *subject*.
+
+|Returns |*subject* with replaced values.
+
+|Example call |\{replace(apple; orange; This is an apple tree)} returns
+This is an orange tree
+|=======================================================================
+
+*position*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{position(subject; search)}
+
+|Parameters |subject: text value
+
+| |search: text value
+
+|Description |Find position of first occurrence of *search* in a
+*subject*
+
+|Returns |Numeric position of *search* in *subject* or -1 if *search*
+not present in *subject*
+
+|Example call |\{position(Where is my text?; text)} returns 12
+|=======================================================================
+
+*lowercase*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{lowercase(parameter)}
+
+|Parameters |parameter: text value
+
+|Description |Make text lowercase
+
+|Returns |The lowercased text.
+
+|Example call |\{lowercase(ThIs iS a sAmPlE tExT)} returns this is a
+sample text
+|=======================================================================
+
+*uppercase*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{uppercase(parameter)}
+
+|Parameters |parameter: text value
+
+|Description |Make text uppercase
+
+|Returns |The uppercased text.
+
+|Example call |\{uppercase(ThIs iS a sAmPlE tExT)} returns THIS IS A
+SAMPLE TEXT
+|=======================================================================
+
+Mathematical functions
+
+Mathematical functions are used to manipulate numbers in various ways.
+Several mathematical operators are implemented as functions in Calculate
+Fields.
+
+*add*
+
+[cols=",",]
+|=================================================
+|Signature |\{add(parameter1; parameter2)}
+|Parameters |parameter1: number value
+|parameter2: number value
+|Description |Adds *parameter1* and *parameter2*
+|Returns |The sum of *parameter1* and *parameter2*
+|Example call |\{add(3.12; 4.83)} returns 7.95
+|=================================================
+
+*subtract*
+
+[cols=",",]
+|=========================================================
+|Signature |\{subtract(parameter1; parameter2)}
+|Parameters |parameter1: number value
+|parameter2: number value
+|Description |Subtracts *parameter2* from *parameter1*
+|Returns |The distinction of *parameter2* and *parameter1*
+|Example call |\{subtract(8; 3)} returns 5
+|=========================================================
+
+*multiply*
+
+[cols=",",]
+|=====================================================
+|Signature |\{multiply(parameter1; parameter2)}
+|Parameters |parameter1: number value
+|parameter2: number value
+|Description |Multiplies *parameter1* and *parameter2*
+|Returns |The product of *parameter1* and *parameter2*
+|Example call |\{multiply(2; 4)} returns 8
+|=====================================================
+
+*divide*
+
+[cols=",",]
+|======================================================
+|Signature |\{divide(parameter1; parameter2)}
+|Parameters |parameter1: number value
+|parameter2: number value
+|Description |Divides *parameter2* with *parameter1*
+|Returns |The division of *parameter2* and *parameter1*
+|Example call |\{divide(8; 2)} returns 4
+|======================================================
+
+*power*
+
+[cols=",",]
+|=============================================================
+|Signature |\{power(parameter1; parameter2)}
+|Parameters |parameter1: number value
+|parameter2: number value
+|Description |Raises *parameter1* to the power of *parameter2*
+|Returns |*parameter1* raised to the power of *parameter2*
+|Example call |\{power(2; 7)} returns 128
+|=============================================================
+
+*squareRoot*
+
+[cols=",",]
+|======================================================
+|Signature |\{squareRoot(parameter)}
+|Parameters |parameter: number value
+|Description |Calculates the square root of *parameter*
+|Returns |The square root of *parameter*
+|Example call |\{squareRoot(4)} returns 2
+|======================================================
+
+*absolute*
+
+[cols=",",]
+|=========================================================
+|Signature |\{absolute(parameter)}
+|Parameters |parameter: number value
+|Description |Calculates the absolute value of *parameter*
+|Returns |The absolute value of *parameter*
+|Example call |\{absolute(-4)} returns 4
+|=========================================================
+
+Date functions
+
+There are several date functions implemented in Calculate Fields, so the
+user can manipulate dates in many ways. Most of the functions uses a
+format parameter, which is used to set the result of the functions
+formatted as the user wants to. The options for these formats are
+equivalent with the PHP format parameters:
+
+[cols=",,",options="header",]
+|=======================================================================
+|Format character |Description |Example returned values
+|*For day*
+
+|style="text-align: center;" | d |Day of the month, 2 digits with
+leading zeros |01 to 31
+
+|style="text-align: center;" | D |A textual representation of a day,
+three letters |Mon through Sun
+
+|style="text-align: center;" | j |Day of the month without leading zeros
+|1 to 31
+
+|style="text-align: center;" | l |A full textual representation of the
+day of the week |Sunday through Saturday
+
+|style="text-align: center;" | N |ISO-8601 numeric representation of the
+day of the week |1 (for Monday) through 7 (for Sunday)
+
+|style="text-align: center;" | S |English ordinal suffix for the day of
+the month, 2 characters |st, nd, rd or th. Works well with j
+
+|style="text-align: center;" | w |Numeric representation of the day of
+the week |0 (for Sunday) through 6 (for Saturday)
+
+|style="text-align: center;" | z |The day of the year (starting from 0)
+|0 through 365
+
+|*For week*
+
+|style="text-align: center;" | W |ISO-8601 week number of year, weeks
+starting on Monday |42 (the 42nd week in the year)
+
+|*For month*
+
+|style="text-align: center;" | F |A full textual representation of a
+month, such as January or March |January through December
+
+|style="text-align: center;" | m |Numeric representation of a month,
+with leading zeros |01 through 12
+
+|style="text-align: center;" | M |A short textual representation of a
+month, three letters |Jan through Dec
+
+|style="text-align: center;" | n |Numeric representation of a month,
+without leading zeros |1 through 12
+
+|style="text-align: center;" | t |Number of days in the given month |28
+through 31
+
+|*For year*
+
+|style="text-align: center;" | L |Whether it's a leap year |1 if it is a
+leap year, 0 otherwise
+
+|style="text-align: center;" | o |ISO-8601 year number. This has the
+same value as Y, except that if the ISO week number (W) belongs to the
+previous or next year, that year is used instead |1999 or 2003
+
+|style="text-align: center;" | Y |A full numeric representation of a
+year, 4 digits |1999 or 2003
+
+|style="text-align: center;" | y |A two digit representation of a year
+|99 or 03
+
+|*For time*
+
+|style="text-align: center;" | a |Lowercase Ante meridiem and Post
+meridiem |am or pm
+
+|style="text-align: center;" | A |Uppercase Ante meridiem and Post
+meridiem |AM or PM
+
+|style="text-align: center;" | B |Swatch Internet time |000 through 999
+
+|style="text-align: center;" | g |12-hour format of an hour without
+leading zeros |1 through 12
+
+|style="text-align: center;" | G |24-hour format of an hour without
+leading zeros |0 through 23
+
+|style="text-align: center;" | h |12-hour format of an hour with leading
+zeros |01 through 12
+
+|style="text-align: center;" | H |24-hour format of an hour with leading
+zeros |00 through 23
+
+|style="text-align: center;" | i |Minutes with leading zeros |00 to 59
+
+|style="text-align: center;" | s |Seconds, with leading zeros |00
+through 59
+
+|*For timezone*
+
+|style="text-align: center;" | e |Timezone identifier |UTC, GMT,
+Atlantic/Azores
+
+|style="text-align: center;" | l |Whether or not the date is in daylight
+saving time |1 if Daylight Saving Time, 0 otherwise
+
+|style="text-align: center;" | O |Difference to Greenwich time (GMT) in
+hours |+0200
+
+|style="text-align: center;" | P |Difference to Greenwich time (GMT)
+with colon between hours and minutes |+02:00
+
+|style="text-align: center;" | T |Timezone abbreviation |EST, MDT
+
+|style="text-align: center;" | Z |Timezone offset in seconds. The offset
+for timezones west of UTC is always negative, and for those east of UTC
+is always positive. |-43200 through 50400
+
+|*For full date/time*
+
+|style="text-align: center;" | c |ISO 8601 date
+|2004-02-12T15:19:21+00:00
+
+|style="text-align: center;" | r |RFC 2822 formatted date |Thu, 21 Dec
+2000 16:01:07 +0200
+
+|style="text-align: center;" | U |Seconds since the Unix Epoch (January
+1 1970 00:00:00 GMT) |
+|=======================================================================
+
+For all functions without timestamp parameter, we assume that the
+current date/time is 2016.04.29. 15:08:03
+
+*date*
+
+[cols=",",]
+|=====================================================
+|Signature |\{date(format; timestamp)}
+|Parameters |format: format text
+|timestamp: date/time value
+|Description |Creates a date in the given format
+|Returns |*timestamp* in the given *format*
+|Example call |\{date(ymd; 2016-02-11)} returns 160211
+|=====================================================
+
+*now*
+
+[cols=",",]
+|=============================================================
+|Signature |\{now(format)}
+|Parameters |format: format text
+|Description |Creates the actual date/time in the given format
+|Returns |Current date/time in the given *format*
+|Example call |\{now(Y-m-d H:i:s)} returns 2016-04-29 15:08:03
+|=============================================================
+
+*yesterday*
+
+[cols=",",]
+|===================================================================
+|Signature |\{yesterday(format)}
+|Parameters |format: format text
+|Description |Creates yesterday’s date/time in the given format
+|Returns |Yesterday’s date/time in the given *format*
+|Example call |\{yesterday(Y-m-d H:i:s)} returns 2016-04-28 15:08:03
+|===================================================================
+
+*tomorrow*
+
+[cols=",",]
+|==================================================================
+|Signature |\{tomorrow(format)}
+|Parameters |format: format text
+|Description |Creates tomorrow’s date/time in the given format
+|Returns |Tomorrow’s date/time in the given *format*
+|Example call |\{tomorrow(Y-m-d H:i:s)} returns 2016-04-30 15:08:03
+|==================================================================
+
+*datediff*
+
+[cols=",",]
+|==================================================================
+|Signature |\{datediff(timestamp1; timestamp2; unit)}
+|Parameters |timestamp1: date/time value
+|timestamp2: date/time value
+|unit: years/months/days/hours/minutes/seconds; default: days
+|Description |Subtracts *timestamp2* from *timestamp1*
+|Returns |The difference between the two dates returned in *unit*
+|Example call |\{datediff(2016-02-01; 2016-04-22; days)} returns 81
+|==================================================================
+
+*addYears*
+
+[cols=",",]
+|==============================================================
+|Signature |\{addYears(format; timestamp; amount)}
+|Parameters |format: format text
+|timestamp: date/time value
+|amount: decimal number
+|Description |Adds *amount* years to *timestamp*
+|Returns |Incremented date in *format*
+|Example call |\{addYears(Ymd; 2016-04-22; 1)} returns 20170422
+|==============================================================
+
+*addMonths*
+
+[cols=",",]
+|===============================================================
+|Signature |\{addMonths(format; timestamp; amount)}
+|Parameters |format: format text
+|timestamp: date/time value
+|amount: decimal number
+|Description |Adds *amount* months to *timestamp*
+|Returns |Incremented date in *format*
+|Example call |\{addMonths(Ymd; 2016-04-22; 1)} returns 20160522
+|===============================================================
+
+*addDays*
+
+[cols=",",]
+|=============================================================
+|Signature |\{addDays(format; timestamp; amount)}
+|Parameters |format: format text
+|timestamp: date/time value
+|amount: decimal number
+|Description |Adds *amount* days to *timestamp*
+|Returns |Incremented date in *format*
+|Example call |\{addDays(Ymd; 2016-04-22; 1)} returns 20160423
+|=============================================================
+
+*addHours*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{addHours(format; timestamp; amount)}
+
+|Parameters |format: format text
+
+|timestamp: date/time value
+
+|amount: decimal number
+
+|Description |Adds *amount* hours to *timestamp*
+
+|Returns |Incremented date in *format*
+
+|Example call |\{addHours(Ymd H:i:s; 2016-04-22 23:30; 5)} returns
+20160423 04:30:00
+|=======================================================================
+
+*addMinutes*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{addMinutes(format; timestamp; amount)}
+
+|Parameters |format: format text
+
+|timestamp: date/time value
+
+|amount: decimal number
+
+|Description |Adds *amount* minutes to *timestamp*
+
+|Returns |Incremented date in *format*
+
+|Example call |\{addMinutes(Ymd H:i:s; 2016-04-22 22:58; 5)} returns
+20160422 23:03:00
+|=======================================================================
+
+*addSeconds*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{addSeconds(format; timestamp; amount)}
+
+|Parameters |format: format text
+
+|timestamp: date/time value
+
+|amount: decimal number
+
+|Description |Adds *amount* seconds to *timestamp*
+
+|Returns |Incremented date in *format*
+
+|Example call |\{addSeconds(Ymd H:i:s; 2016-04-22 22:58; 5)} returns
+20160422 22:58:05
+|=======================================================================
+
+*subtractYears*
+
+[cols=",",]
+|===================================================================
+|Signature |\{subtractYears(format; timestamp; amount)}
+|Parameters |format: format text
+|timestamp: date/time value
+|amount: decimal number
+|Description |Subtracts *amount* years from *timestamp*
+|Returns |Decremented date in *format*
+|Example call |\{subtractYears(Ymd; 2016-04-22; 5)} returns 20110422
+|===================================================================
+
+*subtractMonths*
+
+[cols=",",]
+|====================================================================
+|Signature |\{subtractMonths(format; timestamp; amount)}
+|Parameters |format: format text
+|timestamp: date/time value
+|amount: decimal number
+|Description |Subtracts *amount* months from *timestamp*
+|Returns |Decremented date in *format*
+|Example call |\{subtractMonths(Ymd; 2016-04-22; 5)} returns 20151122
+|====================================================================
+
+*subtractDays*
+
+[cols=",",]
+|==================================================================
+|Signature |\{subtractDays(format; timestamp; amount)}
+|Parameters |format: format text
+|timestamp: date/time value
+|amount: decimal number
+|Description |Subtracts *amount* days from *timestamp*
+|Returns |Decremented date in *format*
+|Example call |\{subtractDays(Ymd; 2016-04-22; 5)} returns 20160417
+|==================================================================
+
+*subtractHours*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{subtractHours(format; timestamp; amount)}
+
+|Parameters |format: format text
+
+|timestamp: date/time value
+
+|amount: decimal number
+
+|Description |Subtracts *mount* hours from *timestamp*
+
+|Returns |Decremented date in *format*
+
+|Example call |\{subtractHours(Ymd H:i:s; 2016-04-22 12:37; 5)} returns
+20160422 07:37:00
+|=======================================================================
+
+*subtractMinutes*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{subtractMinutes(format; timestamp; amount)}
+
+|Parameters |format: format text
+
+|timestamp: date/time value
+
+|amount: decimal number
+
+|Description |Subtracts *amount* minutes from *timestamp*
+
+|Returns |Decremented date in *format*
+
+|Example call |\{subtractMinutes(Ymd H:i:s; 2016-04-22 12:37; 5)}
+returns 20160422 12:32:00
+|=======================================================================
+
+*subtractSeconds*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{subtractSeconds(format; timestamp; amount)}
+
+|Parameters |format: format text
+
+|timestamp: date/time value
+
+|amount: decimal number
+
+|Description |Subtracts *amount* minutes from *timestamp*
+
+|Returns |Decremented date in *format*
+
+|Example call |\{subtractSeconds(Ymd H:i:s; 2016-04-22 12:37; 5)}
+returns 20160422 12:36:55
+|=======================================================================
+
+Control Functions
+
+There is only one control function implemented in Calculate Fields so
+far, but this function ensures that the user can write very complex
+formulas with conditions. Since the functions can be embedded in each
+other, the user can write junctions with many branches.
+
+*ifThenElse*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{ifThenElse(condition; trueBranch; falseBranch)}
+
+|Parameters |condition: logical value
+
+|trueBranch: any expression
+
+|falseBranch: any expression
+
+|Description |Selects one of the two branches depending on *condition*
+
+|Returns |*trueBranch* if *condition* is true, *falseBranch* otherwise
+
+|Example call |\{ifThenElse(\{equal(1; 1)}; 1 equals 1; 1 not equals 1)}
+returns 1 equals 1
+|=======================================================================
+
+Counters
+
+There are several counters implemented in Calculate Fields which can be
+used in various scenarios.
+
+The counters sorted into two groups:
+
+1.  *Global counters:* Counters which are incremented every time an
+affected formula is evaluated
+2.  *Daily counters:* Counters which resets every day. (Starting from 1)
+
+In this chapter we assume that the counters current value is 4, so the
+incremented value will be 5 with the given format.
+
+*GlobalCounter*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{GlobalCounter(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* with length
+*numberLength*
+
+|Returns |Counter with length *numberLength*
+
+|Example call |\{GlobalCounter(myName; 4)} returns 0005
+|=======================================================================
+
+*GlobalCounterPerUser*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{GlobalCounterPerUser(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* for the user
+who creates the entity with length *numberLength*
+
+|Returns |Counter with length *numberLength*
+
+|Example call |\{GlobalCounterPerUser(myName; 3)} returns 005
+|=======================================================================
+
+*GlobalCounterPerModule*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{GlobalCounterPerModule(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* for the
+module of the entity with length *numberLength*
+
+|Returns |Counter with length *numberLength*
+
+|Example call |\{GlobalCounterPerModule(myName; 2)} returns 05
+|=======================================================================
+
+*GlobalCounterPerUserPerModule*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{GlobalCounterPerUserPerModule(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* for the user
+who creates the entity and for the module of the entity with length
+*numberLength*
+
+|Returns |Counter with length *numberLength*
+
+|Example call |\{GlobalCounterPerUserPerModule(myName; 1)} returns 5
+|=======================================================================
+
+*DailyCounter*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{DailyCounter(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* with length
+*numberLength*
+
+|Returns |Counter with length *numberLength*, or if the counter is not
+incremented this day then 1 with length *numberLength*
+
+|Example call |\{DailyCounter(myName; 1)} returns 5
+|=======================================================================
+
+*DailyCounterPerUser*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{DailyCounterPerUser(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* for the user
+who creates the entity with length *numberLength*
+
+|Returns |Counter with length *numberLength*, or if the counter is not
+incremented this day for this user then 1 with length *numberLength*
+
+|Example call |\{DailyCounter(myName; 1)} returns 5
+|=======================================================================
+
+*DailyCounterPerModule*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{DailyCounterPerModule(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* for the
+module of the entity with length *numberLength*
+
+|Returns |Counter with length *numberLength*, or if the counter is not
+incremented this day for this module then 1 with length *numberLength*
+
+|Example call |\{DailyCounterPerModule(myName; 1)} returns 5
+|=======================================================================
+
+*DailyCounterPerUserPerModule*
+
+[cols=",",]
+|=======================================================================
+|Signature |\{DailyCounterPerUserPerModule(name; numberLength)}
+
+|Parameters |name: any text
+
+| |numberLength: decimal number
+
+|Description |Increments and returns the counter for *name* for the user
+who creates the entity and for the module of the entity with length
+*numberLength*
+
+|Returns |Counter with length *numberLength*, or if the counter is not
+incremented this day for the user who creates the entity and for this
+module then 1 with length *numberLength*
+
+|Example call |\{DailyCounterPerUserPerModule(myName; 1)} returns 5
+|=======================================================================
+
+Example
+
+*Calculate monthly fee for an opportunity*
+
+*Use Case*
+
+The user would like to calculate a monthly fee of an opportunity to a
+custom field by dividing the amount of the opportunity by the duration.
+
+*Setup*
+
+Our opportunities module has a dropdown field called Duration with
+values: (database value in brackets) 6 months [6], 1 year [12], 2 years
+[24]. There is also a currency field called Monthly.
+
+*Workflow*
+
+Go to WorkFlow module and create a new WorkFlow. Set the base options
+like the following:
+
+[cols=",",]
+|=====================================================
+|*Name:* as you wish |*WorkFlow Module:* Opportunities
+|*Status:* Active |*Run:* Only on save
+|*Run on:* All records |*Repeated runs:* checked
+|=====================================================
+
+image:130Example_workflow.png[130Example_workflow.png,title="130Example_workflow.png"]
+
+We do not create any conditions, since we would like the WorkFlow to run
+on all opportunities.
+
+Now, add an action and select Calculate Fields from the dropdown.
+
+Then, add two fields from Opportunities as parameters. First, select
+Opportunity amount (amount) and add it as a parameter (it will be \{P0})
+then select Duration and the raw value option from the data type
+dropdown and add it as parameter two (it will be \{P1}). There is no
+need to add any relational parameters for this formula.
+
+Now, add a formula for the monthly field and fill the textbox with the
+following formula:
+
+<pre style="white-space: pre; white-space: -moz-pre; white-space: -pre;
+white-space: -o-pre;"> \{divide(\{P0}; \{P1})} </pre>
+
+So the whole action should look like this:
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/images/1/13/ExampleCF_updated1.png[https://suitecrm.com/wiki/images/1/13/ExampleCF_updated1.png]</span>
+
+Save the WorkFlow and create a new Opportunity:
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/images/5/5a/ExampleCF_orig2.png[https://suitecrm.com/wiki/images/5/5a/ExampleCF_orig2.png]</span>
+
+As you can see, we did not even add the monthly field to the EditView,
+because we don’t want to force the user to make calculations. Save the
+Opportunity and check the results on the DetailView:
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/images/4/4b/ExampleCF_orig3.png[https://suitecrm.com/wiki/images/4/4b/ExampleCF_orig3.png]</span>
+
+
+AOW Calculated Fields was contributed by http://www.dtbc.eu/[diligent
+technology & business consulting GmbH]
+
+
+*Removing Actions*
+
+You can remove Action Lines by clicking the 'X' button on the top right
+hand side of the Action.
+
+image:131Removing_actions.png[131Removing_actions.png,title="131Removing_actions.png"]
+
+*Removing Field and Relationship Lines*
+
+You can remove Field and Relationship Lines by clicking the '-' button
+on the left hand side of the Action.
+
+image:132Removing_fields.png[132Removing_fields.png,title="132Removing_fields.png"]
+
+== Process Audit
+
+Advanced OpenWorkflow allows users to audit your processes. In the
+Detail View of each WorkFlow record there is a sub-panel called
+'Processed Flows'.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image132.png[https://suitecrm.com/wiki/media/image132.png]</span>
+
+This lists all the workflow processes which have been actioned including
+details on the record which actioned the flow, its status and the date
+it was created.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image133.png[https://suitecrm.com/wiki/media/image133.png]</span>
+
+You can view this information at a higher level by clicking the 'View
+Process Audit' button within the module action bar. This will show all
+the processes that have run for all the WorkFlow records.
+
+== Tutorials
+
+*Customers to Target List*
+
+This tutorial will show you how to create a workflow process to add
+accounts who are customers to a Target-List when the record is created
+or modified. Set Up
+
+1.  Start by navigating to the WorkFlow module and clicking 'Create
+Workflow' from the the action bar.
+2.  Give your workflow a Name such as 'Populate Target List.
+3.  Select Accounts as the WorkFlow Module.
+4.  Ensure Repeated Runs is NOT selected and the Status is Active (This
+should be done by default). Optionally you can change the Assigned-To
+and add a Description.
+
+*Conditions*
+
+1.  Create a new Condition Line by clicking the 'Add Condition' button.
+2.  Select 'Type' from the Field drop down.
+3.  Keep the Operator as 'Equals To' and the Type as 'Value'.
+4.  From the Value drop down select 'Customer'.
+
+Once these steps have been completed the Conditions panel should look
+like this:
+
+image:134Conditions.png[134Conditions.png,title="134Conditions.png"]
+
+*Actions*
+
+Create a new Action by clicking the 'Add Action' button.
+
+1.  Select 'Modify Record from the Select Action drop down list.
+2.  Using the Name field, give the action a name such as 'Add to Target
+List'
+3.  Add a Relationship Line by clicking the 'Add Relationship' button.
+4.  A drop down will appear above the 'Add Relationship' button. Select
+the relationship from this drop down box. In this case we are looking
+for 'Target Lists: Prospect List'
+5.  This will populate the rest of the line. Click the arrow button next
+to the relate field to select your target list.
+
+Once these steps have been completed your Actions panel should look like
+this:
+
+image:218Add_to_target_list_actions.png[218Add_to_target_list_actions.png,title="218Add_to_target_list_actions.png"]
+
+*Cases Reminder*
+
+This tutorial will show you how to create a workflow process to notify
+the assigned user and then a particular manger user when an open Case
+has not been updated/modified within two days. Set Up
+
+1.  Start by navigating to the WorkFlow module and clicking 'Create
+Workflow' from the the action bar.
+2.  Give your workflow a Name such as 'Case Escalation'.
+3.  Select Cases as the WorkFlow Module.
+4.  Ensure Repeated Runs is NOT selected and the Status is Active (This
+should be done by default). Optionally you can change the Assigned-To
+and add a Description.
+
+Once these steps have been completed the first panel should look like
+this:
+
+image:136Case_Escalation.png[136Case_Escalation.png,title="136Case_Escalation.png"]
+
+*Conditions*
+
+Create a new Condition Line by clicking the 'Add Condition' button.
+
+Select 'Date Modified' from the Field drop down.
+
+Change the Operator to 'Less Than or Equal To' and the Type to 'Date'
+
+From the Value fields select 'Now', '-', '2', 'Days' in order.
+
+Once these steps have been completed the Conditions panel should look
+like this:
+
+image:137Conditions.png[137Conditions.png,title="137Conditions.png"]
+
+Repeat step 1.
+
+This time select 'Status' from the Field drop down.
+
+Keep the Operator as 'Equals To' and change the Type to 'Multiple'.
+
+From the Value multi-select field select any values which signify an
+open case
+
+Once these steps have been completed the Conditions panel should look
+like this:
+
+image:138Conditions.png[138Conditions.png,title="138Conditions.png"]
+
+*Actions*
+
+1.  Create a new Action by clicking the 'Add Action' button.
+2.  Select 'Send Email from the Select Action down down list.
+3.  Give the action a Name such as 'Assigned User Reminder'
+4.  On the Email Line select 'Related Field' from the first drop down,
+'Users: Assigned To' from the second drop down and a email template from
+the third drop down.
+
+Once these steps have been completed the Actions panel should look like
+this:
+
+image:219Assigned_user_reminder_actions.png[219Assigned_user_reminder_actions.png,title="219Assigned_user_reminder_actions.png"]
+
+\1. Repeat steps 1, 2 and 3 but change the name of this action to
+'Manager Escalation Email'. 2. On the Email Line select 'User' and then
+select you who should receive the email. Select an email template from
+the third drop down. 3. When you are finished click 'Save' to create
+your workflow. Once these steps have been completed the Actions panel
+should look like this:
+
+image:220Double_action.png[220Double_action.png,title="220Double_action.png"]
+
+*Follow Up Web Leads*
+
+This tutorial will show you how to create a workflow process to assign
+web Leads to a particular user from a particular role within SuiteCRM.
+This user will be chosen by round robin. The workflow process will also
+set a follow up call for one day after the Lead is created.
+
+''Note: You can change the Sales role to any role found in your own
+system. ''
+
+*Set Up*
+
+1.  Start by navigating to the WorkFlow module and clicking 'Create
+Workflow' from the the action bar.
+2.  Give your workflow a Name such as 'Web Lead Assignment and Follow
+Up'.
+3.  Select Leads as the WorkFlow Module.
+4.  Ensure Repeated Runs is NOT selected and the Status is Active (This
+should be done by default). Optionally you can change the Assigned-To
+and add a Description.
+
+Once these steps have been completed the first panel should look like
+this:
+
+image:141Set_up.png[141Set_up.png,title="141Set_up.png"]
+
+*Conditions*
+
+1.  Create a new Condition Line by clicking the 'Add Condition' button.
+2.  Select 'Lead Source' from the Field drop down.
+3.  Keep the Operator as 'Equals To' and the Type as 'Value'
+4.  From the Value drop down select our condition, 'Web Site'
+
+Once these steps have been completed the Conditions panel should look
+like this:
+
+image:142Conditions.png[142Conditions.png,title="142Conditions.png"]
+
+*Actions*
+
+1.  Create a new Action by clicking the 'Add Action' button.
+2.  Select 'Modify Record' from the Select Action down down list.
+3.  Using the Name field, give the action a name such as 'Assign to
+Sales'
+4.  Add a Field Line by clicking the 'Add Field' button.
+5.  Select 'Assigned-To' from the new drop down box that has appeared
+above the 'Add Field' button.
+6.  Change the middle drop down box from 'Value' to 'Round Robin'
+7.  Change the third drop down box from 'ALL Users' to 'ALL Users in
+Role'
+8.  Select from forth drop down box on the line 'Sales'.
+
+Once these steps have been completed the Actions panel should look like
+this:
+
+image:221Assign_to_sales_action.png[221Assign_to_sales_action.png,title="221Assign_to_sales_action.png"]
+
+1.  Now create a new Action by repeating step 1.
+2.  This time select 'Create Record' from the Select Action down down
+list.
+3.  Using the Name field, give the action a name such as 'Create Follow
+Up Call'.
+4.  From the Record Type drop down select 'Calls'.
+5.  Click the Add Field button to add a new field:
+6.  Select 'Subject' from the first drop down box. Leave the second drop
+down box as 'Value' then type the desired subject into the text field at
+the end.
+7.  Add another field, this time selecting the 'Start Date' from the
+first drop down box.
+8.  Change the second drop down box from 'Value' to 'Date'.
+9.  In the third drop down box select 'Now'. In the fourth drop down box
+on the line select '+'.
+10. In the text box type '1' and in the drop down next to it select
+'Days'.
+11. Add another field, this time select 'Assigned-To', 'Field',
+'Assigned-To' – This will relate the assigned User of the Lead to the
+Call.
+12. You can add any other fields that you wish to include in the call at
+this stage. To finish click 'Save'.
+
+Once these steps have been completed the Actions panel should look like
+this:
+
+image:222action.png[222action.png,title="222action.png"]
+
+== Advanced Open Cases with Portal
+
+== Introduction
+
+Advanced OpenPortal (AOP) is an enhancement to the case management
+module in SuiteCRM. There is also a Joomla component. AOP extends the
+core cases functionality and enhances mechanisms for contacts to update
+cases.
+
+This module allows contacts held within SuiteCRM to:
+
+* Retrieve emails regarding updates to your Cases
+* Create Cases by emailing a defined support address
+* Update Cases by replying to Case emails
+
+The module allows SuiteCRM users to: Add updates to Cases View a
+threaded log of all updates Retrieve email notifications when a contact
+adds an update to a Case Create Joomla users from a Contact The AOP
+Joomla component connects a Joomla site to the SuiteCRM instance. This
+allows SuiteCRM Contacts to: View a list of your Cases online Create new
+Cases online Reply to existing cases View your case details including a
+threaded log of all updates
+
+Emails Advanced OpenPortal (AOP) uses the standard SuiteCRM
+functionality to send emails and create cases from inbound emails.
+Details on how to configure your outgoing email settings can be found
+here. Details on how to set up a group email account which will
+automatically generate cases can be found here.
+
+== Installation & Configuration
+
+System Administrator users can configure the settings by accessing the
+AOP settings through the admin panel.
+
+image:145AOP_settings.png[145AOP_settings.png,title="145AOP_settings.png"]
+
+Here you can enable or disable the AOP functionality, configure the
+Joomla URL, set the case distribution method, “email from” details and
+the different email templates.
+
+To install the Joomla AOP component, use the Joomla Extension Manager.
+Once installed you must configure the SuiteCRM URL and a valid SuiteCRM
+username and password. This can be done by navigating to Components →
+advancedopen-portal.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image146.png[https://suitecrm.com/wiki/media/image146.png]</span>
+
+Once you have configured the Joomla component you can add two new Main
+Menu items to your Joomla portal. These are:
+
+* List Cases - This shows a list of all Cases that the Contact has
+logged. This page also provides a search mechanism to filter cases.
+* New Case – This page will allow Contacts to create Cases in SuiteCRM
+from the Joomla portal.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image147.png[https://suitecrm.com/wiki/media/image147.png]</span>
+
+== Using Advanced OpenPortal
+
+*Creating a Portal User*
+
+To create a Portal User a SuiteCRM User must first create a Contact for
+the Portal User using the standard SuiteCRM functionality. Once created
+you must click the 'Create Portal User' button. This can be found at the
+top left hand side of the Contact record Detail View.
+
+_Note: If you have action menus enabled the button will be within the
+action menu._
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image1408png[https://suitecrm.com/wiki/media/image148.png]</span>
+
+Once clicked, a new user will be created in Joomla and the Contact will
+be sent your portal credentials via email.
+
+*Creating a Case via the Portal*
+
+Portal Users can create a new Case by going to the New Case page on the
+portal website.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image149.png[https://suitecrm.com/wiki/media/image149.png]</span>
+
+From here Portal Users can enter the details of your issue and attach
+any supporting documents. The dropdown values are dynamically pulled
+from the SuiteCRM instance and thus can be edited using the drop down
+editor tool within SuiteCRM.
+
+_Note: This feature does use the Joomla cache so please clear cache
+after an update has been made. When the case is ready to be logged,
+click the 'Save' button. This will create the Case within SuiteCRM_.
+
+*Viewing Cases via the Portal*
+
+Portal Users can view a list of all your Cases using the List Cases
+page. This will also allow you to filter your search by State (All, Open
+or Closed) or by keyword. When searching by keyword it will search the
+'Number', 'Subject', 'Status', 'Created' and 'Last Update' fields to
+find your result.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image150.png[https://suitecrm.com/wiki/media/image150.png]</span>
+
+To view more information on the case and to add updates then Portal
+Users can click the 'Subject' of case.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image151.png[https://suitecrm.com/wiki/media/image151.png]</span>
+
+From the case view Portal Users can view all the external updates added
+to the case from both Joomla and SuiteCRM. This is displayed in a
+threaded format showing who updated the case Any attached files to
+updates will also be accessible from this view. When a Portal User
+updates a case the assigned SuiteCRM user of the case will be notified
+by email.
+
+*Creating and Updating Cases from SuiteCRM*
+
+You can create and update Cases from SuiteCRM. To add an update to an
+existing record Users will add text to the 'Update' field within the
+case Detail View and click 'Save'. This will publish the update to the
+portal and send an email to any Contacts related to the Case.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image152.png[https://suitecrm.com/wiki/media/image152.png]</span>
+
+If Users check the 'Internal Update' field then the update will appear
+in SuiteCRM only. It will not appear in Joomla and the Contact will not
+be emailed.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image153.png[https://suitecrm.com/wiki/media/image153.png]</span>
+
+The Case Detail View will show the full threaded update log.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image154.png[https://suitecrm.com/wiki/media/image154.png]</span>
+
+Additional Contacts can be added to the Case using the Contacts sub
+panel. All emails exchanged between the system, the contact and you will
+be attached to the History sub-panel. Any documents attached to the case
+using the Portal are held as Notes within this sub-panel.
+
+*Status Drop Down*
+
+Within Cases, you can specify both a State and a Status value. The State
+determines if the Case is Open or Closed. Depending on the State you
+will be offered different statuses. You can amend these statuses using
+the Dropdown Editor Tool within the Admin Developer Tools. When adding a
+new Status you must define the Item Name as “<parent dropdown item
+name>_ItemName” For example “Open_New” or “Closed_Rejected”. All values
+with an Item Name prefixed with “Open_” will show when the state is
+Open, similarly all with the prefix “Closed_” will show when the state
+is closed.
+
+== Advanced Open Events
+
+== Events Locations
+
+The Locations module is used to capture the venue/site information where
+events are held.
+
+*Creating Locations*
+
+\1. Hover over the Locations module on the navigation bar and select
+'Create Location'.
+
+image:146Create_location.png[146Create_location.png,title="146Create_location.png"]
+
+\2. This will take you to the Edit View. Enter information into the
+appropriate fields, all required fields are marked with a red asterisk
+and must be completed prior to saving.
+
+image:147Location_edit_view.png[147Location_edit_view.png,title="147Location_edit_view.png"]
+
+\3. Once the necessary information is entered, click "Save".
+
+== Events
+
+The Events module is used to capture information an particular event and
+send out invites to delegates. To view the Events held within the system
+click the 'Events' tab on the navigation bar. This will take you to the
+Events List View.
+
+*Creating Events*
+
+\1. Hover over the Events module on the navigation bar and select
+'Create Event'.
+
+image:148Create_event.png[148Create_event.png,title="148Create_event.png"]
+
+\2. This will take you to the Edit View. Enter information into the
+appropriate fields, all required fields are marked with a red asterisk
+and must be completed prior to saving.
+
+image:149Events_edit_view.png[149Events_edit_view.png,title="149Events_edit_view.png"]
+
+The following fields are found on the Events module:
+
+* *Name* – The name of the event
+* *Start* *Date* – The date and time of when the event starts
+* *End* *Date* – The date and time of when the event ends
+* *Duration* – The duration of the event. This will automatically change
+the end date or be altered automatically if the end date is changed.
+* *Location* – This is a relationship to the *Event Locations* module.
+* *Budget* – The budget for the event.
+* *Email* *Invite* *Template* – The *Email Template* that will be sent
+to associated Delegates.
+* *Accept* *Redirect* *URL* – The web page invitees should be redirected
+to after you accept an invite using the link provided in the *Email
+Template*.
+* *Decline* *Redirect* *URL* – The web page invitees should be
+redirected to after you decline an invite using the link provided in the
+*Email Template*.
+* *Description* – More information about the Event.
+* *Assigned*-*To* – Who the assigned user is for this event. This
+defaults to you who creates the event.
+* *Created* *By* – Which user created the event.
+
+\3. Once the necessary information is entered, click "Save".
+
+== Adding Delegates
+
+\1. Navigate to the Event Detail View.
+
+\2. Navigate to the Delegates sub-panel found below the 'Event Details'
+panel.
+
+image:223Adding_delegates.png[223Adding_delegates.png,title="223Adding_delegates.png"]
+
+\3. Click 'Select Delegates'. A list of options will appear.
+
+image:224Select_delegates.png[224Select_delegates.png,title="224Select_delegates.png"]
+
+\4. Select the appropriate option depending on who should be added to
+the Event.
+
+* *Target* *List* – Select a *Target List* of individuals to be
+associated to the event. All *Targets*, *Leads* and *Contacts* on this
+'''Target List '''will be added to the *Event*.
+* *Targets* – Select *Targets* to be associated to this *Event*.
+* *Contacts* – Select *Contacts* to be associated to this *Event*.
+* *Leads* – Select *Leads* to be associated to this *Event*.
+* *Events* – Select an *Event* to associate that *Event's* delegates to
+this *Event*.
+
+\5. Once an option has been chosen a new pop-up box will appear to
+search and select records from the module type that was chosen.
+
+\6. The Delegates sub-panel will populate with the records selected.
+
+image:225Delegates.png[225Delegates.png,title="225Delegates.png"]
+
+== Sending Invites To Delegates
+
+\1. Navigate to the Delegates sub-panel.
+
+\2. Choose action 'Send Invites'.
+
+image:226Send_invites.png[226Send_invites.png,title="226Send_invites.png"]
+
+\3. This will send the email template selected in the 'Email Invite
+Template' to all Delegates who have the status 'Not Invited'
+
+\4. Once selected the Delegate status will automatically update to
+'Invited'.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image163.png[https://suitecrm.com/wiki/media/image163.png]</span>
+
+\5. Choosing 'Resend Invites' will send invites out to all Delegates
+associated to the Event who have yet to respond.
+
+== Managing Delegates Acceptance Manually
+
+\1. Navigate to the Delegates sub-panel.
+
+\2. Select the Delegates that require your 'Accept Status' to be
+updated.
+
+\3. Choose action 'Manage Acceptances'
+
+image:227Manage_acceptances.png[227Manage_acceptances.png,title="227Manage_acceptances.png"]
+
+\4. A list of options will appear. Select appropriate statuses:
+
+image:228Acceptances.png[228Acceptances.png,title="228Acceptances.png"]
+
+\5. This will update the Delegates 'Accept Status' accordingly.
+
+image:229Accepted.png[229Accepted.png,title="229Accepted.png"]
+
+_Note: Acceptance will my automatically updated if the Delegate chooses
+to accept using the link provided in the email template._
+
+== Updating Delegates Status Manually
+
+\1. Navigate to the Delegates sub-panel.
+
+\2. Select the Delegates that require your attendance to be updated.
+
+\3. Choose action 'Manage Delegates'
+
+image:230Manage_delegates.png[230Manage_delegates.png,title="230Manage_delegates.png"]
+
+\4. A list of options will appear. Select the appropriate status;
+Invited, Not Invited, Attended or Not Attended.
+
+image:231Manage_delegates.png[231Manage_delegates.png,title="231Manage_delegates.png"]
+
+\5. This will update the Delegates 'Status' accordingly.
+
+image:232Updated_status.png[232Updated_status.png,title="232Updated_status.png"]
+
+_Note: Acceptance will be automatically updated if the Delegate chooses
+to accept using the link provided in the email template._
+
+== Advanced Open Reports
+
+Advanced Open Reports (AOR) is the reporting module within SuiteCRM. AOR
+can be accessed by clicking the 'Reports' link within the navigation
+menu. The reporting module allows users to report on CRM data from any
+module and has many features to display key information quickly.
+
+== Creating Reports
+
+To create a report, hover over the Reports module on the navigation bar
+and select 'Create Report'.
+
+image:152Create_report.png[152Create_report.png,title="152Create_report.png"]
+
+You will be presented with the report Edit View. To obtain a list of
+fields to add to the report, you have to select a module from the Report
+Module drop down.
+
+image:153Reports_edit_view.png[153Reports_edit_view.png,title="153Reports_edit_view.png"]
+
+*Adding Fields*
+
+Once you have selected a Report Module, the list of fields available
+will display on the left panel. You can add fields to the 'Fields'
+section of the report by expanding the module you wish to select fields
+from and then drag and drop those fields into the field section.
+
+image:233Report_fields.png[233Report_fields.png,title="233Report_fields.png"]
+
+Once you have added fields to a Report, there are multiple options to
+configure for those fields:
+
+* Display – True or false option. Allows you to specify whether this
+field should be displayed on the report, or hidden. Users may wish to
+add fields to perform a function/sort/group/total but may not wish to
+show this on the Report.<br/>
+
+* Link – True or false option. Allows you to make the field a link.
+Setting this option to true will hyperlink the field on the Detail View
+of the report, allowing you to click on the record. This will navigate
+you to the appropriate record. For example, linking the Opportunity Name
+will take you to the Detail View of that Opportunity.<br/>
+
+* Label – This is the label that will be displayed for the Column/Field
+on the Report. You can change the label from the default to any
+alphanumerical value.<br/>
+
+* Function - Provides five options: Count, Minimum, Maximum, Sum and
+Average. Allows you to perform functions on alphanumerical fields. Users
+may wish to calculate the average Opportunity Amount, or Count total
+Opportunities at a given Sales Stage.<br/>
+
+* Sort – Ascending or Descending. Allows you to select whether to sort
+the field/column descending or ascending. This can be done for all
+fields.<br/>
+
+* Group – True or false option. Allows you to group by this field. For
+example, you may wish to group by Sales Stage when reporting on an
+Opportunity.<br/>
+
+* Total – Provides three options: Count, Sum and Average. This allows
+users to perform total calculations on numerical fields. This is useful
+for financial reporting such as the total value of all Opportunities at
+a given Sales Stage.<br/>
+
+*Adding Conditions*
+
+Once you have added the fields to your Report, you can add condition
+lines to the Report. You can add conditions with the same procedure as
+adding fields. Using the drag and drop functionality, you can drag
+fields into the 'Conditions' area which will add the field and allow you
+to specify the condition for that field.
+
+== Charts
+
+You can add charts to Reports. Charts provide a visual representation of
+the Report data to you. In some scenarios, or for particular users,
+visual aids such as charts can assist quicker analysis and better
+understanding.
+
+*Chart Types*
+
+There are six types of chart that the user can select to display Report
+data. These are:
+
+* Pie Chart
+* Bar Chart
+* Line Chart
+* Radar Chart
+* Stacked Bar
+* Grouped Bar
+
+<br/> To add a chart, you can click the 'Add Chart' button, below the
+Conditions section within the Report Edit View.
+
+image:234Add_chart.png[234Add_chart.png,title="234Add_chart.png"]
+
+Once you click add chart, you will be presented with the option to
+specify the following information:
+
+* Title – Allows the user to specify the title for the chart. This will
+show on the Detail View of the Report and also on the dashlet chart.
+* Type – This allows the user to select from one of the six chart types
+detailed above.
+* X Axis – Allows the user to select the column that should be used for
+the X Axis.
+* Y Axis – Allows the user to select the column that should be used for
+the Y Axis.
+
+image:235Making_chart.png[235Making_chart.png,title="235Making_chart.png"]
+
+Once you have specified the chart details, save the Report. This will
+display the chart on the Detail View of the Report, below the list of
+records returned.
+
+image:image176.png[image176.png,title="image176.png"]
+
+== Reports Dashlets
+
+You can display a Report within a dashlet. It is possible to view
+multiple Report results as you can add multiple Report dashlets and
+select different Reports within each dashlet. To do this, add the
+Reports dashlet to your homepage.
+
+image:156Add_dashlet.png[156Add_dashlet.png,title="156Add_dashlet.png"]
+
+image:157Reports_dashlet.png[157Reports_dashlet.png,title="157Reports_dashlet.png"]
+
+Once you have added the dashlet, you need to select the Report you wish
+to display within the dashlet. To do this, click the pencil icon to edit
+the dashlet.
+
+image:158Choose_report.png[158Choose_report.png,title="158Choose_report.png"]
+
+This allows the user to select the Report they wish to display within
+the dashlet.
+
+image:159Report_dashlet_results.png[159Report_dashlet_results.png,title="159Report_dashlet_results.png"]
+
+Once you have selected the Report, click 'Save'. This will update your
+Reports dashlet to show the results of the Report.
+
+_Note: For full details on adding and managing dashlets, see the
+link:#Dashlets[Dashlets] section of this user guide._
+
+== Reports Charts Dashlets
+
+You can specify to only select to display a chart for Report dashlets.
+To do this, edit your Report dashlet and select the 'Only use charts'
+option. This will then list all charts you have created for this Report.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image182.png[https://suitecrm.com/wiki/media/image182.png]</span>
+
+Select a chart or multiple charts and click 'Save'. This will display
+the results in the chart selected.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image183.png[https://suitecrm.com/wiki/media/image183.png]</span>
+
+== Scheduled Reports
+
+You can schedule reports to be automatically run and emailed to the
+required Contact(s). This allows users to schedule reports to be sent to
+Managers or Team Leads either Daily, Weekly or Monthly. To create a
+Scheduled Report, you can click the 'Create' option within the Scheduled
+Reports Sub-panel on the Detail View of the Report. You can also select
+existing Scheduled Reports to relate to the Report.
+
+image:236Scheduled_Reports.png[236Scheduled_Reports.png,title="236Scheduled_Reports.png"]
+
+Once you have clicked 'Create', there are options to set for the
+Scheduled Report. Give the Scheduled Report a relevant name. In this
+example, we will use 'Daily Opportunites Report for Managers'.
+
+image:161Scheduled_report_edit.png[161Scheduled_report_edit.png,title="161Scheduled_report_edit.png"]
+
+You can select the 'Advanced' option for report scheduling. This will
+provide a cron notation style option. This is best suited for System
+Administrators or advanced users.
+
+image:162Scheduled_report_edit.png[162Scheduled_report_edit.png,title="162Scheduled_report_edit.png"]
+
+Once you have entered a name and selected a schedule, click 'Save'.
+
+image:162Scheduled_report_edit.png[162Scheduled_report_edit.png,title="162Scheduled_report_edit.png"]
+
+Once you save the Scheduled Report record, this will display in the
+Scheduled Reports subpanel within the Detail View of the Report.
+
+image:237Scheduled_report.png[237Scheduled_report.png,title="237Scheduled_report.png"]
+
+You can view when the Scheduled Report last ran by viewing the 'Last
+Run' column/field on the sub-panel. This shows in a date/time format.
+
+<span
+class="plainlinks">https://suitecrm.com/wiki/media/image189.png[https://suitecrm.com/wiki/media/image189.png]</span>
+
+== Reschedule
+
+== Rescheduling a Call
+
+To reschedule a Call, you can click the 'Reschedule' button on the
+Detail View of a Call which has been defined as Outbound and Planned.
+
+image:164Reschedule_call.png[164Reschedule_call.png,title="164Reschedule_call.png"]
+
+== Defining the Details
+
+Clicking the Reschedule button will produce a pop up or dialogue box up.
+This enables users to set the date and time for the rescheduled Call.
+
+image:238Reschedule_call.png[238Reschedule_call.png,title="238Reschedule_call.png"]
+
+You can also select a reason for the incomplete/unsuccessful Call from
+the drop down list. Once the details have been defined, click the 'Save'
+button to save the Call.
+
+image:239Reschedule_reason.png[239Reschedule_reason.png,title="239Reschedule_reason.png"]
+
+== Tracking History
+
+Once Saved, the Call is rescheduled for the new date and time. you can
+view all Call Reschedule history by clicking the 'Reschedule' tab on the
+Calls Detail View.
+
+image:240Call_attempty_history.png[240Call_attempty_history.png,title="240Call_attempty_history.png"]
+
+== Altering Reasons Drop Down
+
+System Administrator users can edit the reasons available in the
+Reschedule pop-up using the drop down editor. The drop down list used is
+called 'call_reschedule_dom'.
+
+== Summary
+
+In this chapter we have covered the functionality of the advanced
+modules. These modules have a very specific purpose - enabling users to
+improve processes and efficiently report on and manage data.
+
+In the next chapter, we will cover some third party modules which are
+part of the SuiteCRM product. These third party modules provide
+additional functionality to you such as teams and location mapping.
