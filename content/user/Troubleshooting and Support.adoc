@@ -1,16 +1,19 @@
 ---
-Title: Summary
-Weight: 110
+Title: Troubleshooting and Support
+Weight: 100
 ---
 
 :imagesdir: ./../../images/en/user
 
-= Summary
+= Troubleshooting and Support
 
-In this guide we have covered various areas of SuiteCRM from the basics
-of logging in to the complexity of creating automated workflow
-processes. This guide is a resource to visually assist users in
-maximising your use of SuiteCRM. You can also visit the
-https://suitecrm.com/forum/suite-forum[SuiteCRM Community Forums] where
-there are various topics and a wealth of knowledge provided by the
-SuiteCRM team and contributing community members.
+At SalesAgility we are advocates of Open Source. As such please do not
+contact us directly via email or phone for SuiteCRM support. Instead
+please use our support forum. By using the
+https://suitecrm.com/forum/suite-forum[forum] the knowledge is shared
+with everyone in the community. Our developers answer questions on the
+forum daily but it also gives the other members of the community the
+opportunity to contribute. If you would like SalesAgility to customise
+SuiteCRM specifically for your needs, or to provide a hosted and
+supported CRM solution, then please use our
+https://salesagility.com/contact-us[contact form].

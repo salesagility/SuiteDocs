@@ -1,100 +1,48 @@
 ---
-Title: User Wizard
-Weight: 30
+Title: Getting Started
+Weight: 20
 ---
 
 :imagesdir: ./../../images/en/user
 
-= User Wizard
+= Getting Started
 
-The User Wizard guides you through the configuration options available
-to you post login. This allows you to select many formats for data that
-will display in SuiteCRM, and these are specific to your user.
+== Logging Into SuiteCRM
 
-== Welcome to SuiteCRM
+SuiteCRM allows users to log in using your Username and Password,
+provided to you by the System Administrator.
 
-The first step you will see is a simple welcome page that displays once
-you have logged in. Click 'Next' on this page to progress to configure
-your user preferences.
+image:190Home_screen.png[190Home_screen.png,title="190Home_screen.png"]
 
-image:04SuiteCRM_welcome.png[04SuiteCRM_welcome.png,title="04SuiteCRM_welcome.png"]
+image:02Login_with_language.png[02Login_with_language.png,title="02Login_with_language.png"]
 
-== Your Information
+Before logging into SuiteCRM, you can select the language you wish to
+use. There are many default languages for SuiteCRM and there are also
+additional language packs available for other languages around the
+world.
 
-On this screen you are able to provide information about yourself. When
-you provide this information, other users can view this information such
-as your Full Name, Email Address and Contact details. Fields marked with
-a red star(*) are required fields, and as such need to be filled in with
-valid data before you can progress.
+Once you have chosen your language and have entered your user
+credentials, you will be able to click the Login button to access the
+CRM.
 
-image:05Welcome_info.png[05Welcome_info.png,title="05Welcome_info.png"]
+image:191Log_in.png[191Log_in.png,title="191Log_in.png"]
 
-Once you have filled in all information on this page, click 'Next' to
-progress to the next step in the wizard.
+== Forgotten Password
 
-== Your Locale
+If you forget your CRM password and cannot access your CRM user account,
+you can use the 'Forgotten Password' feature to re-send your password to
+the email address associated to your user account. Clicking the 'Forgot
+Password?' link on the login form will display the forgotten password
+form.
 
-On this screen, you are able to specify your preferred Locale settings.
-
-image:06SuiteCRM_Locale.png[06SuiteCRM_Locale.png,title="06SuiteCRM_Locale.png"]
-
-== Currency Selection
-
-Select the Currency you wish to be displayed for all Currency fields
-within SuiteCRM. The Currency options are populated from the options
-added by the System Administrator. If there are Currency options you
-require but do not see, please contact your System Administrator.
-
-image:180Currency_selection.png[180Currency_selection.png,title="180Currency_selection.png"]
-
-== Date Format
-
-Select the Date Format you wish to be displayed for all Date fields
-within SuiteCRM. There are many different date format options to select
-from, all of which are specific to your user. This date format will also
-apply to Date Time fields.
-
-image:08Date_format.png[08Date_format.png,title="08Date_format.png"]
-
-== Time Zone
-
-Select the Time Zone you wish to use within SuiteCRM. This allows you to
-tailor your use of SuiteCRM specific to where you are located globally.
-If you are travelling between various countries, you can change the Time
-Zone at any time in your User Preferences after you Wizard set-up, to
-allow you to view records in that Time Zone.
-
-image:09Time_zone.png[09Time_zone.png,title="09Time_zone.png"]
-
-== Name Format
-
-Select the Name Format you wish to be displayed for all Name fields
-within SuiteCRM. This is applicable to the various 'Person' modules
-within SuiteCRM, and allows you to set your preferred name format
-dependent on your requirement.
-
-image:181Name_format.png[181Name_format.png,title="181Name_format.png"]
-
-Once you have specified all of your Locale preferences, click 'Next' to
-progress to the final step/confirmation page of the User Wizard.
-
-== Final Step
-
-The final step of the User Wizard provides you with multiple useful
-links for learning more and obtaining further support from the SuiteCRM
-website and dedicated team. There is a 'Back' button if you have made
-any mistakes you wish to amend in previous steps.
-
-image:image12.png[image12.png,title="image12.png"]
-
-Clicking 'Finish' will complete the User Wizard and will present you
-with SuiteCRM login form.
+image:179Forgot_password.png[179Forgot_password.png,title="179Forgot_password.png"]
 
 == Summary
 
-In this chapter, we progressed through the User Wizard. This allows you
-to set your preferences when using SuiteCRM.
+In this chapter we have demonstrated how to access SuiteCRM using the
+login form. We have also established how to use the forgotten password
+functionality to retrieve a users password in the event of the password
+being lost or forgotten.
 
-In the next chapter, we will cover managing user accounts, which will
-discuss how to update user details, select themes, change passwords and
-more.
+In the next chapter we will cover the User Wizard, which allows you to
+set your preferences when using SuiteCRM.

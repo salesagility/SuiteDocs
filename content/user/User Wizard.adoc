@@ -1,91 +1,100 @@
 ---
-Title: Managing User Accounts
-Weight: 40
+Title: User Wizard
+Weight: 30
 ---
 
 :imagesdir: ./../../images/en/user
 
-= Managing User Accounts
+= User Wizard
 
-There are many configuration options available to users once logged into
-the system. You can view/modify your preferences by clicking on your
-name in the top right section of the navigation menu.
+The User Wizard guides you through the configuration options available
+to you post login. This allows you to select many formats for data that
+will display in SuiteCRM, and these are specific to your user.
 
-image:11User_select.png[11User_select.png,title="11User_select.png"]
+== Welcome to SuiteCRM
 
-== User Profile Tab
+The first step you will see is a simple welcome page that displays once
+you have logged in. Click 'Next' on this page to progress to configure
+your user preferences.
 
-Once you have clicked to access your preferences, you will be taken to
-the 'User Profile' tab which gives an overview of you credentials such
-as Username, First Name, Last Name, Title etc.
+image:04SuiteCRM_welcome.png[04SuiteCRM_welcome.png,title="04SuiteCRM_welcome.png"]
 
-image:12User_profile.png[12User_profile.png,title="12User_profile.png"]
+== Your Information
 
-== Password Tab
+On this screen you are able to provide information about yourself. When
+you provide this information, other users can view this information such
+as your Full Name, Email Address and Contact details. Fields marked with
+a red star(*) are required fields, and as such need to be filled in with
+valid data before you can progress.
 
-Clicking on the 'Password' tab will navigate you to allow you to change
-your user account password. To change your password, specify a new
-password and confirm the new password. It is recommended that passwords
-are secure. The recommended minimum requirement is one upper case
-character, one lower case character, one numerical character and a
-minimum password length of 8 characters.
+image:05Welcome_info.png[05Welcome_info.png,title="05Welcome_info.png"]
 
-image:13Password_tab.png[13Password_tab.png,title="13Password_tab.png"]
+Once you have filled in all information on this page, click 'Next' to
+progress to the next step in the wizard.
 
-If you have forgotten your password and cannot login, you can use the
-forgotten password functionality detailed in the
-link:#Getting_Started[Getting Started] section of this User Guide.
+== Your Locale
 
-== Themes Tab
+On this screen, you are able to specify your preferred Locale settings.
 
-You can easily manage the theme you are using to view SuiteCRM by
-navigating to the Themes Tab. This tab allows you to easily select the
-desired theme, and also shows a theme preview image (assuming this has
-also been provided with any third party or additional themes).
+image:06SuiteCRM_Locale.png[06SuiteCRM_Locale.png,title="06SuiteCRM_Locale.png"]
 
-image:image16.png[image16.png,title="image16.png"]
+== Currency Selection
 
-== Advanced Tab
+Select the Currency you wish to be displayed for all Currency fields
+within SuiteCRM. The Currency options are populated from the options
+added by the System Administrator. If there are Currency options you
+require but do not see, please contact your System Administrator.
 
-The Advanced tab provides you with you preferences that you set during
-the User Wizard process. This gives you the ability to change any of
-your user preferences, if there were any mistakes or if you require to
-amend these at a later date.
+image:180Currency_selection.png[180Currency_selection.png,title="180Currency_selection.png"]
 
-image:14Advanced_tab.png[14Advanced_tab.png,title="14Advanced_tab.png"]
+== Date Format
 
-== Resetting a Users Preferences
+Select the Date Format you wish to be displayed for all Date fields
+within SuiteCRM. There are many different date format options to select
+from, all of which are specific to your user. This date format will also
+apply to Date Time fields.
 
-You can reset your user preferences to the system default by clicking
-the 'Reset User Preferences' button on your profile.
+image:08Date_format.png[08Date_format.png,title="08Date_format.png"]
 
-image:15User_preference.png[15User_preference.png,title="15User_preference.png"]
+== Time Zone
 
-Clicking the button will prompt you to ensure you wish to reset your
-user preferences, with the following message: “Are you sure you want
-reset all of your user preferences? Warning: This will also log you out
-of the application.”. you can then click 'OK' or 'Cancel' to action
-appropriately. If you select 'OK' you will be logged out and will need
-to re-login to SuiteCRM application.
+Select the Time Zone you wish to use within SuiteCRM. This allows you to
+tailor your use of SuiteCRM specific to where you are located globally.
+If you are travelling between various countries, you can change the Time
+Zone at any time in your User Preferences after you Wizard set-up, to
+allow you to view records in that Time Zone.
 
-== Resetting a Users home page
+image:09Time_zone.png[09Time_zone.png,title="09Time_zone.png"]
 
-You can reset your home page to the system default by clicking the
-'Reset home page' button on your profile. This will reset both dashlet
-and dashboard preferences/layouts to the system default.
+== Name Format
 
-image:16Reset_homepage.png[16Reset_homepage.png,title="16Reset_homepage.png"]
+Select the Name Format you wish to be displayed for all Name fields
+within SuiteCRM. This is applicable to the various 'Person' modules
+within SuiteCRM, and allows you to set your preferred name format
+dependent on your requirement.
 
-Clicking the button will prompt you to ensure you wish to reset your
-home page, with the following message: “Are you sure you want reset your
-home page?”. you can then click 'OK' or 'Cancel' to action
-appropriately.
+image:181Name_format.png[181Name_format.png,title="181Name_format.png"]
+
+Once you have specified all of your Locale preferences, click 'Next' to
+progress to the final step/confirmation page of the User Wizard.
+
+== Final Step
+
+The final step of the User Wizard provides you with multiple useful
+links for learning more and obtaining further support from the SuiteCRM
+website and dedicated team. There is a 'Back' button if you have made
+any mistakes you wish to amend in previous steps.
+
+image:image12.png[image12.png,title="image12.png"]
+
+Clicking 'Finish' will complete the User Wizard and will present you
+with SuiteCRM login form.
 
 == Summary
 
-In this chapter, we covered managing a user account. This allows you to
-manage your information, modify/reset user preferences and more.
+In this chapter, we progressed through the User Wizard. This allows you
+to set your preferences when using SuiteCRM.
 
-In the next chapter, we will cover the Interface. The Interface is an
-integral part of SuiteCRM. With the knowledge of your Interface, you can
-progress to learning more about SuiteCRM functionality and processes.
+In the next chapter, we will cover managing user accounts, which will
+discuss how to update user details, select themes, change passwords and
+more.

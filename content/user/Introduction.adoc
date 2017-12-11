@@ -1,48 +1,107 @@
 ---
-Title: Getting Started
-Weight: 20
+Title: Introduction
+Weight: 10
 ---
 
 :imagesdir: ./../../images/en/user
 
-= Getting Started
+= Introduction
 
-== Logging Into SuiteCRM
+== The SuiteCRM Team and Community
+ 
 
-SuiteCRM allows users to log in using your Username and Password,
-provided to you by the System Administrator.
+It is safe to say without the constant work from the SuiteCRM Team and
+Community, I would not have had the drive and commitment to sit down and
+write this user guide. New functionality and improvements to the core
+product are constantly added to make SuiteCRM the best Open Source CRM
+product in the world, and to compete with proprietary CRM vendors such
+as SugarCRM, Salesforce and Microsoft.
 
-image:190Home_screen.png[190Home_screen.png,title="190Home_screen.png"]
+As for The SuiteCRM Community - they provide bug reports, bug fixes and
+bug testing. The Community is at the heart of any Open Source project
+and this is no different with SuiteCRM. With each new release the
+community grows and with it grow the benefits of the Open Source
+ecosystem.
 
-image:02Login_with_language.png[02Login_with_language.png,title="02Login_with_language.png"]
+== What is SuiteCRM?
+ 
 
-Before logging into SuiteCRM, you can select the language you wish to
-use. There are many default languages for SuiteCRM and there are also
-additional language packs available for other languages around the
-world.
+SuiteCRM is a software fork of the popular
+https://en.wikipedia.org/wiki/Customer_relationship_management[Customer
+Relationship Management] (CRM) system
+https://en.wikipedia.org/wiki/SugarCRM[SugarCRM], developed and
+maintained by SalesAgility. It is a free and open source alternative
+application. It was released on October 21, 2013 as version 7.0. The
+latest production version at the time of publishing this User Guide is
+SuiteCRM 7.6.3.
 
-Once you have chosen your language and have entered your user
-credentials, you will be able to click the Login button to access the
-CRM.
+SuiteCRM has been downloaded more than 500,000 times since the original
+release. It has been adopted by NHS (National Health Service) England's
+Code for Health programme which seeks to foster open source in the NHS
+in England.
 
-image:191Log_in.png[191Log_in.png,title="191Log_in.png"]
+The SuiteCRM project has stated that the every line of code released by
+the project will be open source. SuiteCRM project is intended to be an
+enterprise-class open source alternative to proprietary products.
 
-== Forgotten Password
+A project Roadmap is available that details planned enhancements.
 
-If you forget your CRM password and cannot access your CRM user account,
-you can use the 'Forgotten Password' feature to re-send your password to
-the email address associated to your user account. Clicking the 'Forgot
-Password?' link on the login form will display the forgotten password
-form.
+An active public support forum with more than 25,000 members is
+available for free support and is regularly monitored and updated by the
+Project team.
 
-image:179Forgot_password.png[179Forgot_password.png,title="179Forgot_password.png"]
+A directory of extensions is available where both free and paid-for
+enhancements are available.
 
-== Summary
+The project maintains https://suitecrmondemand.com/[SuiteCRM:OnDemand],
+a Software As A Service facility for users who seek a rapid deployment
+and maintenance free service.
 
-In this chapter we have demonstrated how to access SuiteCRM using the
-login form. We have also established how to use the forgotten password
-functionality to retrieve a users password in the event of the password
-being lost or forgotten.
+There will be no licensed software as part of the project managed by
+SalesAgility. All the code is free. All the code is available for free
+download. There is no hidden agenda to charge for access to the code. It
+is and always will be free and open source. There will be no paid-for
+versions.
 
-In the next chapter we will cover the User Wizard, which allows you to
-set your preferences when using SuiteCRM.
+== Who is SalesAgility?
+ 
+
+SalesAgility is an ISO-accredited open source consultancy focused on
+Customer Relationship Management (CRM). An early adopter of SugarCRM
+Community Edition, SalesAgility are the creators and maintainers behind
+the SugarCRM fork – SuiteCRM.
+
+SalesAgility have delivered more than 300 SuiteCRM and SugarCRM
+projects, and are known as a world class knowledge and expertise
+resource for open source CRM. Customers include governments, enterprises
+and small and medium sized business globally.
+
+SalesAgility has a clear mission statement:
+
+_"Our goal is to innovate and provide advanced SuiteCRM and SugarCRM
+solutions along with the industry’s leading customer service and
+support._
+
+_We believe that open source is in the best interest of our clients and
+we will continue to build, innovate, evangelise and provide best
+practice working models for the open source community."_
+
+== What is in the User Guide?
+
+
+The SuiteCRM User Guide has been written for the end user. This guide
+covers the SuiteCRM User Journey from end-to-end. We will explore all
+areas from the basics of logging into the system to creating complex
+automated workflows and reports.
+
+The SuiteCRM User Guide is split into various chapters. These chapters
+are ordered so that you progress through you guide as you would
+logically in day to day CRM use. The chapters contain sub-sections which
+break down barriers for you, explaining how to optimise the use of the
+customer relationship management system to effectively manage sales
+data.
+
+Readers of the SuiteCRM User Guide do not need to have development
+knowledge or prior knowledge of SuiteCRM. It is advised that you are
+computer literate, that you are familiar with using your chosen web
+browser and that SuiteCRM has already been installed and configured.
