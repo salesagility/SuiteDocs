@@ -75,9 +75,10 @@
           $fileNumber=0;
           foreach ($fileNames as $aFile) {
 //              file_put_contents($outputDir . $fileinfo->getFilename(), $fixed[$fileNumber]);
-              if ($fileNumber++ > 0) {
+              if ($fileNumber > 0) {
                  file_put_contents($outputDir . $aFile . $inputExtension, $fixed[$fileNumber]);
               }
+              $fileNumber = $fileNumber + 1;
           } 
       } 
       // die();
