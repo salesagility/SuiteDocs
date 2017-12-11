@@ -17,19 +17,15 @@ in an email.
 Let’s create a simple entry point to display the time. First we define
 this entry point in a new file in:
 
-*_Example 8.1: Entry point registry location_*
-
-
+.Example 8.1: Entry point registry location
 [source,php]
 custom/Extension/application/Ext/EntryPointRegistry/
 
 
 
-For our example we’ll call our new file MyTimeEntryPoint.php
+For our example we’ll call our new file *MyTimeEntryPoint.php*
 
-*_Example 8.2: Example entry point location_*
-
-
+.Example 8.2: Example entry point location
 [source,php]
 custom/Extension/application/Ext/EntryPointRegistry/MyTimeEntryPoint.php
 
@@ -44,9 +40,7 @@ usually a good idea to place this somewhere inside
 In addition we supply an “auth” parameter. If “auth” is true then anyone
 accessing the entry point will need to be logged into SuiteCRM.
 
-*_Example 8.3: Adding an entry point entry_*
-
-
+.Example 8.3: Adding an entry point entry
 [source,php]
 1 <?php
 2   $entry_point_registry['MyTimeEntryPoint'] = array(
@@ -59,9 +53,7 @@ accessing the entry point will need to be logged into SuiteCRM.
 Finally we add the actual logic itself inside
 custom/MyTimeEntryPoint.php:
 
-*_Example 8.4: Example entry point that outputs the current time_*
-
-
+.Example 8.4: Example entry point that outputs the current time
 [source,php]
 1 <?php
 2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
@@ -72,9 +64,7 @@ custom/MyTimeEntryPoint.php:
 
 After a Quick Repair and Rebuild we can access our entry point:
 
-*_Example 8.5: Custom entry point URL_*
-
-
+.Example 8.5: Custom entry point URL
 [source,php]
 example.com/index.php?entryPoint=MyTimeEntryPoint
 
@@ -82,9 +72,7 @@ example.com/index.php?entryPoint=MyTimeEntryPoint
 
 and we should see something similar to:
 
-*_Example 8.6: MyTimeEntryPoint_*
-
-
+.Example 8.6: MyTimeEntryPoint
 [source,php]
 Sun, 15 Mar 2015 13:03:03 +0000
 
@@ -93,4 +81,4 @@ Sun, 15 Mar 2015 13:03:03 +0000
 Obviously this is a contrived example but any logic that can be
 performed elsewhere in SuiteCRM can be performed in an entry poiny (for
 example creating or editing
-link:../3.-working-with-beans#working-with-beans-chapter[SugarBeans]).
+link:../3.-working-with-beans#working-with-beans-chapter[SugarBeans]). link:../8.-entry-points[↩]

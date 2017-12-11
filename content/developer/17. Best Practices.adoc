@@ -36,9 +36,7 @@ In order to back up files you can simply create a zip of the SuiteCRM
 directory and copy it to a safe place. On Linux systems this can be
 performed using the following:
 
-*_Example 17.1: File backup_*
-
-
+.Example 17.1: File backup
 [source,php]
 tar -czvf suitecrmfilebackup.tar.gz /path/to/suitecrm
 
@@ -48,9 +46,7 @@ Backing up the SuiteCRM database will vary depending on which database
 you are using. However MySQL backups can be performed using the
 `mysqldump` command on Linux as seen here:
 
-*_Example 17.2: MySQL Database backup_*
-
-
+.Example 17.2: MySQL Database backup
 [source,php]
 mysqldump suitecrmdatabase -u databaseuser -p | gzip -c | cat > suitecrm.sql.gz
 
@@ -103,7 +99,7 @@ relationships dynamically).
 Another issue is that, usually SQL will end up being Database specific
 (see the next point for mitigating this however).
 
-Finally any custom logic (such as Logic Hooks) which would usually be
+Finally any custom logic (such as link:../12.-logic-hooks[Logic Hooks]) which would usually be
 fired for saving beans or relationships will not be fired for SQL
 queries.
 
@@ -114,9 +110,7 @@ should strive to use standard compliant SQL. If database engine specific
 features need to be used, and you wish to target other database engines,
 you can check for the DB type. For example:
 
-*_Example 17.1: Checking for the database engine_*
-
-
+.Example 17.1: Checking for the database engine
 [source,php]
  1 function getSomeSQLQuery(){
  2     global $sugar_config;
@@ -139,9 +133,7 @@ you can check for the DB type. For example:
 The majority of SuiteCRM files will start with some variation of the
 following line:
 
-*_Example 17.2: Entry check_*
-
-
+.Example 17.2: Entry check
 [source,php]
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
@@ -163,10 +155,8 @@ the user from refreshing the page and causing a duplicate action. Within
 SuiteCRM it is best to use the `SugarApplication::redirect` method to
 redirect. This simply accepts a URL. As follows:
 
-*_Example 17.3: Redirecting within SuiteCRM_*
-
-
+.Example 17.3: Redirecting within SuiteCRM
 [source,php]
 SugarApplication::redirect('index.php?module=<TheModule>');
 
-
+link:../17.-best-practices[↩]

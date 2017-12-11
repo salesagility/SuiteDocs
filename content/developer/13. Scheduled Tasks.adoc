@@ -35,9 +35,7 @@ descriptive name. Let’s create a simple file named +
 This will add a new job to the job strings and a new method that the
 scheduler will call:
 
-*_Example 13.1: Example Clean Meetings Scheduler_*
-
-
+.Example 13.1: Example Clean Meetings Scheduler
 [source,php]
  1 <?php
  2 /*
@@ -85,9 +83,7 @@ LBL_UPPERMETHODNAME. In our case our method name is
 `cleanMeetingsScheduler` so our language label key will be
 `LBL_CLEANMEETINGSSCHEDULER`.
 
-*_Example 13.2: Example Language string for Clean Meetings Scheduler_*
-
-
+.Example 13.2: Example Language string for Clean Meetings Scheduler
 [source,php]
 1 <?php
 2 //We add the mod string for our method here.
@@ -116,12 +112,10 @@ once a day.
 
 Sometimes you will require code to perform a long running task but you
 do not need the user to wait for this to be completed. A good example of
-this is sending an email in a logic hook (see the Logic Hooks chapter
+this is sending an email in a logic hook (see the link:../12.-logic-hooks[Logic Hooks] chapter
 for information on these). Assuming we have the following logic hook:
 
-*_Example 13.3: Example Email sending Logic Hook_*
-
-
+.Example 13.3: Example Email sending Logic Hook
 [source,php]
  1 class SomeClass
  2 {
@@ -162,9 +156,7 @@ would do this.
 
 First we want our Logic Hook class to create the scheduled job:
 
-*_Example 13.4: Example Scheduled Job Creation_*
-
-
+.Example 13.4: Example Scheduled Job Creation
 [source,php]
  1 class SomeClass
  2 {
@@ -202,9 +194,7 @@ Next we create the BeanEmailJob class. This is placed into the `custom/Extension
 with the same name as the class. So in our example we will have: +
 `custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/BeanEmailJob.php`
 
-*_Example 13.5: Example Scheduler job_*
-
-
+.Example 13.5: Example Scheduler job
 [source,php]
  1 class BeanEmailJob implements RunnableSchedulerJob
  2 {
@@ -249,8 +239,7 @@ Now whenever a user triggers the hook it will be much quicker since we
 are simply persisting a little info to the database. The scheduler will
 run this in the background.
 
-[discrete]
-==== Retries
+=== Retries
 
 Occasionally you may have scheduled jobs which could fail
 intermittently. Perhaps you have a job which calls an external API. If
@@ -267,9 +256,7 @@ which govern how retries are handled. These are `requeue` and
 
 We can revisit our previous example and add two retries:
 
-*_Example 13.6: Setting the retry count on a scheduled job_*
-
-
+.Example 13.6: Setting the retry count on a scheduled job
 [source,php]
  6       $scheduledJob = new SchedulersJob();
  7 
@@ -309,9 +296,7 @@ place to start. For both scheduled tasks and job queue tasks you can
 also check the job_queue table. For example, in MySQL we can check the
 last five scheduled jobs:
 
-*_Example 13.7: Example MySQL query for listing jobs_*
-
-
+.Example 13.7: Example MySQL query for listing jobs
 [source,php]
 SELECT * FROM job_queue ORDER BY date_entered DESC LIMIT 5
 
@@ -320,9 +305,7 @@ SELECT * FROM job_queue ORDER BY date_entered DESC LIMIT 5
 This will give us information on the last five jobs. Alternatively we
 can check on specific jobs:
 
-*_Example 13.8: Example MySQL query for listing BeanEmailJobs_*
-
-
+.Example 13.8: Example MySQL query for listing BeanEmailJobs
 [source,php]
 SELECT * FROM job_queue WHERE target = 'class::BeanEmailJob'
 
@@ -330,9 +313,7 @@ SELECT * FROM job_queue WHERE target = 'class::BeanEmailJob'
 
 In either case this will give details for the job(s):
 
-*_Example 13.9: Example MySQL list of jobs_*
-
-
+.Example 13.9: Example MySQL list of jobs
 [source,php]
 *************************** 1. row ***************************
 assigned_user_id: 1
@@ -375,13 +356,10 @@ you can usually check your PHP logs.
 As a last resort you can manually run the scheduler from the SuiteCRM
 directory using:
 
-*_Example 13.10: Running the scheduler manually_*
-
-
+.Example 13.10: Running the scheduler manually
 [source,php]
 php -f cron.php
 
 
-
 Using this in addition to outputting any useful information should track
-down even the oddest of bugs.
+down even the oddest of bugs. link:../13.-scheduled-tasks[↩]
