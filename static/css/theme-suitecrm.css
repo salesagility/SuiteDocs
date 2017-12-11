@@ -583,7 +583,11 @@ select::-ms-expand {
 	padding:3px 15px 3px 30px;
 }
 
+#sidebar ul li li li {
+        margin-left: 15px;
+}
 #sidebar ul li li {
+        //margin-left: 10px;
 	text-indent: 0;
 	padding-left:0;
 	font-size:14px;

@@ -1,0 +1,48 @@
+---
+Title: Getting Started
+Weight: 20
+---
+
+:imagesdir: ./../../images/en/user
+
+= Getting Started
+
+== Logging Into SuiteCRM
+
+SuiteCRM allows users to log in using your Username and Password,
+provided to you by the System Administrator.
+
+image:190Home_screen.png[190Home_screen.png,title="190Home_screen.png"]
+
+image:02Login_with_language.png[02Login_with_language.png,title="02Login_with_language.png"]
+
+Before logging into SuiteCRM, you can select the language you wish to
+use. There are many default languages for SuiteCRM and there are also
+additional language packs available for other languages around the
+world.
+
+Once you have chosen your language and have entered your user
+credentials, you will be able to click the Login button to access the
+CRM.
+
+image:191Log_in.png[191Log_in.png,title="191Log_in.png"]
+
+== Forgotten Password
+
+If you forget your CRM password and cannot access your CRM user account,
+you can use the 'Forgotten Password' feature to re-send your password to
+the email address associated to your user account. Clicking the 'Forgot
+Password?' link on the login form will display the forgotten password
+form.
+
+image:179Forgot_password.png[179Forgot_password.png,title="179Forgot_password.png"]
+
+== Summary
+
+In this chapter we have demonstrated how to access SuiteCRM using the
+login form. We have also established how to use the forgotten password
+functionality to retrieve a users password in the event of the password
+being lost or forgotten.
+
+In the next chapter we will cover the User Wizard, which allows you to
+set your preferences when using SuiteCRM.
