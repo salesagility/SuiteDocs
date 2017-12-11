@@ -16,8 +16,7 @@ how many entries to show per page in the list view. Most of these
 options are accessible from the SuiteCRM administration page. However
 some are only definable in the config files.
 
-[discrete]
-==== config.php
+=== config.php
 
 This is the main SuiteCRM config file and includes important information
 like the database settings and the current SuiteCRM version.
@@ -27,9 +26,7 @@ this is if SuiteCRM has been moved or migrated. In which case you may
 need to change the database settings and the site_url. Let’s look at the
 database settings first:
 
-*_Example 10.1: Database config definition_*
-
-
+.Example 10.1: Database config definition
 [source,php]
  1 'dbconfig' =>
  2 array (
@@ -51,9 +48,7 @@ named ‘dbname’.
 
 The site url settings are even simpler:
 
-*_Example 10.2: Setting the site URL_*
-
-
+.Example 10.2: Setting the site URL
 [source,php]
   'site_url' => 'http://example.com/suitecrm',
 
@@ -65,11 +60,9 @@ can simply place that value in the file.
 
 These are generally the only two instances where you would directly
 change `config.php`. For other changes you would either make the change
-through SuiteCRM itself or you would use the +
-`config_override.php` file.
+through SuiteCRM itself or you would use the `config_override.php` file.
 
-[discrete]
-==== config_override.php
+=== config_override.php
 
 `config_override.php` allows you to make config changes without risking
 breaking the main config file. This is achieved quite simply by adding,
@@ -78,9 +71,7 @@ editing or removing items from the $sugar_config variable. The
 allowing, as the name suggests, overriding the config. For example in
 config_override.php we can add our own, new, config item:
 
-*_Example 10.3: Adding a custom config value_*
-
-
+.Example 10.3: Adding a custom config value
 [source,php]
 $sugar_config['enable_the_awesome'] = true;
 
@@ -89,9 +80,7 @@ $sugar_config['enable_the_awesome'] = true;
 or we can edit an existing config option in a very similar manner by
 simply overwriting it:
 
-*_Example 10.4: Overwriting an existing config value_*
-
-
+.Example 10.4: Overwriting an existing config value
 [source,php]
 $sugar_config['logger']['level'] = 'debug';
 
@@ -103,9 +92,7 @@ We may want to access config options in custom code (or as detailed
 above if we have created our own config setting we may want to use
 that). We can easily get the config using the php global keyword:
 
-*_Example 10.5: Accessing a config setting within SuiteCRM_*
-
-
+.Example 10.5: Accessing a config setting within SuiteCRM
 [source,php]
 1 function myCustomLogic(){
 2   //Get access to config
@@ -116,4 +103,4 @@ that). We can easily get the config using the php global keyword:
 7   }
 8 }
 
-
+link:../10.-config[↩]

@@ -18,28 +18,23 @@ libraries in whichever language you will be using.
 Both APIs will require a username and password. It is usual to create a
 user specifically for the API.
 
-[discrete]
-==== SOAP
+=== SOAP
 
 The WSDL for the SOAP API can be found at:
 
-*_Example 16.1: SOAP API WSDL Location_*
-
+.Example 16.1: SOAP API WSDL Location
 [source, php]
 example.com/suitecrm/service/v4_1/soap.php?wsdl
-
 
 
 Where `example.com/suitecrm` is the address of your SuiteCRM instance.
 `v4_1` is the version of the API and can be changed, `v4_1` is the
 latest version at the time of writing.
 
-*SOAP Example* +
+==== SOAP Example
 The following PHP example uses the built in SoapClient class.
 
-*_Example 16.2: Accessing the SOAP API_*
-
-
+.Example 16.2: Accessing the SOAP API
 [source,php]
  1 <?php
  2 //Create a new SoapClient
@@ -90,14 +85,11 @@ The following PHP example uses the built in SoapClient class.
 
 
 
-[discrete]
-==== REST
+=== REST
 
 The SuiteCRM REST API can be found at:
 
-*_Example 16.3: REST API Endpoint Location_*
-
-
+.Example 16.3: REST API Endpoint Location
 [source,php]
 example.com/suitecrm/service/v4_1/rest.php
 
@@ -132,9 +124,7 @@ requests it is the order of the arguments that matter in `rest_data` and
 not the name.
 {{% /notice %}}
 
-*_Example 16.4: Accessing the REST API_*
-
-
+.Example 16.4: Accessing the REST API
 [source,php]
  1 <?php
  2 
@@ -229,9 +219,7 @@ SuiteCRM log We will call this method `write_log_message`.
 [discrete]
 ==== Examples
 
-*_Example 16.5: Custom v4_1 Web Service Implementation_*
-
-
+.Example 16.5: Custom v4_1 Web Service Implementation
 [source,php]
  1 <?php
  2 if(!defined('sugarEntry')){
@@ -266,9 +254,7 @@ SuiteCRM log We will call this method `write_log_message`.
 
 Next we create the registry file which will register our new method.
 
-*_Example 16.6: Custom v4_1 web service registry_*
-
-
+.Example 16.6: Custom v4_1 web service registry
 [source,php]
  1 <?php
  2     require_once 'service/v4_1/registry.php';
@@ -293,9 +279,7 @@ Finally we create the entry point. This is the actual file that will be
 called by our API clients. This will reference the two files which we
 have created and will call the webservice implementation with our files.
 
-*_Example 16.7: Custom v4_1 REST Entry point_*
-
-
+.Example 16.7: Custom v4_1 REST Entry point
 [source,php]
  1 <?php
  2 chdir('../../..');
@@ -313,9 +297,7 @@ have created and will call the webservice implementation with our files.
 
 
 
-*_Example 16.8: Custom v4_1 SOAP Entry point_*
-
-
+.Example 16.8: Custom v4_1 SOAP Entry point
 [source,php]
  1 <?php
  2 chdir('../../..');
@@ -330,8 +312,7 @@ have created and will call the webservice implementation with our files.
 
 
 
-[discrete]
-==== Usage
+=== Usage
 
 We can now use our custom endpoint. This is identical to using the API
 as detailed above, except that we use our custom entry point for either
@@ -339,13 +320,11 @@ the SOAP WSDL or REST URL. For example using the same SuiteCRM location
 (`example.com/suitecrm`) as the above examples and using `v4_1`, we
 would use the following
 
-*_Example 16.9: Custom v4_1 URLS_*
-
-
+.Example 16.9: Custom v4_1 URLS
 [source,php]
 1 //SOAP WSDL
 2 example.com/suitecrm/custom/service/v4_1_custom/soap.php?wsdl
 3 //REST URL
 4 example.com/suitecrm/custom/service/v4_1_custom/rest.php
 
-
+link:../16.-api[↩]
