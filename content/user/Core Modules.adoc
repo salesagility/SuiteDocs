@@ -2,6 +2,10 @@
 Title: Core Modules
 Weight: 60
 ---
+:sectnums:                                                          
+:toc: right                                                               
+:toclevels: 2                                                       
+:toc-title: In this chapter
 
 :imagesdir: ./../../images/en/user
 
@@ -20,7 +24,7 @@ Customer, Supplier or Re-seller and can be used to track all
 interactions that take place between these entities and your
 organisation.
 
-== Accounts Actions
+=== Accounts Actions
 
 You can access the accounts actions from the Accounts module menu drop
 down or via the Sidebar. The Accounts actions are as follows:
@@ -37,7 +41,7 @@ Records].
 To view the full list of fields available when creating an Account, See
 link:#Accounts_Field_List[Accounts Field List].
 
-== Managing Accounts
+=== Managing Accounts
 
 * To sort records on the Accounts List View, click any column title
 which is sortable. This will sort the column either ascending or
@@ -81,7 +85,7 @@ these individuals and also provides a vantage point for any history
 relating to a Contact record, for example if they were involved in a
 Meeting, raised a Case or sent an Email.
 
-== Contacts Actions
+=== Contacts Actions
 
 You can access the Contacts actions from the Contacts module menu drop
 down or via the Sidebar. The Contacts actions are as follows:
@@ -97,7 +101,7 @@ Records].
 To view the full list of fields available when creating an Contact, See
 link:#Contacts_Field_List[ Contacts Field List].
 
-== Managing Contacts
+=== Managing Contacts
 
 * To sort records on the Contacts List View, click any column title
 which is sortable. This will sort the column either ascending or
@@ -139,7 +143,7 @@ that they have buying power and have entered into the buying cycle. This
 module allows you to track your Opportunities throughout the Sales
 Pipeline until the deal is 'Closed Lost or 'Closed Won'.
 
-== Opportunities Actions
+=== Opportunities Actions
 
 You can access the Opportunities actions from the Opportunities module
 menu drop down or via the Sidebar. The Opportunities actions are as
@@ -157,7 +161,7 @@ link:#Importing_Records[Importing Records].
 To view the full list of fields available when creating an Opportunity,
 See link:#Opportunities_Field_List[Opportunities Field List].
 
-== Managing Opportunities
+=== Managing Opportunities
 
 * To sort records on the Opportunities List View, click any column title
 which is sortable. This will sort the column either ascending or
@@ -218,7 +222,7 @@ Records].
 To view the full list of fields available when creating a Lead, See
 link:#Leads_Field_List[Leads Field List].
 
-== Managing Leads
+=== Managing Leads
 
 * To sort records on the Leads List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
