@@ -1,4 +1,4 @@
-baseURL = "https://docs.suitecrm.com"
+baseURL = "http://docs.suitecrm.com"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
@@ -8,7 +8,8 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 
 [params]
-  editURL = "https://github.com/salesagility/SuiteDocs/edit/master/content/"
+  editURL =  "https://github.com/salesagility/SuiteDocs/edit/master/content/"
+  issueURL = "https://github.com/salesagility/SuiteDocs/issues/new?"
   description = "Documentation for SuiteCRM"
   author = "SalesAgility"
   showVisitedLinks = true

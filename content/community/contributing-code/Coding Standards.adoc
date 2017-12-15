@@ -1,0 +1,312 @@
+---
+Title: Coding Standards
+Weight: 50
+---
+
+== Coding Standards for SuiteCRM
+
+Some parts of the SuiteCRM code structure for PHP markup are
+inconsistent in their style. SuiteCRM are working to gradually improve
+this by helping our internal team and contributors maintain a consistent
+style so the code can become clean and easy to read at a glance. This
+will be an ongoing transition but we encourage users to begin to think
+about their supplied bug fixes and enhancements to conform to the below
+standards. We thank you for your continued contributions!
+
+== License
+
+At the beginning of each new *core* file include the following license
+as the standard header
+
+[source]
+/**
+* 
+* SugarCRM Community Edition is a customer relationship management program developed by 
+* SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc. 
+* 
+* SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd. 
+* Copyright (C) 2011 - 2017 SalesAgility Ltd. 
+* 
+* This program is free software; you can redistribute it and/or modify it under 
+* the terms of the GNU Affero General Public License version 3 as published by the 
+* Free Software Foundation with the addition of the following permission added 
+* to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK 
+* IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY 
+* OF NON INFRINGEMENT OF THIRD PARTY RIGHTS. 
+* 
+* This program is distributed in the hope that it will be useful, but WITHOUT 
+* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+* FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more 
+* details. 
+* 
+* You should have received a copy of the GNU Affero General Public License along with 
+* this program; if not, see `http://www.gnu.org/licenses[`http://www.gnu.org/licenses`]` or write to the Free 
+* Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
+* 02110-1301 USA. 
+* 
+* You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road, 
+* SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com. 
+* 
+* The interactive user interfaces in modified source and object code versions 
+* of this program must display Appropriate Legal Notices, as required under 
+* Section 5 of the GNU Affero General Public License version 3. 
+* 
+* In accordance with Section 7(b) of the GNU Affero General Public License version 3, 
+* these Appropriate Legal Notices must retain the display of the "Powered by 
+* SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not 
+* reasonably feasible for technical reasons, the Appropriate Legal Notices must 
+* display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM". 
+*/
+
+
+
+
+Ensure that the if statement for the valid entry point has been moved to
+*below* the license.
+
+[source, php]
+if (!defined('sugarEntry') || !sugarEntry) {
+   die('Not A Valid Entry Point');
+}
+
+
+
+== Indentation
+
+Using PSR-2 Indentation.
+
+Code MUST use an indent of *4 spaces*, and MUST NOT use tabs for
+indenting.
+
+JavaScript files should be indented using *2 spaces*.
+
+== Class Names
+
+Class names should use 'StudlyCaps' e.g ClassName, DoSomething.. Classes
+should be named relevant to their Entity.
+
+.Example
+[source, php]
+----
+class YoungInfant extends Person 
+{
+
+} 
+----
+
+== Function Names
+
+Function names should use lower camelCase e.g - functionName,
+doSomething. Functions should also be named descriptively with
+preferably a verb in them.
+
+[source, php]
+function printLoginStatus($user, $time) 
+{
+    // do Something
+} 
+
+
+In function arguments the variables should be descriptive of the
+variables use.
+
+== Variables
+
+Static and Member variables should be lower camelCase and do not
+abbreviate variable names un-necessarily.
+
+[source, php]
+----
+public static $jobStrings;
+
+var $disableRowLevelSecurity = true;  
+----
+
+Also ensure that uninitialised variables are checked if set by using the built-in `isset()`
+function.
+
+.Example
+[source, php]
+if (isset($forum)) 
+
+== Quotations
+
+Use single and double quotes when appropriate. If you’re not evaluating
+anything in the string, use single quotes. There should be no need to
+ever escape quotes within a string.
+
+[source, php]
+$sample = 'Hello'; 
+$sample = "Hello, $name"; 
+$sample = "Hello, \{$name}"; 
+
+== Arrays
+
+When declaring indexed arrays with the Array function, a trailing space
+must be added after each comma delimiter to improve readability.
+
+[source,php]
+$sampleArray = array(1, 2, 3, 'Zend', 'Studio');  
+
+When declaring a multi-line indexed array the
+initial array item may begin on the following line. If so, it should be
+padded at one indentation level greater than the line contain the array
+declaration, and all successive lines should have the same indentation;
+the closing parenthesis should be on a line by itself at the same
+indentation level as the line contain the array declaration.
+
+.Example
+[source,php]
+$sampleArray = array(
+   1, 2, 3, 'Zend', 'Studio', 
+   $a, $b, $c, 
+   56.44, $d, 500, 
+);  
+
+When declaring associative arrays the initial array item may
+begin on the following line. If so, it should be padded at one
+indentation level greater than the line containing the array
+declaration, and all successive lines should have the same indentation;
+the closing parenthesis should be on a line by itself at the same
+indentation level as the line containing the array declaration. For
+readability, the various `=>` assignment operators should be padded such
+that they align.
+
+.Example
+[source, php]
+$sampleArray = array(
+   'firstKey'  => 'firstValue', 
+   'secondKey' => 'secondValue', 
+); 
+
+== Brace Style
+
+*Always include the braces*: Even if not required still maintain the
+braces to provide code clarity.
+
+.Bad
+[source, php]
+----
+if (condition) do_stuff();
+
+if (condition)
+   do_stuff(); 
+----
+
+
+.Good  
+[source, php]
+----
+if (condition) 
+{
+   do_stuff(); 
+}
+
+if ($a != 2) {
+   $a = 2; 
+} 
+elseif ($a == 3) {
+   $a = 4; 
+} 
+else {
+   $a = 7; 
+} 
+----
+
+Opening bracket on class, function, method names should be on the next
+line as the declaration and the exiting bracket on a line of its own.
+
+.Example
+[source, php]
+----
+class ThisClass 
+{     
+   public function newMethod()
+   {
+
+   } 
+} 
+
+function newFunction() 
+{
+
+} 
+----
+
+== Comments
+
+Use https://phpdoc.org/[phpdoc] syntax before all
+classes/methods/members/functions definitions. A simple template can be
+set up in your IDE.
+
+* All class definitions should have at least `@author` and `@package` with
+the `@author` on the last line of the block-level comment
+* Always start block-level comments containing phpdoc with two asterisks
+(`/** ... */`)
+* Single commenting should have a space first, followed by a capital
+letter with no full stop needed `// This is an example`
+
+Often comment on any tricky, obscure, or otherwise
+not-immediately-obvious code to include any assumptions your code makes,
+or preconditions for its proper operation. A developer should be able to
+look at any part of the application and understand well enough what's
+going on in a reasonable amount of time.
+
+.Example
+[source, php]
+----
+/**
+* The method's summary
+* 
+* This method's short description which can span
+* along multiple lines – also provide context
+* to the method.
+* 
+* @param string $variable with a description of this argument
+* @return void
+*/
+
+public function myMethod($variable) 
+{
+   // Do something here
+} 
+----
+
+== General Guidelines
+
+Any new class (including classed in generated files) should use the
+constructor `__construct`, but only where a constructor is required.
+
+.Example:
+[source, php]
+function __construct() 
+{
+   // do child class specific code here
+   parent::__construct();
+} 
+
+{{% notice warning %}}
+Ensure your code is compatible with current supported Operating Systems, Databases and PHP
+versions and Browsers: see our link:/admin/compatibility-matrix[Compatibility Matrix].
+{{% /notice %}}
+
+== House Keeping
+
+If including JavaScript files, a minified version should be used in the
+core, with an un-minified version added to the equivalent directory
+within `jssource` folder. Any modifications to JavaScript files should
+be made in the `jssource` folder and then minified into the core.
+
+If developing a new core feature do not create files within the custom
+directory and ensure that the new module name is sensible and relevant
+with no prefixes.
+
+If adding a new module clean up generated files so only the required
+files are used. The following are examples (but not limited to) of
+tidying up a module's directory/files.
+
+* Remove `studio.php` if it should not be in studio
+* Remove `_sugar` class file from main class file if it not assignable
+* or in security groups remove the option from the vardefs and remove
+
+ // to ensure that modules created and deployed under CE will continue to function under team security if the instance is upgraded to PRO

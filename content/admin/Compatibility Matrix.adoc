@@ -1,85 +1,243 @@
-
 ---
 Title: Compatibility Matrix
 ---
 
-:imagesdir: ./../../images/en/user
+== Versions
 
-__FORCETOC__
+[float="left"]
+[cols="19,30" width="49"]
+|====
+2+^|7.9.x
 
-== 7.9.x
+2+^h| Platform 
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.5, 5.6, 7.0, 7.1 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
-|- ! scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |-
-|MySQL |5.5, 5.6, 5.7 |- |SQL Server |SQL Server 2008+
+|*Linux, Unix, Mac OS* | Any version supporting PHP 
 
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |55+ |- |Firefox |52+
-|- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
-|6+ |}
+|*Windows* | Windows Server 2008+
 
-== 7.8.x
+|*PHP* | 5.5, 5.6, 7.0, 7.1 
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.5, 5.6, 7.0, 7.1 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
-|- ! scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |-
-|MySQL |5.5, 5.6, 5.7 |- |SQL Server |SQL Server 2008+
+2+^h| Web Server 
 
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |55+ |- |Firefox |52+
-|- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
-|6+ |}
+|*Apache* |2.2, 2.4 
 
-== 7.7.x
+|*IIS* |8, 8.5
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.3, 5.5, 5.6, 7.0 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
-|- ! scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |-
-|MySQL |5.5, 5.6 |- |SQL Server |SQL Server 2008+
+2+^h| Database 
 
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |43+ |- |Firefox |38+
-|- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
-|6+ |
+|*MariaDB* |5.5, 10, 10.1 
 
-== 7.6.x
+|*MySQL* |5.5, 5.6, 5.7 
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.5, 5.6, 7.0 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
-|- ! scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |-
-|MySQL |5.5, 5.6 |- |SQL Server |SQL Server 2008+
+|*SQL Server* |SQL Server 2008+
 
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |43+ |- |Firefox |38+
-|- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
-|6+ |}
+2+^h| Browsers 
 
-== 7.5.x
+|*Chrome* |55+ 
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.5, 5.6, 7.0 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.2 |- |IIS |8, 8.5 |- !
-scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |- |MySQL
-|5.5, 5.6 |- |SQL Server |SQL Server 2008+
+|*Firefox* |52+
 
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |43+ |- |Firefox |38+
-|- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
-|6+ |}
+|*IE* |11 (compatibility mode not supported) 
 
-== 7.4.x
+|*Edge* |26 
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.3, 5.4, 5.5, 5.6 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.0, 2.2 |- |IIS |7.0,
-7.5, 8, 8.5 |- ! scope="row" colspan="2"| Database |- |MariaDB |5.5, 10,
-10.1 |- |MySQL |5.1, 5.5, 5.6 |- |SQL Server |SQL Server 2008+
+|*Safari* |6+
+|====
 
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |38+ |- |Firefox |32+
-|- |IE |9, 10, 11 (compatibility mode not supported) |- |Safari |6+ |}
+[float="right"]
+[cols="19,30", width="49"]
+|====
+2+^|7.8.x
+
+2+h|Platform
+
+s|Linux, Unix, Mac OS |Any version supporting PHP 
+
+s|Windows |Windows Server 2008+ 
+
+s|PHP |5.5, 5.6, 7.0, 7.1 
+
+2+h|Web Server
+
+s|Apache |2.2, 2.4
+
+s|IIS |8, 8.5
+
+2+h|Database
+
+s|MariaDB |5.5, 10, 10.1
+
+s|MySQL |5.5, 5.6, 5.7
+
+s|SQL Server |SQL Server 2008+
+
+2+h|Browsers
+
+s|Chrome |55+ 
+
+s|Firefox |52+
+
+s|IE |11 (compatibility mode not supported)
+
+s|Edge |26 
+
+s|Safari |6+
+|====
+
+[float="left"]
+[cols="19,30", width="49"]
+|====
+2+^|7.7.x
+
+2+h| Platform 
+
+s|Linux, Unix, Mac OS |Any version supporting PHP 
+
+s|Windows |Windows Server 2008+
+
+s|PHP |5.3, 5.5, 5.6, 7.0
+
+2+h| Web Server 
+
+s|Apache |2.2, 2.4 
+
+s|IIS |8, 8.5
+
+2+h| Database 
+
+s|MariaDB |5.5, 10, 10.1
+
+s|MySQL |5.5, 5.6 
+
+s|SQL Server |SQL Server 2008+
+
+2+h|Browsers
+
+s|Chrome |43+ 
+
+s|Firefox |38+
+
+s|IE |11 (compatibility mode not supported) 
+
+s|Edge |26 
+
+s|Safari |6+ 
+|====
+
+[float="right"]
+[cols="19,30", width="49"]
+|====
+2+^|7.6.x
+
+2+h|Platform
+
+s|Linux, Unix, Mac OS |Any version supporting PHP
+
+s|Windows |Windows Server 2008+ 
+
+s|PHP |5.5, 5.6, 7.0 
+
+2+h|Web Server 
+
+s|Apache |2.2, 2.4 
+
+s|IIS |8, 8.5
+
+2+h|Database 
+
+s|MariaDB |5.5, 10, 10.1
+
+s|MySQL |5.5, 5.6 
+
+s|SQL Server |SQL Server 2008+
+
+2+h|Browsers 
+
+s|Chrome |43+
+
+s|Firefox |38+
+
+s|IE |11 (compatibility mode not supported) 
+
+s|Edge |26 
+
+s|Safari |6+
+|====
+
+[float="left"]
+[cols="19,30", width="49"]
+|====
+2+^|7.5.x
+
+2+h|Platform  
+
+s|Linux, Unix, Mac OS |Any version supporting PHP 
+
+s|Windows |Windows Server 2008+
+
+s|PHP |5.5, 5.6, 7.0 
+
+2+h|Web Server
+
+s|Apache |2.2
+
+s|IIS |8, 8.5 
+
+2+h|Database 
+
+s|MariaDB |5.5, 10, 10.1
+
+s|MySQL |5.5, 5.6 
+
+s|SQL Server |SQL Server 2008+
+
+2+h|Browsers
+
+s|Chrome |43+ 
+
+s|Firefox |38+
+
+s|IE |11 (compatibility mode not supported) 
+
+s|Edge |26 
+
+s|Safari |6+
+|====
+
+[float="right"]
+[cols="19,30", width="49"]
+|====
+2+^|7.4.x
+
+2+h|Platform 
+
+s|Linux, Unix, Mac OS |Any version supporting PHP 
+
+s|Windows |Windows Server 2008+ 
+
+s|PHP |5.3, 5.4, 5.5, 5.6 
+
+2+h|Web Server
+
+s|Apache |2.0, 2.2 
+
+s|IIS |7.0, 7.5, 8, 8.5 
+
+2+h| Database 
+
+s|MariaDB |5.5, 10, 10.1 
+
+s|MySQL |5.1, 5.5, 5.6 
+
+s|SQL Server |SQL Server 2008+
+
+2+h| Browsers
+
+s|Chrome |38+ 
+
+s|Firefox |32+
+
+s|IE |9, 10, 11 (compatibility mode not supported) 
+
+s|Safari |6+ 
+|====

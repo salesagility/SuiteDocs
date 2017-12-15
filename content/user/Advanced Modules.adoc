@@ -1170,7 +1170,7 @@ equivalent with the PHP format parameters:
 |=======================================================================
 |Format character |Description |Example returned values
 
-3+|*For day*
+3+h|*For day*
 
 | d |Day of the month, 2 digits with
 leading zeros |01 to 31
@@ -1196,12 +1196,12 @@ the week |0 (for Sunday) through 6 (for Saturday)
 | z |The day of the year (starting from 0)
 |0 through 365
 
-3+|*For week*
+3+h|*For week*
 
 | W |ISO-8601 week number of year, weeks
 starting on Monday |42 (the 42nd week in the year)
 
-3+|*For month*
+3+h|*For month*
 
 | F |A full textual representation of a
 month, such as January or March |January through December
@@ -1218,7 +1218,7 @@ without leading zeros |1 through 12
 | t |Number of days in the given month |28
 through 31
 
-3+|*For year*
+3+h|*For year*
 
 | L |Whether it's a leap year |1 if it is a
 leap year, 0 otherwise
@@ -1233,7 +1233,7 @@ year, 4 digits |1999 or 2003
 | y |A two digit representation of a year
 |99 or 03
 
-3+|*For time*
+3+h|*For time*
 
 | a |Lowercase Ante meridiem and Post
 meridiem |am or pm
@@ -1260,7 +1260,7 @@ zeros |00 through 23
 | s |Seconds, with leading zeros |00
 through 59
 
-3+|*For timezone*
+3+h|*For timezone*
 
 | e |Timezone identifier |UTC, GMT,
 Atlantic/Azores
@@ -1280,7 +1280,7 @@ with colon between hours and minutes |+02:00
 for timezones west of UTC is always negative, and for those east of UTC
 is always positive. |-43200 through 50400
 
-3+|*For full date/time*
+3+h|*For full date/time*
 
 | c |ISO 8601 date
 |2004-02-12T15:19:21+00:00
