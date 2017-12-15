@@ -11,7 +11,7 @@ There are many configuration options available to users once logged into
 the system. You can view/modify your preferences by clicking on your
 name in the top right section of the navigation menu.
 
-image:11User_select.png[11User_select.png,title="11User_select.png"]
+image:11User_select.png[title="Manage Account"]
 
 == User Profile Tab
 
@@ -19,7 +19,7 @@ Once you have clicked to access your preferences, you will be taken to
 the 'User Profile' tab which gives an overview of you credentials such
 as Username, First Name, Last Name, Title etc.
 
-image:12User_profile.png[12User_profile.png,title="12User_profile.png"]
+image:12User_profile.png[title="User Profile"]
 
 == Password Tab
 
@@ -30,7 +30,7 @@ are secure. The recommended minimum requirement is one upper case
 character, one lower case character, one numerical character and a
 minimum password length of 8 characters.
 
-image:13Password_tab.png[13Password_tab.png,title="13Password_tab.png"]
+image:13Password_tab.png[title="Password Tab"]
 
 If you have forgotten your password and cannot login, you can use the
 forgotten password functionality detailed in the
@@ -43,7 +43,7 @@ navigating to the Themes Tab. This tab allows you to easily select the
 desired theme, and also shows a theme preview image (assuming this has
 also been provided with any third party or additional themes).
 
-image:image16.png[image16.png,title="image16.png"]
+image:image16.png[image16.png]
 
 == Advanced Tab
 
@@ -52,21 +52,25 @@ the User Wizard process. This gives you the ability to change any of
 your user preferences, if there were any mistakes or if you require to
 amend these at a later date.
 
-image:14Advanced_tab.png[14Advanced_tab.png,title="14Advanced_tab.png"]
+image:14Advanced_tab.png[title="Advanced Tab"]
 
 == Resetting a Users Preferences
 
 You can reset your user preferences to the system default by clicking
 the 'Reset User Preferences' button on your profile.
 
-image:15User_preference.png[15User_preference.png,title="15User_preference.png"]
+image:15User_preference.png[title="Reset User Preferences"]
 
 Clicking the button will prompt you to ensure you wish to reset your
 user preferences, with the following message: “Are you sure you want
-reset all of your user preferences? Warning: This will also log you out
+reset all of your user preferences? 
+
+{{% notice warning %}}
+This will also log you out
 of the application.”. you can then click 'OK' or 'Cancel' to action
 appropriately. If you select 'OK' you will be logged out and will need
 to re-login to SuiteCRM application.
+{{% /notice %}}
 
 == Resetting a Users home page
 
@@ -74,7 +78,7 @@ You can reset your home page to the system default by clicking the
 'Reset home page' button on your profile. This will reset both dashlet
 and dashboard preferences/layouts to the system default.
 
-image:16Reset_homepage.png[16Reset_homepage.png,title="16Reset_homepage.png"]
+image:16Reset_homepage.png[title="Reset Homepage"]
 
 Clicking the button will prompt you to ensure you wish to reset your
 home page, with the following message: “Are you sure you want reset your
