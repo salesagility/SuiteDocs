@@ -4,7 +4,10 @@ weight: 16
 title: "16. API"
 ---
 
-= 16. API
+{{% notice warning %}}
+This documentation pertains to SuiteCRM versions up to v.7.9.x. 
+We have a brand new REST API in v.7.10, documentation for it should shortly follow its release.
+{{% /notice %}}
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
 data and functionality.
