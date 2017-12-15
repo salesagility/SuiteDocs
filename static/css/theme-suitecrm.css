@@ -118,6 +118,16 @@ table caption {
 	font-style:italic;
 }
 
+/* these styles are built especially for the Compatibility Matrix page tables: */
+#smaller-table-spacing {
+        line-height: 0;
+        max-width: 600px;
+}
+#smaller-table-spacing p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+}
+
 thead {
 	background-color:#ECEBEB;
 }
