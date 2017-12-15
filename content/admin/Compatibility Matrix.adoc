@@ -1,24 +1,28 @@
-
 ---
 Title: Compatibility Matrix
 ---
 
-:imagesdir: ./../../images/en/user
-
-__FORCETOC__
-
 == 7.9.x
 
-| class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
-colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
-PHP |- |Windows |Windows Server 2008+ |- |PHP |5.5, 5.6, 7.0, 7.1 |- !
-scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
-|- ! scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |-
-|MySQL |5.5, 5.6, 5.7 |- |SQL Server |SQL Server 2008+
-
-|- ! scope="row" colspan="2"| Browsers |- |Chrome |55+ |- |Firefox |52+
-|- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
-|6+ |}
+|==========
+2+^h| Platform 
+|Linux, Unix, Mac OS | Any version supporting PHP 
+|Windows | Windows Server 2008+
+|PHP | 5.5, 5.6, 7.0, 7.1 
+2+^h| Web Server 
+|Apache |2.2, 2.4 
+|IIS |8, 8.5
+2+^h| Database 
+|MariaDB |5.5, 10, 10.1 
+|MySQL |5.5, 5.6, 5.7 
+|SQL Server |SQL Server 2008+
+2+^h| Browsers 
+|Chrome |55+ 
+|Firefox |52+
+|IE |11 (compatibility mode not supported) 
+|Edge |26 
+|Safari |6+
+|==========
 
 == 7.8.x
 
@@ -46,7 +50,9 @@ scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
 |- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
 |6+ |
 
-== 7.6.x
+[[x-3]]
+7.6.x
+~~~~~
 
 | class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
 colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
@@ -59,7 +65,9 @@ scope="row" colspan="2"| Web Server |- |Apache |2.2, 2.4 |- |IIS |8, 8.5
 |- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
 |6+ |}
 
-== 7.5.x
+[[x-4]]
+7.5.x
+~~~~~
 
 | class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
 colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
@@ -72,7 +80,9 @@ scope="row" colspan="2"| Database |- |MariaDB |5.5, 10, 10.1 |- |MySQL
 |- |IE |11 (compatibility mode not supported) |- |Edge |26 |- |Safari
 |6+ |}
 
-== 7.4.x
+[[x-5]]
+7.4.x
+~~~~~
 
 | class="wikitable" style="margin: auto; width: 40%;" ! scope="row"
 colspan="2"| Platform |- |Linux, Unix, Mac OS |Any version supporting
