@@ -17,7 +17,7 @@ The first step you will see is a simple welcome page that displays once
 you have logged in. Click 'Next' on this page to progress to configure
 your user preferences.
 
-image:04SuiteCRM_welcome.png[04SuiteCRM_welcome.png,title="04SuiteCRM_welcome.png"]
+image:04SuiteCRM_welcome.png[title="Welcome to SuiteCRM!"]
 
 == Your Information
 
@@ -27,7 +27,7 @@ as your Full Name, Email Address and Contact details. Fields marked with
 a red star(*) are required fields, and as such need to be filled in with
 valid data before you can progress.
 
-image:05Welcome_info.png[05Welcome_info.png,title="05Welcome_info.png"]
+image:05Welcome_info.png[title="User Information"]
 
 Once you have filled in all information on this page, click 'Next' to
 progress to the next step in the wizard.
@@ -36,7 +36,7 @@ progress to the next step in the wizard.
 
 On this screen, you are able to specify your preferred Locale settings.
 
-image:06SuiteCRM_Locale.png[06SuiteCRM_Locale.png,title="06SuiteCRM_Locale.png"]
+image:06SuiteCRM_Locale.png[title="Locale Settings"]
 
 == Currency Selection
 
@@ -45,7 +45,7 @@ within SuiteCRM. The Currency options are populated from the options
 added by the System Administrator. If there are Currency options you
 require but do not see, please contact your System Administrator.
 
-image:180Currency_selection.png[180Currency_selection.png,title="180Currency_selection.png"]
+image:180Currency_selection.png[title="Currency Selection"]
 
 == Date Format
 
@@ -54,7 +54,7 @@ within SuiteCRM. There are many different date format options to select
 from, all of which are specific to your user. This date format will also
 apply to Date Time fields.
 
-image:08Date_format.png[08Date_format.png,title="08Date_format.png"]
+image:08Date_format.png[title="Date Format"]
 
 == Time Zone
 
@@ -64,7 +64,7 @@ If you are travelling between various countries, you can change the Time
 Zone at any time in your User Preferences after you Wizard set-up, to
 allow you to view records in that Time Zone.
 
-image:09Time_zone.png[09Time_zone.png,title="09Time_zone.png"]
+image:09Time_zone.png[title="Time Zone"]
 
 == Name Format
 
@@ -73,7 +73,7 @@ within SuiteCRM. This is applicable to the various 'Person' modules
 within SuiteCRM, and allows you to set your preferred name format
 dependent on your requirement.
 
-image:181Name_format.png[181Name_format.png,title="181Name_format.png"]
+image:181Name_format.png[title="Name Format"]
 
 Once you have specified all of your Locale preferences, click 'Next' to
 progress to the final step/confirmation page of the User Wizard.
