@@ -29,12 +29,12 @@ organisation.
 You can access the accounts actions from the Accounts module menu drop
 down or via the Sidebar. The Accounts actions are as follows:
 
-* Create Account – Once clicked, a new form is opened in Edit View to
+* *Create Account* – Once clicked, a new form is opened in Edit View to
 allow you to create a new Account record.
-* View Accounts – Once clicked, you will be redirected to the List View
+* *View Accounts* – Once clicked, you will be redirected to the List View
 for the Accounts module. This allows you to search and list Accounts
 records.
-* Import Accounts – Redirects you to the Import Wizard for the Accounts
+* *Import Accounts* – Redirects you to the Import Wizard for the Accounts
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
@@ -90,11 +90,11 @@ Meeting, raised a Case or sent an Email.
 You can access the Contacts actions from the Contacts module menu drop
 down or via the Sidebar. The Contacts actions are as follows:
 
-* Create Contact – A new form is opened in Edit View to allow you to
+* *Create Contact* – A new form is opened in Edit View to allow you to
 create a new Contact record.
-* View Contacts – Redirects you to the List View for the Contacts
+* *View Contacts* – Redirects you to the List View for the Contacts
 module. This allows you to search and list Contact records.
-* Import Contacts – Redirects you to the Import Wizard for the Contacts
+* *Import Contacts* – Redirects you to the Import Wizard for the Contacts
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
@@ -149,12 +149,12 @@ You can access the Opportunities actions from the Opportunities module
 menu drop down or via the Sidebar. The Opportunities actions are as
 follows:
 
-* Create Opportunity – A new form is opened in Edit View to allow you to
+* *Create Opportunity* – A new form is opened in Edit View to allow you to
 create a new Account record.
-* View Opportunities – Redirects you to the List View for the
+* *View Opportunities* – Redirects you to the List View for the
 Opportunities module. This allows you to search and list Opportunity
 records.
-* Import Opportunities – Redirects you to the Import Wizard for the
+* *Import Opportunities* – Redirects you to the Import Wizard for the
 Opportunities module. For more information, see
 link:#Importing_Records[Importing Records].
 
@@ -206,16 +206,16 @@ Contact once you have established 'Who' it is, an Account when you know
 'Where' they work and an Opportunity once it is known 'What' they might
 buy.
 
-== Leads Actions
+=== Leads Actions
 
 You can access the Leads actions from the Leads module menu drop down or
 via the Sidebar. The Leads actions are as follows:
 
-* Create Lead – A new form is opened in Edit View to allow you to create
+* *Create Lead* – A new form is opened in Edit View to allow you to create
 a new Account record.
-* View Leads – Redirects you to the List View for the Leads module. This
+* *View Leads* – Redirects you to the List View for the Leads module. This
 allows you to search and list Lead records.
-* Import Leads – Redirects you to the Import Wizard for the Leads
+* *Import Leads* – Redirects you to the Import Wizard for the Leads
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
@@ -253,7 +253,7 @@ link:#Exporting_Records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Lead record, you can
 click the View Change Log button on the Lead Detail View or Edit View.
 
-== Converting a Lead
+=== Converting a Lead
 
 Once enough information is gathered about a Lead, then the Lead can be
 progressed to the next Sales stage and the Lead can be converted into a
@@ -264,16 +264,16 @@ individual Lead record to access the Detail View of the Lead and click
 on the arrow next to the Other button, then click on 'Convert Lead' from
 the drop-down menu shown in the image below:
 
-image:68Converting_a_lead.png[68Converting_a_lead.png,title="68Converting_a_lead.png"]
+image:68Converting_a_lead.png[title="Converting a Lead"]
 
 Once you have clicked on 'Convert Lead' button then you will be taken to
 the Convert Lead page.
 
-== Convert Lead to Contact
+==== Convert Lead to Contact
 
 On this page you will be able to Create or Select Contact:
 
-image:69Convert_lead_to_contact.png[69Convert_lead_to_contact.png,title="69Convert_lead_to_contact.png"]
+image:69Convert_lead_to_contact.png[title="Converting a Lead to a Contact"]
 
 By deselecting the checkbox next to 'Create Contact' you will be able to
 associate the Lead to an existing Contact. However, in most cases when
@@ -282,39 +282,39 @@ Create Contact checkbox is selected. Some of the fields will
 automatically be populated using the Lead information. Fill out the
 remaining relevant fields and move to the next Stage below:
 
-== Convert Lead to Account
+==== Convert Lead to Account
 
-image:70Convert_lead_to_account.png[70Convert_lead_to_account.png,title="70Convert_lead_to_account.png"]
+image:70Convert_lead_to_account.png[title="Converting a Lead to an Account"]
 
 To create an Account from a converted Lead you will follow the same
 process as with a Contact, some information will populate from the Lead
 automatically, just complete the rest.
 
-== Convert Lead to Opportunity
+==== Convert Lead to Opportunity
 
-image:71Convert_lead_to_opportunity.png[71Convert_lead_to_opportunity.png,title="71Convert_lead_to_opportunity.png"]
+image:71Convert_lead_to_opportunity.png[title="Converting a Lead to an Opportunity"]
 
 To create an Opportunity from a converted Lead you will follow the same
 process as with a Contact, some information will populate from the Lead
 automatically, just complete the rest.
 
-== Other Lead Conversion Options
+==== Other Lead Conversion Options
 
 Other records can be created when converting a Lead in the same way as
 Contacts/Accounts and Opportunities.
 
-image:72Convert_lead_options.png[72Convert_lead_options.png,title="72Convert_lead_options.png"]
+image:72Convert_lead_options.png[title="Lead Conversion"]
 
 After you have completed the relevant sections click the Save button to
 confirm the changes.
 
-== Duplicate Record Check
+=== Duplicate Record Check
 
 When converting a Lead SuiteCRM will automatically check for any
 duplicate records and will return a warning if a matching record is
 found.
 
-image:73Duplicate_record_check.png[73Duplicate_record_check.png,title="73Duplicate_record_check.png"]
+image:73Duplicate_record_check.png[title="Duplicate Record Check"]
 
 If you find that the duplicate warning is not valid and you still wish
 to create a new record, then click the Create button. Otherwise if you
@@ -329,21 +329,21 @@ they can allow others to view their upcoming activities. These
 activities will be displayed in the Calendar module given that the User
 concerned is a participant or the task has been assigned to them.
 
-== Calendar Actions
+=== Calendar Actions
 
 You can access the Calendar actions from the Calendar module menu drop
 down or via the Sidebar. The Calendar actions are as follows:
 
-* Schedule Meetings – A new form is opened in the Edit View of the
+* *Schedule Meetings* – A new form is opened in the Edit View of the
 Meetings module to allow you to create a new Meeting record. This record
 will display on the Calendar.
-* Schedule Calls – A new form is opened in the Edit View of the Call
+* *Schedule Calls* – A new form is opened in the Edit View of the Call
 module to allow you to create a new Call record. This record will
 display on the Calendar.
-* Create Task – A new form is opened in the Edit View of the Tasks
+* *Create Task* – A new form is opened in the Edit View of the Tasks
 module to allow you to create a new Task record. This record will
 display on the Calendar.
-* Today – Redirects you to the Day format of the Calendar for the
+* *Today* – Redirects you to the Day format of the Calendar for the
 current day.
 
 == Calls
@@ -351,23 +351,23 @@ current day.
 The Calls module in SuiteCRM allows Users to schedule and log a record
 of inbound and outbound calls that they may be a participant of.
 
-== Calls Actions
+=== Calls Actions
 
 You can access the Calls actions from the Calls module menu drop down or
 via the Sidebar. The Calls actions are as follows:
 
-* Log Call – A new form is opened in Edit View to allow you to create a
+* *Log Call* – A new form is opened in Edit View to allow you to create a
 new Call record.
-* View Calls – Redirects you to the List View for the Calls module. This
+* *View Calls* – Redirects you to the List View for the Calls module. This
 allows you to search and list Call records.
-* Import Calls – Redirects you to the Import Wizard for the Calls
+* *Import Calls* – Redirects you to the Import Wizard for the Calls
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
 To view the full list of fields available when logging a Call, See
 link:#Calls_Field_List[Calls Field List].
 
-== Managing Calls
+=== Managing Calls
 
 * To sort records on the Calls List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
@@ -412,23 +412,23 @@ Contact, Project and many other Objects. This module has many more
 helpful functions that assist the User to plan and organise their
 Meetings.
 
-== Meetings Actions
+=== Meetings Actions
 
 You can access the Meetings actions from the Meetings module menu drop
 down or via the Sidebar. The Meetings actions are as follows:
 
-* Schedule Meeting – A new form is opened in Edit View to allow you to
+* *Schedule Meeting* – A new form is opened in Edit View to allow you to
 create a new Meeting record.
-* View Meetings – Redirects you to the List View for the Meetings
+* *View Meetings* – Redirects you to the List View for the Meetings
 module. This allows you to search and list Meeting records.
-* Import Meetings – Redirects you to the Import Wizard for the Meetings
+* *Import Meetings* – Redirects you to the Import Wizard for the Meetings
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
 To view the full list of fields available when creating scheduling a
 Meeting, See link:#Meetings_Field_List[Meetings Field List].
 
-== Managing Meetings
+=== Managing Meetings
 
 * To sort records on the Meetings List View, click any column title
 which is sortable. This will sort the column either ascending or
@@ -472,17 +472,17 @@ and receive email from their own personal Email account or a shared
 inbox, for example a Support or Sales inbox. Emails can be related to
 Accounts, Cases, Contacts and many more records in the CRM.
 
-== Emails Actions
+=== Emails Actions
 
 You can access the Emails actions from the Emails module menu drop down
 or via the Sidebar. The Emails actions are as follows:
 
-* View My Email – Redirects you to your mailbox so that you can view and
+* *View My Email* – Redirects you to your mailbox so that you can view and
 manage emails displayed/imported to the CRM.
-* Create Email Template - A WYSIWYG editor where you can create Emails
+* *Create Email Template* - A WYSIWYG editor where you can create Emails
 by dragging and dropping components, inserting variables and amending
 the plain text.
-* View Email Templates - Takes you to the List View page of your
+* *View Email Templates* - Takes you to the List View page of your
 existing Email Templates. This allows you to search and list Email
 Template records.
 
@@ -494,23 +494,23 @@ link:#Emails_Field_List[Emails Field List].
 SuiteCRM can assist Users with productivity, offering a way to record,
 relate and assign Tasks and to-do items that require action.
 
-== Tasks Actions
+=== Tasks Actions
 
 You can access the Tasks actions from the Tasks module menu drop down or
 via the Sidebar. The Tasks actions are as follows:
 
-* Create Task – A new form is opened in Edit View to allow you to create
+* *Create Task* – A new form is opened in Edit View to allow you to create
 a new Task record.
-* View Tasks – Redirects you to the List View for the Tasks module. This
+* *View Tasks* – Redirects you to the List View for the Tasks module. This
 allows you to search and list Task records.
-* Import Tasks – Redirects you to the Import Wizard for the Tasks
+* *Import Tasks* – Redirects you to the Import Wizard for the Tasks
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
 To view the full list of fields available when creating a Task, See
 link:#Tasks_Field_List[Tasks Field List].
 
-== Managing Tasks
+=== Managing Tasks
 
 * To sort records on the Tasks List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
@@ -550,23 +550,23 @@ internally to their organisation or relating to another SuiteCRM record
 such as an Account, Contact, Lead or many more. Notes are also used to
 keep record of interactions with Customers regarding Cases and Bugs.
 
-== Notes Actions
+=== Notes Actions
 
 You can access the Notes actions from the Notes module menu drop down or
 via the Sidebar. The Notes actions are as follows:
 
-* Create Note or Attachment – A new form is opened in Edit View to allow
+* *Create Note or Attachment* – A new form is opened in Edit View to allow
 you to create a new Note record (with attachment).
-* View Notes – Redirects you to the List View for the Notes module. This
+* *View Notes* – Redirects you to the List View for the Notes module. This
 allows you to search and list Note records.
-* Import Notes – Redirects you will be taken to the Import Wizard for
+* *Import Notes* – Redirects you will be taken to the Import Wizard for
 the Notes module. For more information, see
 link:#Importing_Records[Importing Records].
 
 To view the full list of fields available when creating a Note, See
 link:#Notes_Field_List[Notes Field List].
 
-== Managing Notes
+=== Managing Notes
 
 * To sort records on the Notes List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
@@ -599,20 +599,20 @@ The Documents module can be used as a repository for Customer issued or
 internal files. This content can be uploaded, revised and viewed in
 addition to relating to individual records within SuiteCRM.
 
-== Documents Actions
+=== Documents Actions
 
 You can access the Documents actions from the Documents module menu drop
 down or via the Sidebar. The Documents actions are as follows:
 
-* Create Document – A new form is opened in Edit View to allow you to
+* *Create Document* – A new form is opened in Edit View to allow you to
 create a new Document record.
-* View Documents – Redirects you to the List View for the Documents
+* *View Documents* – Redirects you to the List View for the Documents
 module. This allows you to search and list Document records.
 
 To view the full list of fields available when creating a Document, See
 link:#Documents_Field_List[Documents Field List].
 
-== Managing Documents
+=== Managing Documents
 
 * To sort records on the Documents List View, click any column title
 which is sortable. This will sort the column either ascending or
@@ -644,8 +644,6 @@ link:#Exporting_Records[Exporting Records] sections of this user guide.
 can click the View Change Log button on the Document's Detail View or
 Edit View.
 
-== Document Revisions
-
 == Targets
 
 Typically Targets are used as the recipients of a Marketing Campaign,
@@ -657,23 +655,23 @@ purchased email lists or gathered from trade shows your organisation has
 been present. The Targets module in SuiteCRM is used to store and manage
 information about these individuals.
 
-== Targets Actions
+=== Targets Actions
 
 You can access the Targets actions from the Targets module menu drop
 down or via the Sidebar. The Targets actions are as follows:
 
-* Create Target – A new form is opened in Edit View to allow you to
+* *Create Target* – A new form is opened in Edit View to allow you to
 create a new Target record.
-* View Targets – Redirects you to the List View for the Targets module.
+* *View Targets* – Redirects you to the List View for the Targets module.
 This allows you to search and list Target records.
-* Import Targets – Redirects you will be taken to the Import Wizard for
+* *Import Targets* – Redirects you will be taken to the Import Wizard for
 the Targets module. For more information, see
 link:#Importing_Records[Importing Records].
 
 To view the full list of fields available when creating a Target, See
 link:#Targets_Field_List[Targets Field List].
 
-== Managing Targets
+=== Managing Targets
 
 * To sort records on the Targets List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
@@ -708,21 +706,21 @@ groups, these can be groups of individuals that should be excluded from
 a particular Campaign, test groups or a list of Targets grouped by
 certain criteria, for example area or market an organisation works in.
 
-== Target Lists Actions
+=== Target Lists Actions
 
 You can access the Target Lists actions from the Target Lists module
 menu drop down or via the Sidebar. The Target Lists actions are as
 follows:
 
-* Create Target List – A new form is opened in Edit View to allow you to
+* *Create Target List* – A new form is opened in Edit View to allow you to
 create a new Target List record.
-* View Target Lists – Redirects you to the List View for the Target
+* *View Target Lists* – Redirects you to the List View for the Target
 Lists module. This allows you to search and list Target List records.
 
 To view the full list of fields available when creating a Target List,
 See link:#Target_Lists_Field_List[Target Lists Field List].
 
-== Managing Target Lists
+=== Managing Target Lists
 
 * To sort records on the Target List List View, click any column title
 which is sortable. This will sort the column either ascending or
@@ -763,46 +761,46 @@ useful metrics. This in turn helps you to plan your strategic marketing
 and advertising activities effectively by visualising which Campaigns
 work and which do not.
 
-== Campaign Actions
+=== Campaign Actions
 
 You can access the Campaign actions from the Campaign module menu drop
 down or via the Sidebar. The Campaign actions are as follows:
 
-* Create Campaign – This takes you to the Campaign Wizard page.
-* View Campaigns – Redirects you to the List View for the Campaign
+* *Create Campaign* – This takes you to the Campaign Wizard page.
+* *View Campaigns* – Redirects you to the List View for the Campaign
 module. This allows you to search and list Campaign records.
-* Create Email Template – A WYSIWYG editor where you can create emails
+* *Create Email Template* – A WYSIWYG editor where you can create emails
 by dragging and dropping components, inserting variables and amending
 the plain text.
-* View Email Templates – Takes you to the List View page of your
+* *View Email Templates* – Takes you to the List View page of your
 existing Email Templates. This allows you to search and list Email
 Template records.
-* View Diagnostics – Allows you to check that your Campaign Emails and
+* *View Diagnostics* – Allows you to check that your Campaign Emails and
 Campaign schedulers are set up correctly. If this is the case then a
 green tick icon will appear, if there are any issues with the setup then
 a red cross icon will appear and you should contact your Admin for
 assistance.
-* Create Person Form – A web form template Wizard allowing you to create
+* *Create Person Form* – A web form template Wizard allowing you to create
 Leads, Contacts and Targets.
 * To view the full list of fields available when creating a Campaign,
 See link:#Campaign_Fields_List[Campaign Fields List].
 
-== Creating a Campaign via Campaign Wizard
+=== Creating a Campaign via Campaign Wizard
 
 To create a Campaign and to begin the Campaign Wizard click on the
 Create Campaign button on the sidebar or module menu drop down while in
 the Campaign module.
 
-image:74Creating_a_campaign.png[74Creating_a_campaign.png,title="74Creating_a_campaign.png"]
+image:74Creating_a_campaign.png[title="Creating a Campaign"]
 
 Alternatively click on the Create button at the top right of the screen
 when in the List View of the View Campaigns page. Once you click Create
 Campaign then you will be presented with three options, Newsletter,
 Email and Non-email based Campaign.
 
-image:75Creating_a_campaign.png[75Creating_a_campaign.png,title="75Creating_a_campaign.png"]
+image:75Creating_a_campaign.png[title="Select campaign"]
 
-== Campaign Wizard Header and Budget
+==== Campaign Wizard Header and Budget
 
 On clicking your selected Campaign icon you will be taken to the first
 page of the Campaign Wizard, the Campaign Header page. In this page you
@@ -811,33 +809,33 @@ well as having the opportunity to record any information you may wish to
 about your Campaign Budget (Campaign Budget is on a separate page for
 Non-email based Campaigns).
 
-image:76Creating_a_campaign.png[76Creating_a_campaign.png,title="76Creating_a_campaign.png"]
+image:76Creating_a_campaign.png[title="Campaign Header"]
 
 Once you have completed the necessary fields and are ready to progress
 to the next stage then click Next.
 
-image:77Creating_a_campaign.png[77Creating_a_campaign.png,title="77Creating_a_campaign.png"]
+image:77Creating_a_campaign.png[title="Next"]
 
-== Campaign Wizard Subscriptions – Newsletter Campaigns Only
+==== Campaign Wizard Subscriptions – Newsletter Campaigns Only
 
 For a Newsletter Campaign the next step of the Campaign Wizard allows
 you to specify your Subscription information.
 
-image:78Newsletter_campaign.png[78Newsletter_campaign.png,title="78Newsletter_campaign.png"]
+image:78Newsletter_campaign.png[title="Newsletter Campaign"]
 
 This stage is made up of three components; the Subscription List,
 Unsubscription List and Test List.
 
-* The Subscription List - Allows you to set a Target List for your
+* *The Subscription List* - Allows you to set a Target List for your
 Campaign. This Target List will be used to send out emails for this
 Campaign. If you have not already created a Target List then an empty
 list will be created for you and you can set this at a later time.
-* The Unsubscription List - Allows you to set a Target List of
+* *The Unsubscription List* - Allows you to set a Target List of
 individuals who have opted out of your marketing and should not be
 contacted through email. If you have not already created a Target List
 then an empty list will be created for you and you can set this at a
 later time.
-* The Test List - Allows you to set a Target List to send out test
+* *The Test List* - Allows you to set a Target List to send out test
 emails for this Campaign. If you have not already created a Target List
 then an empty list will be created for you and you can set this at a
 later time.
@@ -846,7 +844,7 @@ Once you have completed the necessary fields then click Next and you
 will be taken to the Templates page which the next stage of the Campaign
 Wizard.
 
-== Campaign Wizard Target Lists – Email and Non-Email Based Campaigns
+==== Campaign Wizard Target Lists – Email and Non-Email Based Campaigns
 
 For all Email and non-email based Campaign the next step of the Campaign
 Wizard allows you to specify your Target Lists. For Email based
@@ -855,12 +853,12 @@ on Existing Targets already created in the CRM. Or for Telesales
 (non-email based) Campaigns for example this could be a list of people
 that you would call.
 
-image:79E-mail_campaign.png[79E-mail_campaign.png,title="79E-mail_campaign.png"]
+image:79E-mail_campaign.png[title="Email Campaign"]
 
 Recipients that have previously opted out of your marketing Campaigns
 will automatically be removed from your Target List.
 
-image:80E-mail_campaign.png[80E-mail_campaign.png,title="80E-mail_campaign.png"]
+image:80E-mail_campaign.png[title="Target list"]
 
 If you have not at this stage created a Target List you can create an
 empty one using the dropdown menu in the image above and populate it
@@ -869,24 +867,24 @@ link:#Target_Lists[Target Lists] page. The next step for non-email based
 Campaigns is the link:#Campaign_Summary[Campaign Summary] page, Email
 based Campaigns however should move onto the Campaign Templates page.
 
-== Campaign Wizard Templates
+==== Campaign Wizard Templates
 
-image:81Campaign_template.png[81Campaign_template.png,title="81Campaign_template.png"]
+image:81Campaign_template.png[title="Campaign Wizard Template"]
 
 This page is a WYSIWYG Newsletter Template editor so you can create a
 template for your marketing emails.
 
-image:82Campaign_template.png[82Campaign_template.png,title="82Campaign_template.png"]
+image:82Campaign_template.png[title="Template options"]
 
 The panel at the top presents you with three options which allows you to
 select an existing template, create a brand new template or copy an
 existing template.
 
-* Select an existing template – You can select from a drop down list of
+* *Select an existing template* – You can select from a drop down list of
 existing Email Templates
-* Create a brand new template – If you wish to start the Newsletter from
+* *Create a brand new template* – If you wish to start the Newsletter from
 scratch then you can select this option.
-* Copy an existing template – Allows you select an existing template and
+* *Copy an existing template* – Allows you select an existing template and
 use this as a base to make amendments
 
 Once you have chosen an Email Template you can decide you want to insert
@@ -895,22 +893,24 @@ website or direct link to a new product that you have launched. Also,
 you are given the opportunity to place an 'Opt Out' link in your
 template.
 
-image:83Campaign_template.png[83Campaign_template.png,title="83Campaign_template.png"]
+image:83Campaign_template.png[title="Tracker URL"]
 
-Please note that the 'Opt Out' link is added to the template
+{{% notice note %}}
+The 'Opt Out' link is added to the template
 automatically even if you do not insert one at this point. Another
 interesting feature of the Email Templates page is the ability to
 personalise your templates by inserting variables. You can for example
 insert the 'Account ID' variable in the subject line, or even insert the
 addressee's first name and last name to add a more personal touch.
+{{% /notice %}}
 
-image:84Campaign_template.png[84Campaign_template.png,title="84Campaign_template.png"]
+image:84Campaign_template.png[title="Email variables"]
 
 The WYSIWYG editor is displayed at the bottom of the Email Template
 page, this editor allows you to visualise how your template will
 actually look.
 
-image:85Campaign_template.png[85Campaign_template.png,title="85Campaign_template.png"]
+image:85Campaign_template.png[title="WYSIWYG editor"]
 
 The panel on the left side of the editor allows you to drag and drop
 different layout components to your template. These then can be edited
@@ -934,9 +934,9 @@ satisfied with your Email Template you can click Next and you will be
 taken to the Marketing page which is the next stage of the Campaign
 Wizard.
 
-== Campaign Wizard Marketing
+==== Campaign Wizard Marketing
 
-image:87Campaign_marketing.png[87Campaign_marketing.png,title="87Campaign_marketing.png"]
+image:87Campaign_marketing.png[title="Campaign Wizard Marketing"]
 
 This section of the Campaign Wizard allows you to specify the Email
 settings for your Campaign including the Bounce Handling Account,
@@ -946,7 +946,7 @@ fields. Once you are satisfied with your Email Settings and Schedule you
 can click Next and you will be taken to the Summary page which is the
 final stage of the Campaign Wizard.
 
-== Campaign Wizard Summary
+==== Campaign Wizard Summary
 
 image:Newsletter_Summary_Review.png[Newsletter_Summary_Review.png,title="Newsletter_Summary_Review.png"]
 
@@ -961,31 +961,31 @@ resolved by clicking back to the Target List page and specifying a
 Subscription List with at least one entry. Once you have ensured all
 sections are complete then you can choose one of three options:
 
-* Send Mail at Scheduled Time – You can click this once you are sure all
+* *Send Mail at Scheduled Time* – You can click this once you are sure all
 sections of the Campaign are set correctly and are confident that it is
 the finished article.
-* Send Marketing Email as Test – This option gives you the opportunity
+* *Send Marketing Email as Test* – This option gives you the opportunity
 to send out your Campaign to your Test List that you specified in the
 Subscriptions section of the Campaign Wizard. By doing this you can view
 the Campaign as a recipient and double check that the Campaign appears
 as it should do before sending out to real prospective/live customers.
-* View Details – By clicking this option you are taken to the Detail
+* *View Details* – By clicking this option you are taken to the Detail
 View of the Campaign record you have just created through the Newsletter
 Campaign Wizard.
 
-== Create Person Form
+=== Create Person Form
 
 Another feature of the Campaign module is the web form template Wizard
 allowing you to create Leads, Contacts and Targets. This can be accessed
 by clicking on the Create Person Form button from the dropdown menu in
 the Campaign module or via the sidebar when in the module.
 
-image:88Create_person_form.png[88Create_person_form.png,title="88Create_person_form.png"]
+image:88Create_person_form.png[title="Create Person Form"]
 
 Once you have clicked this, you will be taken to the first page of the
 Create Person Form Wizard.
 
-image:89Create_person_form.png[89Create_person_form.png,title="89Create_person_form.png"]
+image:89Create_person_form.png[title="Create Person Form Wizard"]
 
 This stage allows you to specify the type of person you would like to
 create via your web form. The dropdown menu allows you to choose from a
@@ -1001,9 +1001,9 @@ fields included in your web form as indicated by an asterisk. Once you
 are satisfied with the fields you wish to include click the Next button
 to progress to the next stage.
 
-== Create Person Form – Additional Information
+==== Create Person Form – Additional Information
 
-image:90Createperson_form.png[90Createperson_form.png,title="90Createperson_form.png"]
+image:90Createperson_form.png[title="Additional information"]
 
 On this page you can configure your web form appearance by adding a Form
 Header/Footer, Form Description, change the label on the Submit button
@@ -1011,9 +1011,9 @@ or change how the URL is displayed. As a minimum you have to relate the
 web form to an existing Campaign and assign to a User before clicking
 the Generate Form button to progress to the next stage.
 
-== Create Person Form – Editor
+==== Create Person Form – Editor
 
-image:91Createperson_form.png[91Createperson_form.png,title="91Createperson_form.png"]
+image:91Createperson_form.png[title="Web form"]
 
 The final step of the Create Person Form Wizard allows you to format the
 web form you have setup by using the WYSIWYG editor. This editor
@@ -1026,18 +1026,18 @@ link to download the web form you have just created or copy and paste
 the html to an existing document. By clicking the download link this
 will save the html form in your download folder.
 
-image:92Createperson_form.png[92Createperson_form.png,title="92Createperson_form.png"]
+image:92Createperson_form.png[title="Download form"]
 
 Please note that the web form will not be stored anywhere else on the
 CRM, to ensure the html is saved please carry out one of the two steps
 above.
 
-== Campaign Response Tracking
+=== Campaign Response Tracking
 
 When in the Detail View of a Campaign record you can access the inbuilt
 Campaign response tracking by clicking the View Status button.
 
-image:93View_status.png[93View_status.png,title="93View_status.png"]
+image:93View_status.png[title="View status"]
 
 On clicking this button you will be taken to the Status page for that
 Campaign record. This page gives an overview of the Campaign details as
@@ -1045,21 +1045,21 @@ well as a graphical representation of your Campaign response including
 the number of messages sent, bounced messages, how many viewers, opt
 outs and how many clicked through links.
 
-image:93Campaign_response.png[93Campaign_response.png,title="93Campaign_response.png"]
+image:93Campaign_response.png[title="Campaign response graph"]
 
 These fields are expanded further down the page and detailed on an
 individual record level. These records can be added to a new Target List
 by clicking the Add to Target List button. This allows you to create
 new, more focussed Campaigns based on who has responded.
 
-image:94Campaign_response.png[94Campaign_response.png,title="94Campaign_response.png"]
+image:94Campaign_response.png[title="Add to target list"]
 
-== Campaign ROI Tracking
+=== Campaign ROI Tracking
 
 When in the Detail View of a Campaign record you can access the inbuilt
 Campaign ROI tracking by clicking the View ROI button.
 
-image:95Campaign_tracking.png[95Campaign_tracking.png,title="95Campaign_tracking.png"]
+image:95Campaign_tracking.png[title="View ROI"]
 
 On clicking this button you will be taken to the ROI page for that
 Campaign record. This page gives a graphical representation of your
@@ -1067,7 +1067,7 @@ Campaign Return on Investment, allowing you to easily visualise how your
 organisation's money spent on the Campaign has translated into potential
 business.
 
-image:Campaign_ROI_Graph.png[Campaign_ROI_Graph.png,title="Campaign_ROI_Graph.png"]
+image:Campaign_ROI_Graph.png[]
 
 == Cases
 
@@ -1079,16 +1079,16 @@ can track and update the incoming and outgoing conversation thread so a
 clear record of what has occurred is registered in the CRM. Cases can be
 related to individual records such as Accounts, Contacts and Bugs.
 
-== Cases Actions
+=== Cases Actions
 
 You can access the Cases actions from the Cases module menu drop down or
 via the Sidebar. The Cases actions are as follows:
 
-* Create Case – A new form is opened in Edit View to allow you to create
+* *Create Case* – A new form is opened in Edit View to allow you to create
 a new Account record.
-* View Cases – Redirects you to the List View for the Cases module. This
+* *View Cases* – Redirects you to the List View for the Cases module. This
 allows you to search and list Case records.
-* Import Cases – Redirects you will be taken to the Import Wizard for
+* *Import Cases* – Redirects you will be taken to the Import Wizard for
 the Cases module. For more information, see
 link:#Importing_Records[Importing Records].
 
@@ -1099,7 +1099,7 @@ Advanced functionality for Cases can be found in the
 link:#Advanced_Open_Cases_with_Portal[Advanced Cases] section of this
 User Guide.
 
-== Managing Cases
+=== Managing Cases
 
 * To sort records on the Cases List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
@@ -1137,26 +1137,26 @@ organisation's projects by tracking a number of Tasks and allocating
 resources. Once set up, a project can be visualised in the form of a
 Gantt chart or using the project grid.
 
-== Projects Actions
+=== Projects Actions
 
 You can access the Projects actions from the Projects module menu drop
 down or via the Sidebar once you have clicked to view the module. The
 Projects actions are as follows:
 
-* Create Project – A new form is opened in Edit View to allow you to
+* *Create Project* – A new form is opened in Edit View to allow you to
 create a new Project record.
-* View Project – Redirects you to the List View for the Projects module.
+* *View Project* – Redirects you to the List View for the Projects module.
 This allows you to search and list Project records.
-* View Project Tasks – Allows you to list Project Tasks, which are
+* *View Project Tasks* – Allows you to list Project Tasks, which are
 related to a parent Project.
-* Import Project – Redirects you to the Import Wizard for the Projects
+* *Import Project* – Redirects you to the Import Wizard for the Projects
 module. For more information, see link:#Importing_Records[Importing
 Records].
 
 To view the full list of fields available when creating a Project, See
 link:#Projects_Field_List[Projects Field List].
 
-== Creating Projects
+=== Creating Projects
 
 In the Projects module, you can create, manage, and duplicate Projects
 and Project Tasks.
@@ -1189,7 +1189,7 @@ page.
 From this page, you can relate the Project to records such as Contacts
 and Opportunities.
 
-== Creating Project Tasks
+=== Creating Project Tasks
 
 .  In the Project Tasks sub-panel, click Create.
 .  On the Project Tasks page, enter information for the following
@@ -1212,7 +1212,7 @@ the task.
 .  Click Save to create the task; click Cancel to return to the project
 detail page without creating the task.
 
-== Managing Projects and Project Tasks
+=== Managing Projects and Project Tasks
 
 * To sort the List View on the Projects and Project Tasks list view,
 click any column title which is sortable. This will sort the column
