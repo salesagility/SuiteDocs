@@ -19,7 +19,7 @@ The ability to easily view and navigate to areas of the CRM is key to
 improved productivity and user adoption. SuiteCRM has a clear UI which
 has various elements we will cover in this section.
 
-== Top navigation menu
+=== Top navigation menu
 
 The top navigation menu is the main menu users will use to navigate to
 modules to create and manage records. The standard layout for the top
@@ -27,25 +27,25 @@ navigation is a list of 10 modules. The ordering for this menu is
 determined by the order of the modules in Admin → Display Modules and
 Subpanels. The top navigation menu has six elements. These are:
 
-* CRM Name – This is the name for the CRM which is specified on
+* *CRM Name* – This is the name for the CRM which is specified on
 installation. This defaults to SuiteCRM.
-* Module Menu – This lists or groups the modules, dependent on the user
+* *Module Menu* – This lists or groups the modules, dependent on the user
 preference. This provides the ability for users to navigate to modules
 within the CRM.
-* Desktop Notification Count – This shows the number of desktop
+* *Desktop Notification Count* – This shows the number of desktop
 notifications the user has not yet read. These can be managed by the
 user. For full details on Desktop Notifications, see the
 link:#Desktop_Notifications[Desktop Notifications] section within this
 user guide.
-* Quick Create – Quick create allows the quick creation of key module
+* *Quick Create* – Quick create allows the quick creation of key module
 records globally within the CRM.
-* Global/Full Text Search – Allows users to search the CRM globally for
+* *Global/Full Text Search* – Allows users to search the CRM globally for
 records/data.
-* User menu – This displays the user name for the user currently logged
+* *User menu* – This displays the user name for the user currently logged
 in. There is a drop down menu which gives users access to Employees,
 their profile, the about page and a link to logout.
 
-image:17Navigation_menu.png[17Navigation_menu.png,title="17Navigation_menu.png"]
+image:17Navigation_menu.png[title="Top Navigation Menu"]
 
 To view a module, you can click on the module name. This will take you
 to the List View of that module. For full details on views, read the
@@ -55,50 +55,52 @@ Hovering over a module name will produce a drop down menu. This drop
 down menu displays the Actions and Recently Viewed records for that
 module.
 
-image:18Dropdown_menu.png[18Dropdown_menu.png,title="18Dropdown_menu.png"]
+image:18Dropdown_menu.png[title="Drop-down Menu"]
 
 You can edit records displayed in the Recently Viewed section of the
 drop down menu by clicking the pencil icon. This will direct you to the
 Edit View for that record.
 
-image:19Recently_viewed.png[19Recently_viewed.png,title="19Recently_viewed.png"]
+image:19Recently_viewed.png[title="Edit Recently Viewed"]
 
 There is also a grouped tab navigation structure for SuiteCRM. Users can
 set this option in their user preferences. For full details on modifying
 user preferences, see the link:#Managing_User_Accounts[Managing User
 Accounts] section of this user guide.
 
-image:20.png[20.png,title="20.png"]
+image:20.png[title="Grouped Tabs"]
 
 The grouped tab navigation menu gives the user the ability to group
 modules within a tab such as the Sales Tab.
 
-image:21Grouped_tab.png[21Grouped_tab.png,title="21Grouped_tab.png"]
+image:21Grouped_tab.png[title="Grouped Tab"]
 
-== Quick Create
+=== Quick Create
 
 You can click the 'create' icon in the top navigation menu to access the
 Quick Create options. This is a list of commonly used modules with the
 ability to create new records within these modules from any location.
 
-image:22Quick_create.png[22Quick_create.png,title="22Quick_create.png"]
+image:22Quick_create.png[title="Quick Create"]
 
-== Sidebar
+=== Sidebar
 
 The sidebar is part of the responsive theme and is a user configurable
 option. The sidebar can be expanded and collapsed by clicking on the
 button highlighted below.
 
-image:23Sidebar.png[23Sidebar.png,title="23Sidebar.png"]
+image:23Sidebar.png[title="Sidebar"]
 
-*Actions*
+[discrete]
+===== Actions
 
 This displays the Actions for the module you are currently viewing. For
 example, if you are viewing the Accounts module, the actions that
 display are: Create Account, View Accounts, Import Accounts. This
 provides you with one-click access to module actions.
 
-*Recently Viewed*
+[discrete]
+===== Recently Viewed
 
 This section displays the last 10 records you have viewed. This leaves a
 breadcrumbs trail so that previously viewed records can be quickly and
@@ -112,7 +114,7 @@ The home page is the first page that is displayed to you
 post-authentication. The home page has various elements that can be used
 and configured such as Dashlets, Dashboards and the Sidebar.
 
-== Dashlets
+=== Dashlets
 
 Dashlets are user-configurable sections displayed on the home page that
 give you a quick overview of your records and activity immediately after
@@ -122,51 +124,53 @@ this reduces the number of clicks required to view/modify data.
 Dashlets can be dragged/dropped within the home page. You can add
 dashlets by clicking the 'Add Dashlets' link on the home page.
 
-image:24Add_dashlets.png[24Add_dashlets.png,title="24Add_dashlets.png"]
+image:24Add_dashlets.png[title="Add Dashlets"]
 
 Clicking on the 'Add Dashlets' link on the home page will open up the
 Add Dashlets popup which allows users to select from a multitude of out
 of the box dashlets.
 
-image:25Add_dashlets.png[25Add_dashlets.png,title="25Add_dashlets.png"]
+image:25Add_dashlets.png[title="Dashlet Selection"]
 
 To add one of the dashlets, simply click on the dashlet link. This will
 add the dashlet to the user home page. The popup will remain if you add
 a dashlet, to allow users to add multiple dashlets. Once you have added
 your required dashlets, you can close the popup.
 
-image:26Dashlet.png[26Dashlet.png,title="26Dashlet.png"]
+image:26Dashlet.png[title="Dashlet"]
 
 You can modify dashlets by clicking the pencil icon on the desired
 dashlet.
 
-image:27Modify_dashlet.png[27Modify_dashlet.png,title="27Modify_dashlet.png"]
+image:27Modify_dashlet.png[title="Modify dashlet"]
 
 Clicking the pencil icon will display a popup. This popup will contain
 all of the options that are configurable for the dashlet.
 
-image:28Configure_dashlet.png[28Configure_dashlet.png,title="28Configure_dashlet.png"]
+image:28Configure_dashlet.png[title="Configure dashlet"]
 
 Once you have made the required changes in the dashlet configuration
 popup, you can click 'Save' to apply the changes, or cancel if you wish
 to revert to the current configuration.
 
-_Note: Some dashlets require the home page to be reloaded. For dashlets
-that require this, you will be notified._
+{{% notice note %}}
+Some dashlets require the home page to be reloaded. For dashlets
+that require this, you will be notified.
+{{% /notice %}}
 
-== Dashboards
+=== Dashboards
 
 Dashboards are new in SuiteCRM. These are configurable per user and can
 be added/removed similar to dashlets. To add a dashboard tab, you can
 click the 'Add Tab' link on the homepage.
 
-image:29Add_tab.png[29Add_tab.png,title="29Add_tab.png"]
+image:29Add_tab.png[title="Add tab"]
 
 Clicking on the 'Add Tab' link on the home page will open up the Add Tab
 popup which allows users to specify a name for the tab and also how many
 dashlet columns are required. You can opt for one, two or three columns.
 
-image:192Add_tab.png[192Add_tab.png,title="192Add_tab.png"]
+image:192Add_tab.png[title="Add tab"]
 
 Once you have specified the details for the dashboard tab, you can click
 'Save'. You can also click 'Cancel' to undo any changes. Once you have
@@ -174,15 +178,19 @@ saved your changes, the Dashboard Tab will be added and will display on
 the tab list on user Homepage. You can then add Dashlets to your new
 dashboard tab.
 
-image:31New_tab.png[31New_tab.png,title="31New_tab.png"]
+image:31New_tab.png[title="New tab"]
 
 If you wish to delete the dashboard tab, you can click the 'x' icon.
 This will prompt you to confirm the deletion and then subsequently
-remove the dashboard tab from your profile only. Note: 'Suite Dashboard'
+remove the dashboard tab from your profile only. 
+
+{{% notice note %}}
+*Suite Dashboard*
 is the standard dashboard tab which cannot be removed. You can however
 configure the dashlets that display on that dashboard tab.
+{{% /notice %}}
 
-== Activity Stream
+=== Activity Stream
 
 The Activity Stream is an excellent way of keeping track of your
 colleague's interactions with SuiteCRM. By default the Activity Stream
@@ -191,17 +199,17 @@ modules. Your organisation's Facebook and Twitter feeds can also be
 included in your Activity Steam dashlets if desired and this can be
 configurable by an Admin user.
 
-image:32Activity_stream.png[32Activity_stream.png,title="32Activity_stream.png"]
+image:32Activity_stream.png[title="Activity stream"]
 
 You can also comment about an update within the Activity Stream by
 clicking on the Reply button on the right side of the post.
 
-image:33Reply.png[33Reply.png,title="33Reply.png"]
+image:33Reply.png[title="Reply to post"]
 
 Your posts can also be deleted from the Activity Stream by clicking on
 the Delete button.
 
-image:34Delet3.png[34Delet3.png,title="34Delet3.png"]
+image:34Delet3.png[title="Delete post"]
 
 Your comment will appear under the original post and will also be
 timestamped.
@@ -211,16 +219,16 @@ your organisation, it is possible to send a message that will be
 broadcast to all users in your network. To do this type your message in
 the text field and click post.
 
-image:35Activity_post.png[35Activity_post.png,title="35Activity_post.png"]
+image:35Activity_post.png[title="Activity Stream post"]
 
 Your colleagues will see this message and will be able to respond by
 clicking on the Reply button on the right side of the post.
 
-image:36Reply.png[36Reply.png,title="36Reply.png"]
+image:36Reply.png[title="Activity Stream reply"]
 
 Their response will appear under your post, again with a timestamp.
 
-image:37Reply_view.png[37Reply_view.png,title="37Reply_view.png"]
+image:37Reply_view.png[title="Post reply"]
 
 == Search
 
@@ -230,24 +238,24 @@ so it is vital to you that you have a way to refine your search. In the
 following sub-sections we will cover the various searching options
 available to you.
 
-== Global Search
+=== Global Search
 
 You can search all records within the CRM using the global search
 functionality. You can search for records via global search by using the
 search bar in the main navigation menu.
 
-image:38Search.png[38Search.png,title="38Search.png"]
+image:38Search.png[title="Global Search"]
 
 Once you have entered your search term, you can press the return key or
 click the magnifying glass/search icon. This will return records that
 match the search criteria and categorise them by the modules available.
 
-image:39Search.png[39Search.png,title="39Search.png"]
+image:39Search.png[title="Global Search results"]
 
 Modules can be added to the global search functionality by the System
 Administrator.
 
-== Full Text Search
+=== Full Text Search
 
 SuiteCRM has an option to enable or disable a full text global search.
 The full text global search is powered by
@@ -257,34 +265,36 @@ global search, but provides the enhanced functionality of searching text
 in documents and other files, compared to the record-level search
 provided by the standard global search.
 
-_Note: System Administrators can enable/disable the full text search by
-clicking on the AOD Settings link within the admin panel._
+{{% notice note %}}
+System Administrators can enable/disable the full text search by
+clicking on the AOD Settings link within the admin panel.
+{{% /notice %}}
 
-image:169AOD_Settings.png[169AOD_Settings.png,title="169AOD_Settings.png"]
+image:169AOD_Settings.png[title="AOD Settings"]
 
 This will display the AOD option to enable/disable the full text search.
 
-image:170Enable_AOD.png[170Enable_AOD.png,title="170Enable_AOD.png"]
+image:170Enable_AOD.png[title="Enable AOD"]
 
 The search returns results slightly different to global search. Results
 are returned in order of score. Records are scored dependent on how well
 you match the search criteria provided by you – from 0-100%.
 
-image:171Search_results.png[171Search_results.png,title="171Search_results.png"]
+image:171Search_results.png[title="Full Text Search"]
 
-== Basic Module Search
+=== Basic Module Search
 
 Basic search is available on all modules within the CRM. Basic search,
 as standard, allows users to search on the record name.
 
-image:193Search_button.png[193Search_button.png,title="193Search_button.png"]
+image:193Search_button.png[title="Basic Module Search button"]
 
-image:194Search_box.png[194Search_box.png,title="fig:194Search_box.png"]]]
+image:194Search_box.png[title="Basic Module Search"]
 
 Basic search also allows users to check the 'My Items' check box.
 Enabling this option will only return records that are assigned to you.
 
-image:195Search_my_items.png[195Search_my_items.png,title="195Search_my_items.png"]
+image:195Search_my_items.png[title="Search my items"]
 
 Once a user has searched for a record, the search will be saved. This
 means that you can navigate to records and other modules within the CRM
@@ -292,16 +302,18 @@ but the search will not be cleared. If you wish to clear your search,
 you can click 'Clear' and then click 'Search'. This will clear any saved
 searches and return to the default result set for that module.
 
-_Note: System Administrators can modify which fields are searchable in
-Basic Search within Studio._
+{{% notice note %}}
+System Administrators can modify which fields are searchable in
+Basic Search within Studio.
+{{% /notice %}}
 
-== Advanced Module Search
+=== Advanced Module Search
 
 Advanced Search is available on all modules within the CRM. Advanced
 Search provides you with a more detailed module search functionality. As
 standard, there are more fields available to you via Advanced Search.
 
-image:196Advanced_search.png[196Advanced_search.png,title="196Advanced_search.png"]
+image:196Advanced_search.png[title="Advanced Module Search"]
 
 You can add further fields to the Advanced Search section by expanding
 the 'Layout Options' panel.
@@ -316,16 +328,18 @@ Advanced Searches may have many fields and specific criteria. For this
 reason, You can save your advanced search criteria to easily populate
 this in future.
 
-image:197Save_search.png[197Save_search.png,title="197Save_search.png"]
+image:197Save_search.png[title="Save search"]
 
 To load a saved search, you can select the saved search from the 'My
 Filters' drop down. This will return results that match the criteria
 specified in the saved search.
 
-image:198Saved_search.png[198Saved_search.png,title="198Saved_search.png"]
+image:198Saved_search.png[title="Saved searches"]
 
-_Note: System Administrators can modify which fields are searchable in
-Advanced Search within Studio._
+{{% notice note %}}
+System Administrators can modify which fields are searchable in
+Advanced Search within Studio.
+{{% /notice %}}
 
 == Views
 
@@ -333,63 +347,65 @@ Within the CRM you will be presented with various views. These views are
 structured to present you with key information through the record
 management process. There are three main views:
 
-* List View
-* Detail View
-* Edit View
+* *List View*
+* *Detail View*
+* *Edit View*
 
 All of these views have specific purposes and these are described in the
 sub-sections below.
 
-== List View
+=== List View
 
 This is the view that you are presented with when you navigate to your
 desired module.
 
-image:40List_view.png[40List_view.png,title="40List_view.png"]
+image:40List_view.png[title="List View"]
 
 The List View compromises of many actions that you can carry out to
 manage records. These are:
 
-* Search Records – provides you with the ability to perform basic and
+* *Search Records* – provides you with the ability to perform basic and
 advanced searches, as covered previously in the link:#Search[Search]
 section of this chapter.
-* Sort Records – clicking on the column name will sort the record list
+* *Sort Records* – clicking on the column name will sort the record list
 by that column either ascending or descending, if sorting is enabled.
-* View Records – clicking on any hyperlinked data will take you to the
+* *View Records* – clicking on any hyperlinked data will take you to the
 Detail View of the record.
-* Edit Records – clicking the pencil icon will navigate you to the Edit
+* *Edit Records* – clicking the pencil icon will navigate you to the Edit
 View for that record.
-* Delete Records – you can select records and then select the delete
+* *Delete Records* – you can select records and then select the delete
 option to delete records from the module.
-* Mass Update Records – you can select records and then select the mass
+* *Mass Update Records* – you can select records and then select the mass
 update option to update data on all selected records.
-* Merge Records – you can select records and select the merge option.
+* *Merge Records* – you can select records and select the merge option.
 This will begin the merge records processes. You can select a primary
 record and then can merge the data from the duplicate records into the
 primary record. Once saved, the duplicate records will be deleted and
 all data/history merged to the primary record.
 
-== Detail View
+=== Detail View
 
 This is the view that you are presented with when you view a record.
 
-image:41Detail_view.png[41Detail_view.png,title="41Detail_view.png"]
+image:41Detail_view.png[title="Detail View"]
 
 The Detail View compromises of many actions that you can use to
 view/manage your data. These are specific to the Detail View of the
 module that you are viewing. There are standard actions on the Detail
 View for most modules. These are:
 
-* Edit – allows you to edit the record you are viewing.
-* Duplicate – allows you to duplicate the record the are viewing.
-* Delete – allows you to delete the record you are viewing. If a record
+* *Edit* – allows you to edit the record you are viewing.
+* *Duplicate* – allows you to duplicate the record the are viewing.
+* *Delete* – allows you to delete the record you are viewing. If a record
 is deleted, you will be redirected to the List View.
-* Find Duplicates – allows you to begin the find duplicates process
+* *Find Duplicates* – allows you to begin the find duplicates process
 where you can use system functionality to find duplicate records.
-* View Change Log – allows you to view changes to audited fields.
+* *View Change Log* – allows you to view changes to audited fields.
 
-_Note: To set fields as audited and for any changes to find duplicates,
-contact your System Administrator._
+{{% notice note %}}
+Note: To set fields as audited and for any changes to find duplicates,
+contact your System Administrator.
+{{% /notice %}}
 
 Hyperlinked fields can be clicked on. This will navigate you to that
 record.
@@ -398,15 +414,17 @@ The Detail View is tabbed in SuiteCRM. This means there is minimal
 scrolling and data is categorised for each module in the appropriate
 tab.
 
-_Note: System Administrators can select to display data in either tabs
+{{% notice note %}}
+System Administrators can select to display data in either tabs
 or panels. You can contact your system administrator for more
-information on managing layouts and views._
+information on managing layouts and views.
+{{% /notice %}}
 
-== Edit View
+=== Edit View
 
 This is the view that you are presented with when you edit a record.
 
-image:42Edit_view.png[42Edit_view.png,title="42Edit_view.png"]
+image:42Edit_view.png[title="Edit View"]
 
 The Edit View allows you to modify record information that is displayed
 on the view. This allows users to update existing data and also
@@ -424,17 +442,17 @@ now move onto record management. In this section we will cover all areas
 of record management so that you can efficiently store and manage
 customer data.
 
-== Creating Records
+=== Creating Records
 
 You can create records within modules from various different areas of
 your Interface. Detailed below are screen shots of record creation
 points.
 
-image:43Create_record1.png[43Create_record1.png,title="43Create_record1.png"]
+image:43Create_record1.png[title="Create Record method 1"]
 
-image:44Create_record2.png[44Create_record2.png,title="44Create_record2.png"]
+image:44Create_record2.png[title="Create Record method 2"]
 
-image:45Create_record_3.png[45Create_record_3.png,title="45Create_record_3.png"]
+image:45Create_record_3.png[title="Create Record method 3"]
 
 Once you click the create button, you will be taken to the creation
 screen. This is essentially the Edit View that we have covered
@@ -444,21 +462,21 @@ the red star(*) are required fields. Validation is performed so that a
 record cannot be saved within the CRM unless data is valid for required
 fields.
 
-image:46Create_contact.png[46Create_contact.png,title="46Create_contact.png"]
+image:46Create_contact.png[title="Record creation"]
 
 Once you have populated all data for the record, you can save the record
 which will create the record within the module in the CRM. Once saved,
 you will be redirected to the Detail View of the record you have
 created.
 
-== Editing Records
+=== Editing Records
 
 You can edit records within modules from various different areas of your
 Interface. Detailed below are screen shots of record editing points.
 
-image:47Edit_contact.png[47Edit_contact.png,title="47Edit_contact.png"]
+image:47Edit_contact.png[title="Edit Record method 1"]
 
-image:48Edit_contact.png[48Edit_contact.png,title="48Edit_contact.png"]
+image:48Edit_contact.png[title="Edir Record method 2"]
 
 Once you click the edit button(or pencil), you will be taken to the Edit
 View. This allows you to edit/populate the appropriate data for that
@@ -471,22 +489,23 @@ which will update the existing record with the new data populated when
 editing. Once saved, you will be redirected to the Detail View of the
 record you have edited.
 
-== Deleting Records
+=== Deleting Records
 
 You can delete records within modules from both the List View and Detail
 View. Detailed below are screen shots of record editing points:
 
-*Detail View Deletion method*
+[discrete]
+===== Detail View Deletion method
 
 Deleting records from the Detail View is a simple process. You simply
 have to click the 'Delete' button.
 
-image:49Delete_contact.png[49Delete_contact.png,title="49Delete_contact.png"]
+image:49Delete_contact.png[title="Delete Records"]
 
 When you click the delete button on a record, you will receive a popup
 which will ask you to confirm that you want to delete the record.
 
-image:50Delete_contact.png[50Delete_contact.png,title="50Delete_contact.png"]
+image:50Delete_contact.png[title="Confirm deletion"]
 
 You can either click Cancel or OK. Clicking Cancel will revert you back
 to the Detail View of the record and will not delete it. Clicking OK
@@ -494,7 +513,8 @@ will action the record deletion. If you choose to delete the record, the
 record will be deleted and you will be redirected to the module List
 View.
 
-*List View Deletion method*
+[discrete]
+===== List View Deletion method
 
 To delete records from the List View, you can select records using the
 checkbox option on the left hand side of the view. It is possible to
@@ -502,7 +522,7 @@ select single records or use the 'Select this Page' or 'Select All'
 options, to select all records from the page or all records within the
 module.
 
-image:51ListView_deletion.png[51ListView_deletion.png,title="51ListView_deletion.png"]
+image:51ListView_deletion.png[title="List View deletion method"]
 
 Once the records are selected to delete, you can click the 'Delete'
 button. When you click the delete button on a record, you will receive a
@@ -517,20 +537,20 @@ will action the record deletion. If you choose to delete the record, the
 record will be deleted and you will be redirected to the module List
 View.
 
-== Mass Updating Records
+=== Mass Updating Records
 
 You can mass update records from the List View of any module, given this
 option is made available to you. To mass update records, you have to
 check the records in the List View and then select the 'Mass Update'
 option from the dropdown menu (next to the delete link).
 
-image:52Mass_update_records.png[52Mass_update_records.png,title="52Mass_update_records.png"]
+image:52Mass_update_records.png[title="Mass Updating Records"]
 
 Clicking the mass update option will display a screen at the bottom of
 the List View. This will list all fields that can be mass updated by
 you.
 
-image:53Mass_update.png[53Mass_update.png,title="53Mass_update.png"]
+image:53Mass_update.png[title="Mass update"]
 
 Once you have populated the fields you wish to mass update, you can
 either click 'Update' or 'Cancel'. Cancelling the mass update will
@@ -539,9 +559,9 @@ Clicking update will update all selected records with the changes
 specified in the link:#Mass_Updating_Records[Mass Updating Records]
 section.
 
-image:54Mass_update.png[54Mass_update.png,title="54Mass_update.png"]
+image:54Mass_update.png[title="Mass update"]
 
-== Merging Records
+=== Merging Records
 
 You can merge records from the List View of any module, given this
 option is made available to you, or via the Detail View if you follow
@@ -551,13 +571,13 @@ To merge records, you have to check the records in the List View and
 then select the 'Merge' option from the dropdown menu (next to the
 delete link).
 
-image:55Merge.png[55Merge.png,title="55Merge.png"]
+image:55Merge.png[title="Merge"]
 
 Once you have clicked on the 'Merge' option, you will be presented with
 a merge screen. This will show the primary record and the duplicates
 that you wish to merge with that primary record.
 
-image:182Merging_records.png[182Merging_records.png,title="182Merging_records.png"]
+image:182Merging_records.png["Merge screen"]
 
 You can select which record is primary using the 'Set as primary' button
 on the right of the merge view. You can move data from the duplicate
@@ -565,7 +585,7 @@ records to the primary record using the '<<' buttons. In this example,
 we have moved the First Name and Last Name from the duplicate record to
 the primary record.
 
-image:183Merging_records.png[183Merging_records.png,title="183Merging_records.png"]
+image:183Merging_records.png[title="Merge fields"]
 
 Once you have made the required changes on the merge screen, you can
 click 'Save Merge' or 'Cancel'. Clicking cancel will discard the merge
@@ -573,59 +593,63 @@ changes and will revert you to the List View for that module. Clicking
 'Save Merge' will continue the Merge process and will prompt you to
 inform you that the duplicate record will be deleted.
 
-image:184Save_merge.png[184Save_merge.png,title="184Save_merge.png"]
+image:184Save_merge.png[title="Confirm merge"]
 
 You can click 'OK' or 'Cancel'. Clicking Cancel will discard the merge
 changes and will revert you to the List View for that module. Clicking
 'OK' will save the merge and will redirect you to the Detail View for
 the merged record.
 
-image:185Saved_merge.png[185Saved_merge.png,title="185Saved_merge.png"]
+image:185Saved_merge.png[title="Finished merge"]
 
 As can be seen from the example, the merge has completed successfully.
 The First Name and Last Name have been updated, and all other data has
 been retained.
 
-== Importing Records
+=== Importing Records
 
 It is possible to import data easily by using SuiteCRM's easy-to-use
 User Import Wizard. There are many hints and tips as you progress
 through the Import Wizard on the requirements of importing data and for
 further steps in the Wizard.
 
-*User Import Wizard features*
+[discrete]
+===== User Import Wizard features
 
 There are many features of the Import Wizard which make it easier for
 you to map data to CRM fields and also for future imports. These are:
 
-* Sample .csv file for easier import of data — Use the available sample
+* *Sample .csv file for easier import of data* — Use the available sample
 .csv file as a template for import of files
-* Retain settings from previous imports — Save/preserve import file
+* *Retain settings from previous imports* — Save/preserve import file
 properties, mappings, and duplicate check indexes from previous imports
 for ease of current data import process
-* Ability to accept both database name and display labels of drop-down
-and multi-select field items — Field labels as well as database names
+* *Ability to accept both database name and display labels of drop-down
+and multi-select field items* — Field labels as well as database names
 are accepted and mapped during import, but only the field labels are
 displayed for ease of use
-* Ability to accept both usernames and full names in user fields during
-import and export of data — Full names of Users displayed for Assigned
+* *Ability to accept both usernames and full names in user fields during
+import and export of data* — Full names of Users displayed for Assigned
 To and other User-related fields in exported .csv file for easier
 identification of user records
-* Ability to auto-detect file properties in import file — Upload import
+* *Ability to auto-detect file properties in import file* — Upload import
 files without specifying file properties such as tab, comma, double and
 single quotes, date and time formats, making the process simpler and
 faster
-* Ability to import contacts from external sources such as Google —
+* *Ability to import contacts from external sources such as Google* —
 Ability to import Google Contacts for person-type modules such as
 Contacts, Leads, and Targets, relate SuiteCRM records to Google
 Contacts, and communicate with Google Contacts from within SuiteCRM
 
-*Steps to Import data*
+[discrete]
+===== Steps to Import data
 
-_Note: Always import the Account data first and then import Contacts and
+{{% notice note %}}
+Always import the Account data first and then import Contacts and
 other data related to Accounts (such as Meetings, Calls, Notes) to
 automatically create a relationship between the imported Account and
-Contacts and activity records related to the Account._
+Contacts and activity records related to the Account.
+{{% /notice %}}
 
 Follow the steps listed below to import data for a module, such as
 Accounts:
@@ -671,7 +695,7 @@ records,
 27. Or, click Exit to navigate to the List View page of the module that
 you imported your records into.
 
-== Exporting Records
+=== Exporting Records
 
 You can export SuiteCRM records in .csv format. When you exports records
 from the CRM, you will be provided with the .csv file to download when
@@ -685,13 +709,16 @@ then use the record ID as a reference for performing a 'Create new
 records and update existing records' import, as detailed in the
 link:#Importing_Records[Importing Records] section of the user guide.
 
-_Note: When exporting values from drop-down lists, SuiteCRM exports the
+{{% notice note %}}
+When exporting values from drop-down lists, SuiteCRM exports the
 ID associated with each option and not the display labels. For example,
 if a drop down list has options labelled High, Medium and Low with an ID
 of 1, 2 and 3 – the .csv file will show the drop down options as 1, 2 or
-3._
+3.
+{{% /notice %}}
 
-*Steps to Export Records*
+[discrete]
+===== Steps to Export Records
 
 1.  Select the records from the List View on the module's home page.
 2.  Select Export from the Actions drop-down menu in the List View.
@@ -717,23 +744,25 @@ providing an advantage to users wishing to change field values quickly,
 reducing the number of clicks/processes that would normally be taken to
 edit the full record.
 
-_Note: In-line editing can be enabled/disabled for both List View and
+{{% notice note %}}
+In-line editing can be enabled/disabled for both List View and
 Detail View. This can be done in the main System Settings for the CRM,
-by the System Administrator._
+by the System Administrator.
+{{% /notice %}}
 
-image:186In-line_editing.png[186In-line_editing.png,title="186In-line_editing.png"]
+image:186In-line_editing.png[title="Enable In-line Editing"]
 
-== List View In-line Editing
+=== List View In-line Editing
 
 You can edit record information on the List View of a module using
 in-line editing by clicking on a field where the pencil icon is shown.
 
-image:60ListView_editing.png[60ListView_editing.png,title="60ListView_editing.png"]
+image:60ListView_editing.png[title="List View In-line Editing"]
 
 You can either click on the pencil icon, or double click on the field to
 edit the value.
 
-image:61ListView_editing.png[61ListView_editing.png,title="61ListView_editing.png"]
+image:61ListView_editing.png[title="List View edit field"]
 
 Once you have made the required change to the field value, you can
 either press Return or click on the 'tick'. This will save your changes.
@@ -746,18 +775,18 @@ image:image71.png[image71.png,title="image71.png"]
 You can either click cancel and continue editing and saving your change,
 or you can click OK which will discard the changes made.
 
-== Detail View In-line Editing
+=== Detail View In-line Editing
 
 Similar to List View, you can edit record information on the Detail View
 of a module using in-line editing by clicking on a field where the
 pencil icon is shown.
 
-image:62DetailView_Editing.png[62DetailView_Editing.png,title="62DetailView_Editing.png"]
+image:62DetailView_Editing.png[title="Detail View In-line Editing"]
 
 You can either click on the pencil icon, or double click on the field to
 edit the value.
 
-image:63DetailView_editing.png[63DetailView_editing.png,title="63DetailView_editing.png"]
+image:63DetailView_editing.png[title="Detail View edit field"]
 
 Once you have made the required change to the field value, you can
 either press Return or click on the 'tick'. This will save user changes.
@@ -772,7 +801,7 @@ or you can click OK which will discard the changes made.
 
 == Desktop Notifications
 
-== Enabling Desktop Notifications
+=== Enabling Desktop Notifications
 
 You can enable desktop notifications by accessing the 'Advanced' tab
 within your user preferences. This will enable desktop notifications
@@ -780,36 +809,38 @@ only for that browser on that computer. you can choose to enable the
 desktop notifications just for that browser session, or to always enable
 desktop notifications.
 
-_Note: Users will have to enable desktop notifications on all browsers
-and computers if you use more than one._
+{{% notice note %}}
+Users will have to enable desktop notifications on all browsers
+and computers if you use more than one.
+{{% /notice %}}
 
-image:199Enable_desktop_notifications.png[199Enable_desktop_notifications.png,title="199Enable_desktop_notifications.png"]
+image:199Enable_desktop_notifications.png[title="Enable Desktop Notifications"]
 
 Once desktop notifications have been enabled, users will receive
 notifications for any Calendar events such as:
 
-* Meetings – Meetings you have been invited to that have popup reminders
+* *Meetings* – Meetings you have been invited to that have popup reminders
 set.
-* Calls – Calls you have been invited to that have popup reminders set.
+* *Calls* – Calls you have been invited to that have popup reminders set.
 
-== Managing Desktop Notifications
+=== Managing Desktop Notifications
 
 If you have no notifications, the notification count will show '0' to
 tell you you currently have no notifications to check.
 
-image:65Managing_notifications.png[65Managing_notifications.png,title="65Managing_notifications.png"]
+image:65Managing_notifications.png[title="Notifications"]
 
 If you do not click on a desktop notification when it is displayed in
 the browser, for example you are AFK(Away From Keyboard) your
 notifications will be added to the notification list which shows as a
 count on the main navigation bar.
 
-image:66Managing_notifications.png[66Managing_notifications.png,title="66Managing_notifications.png"]
+image:66Managing_notifications.png[title="Managing Notifications"]
 
 You can manage your desktop notifications by clicking the icon which
 will show any existing notifications.
 
-image:67Managing_notifications.png[67Managing_notifications.png,title="67Managing_notifications.png"]
+image:67Managing_notifications.png[title="Display notifications"]
 
 You can either click the notification which will take you to the record
 the notification is related to or you can click the small 'x' icon to
