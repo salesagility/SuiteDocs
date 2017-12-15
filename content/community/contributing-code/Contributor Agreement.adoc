@@ -3,13 +3,10 @@
 Title: Contributor Agreement
 ---
 
-:imagesdir: ./../../images/en/user
-
-[[where-can-i-find-the-contributor-agreement]]
 == Where can I find the Contributor Agreement?
 
 You can find the contributor agreement
-http://suitecrm.com/git/suitecrmcontributorlicenseagreement.pdf[here]
+http://suitecrm.com/git/suitecrmcontributorlicenseagreement.pdf[here].
 
 Please read, print, sign, scan and email the contributor agreement to
 the address outlined in the document.
@@ -17,13 +14,13 @@ the address outlined in the document.
 == What is the Contributor Agreement?
 
 The Contributor Agreement is a document which outlines the license
-agreement between you(the developer) and us(SalesAgility) for any
+agreement between you (the developer) and us (SalesAgility) for any
 contributions made to the SuiteCRM project.
 
 == Why do I need to sign it?
 
 We want SuiteCRM to be the biggest, best, long-term open source CRM
-project available globally, so we need to protect the project:-
+project available globally, so we need to protect the project:
 
 * The Contributor Agreement protects the project and deflects action to
 the contributor.
