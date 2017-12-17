@@ -3,10 +3,6 @@
 Title: Installation Guide
 ---
 
-:imagesdir: ./../../images/en/user
-
-== SuiteCRM Installation Guide
-
 == Introduction
 
 SuiteCRM is SugarCRM, Supercharged! SuiteCRM is a fork of the popular
@@ -16,8 +12,7 @@ functionality found within SugarCRM CE.
 
 == Release Notes
 
-See the latest release notes for SuiteCRM <span
-style="font-size:110%;">**link:Versions[here]**</span>.<br />
+See the latest release notes for SuiteCRM link:../versions[here].
 
 == Downloading and installing SuiteCRM
 
@@ -267,6 +262,7 @@ name or choose a new database. If you use an existing database name,
 the database tables will be dropped. Click Accept to drop current
 tables or click Cancel and specify a new database name.
 .  Login to your new SuiteCRM instance!
+
 == Upgrading SuiteCRM
 
 Log into your SuiteCRM instance to use the Upgrade Wizard. There is
