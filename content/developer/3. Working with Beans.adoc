@@ -6,8 +6,6 @@ title: "3. Working with Beans"
 
 = 3. Working with Beans
 
-Again, an **important** sentence.
-
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
 architecture. They allow retrieving data from the database as objects
 and allow persisting and editing records. This section will go over the
@@ -28,6 +26,7 @@ new records. For example to create a new bean you can use:
 
 Retrieving an existing bean can be achieved in a similar manner:
 
+[[unique-id]]
 .Example 3.2: Retrieving a bean with the BeanFactory
 [source,php]
 1 $bean = BeanFactory::getBean('<TheModule>', $beanId);
