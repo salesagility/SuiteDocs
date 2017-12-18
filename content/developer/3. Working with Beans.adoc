@@ -6,7 +6,7 @@ title: "3. Working with Beans"
 
 = 3. Working with Beans
 
-Add an **important** sentence.
+Add an **important** sentence, something new here!
 
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
 architecture. They allow retrieving data from the database as objects
