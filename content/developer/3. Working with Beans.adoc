@@ -6,7 +6,8 @@ title: "3. Working with Beans"
 
 = 3. Working with Beans
 
-Again, an **important** sentence.
+[[unique-id]]
+Again, an **important** sentence is changed by me.
 
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
 architecture. They allow retrieving data from the database as objects
@@ -18,6 +19,7 @@ various ways of working with beans.
 The BeanFactory allows dynamically loading bean instances or creating
 new records. For example to create a new bean you can use:
 
+[[unique-id]]
 .Example 3.1: Creating a new Bean using the BeanFactory
 [source,php]
 1 $bean = BeanFactory::newBean('<TheModule>');
