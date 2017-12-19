@@ -12,14 +12,49 @@ currently no silent upgrade path available for SuiteCRM. CAUTION: It is
 strongly recommended that you run the upgrade process on a copy of your
 production system.
 
-== Compatibility matrix for upgrade
+=== Compatibility matrix for upgrade
 
-PHP version 5.2.1-5.2.6, 5.2.8-5.2.15, 5.2.17, 5.3.0 - 5.3.6 Databases
-MySQL - 5.0x, 5.1 MSSQL - 2005, 2008 Operating systems Windows: Sugar
-runs on any OS that runs PHP Linux: Sugar runs on any OS that runs PHP
-Mac: Sugar runs on any OS that runs PHP
+SuiteCRM runs on a variety of Operating Systems, Web servers, databases
+and PHP versions. It supports many browsers.
 
-== Upgrading to SuiteCRM from SugarCRM Community Edition
+Check the link:Compatibility_Matrix[Compatibility Matrix] for complete
+information on compatible versions.
+
+[discrete]
+===== Operating systems
+
+* Windows: SuiteCRM runs on any OS that runs PHP
+* Linux: SuiteCRM runs on any OS that runs PHP
+* Mac: SuiteCRM runs on any OS that runs PHP
+
+[discrete]
+===== Databases
+
+* MySQL
+* Microsoft SQL Server
+* MariaDB
+
+[discrete]
+===== Web Servers
+
+* Apache
+* Microsoft IIS
+
+[discrete]
+===== Browsers
+
+On the client side, you can access SuiteCRM using any of these browsers:
+
+* Chrome
+* Firefox
+* Internet Explorer
+* Edge
+* Safari
+
+It is likely that many other browsers will work correctly even if they
+are not officially supported.
+
+=== Upgrading to SuiteCRM from SugarCRM Community Edition
 
 Upgrade paths are available for SugarCRM to SuiteCRM from the SuiteCRM
 downloads section of the SuiteCRM website. To validate what versions of
@@ -27,7 +62,7 @@ SugarCRM are compatible with the respective SuiteCRM versions, please
 check the table below: SuiteCRM Version SugarCRM Version SuiteCRM 7.0.1
 SugarCRM 6.5.x SuiteCRM 7.0.0 SugarCRM 6.5.x
 
-== Upgrade prerequisites
+=== Upgrade prerequisites
 
 * Backup your current SuiteCRM directory and database before beginning
 the upgrade process.
@@ -72,7 +107,7 @@ the Customs directory and not within the main module. Existing
 customizations may be overridden by changes in SuiteCRM 7.0.x during
 upgrade.
 
-== Upgrade considerations
+=== Upgrade considerations
 
 The Dynamic Teams feature requires some database schema changes across
 all modules as part of the upgrade process. For larger databases, this
@@ -97,7 +132,7 @@ directory, is writable, before using the Upgrade Wizard. Note: Manual
 upgrades by file replacements and running the upgrade SQL are not
 supported.
 
-== Upgrading SuiteCRM using the Upgrade Wizard
+=== Upgrading SuiteCRM using the Upgrade Wizard
 
 1.  Download the appropriate SuiteCRM Upgrade zip file from the SuiteCRM
 website or GitHub Repository to your local machine.

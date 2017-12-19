@@ -29,7 +29,7 @@ latest SuiteCRM files” section).
 .  Copy the SuiteCRM files to your web server.
 .  Install SuiteCRM by following the SuiteCRM installation wizard.
 
-== Downloading the latest SuiteCRM files
+=== Downloading the latest SuiteCRM files
 
 .  Navigate to the SuiteCRM Downloads section at
 http://suitecrm.com/download
@@ -41,7 +41,7 @@ features and bug fixes.
 .  If you experience any issues during registering an account on our
 website or downloading SuiteCRM, please use our support forums.
 
-== Copying SuiteCRM files to web server
+=== Copying SuiteCRM files to web server
 
 Once your SuiteCRM package has downloaded, you will need to unzip the
 files and set permissions required for the installation process. The
@@ -78,7 +78,7 @@ The commands/steps taken to setting permissions differs dependant on
 your operating system. If you are experiencing issues with setting
 permissions on your SuiteCRM instance, visit our support forums.
 
-== Recommended installation pre-requisites
+=== Recommended installation pre-requisites
 
 * PHP
 * JSON
@@ -99,7 +99,7 @@ permissions on your SuiteCRM instance, visit our support forums.
 * Upload File Size
 * Sprite Support
 
-== Installing SuiteCRM
+=== Installing SuiteCRM
 
 Once you have successfully copied the SuiteCRM files to your web server,
 you need to install SuiteCRM by following the on-screen installation
@@ -114,7 +114,7 @@ the following reasons: The same Database Admin User should not be used
 as the SuiteCRM database administrator Locale settings should be
 specified during installation instead of after logging into SuiteCRM
 
-== Performing a typical installation of SuiteCRM
+=== Performing a typical installation of SuiteCRM
 
 .  Launch your browser and enter the following URL:
 
@@ -190,7 +190,7 @@ skip registration.
 with the SuiteCRM admin name and password that you specified during
 installation.
 
-== Performing a custom installation of SuiteCRM
+=== Performing a custom installation of SuiteCRM
 
 .  Launch your browser and go to your new SuiteCRM installation. The URL should be similar to the following:
 `http://crm.yourserver.com/Suite-CRM-Directory/install.php`
@@ -270,7 +270,7 @@ currently no silent upgrade path available for SuiteCRM. CAUTION: It is
 strongly recommended that you run the upgrade process on a copy of your
 production system.
 
-== Compatibility matrix for upgrade
+=== Compatibility matrix for upgrade
 
 SuiteCRM runs on a variety of Operating Systems, Web servers, databases
 and PHP versions. It supports many browsers.
@@ -278,24 +278,28 @@ and PHP versions. It supports many browsers.
 Check the link:Compatibility_Matrix[Compatibility Matrix] for complete
 information on compatible versions.
 
-== Operating systems
+[discrete]
+===== Operating systems
 
 * Windows: SuiteCRM runs on any OS that runs PHP
 * Linux: SuiteCRM runs on any OS that runs PHP
 * Mac: SuiteCRM runs on any OS that runs PHP
 
-== Databases
+[discrete]
+===== Databases
 
 * MySQL
 * Microsoft SQL Server
 * MariaDB
 
-== Web Servers
+[discrete]
+===== Web Servers
 
 * Apache
 * Microsoft IIS
 
-== Browsers
+[discrete]
+===== Browsers
 
 On the client side, you can access SuiteCRM using any of these browsers:
 
@@ -308,13 +312,13 @@ On the client side, you can access SuiteCRM using any of these browsers:
 It is likely that many other browsers will work correctly even if they
 are not officially supported.
 
-== Upgrading to SuiteCRM from SugarCRM Community Edition
+=== Upgrading to SuiteCRM from SugarCRM Community Edition
 
 Upgrade paths are available for SugarCRM 6.5.x to SuiteCRM 7.1.8 from
 the SuiteCRM https://suitecrm.com/download%7Cdownloads[1] section of the
 SuiteCRM website.
 
-== Upgrade prerequisites
+=== Upgrade prerequisites
 
 * Backup your current SuiteCRM directory and database before beginning
 the upgrade process.
@@ -359,7 +363,7 @@ the Customs directory and not within the main module. Existing
 customizations may be overridden by changes in SuiteCRM 7.0.x during
 upgrade.
 
-== Upgrade considerations
+=== Upgrade considerations
 
 The Dynamic Teams feature requires some database schema changes across
 all modules as part of the upgrade process. For larger databases, this
@@ -384,7 +388,7 @@ directory, is writable, before using the Upgrade Wizard. Note: Manual
 upgrades by file replacements and running the upgrade SQL are not
 supported.
 
-== Upgrading SuiteCRM using the Upgrade Wizard
+=== Upgrading SuiteCRM using the Upgrade Wizard
 
 1.  Download the appropriate SuiteCRM Upgrade zip file from the SuiteCRM
 website to your local machine. For example, download the

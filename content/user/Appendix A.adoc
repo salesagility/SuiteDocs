@@ -9,9 +9,207 @@ Weight: 120
 
 == Contacts Field List
 
-image:Contacts.png[Contacts.png,title="Contacts.png"]
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Name: | |Salutation + First Name + Last Name
+
+s|Date Created: | |Date/Time
+
+s|Date Modified: | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Created by: | |Relationship - Users
+
+s|Description: | |Text Area
+
+s|Assigned User: | |Relationship - Users
+
+s|Salutation | |Drop Down List
+
+s|First Name: | |Textfield
+
+s|Last Name: |Yes |Textfield
+
+s|Title: | |Textfield
+
+s|Department: | |Textfield
+
+s|Do Not Call: | |Checkbox
+
+s|Home: | |Phone
+
+s|Mobile: | |Phone
+
+s|Office Phone: | |Phone
+
+s|Other Phone: | |Phone
+
+s|Fax: | |Phone
+
+s|Email Address: | |Textfield
+
+s|Other Email: | |Textfield
+
+s|Invalid Email: | |Checkbox
+
+s|Email Opt Out: | |Checkbox
+
+s|Primary Address Street: | |Textfield
+
+s|Primary Address Street 2: | |Textfield
+
+s|Primary Address Street 3: | |Textfield
+
+s|Primary Address City: | |Textfield
+
+s|Primary Address State: | |Textfield
+
+s|Primary Address Postal Code: | |Textfield
+
+s|Primary Address Country: | |Textfield
+
+s|Alt Address Street: | |Textfield
+
+s|Alt Address Street 2: | |Textfield
+
+s|Alt Address Street 3: | |Textfield
+
+s|Alt Address City: | |Textfield
+
+s|Alt Address State: | |Textfield
+
+s|Alt Address Postalcode: | |Textfield
+
+s|Alt Address Country: | |Textfield
+
+s|Assistant: | |Textfield
+
+s|Assistant Phone: | |Phone
+
+s|Email Address: | |Email
+
+s|Referred by: | |Textfield
+
+s|Lead Source: | |Drop Down List
+
+s|Lead Source Description: | |Text Area
+
+s|Status: | |Drop Down List
+
+s|Status Description: | |Text Area
+
+s|Reports To: | |Relationship - Leads
+
+s|Account Name: | |Textfield
+
+s|Opportunity Name: | |Textfield
+
+s|Opportunity Amount: | |Textfield
+
+s|Campaign: | |Relationship - Campaigns
+
+s|Birthdate: | |Date
+|====
 
 == Leads Field List
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Name: | |Salutation + First Name + Last Name
+
+s|Date Created: | |Date/Time
+
+s|Date Modified: | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Created By: | |Relationship - Users
+
+s|Description: | |Text Area
+
+s|Assigned User: | |Relationships - Users
+
+s|Salutation | |Drop Down List
+
+s|First Name: | |Textfield
+
+s|Last Name: |Yes |Textfield
+
+s|Title: | |Textfield
+
+s|Department: | |Textfield
+
+s|Do Not Call: | |Checkbox
+
+s|Home Phone: | |Phone
+
+s|Mobile: | |Phone
+
+s|Office Phone: | |Phone
+
+s|Other Phone: | |Phone
+
+s|Fax: | |Phone
+
+s|Email Address: | |Textfield
+
+s|Other Email | |Textfield
+
+s|Invalid Email: | |Checkbox:
+
+s|Email Opt Out: | |Checkbox
+
+s|Primary Address Street: | |Textfield
+
+s|Primary Address Street 2: | |Textfield
+
+s|Primary Address Street 3: | |Textfield
+
+s|Primary Address City: | |Textfield
+
+s|Primary Address State: | |Textfield
+
+s|Primary Address Postalcode: | |Textfield
+
+s|Primary Address Country: | |Textfield
+
+s|Assistant: | |Textfield
+
+s|Assistant Phone: | |Phone
+
+s|Email Address: | |Email
+
+s|Referred By: | |Textfield
+
+s|Lead Source: | |Drop Down List
+
+s|Lead Source Description: | |Text Area
+
+s|Status: | |Drop Down List
+
+s|Status Description: | |Text Area
+
+s|Reports To: | |Relationship - Leads
+
+s|Account Name: | |Textfield
+
+s|Opportunity Name: | |Textfield
+
+s|Opportunity Amount | |Textfield
+
+s|Campaign | |Relationship - Campaigns
+
+s|Birthdate | |Date
+|====
 
 image:Leads.png[Leads.png,title="Leads.png"]
 
