@@ -25,7 +25,9 @@ And this is just some normal text. We're not fancy enough to do the Latin, _lore
 
 ---
 
-NOTE: Below is some extra text from another site, it showcases a bunch of Asciidoc elements:
+{{% notice note %}}
+Below is some extra text from another site, it showcases a bunch of Asciidoc elements:
+{{% /notice %}}
 
 Welcome to AsciiDocLIVE!
 ------------------------

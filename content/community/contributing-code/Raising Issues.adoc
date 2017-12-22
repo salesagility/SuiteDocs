@@ -39,7 +39,8 @@ steps in handling your report.
 We have a number of labels that we tag issues with to define it's type,
 priority, and action.
 
-Type:
+[discrete]
+===== Type:
 
 * bug
 * duplicate
@@ -47,13 +48,15 @@ Type:
 * question
 * suggestion
 
-Priority:
+[discrete]
+===== Priority:
 
 * Low Priority
 * Medium Priority
 * High Priority
 
-Action:
+[discrete]
+===== Action:
 
 * Resolved: Next Release
 * Fixed Proposed

@@ -8,7 +8,9 @@ Weight: 20
 
 In order to contribute to the Documentation efforts, you can edit pages directly on Github. But if you want a more powerful setup for a better work experience, you can choose to set up a local copy of the files, install our build engine Hugo, and build and serve the site locally.
 
-WARNING: this is very provisional and will be made into a proper Guide when time allows.
+{{% notice warning %}}
+This is very provisional and will be made into a proper Guide when time allows.
+{{% /notice %}}
 
 `sudo apt-get update`
 

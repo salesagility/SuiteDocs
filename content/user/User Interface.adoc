@@ -35,7 +35,7 @@ within the CRM.
 * *Desktop Notification Count* – This shows the number of desktop
 notifications the user has not yet read. These can be managed by the
 user. For full details on Desktop Notifications, see the
-link:#Desktop_Notifications[Desktop Notifications] section within this
+<<Desktop Notifications>> section within this
 user guide.
 * *Quick Create* – Quick create allows the quick creation of key module
 records globally within the CRM.
@@ -49,7 +49,7 @@ image:17Navigation_menu.png[title="Top Navigation Menu"]
 
 To view a module, you can click on the module name. This will take you
 to the List View of that module. For full details on views, read the
-link:#Views[Views] section of this user guide.
+<<Views>> section of this user guide.
 
 Hovering over a module name will produce a drop down menu. This drop
 down menu displays the Actions and Recently Viewed records for that
@@ -65,8 +65,8 @@ image:19Recently_viewed.png[title="Edit Recently Viewed"]
 
 There is also a grouped tab navigation structure for SuiteCRM. Users can
 set this option in their user preferences. For full details on modifying
-user preferences, see the link:#Managing_User_Accounts[Managing User
-Accounts] section of this user guide.
+user preferences, see the link:http://docs.suitecrm.com/user/managing-user-accounts/[Managing User Accounts] 
+section of this user guide.
 
 image:20.png[title="Grouped Tabs"]
 
@@ -365,7 +365,7 @@ The List View compromises of many actions that you can carry out to
 manage records. These are:
 
 * *Search Records* – provides you with the ability to perform basic and
-advanced searches, as covered previously in the link:#Search[Search]
+advanced searches, as covered previously in the <<Search>>
 section of this chapter.
 * *Sort Records* – clicking on the column name will sort the record list
 by that column either ascending or descending, if sorting is enabled.
@@ -455,8 +455,8 @@ image:44Create_record2.png[title="Create Record method 2"]
 image:45Create_record_3.png[title="Create Record method 3"]
 
 Once you click the create button, you will be taken to the creation
-screen. This is essentially the Edit View that we have covered
-previously in the link:#User_Interface[User Interface] section. This
+screen. This is essentially the <<Edit View>> that we have covered
+previously in the this section. This
 allows you to fill in the appropriate data for that record. Fields with
 the red star(*) are required fields. Validation is performed so that a
 record cannot be saved within the CRM unless data is valid for required
@@ -556,7 +556,7 @@ Once you have populated the fields you wish to mass update, you can
 either click 'Update' or 'Cancel'. Cancelling the mass update will
 cancel any changes and redirect you to the List View of the module.
 Clicking update will update all selected records with the changes
-specified in the link:#Mass_Updating_Records[Mass Updating Records]
+specified in the <<Mass Updating Records>>
 section.
 
 image:54Mass_update.png[title="Mass update"]
@@ -707,7 +707,7 @@ data is exported from the CRM, the record ID is included with all other
 fields that are specified in the export list for that module. You can
 then use the record ID as a reference for performing a 'Create new
 records and update existing records' import, as detailed in the
-link:#Importing_Records[Importing Records] section of the user guide.
+<<Importing Records>> section of the user guide.
 
 {{% notice note %}}
 When exporting values from drop-down lists, SuiteCRM exports the
@@ -857,3 +857,5 @@ entities within SuiteCRM which can be standalone, or related to one or
 many other modules. Each module has a different function but many
 modules work together to structure and automate day to day business
 processes.
+
+<<Importing Records>>
