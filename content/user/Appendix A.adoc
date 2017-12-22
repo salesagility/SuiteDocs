@@ -182,6 +182,18 @@ s|Primary Address Postalcode: | |Textfield
 
 s|Primary Address Country: | |Textfield
 
+s|Alternate Address Street: | |Textfield
+
+s|Alternate Address Street 2: | |Textfield
+
+s|Alternate Address Street 3: | |Textfield
+
+s|Alternate Address City: | |Textfield
+
+s|Alternate Address Postal Code: | |Textfield
+
+s|Alternate Address Country: | |Textfield
+
 s|Assistant: | |Textfield
 
 s|Assistant Phone: | |Phone
@@ -211,13 +223,180 @@ s|Campaign | |Relationship - Campaigns
 s|Birthdate | |Date
 |====
 
-image:Leads.png[Leads.png,title="Leads.png"]
-
 == Targets Field List
 
-image:Targets.png[Targets.png,title="Targets.png"]
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Date Created: | |Salutation + First Name + Last Name
+
+s|Date Modified: | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Created By: | |Relationship - Users
+
+s|Description: | |Text Area
+
+s|Assigned to: | |Relationship - Users
+
+s|Salutation: | |Drop Down List
+
+s|First Name: | |Textfield
+
+s|Last Name: |Yes |Textfield
+
+s|Title: | |Textfield
+
+s|Department | |Textfield
+
+s|Do Not Call: | |Checkbox
+
+s|Home: | |Phone
+
+s|Mobile | |Phone
+
+s|Office Phone: | |Phone
+
+s|Other Phone: | |Phone
+
+s|Fax: | |Phone
+
+s|Email Address | |Email
+
+s|Other Email: | |Email
+
+s|Invalid Email: | |Checkbox
+
+s|Email Opt Out: | |Checkbox
+
+s|Primary Address Street: | |Textfield
+
+s|Primary Address Street 2: | |Textfield
+
+s|Primary Address Street 3: | |Textfield
+
+s|Primary Address City: | |Textfield
+
+s|Primary Address State: | |Textfield
+
+s|Primary Address Postalcode: | |Textfield
+
+s|Primary Address Country: | |Textfield
+
+s|Alternate Address Street: | |Textfield
+
+s|Alternate Address Street 2: | |Textfield
+
+s|Alternate Address Street 3: | |Textfield
+
+s|Alternate Address City: | |Textfield
+
+s|Alternate Address Postal Code: | |Textfield
+
+s|Alternate Address Country: | |Textfield
+
+s|Assistant: | |Textfield
+
+s|Assistant Phone: | |Phone
+
+s|Birthdate: | |Date
+
+s|Account Name: | |Textfield
+|====
 
 == Accounts Field List
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Name: |Yes |Name
+
+s|Date Created | |Date/Time
+
+s|Date Modified | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Description | |Text Area
+
+s|Deleted: | |Checkbox
+
+s|Assigned User | |Relationship - Users
+
+s|Type: | |Drop Down List
+
+s|Industry: | |Drop Down List
+
+s|Annual Revenue | |Textfield
+
+s|Fax | |Phone
+
+s|Billing street: | |Textfield
+
+s|Billing street 2: | |Textfield
+
+s|Billing street 3: | |Textfield
+
+s|Billing street 4: | |Textfield
+
+s|Billing City: | |Textfield
+
+s|Billing State: | |Textfield
+
+s|Billing Postal Code: | |Textfield
+
+s|Billing Country: | |Textfield
+
+s|Rating: | |Textfield
+
+s|Office Phone: | |Phone
+
+s|Alternate Phone: | |Phone
+
+s|Website: | |URL
+
+s|Ownership: | |Textfield
+
+s|Employees | |Textfield
+
+s|Ticker Symbol | |Textfield
+
+s|Shipping Street: | |Textfield
+
+s|Shipping Street 2: | |Textfield
+
+s|Shipping Street 3: | |Textfield
+
+s|Shipping Street4: | |Textfield
+
+s|Shipping City: | |Textfield
+
+s|Shipping State: | |Textfield
+
+s|Shipping Postal Code: | |Textfield
+
+s|Shipping Country: | |Textfield
+
+s|Email Address: | |Email
+
+s|Non-Primary Emails | |Email
+
+s|SIC Code: | |Textfield
+
+s|Member Of: | |Relationship - Accounts
+
+s|Email Opt Out: | |Checkbox
+
+s|Invalid Email: | |Checkbox
+|====
+
 
 image:Accounts.png[Accounts.png,title="Accounts.png"]
 

@@ -100,6 +100,7 @@ Function names should use lower camelCase e.g - functionName,
 doSomething. Functions should also be named descriptively with
 preferably a verb in them.
 
+.Example
 [source, php]
 function printLoginStatus($user, $time) 
 {
@@ -115,6 +116,7 @@ variables use.
 Static and Member variables should be lower camelCase and do not
 abbreviate variable names un-necessarily.
 
+.Example
 [source, php]
 ----
 public static $jobStrings;
@@ -135,6 +137,7 @@ Use single and double quotes when appropriate. If you’re not evaluating
 anything in the string, use single quotes. There should be no need to
 ever escape quotes within a string.
 
+.Example
 [source, php]
 $sample = 'Hello'; 
 $sample = "Hello, $name"; 
@@ -145,6 +148,7 @@ $sample = "Hello, \{$name}";
 When declaring indexed arrays with the Array function, a trailing space
 must be added after each comma delimiter to improve readability.
 
+.Example
 [source,php]
 $sampleArray = array(1, 2, 3, 'Zend', 'Studio');  
 
