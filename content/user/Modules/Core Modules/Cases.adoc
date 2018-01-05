@@ -1,0 +1,65 @@
+---
+Title: Cases
+Weight: 200
+---
+
+= Cases
+
+In SuiteCRM Cases are used to record interactions with Customers when
+they ask for help or advice, for example in a Sales or Support function.
+A Case can be created, updated when a User is working on it, assigned to
+a colleague and closed when resolved. At each stage of the Case the User
+can track and update the incoming and outgoing conversation thread so a
+clear record of what has occurred is registered in the CRM. Cases can be
+related to individual records such as Accounts, Contacts and Bugs.
+
+== Cases Actions
+
+You can access the Cases actions from the Cases module menu drop down or
+via the Sidebar. The Cases actions are as follows:
+
+* *Create Case* – A new form is opened in Edit View to allow you to create
+a new Account record.
+* *View Cases* – Redirects you to the List View for the Cases module. This
+allows you to search and list Case records.
+* *Import Cases* – Redirects you will be taken to the Import Wizard for
+the Cases module. For more information, see
+link:http://docs.suitecrm.com/user/user-interface/#_importing_records[Importing Records].
+
+To view the full list of fields available when creating a Case, See
+link:http://docs.suitecrm.com/user/appendix-a/#_cases_field_list[Cases Field List].
+
+Advanced functionality for Cases can be found in the
+link:http://docs.suitecrm.com/user/advanced-modules/#_advanced_open_cases_with_portal[Advanced Cases] section of this
+User Guide.
+
+== Managing Cases
+
+* To sort records on the Cases List View, click any column title which
+is sortable. This will sort the column either ascending or descending.
+* To search for a Case, see the link:http://docs.suitecrm.com/user/user-interface/#_search[Search] section of this
+user guide.
+* To update some or all the Cases on the List View, use the Mass Update
+panel as described in the link:http://docs.suitecrm.com/user/user-interface/#_mass_updating_records[Mass Updating
+Records] section of this user guide.
+* To duplicate a Case, you can click the Duplicate button on the Detail
+View and then save the duplicate record.
+* To merge duplicate Cases, select the records from the Cases List View,
+click the Merge link in the Actions drop-down list, and progress through
+the merge process. For more information on Merging Duplicates, see the
+link:http://docs.suitecrm.com/user/user-interface/#_merging_records[Merging Records] section of this user guide.
+* To delete one or multiple Cases, you can select multiple records from
+the List View and click delete. You can also delete a Case from the
+Detail View by clicking the Delete button. For a more detailed guide on
+deleting records, see the link:http://docs.suitecrm.com/user/user-interface/#_deleting_records[Deleting Records]
+section of this user guide.
+* To view the details of a Cases, click the Case Subject in the List
+View. This will open the record in Detail View.
+* To edit the Case details, click Edit icon within the List View or
+click the edit button on the Detail View, make the necessary changes,
+and click Save.
+* For a detailed guide on importing and exporting Cases, see the
+link:http://docs.suitecrm.com/user/user-interface/#_importing_records[Importing Records] and
+link:http://docs.suitecrm.com/user/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+* To track all changes to audited fields, in the Case record, you can
+click the View Change Log button on the Case's Detail View or Edit View.
