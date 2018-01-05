@@ -1,0 +1,365 @@
+---
+Title: Sales
+Weight: 230
+---
+
+= Advanced Open Sales
+
+The first 'Suite' of advanced modules is AOS(Advanced Open Sales). The
+various modules that are part of the AOS suite of modules allow you to
+manage the Post-Opportunity Sales processes such as Quoting, Invoicing
+and recurring Contracting. This functionality is made available to you
+through the following modules:
+
+* *Product Categories*
+* *Products*
+* *PDF Templates*
+* *Quotations*
+* *Invoices*
+* *Contracts*
+
+== AOS Settings
+
+System Administrator users can alter the settings for AOS using the AOS
+Settings page under the Advanced OpenSales panel within the Admin Panel.
+
+image:172AOS_Settings.png[title="AOS Settings"]
+
+You can customise the following settings within the AOS Settings:
+
+* *Renewal Reminder Period* – This defines how many days before the
+Contract End Date that a reminder call should be created.
+* *Initial Invoice Number* – Allows users to set the initial invoice
+number. For example 20001.
+* *Initial Quote Number* – Allows users to set the initial quote number.
+For example 456.
+* *Enable Line Items Groups* – If selected then users will be able to
+bundle line items into groups. If this is not selected then you will not
+be able to use the AOS Group functionality. 
+{{% notice note %}}
+This setting should
+be selected before using AOS – It is difficult to migrate from/to groups
+once Quotes/Invoices have been created.
+{{% /notice %}}
+* *Add Tax to Line Total* – If this is selected then the Tax will be added
+into the Line Total on Line Items. If this is not the selected the Line
+Total will not include Tax.
+
+image:173AOS_settings_edit.png[title="Customise AOS Settings"]
+
+Once configured, click 'Save' to apply your AOS Settings.
+
+== Products Module
+
+You can create Product records using the Products module. Creating
+products allows users to select product lines when preparing Quotes
+using AOS. The products module allows users to specify the Products
+Name, Part Number, Category and Type. Additional fields for Products can
+be added using Studio.
+
+image:174Products_module.png[title="Products Module"]
+
+The module also allows users to define a Cost and Price for the product.
+Price is the selling price which will be used in the quoting process. A
+related Contact can be associated to the product. This is the point of
+contact with the supplier concerning this product. If you have an Image
+of the product then this can be uploaded within the products record. A
+URL to the products page on your website can also be specified.
+
+== Products Categories Module
+
+The Product Categories module allows Users to structure Products into a
+hierarchical category structure. To create a Product Category record,
+navigate to the Product Categories module and click the 'Create Product
+Categories' button in the action bar.
+
+image:175Product_category.png[title="Product Categories Module"]
+
+The Parent Category field is a relationship field to another Product
+Categories record. If you check the 'Is Parent Category' field then this
+signifies that the category is the highest level. Once selected you will
+not be able to select a Parent Category using the relate field.
+
+== PDF Templates
+
+
+=== Creating Templates
+
+AOS allows users to generate PDF documents and merge data from SuiteCRM
+modules. You must however create a PDF template first.
+
+image:176PDF_template.png[title="Create PDF Template"]
+
+This module provides a WYSIWYG interface to create dynamic PDF
+templates. You must select a Type. This is the module you are building
+the PDF Template for. By default the modules you can select are: Quotes
+Invoices Accounts Contacts Leads
+
+System Administrator users can extend this list by editing the
+'pdf_template_type_dom' using the drop down editor functionality. Please
+note that the drop down 'Item Name' must be the name of the module
+directory.
+
+To insert fields into the Body of the template users will first select a
+module. This will be the either the same module as the Type or a related
+module to the Type module. This is selected using the first drop down on
+the Insert Fields row.
+
+image:177PDF_template_field.png[title="PDF Template Field"]
+
+This will populate the second drop down with all the fields found within
+that module. Once you have selected the field you wish to insert, the
+text field will populate with the field variable name. Click 'Insert' to
+place this field into the Body of the template. If the Active check box
+is selected then users will be able to generate PDFs from this template.
+If it is not selected you will not.
+
+=== Loading Samples
+
+image:178PDF_template_field.png[title="Loading Samples"]
+
+AOS comes with seven pre-defined PDF templates to help you create your
+own. These can be loaded by selecting the appropriate template from the
+Load Sample drop down list.
+
+image:image86.png[image86.png,title="image86.png"]
+
+
+=== Line Items
+
+When using a sample to create a template for Quotes or Invoices the Line
+Items are formatted within a table. You can change the fields found in
+this table as well as add or remove columns. Please note that if you are
+creating the template from scratch you must format the Line Items
+section as a table.
+
+image:image87.png[image87.png,title="image87.png"]
+
+=== Margins
+
+At the bottom of the PDF Template Edit View, you can specify the margin
+width for the PDF output.
+
+image:187PDF_Margins.png[title="PDF Margins"]
+
+=== Header and Footer
+
+Within the PDF Templates Edit View, you can also define a Header and a
+Footer for your templates. These can be completed using the Header and
+Footer text areas found below the Body text area.
+
+image:188PDF_footer.png[title="PDF Header and Footer"]
+
+=== Generate Letter
+
+You can generate PDF documents for Accounts, Contacts and Leads using
+the Generate Letter functionality.
+
+image:image90.png[image90.png,title="image90.png"]
+
+Clicking the 'Generate Letter' button found on these modules Detail View
+will prompt a pop-up asking to select a template.
+
+image:image91.png[image91.png,title="image91.png"]
+
+The template selector pop-up will show all the active templates which
+have the same Type as the module of the record. Clicking the template
+name will generate a PDF document with date populated from the record
+and it's related records. The Generate Letter functionality can also be
+actioned from the List View. This allows you to select multiple records
+and click the 'Generate Letter' button within the List View action menu.
+
+image:image92.png[image92.png,title="image92.png"]
+
+The process for generating PDFs for Quotes, Invoices and Contracts is
+described in your respective sections.
+
+== Quotes Module
+
+=== Creating a Quote
+
+You can create a Quote by going to the Quotes module and clicking
+'Create Quote' from within the actions bar. The first panel allows you
+to specify details concerning the quote such as the Title, related
+Opportunity, Stage and Payment Terms. The Quote Number field is
+calculated automatically.
+
+image:96Quotes_first_panel.png[title="Creating a Quote"]
+
+The second panel allows you to specify who the Quote is for by relating
+an Account and Contact to the Quote. When you select the Account, the
+Billing Address and Shipping Address are dynamically pulled from the
+Account and populated into the fields on the Quote record.
+
+image:97Quotes_2nd_panel.png[title="Creating a Quote"]
+
+=== Line Items with Groups
+
+The third panel allows users to specify the Quote Groups, Line Items and
+the Currency. A Group is a collection of Line Items with its own Group
+Total. A Line Item can be a Product Line or a Service Line. To add a
+Quote Group, click the 'Add Group' button.
+
+{{% notice note %}}
+Add Group will be displayed if “Enable Line Item groups” is
+selected in Admin.
+{{% /notice %}}
+
+image:98Quotes_add_group.png[title="Add group"]
+
+This will display the Group, allowing you to insert a Group Name and add
+a Product Line or Service Line. It will also display the Group Totals.
+
+image:200Add_group.png[title="Group Display"]
+
+To add a Product Line, click the 'Add Product Line' button. This will
+allow users to quote for Products from the Products module.
+
+image:201Add_product_line.png[title="Add Product Line"]
+
+To select a Product, you can start typing in the Product or Part Number
+field which will provide a list of results similar to any relate field.
+Alternatively click the arrow button next to the Part Number field. This
+will display a pop-up window allowing you to select from a list of
+Products.
+
+image:202Add_product1.png[title="Select Product"]
+
+Once you have selected a Product, the List, Sale Price and Total will
+populate automatically. You can change the Quality, add Discounts
+(Percentage or Amount) and increase the Tax percentage. These will alter
+the Sale Price, Total Price and Group Total fields. To add a Service
+Line, click the 'Add Service Line' button. This will allow users to
+quote for Services.
+
+image:203Add_service_line.png[title="Service Line"]
+
+For Service Lines, you must specify the List price. This will populate
+the Sale Price. Tax and Discounts can be added similarly to the Product
+Line. AOS will keep a Grand Total for each Group.
+
+image:204Total.png[title="Group Total"]
+
+AOS will also keep a Grand Total for all Groups combined.
+
+image:205Total_total.png[title="Combined Total"]
+
+The Shipping field allows you to add a shipping cost. The Shipping Tax
+field allows you to add tax to this value. Once the Quote has been
+compiled, click 'Save' to save the Quote.
+
+=== Line Items without Groups
+
+Creating Quotes without Groups is very similar to creating Quotes with
+Groups. The only difference is you do not have to click 'Add Group'. You
+simply 'Add Product Line' and 'Add Service Line' to the quote. Without
+Groups you are cannot see the Group Total fields. You will only see the
+Grand Total fields.
+
+=== Sending Quotations
+
+To output a Quote you can select one of following three buttons from the
+Quote Detail View.
+
+image:99Sending_quotations.png[title="Sending Quotations"]
+
+AOS provides users with three methods of sending Quotes:
+
+* *Print as PDF* – Allows you to select a template and download or save a
+PDF of the Quote.
+* *Email PDF* – Allows you to select a template then directs you to the
+SuiteCRM email client 'Compose' screen. The Quote PDF will be attached
+to email and the email will be addressed to the related Contact of the
+Quote. This allows you to fill out the email body.
+* *Email Quotation* – This directs you to the SuiteCRM email client
+'Compose' screen. The email will be addressed to the related Contact of
+the Quote. There will be no attachment and the Quote will be displayed
+within the body of the email.
+
+=== Convert To Invoice
+
+With AOS you can convert Quotes to Invoices. This can be achieved by
+clicking the 'Convert to Invoice' button on the Quote Detail View.
+
+image:100Conver_to_invoice.png[title="Convert to Invoice"]
+
+This functionality will redirect users to the Edit View of an Invoice
+record. Fields will be populated based on your Quote counterparts and
+Line Items will be copied over. When you are ready to create the
+Invoice, click the 'Save' button. Converting a Quote to an Invoice will
+set the Invoice Status of the quote to 'Invoiced'.
+
+=== Create Contract
+
+As well as converting to an Invoice, AOS allows users to create a
+Contract based on a Quote. This can be done by clicking the 'Create
+Contract' button on the Quote Detail View.
+
+image:101Create_contract.png[title="Create Contract"]
+
+This will redirect you to the Edit View of a Contract record, pulling
+through any appropriate fields from the Quote. This includes any Line
+Items on the Quote.
+
+== Invoices Module
+
+=== Creating an Invoice
+
+Creating an Invoice record is very similar to creating a Quote record.
+You can create an Invoice by going to the Invoices module and clicking
+'Create Invoice' from within the actions bar. The first panel allows you
+to specify details about the Invoice such as Status and Due Date.
+
+image:102Invoice_panel_1.png[title="Creating an Invoice"]
+
+The second panel allows you to specify who the Invoice is for by
+relating an Account and Contact to the Invoice. When you select the
+Account, the Billing Address and Shipping Address are dynamically pulled
+from the Account and populated into the fields on the Invoice record.
+
+image:103Invoice_panel_2.png[title="Creating an Invoice"]
+
+=== Groups and Line Items
+
+AOS allows users to add Groups and Line Items to Invoices. This is
+completed in the exact same way as Quotes. Please refer to Quotes
+section for details on how to create Groups and Line Items.
+
+=== Sending Invoices
+
+To output an Invoice you can select one of following three buttons from
+the Invoice Detail View.
+
+image:104Invoice_export.png[title="Sending Invoices"]
+
+AOS provides users with three methods of sending Invoices:
+
+* *Print as PDF* – Allows users to select a template and download or save
+a PDF of the Invoice.
+* *Email PDF* – Allows users to select a template then directs you to the
+SuiteCRM email client 'Compose' screen. The Invoice PDF will be attached
+to email and the email will be addressed to the related Contact of the
+Invoice. This allows user to fill out the email body.
+* *Email Invoice* – This directs you to the SuiteCRM email client
+'Compose' screen. The email will be addressed to the related Contact of
+the Invoice. There will be no attachment and the Invoice will be
+displayed within the body of the email.
+
+== Contracts Module
+
+=== Creating a Contract
+
+AOS allows users to create Contracts using the Contracts module.
+
+image:105Creating_a_contract.png[title="Creating a Contract"]
+
+When the Contract is created the Renewal Reminder Date will populate
+automatically based on the amount of days specified in the AOS Settings
+in Admin. A Call will be scheduled and assigned to the Contract Manger
+for this date.
+
+=== Groups and Line Items
+
+AOS allows users to add Groups and Line Items for Contracts. This is
+completed in the exact same way as Quotes. Please refer to Quotes
+section for details on how to create Groups and Line Items.
