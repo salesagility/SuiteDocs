@@ -3,7 +3,7 @@ Title: User Wizard
 Weight: 30
 ---
 
-:imagesdir: ./../../images/en/user
+:imagesdir: ./../../../images/en/user
 
 = User Wizard
 
@@ -85,7 +85,7 @@ links for learning more and obtaining further support from the SuiteCRM
 website and dedicated team. There is a 'Back' button if you have made
 any mistakes you wish to amend in previous steps.
 
-image:image12.png[image12.png,title="image12.png"]
+image:241Finish User Wizard.png[title="Finish User Wizard"]
 
 Clicking 'Finish' will complete the User Wizard and will present you
 with SuiteCRM login form.
