@@ -3,6 +3,8 @@ Title: Campaigns
 Weight: 190
 ---
 
+:imagesdir: ./../../../images/en/user
+
 = Campaigns
 
 The Campaigns module in SuiteCRM can be a very powerful marketing and
@@ -172,7 +174,7 @@ in the right side display panel. Once you have inserted a component into
 the display panel you can click on the added item and the editor menu
 will appear.
 
-image:Email_Template_Editor.png[Email_Template_Editor.png,title="Email_Template_Editor.png"]
+image:Email_Template_Editor.png[title="Email Template Editor"]
 
 This menu provides you with a multitude of additional options which
 allows you to customise the layout and appearance of your template. Font
@@ -202,7 +204,7 @@ final stage of the Campaign Wizard.
 
 === Campaign Wizard Summary
 
-image:Newsletter_Summary_Review.png[Newsletter_Summary_Review.png,title="Newsletter_Summary_Review.png"]
+image:Newsletter_Summary_Review.png[title="Newsletter Summary Review"]
 
 The Summary page includes a checklist which indicates that each page of
 the Campaign Wizard has been completed satisfactorily. If a section is

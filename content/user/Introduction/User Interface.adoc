@@ -3,7 +3,7 @@ Title: User Interface
 Weight: 50
 ---
 
-:imagesdir: ./../../images/en/user
+:imagesdir: ./../../../images/en/user
 
 = User Interface
 
@@ -529,7 +529,7 @@ button. When you click the delete button on a record, you will receive a
 popup which will display the number of records being deleted and ask you
 to confirm that you want to delete the record.
 
-image:image59.png[image59.png,title="image59.png"]
+image:image59.png[title="Confirm Deletion"]
 
 You can either click Cancel or OK. Clicking Cancel will revert you back
 to the Detail View of the record and will not delete it. Clicking OK
@@ -794,7 +794,7 @@ If you navigate away without making any changes, you will see a prompt
 warning you that you have made unsaved changes to the field being
 edited.
 
-image:image74.png[image74.png,title="image74.png"]
+image:image74.png[title="Unsaved Changes Warning"]
 
 You can either click cancel and continue editing and saving your change,
 or you can click OK which will discard the changes made.

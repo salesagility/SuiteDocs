@@ -3,6 +3,8 @@ Title: Leads
 Weight: 100
 ---
 
+:imagesdir: ./../../../images/en/user
+
 = Leads
 
 In SuiteCRM a Lead is an unqualified contact usually generated from some
