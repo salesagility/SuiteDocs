@@ -50,7 +50,7 @@ Once installed you must configure the SuiteCRM URL and a valid SuiteCRM
 username and password. This can be done by navigating to Components →
 advancedopen-portal.
 
-https://suitecrm.com/wiki/media/image146.png[https://suitecrm.com/wiki/media/image146.png]
+image:image146.png[title="Joomla AOP"]
 
 Once you have configured the Joomla component you can add two new Main
 Menu items to your Joomla portal. These are:
@@ -60,7 +60,7 @@ logged. This page also provides a search mechanism to filter cases.
 * *New Case* – This page will allow Contacts to create Cases in SuiteCRM
 from the Joomla portal.
 
-https://suitecrm.com/wiki/media/image147.png[https://suitecrm.com/wiki/media/image147.png]
+image:image147.png[title="Joomla AOP"]
 
 == Using Advanced OpenPortal
 
@@ -77,7 +77,7 @@ If you have action menus enabled the button will be within the
 action menu.
 {{% /notice %}}
 
-https://suitecrm.com/wiki/media/image1408png[https://suitecrm.com/wiki/media/image148.png]
+image:image148.png[title="Joomla AOP"]
 
 Once clicked, a new user will be created in Joomla and the Contact will
 be sent your portal credentials via email.
@@ -88,7 +88,7 @@ be sent your portal credentials via email.
 Portal Users can create a new Case by going to the New Case page on the
 portal website.
 
-https://suitecrm.com/wiki/media/image149.png[https://suitecrm.com/wiki/media/image149.png]
+image:image149.png[title="Creating a Case"]
 
 From here Portal Users can enter the details of your issue and attach
 any supporting documents. The dropdown values are dynamically pulled
@@ -110,12 +110,12 @@ or Closed) or by keyword. When searching by keyword it will search the
 'Number', 'Subject', 'Status', 'Created' and 'Last Update' fields to
 find your result.
 
-https://suitecrm.com/wiki/media/image150.png[https://suitecrm.com/wiki/media/image150.png]
+image:image150.png[title="Viewing Cases"]
 
 To view more information on the case and to add updates then Portal
 Users can click the 'Subject' of case.
 
-https://suitecrm.com/wiki/media/image151.png[https://suitecrm.com/wiki/media/image151.png]
+image:image151.png[title="Viewing Cases"]
 
 From the case view Portal Users can view all the external updates added
 to the case from both Joomla and SuiteCRM. This is displayed in a
@@ -132,17 +132,17 @@ existing record Users will add text to the 'Update' field within the
 case Detail View and click 'Save'. This will publish the update to the
 portal and send an email to any Contacts related to the Case.
 
-https://suitecrm.com/wiki/media/image152.png[https://suitecrm.com/wiki/media/image152.png]
+image:image152.png[title="Creating and Updating Cases"]
 
 If Users check the 'Internal Update' field then the update will appear
 in SuiteCRM only. It will not appear in Joomla and the Contact will not
 be emailed.
 
-https://suitecrm.com/wiki/media/image153.png[https://suitecrm.com/wiki/media/image153.png]
+image:image153.png[title="Creating and Updating Cases"]
 
 The Case Detail View will show the full threaded update log.
 
-https://suitecrm.com/wiki/media/image154.png[https://suitecrm.com/wiki/media/image154.png]
+image:image154.png[title="Creating and Updating Cases"]
 
 Additional Contacts can be added to the Case using the Contacts sub
 panel. All emails exchanged between the system, the contact and you will

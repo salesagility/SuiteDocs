@@ -219,7 +219,7 @@ specified on the record which actioned the workflow process. This can
 only be used if the record has an email field such as Accounts and
 Contacts. For this option you only need to specify the template.
 
-https://suitecrm.com/wiki/media/image127.png[https://suitecrm.com/wiki/media/image127.png]
+image:image127.png[title="Record Email"]
 
 * *User* – This will send the email to a specified Users email address. You
 must specify the recipient user and the template of the email.
@@ -1413,17 +1413,17 @@ following formula:
 
 So the whole action should look like this:
 
-https://suitecrm.com/wiki/images/1/13/ExampleCF_updated1.png[https://suitecrm.com/wiki/images/1/13/ExampleCF_updated1.png]
+image:ExampleCF_updated1.png[title="Example WorkFlow"]
 
 Save the WorkFlow and create a new Opportunity:
 
-https://suitecrm.com/wiki/images/5/5a/ExampleCF_orig2.png[https://suitecrm.com/wiki/images/5/5a/ExampleCF_orig2.png]
+image:ExampleCF_orig2.png[title="Example WorkFlow"]
 
 As you can see, we did not even add the monthly field to the EditView,
 because we don’t want to force the user to make calculations. Save the
 Opportunity and check the results on the DetailView:
 
-https://suitecrm.com/wiki/images/4/4b/ExampleCF_orig3.png[https://suitecrm.com/wiki/images/4/4b/ExampleCF_orig3.png]
+image:ExampleCF_orig3.png[title="Example WorkFlow"]
 
 AOW Calculated Fields was contributed by http://www.dtbc.eu/[diligent technology & business consulting GmbH]
 
@@ -1447,15 +1447,13 @@ Advanced OpenWorkflow allows users to audit your processes. In the
 Detail View of each WorkFlow record there is a sub-panel called
 'Processed Flows'.
 
-<span
-class="plainlinks">https://suitecrm.com/wiki/media/image132.png[https://suitecrm.com/wiki/media/image132.png]</span>
+image:image132.png[title="Process Audit"]
 
 This lists all the workflow processes which have been actioned including
 details on the record which actioned the flow, its status and the date
 it was created.
 
-<span
-class="plainlinks">https://suitecrm.com/wiki/media/image133.png[https://suitecrm.com/wiki/media/image133.png]</span>
+image:image133.png[title="Process Audit"]
 
 You can view this information at a higher level by clicking the 'View
 Process Audit' button within the module action bar. This will show all

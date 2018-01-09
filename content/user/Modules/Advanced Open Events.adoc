@@ -119,7 +119,7 @@ Template' to all Delegates who have the status 'Not Invited'
 *4.* Once selected the Delegate status will automatically update to
 'Invited'.
 
-https://suitecrm.com/wiki/media/image163.png[https://suitecrm.com/wiki/media/image163.png]
+image:image163.png[title="Sending Invites to Delegates"]
 
 *5.* Choosing 'Resend Invites' will send invites out to all Delegates
 associated to the Event who have yet to respond.
