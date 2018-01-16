@@ -1,0 +1,486 @@
+https://github.com/salesagility/SuiteCRM/releases[Source]
+
+[[releases-salesagilitysuitecrm-github]]
+Releases · salesagility/SuiteCRM · GitHub
+-----------------------------------------
+
+https://github.com#start-of-content[Skip to content]
+
+https://github.com/[]
+
+* https://github.com/features[Features]
+* https://github.com/business[Business]
+* https://github.com/explore[Explore]
+* https://github.com/marketplace[Marketplace]
+* https://github.com/pricing[Pricing]
+
+https://github.com/salesagility/SuiteCRM/releases[This repository]
+
+link:/login?return_to=%2Fsalesagility%2FSuiteCRM%2Freleases[Sign in] or
+link:/join?source=header-repo[Sign up]
+
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Watch]
+https://github.com/salesagility/SuiteCRM/watchers[164]
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Star]
+https://github.com/salesagility/SuiteCRM/stargazers[818]
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Fork]
+https://github.com/salesagility/SuiteCRM/network[686]
+
+[[salesagility15suitecrm16]]
+https://github.com/salesagility[salesagility]/https://github.com/salesagility/SuiteCRM[**SuiteCRM]**
+----------------------------------------------------------------------------------------------------
+
+https://github.com/salesagility/SuiteCRM[Code]
+https://github.com/salesagility/SuiteCRM/issues[Issues 609]
+https://github.com/salesagility/SuiteCRM/pulls[Pull requests 286]
+https://github.com/salesagility/SuiteCRM/wiki[Wiki]
+https://github.com/salesagility/SuiteCRM/pulse[Insights]
+
+https://github.com/salesagility/SuiteCRM/releases[Releases]
+https://github.com/salesagility/SuiteCRM/tags[Tags]
+
+https://github.com/salesagility/SuiteCRM/releases/latest[Latest release]
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.9.9[v7.9.9]
+* https://github.com/salesagility/SuiteCRM/commit/00260c72a12f79e280ea1beb4241d03c9d39681d[`00260c7`]
+
+Verified
+
+This commit was created on GitHub.com and signed with a *verified
+signature* using GitHub's key.
+
+GPG key ID: 4AEE18F83AFDEB23
+https://help.github.com/articles/signing-commits-with-gpg/[Learn about
+signing commits]
+
+[[section]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.9[7.9.9]
+-------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Jan 11, 2018
+· https://github.com/salesagility/SuiteCRM/compare/v7.9.9...master[6
+commits] to master since this release
+
+[[assets]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.9.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.9.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.9.9 is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.9.9[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.8.10[v7.8.10]
+* https://github.com/salesagility/SuiteCRM/commit/a501db76b422a78db30b11a62242e83ca2dfe733[`a501db7`]
+
+Verified
+
+This commit was created on GitHub.com and signed with a *verified
+signature* using GitHub's key.
+
+GPG key ID: 4AEE18F83AFDEB23
+https://help.github.com/articles/signing-commits-with-gpg/[Learn about
+signing commits]
+
+[[section-1]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.10[7.8.10]
+---------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Jan 11, 2018
+
+[[assets-1]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.10.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.10.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.8.10 LTS is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.8.10[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.10-beta-3[v7.10-beta-3]
+* https://github.com/salesagility/SuiteCRM/commit/bcf99067ca1e8e301498c9753d2f8325a1b95aab[`bcf9906`]
+
+[[beta-344]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-beta-3[7.10
+Beta 3]
+-------------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Dec 18, 2017 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.10-beta-3...develop[61
+commits] to develop since this release
+
+[[assets-2]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-3.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a Beta release and should not be used in a production
+environment.*
+
+Try 7.10 Beta 3 to preview the new features coming in SuiteCRM 7.10
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade packages
+
+Changes since Beta 2:
+
+* 4 SuiteP colour schemes (Day, Dawn, Dusk, Night)
+* Email Performance Improvements
+* Bug Fixing
+* API swagger documentation added
+* https://github.com/salesagility/SuiteCRM/tree/v7.9.8[v7.9.8]
+* https://github.com/salesagility/SuiteCRM/commit/5b3eeb843089279bcb4abea37f3361ec123be4b0[`5b3eeb8`]
+
+[[section-2]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.8[7.9.8]
+-------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Dec 14, 2017
+· https://github.com/salesagility/SuiteCRM/compare/v7.9.8...master[185
+commits] to master since this release
+
+[[assets-3]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.8.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.9.8 is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.9.8[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.8.9[v7.8.9]
+* https://github.com/salesagility/SuiteCRM/commit/9856e75076c71210485940153cd7ad632f79b56d[`9856e75`]
+
+[[section-3]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.9[7.8.9]
+-------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Dec 14, 2017
+· https://github.com/salesagility/SuiteCRM/compare/v7.8.9...7.8.x[90
+commits] to 7.8.x since this release
+
+[[assets-4]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.9.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.9.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.8.9 LTS is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.8.9[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.10-beta-2[v7.10-beta-2]
+* https://github.com/salesagility/SuiteCRM/commit/dd64f89af4fdaf809665bddf6d14fed930859335[`dd64f89`]
+
+Verified
+
+This commit was created on GitHub.com and signed with a *verified
+signature* using GitHub's key.
+
+GPG key ID: 4AEE18F83AFDEB23
+https://help.github.com/articles/signing-commits-with-gpg/[Learn about
+signing commits]
+
+[[beta-267]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-beta-2[7.10
+Beta 2]
+-------------------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Dec 1, 2017
+·
+https://github.com/salesagility/SuiteCRM/compare/v7.10-beta-2...develop[372
+commits] to develop since this release
+
+[[assets-5]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-2.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a Beta release and should not be used in a production
+environment.*
+
+Try 7.10 Beta 2 to preview the new features coming in SuiteCRM 7.10
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.10-beta[v7.10-beta]
+* https://github.com/salesagility/SuiteCRM/commit/fcd417573e56a86e3b3d1c945b3b22dc85ad7a7f[`fcd4175`]
+
+[[beta73]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-beta[7.10
+Beta]
+---------------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Nov 17, 2017
+·
+https://github.com/salesagility/SuiteCRM/compare/v7.10-beta...develop[509
+commits] to develop since this release
+
+[[assets-6]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a Beta release and should not be used in a production
+environment.*
+
+Try 7.10 Beta to preview the new features coming in SuiteCRM 7.10
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.9.7[v7.9.7]
+* https://github.com/salesagility/SuiteCRM/commit/41f5fea5123cc7c6e4f599d766005490c6023889[`41f5fea`]
+
+[[section-4]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.7[7.9.7]
+-------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Oct 18, 2017
+· https://github.com/salesagility/SuiteCRM/compare/v7.9.7...master[426
+commits] to master since this release
+
+[[assets-7]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.7.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.9.7 is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.9.7[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.8.8[v7.8.8]
+* https://github.com/salesagility/SuiteCRM/commit/5edffe2150f9a69de809d3d653d505d0f4908a62[`5edffe2`]
+
+[[section-5]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.8[7.8.8]
+-------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Oct 18, 2017
+· https://github.com/salesagility/SuiteCRM/compare/v7.8.8...7.8.x[225
+commits] to 7.8.x since this release
+
+[[assets-8]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.8.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.8.8 LTS is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.8.8[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+* https://github.com/salesagility/SuiteCRM/tree/7.9.6[7.9.6]
+* https://github.com/salesagility/SuiteCRM/commit/e0a0a9cd8ad2f01049ef2d412f024fb435151652[`e0a0a9c`]
+
+[[section-6]]
+https://github.com/salesagility/SuiteCRM/releases/tag/7.9.6[7.9.6]
+------------------------------------------------------------------
+
+image:https://avatars0.githubusercontent.com/u/26431166?s=40&v=4[@Dillon-Brown]
+https://github.com/Dillon-Brown[Dillon-Brown] released this Oct 3, 2017
+· https://github.com/salesagility/SuiteCRM/compare/7.9.6...master[507
+commits] to master since this release
+
+[[assets-9]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/7.9.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/7.9.6.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.9.6 is now Available to Download*
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php/Release_notes_7.9.6[Release Notes].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+We have also added a Code of Conduct to help build a more welcoming
+environment for our community. +
+https://github.com/salesagility/SuiteCRM/blob/master/CODE_OF_CONDUCT.md[SuiteCRM
+Code of Conduct]
+
+Previoushttps://github.com/salesagility/SuiteCRM/releases?after=7.9.6[Next]
+
+* © 2018 GitHub, Inc.
+* https://github.com/site/terms[Terms]
+* https://github.com/site/privacy[Privacy]
+* https://github.com/security[Security]
+* https://status.github.com/[Status]
+* https://help.github.com[Help] https://github.com[]
+* https://github.com/contact[Contact GitHub]
+* https://developer.github.com[API]
+* https://training.github.com[Training]
+* https://shop.github.com[Shop]
+* https://github.com/blog[Blog]
+* https://github.com/about[About]
+
+You can't perform that action at this time.
+
+You signed in with another tab or window. link:[Reload] to refresh your
+session. You signed out in another tab or window. link:[Reload] to
+refresh your session.
