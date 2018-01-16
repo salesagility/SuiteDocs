@@ -1,0 +1,501 @@
+https://github.com/salesagility/SuiteCRM/releases?after=v7.7-beta2[Source]
+
+[[releases-salesagilitysuitecrm-github]]
+Releases · salesagility/SuiteCRM · GitHub
+-----------------------------------------
+
+https://github.com#start-of-content[Skip to content]
+
+https://github.com/[]
+
+* https://github.com/features[Features]
+* https://github.com/business[Business]
+* https://github.com/explore[Explore]
+* https://github.com/marketplace[Marketplace]
+* https://github.com/pricing[Pricing]
+
+https://github.com/salesagility/SuiteCRM/releases[This repository]
+
+link:/login?return_to=%2Fsalesagility%2FSuiteCRM%2Freleases%3Fafter%3Dv7.7-beta2[Sign
+in] or link:/join?source=header-repo[Sign up]
+
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Watch]
+https://github.com/salesagility/SuiteCRM/watchers[164]
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Star]
+https://github.com/salesagility/SuiteCRM/stargazers[819]
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Fork]
+https://github.com/salesagility/SuiteCRM/network[686]
+
+[[salesagility15suitecrm16]]
+https://github.com/salesagility[salesagility]/https://github.com/salesagility/SuiteCRM[**SuiteCRM]**
+----------------------------------------------------------------------------------------------------
+
+https://github.com/salesagility/SuiteCRM[Code]
+https://github.com/salesagility/SuiteCRM/issues[Issues 609]
+https://github.com/salesagility/SuiteCRM/pulls[Pull requests 285]
+https://github.com/salesagility/SuiteCRM/wiki[Wiki]
+https://github.com/salesagility/SuiteCRM/pulse[Insights]
+
+https://github.com/salesagility/SuiteCRM/releases[Releases]
+https://github.com/salesagility/SuiteCRM/tags[Tags]
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7-beta1[v7.7-beta1]
+* https://github.com/salesagility/SuiteCRM/commit/6c2f119627fd62eec03ad8144f7f44e181d34ef3[`6c2f119`]
+
+[[beta24]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-beta1[7.7
+Beta]
+--------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jun 15, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7-beta1...develop[4815
+commits] to develop since this release
+
+[[assets]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta1.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a beta release and should not be used in a production
+environment.*
+
+Try 7.7 Beta 1 to preview the new features coming in SuiteCRM 7.7.
+
+The focus of SuiteCRM 7.7 is to introduce our new Analytical Reporting
+Tool - SuiteSpots, and provide more options upon installing SuiteCRM.
+
+The first Beta release includes enhancements to the following:
+
+*New Analytic Reporting Tool* - *SuiteSpots* - Using Drag and Drop
+functionality you can create in depth Pivot Tables and charts using your
+customer data.
+
+*New Module Group Selection upon installation Configurations* - When
+installing you can choose which groups of modules you wish to include as
+default. This will give users the choice of what modules they need from
+the word go.
+
+Fixes for Campaigns, Calls/Meetings Reminders and other bugs
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.4.x, 7.5.x, and 7.6.x
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6.4[v7.6.4]
+* https://github.com/salesagility/SuiteCRM/commit/4c7587b97748092cda481896a94c18d52c119a5a[`4c7587b`]
+
+[[section]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.4[7.6.4]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this May 30, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6.4...master[4245
+commits] to master since this release
+
+[[assets-1]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.4.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6.4 is now Available to Download*
+
+SuiteCRM 7.6.4 features bug fixes, improves Campaign Wizard UI and
+improves Reporting functionality on MSSQL servers
+
+Add the budget fields into Campaign Header screen +
+Test emails send out immediately (rather than queued) +
+Improved UI for creating Email Marketing Records and Templates via the
+Wizard +
+Update the Campaign Wizard Summary's interface +
+And more below:
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6.3[v7.6.3]
+* https://github.com/salesagility/SuiteCRM/commit/084b51c91dc5ef34dd3dfe63a262dc8901dfb7a4[`084b51c`]
+
+[[section-1]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.3[7.6.3]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this May 17, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6.3...master[4401
+commits] to master since this release
+
+[[assets-2]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.3.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6.3 is now Available to Download*
+
+This is a bug fix release for SuiteCRM 7.6.x and includes updated
+Campaign Wizard UI, resolving issues with running scheduled email
+campaigns and upgrading using MSSQL.
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6.2[v7.6.2]
+* https://github.com/salesagility/SuiteCRM/commit/a833c2e504219682ccf1f2048584880ae1121318[`a833c2e`]
+
+[[section-2]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.2[7.6.2]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this May 10, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6.2...master[4499
+commits] to master since this release
+
+[[assets-3]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.2.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6.2 is now Available to Download*
+
+This is a bug fix release for SuiteCRM 7.6.2 and includes updated
+Campaign Wizard UI.
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+View
+https://suitecrm.com/wiki/index.php/Release_notes_7.6.2#SuiteCRM_7.6.2[release
+notes]
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6.1[v7.6.1]
+* https://github.com/salesagility/SuiteCRM/commit/58f496e71ba249896d5e57523d5092f09bbb8965[`58f496e`]
+
+[[section-3]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.1[7.6.1]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this May 2, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6.1...master[4616
+commits] to master since this release
+
+[[assets-4]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.1.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6.1 is now Available to Download*
+
+This is a bug fix release for SuiteCRM 7.6 to resolve legacy
+customisations https://github.com/salesagility/SuiteCRM/issues/1300[code
+issue] when upgrading to 7.6.
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+View
+https://suitecrm.com/wiki/index.php/Release_notes_7.6.1#SuiteCRM_7.6.1[release
+notes]
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6[v7.6]
+* https://github.com/salesagility/SuiteCRM/commit/c78e63d748fc57c5d64dbae4c7f45b584d691024[`c78e63d`]
+
+[[section-4]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6[7.6]
+---------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Apr 27, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6...master[4633
+commits] to master since this release
+
+[[assets-5]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6 is now Officially Available to Download*
+
+SuiteCRM 7.6, the latest cutting edge release, focuses on enhancing the
+functionality of the native Campaign module as well as including the
+latest bug fixes.
+
+The release includes the latest enhancements to the following:
+
+*Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+
+*Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+
+*Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+
+*Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who contributed, tested and helped
+with this release.
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6-rc[v7.6-rc]
+* https://github.com/salesagility/SuiteCRM/commit/c690a1063e32de85f727be51235c20212556c79f[`c690a10`]
+
+[[release-candidate67]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6-rc[7.6
+Release Candidate]
+------------------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Apr 20, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6-rc...develop[5348
+commits] to develop since this release
+
+[[assets-6]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-rc.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a Release Candidate and should not be used in a production
+environment.*
+
+Try 7.6 Release Candidate to preview the new features coming in SuiteCRM
+7.6.
+
+The focus of SuiteCRM 7.6 is to enhance the functionality of the native
+Campaign module.
+
+The Release Candidate includes the latest enhancements to the following:
+
+*Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+
+*Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+
+*Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+
+*Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade packs
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6-beta.2[v7.6-beta.2]
+* https://github.com/salesagility/SuiteCRM/commit/cdcf76cb830d296e8de1739e9313a276b48cefd1[`cdcf76c`]
+
+[[beta-273]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6-beta.2[7.6
+Beta 2]
+-----------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/6449723?s=40&v=4[@mattlorimer]
+https://github.com/mattlorimer[mattlorimer] released this Apr 13, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6-beta.2...develop[5403
+commits] to develop since this release
+
+[[assets-7]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta.2.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a beta release and should not be used in a production
+environment.*
+
+Try 7.6 Beta 2 to preview the new features coming in SuiteCRM 7.6.
+
+The focus of SuiteCRM 7.6 is to enhance the functionality of the native
+Campaign module.
+
+This Beta release includes the latest enhancements to the following:
+
+*Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+
+*Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+
+*Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+
+*Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade packs
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6-beta-1[v7.6-beta-1]
+* https://github.com/salesagility/SuiteCRM/commit/2b7e73bea6c5e34f1ab042af4787066d8cfaaa3f[`2b7e73b`]
+
+[[beta81]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6-beta-1[7.6
+Beta]
+---------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Mar 30, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6-beta-1...develop[5489
+commits] to develop since this release
+
+[[assets-8]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta-1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta-1.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a beta release and should not be used in a production
+environment.*
+
+Try 7.6 Beta 1 to preview the new features coming in SuiteCRM 7.6.
+
+The focus of SuiteCRM 7.6 is to enhance the functionality of the native
+Campaign module.
+
+The first Beta release includes enhancements to the following:
+
+*Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+
+*Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+
+*Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+
+*Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.4.x and 7.5.x
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.5.3[v7.5.3]
+* https://github.com/salesagility/SuiteCRM/commit/26fbd737a47163bff07e1ff828fc488e7e5075bb[`26fbd73`]
+
+[[section-5]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.3[7.5.3]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/6449723?s=40&v=4[@mattlorimer]
+https://github.com/mattlorimer[mattlorimer] released this Mar 15, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.5.3...master[5058
+commits] to master since this release
+
+[[assets-9]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.3.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.5.3 is now Officially Available to Download*
+
+This release resolves Security Issues and other various issues
+
+Its is recommended to update to 7.5.3 as soon as possible
+
+For more information view the release notes on the SuiteCRM Wiki
+https://suitecrm.com/wiki/index.php/Release_notes_7.5.3[here].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who contributed, tested and helped
+with this release.
+
+https://github.com/salesagility/SuiteCRM/releases?after=v7.7.3[Previous]https://github.com/salesagility/SuiteCRM/releases?after=v7.5.3[Next]
+
+* © 2018 GitHub, Inc.
+* https://github.com/site/terms[Terms]
+* https://github.com/site/privacy[Privacy]
+* https://github.com/security[Security]
+* https://status.github.com/[Status]
+* https://help.github.com[Help] https://github.com[]
+* https://github.com/contact[Contact GitHub]
+* https://developer.github.com[API]
+* https://training.github.com[Training]
+* https://shop.github.com[Shop]
+* https://github.com/blog[Blog]
+* https://github.com/about[About]
+
+You can't perform that action at this time.
+
+You signed in with another tab or window. link:[Reload] to refresh your
+session. You signed out in another tab or window. link:[Reload] to
+refresh your session.

@@ -1,0 +1,490 @@
+https://github.com/salesagility/SuiteCRM/releases?after=v7.7.3[Source]
+
+[[releases-salesagilitysuitecrm-github]]
+Releases · salesagility/SuiteCRM · GitHub
+-----------------------------------------
+
+https://github.com#start-of-content[Skip to content]
+
+https://github.com/[]
+
+* https://github.com/features[Features]
+* https://github.com/business[Business]
+* https://github.com/explore[Explore]
+* https://github.com/marketplace[Marketplace]
+* https://github.com/pricing[Pricing]
+
+https://github.com/salesagility/SuiteCRM/releases[This repository]
+
+link:/login?return_to=%2Fsalesagility%2FSuiteCRM%2Freleases%3Fafter%3Dv7.7.3[Sign
+in] or link:/join?source=header-repo[Sign up]
+
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Watch]
+https://github.com/salesagility/SuiteCRM/watchers[164]
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Star]
+https://github.com/salesagility/SuiteCRM/stargazers[819]
+* link:/login?return_to=%2Fsalesagility%2FSuiteCRM[Fork]
+https://github.com/salesagility/SuiteCRM/network[686]
+
+[[salesagility15suitecrm16]]
+https://github.com/salesagility[salesagility]/https://github.com/salesagility/SuiteCRM[**SuiteCRM]**
+----------------------------------------------------------------------------------------------------
+
+https://github.com/salesagility/SuiteCRM[Code]
+https://github.com/salesagility/SuiteCRM/issues[Issues 609]
+https://github.com/salesagility/SuiteCRM/pulls[Pull requests 285]
+https://github.com/salesagility/SuiteCRM/wiki[Wiki]
+https://github.com/salesagility/SuiteCRM/pulse[Insights]
+
+https://github.com/salesagility/SuiteCRM/releases[Releases]
+https://github.com/salesagility/SuiteCRM/tags[Tags]
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7.2[v7.7.2]
+* https://github.com/salesagility/SuiteCRM/commit/9b3cc99ce45c5b1e43f76571e6dc255e671db08a[`9b3cc99`]
+
+[[section]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.2[7.7.2]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Aug 23, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7.2...master[3446
+commits] to master since this release
+
+[[assets]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.2.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.7.2 is now Available to Download*
+
+SuiteCRM 7.7.2 features bug fixes for calendar, php7, MSSQL upgrades and
+improves Theme SuiteP UI and functionality
+
+Please see the
+https://suitecrm.com/wiki/index.php/Release_notes_7.7.2[Release Notes]
+on list of Bug fixes noted on Github and
+https://suitecrm.com/forum/index[SuiteCRM Forums].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7.1[v7.7.1]
+* https://github.com/salesagility/SuiteCRM/commit/8e8f82695c15cf55df3fe606002ecde1718bef7f[`8e8f826`]
+
+[[section-1]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.1[7.7.1]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Aug 11, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7.1...master[3575
+commits] to master since this release
+
+[[assets-1]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.1.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.7.1 is now Available to Download*
+
+SuiteCRM 7.7.1 features bug fixes, improves Theme SuiteP UI and
+functionality
+
+Please see the
+https://suitecrm.com/wiki/index.php/Release_notes_7.7.1[Release Notes]
+on list of Bug fixes noted on Github and
+https://suitecrm.com/forum/index[SuiteCRM Forums].
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7[v7.7]
+* https://github.com/salesagility/SuiteCRM/commit/e40feec9a51e5cb0c40a271eabfda466947de897[`e40feec`]
+
+[[section-2]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7[7.7]
+---------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Aug 2, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7...master[3637
+commits] to master since this release
+
+[[assets-2]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.7 is now Available to Download*
+
+*SuiteP Theme* - We want SuiteCRM 7.7 to be something special this
+Summer. Packed with new and improved features and an amazing new UI, it
+will transform the way you view SuiteCRM. +
+*Analytic Reporting Tool - "SuiteSpots"* - Using Drag and Drop
+functionality you can create in depth Pivot Tables and charts using your
+customer data. +
+*Module Group Selection upon Installation Configurations* - When
+installing you can choose which groups of modules you wish to include as
+default. This will give users the choice of how what they feel they need
+from the word go. +
+*Updated* Silent Installer +
+*New Calendar* library +
+*New Search filter* for Event Delegates subpanel +
+*Improved* Project and Project Templates functionality
+
+== Security == +
+Includes *SugarCRM 6.5.24* - more information here - ()
+
+Special thanks for
+https://github.com/salesagility/SuiteCRM/issues/1843[adminibt] for
+notifying us of this security update.
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php?title=Release_notes_7.7[Release
+Notes]
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release.
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7-rc2[v7.7-rc2]
+* https://github.com/salesagility/SuiteCRM/commit/864eb31d4175bf09dd9a14de1ec0bc4af16b525f[`864eb31`]
+
+[[release-candidate-250]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-rc2[7.7
+Release Candidate 2]
+---------------------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jul 26, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7-rc2...develop[4375
+commits] to develop since this release
+
+[[assets-3]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc2.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a release candidate release and should not be used in a
+production environment.*
+
+Try 7.7 Release Candidate 2 to preview the new features coming in
+SuiteCRM 7.7.
+
+The focus of SuiteCRM 7.7 Release Candidate 2 is to introduce our new
+theme SuiteP (SuitePea).
+
+* Further adding to the SuiteP theme
+* Improvements in Project Templates and Projects functionality
+* Introducing Business Hours Module
+* Search Filter by Events Delegates
+* Bug fixes for Email Assignment notifications, Pipeline By Sales Stage
+Dashlet, and more
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.5.x, 7.6.x, 7.7beta1, 7.7beta2 and 7.7.RC
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7-rc[v7.7-rc]
+* https://github.com/salesagility/SuiteCRM/commit/8706c4960882fecf43eb4883d80eb82b8713917c[`8706c49`]
+
+[[release-candidate57]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-rc[7.7
+Release Candidate]
+------------------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jul 18, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7-rc...develop[4535
+commits] to develop since this release
+
+[[assets-4]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a release candidate release and should not be used in a
+production environment.*
+
+Try 7.7 Release Candidate to preview the new features coming in SuiteCRM
+7.7.
+
+The focus of SuiteCRM 7.7 Release Candidate is to introduce our new
+theme SuiteP (SuitePea).
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.5.x, 7.6.x, 7.7beta1 and 7.7beta2
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6.6[v7.6.6]
+* https://github.com/salesagility/SuiteCRM/commit/a6545196033a6ef3f9ddbf6a2babbbb351072798[`a654519`]
+
+[[section-3]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.6[7.6.6]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jul 18, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6.6...master[4135
+commits] to master since this release
+
+[[assets-5]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.6.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6.6 is now Available to Download*
+
+This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
+component & YUI IO Utility
+
+** Removes the use of uploader.swf file (and references) within
+self-hosted YUI library that can be vulnerable to XSS attacks
+
+Users of ALL previous releases are advised to Upgrade to 7.5.5 or 7.6.6
+as soon as possible
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php?title=Release_notes_7.6.6[Release
+Notes]
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release. +
+Special thanks to
+https://github.com/salesagility/SuiteCRM/issues/1724[chadbennett] for
+alerting and helping us resolve this vulnerability.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.5.5[v7.5.5]
+* https://github.com/salesagility/SuiteCRM/commit/f2e0e7f49c4a2ed689dface44ff8457041a7200a[`f2e0e7f`]
+
+[[section-4]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.5[7.5.5]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jul 20, 2016
+
+[[assets-6]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.5.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.5.5 is now Available to Download*
+
+This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
+component & YUI IO Utility
+
+** Removes the use of uploader.swf file (and references) within
+self-hosted YUI library that can be vulnerable to XSS attacks
+
+Users of ALL previous releases are advised to Upgrade to 7.5.5 or 7.6.6
+as soon as possible
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release. +
+Special thanks to
+https://github.com/salesagility/SuiteCRM/issues/1724[chadbennett] for
+alerting and helping us resolve this vulnerability.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.6.5[v7.6.5]
+* https://github.com/salesagility/SuiteCRM/commit/5b259a52b832e8f46ba06a00e95783a6aa065295[`5b259a5`]
+
+[[section-5]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.5[7.6.5]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jul 4, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.6.5...master[4143
+commits] to master since this release
+
+[[assets-7]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.5.tar.gz[*Source
+code* (tar.gz)]
+
+*SuiteCRM 7.6.5 is now Available to Download*
+
+This release resolves a Security vulnerability with Serialized Input, to
+prevent possible object injection attacks
+
+Users of ALL previous releases are advised to Upgrade to 7.5.4 or 7.6.5
+as soon as possible
+
+For more detail and to see all issues addressed in this release view the
+https://suitecrm.com/wiki/index.php?title=Release_notes_7.6.5[Release
+Notes]
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release. +
+Special thanks to http://karmainsecurity.com[Egidio Romano] for alerting
+and helping us resolve this vulnerability.
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.5.4[v7.5.4]
+* https://github.com/salesagility/SuiteCRM/commit/f128b63e37e97c58f20f5a81d6f5a8b22511a43f[`f128b63`]
+
+Verified
+
+This tag was signed with a *verified signature*.
+
+https://github.com/mattlorimer[image:https://avatars2.githubusercontent.com/u/6449723?s=64&v=4[@mattlorimer]]
+https://github.com/mattlorimer[mattlorimer] Matt Lorimer
+
+GPG key ID: D7B45FDF7506BF33
+https://help.github.com/articles/signing-commits-with-gpg/[Learn about
+signing commits]
+
+[[section-6]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.4[7.5.4]
+-------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/6449723?s=40&v=4[@mattlorimer]
+https://github.com/mattlorimer[mattlorimer] released this Jul 4, 2016
+
+[[assets-8]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.4.tar.gz[*Source
+code* (tar.gz)]
+
+SuiteCRM 7.5.4 is now Available to Download
+
+This release resolves a Security vulnerability with Serialized Input, to
+prevent possible object injection attacks
+
+* Removes the option to allow serialized user input to the SuiteCRM Rest
+Client.
+* Changed serialized User input to use JSON
+
+Users of ALL previous releases are advised to Upgrade to 7.5.4 or 7.6.5
+as soon as possible
+
+Download here from the SuiteCRM GitHub Repository or visit the official
+website to find the appropriate upgrade.
+
+Thank you to all community members who logged bugs and contributed to
+this release. +
+Special thanks to http://karmainsecurity.com[Egidio Romano] for alerting
+and helping us resolve this vulnerability.
+
+Pre-release
+
+* https://github.com/salesagility/SuiteCRM/tree/v7.7-beta2[v7.7-beta2]
+* https://github.com/salesagility/SuiteCRM/commit/7c1bda85a44757e681346d2f450dacea8ca54849[`7c1bda8`]
+
+[[beta293]]
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-beta2[7.7
+Beta2]
+---------------------------------------------------------------------------
+
+image:https://avatars1.githubusercontent.com/u/4041275?s=40&v=4[@samus-aran]
+https://github.com/samus-aran[samus-aran] released this Jun 27, 2016 ·
+https://github.com/salesagility/SuiteCRM/compare/v7.7-beta2...develop[4737
+commits] to develop since this release
+
+[[assets-9]]
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta2.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a beta release and should not be used in a production
+environment.*
+
+Try 7.7 Beta 2 to preview the new features coming in SuiteCRM 7.7.
+
+The focus of SuiteCRM 7.7 beta 2 is to introduce our new theme SuiteP
+(SuitePea).
+
+Fixes for Campaigns, Sending Emails and other bugs.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.4.x, 7.5.x, 7.6.x and 7.7beta1
+
+https://github.com/salesagility/SuiteCRM/releases?after=v7.8.0-beta[Previous]https://github.com/salesagility/SuiteCRM/releases?after=v7.7-beta2[Next]
+
+* © 2018 GitHub, Inc.
+* https://github.com/site/terms[Terms]
+* https://github.com/site/privacy[Privacy]
+* https://github.com/security[Security]
+* https://status.github.com/[Status]
+* https://help.github.com[Help] https://github.com[]
+* https://github.com/contact[Contact GitHub]
+* https://developer.github.com[API]
+* https://training.github.com[Training]
+* https://shop.github.com[Shop]
+* https://github.com/blog[Blog]
+* https://github.com/about[About]
+
+You can't perform that action at this time.
+
+You signed in with another tab or window. link:[Reload] to refresh your
+session. You signed out in another tab or window. link:[Reload] to
+refresh your session.
