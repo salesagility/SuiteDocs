@@ -2,8 +2,11 @@
 Title: Emails
 Weight: 140
 ---
+:experimental:   ////this is here to allow btn:[]syntax used below
 
 :imagesdir: ./../../../images/en/user
+
+:toc:
 
 = Emails
 
@@ -29,7 +32,7 @@ If you are upgrading from a version of Suite prior to 7.9.x, please see the <<Up
 == Email Client Overview
 
 {{% notice note %}}
-You will need to set up and have access to at least one *personal* or *group* email account in order to use the Emails module. 
+You will need to set up and have access to at least one *personal* or *group* email account in order to use the *Emails* module. 
 {{% /notice %}}
 
 The *Emails* Module opens in List View, showing all the the mail from the selected monitored folder(s) in the main window.
@@ -39,15 +42,16 @@ image:250Emailslistview.png[title="Emails Module List View"]
 
 === Compose Mail
 
-To compose a new email, click the *Compose Mail* button or select *Compose* from the *Sidebar*. Emails can also be composed directly from a SuiteCRM record by clicking the email address on the record. This will open compose view in the *Emails* module. The To field will be automatically populated and the email related to the relevant record. 
+To compose a new email, click the btn:[Compose Mail] button or select *Compose* from the *Sidebar*. Emails can also be composed directly from a SuiteCRM record by clicking the email address on the record. This will open compose view in the *Emails* module. The To field will be automatically populated and the email related to the relevant record. 
 
 If you have opted to use an external email client in your <<Personal Email Settings, user profile email settings>> clicking an email address on a record in SuiteCRM will open a new email in your chosen editor.
 
 image:252Emailcompose.png[title="Compose Email"]
 
-* *Email Template:* Select a template if required. See <<Email Templates>> for more information on creating email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. 
 
-image:253EmailsAddtemplate.png[title="Adding Email template warning"]
+* *Email Template:* Select a template if required. See <<Email Templates>> for more information on creating email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. 
+// image:253EmailsAddtemplate.png[title="Adding Email template warning"]
+
 
 * *Related To:* To associate the email with a particular record, select the module (e.g. Accounts, Contacts, Leads) and then click the Search arrow to search for the record. alternatively, you can begin typing the name into the field and If you are using a template with variables, these will be populated with the relevant data from the related record when the email is sent. The To field will also be automatically populated with the email address associated with the related record.
 
@@ -59,15 +63,21 @@ image:253EmailsAddtemplate.png[title="Adding Email template warning"]
 
 If you have configured a signature for each account in your <<Personal Email Settings, user profile email settings>>, this will appear automatically in the body of the email.
 
-The toolbar at the bottom of the compose view has the following buttons:
+The toolbar at the bottom of the Compose view has the following buttons:
 
-image:254Emailscomposetoolbar.png[title="Adding Email template warning"]
+// image:254Emailscomposetoolbar.png[title="Emails - Compose toolbar"]
 
-*Send Mail* image:255EmailsSendMail.png[align = "right"]
+[cols="10,10,80",frame="none", grid="none"]
+|======================================================================
+|image:255EmailsSendMailbutton.png[title="Send Mail button"]|*Send Mail* |Send mail!
+|image:256EmailsAddFilesbutton.png[title="Add Files button"]|*Attach Files*| Use this button to attach an external file to the email.
+|image|*Attach Documents*|Use this button to attach a SuiteCRM Document to the email. Search for the required Document in the popup and click btn:[Select] to attach it.
+|======================================================================
 
-* *Attach Files* Use this button to attach an external file to the email.
 
-* *Attach Documents* Use this button to attach a SuiteCRM Document to the email. Search for the required Document in the popup and click Select to attach it.
+* *Attach Files*
+
+* *Attach Documents* Use this button to attach a SuiteCRM Document to the email. Search for the required Document in the popup and click btn:[Select] to attach it.
 	
 * *Save Draft* Drafts can be viewed by <<Select Folder, changing the folder>> in list view.
 
@@ -93,7 +103,8 @@ image here
 === Importing Mail
 * from detail view of email record Actions-> Import
 * from list view Bulk Action -> Import
-* screen shot
+
+
 * can relate to a CRM record on import ->mail then appears in the history subpanel of the related record.
 
 === Mark As Read/Unread 
@@ -108,7 +119,7 @@ Scroll to the bottom of the main User Profile tab to view the Email Settings
 
 image:260Emailusersettings.png[User Email Settings]
 
-* *Email Address* - Add the email address(es) for your SuiteCRM account. Click + to add more addresses. 
+* *Email Address* - Add the email address(es) for your SuiteCRM account. Click btn:[+] to add more addresses. 
 * *Email Client* - This setting controls which editor is used to compose and send mail when you click on an email link in SuiteCRM, for example an email address on a contact or account record.
 	** *SuiteCRM Email Editor* - The Suite CRM Emails module editor will be used
 	** *External Email Editor* - With External email editor set, mail links in SuiteCRM will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
@@ -120,19 +131,19 @@ The Email Editor setting does not affect the Suite CRM Emails module Compose vie
 {{% /notice %}}
 
 === Adding A Personal Mail Account
-Click the *Settings* button at the bottom of the main User Profile tab to add a personal mail account.
+Click the btn:[Settings] button at the bottom of the main User Profile tab to add a personal mail account.
 You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by SuiteCRM is IMAP. 
 
 ==== Mail Accounts Tab
 
 
-Select the Mail Accounts Tab and click Add under Mail Accounts to set up your incoming mail account.
+Select the Mail Accounts Tab and click btn:[Add] under Mail Accounts to set up your incoming mail account.
 image:261EmailsAddPersonalAccount.png[Mail Accounts tab]
 
 Complete the required details for the account. 
 image:262EmailsPersonalAccountSettings.png[User Email Settings]
 
-*Monitored Folders* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Sent* items folder here. Enter the folder names or click Select to connect to the mail server and select the relevant folder(s) from the popup dialog.
+*Monitored Folders* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Sent* items folder here. Enter the folder names or click btn:[Select] to connect to the mail server and select the relevant folder(s) from the popup dialog.
 image:263EmailsMonitoredFolders.png[Select monitored folders]
 
 Once set up, the account will appear on the Mail Accounts tab. If you have more than one account configured you can set the default account to appear when you open the Emails module. Accounts set as active will be available to select. 
@@ -160,7 +171,7 @@ Group or shared email accounts are very useful in SuiteCRM, allowing a group of 
 Open the *Admin* panel and select *Inbound Mail* from the *Email Settings* section.
 Select *New Group Mail Account* from the Sidebar.
 
-*Monitored Folders* are the folders which are checked for new (unread) mail. *Inbox* and *Trash* folder names must be specified here. Click *Select* to connect to the mail server and select the relevant folder(s) from the popup dialog.
+*Monitored Folders* are the folders which are checked for new (unread) mail. *Inbox* and *Trash* folder names must be specified here. Click btn:[Select] to connect to the mail server and select the relevant folder(s) from the popup dialog.
 
 image here
 
