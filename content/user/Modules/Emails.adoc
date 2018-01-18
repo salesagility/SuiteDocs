@@ -42,26 +42,24 @@ image:250Emailslistview.png[title="Emails Module List View"]
 
 === Compose Mail
 
-To compose a new email, click the btn:[Compose Mail] button or select *Compose* from the *Sidebar*. Emails can also be composed directly from a SuiteCRM record by clicking the email address on the record. This will open compose view in the *Emails* module. The To field will be automatically populated and the email related to the relevant record. 
-
-If you have opted to use an external email client in your <<Personal Email Settings, user profile email settings>> clicking an email address on a record in SuiteCRM will open a new email in your chosen editor.
+To compose a new email, click the btn:[Compose Mail] button or select *Compose* from the *Sidebar*. 
 
 image:252Emailcompose.png[title="Compose Email"]
 
+Emails can also be composed directly from a SuiteCRM record by clicking the email address on the record. This will open compose view in the *Emails* module. For new emails opened in this way, the *To* field will be automatically populated and the email related to the relevant record. 
+
+If you have opted to use an external email client in your <<User Profile Email Settings, user profile email settings>> clicking an email address on a record in SuiteCRM will open a new email in your chosen editor.
 
 * *Email Template:* Select a template if required. See <<Email Templates>> for more information on creating email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. 
 // image:253EmailsAddtemplate.png[title="Adding Email template warning"]
 
-
 * *Related To:* To associate the email with a particular record, select the module (e.g. Accounts, Contacts, Leads) and then click the Search arrow to search for the record. alternatively, you can begin typing the name into the field and If you are using a template with variables, these will be populated with the relevant data from the related record when the email is sent. The To field will also be automatically populated with the email address associated with the related record.
 
-* *From:* Select the account from which to send the email. The *Reply To* and *From* settings for the selected account are displayed alongside for information.
+* *From:* If you have one email account configured, select the account from which to send the email. The *Reply To* and *From* settings for the selected account are displayed alongside for information.
 
-* *To:* Selecting a *Related To* record with a valid email address will automatically populate the *To* field. Alternatively, the *To*, *Cc* and *Bcc* fields can be populated manually or via the select buttons which appear when you click inside the fields.
+* *To:* Selecting a related record in the with a valid email address will automatically populate the *To* field. Alternatively, the *To*, *Cc* and *Bcc* fields can be populated manually or via the select buttons which appear when you click inside the fields.
 
-* *Body:* 
-
-If you have configured a signature for each account in your <<Personal Email Settings, user profile email settings>>, this will appear automatically in the body of the email.
+* *Body:*  If you have configured a signature for each account in your <<User Mail Settings - General Tab, user profile email settings>>, this will appear automatically in the body of the email.
 
 The toolbar at the bottom of the Compose view has the following buttons:
 
@@ -69,23 +67,16 @@ The toolbar at the bottom of the Compose view has the following buttons:
 
 [cols="10,10,80",frame="none", grid="none"]
 |======================================================================
-|image:255EmailsSendMailbutton.png[title="Send Mail button"]|*Send Mail* |Send mail!
-|image:256EmailsAddFilesbutton.png[title="Add Files button"]|*Attach Files*| Use this button to attach an external file to the email.
+|image:255EmailsSendMailbutton.png[title="Send Mail button"]|*Send Mail* |
+|image:256EmailsAddFilesbutton.png[title="Add Files button"]|*Attach Files*| Use this button to browse for and attach an external file to the email.
 |image|*Attach Documents*|Use this button to attach a SuiteCRM Document to the email. Search for the required Document in the popup and click btn:[Select] to attach it.
+|image|*Save Draft*|Drafts can be viewed by <<Select Folder, changing the folder>> in list view.
+|image|*Discard*|
 |======================================================================
-
-
-* *Attach Files*
-
-* *Attach Documents* Use this button to attach a SuiteCRM Document to the email. Search for the required Document in the popup and click btn:[Select] to attach it.
-	
-* *Save Draft* Drafts can be viewed by <<Select Folder, changing the folder>> in list view.
-
-* *Discard*
 
 === Checking for Mail
   
-For Personal email accounts, you can check for new mail with the *Check For New Mail* button on the *Emails* module toolbar. 
+For Personal email accounts, you can check for new mail with the btn:[Check Mail] button on the *Emails* module toolbar. 
 
 image here 
 
@@ -101,20 +92,26 @@ Use the settings button to add and remove monitored folders for your accounts.
 image here
 
 === Importing Mail
+
+Email can be imported into SuiteCRM and associated with a relevant SuiteCRM record (e.g. a contact or account record). This can be very useful in keeping a conversation history
+
+There are two ways to import email from an Emails module inbox:
 * from detail view of email record Actions-> Import
 * from list view Bulk Action -> Import
 
-
 * can relate to a CRM record on import ->mail then appears in the history subpanel of the related record.
+
+
 
 === Mark As Read/Unread 
 Uread emails are indicated by a purple highlight. To mark email(s) as read or unread, select the email(s) using the checkboxes or Select All function from the Select dropdown, then select Mark As Read/Mark As Unread from the Bulk Action dropdown.
 
 == Setting Up a Personal Email Account
 
+Setting up a personal email account in SuiteCRM allows the user to view personal mail accounts within the *Emails* module. Emails are not stored in the SuiteCRM database unless manually <<Importing Mail,imported>>. 
 Settings for personal email accounts are held within the user's profile, at the bottom of the main user profile tab. Individual users can set up their own personal accounts. Administrators can set up personal accounts for other users from the user profile in User Management.
 
-=== Personal Email Settings
+=== User Profile Email Settings
 Scroll to the bottom of the main User Profile tab to view the Email Settings
 
 image:260Emailusersettings.png[User Email Settings]
@@ -134,8 +131,7 @@ The Email Editor setting does not affect the Suite CRM Emails module Compose vie
 Click the btn:[Settings] button at the bottom of the main User Profile tab to add a personal mail account.
 You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by SuiteCRM is IMAP. 
 
-==== Mail Accounts Tab
-
+==== User Mail Settings - Mail Accounts Tab
 
 Select the Mail Accounts Tab and click btn:[Add] under Mail Accounts to set up your incoming mail account.
 image:261EmailsAddPersonalAccount.png[Mail Accounts tab]
@@ -150,20 +146,30 @@ Once set up, the account will appear on the Mail Accounts tab. If you have more 
 You can edit personal mail account settings here by clicking the pencil icon.
 image:265EmailsAccountList.png[Accounts List]
 
-==== General Tab 
+==== User Mail Settings - General Tab
+
+There are further settings for mail on the General Tab:
+
+image:264EmailsGeneralTab.png[User Mail Settings General tab]
 
 * *Check for New Mail* - the default setting is to check for mail manually. Here you can specify a time interval to automatically check for new mail in your account's monitored folders.
 
-* *Default Signature* - Here you can specify the a signature for the account - Click Create to add a new one or select one from the list.
+* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[Create] to add a new one or select one from the list. Existing signatures can be edited and deleted here. This signature will apply when email is sent from any of the accounts that you have access to.
 
-* *Folder management* -Here you can select the folder(s) which will be available to view from the Emails module.
+* *Folder management* -Select the folder(s) which will be available to view from the *Emails* module. This list will show all the monitored folders from all the mail accounts to which you have access. Use ctrl+click to select more than one folder. 
 
-image:264EmailsGeneralTab.png[General tab]
+Click btn:[Done] to save your settings. A confirmation dialog will appear. 
+You should now be able to <<Email Client Overview,view your emails>> in the *Emails* module.
 
 == Setting up A Group Email Account
 
-Group or shared email accounts are very useful in SuiteCRM, allowing a group of users to access a particular inbox, for example a Support or Sales inbox. SuiteCRM can be configured.
- You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by SuiteCRM is IMAP. 
+A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example.
+
+In addition to shared inboxes, group accounts can also be used for bounce handling mailboxes in email campaigns.
+
+SuiteCRM can also be configured to import emails
+
+You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by SuiteCRM is IMAP. 
 
 {{% notice note %}}You will need to have Administrator access to set up and give access to a group email account {{% /notice %}} 
 
@@ -180,6 +186,7 @@ image here
 image here
 
 ==== Import Emails Automatically
+
 Group email accounts can be set up to import emails automatically, which means that records will be created in SuiteCRM for all incoming emails. Imported emails are stored in SuiteCRM. These associated emails can then be viewed via the History subpanel of the relevant record. 
 
 ==== Create Case From Email
