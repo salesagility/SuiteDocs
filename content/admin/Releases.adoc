@@ -1,0 +1,3761 @@
+---
+Title: Releases
+---
+
+= SuiteCRM Releases
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.9[7.9.9]
+-------------------------------------------------------------------
+
+Released Jan 11, 2018
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.9.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.9.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security* - Improved HTML cleaning 
+* https://github.com/salesagility/SuiteCRM/issues/4664[#4664] Fixed #4664 - Custom imap folders 
+* https://github.com/salesagility/SuiteCRM/issues/4849[#4849 ] Fixed mssql bug at saving user 
+* https://github.com/salesagility/SuiteCRM/issues/4825[#4825 ] Fixed #4825 - Remove duplicate function declaration 
+* https://github.com/salesagility/SuiteCRM/issues/4842[#4842 ] Fixed #4842 - Only show folders of own email accounts in profile 
+* https://github.com/salesagility/SuiteCRM/pull/4870[#4870 ] Fixed #3925 and #3818 - Email template attachments & duplicate attachments 
+* https://github.com/salesagility/SuiteCRM/issues/3631[#3631 ] Fixed #3631 - Attachments in Emails 7.9 aren't showing - In List View 
+* https://github.com/salesagility/SuiteCRM/pull/4892[#4892 ] Avoid including cache and upload folder into minify path 
+* https://github.com/salesagility/SuiteCRM/issues/4868[#4868 ] Fixed #4868 - 7.9.8 Email address and billing/shipping fields blank 
+* https://github.com/salesagility/SuiteCRM/pull/4847[#4847 ] Add closing parentheses to slow query logging. 
+* https://github.com/salesagility/SuiteCRM/issues/4431[#4431 ] Fixed #4431 - PHP Fatal error when I try to edit or view subpanels on the modulebuilder 
+* https://github.com/salesagility/SuiteCRM/issues/4842[#4842 ] Fixed #4842 - Only show folders of own email accounts in profile 
+* https://github.com/salesagility/SuiteCRM/pull/4785[#4785 ] Enable sending emails from system outgoing email account 
+* https://github.com/salesagility/SuiteCRM/issues/4431[#4431 ] Fixed #4431 - Pull members up to make them available to other child classes 
+* https://github.com/salesagility/SuiteCRM/issues/4842[#4842 ] Fixed #4842 - Only show folders of own email accounts in profile 
+* https://github.com/salesagility/SuiteCRM/issues/3818[#3818 ] Fixed #3818 - Prevent duplicating form elements 
+* https://github.com/salesagility/SuiteCRM/issues/3925[#3925 ] Fixed #3925 - Parse template attachments from compose view 
+* https://github.com/salesagility/SuiteCRM/issues/3631[#3631 ] Fixed #3631 - email message attachment not showing 
+* https://github.com/salesagility/SuiteCRM/issues/4517[#4517 ] Fixed #4517 - Change deprecated field names 
+* https://github.com/salesagility/SuiteCRM/issues/4718[#4718 ] Fixed #4718 - Extra check for valid sequence for imap_fetch_overview 
+* https://github.com/salesagility/SuiteCRM/pull/4743[#4743 ] Changing double quotes to single quotes - UpgradeWizard Language file
+* https://github.com/salesagility/SuiteCRM/issues/4753[#4753 ] Fixed #4753 - Error with basicweek dates in the calendar 
+* https://github.com/salesagility/SuiteCRM/issues/4231[#4231 ] Fixed #4231 - Stop appending duplicated viewdefs 
+* https://github.com/salesagility/SuiteCRM/issues/4753[#4753 ] Fixed #4753 - Error with basicweek dates in the calendar 
+* https://github.com/salesagility/SuiteCRM/issues/4874[#4874 ] Fixed #4874 - Dashlet column chart width 
+* https://github.com/salesagility/SuiteCRM/issues/3825[#3825 ] Fixed #3825 - Activity Stream 
+* https://github.com/salesagility/SuiteCRM/issues/3738[#3738 ] Fixed #3738 - Export to PDF Missing lines of code 
+* https://github.com/salesagility/SuiteCRM/issues/3825[#3825 ] Fixed #3825 - Activity Stream 
+* https://github.com/salesagility/SuiteCRM/issues/3446[#3446 ] Fixed #3446 - Removed checks for acceptable_sugar_flavors in the install_utils and packagemanager. 
+* https://github.com/salesagility/SuiteCRM/issues/4869[#4869 ] Fixed #4869 - PHP error when click on link REPORTS TO 
+* https://github.com/salesagility/SuiteCRM/issues/4176[#4176 ] Fixed #4176 - Date Picker 
+* https://github.com/salesagility/SuiteCRM/issues/4832[#4832 ] Fixed #4832 - Notifications list (bell) not populating 
+* https://github.com/salesagility/SuiteCRM/issues/4825[#4825 ] Fixed #4825 - Remove duplicate function declaration 
+* https://github.com/salesagility/SuiteCRM/pull/4898[#4898 ] Update to employee fields being out of line 
+* https://github.com/salesagility/SuiteCRM/issues/4817[#4817 ] Fixed #4817 - Force the datepicker to reposition every time it is shown 
+* https://github.com/salesagility/SuiteCRM/issues/4176[#4176 ] Fixed #4176 - Dashlet's calendar popup windows open in background partially hidden/unaccessible 
+* https://github.com/salesagility/SuiteCRM/issues/3281[#3281 ] Fixed #3281 - Language files: DetailView or Detail View? 
+* https://github.com/salesagility/SuiteCRM/issues/4736[#4736 ] Fixed #4736 - Make Template Sample use absolute Logo URL 
+* https://github.com/salesagility/SuiteCRM/pull/4792[#4792 ] Modify line items to avoid duplicate ids 
+* https://github.com/salesagility/SuiteCRM/pull/4895[#4895 ] Fixed calendar in modal 
+* https://github.com/salesagility/SuiteCRM/pull/4762[#4762 ] Fixed - Unusable tabs 
+* https://github.com/salesagility/SuiteCRM/issues/4765[#4765 ] Fixed #4765 - Make links not truncate for lack of space 
+* https://github.com/salesagility/SuiteCRM/issues/4765[#4765 ] Fixed #4765 - Make links not truncate for lack of space 
+* https://github.com/salesagility/SuiteCRM/pull/4741[#4741 ] Multiple-tabs-appearing 
+* https://github.com/salesagility/SuiteCRM/issues/4796[#4796 ] Fixed #4796 - table overflow 
+* https://github.com/salesagility/SuiteCRM/issues/3370[#3370 ] Fixed #3370 - Links to the website urls without http:// 
+* https://github.com/salesagility/SuiteCRM/issues/4124[#4124 ] Fixed #4124 - Stylesheet miss behavior in Suite7.8.5 emails -Detailview SuiteP-Theme 
+* https://github.com/salesagility/SuiteCRM/issues/4440[#4440 ] Fixed #4440 - Make Call not crash on missing duration field 
+* https://github.com/salesagility/SuiteCRM/issues/4827[#4827 ] Fixed #4827 - Hide the filter icons from basic search list view 
+* https://github.com/salesagility/SuiteCRM/pull/4885[#4885 ] Adding htmlcleaning to email description 
+* https://github.com/salesagility/SuiteCRM/issues/4781[#4781 ] Fixed #4781 - Change PDF templates field type to allow html tags to be saved 
+* https://github.com/salesagility/SuiteCRM/pull/4876[#4876 ] Fixed #4195 - Scheduled AOR_Reports failed query 
+* https://github.com/salesagility/SuiteCRM/issues/3281[#3281 ] Fixed #3281 - Language files: DetailView or Detail View? 
+* https://github.com/salesagility/SuiteCRM/issues/2559[#2559 ] Fixed #2559 - Collection sub-panel filter 
+* https://github.com/salesagility/SuiteCRM/pull/4841[#4841 ] Make subpanels load asynchronously and show a loading screen 
+* https://github.com/salesagility/SuiteCRM/issues/4836[#4836 ] Fixed #4836 - Roles by user. 
+* https://github.com/salesagility/SuiteCRM/issues/4850[#4850 ] Fixed #4850 - Workflow strips out assigned_user field 
+* https://github.com/salesagility/SuiteCRM/issues/4719[#4719 ] Fixed #4719 - Infinite saving loop with Meeting Reminders 
+* https://github.com/salesagility/SuiteCRM/issues/4742[#4742 ] Fixed #4742 - Make email variables replace correctly in AOP Case Updates 
+* https://github.com/salesagility/SuiteCRM/issues/4742[#4742 ] Fixed #4742 - Make email variables replace correctly in AOP Case Updates 
+* https://github.com/salesagility/SuiteCRM/issues/4674[#4674 ] Fixed #4674 -Make sure the form to create meetings in calendar resets correctly 
+* https://github.com/salesagility/SuiteCRM/issues/3374[#3374 ] Fixed #3374 – Apply Status to Case Updates 
+* https://github.com/salesagility/SuiteCRM/pull/4707[#4707 ] Enable importing Project Templates 
+* https://github.com/salesagility/SuiteCRM/pull/4706[#4706 ] Only load Subpanels when they are expanded 
+* https://github.com/salesagility/SuiteCRM/issues/3703[#3703 ] Fixed #3703 - Campaign Wizard: Missing required field: Start Date 
+* https://github.com/salesagility/SuiteCRM/issues/4674[#4674 ] Fixed #4674 - Persisting invitees when creating multiple meetings in calendar
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.9[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.10[7.8.10]
+---------------------------------------------------------------------
+
+Released Jan 11, 2018
+
+Assets
+~~~~~~
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.10.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.10.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security* - Improved HTML cleaning 
+* https://github.com/salesagility/SuiteCRM/issues/4874[#4874 ] Fixed #4874 - Dashlet column chart width 
+* https://github.com/salesagility/SuiteCRM/issues/3825[#3825 ] Fixed #3825 - Activity Stream 
+* https://github.com/salesagility/SuiteCRM/issues/3738[#3738 ] Fixed #3738 - Export to PDF Missing lines of code 
+* https://github.com/salesagility/SuiteCRM/issues/3825[#3825 ] Fixed #3825 - Activity Stream 
+* https://github.com/salesagility/SuiteCRM/issues/3446[#3446 ] Fixed #3446 - Removed checks for acceptable_sugar_flavors in the install_utils and packagemanager. 
+* https://github.com/salesagility/SuiteCRM/issues/4869[#4869 ] Fixed #4869 - PHP error when click on link REPORTS TO 
+* https://github.com/salesagility/SuiteCRM/issues/4176[#4176 ] Fixed #4176 - Date Picker 
+* https://github.com/salesagility/SuiteCRM/issues/4832[#4832 ] Fixed #4832 - Notifications list (bell) not populating 
+* https://github.com/salesagility/SuiteCRM/issues/4825[#4825 ] Fixed #4825 - Remove duplicate function declaration 
+* https://github.com/salesagility/SuiteCRM/pull/4898[#4898 ] Update to employee fields being out of line 
+* https://github.com/salesagility/SuiteCRM/issues/4817[#4817 ] Fixed #4817 - Force the datepicker to reposition every time it is shown 
+* https://github.com/salesagility/SuiteCRM/issues/4176[#4176 ] Fixed #4176 - Dashlet's calendar popup windows open in background partially hidden/unaccessible 
+* https://github.com/salesagility/SuiteCRM/issues/3281[#3281 ] Fixed #3281 - Language files: DetailView or Detail View? 
+* https://github.com/salesagility/SuiteCRM/issues/4736[#4736 ] Fixed #4736 - Make Template Sample use absolute Logo URL 
+* https://github.com/salesagility/SuiteCRM/pull/4792[#4792 ] Modify line items to avoid duplicate ids 
+* https://github.com/salesagility/SuiteCRM/pull/4895[#4895 ] Fixed calendar in modal 
+* https://github.com/salesagility/SuiteCRM/pull/4762[#4762 ] Fixed - Unusable tabs 
+* https://github.com/salesagility/SuiteCRM/issues/4765[#4765 ] Fixed #4765 - Make links not truncate for lack of space 
+* https://github.com/salesagility/SuiteCRM/issues/4765[#4765 ] Fixed #4765 - Make links not truncate for lack of space 
+* https://github.com/salesagility/SuiteCRM/pull/4741[#4741 ] Multiple-tabs-appearing 
+* https://github.com/salesagility/SuiteCRM/issues/4796[#4796 ] Fixed #4796 - table overflow 
+* https://github.com/salesagility/SuiteCRM/issues/3370[#3370 ] Fixed #3370 - Links to the website urls without http:// 
+* https://github.com/salesagility/SuiteCRM/issues/4124[#4124 ] Fixed #4124 - Stylesheet miss behavior in Suite7.8.5 emails -Detailview SuiteP-Theme 
+* https://github.com/salesagility/SuiteCRM/issues/4440[#4440 ] Fixed #4440 - Make Call not crash on missing duration field 
+* https://github.com/salesagility/SuiteCRM/issues/4827[#4827 ] Fixed #4827 - Hide the filter icons from basic search list view 
+* https://github.com/salesagility/SuiteCRM/pull/4885[#4885 ] Adding htmlcleaning to email description 
+* https://github.com/salesagility/SuiteCRM/issues/4781[#4781 ] Fixed #4781 - Change PDF templates field type to allow html tags to be saved 
+* https://github.com/salesagility/SuiteCRM/pull/4876[#4876 ] Fixed #4195 - Scheduled AOR_Reports failed query 
+* https://github.com/salesagility/SuiteCRM/issues/3281[#3281 ] Fixed #3281 - Language files: DetailView or Detail View? 
+* https://github.com/salesagility/SuiteCRM/issues/2559[#2559 ] Fixed #2559 - Collection sub-panel filter 
+* https://github.com/salesagility/SuiteCRM/pull/4841[#4841 ] Make subpanels load asynchronously and show a loading screen 
+* https://github.com/salesagility/SuiteCRM/issues/4836[#4836 ] Fixed #4836 - Roles by user. 
+* https://github.com/salesagility/SuiteCRM/issues/4850[#4850 ] Fixed #4850 - Workflow strips out assigned_user field 
+* https://github.com/salesagility/SuiteCRM/issues/4719[#4719 ] Fixed #4719 - Infinite saving loop with Meeting Reminders 
+* https://github.com/salesagility/SuiteCRM/issues/4742[#4742 ] Fixed #4742 - Make email variables replace correctly in AOP Case Updates 
+* https://github.com/salesagility/SuiteCRM/issues/4742[#4742 ] Fixed #4742 - Make email variables replace correctly in AOP Case Updates 
+* https://github.com/salesagility/SuiteCRM/issues/4674[#4674 ] Fixed #4674 -Make sure the form to create meetings in calendar resets correctly 
+* https://github.com/salesagility/SuiteCRM/issues/3374[#3374 ] Fixed #3374 – Apply Status to Case Updates 
+* https://github.com/salesagility/SuiteCRM/pull/4707[#4707 ] Enable importing Project Templates 
+* https://github.com/salesagility/SuiteCRM/pull/4706[#4706 ] Only load Subpanels when they are expanded 
+* https://github.com/salesagility/SuiteCRM/issues/3703[#3703 ] Fixed #3703 - Campaign Wizard: Missing required field: Start Date 
+* https://github.com/salesagility/SuiteCRM/issues/4674[#4674 ] Fixed #4674 - Persisting invitees when creating multiple meetings in calendar
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.10[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-beta-3[7.10 Beta 3]
+-------------------------------------------------------------------------------
+
+Released Dec 18, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-3.tar.gz[*Source
+code* (tar.gz)]
+
+Try 7.10 Beta 3 to preview the new features coming in SuiteCRM 7.10
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade packages
+
+*Changes since Beta 2:*
+
+* 4 SuiteP colour schemes (Day, Dawn, Dusk, Night)
+* Email Performance Improvements
+* Bug Fixing
+* API swagger documentation added
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.8[7.9.8]
+-------------------------------------------------------------------
+
+Released Dec 14, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.8.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/pull/4701[#4701 ] Improved non filtered email performance 
+* https://github.com/salesagility/SuiteCRM/pull/4697[#4697 ] Removed htmlentities from clean html 
+* https://github.com/salesagility/SuiteCRM/issues/4694[#4694 ] Fixed #4694 Campaign emails use global smtp security settings 
+* https://github.com/salesagility/SuiteCRM/issues/4246[#4246 ] Fixed #4246 - Cannot change email folder and MSSQL error 
+* https://github.com/salesagility/SuiteCRM/issues/4649[#4649 ] Fixed #4649 - Compose Email: 'undefined' popup when selecting template 
+* https://github.com/salesagility/SuiteCRM/issues/4662[#4662 ] Fixed #4662 - Email through 'Bulk Action' on multiple selected contacts not populating 'To:' field 
+* https://github.com/salesagility/SuiteCRM/issues/4665[#4665 ] Fixed #4665 - Email Dashlet missing dashlet and unused field 
+* https://github.com/salesagility/SuiteCRM/issues/4040[#4040 ] Fixed #4040 - Language files - PR for code re-format only 
+* https://github.com/salesagility/SuiteCRM/issues/4667[#4667 ] Fixed #4667 - Make To field in the Email dashlet display address correctly 
+* https://github.com/salesagility/SuiteCRM/issues/4669[#4669 ] Fixed #4669 - Reply links from the emails dashlet now redirect 
+* https://github.com/salesagility/SuiteCRM/pull/4535[#4535 ] Fixed missing install strings 
+* https://github.com/salesagility/SuiteCRM/pull/4458[#4458 ] Adding generate ctags to .gitignore 
+* https://github.com/salesagility/SuiteCRM/issues/4309[#4309 ] Fix #4309 - Implementing attachment for compose view 
+* https://github.com/salesagility/SuiteCRM/issues/4653[#4653 ] Fix #4653 Compose Email Modal Language Strings 
+* https://github.com/salesagility/SuiteCRM/issues/4544[#4544 ] Fixed #4544 - Accounts Summary List not sorted - 7.9.7 
+* https://github.com/salesagility/SuiteCRM/issues/4659[#4659 ] Fixed #4659 - Compose Email From Contacts Loading 'Opt Out' Email 
+* https://github.com/salesagility/SuiteCRM/issues/4496[#4496 ] Fixed #4496 - bug wrong SugarDateTime minutes method used 
+* https://github.com/salesagility/SuiteCRM/issues/942[#942 ] Fixed #942 - PHP strict warning 
+* https://github.com/salesagility/SuiteCRM/issues/4671[#4671 ] Fixed #4671 - bug - bulk action, filter and column chooser missing attributes 
+* https://github.com/salesagility/SuiteCRM/issues/2457[#2457 ] Fixed #2457 - separate aow sql operators from language fileg 
+* https://github.com/salesagility/SuiteCRM/issues/2734[#2734 ] Fixed - #2734 Buttons enlarged in Cases/Reports/AOP/Employees 
+* https://github.com/salesagility/SuiteCRM/pull/4603[#4603 ] Fixed php notice at logout 
+* https://github.com/salesagility/SuiteCRM/issues/4152[#4152 ] Fixed #4152 - Subscriptions missing Save/Cancel Buttons SuiteP 
+* https://github.com/salesagility/SuiteCRM/issues/3316[#3316 ] Fixed #3316 - Click tracker is truncating the urls after the 30th character 
+* https://github.com/salesagility/SuiteCRM/issues/2992[#2992 ] Fixed #2992 - Cannot Duplicate Project Template 
+* https://github.com/salesagility/SuiteCRM/pull/4584[#4584 ] Tabcount should count only Tabs and not Panels 
+* https://github.com/salesagility/SuiteCRM/issues/3811[#3811 ] Fixed #3811 - Direct html content gets truncated - incomplete html 
+* https://github.com/salesagility/SuiteCRM/issues/3716[#3716 ] Fixed #3716 - Project templates - Wrong labels 
+* https://github.com/salesagility/SuiteCRM/issues/2144[#2144 ] Fixed #2144 - SuiteP - Report PDF file - names of columns are missing 
+* https://github.com/salesagility/SuiteCRM/issues/3257[#3257 ] fixed - #3257 Clean up old installer wizard steps 
+* https://github.com/salesagility/SuiteCRM/issues/3579[#3579 ] Fixed #3579 - WAF Blocks Login 
+* https://github.com/salesagility/SuiteCRM/issues/4173[#4173 ] Fixed #4173 - SMTP Password form input fields contain a max length of 64 (should be larger) 
+* https://github.com/salesagility/SuiteCRM/pull/4587[#4587 ] Fixed module="xxx" is not a valid attribute for an a tag 
+* https://github.com/salesagility/SuiteCRM/pull/4586[#4586 ] Remove incorrect html comments 
+* https://github.com/salesagility/SuiteCRM/pull/4593[#4593 ] Added return instruction to One2MRelationship::add() function 
+* https://github.com/salesagility/SuiteCRM/issues/1394[#1394 ] Fixed #1394 - Bug in Quote to Invoice Conversion 
+* https://github.com/salesagility/SuiteCRM/pull/4595[#4595 ] Fixed PHP 5.4 error 
+* https://github.com/salesagility/SuiteCRM/pull/4602[#4602 ] Fixed variable assignment in AOS_Utils::perform_aos_save() 
+* https://github.com/salesagility/SuiteCRM/issues/4479[#4479 ] Fixed #4479 - Stored email accounts need "From" and "FromName" fields 
+* https://github.com/salesagility/SuiteCRM/pull/4638[#4638 ] Fixed PHP error 
+* https://github.com/salesagility/SuiteCRM/pull/4632[#4632 ] Fixed detail panels on upgrade 
+* https://github.com/salesagility/SuiteCRM/issues/4550[#4550 ] Fixed #4550 - missing email "from" installer 
+* https://github.com/salesagility/SuiteCRM/issues/4607[#4607 ] Fixed #4607 - Audit does not record the changes when setting value on a related field that was empty 
+* https://github.com/salesagility/SuiteCRM/issues/4109[#4109 ] Fixed #4109 - SQL query error in Reports using custom field from another module 
+* https://github.com/salesagility/SuiteCRM/issues/4607[#4607 ] Fix #4607 - Audit does not record the changes when setting value on a related field that was empty. 
+* https://github.com/salesagility/SuiteCRM/pull/4374[#4374 ] Fixed SonarQube Bugs 
+* https://github.com/salesagility/SuiteCRM/pull/4590[#4590 ] Fixed Syntax: One closing bracket too much 
+* https://github.com/salesagility/SuiteCRM/pull/4588[#4588 ] Fixed Syntax: unexpected comma after css selector 
+* https://github.com/salesagility/SuiteCRM/issues/1456[#1456 ] Fixed #1456 - Dropdown Editor: Display Label with single quotes is cut to save 
+* https://github.com/salesagility/SuiteCRM/pull/4581[#4581 ] Incomplete css property display:; 
+* https://github.com/salesagility/SuiteCRM/issues/4579[#4579 ] Fixed #4579 - Dashlet DetailView link broken 
+* https://github.com/salesagility/SuiteCRM/issues/4513[#4513 ] Fixed #4513 - ERR_UPLOAD_FILETYPE contains English errors 
+* https://github.com/salesagility/SuiteCRM/issues/2802[#2802 ] Fixed #2802 - Email Templates parse Multiselect fields as keys not as labels 
+* https://github.com/salesagility/SuiteCRM/pull/4577[#4577 ] Remove config_override.php 
+* https://github.com/salesagility/SuiteCRM/issues/1308[#1308 ] Fixed #1308 - Doesn't respect the `reportable` property of vardefs 
+* https://github.com/salesagility/SuiteCRM/issues/1189[#1189 ] Fixed #1189 - AOR - Report doesn't display Image for image fieldtype 
+* https://github.com/salesagility/SuiteCRM/pull/4509[#4509 ] Substitution for Dashlet template broken 
+* https://github.com/salesagility/SuiteCRM/issues/1727[#1727 ] Fixed #1727 - Invalid foreach argument warning in AOP admin 
+* https://github.com/salesagility/SuiteCRM/issues/1532[#1532 ] Fixed #1532 -AOR - Ajax Load 
+* https://github.com/salesagility/SuiteCRM/issues/3364[#3364 ] Fixed #3364 - Products save and continue 
+* https://github.com/salesagility/SuiteCRM/pull/1163[#1163 ] Fixed iCal char encoding 
+* https://github.com/salesagility/SuiteCRM/issues/4446[#4446 ] Fixed #4446 Data that looks like HTML tags is deleted from text fields 
+* https://github.com/salesagility/SuiteCRM/issues/4157[#4157 ] Fixed #4157 - Adding new tab on dashboard using Firefox is not possible 
+* https://github.com/salesagility/SuiteCRM/issues/4446[#4446 ] Fixed #4446 - remove vs encode html tags 
+* https://github.com/salesagility/SuiteCRM/issues/2498[#2498 ] Fixed #2498 - SuiteCRM 7.7.6 - Calendar Localization not working: days long and time slot 
+* https://github.com/salesagility/SuiteCRM/pull/491[#491 ] Fixed required check in validation callback 
+* https://github.com/salesagility/SuiteCRM/issues/4136[#4136 ] Fixed #4377 - JSON_LOOSE_TYPE not defined 
+* https://github.com/salesagility/SuiteCRM/pull/4461[#4461 ] Fixed mass update of int fields 
+* https://github.com/salesagility/SuiteCRM/issues/4088[#4088 ] Fixed #4088 Campaign Scheduler Changes Date/Time 
+* https://github.com/salesagility/SuiteCRM/pull/4439[#4439 ] Fixed string value consistency - Other Phone 
+* https://github.com/salesagility/SuiteCRM/issues/4425[#4425 ] Fixed #4425 - SugarFeeds naming
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.9[7.8.9]
+-------------------------------------------------------------------
+
+Released Dec 14, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.9.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.9.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/pull/4697[#4697 ] Removed htmlentities from clean html
+* https://github.com/salesagility/SuiteCRM/issues/4694[#4694 ] Fixed #4694 Campaign emails use global smtp security settings
+* https://github.com/salesagility/SuiteCRM/issues/4496[#4496 ] Fixed #4496 - bug wrong SugarDateTime minutes method used
+* https://github.com/salesagility/SuiteCRM/issues/942[#942 ] Fixed #942 - PHP strict warning
+* https://github.com/salesagility/SuiteCRM/issues/4671[#4671 ] Fixed #4671 - bug - bulk action, filter and column chooser missing attributes
+* https://github.com/salesagility/SuiteCRM/issues/2457[#2457 ] Fixed #2457 - separate aow sql operators from language fileg
+* https://github.com/salesagility/SuiteCRM/issues/2734[#2734 ] Fixed - #2734 Buttons enlarged in Cases/Reports/AOP/Employees
+* https://github.com/salesagility/SuiteCRM/pull/4603[#4603 ] Fixed php notice at logout
+* https://github.com/salesagility/SuiteCRM/issues/4152[#4152 ] Fixed #4152 - Subscriptions missing Save/Cancel Buttons SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/3316[#3316 ] Fixed #3316 - Click tracker is truncating the urls after the 30th character
+* https://github.com/salesagility/SuiteCRM/issues/2992[#2992 ] Fixed  #2992 - Cannot Duplicate Project Template
+* https://github.com/salesagility/SuiteCRM/pull/4584[#4584 ] Tabcount should count only Tabs and not Panels
+* https://github.com/salesagility/SuiteCRM/issues/3811[#3811 ] Fixed  #3811 - Direct html content gets truncated - incomplete html
+* https://github.com/salesagility/SuiteCRM/issues/3716[#3716 ] Fixed #3716 - Project templates - Wrong labels
+* https://github.com/salesagility/SuiteCRM/issues/2144[#2144 ] Fixed #2144 - SuiteP - Report PDF file - names of columns are missing
+* https://github.com/salesagility/SuiteCRM/issues/3257[#3257 ] fixed - #3257 Clean up old installer wizard steps
+* https://github.com/salesagility/SuiteCRM/issues/3579[#3579 ] Fixed #3579 - New Install SuiteCRM Version : 7.8.3 - WAF Blocks Login "Blind SQL Injection Attack"
+* https://github.com/salesagility/SuiteCRM/issues/4173[#4173 ] Fixed #4173 - SMTP Password form input fields contain a max length of 64 (should be larger)
+* https://github.com/salesagility/SuiteCRM/pull/4587[#4587 ] Fixed module="xxx" is not a valid attribute for an a tag
+* https://github.com/salesagility/SuiteCRM/pull/4586[#4586 ] Remove incorrect html comments
+* https://github.com/salesagility/SuiteCRM/pull/4593[#4593 ] Added return instruction to One2MRelationship::add() function
+* https://github.com/salesagility/SuiteCRM/issues/1394[#1394 ] Fixed #1394 - Bug in Quote to Invoice Conversion
+* https://github.com/salesagility/SuiteCRM/pull/4595[#4595 ] Fixed PHP 5.4 error
+* https://github.com/salesagility/SuiteCRM/pull/4602[#4602 ] Fixed variable assignment in AOS_Utils::perform_aos_save()
+* https://github.com/salesagility/SuiteCRM/issues/4479[#4479 ] Fixed #4479 - Stored email accounts need "From" and "FromName" fields
+* https://github.com/salesagility/SuiteCRM/pull/4638[#4638 ] Fixed PHP error
+* https://github.com/salesagility/SuiteCRM/pull/4632[#4632 ] Fixed detail panels on upgrade
+* https://github.com/salesagility/SuiteCRM/issues/4550[#4550 ] Fixed #4550 - missing email "from" installer (7.8.x)
+* https://github.com/salesagility/SuiteCRM/issues/4607[#4607 ] Fixed #4607 - Audit does not record the changes when setting value on a related field that was empty
+* https://github.com/salesagility/SuiteCRM/issues/4109[#4109 ] Fixed #4109 - SQL query error in Reports using custom field from another module
+* https://github.com/salesagility/SuiteCRM/issues/4607[#4607 ] Fix #4607 - Audit does not record the changes when setting value on a related field that was empty.
+* https://github.com/salesagility/SuiteCRM/pull/4374[#4374 ] Fixed SonarQube Bugs 
+* https://github.com/salesagility/SuiteCRM/pull/4590[#4590 ] Fixed Syntax: One closing bracket too much
+* https://github.com/salesagility/SuiteCRM/pull/4588[#4588 ] Fixed Syntax: unexpected comma after css selector
+* https://github.com/salesagility/SuiteCRM/issues/1456[#1456 ] Fixed #1456 - Dropdown Editor: Display Label with single quotes is cut to save
+* https://github.com/salesagility/SuiteCRM/pull/4581[#4581 ] Incomplete css property display:;
+* https://github.com/salesagility/SuiteCRM/issues/4579[#4579 ] Fixed #4579 - Dashlet DetailView link broken
+* https://github.com/salesagility/SuiteCRM/issues/4513[#4513 ] Fixed #4513 - ERR_UPLOAD_FILETYPE contains English errors
+* https://github.com/salesagility/SuiteCRM/issues/2802[#2802 ] Fixed #2802 - Email Templates parse Multiselect fields as keys not as labels
+* https://github.com/salesagility/SuiteCRM/pull/4577[#4577 ] Remove config_override.php
+* https://github.com/salesagility/SuiteCRM/issues/1308[#1308 ] Fixed #1308 - Doesn't respect the `reportable` property of vardefs
+* https://github.com/salesagility/SuiteCRM/issues/1189[#1189 ] Fixed #1189 - AOR - Report doesn't display Image for image fieldtype
+* https://github.com/salesagility/SuiteCRM/issues/3355[#3355 ] Fixed #3355 - Bad HTML in generated subpanels (Suite7 and SuiteR theme)
+* https://github.com/salesagility/SuiteCRM/pull/4509[#4509 ] Substitution for Dashlet template broken
+* https://github.com/salesagility/SuiteCRM/issues/1727[#1727 ] Fixed #1727 - Invalid foreach argument warning in AOP admin
+* https://github.com/salesagility/SuiteCRM/issues/1532[#1532 ] Fixed #1532 -AOR - Ajax Load
+* https://github.com/salesagility/SuiteCRM/issues/3364[#3364 ] Fixed #3364 - Products save and continue
+* https://github.com/salesagility/SuiteCRM/pull/1163[#1163 ] Fixed iCal char encoding
+* https://github.com/salesagility/SuiteCRM/issues/4446[#4446 ] Fixed #4446 Data that looks like HTML tags is deleted from text fields
+* https://github.com/salesagility/SuiteCRM/issues/4157[#4157 ] Fixed #4157 - Adding new tab on dashboard using Firefox is not possible
+* https://github.com/salesagility/SuiteCRM/issues/4446[#4446 ] Fixed #4446 - remove vs encode html tags
+* https://github.com/salesagility/SuiteCRM/issues/2498[#2498 ] Fixed #2498 - SuiteCRM 7.7.6 - Calendar Localization not working: days long and time slot
+* https://github.com/salesagility/SuiteCRM/pull/491[#491 ] Fixed required check in validation callback
+* https://github.com/salesagility/SuiteCRM/issues/4136[#4136 ] Fixed #4377 - JSON_LOOSE_TYPE not defined
+* https://github.com/salesagility/SuiteCRM/pull/4461[#4461 ] Fixed mass update of int fields
+* https://github.com/salesagility/SuiteCRM/issues/4088[#4088 ] Fixed #4088 Campaign Scheduler Changes Date/Time
+* https://github.com/salesagility/SuiteCRM/pull/4439[#4439  Fixed string value consistency - Other Phone
+* https://github.com/salesagility/SuiteCRM/issues/4425[#4425 ] Fixed #4425 - SugarFeeds naming
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.9[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-beta-2[7.10 Beta 2]
+-------------------------------------------------------------------------------
+
+Released Dec 1, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-2.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.10 Beta 2 to preview the new features coming in SuiteCRM 7.10*
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-beta[7.10 Beta]
+---------------------------------------------------------------------------
+
+Released Nov 17, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.10 Beta to preview the new features coming in SuiteCRM 7.10*
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.7[7.9.7]
+-------------------------------------------------------------------
+
+Released this Oct 18, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.7.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security* - Resolved security issues
+* https://github.com/salesagility/SuiteCRM/issues/4375[#4375 ] Fixed 4375 - Html Field in edit view
+* https://github.com/salesagility/SuiteCRM/issues/4133[#4133 ] Fixed #4133 - 7.9.4 Email Display Name Doesn't Appear for Recipient
+* https://github.com/salesagility/SuiteCRM/issues/4183[#4183 ] Fixed #4183 - SuiteP - Tabs not behaving correctly on small screens
+* https://github.com/salesagility/SuiteCRM/issues/4328[#4328 ] Fixed #4328 - TinyMCE brand name
+* https://github.com/salesagility/SuiteCRM/issues/4180[#4180 ] Fixed #4180 - SuiteP quickcreate forms not visible in mobile
+* https://github.com/salesagility/SuiteCRM/issues/4380[#4380 ] Fixed #4380 - 7.9.6 Cannot view account details
+* https://github.com/salesagility/SuiteCRM/issues/4401[#4401 ] Fixed #4401 - On 7.8.7 LTS Workflow actions are not displayed on EditView
+* https://github.com/salesagility/SuiteCRM/issues/4379[#4379 ] Fixed #4379 - fixing compose email form button labels
+* https://github.com/salesagility/SuiteCRM/issues/4364[#4364 ] Fixed #4364 - Send Test Button without Label 7.9.5
+* https://github.com/salesagility/SuiteCRM/issues/4356[#4356 ] Fixed #4356 - Activity Stream 7.9.5 no Label Post -> Post empty
+* https://github.com/salesagility/SuiteCRM/issues/4260[#4260 ] Fixed #4260 - Unresolved Language Label
+* https://github.com/salesagility/SuiteCRM/issues/4242[#4242 ] Fixed #4242 - Goto Date or Go to Date?
+* https://github.com/salesagility/SuiteCRM/issues/4243[#4243 ] Fixed #4243 - Duplicated language strings - Install file
+* https://github.com/salesagility/SuiteCRM/issues/4255[#4255 ] Fixed #4255 - Unresolved address labels
+* https://github.com/salesagility/SuiteCRM/issues/4220[#4220 ] Fixed #4220 - Layout editor showing incorrect labels in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/4213[#4213 ] Fixed #4213 - Cannot edit Layouts in Module Builder
+* https://github.com/salesagility/SuiteCRM/issues/3865[#3865 ] Fixed #3865 - User settings for selected user on edit view
+* https://github.com/salesagility/SuiteCRM/issues/3853[#3853 ] Fixed #3853 - fix reply-to checkbox
+* https://github.com/salesagility/SuiteCRM/issues/4399[#4399 ] Fixed #4399 - Calendar ICAL URL ask for User / Password
+* https://github.com/salesagility/SuiteCRM/pull/4410[#4410 ] Typo tag not closed
+* https://github.com/salesagility/SuiteCRM/pull/4373[#4373 ] CONTRIBUTING.md
+* https://github.com/salesagility/SuiteCRM/pull/4372 #4372 ] ISSUE_TEMPLATE.md
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.7 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.7[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.8[7.8.8]
+-------------------------------------------------------------------
+
+Released Oct 18, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.8.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security* - Resolved security issues
+* https://github.com/salesagility/SuiteCRM/issues/4375[#4375 ] Fixed 4375 - Html Field in edit view
+* https://github.com/salesagility/SuiteCRM/issues/4183[#4183 ] Fixed #4183 - SuiteP - Tabs not behaving correctly on small screens
+* https://github.com/salesagility/SuiteCRM/issues/4328[#4328 ] Fixed #4328 - TinyMCE brand name
+* https://github.com/salesagility/SuiteCRM/issues/4180[#4180 ] Fixed #4180 - SuiteP quickcreate forms not visible in mobile
+* https://github.com/salesagility/SuiteCRM/issues/4380[#4380 ] Fixed #4380 - 7.9.6 Cannot view account details
+* https://github.com/salesagility/SuiteCRM/issues/4401[#4401 ] Fixed #4401 - On 7.8.7 LTS Workflow actions are not displayed on EditView
+* https://github.com/salesagility/SuiteCRM/issues/4379[#4379 ] Fixed #4379 - fixing compose email form button labels
+* https://github.com/salesagility/SuiteCRM/issues/4260[#4260 ] Fixed #4260 - Unresolved Language Label
+* https://github.com/salesagility/SuiteCRM/issues/4242[#4242 ] Fixed #4242 - Goto Date or Go to Date?
+* https://github.com/salesagility/SuiteCRM/issues/4243[#4243 ] Fixed #4243 - Duplicated language strings - Install file
+* https://github.com/salesagility/SuiteCRM/issues/4255[#4255 ] Fixed #4255 - Unresolved address labels
+* https://github.com/salesagility/SuiteCRM/issues/4220[#4220 ] Fixed #4220 - Layout editor showing incorrect labels in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/4213[#4213 ] Fixed #4213 - Cannot edit Layouts in Module Builder
+* https://github.com/salesagility/SuiteCRM/issues/3865[#3865 ] Fixed #3865 - User settings for selected user on edit view
+* https://github.com/salesagility/SuiteCRM/issues/3853[#3853 ] Fixed #3853 - fix reply-to checkbox
+* https://github.com/salesagility/SuiteCRM/issues/4399[#4399 ] Fixed #4399 - Calendar ICAL URL ask for User / Password
+* https://github.com/salesagility/SuiteCRM/pull/4410[#4410 ] Typo tag not closed
+* https://github.com/salesagility/SuiteCRM/pull/4373[#4373 ] CONTRIBUTING.md
+* https://github.com/salesagility/SuiteCRM/pull/4372[#4372 ] ISSUE_TEMPLATE.md
+
+*Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.8 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.8[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/7.9.6[7.9.6]
+------------------------------------------------------------------
+
+Released Oct 3, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/7.9.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/7.9.6.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* - Fixed SQL injection
+* https://github.com/salesagility/SuiteCRM/issues/1563[#1563 ] Scaling on barcharts incorrect
+* https://github.com/salesagility/SuiteCRM/issues/2247[#2247 ] MultiSelect field issue in PDF
+* https://github.com/salesagility/SuiteCRM/issues/3081[#3081 ] Export Customisation shows only "undefined" labels
+* https://github.com/salesagility/SuiteCRM/issues/2203[#2203 ] Fix #2203 - Overflowing text from div container
+* https://github.com/salesagility/SuiteCRM/pull/3171[#3171 ] Editview labels padding fixed
+* https://github.com/salesagility/SuiteCRM/pull/3218[#3218 ] Fix Default Value in Importer
+* https://github.com/salesagility/SuiteCRM/issues/3226[#3226 ] Upgrade to Sugar 6.5.25
+* https://github.com/salesagility/SuiteCRM/pull/3507[#3507 ] Not translatable values in Activities/Popup_picker.php - Additional
+* https://github.com/salesagility/SuiteCRM/issues/2767[#2767 ] Cookies for subpanels not working.
+* https://github.com/salesagility/SuiteCRM/issues/3576[#3576 ] A non-numeric value encountered in SUITECRM/include/ListView/ListViewSubPanel.php on line [264|546] 
+* https://github.com/salesagility/SuiteCRM/pull/3745[#3745 ] LDAP labels corrected for openLDAP
+* https://github.com/salesagility/SuiteCRM/pull/4081[#4081 ] Case Typo in EMail
+* https://github.com/salesagility/SuiteCRM/issues/4232[#4232 ] User Detail - Edit action stopped working after 7.8.6 upgrade
+* https://github.com/salesagility/SuiteCRM/pull/4236[#4236 ] Attachment form translation
+* https://github.com/salesagility/SuiteCRM/pull/4237[#4237 ] Fix sugarfieldhtml
+* https://github.com/salesagility/SuiteCRM/pull/4292[#4292 ] Add Visual Studio exclusions to .gitignore
+* https://github.com/salesagility/SuiteCRM/issues/4290[#4290 ] Unresolved labels in Template samples
+* https://github.com/salesagility/SuiteCRM/issues/4301[#4301 ] Repair JS Files Overwrites DetailView.js with old version #4301
+
+*Users of ALL releases are advised to Upgrade to 7.9.6 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/7.9.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.7[7.8.7]
+--------------------------------------------------------------------
+
+Released Oct 3, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.7.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* - Fixed SQL injection
+* https://github.com/salesagility/SuiteCRM/issues/1563[#1563 ] Scaling on barcharts incorrect
+* https://github.com/salesagility/SuiteCRM/issues/2247[#2247 ] MultiSelect field issue in PDF
+* https://github.com/salesagility/SuiteCRM/issues/3081[#3081 ] Export Customisation shows only "undefined" labels
+* https://github.com/salesagility/SuiteCRM/issues/2203[#2203 ] Fix #2203 - Overflowing text from div container
+* https://github.com/salesagility/SuiteCRM/pull/3171[#3171 ] Editview labels padding fixed
+* https://github.com/salesagility/SuiteCRM/pull/3218[#3218 ] Fix Default Value in Importer
+* https://github.com/salesagility/SuiteCRM/issues/3226[#3226 ] Upgrade to Sugar 6.5.25
+* https://github.com/salesagility/SuiteCRM/pull/3507[#3507 ] Not translatable values in Activities/Popup_picker.php - Additional
+* https://github.com/salesagility/SuiteCRM/issues/2767[#2767 ] Cookies for subpanels not working.
+* https://github.com/salesagility/SuiteCRM/issues/3576[#3576 ] A non-numeric value encountered in SUITECRM/include/ListView/ListViewSubPanel.php on line [264|546] 
+* https://github.com/salesagility/SuiteCRM/pull/3745[#3745 ] LDAP labels corrected for openLDAP
+* https://github.com/salesagility/SuiteCRM/pull/4081[#4081 ] Case Typo in EMail
+* https://github.com/salesagility/SuiteCRM/issues/4232[#4232 ] User Detail - Edit action stopped working after 7.8.6 upgrade
+* https://github.com/salesagility/SuiteCRM/pull/4236[#4236 ] Attachment form translation
+* https://github.com/salesagility/SuiteCRM/pull/4237[#4237 ] Fix sugarfieldhtml
+* https://github.com/salesagility/SuiteCRM/pull/4292[#4292 ] Add Visual Studio exclusions to .gitignore
+* https://github.com/salesagility/SuiteCRM/issues/4290[#4290 ] Unresolved labels in Template samples
+* https://github.com/salesagility/SuiteCRM/issues/4301[#4301 ] Repair JS Files Overwrites DetailView.js with old version #4301
+
+*Users of ALL releases are advised to Upgrade to 7.9.6 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.7[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.5[7.9.5]
+-------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Sep 6, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.5.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/3688[#3688 ] Adding escaping to EmailUIAjax.php
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4202[#4202 ] Adding blocking module fields in AOW
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4203[#4203 ] Add ajaxUILoc XSS protection
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4096[#4096 ] System email template access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4094[#4094 ] Relationship removal access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/3851[#3851 ] Improved clean html for sugar fields
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/3088[#3088 ] Send correct password reset email
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/3651[#3651 ] Remove delete button in bulk action
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/3875[#3875 ] Prevents users from editing other employees data
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4209[#4209 ] Prevents users from inline editing without access
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4102[#4102 ] Only an admin user can set admin access for users
+* https://github.com/salesagility/SuiteCRM/pull/4140[#4140 ] Fix non-matching delaration of relationship methods in ModuleBuilder
+* https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset 
+* https://github.com/salesagility/SuiteCRM/issues/4104[#4104 ] Incorrect reference to Suite R+
+* https://github.com/salesagility/SuiteCRM/issues/4107[#4107 ] Fix for issue Sorting of fields in condition list
+* https://github.com/salesagility/SuiteCRM/issues/4181[#4181 ] Fixes missing labels
+* https://github.com/salesagility/SuiteCRM/issues/3898[#3898 ] Duplicated language strings
+* https://github.com/salesagility/SuiteCRM/pull/4034[#4034 ] Unused language string removal
+* https://github.com/salesagility/SuiteCRM/pull/3931[#3931 ] Case Typo in html entity
+* https://github.com/salesagility/SuiteCRM/pull/3623[#3623 ] Fullcalendar - Fixing typo on pt-PT weekdays long format
+* https://github.com/salesagility/SuiteCRM/issues/3723[#3723 ] Fixed #3723 History summary not sorted SuiteCRM
+* https://github.com/salesagility/SuiteCRM/issues/3704[#3704 ] Fixed #3704 - Cannot sort by "Account Name" in "Target Lists => Details => Contacts"
+* https://github.com/salesagility/SuiteCRM/issues/3919[#3919 ] Fixed #3919 - All archived mails show the same body
+* https://github.com/salesagility/SuiteCRM/issues/4084[#4084 ] Fixed #4084 - Option "contains" not available in MultiSelect Field
+* https://github.com/salesagility/SuiteCRM/pull/4074[#4074 ] Fixed installer checkbox html
+* https://github.com/salesagility/SuiteCRM/issues/4033[#4033 ] Fixed #4033 - Email DetailView does not show recipient/sender-data
+* https://github.com/salesagility/SuiteCRM/issues/4053[#4053 ] Fixed #4053 - 'send Quote by Email' may send to wrong address
+* https://github.com/salesagility/SuiteCRM/issues/4101[#4101 ] Fixed #4101 - Forwarding/Replying to emails sends to your own email address
+* https://github.com/salesagility/SuiteCRM/issues/4048[#4048 ] Fixed #4048 - 7.9.4 - doesn't close window if you reply to, reply to all, forward to imported email
+* https://github.com/salesagility/SuiteCRM/issues/3735[#3735 ] Fixed #3735 - Undefined values using templates from account module in 7.9.1
+* https://github.com/salesagility/SuiteCRM/issues/3791[#3791 ] Fixed #3791 - Problems with Umlauts in E-Mail-Client
+* https://github.com/salesagility/SuiteCRM/issues/3863[#3863 ] Fixed #3863 - Umlauts in signature lose encoding in compose-view
+* https://github.com/salesagility/SuiteCRM/issues/3420[#3420 ] Fixed #3420 - Regular user does not reach email address field in Reports module
+* https://github.com/salesagility/SuiteCRM/pull/4062[#4062 ] AOR Reports: Combined PR for AOR fixes
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.5 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.6[7.8.6]
+--------------------------------------------------------------------
+
+Released Sep 6, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.6.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/3688[#3688 ] Adding escaping to EmailUIAjax.php
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4202[#4202 ] Adding blocking module fields in AOW
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4203[#4203 ] Add ajaxUILoc XSS protection
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4132[#4132 ] System email template access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4131[#4131 ] Relationship removal access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4130[#4130 ] Improved clean html for sugar fields
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4129[#4129 ] Send correct password reset email
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4128[#4128 ] Remove delete button in bulk action
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4127[#4127 ] Prevents users from editing other employees data
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4209[#4209 ] Prevents users from inline editing without access
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4102[#4102 ] Only an admin user can set admin access for users
+* https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset
+* https://github.com/salesagility/SuiteCRM/pull/4074[#4074 ] Fixed installer checkbox html
+
+*Users of ALL previous LTS 7.8.x releases are advised to Upgrade to 7.8.6 LTS as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.4[7.9.4]
+-------------------------------------------------------------------
+
+Released Jul 20, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/issues/3901[#3901 ] No outbound account in "From" dropdown MSSQL
+* https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset
+* https://github.com/salesagility/SuiteCRM/issues/3908[#3908 ] fixed: Edit action not working after selecting a user on Administrator User Management module (missing single quotes)
+* https://github.com/salesagility/SuiteCRM/pull/3905[#3905 ] Removed duplicated space
+* https://github.com/salesagility/SuiteCRM/pull/3900[#3900 ] CalendarDashlet - Removing translations from core
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.4 as soon as possible.*
+
+This Release contains all the Security Patches from the previous 7.9.3 Release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.3[7.9.3]
+-------------------------------------------------------------------
+
+https://github.com/Dillon-Brown[Dillon-Brown] released this Jul 17, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue https://github.com/salesagility/SuiteCRM/issues/3875[#3875 ] Fixed* - disable user to edit other employees data
+* *Security Issue https://github.com/salesagility/SuiteCRM/issues/3812[#3812 ] Fixed* - Ensures that a user can only send an email via their own inbound email account
+* *Security Issue https://github.com/salesagility/SuiteCRM/issues/3851[#3851 ] Fixed* - Improved clean html for sugar fields
+* https://github.com/salesagility/SuiteCRM/issues/1633[#1633 ] Fixed #1633 - accessibility issues on account creation page. Unlabled Checkboxes and radio button
+* https://github.com/salesagility/SuiteCRM/issues/3753[#3753 ] Fixed #3753 - no available themes
+* https://github.com/salesagility/SuiteCRM/issues/3809[#3809 ] Fixed - Text wrapping issue on detailview/editview
+* https://github.com/salesagility/SuiteCRM/issues/3831[#3831 ] Fixed #3831 - Module Builder - dashlet file - no substitution in class name
+* https://github.com/salesagility/SuiteCRM/issues/3869[#3869 ] Fixed #3602 - Unused language strings (securityGroups)
+* https://github.com/salesagility/SuiteCRM/issues/3869[#3869 ] Fixed - Default/Inactive Email Account Issue
+* https://github.com/salesagility/SuiteCRM/issues/3766[#3766 ] Fixed 3766 - bounce email msg id check
+* https://github.com/salesagility/SuiteCRM/issues/3858[#3858 ] Fixed - Update tab_panel_content.tpl
+* https://github.com/salesagility/SuiteCRM/issues/3821[#3821 ] Fixed - style typo in repeat section
+* https://github.com/salesagility/SuiteCRM/issues/330[#330 ] Fixed #330 - Calendar days and hours are not translated
+* https://github.com/salesagility/SuiteCRM/issues/3088[#3088 ] Fixed #3088 - Send correct password reset email
+* https://github.com/salesagility/SuiteCRM/issues/3874[#3874 ] Fixed - Dashlets process functions #3874
+* https://github.com/salesagility/SuiteCRM/issues/3445[#3445 ] Fixed #3445 - Duplicated language strings
+* https://github.com/salesagility/SuiteCRM/issues/3529[#3529 ] Fixed - Allow SubPanel Rows to add Row Buttons
+* https://github.com/salesagility/SuiteCRM/issues/3645[#3645 ] Fixed #3645 - User defined smtp settings not used when sending email (ver 7.9)
+* https://github.com/salesagility/SuiteCRM/issues/3841[#3841 ] Fixed #3841 - Saving profile deletes SMTP password
+* https://github.com/salesagility/SuiteCRM/issues/3628[#3628 ] Fixed #3628 - Missing icons in filter bar when you edit Email Layout in 7.9
+* https://github.com/salesagility/SuiteCRM/issues/3848[#3848 ] Fixed #3848 - get email by mailbox_id
+* https://github.com/salesagility/SuiteCRM/issues/3671[#3671 ] Fixed #3671 -When editing an email template with TinyMCE it is not possible to edit the html
+* https://github.com/salesagility/SuiteCRM/issues/3618[#3618 ] Fixed #3618- OpenListView.php remove file and unused language strings
+* https://github.com/salesagility/SuiteCRM/issues/3550[#3550 ] Fixed - Combined language file update (Unused/Duplicate strings)
+* https://github.com/salesagility/SuiteCRM/issues/3346[#3346 ] Fixed #3346 - Requesting copyright revision on all language files
+* https://github.com/salesagility/SuiteCRM/issues/3798[#3798 ] Fixed #3798 - Attachments aren't in FORWARDED email
+* https://github.com/salesagility/SuiteCRM/issues/3731[#3731 ] Fixed #3731 - replace email variables
+* https://github.com/salesagility/SuiteCRM/issues/3773[#3773 ] Fixed #3773 - Issues with sending email in 7.9.1
+* https://github.com/salesagility/SuiteCRM/issues/3814[#3814 ] Translations info
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.3 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+_Special thanks to https://github.com/sergio91pt[sergio91pt] for
+raising/reviewing security issues._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.2[7.9.2]
+-------------------------------------------------------------------
+
+Released Jun 30, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/issues/3790[#3790 ] Fixed #3790 - Disregard draft sends emails
+* https://github.com/salesagility/SuiteCRM/issues/3766[#3766 ] Fixed #3766 - Bound email handling broken
+* https://github.com/salesagility/SuiteCRM/issues/3655[#3655 ] Fixed #3655 - fix for popup compose view return message popup
+* https://github.com/salesagility/SuiteCRM/issues/3730[#3730 ] Fixed #3730 - Email: No way to send plain-text emails
+* https://github.com/salesagility/SuiteCRM/pull/3752[#3752 ] Fixed - Attach Doc submits form on firefox
+* https://github.com/salesagility/SuiteCRM/issues/3646[#3646 ] Fixed #3646 - Opening email from GMAIL sent folder opens corresponding IMAP uid from INBOX
+* https://github.com/salesagility/SuiteCRM/issues/3654[#3654 ] Fixed #3654 - Leftover call to Emails/index.php in v7.9, breaks "Email Quotation" feature
+* https://github.com/salesagility/SuiteCRM/pull/3743[#3743 ] Fixed - Cannot select emails with no subject (list view)
+* https://github.com/salesagility/SuiteCRM/issues/3725[#3725 ] Fixed #3725 - Default Signature and Email Account Signature
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.2 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Checkout our
+https://suitecrm.com/forum/announcements/14874-suitecrm-7-9-2-maintenance-patch-now-available[SuiteCRM]
+forum announcement.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.1[7.9.1]
+-------------------------------------------------------------------
+
+https://github.com/samus-aran[samus-aran] released this Jun 15, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+[discrete]
+===== Additional Features
+
+* *Check PHP Version* - Minimum and Recommended PHP Versions upon installation and upgrade
+* *Reply To, Reply All, Forward To and Delete* - https://github.com/salesagility/SuiteCRM/issues/3616[#3616 ] +
+This functionality is essentially how you communicate back to your recipient.  This functionality can be done via the Detail View of the Email by the Action Buttons. 
+
+{{% notice note %}}
+You can only delete a non Imported Email via the List View and an Imported Email via Detail View.
+{{% /notice %}}
+
+* *Add Signatures via User Mail Accounts* - [https://github.com/salesagility/SuiteCRM/issues/3639[#3639] +
+This functionality is different than in the previous email client.  A default signature can be set via the User Email Settings (within Profile) or by per Personal Account.  There is an additional dropdown when setting/editing a Personal Email Account to select an existing Signature to use.  So when you are Composing an Email you can switch between the Mail Account (the From) and the Signature will update accordingly.
+
+* *Import Emails - set the Assign To & Relate To via Emails List and Edit View* - [https://github.com/salesagility/SuiteCRM/issues/3639[#3639] +
+Again, this functionality is visually different from the previous email client but using the standard user interface as other modules.  Within the ListView you can select your target emails and Import via the Bulk Actions button.  This will open up a pop up and ask to select the appropriate values. 
+
+{{% notice note %}}
+When an Email has been Imported you are able to alter these fields via the standard Edit View of the Record or using the Subpanels on the DetailView.  Subpanels are only visible when an Email has been Imported.
+{{% /notice %}}
+
+* *Flag Emails - Unread, Read, Priority* [https://github.com/salesagility/SuiteCRM/issues/3636[#3636 ] & [https://github.com/salesagility/SuiteCRM/issues/3638[#3638 ] +
+This functionality is again been redesigned to match the similar interface across the application. The User can select their Emails via the List View and flag them appropriately using the Bulks Action menu. 
+
+{{% notice note %}}
+We currently at the time do not Delete Emails from the imap server.
+{{% /notice %}}
+
+* *Quick Create via Emails* [https://github.com/salesagility/SuiteCRM/issues/3630[#3630 ] +
+This functionality we felt required again to replicate what we have already in the application – the use of the quick create subpanels.  As the subpanels already provide this functionality the user will only be able to create new Records via Emails if the Email itself has been imported thus providing access to the subpanels.
+
+[discrete]
+===== Bug Fixes
+* *Security Issue* [https://github.com/salesagility/SuiteCRM/issues/3698 #3698 ] - Run testinstall.php only via cli
+* https://github.com/salesagility/SuiteCRM/issues/3676[#3676 ] Fixed #3676 - Module builder export and file template.
+* https://github.com/salesagility/SuiteCRM/issues/1855[#1855 ] Fixed #1855 - RSS dashlet formatting
+* https://github.com/salesagility/SuiteCRM/pull/3541[#3541 ] Fixed missing label
+* https://github.com/salesagility/SuiteCRM/issues/3234[#3234 ] Fixed #3234 - Wrong advanced filter message in Suite7 and SuiteR themes
+* https://github.com/salesagility/SuiteCRM/issues/3497[#3497 ] Fixed #3497 - /modules/Tasks/vardefs.php line
+* https://github.com/salesagility/SuiteCRM/pull/3554[#3554 ] Removed unnecessary comment [language] 
+* https://github.com/salesagility/SuiteCRM/pull/3568[#3568 ] Fixed - Removed unused .php file (jjwg_Maps)
+* https://github.com/salesagility/SuiteCRM/issues/3566[#3566 ] Resource Calendar - Days and month are not translated
+* https://github.com/salesagility/SuiteCRM/issues/3617[#3617 ] Imported email in 7.9 doesn't show the body text
+* https://github.com/salesagility/SuiteCRM/issues/3643[#3643 ] 7.9.0 Email: Template's Subject not replacing Subject content in editor
+* https://github.com/salesagility/SuiteCRM/issues/3610[#3610 ] Cannot import email - failed to load relationship - v7.9.0
+* https://github.com/salesagility/SuiteCRM/issues/3641[#3641 ] Created date/creator not shown after importing email
+* https://github.com/salesagility/SuiteCRM/issues/2992[#2992 ] Cannot Duplicate Project Template
+* https://github.com/salesagility/SuiteCRM/issues/3363[#3363 ] Export Target List fails (Database failure)
+* https://github.com/salesagility/SuiteCRM/pull/3599[#3599 ] Order templates by name in AOP admin
+* https://github.com/salesagility/SuiteCRM/issues/3578[#3578 ] Letter to PDF [Language]
+
+*This release resolves a IMPORTANT Security Vulnerability that effect all
+releases of SuiteCRM, all users of ALL previous releases are advised to
+Upgrade to 7.9.1 or 7.8.5 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com]
+
+_Special thanks to https://github.com/krzyc[krzyc] for notifying us of
+the security issue._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.5[7.8.5]
+-------------------------------------------------------------------
+
+Released Jun 15, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.5.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* https://github.com/salesagility/SuiteCRM/issues/3698[#3698 ] - Run testinstall.php only via cli
+* https://github.com/salesagility/SuiteCRM/issues/3676[#3676 ] Fixed #3676 - Module builder export and file template.
+* https://github.com/salesagility/SuiteCRM/issues/1855[#1855 ] Fixed #1855 - RSS dashlet formatting
+* https://github.com/salesagility/SuiteCRM/pull/3541[#3541 ] Fixed missing label
+* https://github.com/salesagility/SuiteCRM/issues/3234[#3234 ] Fixed #3234 - Wrong advanced filter message in Suite7 and SuiteR themes
+* https://github.com/salesagility/SuiteCRM/issues/3497[#3497 ] Fixed #3497 - /modules/Tasks/vardefs.php line
+* https://github.com/salesagility/SuiteCRM/pull/3554[#3554 ] Removed unnecessary comment [language] 
+* https://github.com/salesagility/SuiteCRM/pull/3568[#3568 ] Fixed - Removed unused .php file (jjwg_Maps)
+* https://github.com/salesagility/SuiteCRM/issues/3566[#3566 ] Resource Calendar - Days and month are not translated
+* https://github.com/salesagility/SuiteCRM/issues/2992[#2992 ] Cannot Duplicate Project Template
+* https://github.com/salesagility/SuiteCRM/issues/3363[#3363 ] Export Target List fails (Database failure)
+* https://github.com/salesagility/SuiteCRM/pull/3599[#3599 ] Order templates by name in AOP admin
+* https://github.com/salesagility/SuiteCRM/issues/3578[#3578 ] Letter to PDF [Language]
+
+*Users of ALL previous LTS 7.8.x releases are advised to Upgrade to 7.8.5 LTS as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security%40suitecrm.com[security@suitecrm.com].
+
+_Special thanks to [https://github.com/krzyc[krzyc] for notifying us of the security issue._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.0[7.9.0]
+-------------------------------------------------------------------
+
+Released this May 29, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+[discrete]
+===== Additional Features
+* *Email Client*
+	- New Design for SuiteP
+	- Moved Email Settings into User Profile
+	- Standardised Email Client using SuiteCRM List, Edit and Detail View
+	- Introducing new Compose View
+	- Using new Filters to search Emails (non imported currently)
+	- Compose directly via the ListView without disrupting your workflow
+	- Improved HTML support
+	- Select multiple files on Upload via Compose
+	- Added Attachment support - icons by type of file
+	- Email Client provides upgrade safe customisations
+	- New message box plugin for creating modals dialogs in SuiteCRM
+	- Set up Group & Personal emails accounts
+	- Viewing/Moving between Mailboxes (folders)
+	- View, Relate and Edit imported emails
+	- View and Import emails which have not being imported via the List view or the Detail view
+	- Easily pull in an Email Template when Composing
+	- Quickly refresh Current Folder
+	- Compose from the List view from other modules
+	- Compose from the Detail view from other modules
+	- Selecting and Individually Importing Emails
+	- Filtering/Sorting Emails using custom CRM fields
+	- Drafts
+	- Reply To
+
+* *Campaigns*
+	- Ability to set the width of a Mozaik Email Template main container and centred.
+	- Ability to select a User's preferred Email Template Editor (Direct HTML, Mozaik, and Tiny MCE)
+
+* View Summary provides module grouping and updated styling
+* Trace Logging
+* Developers can easily add new buttons (BulkActions) and scripts to the List View and Compose View using the same method for existing Detail/Edit View.
+
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/3515[#3515 ] Fixed #3515 Id. Decision Makers abbreviation
+* https://github.com/salesagility/SuiteCRM/issues/3499[#3499 ] Fixed #3499 - SugarBean - array_seach function doesn't use strict parameter
+* https://github.com/salesagility/SuiteCRM/issues/3470[#3470 ] Fixed #3470 - Export fails when trying to export all records (DB error)
+* https://github.com/salesagility/SuiteCRM/issues/3477[#3477 ] Fixed #3477 - Subtotal Tax
+* https://github.com/salesagility/SuiteCRM/issues/3478[#3478 ] Fixed #3478 - Project Templates: Project from Project Title - language
+* https://github.com/salesagility/SuiteCRM/issues/636[#636 ] Fixed #636 - Reports module: items in the Treeview display lang. label
+* https://github.com/salesagility/SuiteCRM/issues/3427[#3427 ] Fixed #3427 - Double spaces in a sentence
+* https://github.com/salesagility/SuiteCRM/issues/3271[#3271 ] Fixed #3271 - in File Cal.js in function eventResize "debugger" statement left in code
+* https://github.com/salesagility/SuiteCRM/issues/3375[#3375 ] Fixed #3375 Report. The errors caused by the conditions of type "field = ''"
+* https://github.com/salesagility/SuiteCRM/issues/2483[#2483 ] Fixed #2483 - User profile image not visible on Employee detail page
+* https://github.com/salesagility/SuiteCRM/issues/3404[#3404 ] Fixed #3404 - WizardMarketing.php can't be moved to custom dir
+* https://github.com/salesagility/SuiteCRM/issues/3304[#3304 ] Fixed #3304 - Spots needs UNION ALL when selecting data
+* https://github.com/salesagility/SuiteCRM/issues/3295[#3295 ] Fixed #3295 - SugarEmailAddress->addAddress does not set other addresses to non-primary if $primary parameter is true
+* https://github.com/salesagility/SuiteCRM/issues/3070[#3070 ] Fixed #3295 - Google Maps do not work - possibly due to Google API Change
+* https://github.com/salesagility/SuiteCRM/issues/2153[#2153 ] Fixed #3295 - Images in PDFs not showing
+* https://github.com/salesagility/SuiteCRM/issues/2145[#2145 ] Fixed #3295 - URGENT !!! - Calls - RELATE TO field record (relationship) is missig after inline edit of Start date&time
+* https://github.com/salesagility/SuiteCRM/issues/2058[#2058 ] Fixed #2058 - Gantt View Page Reload failure
+* https://github.com/salesagility/SuiteCRM/issues/2053[#2053 ] Fixed #2053 - Can't add Spots to Favorites
+* https://github.com/salesagility/SuiteCRM/issues/2012[#2012 ] Fixed #2012 - Studio - Layouts - Panel name cannot be edited
+* https://github.com/salesagility/SuiteCRM/issues/1338[#1338 ] Fixed #1338 - Print page - link issue
+* https://github.com/salesagility/SuiteCRM/issues/1306[#1306 ] Fixed #1306 - Image fields from ImageListView.tpl - module not fetched correctly
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.0[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.4[7.8.4]
+-------------------------------------------------------------------
+
+Released May 29, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/issues/3515[#3515 ] Fixed #3515 Id. Decision Makers abbreviation
+* https://github.com/salesagility/SuiteCRM/issues/3499[#3499 ] Fixed #3499 - SugarBean - array_seach function doesn't use strict parameter
+* https://github.com/salesagility/SuiteCRM/issues/3470[#3470 ] Fixed #3470 - Export fails when trying to export all records (DB error)
+* https://github.com/salesagility/SuiteCRM/issues/3477[#3477 ] Fixed #3477 - Subtotal Tax
+* https://github.com/salesagility/SuiteCRM/issues/3478[#3478 ] Fixed #3478 - Project Templates: Project from Project Title - language
+* https://github.com/salesagility/SuiteCRM/issues/636[#636 ] Fixed #636 - Reports module: items in the Treeview display lang. label
+* https://github.com/salesagility/SuiteCRM/issues/3427[#3427 ] Fixed #3427 - Double spaces in a sentence
+* https://github.com/salesagility/SuiteCRM/issues/3271[#3271 ] Fixed #3271 - in File Cal.js in function eventResize "debugger" statement left in code
+* https://github.com/salesagility/SuiteCRM/issues/3375[#3375 ] Fixed #3375 Report. The errors caused by the conditions of type "field = ''"
+* https://github.com/salesagility/SuiteCRM/issues/2483[#2483 ] Fixed #2483 - User profile image not visible on Employee detail page
+* https://github.com/salesagility/SuiteCRM/issues/3404[#3404 ] Fixed #3404 - WizardMarketing.php can't be moved to custom dir
+* https://github.com/salesagility/SuiteCRM/issues/3304[#3304 ] Fixed #3304 - Spots needs UNION ALL when selecting data
+* https://github.com/salesagility/SuiteCRM/issues/3295[#3295 ] Fixed #3295 - SugarEmailAddress->addAddress does not set other addresses to non-primary if $primary parameter is true
+* https://github.com/salesagility/SuiteCRM/issues/3070[#3070 ] Fixed #3295 - Google Maps do not work - possibly due to Google API Change
+* https://github.com/salesagility/SuiteCRM/issues/2153[#2153 ] Fixed #3295 - Images in PDFs not showing
+* https://github.com/salesagility/SuiteCRM/issues/2145[#2145 ] Fixed #3295 - URGENT !!! - Calls - RELATE TO field record (relationship) is missig after inline edit of Start date&time
+* https://github.com/salesagility/SuiteCRM/issues/2058[#2058 ] Fixed #2058 - Gantt View Page Reload failure
+* https://github.com/salesagility/SuiteCRM/issues/2053[#2053 ] Fixed #2053 - Can't add Spots to Favorites
+* https://github.com/salesagility/SuiteCRM/issues/2012[#2012 ] Fixed #2012 - Studio - Layouts - Panel name cannot be edited
+* https://github.com/salesagility/SuiteCRM/issues/1338[#1338 ] Fixed #1338 - Print page - link issue
+* https://github.com/salesagility/SuiteCRM/issues/1306[#1306 ] Fixed #1306 - Image fields from ImageListView.tpl - module not fetched correctly
+* https://github.com/salesagility/SuiteCRM/pull/3387[#3387 ] Fixed issue on PHP5.3 with syntax error for getRunningUser
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to https://github.com/haris-raheem[haris-raheem] for
+providing further enhancements for the Projects Module._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.0-rc[7.9.0 Release Candidate]
+----------------------------------------------------------------------------------------
+
+Released May 8, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0-rc.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.9.0 Release Candidate to preview the new features coming in
+SuiteCRM 7.9.*
+
+The focus of SuiteCRM 7.9 is to introduce a new and responsive Email
+Client and enhancements for Campaigns Email Template editor.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.0-beta[7.9.0 Beta]
+-----------------------------------------------------------------------------
+
+Released this Apr 25, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0-beta.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.9.0 Beta to preview the new features coming in SuiteCRM 7.9.*
+
+The focus of SuiteCRM 7.9 is to introduce a new and responsive Email
+Client and enhancements for Campaigns Email Template editor.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.3[7.8.3]
+-------------------------------------------------------------------
+
+https://github.com/samus-aran[samus-aran] released this Apr 11, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+[discrete]
+===== Additional Features
+New mechanism to check which user cron runs under, to avoid permissions degradation issues. 
+
+{{% notice warning %}}
+After upgrade, check your logs and confirm that your Schedulers are running.
+{{% /notice %}}
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/1489[#1489 ] Fixed #1489 - Duplicating report with a chart removes the chart from the original report
+* https://github.com/salesagility/SuiteCRM/issues/2075[#2075 ] Suggestion - Email templates chooser: sort by name!
+* https://github.com/salesagility/SuiteCRM/issues/628[#628 ] Suggestion - PDF-templates: Allow selection of page format and orientation per template
+* https://github.com/salesagility/SuiteCRM/issues/712[#712 ] Suggestion - Sort PDF Templates when generating Letter
+* https://github.com/salesagility/SuiteCRM/issues/3299[#3299 ] Fixed #3299 - Module builder and adding relationship fails in PHP 7.1
+* https://github.com/salesagility/SuiteCRM/issues/3238[#3238 ] Fix #3238 - Remove Save and Continue Button
+* https://github.com/salesagility/SuiteCRM/issues/2753[#2753 ] Fixed #2753 - Table header background issue (Suite 7)
+* https://github.com/salesagility/SuiteCRM/issues/2795[#2795 ] Fixed #2795 - Checkbox Internal on Cases Detail View is without label
+* https://github.com/salesagility/SuiteCRM/issues/2796[#2796 ] Fixed #2796 - SugarFeed content cut for UTF-8
+* https://github.com/salesagility/SuiteCRM/issues/2898[#2898 ] Fixed #2898 - PDF Template Not Placing Header on First Page
+* https://github.com/salesagility/SuiteCRM/issues/2917[#2917 ] Fixed #2917 - Products, created but not shown in the "Products" subpanel of "Product Categories" 
+* https://github.com/salesagility/SuiteCRM/issues/2970[#2970 ] Fixed #2970 - Saturday (marker_image_list) - typo
+* https://github.com/salesagility/SuiteCRM/issues/3028[#3028 ] Fixed #3028 - Image missing from SuiteP theme image directory
+* https://github.com/salesagility/SuiteCRM/issues/3136[#3136 ] Fixed #3136 - TextAreas - it shows multirow text edited by inline edit as a text in one row in detaiview 
+* https://github.com/salesagility/SuiteCRM/issues/3147[#3147 ] Fixed #3147 - Can not change tabs in DetailView after added an entity in a subpanel in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1719[#1719 ] Fixed #1719 - Cannot create email campaigns on SuiteCRM using MySQL 5.7
+* https://github.com/salesagility/SuiteCRM/issues/2695[#2695 ] Fixed #2695 - Other user's profiles accessable by non-admin users
+* https://github.com/salesagility/SuiteCRM/issues/3261[#3261 ] Issue #3261 - Customer Portal Welcome Email Blank
+* https://github.com/salesagility/SuiteCRM/issues/3108[#3108 ]  Fixed #3108 - Campaign summary dropdown next items creates error
+* https://github.com/salesagility/SuiteCRM/pull/3204[#3204 ] Improvements to Project module
+* https://github.com/salesagility/SuiteCRM/issues/2787[#2787 ] Fixes #2787 by checking allowed cron users
+* https://github.com/salesagility/SuiteCRM/issues/3247[#3247 ] Fix #3247 - Suite7 inline editing does not work
+* https://github.com/salesagility/SuiteCRM/issues/3201[#3201 ] Fixed #3201 - Products_Quotes as a word in language files
+* https://github.com/salesagility/SuiteCRM/issues/3250[#3250 ] Fixed #3250 - Telephone Numbers in Inline Editing not parsed correctly.
+* https://github.com/salesagility/SuiteCRM/issues/1521[#1521 ] Fixed #1521 - Embedded images in email templates are sent as attachments
+* https://github.com/salesagility/SuiteCRM/issues/2277[#2277 ] Fix #2277 - Mass Update with Dynamic Dropdowns
+* https://github.com/salesagility/SuiteCRM/issues/2806[#2806 ] Fix #2806 - Dashlets wrong data on auto refresh
+* https://github.com/salesagility/SuiteCRM/issues/3217[#3217 ] Fixed #3217 - Security Group Subpanel
+* https://github.com/salesagility/SuiteCRM/issues/3225[#3225 ] Fixed #3225 - Calendar body is not shown after PHP 7.x update
+* https://github.com/salesagility/SuiteCRM/issues/3241[#3241 ] Fixed #3241 - AOS_Contracts subpanel on Documents is empty
+* https://github.com/salesagility/SuiteCRM/issues/3222[#3222 ] Fixed #3222 - Location field doesn't show in Meetings email notifications
+* https://github.com/salesagility/SuiteCRM/issues/3212[#3212 ] Fixed #3212 - AOD_Index permissions check on upgrade can fail on deleted files
+* https://github.com/salesagility/SuiteCRM/issues/905[#905 ] Fixed #905 - Calling custom folder facebook/twitter mapping</li>
+* https://github.com/salesagility/SuiteCRM/issues/3334[#3334 ] Fixed #3334 - Hover variables in Suite P theme variables.scss
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.2[7.8.2]
+-------------------------------------------------------------------
+
+https://github.com/samus-aran[samus-aran] released this Feb 27, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* - [https://github.com/salesagility/SuiteCRM/issues/2819[#2819 ]   Updated SAML with SAML2 v2.10.3 https://github.com/distributedweaknessfiling/DWF-Database-Artifacts/blob/ab8ae6e845eb506fbeb10a7e4ccb379f0b4222ca/DWF/2016/1000253/CVE-2016-1000253.json[CVE-2016-1000253 ]
+* https://github.com/salesagility/SuiteCRM/pull/1877[#1877 ] Translations acknowledge on About page
+* https://github.com/salesagility/SuiteCRM/pull/2945[#2945 ] Making AOW Workflow more responsive
+* https://github.com/salesagility/SuiteCRM/issues/3119[#3119 ] Fixed #3119 Log slow queries for MySQL
+* https://github.com/salesagility/SuiteCRM/issues/2187[#2187 ] Fix #2187 Update click-to-call to work from current browsers.
+* https://github.com/salesagility/SuiteCRM/issues/3148[#3148 ] Fix #3148 - Hyperlinks not followed after entering QS field
+* https://github.com/salesagility/SuiteCRM/pull/3187[#3187 ] Fix double "the" - language fix
+* https://github.com/salesagility/SuiteCRM/issues/[# ] SuiteP - Styling issues resolved - Checkbox Position, Icon replacment, Email Module, Importing from VCard
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Suite7 - Styling issues resolved - Filter buttons
+* https://github.com/salesagility/SuiteCRM/pull/3155[#3155 ] Reports fail for non-admins with related fields
+* https://github.com/salesagility/SuiteCRM/pull/3172[#3172 ] Fix Email Settings test with differents admin user
+* https://github.com/salesagility/SuiteCRM/pull/3025[#3025 ]Fixed Desktop Toolbar visual overflow issue 
+* https://github.com/salesagility/SuiteCRM/issues/3055[#3055 ] Fixed #3055 Need to add space below language drop down on login page
+* https://github.com/salesagility/SuiteCRM/pull/3173[#3173 ] Fixing pagination in reports
+* https://github.com/salesagility/SuiteCRM/issues/3104[#3104 ] Fixed #3104 - side bar action icons for AOW_Processed
+* https://github.com/salesagility/SuiteCRM/issues/3151[#3151 ] Fix #3151 typo in sql query
+* https://github.com/salesagility/SuiteCRM/issues/3054[#3054 ] Fixed #3054 - problem with roles when configured for "owner" attribute
+* https://github.com/salesagility/SuiteCRM/issues/3012[#3012 ] Fixed #3012 - SuiteR: Advanced filter displaying issue with non-english langpacks
+* https://github.com/salesagility/SuiteCRM/issues/905[#905 ] Fixed #905 - Calling custom folder facebook/twitter mapping
+* https://github.com/salesagility/SuiteCRM/issues/3079[#3079 ] Fix #3079 History View Summary blank screen
+* https://github.com/salesagility/SuiteCRM/issues/3072[#3072 ] Fixed #3072 - show search form for save query if popuplate only
+
+*This release addresses an Important Security Issue and addresses many
+other Issues. Users of ALL previous releases are advised to Upgrade to 7.8.2 as soon
+as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.1[7.8.1]
+-------------------------------------------------------------------
+
+https://github.com/samus-aran[samus-aran] released this Feb 6, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/pull/3044[#3044 ] Fixed mail merge js error on Subpanels 
+* https://github.com/salesagility/SuiteCRM/issues/3000[#3000 ] Fixed #3000: Warnings reported when cron.php is executed
+* https://github.com/salesagility/SuiteCRM/issues/3032[#3032 ] Fixed #3032 - Calendar is displaying Closed (HELD|NOT HELD) Meetings when $show_completed is false - supplied by adamjakab
+* https://github.com/salesagility/SuiteCRM/issues/3010[#3010 ] Fixed #3010 - Cannot import email when using Theme P
+* https://github.com/salesagility/SuiteCRM/issues/3015[#3015 ] Fixed  #3015 - 7.8 Upgrade returns Javascript:void(0) for new filter functionality
+* https://github.com/salesagility/SuiteCRM/pull/3014[#3014 ] Fixed the ability to clear Search returning Javascript error
+* https://github.com/salesagility/SuiteCRM/pull/3033[#3033 ] Fixed SMTP campaign sending issue
+* https://github.com/salesagility/SuiteCRM/pull/3027[#3027 ] Missing ending </b>
+* https://github.com/salesagility/SuiteCRM/pull/3023[#3023 ] Fixed Changes the capitalisation of the User Profile and Advanced tab in the edit view of the users profile.
+* https://github.com/salesagility/SuiteCRM/pull/3042[#3042 ] Clean up/ improve Mssql
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.0[7.8.0]
+-------------------------------------------------------------------
+
+https://github.com/samus-aran[samus-aran] released this Jan 30, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+[discrete]
+===== Additional Features
+* *New* Filter functionality which replaces the legacy Basic/Advanced Search layouts.  If you still prefer the old search view on any modules you can add a setting within the config_overwrite.php file - see notes.
+* *New* Workflow Calculated fields - a new action that allows you to enter formulas to execute complex actions.  Contributed by [http://www.dtbc.eu/ diligent technology & business consulting GmbH]
+* *Updated* - [https://suitecrm.com/wiki/index.php/Userguide User Guide] for new Workflow Calculated fields! 
+* *Improved* SuiteP theme - introduced Sass (for developers new steps will be introduced for when contributing style changes), cleaned up CSS and tidied up many areas of the system.
+
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/2110[#2110 ] Fix #2110 - Issue with Date fields and Inline Edit
+* https://github.com/salesagility/SuiteCRM/issues/2545[#2545 ] Fix #2545 - Warning about loss of changes appears multiple times
+* https://github.com/salesagility/SuiteCRM/issues/2499[#2499 ] Fix #2344/#2499 - Quicksearch not populating after first inline edit.
+* https://github.com/salesagility/SuiteCRM/issues/1561[#1561] Email Attachments Sent By Workflow Do Not Show In Related Activity
+* https://github.com/salesagility/SuiteCRM/issues/2183[#2183 ] Studio: Can't modify fields - getting 'Invalid Value: Field Name already exists'
+* https://github.com/salesagility/SuiteCRM/issues/2853[#2853 ] Fix #2853 Reports ACLAccess Arguments
+* https://github.com/salesagility/SuiteCRM/issues/2203[#2203 ] 7.7.4 Suite P theme not wrapping text in Accounts Billing and Shipping details
+* https://github.com/salesagility/SuiteCRM/issues/2862[#2862 ] Delete confirmation ignores "Cancel" and deletes anyway
+
+{{% notice note %}}
+To re-enable the legacy search insert the following array into your config.php
+
+ 'enable_legacy_search' => 
+  array (
+    0 => 'Accounts',
+    1 => 'Users',
+    2 => 'Employees',
+  ),
+
+Or within config_override.php
+
+ $sugar_config['enable_legacy_search'][] = 'Accounts';
+$sugar_config['enable_legacy_search'][] = 'Users';
+$sugar_config['enable_legacy_search'][] = 'Employees';
+{{% /notice %}}
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.0[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.0-rc[7.8 Release Candidate]
+--------------------------------------------------------------------------------------
+
+Released Jan 23, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0-rc.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.8.0 RC to preview the new features coming in SuiteCRM 7.8.*
+
+The focus of SuiteCRM 7.8 is to enhance and refine the SuiteP theme and
+fix many issues
+
+SuiteP Rewritten in SASS, Refined List View filters, added support for
+PHP 7.1 and this release includes a great contribution of Workflow
+Calculated Fields from diligent technology & business consulting GmbH ()
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.0-beta.2[7.8 Beta 2]
+-------------------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Jan 16, 2017
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.2.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.8.0 Beta 2 to preview the new features coming in SuiteCRM 7.8.*
+
+The focus of SuiteCRM 7.8 is to enhance and refine the SuiteP theme and
+fix many issues
+
+SuiteP Rewritten in SASS, Refined List View filters and added support
+for PHP 7.1
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.9[7.7.9]
+-------------------------------------------------------------------
+
+Released Dec 31, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.9.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.9.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Security Issue* [https://github.com/salesagility/SuiteCRM/issues/2831[#2831 ] - PHPMailer Security Issue https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10045-Vuln-Patch-Bypass.html[CVE-2016-10045 ]
+* https://github.com/salesagility/SuiteCRM/issues/2846[#2846 ]  User Access sub-panel - missing module name labels on table fixed
+* https://github.com/salesagility/SuiteCRM/issues/2842[#2842 ]  Access tab does not work in USERS module(detailView)
+* https://github.com/salesagility/SuiteCRM/issues/2438[#2438 ]  Disable Inline Edit for Line Items
+* https://github.com/salesagility/SuiteCRM/issues/2761[#2761 ]  Can Not Select Resources For Project Template
+* https://github.com/salesagility/SuiteCRM/issues/2031[#2031 ]  autocompletion of contact field doesn't work in migration process from lead to contact
+* https://github.com/salesagility/SuiteCRM/issues/99[#99 ]  Issue with apostrophes in search
+* https://github.com/salesagility/SuiteCRM/issues/126[#126 ]  AOS_PDF_Templates templateParser guesses the field type
+* https://github.com/salesagility/SuiteCRM/issues/758[#758 ]  Accessing static property ImportFieldSanitize::$createdBeans as non static
+* https://github.com/salesagility/SuiteCRM/issues/2751[#2751 ]  Outbound Email Via Campaigns Can Fail
+* https://github.com/salesagility/SuiteCRM/issues/2718[#2718 ]  Git Repo causes issues on Windows
+* https://github.com/salesagility/SuiteCRM/issues/2642[#2642 ]  changed line 63 to make sure that it applies special formatting if the type of $field_def is dynamicenum
+* https://github.com/salesagility/SuiteCRM/issues/573[#573 ]  Inline editing - Workflow
+* https://github.com/salesagility/SuiteCRM/issues/2445[#2445 ]  AOS_Quotes and AOS_Invoices have some empty language values
+* https://github.com/salesagility/SuiteCRM/issues/2119[#2119 ]  Renamed AOW_Workflow.svg to AOW_WorkFlow.svg
+* Missing Security Group Check in AOW
+* Clear Opcache in PHP7
+* Undefined parent_category_id on Import
+* Cases module - Missing string LBL_CONTACT_CREATED_BY
+* Line breaks between words
+* Add labels to the fields in Add dashlet - Web Tab
+* ISO4217 code for Mexican Peso from MXM to MXN.
+
+*This release addresses an Important Security Issue and addresses many
+other Issues. Users of ALL previous releases are advised to Upgrade to 7.7.9 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.9[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to https://github.com/gunnicom[gunnicom] and
+https://github.com/sk1p[sk1p] for notifying us of the
+https://github.com/salesagility/SuiteCRM/issues/2831[security issue]._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.0-beta[7.8 Beta]
+---------------------------------------------------------------------------
+
+Released Dec 30, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.8.0 Beta to preview the new features coming in SuiteCRM 7.8.*
+
+The focus of SuiteCRM 7.8 is to enhance and refine the SuiteP theme and
+fix many issues
+
+SuiteP Rewritten in SASS and Refined List View filters
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.8[7.7.8]
+-------------------------------------------------------------------
+
+Released Nov 16, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.8.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/issues/826[#826 ] Fixed 826 - Deleted favorite records still appear in menu
+* https://github.com/salesagility/SuiteCRM/issues/2153[#2153 ] Images in PDFs not showing
+* https://github.com/salesagility/SuiteCRM/issues/1700[#1700 ] AOR Report Dashlet date parameters wont work
+* https://github.com/salesagility/SuiteCRM/issues/2221[#2221 ] Restrict Reports based on Target Module
+* https://github.com/salesagility/SuiteCRM/issues/2611[#2611 ] Fixed #2611 Unused language strings (History)
+* https://github.com/salesagility/SuiteCRM/issues/2293[#2293 ] Fixed #2293 - Dashlet Header Edit, Refresh, Delete links are not accessible by screen readers
+* https://github.com/salesagility/SuiteCRM/issues/2413[#2413 ] Wrong API key max length
+* https://github.com/salesagility/SuiteCRM/issues/2592[#2592 ] fixed - #2592 Unused language strings (FP_events)
+* https://github.com/salesagility/SuiteCRM/issues/2591[#2591 ] fixed - #2591 Unused language strings (Delegates)
+* https://github.com/salesagility/SuiteCRM/issues/2590[#2590 ] fixed - #2590 Unused language strings (Employees)
+* https://github.com/salesagility/SuiteCRM/issues/2582[#2582 ] fixed - #2582 Unused language strings (Emails)
+* https://github.com/salesagility/SuiteCRM/issues/2584[#2584 ] Fixed #2584 Reminder Email Displays HTML Tags
+* https://github.com/salesagility/SuiteCRM/issues/2581[#2581 ] Fixed #2581 Module filter on select field shows no results
+* https://github.com/salesagility/SuiteCRM/issues/1242[#1242 ] Fixed #1242 History Due Dates shown in Red
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.8[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.10[7.6.10]
+---------------------------------------------------------------------
+
+Released Nov 16, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.10.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.10.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* https://github.com/salesagility/SuiteCRM/issues/2581[#2581 ] Fixed #2581 Module filter on select field shows no results
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.10[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.7[7.7.7]
+-------------------------------------------------------------------
+
+Released Nov 7, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.7.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Fixes Security Issues* - Additional Blind SQL Injection vulnerability in InboundEmail
+* https://github.com/salesagility/SuiteCRM/issues/1918[#1918 ] Fixed #1918 - Translation issues. Duplicated lang. strings in ver. 7.7
+* https://github.com/salesagility/SuiteCRM/issues/2479[#2479 ] Fixed #2479 - Dashlet pagination issue (Suite7 & SuiteR)
+* https://github.com/salesagility/SuiteCRM/issues/2510[#2510 ] Fixed #2510 - fix default reminder invitees for meetings
+* https://github.com/salesagility/SuiteCRM/issues/2453[#2453 ] Fixed #2453 - Set top nav search bgcolor in FF
+* Fixed search for mobile/tablet
+* Fixed Db Error On Subquery Search
+* Add Option to disable Self Referencing on Many 2 Many Relationship
+* Fixed Issue with Non Standard database name
+* Fixed retrieve Dashlet
+* Fixed Time Field Edit View
+* Code Clean up
+* Remove extra select box line from Inbound Email html listview
+* Apply styled Additional Details for Calendar
+
+*This release addresses Important Security Issues and addresses many
+other Issues. Users of ALL previous releases are advised to Upgrade to 7.7.7 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.7[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks for http://karmainsecurity.com[Egidio Romano] for
+notifying us of these security issues._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.9[7.6.9]
+-------------------------------------------------------------------
+
+Released Nov 7, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.9.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.9.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Fixes Security Issues* - Additional Blind SQL Injection vulnerability in InboundEmail
+* Fixed Db Error On Subquery Search
+* Add Option to disable Self Referencing on Many 2 Many Relationship
+* Fixed Issue with Non Standard database name
+* Fixed Time Field Edit View
+* Code Clean up
+
+*This release addresses Important Security Issues and other core
+functionality. Users of ALL previous releases are advised to Upgrade to 7.6.9 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.9[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks for http://karmainsecurity.com[Egidio Romano] for
+notifying us of these security issues._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.6[7.7.6]
+-------------------------------------------------------------------
+
+Released this Oct 19, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.6.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Fixes Security Issues* - Stored PHP Object Injection Within User Preferences
+* *Fixes Security Issues* - Blind SQL Injection vulnerability in InboundEmail
+* https://github.com/salesagility/SuiteCRM/issues/2430[#2430 ] Fixed #2430 - global search autofilled background colour
+* https://github.com/salesagility/SuiteCRM/issues/2215[#2215 ] Fixed Case insensitive duplicate images
+* https://github.com/salesagility/SuiteCRM/issues/2166[#2166 ] Fixed Links don't work in grouped Reports
+* https://github.com/salesagility/SuiteCRM/issues/2370[#2370 ] Fixed Cannot add Dashlet to Dashboard in Suite7/R Theme
+* https://github.com/salesagility/SuiteCRM/issues/2338[#2338 ] Fixed EditView 'Save and Continue' Button Floating on Mobile and Small Screens
+* https://github.com/salesagility/SuiteCRM/issues/1876[#1876 ] Fixed Knowledgebase Suggestions in MSSQL
+* https://github.com/salesagility/SuiteCRM/issues/2238[#2238 ] Fixed Revert Invalid field type change on Line Items
+* https://github.com/salesagility/SuiteCRM/issues/2402[#2402 ] Fixed Mass Update Dropdowns
+* https://github.com/salesagility/SuiteCRM/issues/2355[#2355 ] Fixed Suite 7 theme table width
+* https://github.com/salesagility/SuiteCRM/issues/543[#543 ] Fixed  #543 -inline editing on text area - cannot create line breaks
+* https://github.com/salesagility/SuiteCRM/issues/282[#282 ] Fixed Cases DetailView 'Description' displays Raw HTML
+* Fixed Campaign Email Record Graph dropdown displays undefined label
+* Fixed pipeline dashlet popup and calendar popup
+* Fixed Missing Drill Down Calendar Functionality
+* Fixed Public folder Permissions as Octal
+* Plus several SuiteP theme Fixes
+
+*This release addresses Important Security Issues and addresses many
+other Issues. Users of ALL previous releases are advised to Upgrade to 7.7.6 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks for http://karmainsecurity.com[Egidio Romano] for
+notifying us of these security issues._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.8[7.6.8]
+-------------------------------------------------------------------
+
+Released Oct 19, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.8.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* *Fixes Security Issues* - Stored PHP Object Injection Within User Preferences
+* *Fixes Security Issues* - Blind SQL Injection vulnerability in InboundEmail
+* Fixed Numerous report Issues
+
+*This release addresses Important Security Issues and addresses Report
+Issues. Users of ALL previous releases are advised to Upgrade to 7.6.8 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.8[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks for http://karmainsecurity.com[Egidio Romano] for
+notifying us of these security issues._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.5[7.7.5]
+-------------------------------------------------------------------
+
+Released Sep 28, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.5.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+* Updates a Security vulnerability with Serialized Input, to prevent
+possible object,file, beans and SQL injection attacks
+* Bug fixes and UI styling for a variety of areas include, Reports,
+Calendar, Responsiveness and more.
+
+* https://github.com/salesagility/SuiteCRM/issues/2261[#2261 ] Fixed #2261 Campaign subpanels not paginating
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fix Group Reports by Date
+* https://github.com/salesagility/SuiteCRM/issues/2204[#2204 ] Fixed #2204 - Duplicate error code in SOUP / REST response (#2206)
+* https://github.com/salesagility/SuiteCRM/issues/581[#581 ] Fixed #581 - Activitystream reply font-size (#2316)
+* https://github.com/salesagility/SuiteCRM/issues/958[#958 ] Fixed #958 - Ctrl click (open in new tab) does not work in detailview and listview (#2314)
+* https://github.com/salesagility/SuiteCRM/issues/866[#866 ] Fixed #866 - Duplicated string - Include - case_status_default_key (#2312)
+* https://github.com/salesagility/SuiteCRM/issues/456[#456 ] Fixed #456 - No htlm editor in Email / Settings / Signature (#2300)
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fixed - Missing icons for custom modules (#2148)
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Added dialog in the calendar module for tasks. (#2202)
+* https://github.com/salesagility/SuiteCRM/issues/2225[#2225 ] Fixed #2225 - My-activity-stream-options-generates-error (#2230)
+* https://github.com/salesagility/SuiteCRM/issues/[# ] User Profile On Save - incorrect tab displayed when Email is missing - task 210 (#2232)
+* https://github.com/salesagility/SuiteCRM/issues/2142[#2142 ] Fixed #2142 Reports Update button css is missing
+* https://github.com/salesagility/SuiteCRM/issues/2233[#2233 ] Fixed #2233 - Photo field in Users module incorrect in layout (#2234)
+* https://github.com/salesagility/SuiteCRM/issues/1942[#1942 ] Fixed #1942, task 238 - margin added to buttons (#2226)
+* https://github.com/salesagility/SuiteCRM/issues/1849[#1849 ] Fixed  #1849 - Quick edit sends AJAX request via GET (#2021)
+* https://github.com/salesagility/SuiteCRM/issues/2154[#2154 ] Fixed #2154 - Unable to duplicate Project (#2155)
+* https://github.com/salesagility/SuiteCRM/issues/2196[#2196 ] Fix #2196 - chart dashlet not drawn when there is a single element (#2197)
+* https://github.com/salesagility/SuiteCRM/issues/2177[#2177 ] Fixes #2177 - Global Search Issue (#2178)
+* https://github.com/salesagility/SuiteCRM/issues/1591[#1591 ] Fixed #1591 - Redefinition of parameter $fieldRequired (#1989)
+* https://github.com/salesagility/SuiteCRM/issues/2164[#2164 ] Fixed #2164 - Assignment Notification Repetitive/Arbitrary due to Project.php code (#2169)
+* https://github.com/salesagility/SuiteCRM/issues/2128[#2128 ] Fixed #2128 - Footer Licence popups Missing in SuiteP (#2143)
+* https://github.com/salesagility/SuiteCRM/issues/1772[#1772 ] Bugfix 1772 - Not Translatable labels (#1961)
+* https://github.com/salesagility/SuiteCRM/issues/1915[#1915 ] Fixed#1915 - Menu ACTIONS its not translatable - SuiteP (#1951)
+* https://github.com/salesagility/SuiteCRM/issues/2061[#2061 ] responsive theme 'next page' button when multiple 'my cases' exist (SuiteR)
+* https://github.com/salesagility/SuiteCRM/issues/2035[#2035 ] Fixed #2035 CSV Export of reports didn't carry out currency calculations (#2059)
+* https://github.com/salesagility/SuiteCRM/issues/1559[#1559 ] Fixed #1559. Deleting a contact from a meeting doesn't call the appropriate logic hook (#2056)
+* https://github.com/salesagility/SuiteCRM/issues/2101[#2101 ] fixed #2101 - Bad html link to site(record information dialogbox) (#2104)
+* https://github.com/salesagility/SuiteCRM/issues/2094[#2094 ] Fixed #2094 iCal now export VTODO and no VEVENT (#2098)
+* https://github.com/salesagility/SuiteCRM/pull/2105[#2105 ] Fixed - dropdown style in firefox (#2105)
+* https://github.com/salesagility/SuiteCRM/issues/2049[#2049 ] 7.7.2 - Calendar Activities are off by 1 day
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks for http://karmainsecurity.com[Egidio Romano] for
+notifying us of this security update._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.7[7.6.7]
+-------------------------------------------------------------------
+
+Released Sep 28, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.7.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Includes SugarCRM 6.5.24* -
+http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.24/[more
+information here]
+
+*Updates a Security vulnerability with Serialized Input, to prevent
+possible object,file, beans and SQL injection attacks. Users of ALL previous releases are advised to Upgrade to 7.6.7 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.7[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Special thanks for http://karmainsecurity.com[Egidio Romano] and
+https://github.com/salesagility/SuiteCRM/issues/1843[adminibt] for
+notifying us of this security update.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.4[7.7.4]
+-------------------------------------------------------------------
+
+Released Aug 31, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+SuiteCRM 7.7.4 features bug fixes for dropdown editor (browser specific), dashlets, calendar, studio layout updates and improve styling on top bar for non module filter settings.
+
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Adding Favourites styling - Removing yellow background for recent edit
+* https://github.com/salesagility/SuiteCRM/issues/2052[#2052 ] Problem with "Repair JS Files" and Calendar
+* https://github.com/salesagility/SuiteCRM/issues/442[#442 ] Dashboard inside Dashboard - Double clicking Column Heading on Dashlet 
+* https://github.com/salesagility/SuiteCRM/issues/791[#791 ] Fixed 791 Conversion of Quotes to PDF not show 0 in right side.
+* https://github.com/salesagility/SuiteCRM/issues/971[#971 ] Converted contact activity doesn't appear in Calendar
+* https://github.com/salesagility/SuiteCRM/issues/1958[#1958 ] editview layout does not change using module builder on suitecrm 7.7 
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fix calendar ignoring initial default values
+* https://github.com/salesagility/SuiteCRM/issues/1958[#1958 ] Fixed #1958 - Clear tpl cache on a per theme basis.
+* https://github.com/salesagility/SuiteCRM/issues/1967[#1967 ] Basic and Advanced Layout improvement
+* https://github.com/salesagility/SuiteCRM/issues/2051[#2051 ] Dropdown editor broken 
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Missing icon from Document Revisions sub panel
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Dashlet Paginations functionally
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Improved Top Menu bar styling for smaller screens and with Module Filter Settings switched off.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.3[7.7.3]
+-------------------------------------------------------------------
+
+Released Aug 26, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+SuiteCRM 7.7.3 includes a fix due to a regression issue with basic
+search, this release also includes PHP 5.3 for Spots modules, fix the
+ability to drag Dashlets to multi column Dashboards and have collapsible
+subpanels system setting.
+
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Add 'collapsed subpanels' checkbox to system settings
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fixed Fatal PHP 5.3 code syntax for Spots module
+* https://github.com/salesagility/SuiteCRM/issues/2000[#2000 ] Fixed #2000 - admin panel for mobile, tablet, laptop, and destkop
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Remove some comments and debug for dashboards
+* https://github.com/salesagility/SuiteCRM/issues/2030[#2030]  Fix basic search form - able to search via basic search
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.2[7.7.2]
+-------------------------------------------------------------------
+
+Released Aug 23, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+SuiteCRM 7.7.2 features bug fixes for calendar, php7, MSSQL upgrades and
+improves Theme SuiteP UI and functionality
+
+* https://github.com/salesagility/SuiteCRM/issues/1944[#1944 ] Fixed 1944 Studio - Add relationship - Allows to create unwanted relationship duplicates
+* https://github.com/salesagility/SuiteCRM/issues/1960[#1960 ] Fixed 1960 Calendar Settings are not working as desired
+* https://github.com/salesagility/SuiteCRM/issues/1923[#1923 ] Fixed 1923 7.7.1 SuiteP missing icons
+* https://github.com/salesagility/SuiteCRM/issues/1938[#1938 ] Fixed 1938 Calendar issues with Day, Week & Month views on 7.7.1
+* https://github.com/salesagility/SuiteCRM/issues/1943[#1943 ] Fixed 1943 Theme Suite P - Configure Module Menu Filters not working
+* https://github.com/salesagility/SuiteCRM/issues/1558[#1558 ] Fixed 1558 7.6.4 - AOR - If row has "Link" checked, the ID is missing from the link
+* https://github.com/salesagility/SuiteCRM/issues/1878[#1878 ] Fixed 1878 Suite P theme Tab/Panel (Edit/Detail View) Major Issues
+* https://github.com/salesagility/SuiteCRM/issues/1922[#1922 ] Fixed 1922 mssql column escape/Quote MSSQL column names when creating tables
+* https://github.com/salesagility/SuiteCRM/issues/1931[#1931 ] Fixed SuiteP Edit/Detail view issue with one field per row (task 229 issue #1931)
+* https://github.com/salesagility/SuiteCRM/issues/1903[#1903 ] Fixed #1903 - Unable to load Calendar in PHP5.3
+* https://github.com/salesagility/SuiteCRM/issues/1749[#1749 ] Fixed #1749 Inline editing does't work correct with dropdowns and currency fields
+* https://github.com/salesagility/SuiteCRM/pull/1883[#1883 ] Fixed typo resulting in incorrect executing time delta
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Download notes bug
+* https://github.com/salesagility/SuiteCRM/issues/1945[#1945 ] Fixed #1945, fix for task 240 'Drop Down Editor is not functioning'
+* https://github.com/salesagility/SuiteCRM/issues/1928[#1928 ] Fixed #1928 - restyling the email settings dialog box.
+* https://github.com/salesagility/SuiteCRM/issues/1854[#1854 ] Fixed #1854 - Fixed events -> delegates subpanel
+* https://github.com/salesagility/SuiteCRM/issues/[# ] spots ui bug on php7 fixed (tast 221 / forum 10494)
+* https://github.com/salesagility/SuiteCRM/issues/[# ] SuiteP footer position fixed (Fix for task 212)
+* https://github.com/salesagility/SuiteCRM/issues/1949[#1949 ] Fixed style of * for required fields.
+* https://github.com/salesagility/SuiteCRM/issues/1939[#1939 ] Fixed #1939 Calendar Fatal error on tasks without Due date
+* https://github.com/salesagility/SuiteCRM/issues/1029[#1029 ] Fixed #1029 - prevent user from adding or editing field if the fields name already exists. This fix also works for custom fields.
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fixed - user names in the calendar titles
+* https://github.com/salesagility/SuiteCRM/issues/1911[#1911 ] Fixed #1911 - Removing title case in the style.css
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.1[7.7.1]
+-------------------------------------------------------------------
+
+Released Aug 11, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+SuiteCRM 7.7.1 features bug fixes, improves Theme SuiteP UI and
+functionality
+
+* Fixed notices - undefined value $loc
+* Fixed notices - incorrect label values in menu def
+* https://github.com/salesagility/SuiteCRM/issues/1826[#1826 ] Fixed #1826 7.7RC2 Case Updates not displayed
+* Fixed User Edit Button fixed
+* Fixed - Create Person form css for SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1662[#1662 ] Fixed #1662 - remove aor_sql_operator_list values from language files
+* https://github.com/salesagility/SuiteCRM/issues/1817[#1817 ] Fixed #1817 Subpanel Tabs.
+* Tidy up User Wizard for new users
+* https://github.com/salesagility/SuiteCRM/issues/1862[#1862 ] fix for task 196 - SuiteP Theme – User Profile, All options on one screen (Regardless of Current Tab)
+* Adding missing calendar icon for the dashlet
+* Fixed Regular Users viewing Calendar and Activities
+* Fix for Role Edit Button
+* Fixed  Screen freezes add a Project Task via Projects (css issue)
+* Remove Colour selector/picker for SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1861[#1861 ] Fixed #1861 Upgrading from 7.3.x can cause crm to run slow
+* Fixed hide_subpanels config option with SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1874[#1874 ] Fixed #1874 - Missing view icon in view events menu item
+* https://github.com/salesagility/SuiteCRM/issues/1867[#1867 ] Fixed #1867 - Making the quick create menu translatable.
+* https://github.com/salesagility/SuiteCRM/issues/1850[#1850 ] Fixed #1850 - Adding the missing icon for the activites dashlet
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7[7.7.0]
+-----------------------------------------------------------------
+
+Released this Aug 2, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+[discrete]
+===== Additional Features
+* *SuiteP Theme* - We want SuiteCRM 7.7 to be something special this
+Summer. Packed with new and improved features and an amazing new UI, it
+will transform the way you view SuiteCRM.
+* *Analytic Reporting Tool - "SuiteSpots"* - Using Drag and Drop
+functionality you can create in depth Pivot Tables and charts using your
+customer data.
+* *Module Group Selection upon Installation Configurations* - When
+installing you can choose which groups of modules you wish to include as
+default. This will give users the choice of how what they feel they need
+from the word go.
+* *Updated* Silent Installer
+* *New Calendar* library
+* *New Search filter* for Event Delegates subpanel
+* *Improved* Project and Project Templates functionality
+
+[discrete]
+===== Security
+Includes *SugarCRM 6.5.24* - more information http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.24/[here]
+
+Download here from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks for
+https://github.com/salesagility/SuiteCRM/issues/1843[adminibt] for
+notifying us of this security update._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-rc2[7.7 Release Candidate 2]
+---------------------------------------------------------------------------------------
+
+Released Jul 26, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.7 Release Candidate 2 to preview the new features coming in
+SuiteCRM 7.7.*
+
+The focus of SuiteCRM 7.7 Release Candidate 2 is to introduce our new
+theme SuiteP (SuitePea).
+
+* Further adding to the SuiteP theme
+* Improvements in Project Templates and Projects functionality
+* Introducing Business Hours Module
+* Search Filter by Events Delegates
+* Bug fixes for Email Assignment notifications, Pipeline By Sales Stage
+Dashlet, and more
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.5.x, 7.6.x, 7.7beta1, 7.7beta2 and 7.7.RC
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-rc[7.7 Release Candidate]
+------------------------------------------------------------------------------------
+
+Released Jul 18, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.tar.gz[*Source
+code* (tar.gz)]
+
+*Try 7.7 Release Candidate to preview the new features coming in SuiteCRM
+7.7.*
+
+The focus of SuiteCRM 7.7 Release Candidate is to introduce our new
+theme SuiteP (SuitePea).
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.5.x, 7.6.x, 7.7beta1 and 7.7beta2
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.6[7.6.6]
+-------------------------------------------------------------------
+
+Released Jul 18, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.6.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+
+This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
+component & YUI IO Utility
+
+Removes the use of uploader.swf file (and references) within
+self-hosted YUI library that can be vulnerable to XSS attacks
+
+* https://github.com/salesagility/SuiteCRM/issues/1462[#1462 ] Fixed #1462 - Sub-panels are not displayed on Event Detail's Panel
+* https://github.com/salesagility/SuiteCRM/pull/1696[#1696 ] Language typos and small fixes - Combined PR
+
+*Users of ALL previous releases are advised to Upgrade to 7.5.5 or 7.6.6
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to
+https://github.com/salesagility/SuiteCRM/issues/1724[chadbennett] for
+alerting and helping us resolve this vulnerability._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.5[7.5.5]
+-------------------------------------------------------------------
+
+Released Jul 20, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.5.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
+component & YUI IO Utility
+
+Removes the use of uploader.swf file (and references) within
+self-hosted YUI library that can be vulnerable to XSS attacks
+
+*Users of ALL previous releases are advised to Upgrade to 7.5.5 or 7.6.6
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to
+https://github.com/salesagility/SuiteCRM/issues/1724[chadbennett] for
+alerting and helping us resolve this vulnerability._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.5[7.6.5]
+-------------------------------------------------------------------
+
+Released Jul 4, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.5.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+[discrete]
+===== Security
+* Resolves a Security vulnerability with Serialized Input, to prevent possible object injection attacks
+	- Removes the option to allow serialized user input to the SuiteCRM Rest Client.
+	- Changed serialized User input to use JSON
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/pull/1642[#1642 ] Modify EmailsUI.php to escape strings containing single quote (#1642)
+* https://github.com/salesagility/SuiteCRM/issues/1623[#1623 ] Fixed #1623 Remove Reminders and Reminders_Invites from Module Selector and Roles Matrix
+* https://github.com/salesagility/SuiteCRM/issues/1501[#1501 ] Fixed #1501 Campaign ROI Chart Dashlet doesn't display
+* https://github.com/salesagility/SuiteCRM/issues/1389[#1389 ] Fixed #1389 label typo
+* https://github.com/salesagility/SuiteCRM/issues/1373[#1373 ] Fixed #1373 Add default Security Group for new Records (#1377)
+* https://github.com/salesagility/SuiteCRM/issues/1367[#1367 ] Fixed #1367 Accounts => Add Contacts to Target List (Multiple Select) (#1374)
+* https://github.com/salesagility/SuiteCRM/issues/999[#999 ] Fixed #999 changed htmlentitydecode to -> html_entity_decode (html_entity_decode was added as a fix for issue 662) (#1095)
+* https://github.com/salesagility/SuiteCRM/issues/1121[#1121 ] Fixed #1121 - Create button missing styling in some areas (#1212)
+* https://github.com/salesagility/SuiteCRM/issues/1385[#1385 ] Update AOR_Report.php (#1385)
+* https://github.com/salesagility/SuiteCRM/issues/1629[#1629 ] Fixed #1629 - Charts should display Y values on hover (#1630)
+* https://github.com/salesagility/SuiteCRM/issues/1648[#1648 ] Bug Fix for audit fields not working with AOW any change. (#1648)
+* https://github.com/salesagility/SuiteCRM/issues/1621[#1621 ] Fixed #1621 - already opted out targets added to suppressed list
+* https://github.com/salesagility/SuiteCRM/issues/1457[#1457 ] Can't send text only email template via workflow
+* https://github.com/salesagility/SuiteCRM/issues/1535[#1535 ] Campaigns - Create Person Form
+* https://github.com/salesagility/SuiteCRM/issues/1533[#1533 ] Missing hour and minute labels from Events
+* https://github.com/salesagility/SuiteCRM/issues/1620[#1620 ] Fixed #1620 - Move Inbound/Outbound email settings to more suitable place.
+* https://github.com/salesagility/SuiteCRM/issues/1618[#1618 ] Fixed #1618 - Allow sort by email (asc/desc) for contacts in the Target List's record.
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Give focus to search field saves one click on mobile
+* https://github.com/salesagility/SuiteCRM/issues/1453[#1453 ] Fix #1453 - Fixed - Inline Edit "Assigned To" - No Assignment Email
+* https://github.com/salesagility/SuiteCRM/issues/1549[#1549 ] Fixed #1549 - Dynamic field should have an appropriate value after update.
+* https://github.com/salesagility/SuiteCRM/issues/1245[#1245 ] Fixed #1245 - Find related email address for sub panel ordering
+* https://github.com/salesagility/SuiteCRM/issues/1547[#1547 ] Fixed #1547 - Campaigns Wizard - Minor Dialogue Message Error
+* https://github.com/salesagility/SuiteCRM/issues/1551[#1551 ] Fixed #1551 - host name added to relative image src's
+* https://github.com/salesagility/SuiteCRM/issues/1557[#1557 ] Fixed #1557 - don't try to show deleted target lists
+* https://github.com/salesagility/SuiteCRM/issues/1568[#1568 ] Fixed #1568
+* https://github.com/salesagility/SuiteCRM/issues/1490[#1490 ] Fixed: #1490. Calendar Quick Edit now populates the json required for reminders.
+* https://github.com/salesagility/SuiteCRM/issues/1564[#1564 ] Fixed #1564 - remove clickable link if target list is not created yet
+* https://github.com/salesagility/SuiteCRM/issues/1325[#1325 ] Fixed #1325, Fixed #1538 - Favorites search does not work with SQL Server
+* https://github.com/salesagility/SuiteCRM/issues/1539[#1539 ] Fixed #1539 - Reports pagination fails when using Group By in Mssql
+* https://github.com/salesagility/SuiteCRM/issues/1519[#1519 ] Fixed #1519 Reports Group by stop working when using a function on other fields
+* https://github.com/salesagility/SuiteCRM/issues/1520[#1520 ] Fixed #1520 - Database Failure when Exporting Target Lists - custom related fields fixed and added to report exporting
+
+*This release resolves a Security vulnerability with Serialized Input, to
+prevent possible object injection attacks. Users of ALL previous releases are advised to Upgrade to 7.5.4 or 7.6.5
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to http://karmainsecurity.com[Egidio Romano] for alerting
+and helping us resolve this vulnerability._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.4[7.5.4]
+-------------------------------------------------------------------
+
+Released this Jul 4, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This release resolves a Security vulnerability with Serialized Input, to
+prevent possible object injection attacks
+
+* Removes the option to allow serialized user input to the SuiteCRM Rest
+Client.
+* Changed serialized User input to use JSON
+
+*Users of ALL previous releases are advised to Upgrade to 7.5.4 or 7.6.5
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.4[here] from the SuiteCRM GitHub Repository or visit the official
+website to find the appropriate upgrade.
+
+_Special thanks to http://karmainsecurity.com[Egidio Romano] for alerting
+and helping us resolve this vulnerability._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-beta2[7.7 Beta 2]
+---------------------------------------------------------------------------
+
+Released Jun 27, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.7 Beta 2 to preview the new features coming in SuiteCRM 7.7.*
+
+The focus of SuiteCRM 7.7 beta 2 is to introduce our new theme SuiteP
+(SuitePea).
+
+Fixes for Campaigns, Sending Emails and other bugs.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.4.x, 7.5.x, 7.6.x and 7.7beta1
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.7-beta1[7.7 Beta]
+--------------------------------------------------------------------------
+
+Released this Jun 15, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-beta1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.7 Beta 1 to preview the new features coming in SuiteCRM 7.7.*
+
+The focus of SuiteCRM 7.7 is to introduce our new Analytical Reporting
+Tool - SuiteSpots, and provide more options upon installing SuiteCRM.
+
+The first Beta release includes enhancements to the following:
+
+* *New Analytic Reporting Tool* - *SuiteSpots* - Using Drag and Drop
+functionality you can create in depth Pivot Tables and charts using your
+customer data.
+
+* *New Module Group Selection upon installation Configurations* - When
+installing you can choose which groups of modules you wish to include as
+default. This will give users the choice of what modules they need from
+the word go.
+* Fixes for Campaigns, Calls/Meetings Reminders and other bugs
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.4.x, 7.5.x, and 7.6.x
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.4[7.6.4]
+-------------------------------------------------------------------
+
+Released May 30, 2016 
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+SuiteCRM 7.6.4 features bug fixes, improves Campaign Wizard UI and
+improves Reporting functionality on MSSQL servers
+
+* Add the budget fields into Campaign Header screen
+* Test emails send out immediately (rather than queued)
+* Improved UI for creating Email Marketing Records and Templates via the
+Wizard
+* Update the Campaign Wizard Summary's interface
+
+And more below:
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.3[7.6.3]
+-------------------------------------------------------------------
+
+Released May 17, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.6.x and includes updated
+Campaign Wizard UI, resolving issues with running scheduled email
+campaigns and upgrading using MSSQL.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.2[7.6.2]
+-------------------------------------------------------------------
+
+Released this May 10, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.6.2 and includes updated
+Campaign Wizard UI.
+
+* https://github.com/salesagility/SuiteCRM/issues/1289[#1289 ] Fixed #1289 Unable to send email campaign SuiteCRM7.6RC & SuiteCRM7.6.1 - test for real affected rows on update emailman table
+* https://github.com/salesagility/SuiteCRM/issues/1244[#1244 ] Fixed #1244: Removed hard coded message and moved it into mod strings.
+* https://github.com/salesagility/SuiteCRM/issues/1342[#1342 ] Fixed #1342 URL type field link not working after inline editing
+* https://github.com/salesagility/SuiteCRM/issues/1339[#1339 ] Fixed #1339 Dynamic dropdown shows database value instead of label
+* https://github.com/salesagility/SuiteCRM/issues/1336[#1336 ] Fixed #1336 Meetings reminder invitee icon image is broken
+* https://github.com/salesagility/SuiteCRM/issues/1274[#1274 ] Fixed #1274 Project Template and date format
+* https://github.com/salesagility/SuiteCRM/issues/1320[#1320 ] Fixed #1320 "One of" condition for multi select does not working
+* https://github.com/salesagility/SuiteCRM/issues/1184[#1184 ] Fixed #1184 use correct db user on install
+* https://github.com/salesagility/SuiteCRM/issues/1239[#1239 ] Fixed #1239 History Subpanel - Filter - Clear Button not working properly
+* https://github.com/salesagility/SuiteCRM/issues/1302[#1302 ] Fixed #1302 JotPad dashlet doesn't save text when line break is added
+* https://github.com/salesagility/SuiteCRM/issues/1272[#1272 ] AOR_Report module cannot update Date type parameter.
+* https://github.com/salesagility/SuiteCRM/issues/1253[#1253 ] Fixed #1253 - added back if(!whwere_set) clause
+* https://github.com/salesagility/SuiteCRM/issues/1178[#1178 ] Cannot save Meeting in Firefox if invitee is removed
+* https://github.com/salesagility/SuiteCRM/issues/1161[#1161 ] Calendar -> Create Activity -> default Reminder has duplicate users
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.1[7.6.1]
+-------------------------------------------------------------------
+
+Released May 2, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.6 to resolve legacy
+customisations https://github.com/salesagility/SuiteCRM/issues/1300[code
+issue] when upgrading to 7.6.
+
+* https://github.com/salesagility/SuiteCRM/issues/1300[#1300 ] Fixed #1300 - 7.6 upgrade __construct incompatible with legacy custom modules and customisations - write back the old styled constructors to changed files in 7.6 automatically, constructor arguments and deprecated phpdoc and log message added
+* https://github.com/salesagility/SuiteCRM/issues/993[#993 ] Fixed #993 - SQL Error : Incorrect syntax near 'LIMIT' when using MS SQL Server
+* https://github.com/salesagility/SuiteCRM/issues/1279[#1279 ] Fixed #1279 Reminder emails still going out later than it should dependant on timezone
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6[7.6.0]
+-----------------------------------------------------------------
+
+Released Apr 27, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+SuiteCRM 7.6, the latest cutting edge release, focuses on enhancing the
+functionality of the native Campaign module as well as including the
+latest bug fixes.
+
+The release includes the latest enhancements to the following:
+
+* *Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+* *Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+* *Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+* *Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6-rc[7.6 Release Candidate]
+------------------------------------------------------------------------------------
+
+Released Apr 20, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-rc.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.6 Release Candidate to preview the new features coming in SuiteCRM
+7.6.*
+
+The focus of SuiteCRM 7.6 is to enhance the functionality of the native
+Campaign module.
+
+The Release Candidate includes the latest enhancements to the following:
+
+* *Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+* *Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+* *Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+* *Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade packs
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6-beta.2[7.6 Beta 2]
+-----------------------------------------------------------------------------
+
+Released Apr 13, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.6 Beta 2 to preview the new features coming in SuiteCRM 7.6.*
+
+The focus of SuiteCRM 7.6 is to enhance the functionality of the native
+Campaign module.
+
+This Beta release includes the latest enhancements to the following:
+
+* *Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+
+* *Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+
+* *Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+
+* *Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade packs
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.6-beta-1[7.6 Beta]
+---------------------------------------------------------------------------
+
+Released Mar 30, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta-1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6-beta-1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.6 Beta 1 to preview the new features coming in SuiteCRM 7.6.*
+
+The focus of SuiteCRM 7.6 is to enhance the functionality of the native
+Campaign module.
+
+The first Beta release includes enhancements to the following:
+
+* *Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+
+* *Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+
+* *Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+
+* *Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+https://suitecrm.com/download/download-pre-release[Click here] to get
+the full details of this release and to get the upgrade package from
+7.4.x and 7.5.x
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.3[7.5.3]
+-------------------------------------------------------------------
+
+Released Mar 15, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+[discrete]
+===== Security
+*SugarCRM version updated to 6.5.23*
+
+This update addresses some Security issues, further details can be found http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.23/ [here]
+
+[discrete]
+===== Bug Fixes
+* http://github.com/salesagility/SuiteCRM/issues/1080[#1080] Activity Stream Setup Undefined index: Facebook/Twitter
+* http://github.com/salesagility/SuiteCRM/issues/1076[#1076] Clicking through to Opportunities from Outcome By Month Dashlet doesn't filter correctly
+* http://github.com/salesagility/SuiteCRM/issues/1074[#1074] Error Clicking Cancel on Show Duplicates page in Leads
+* http://github.com/salesagility/SuiteCRM/issues/1073[#1073] Issue with clicking through to data on Opportunities By Lead Source By Outcome Dashlet
+* http://github.com/salesagility/SuiteCRM/issues/1068[#1068] JavaScript setModuleFieldsPendingFinishedCallback is not defined in Reports
+* http://github.com/salesagility/SuiteCRM/issues/1050[#1050] Difficulty searching on Text Area Fields when using carriage return
+* http://github.com/salesagility/SuiteCRM/issues/1066[#1066] Reports "Last Month" date period is the same as "This Month" date period
+* http://github.com/salesagility/SuiteCRM/issues/1057[#1057] Selecting Create Account and cancelling from Home screen goes to error page
+* http://github.com/salesagility/SuiteCRM/issues/1010[#1010] Calender on Mobile view shows no items
+* http://github.com/salesagility/SuiteCRM/issues/1053[#1053] Action menu background cleared after save
+* http://github.com/salesagility/SuiteCRM/issues/724[#724] Responsive theme glitch at width 981px - 991px
+* http://github.com/salesagility/SuiteCRM/issues/1040[#1040] Documentation link 404 error on user wizard
+* http://github.com/salesagility/SuiteCRM/issues/766[#766] Timezone issue for Meeting reminders
+* http://github.com/salesagility/SuiteCRM/issues/929[#929] Studio Dynamic DropDown not working
+
+*Its is recommended to update to 7.5.3 as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.2[7.5.2]
+-------------------------------------------------------------------
+
+Released this Mar 7, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.5 release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.1[7.5.1]
+-------------------------------------------------------------------
+
+Released this Jan 26, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.5 release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5[7.5.0]
+-----------------------------------------------------------------
+
+Released Jan 18, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+SuiteCRM 7.5, the latest cutting edge release, focuses on enhancing the
+Reports module. A full list of new functionality is detailed below:
+
+* *Cleaner Reports Interface* - Making the report writer and results view
+more user friendly and less cluttered.
+* *AND/OR Conditions* - Improving your ability to refine results using a
+mixture of OR as well as AND logical operators.
+* *New Charting Engine* - Present your report results using eye catching
+configurable charts to clearly communicate your intended metrics.
+* *Grouped Reports View* - Grouped Reports view, including dashlets, which
+can be expanded/collapsed and grouped on multiple fields.
+* *Custom file removal* - Removing a large volume of files from the custom
+directory ensuring only required custom files remain.
+* *Formatting Options* - Display dates and other key fields in a format
+effective for your audience.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5-rc[7.5 Release Candidate]
+------------------------------------------------------------------------------------
+
+Released this Jan 11, 2016
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.5 Release Candidate to preview the new features coming in SuiteCRM
+7.5.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module and introduce new charting functionality/designs.
+
+This release candidate release includes the following new features, as
+well as bug-fixes to the 7.5 Beta 2 release:
+
+* Enhancements to the User Interface.
+* Grouped Report View.
+* AND/OR reporting operators.
+* New RGraph charting engine.
+
+https://suitecrm.com/suitecrm?id=222[Click here] to get the full details
+of this release and to get the upgrade package from 7.3.x, 7.4.x, 7.5
+Beta 1 and 7.5 Beta 2.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5-beta.2[7.5 Beta 2]
+-----------------------------------------------------------------------------
+
+Released Dec 21, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.5 Beta 2 to preview the new features coming in SuiteCRM 7.5.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module and introduce new charting functionality/designs.
+
+This second Beta release includes enhancements to the User Interface,
+AND/OR reporting operators, new RGraph charting functionality and bug
+fixes to the 7.5 Beta 1 release.
+
+https://suitecrm.com/suitecrm?id=222[Click here] to get the full details
+of this release and to get the upgrade package from 7.3.x, 7.4.x and 7.5
+Beta 1.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.5-beta[7.5 Beta]
+-------------------------------------------------------------------------
+
+Released this Dec 14, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.5 to preview the new features coming in SuiteCRM 7.5.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module.
+
+The first Beta release includes enhancements to the User Interface and
+the introduction of AND/OR operators.
+
+https://suitecrm.com/suitecrm?id=222[Click here] to get the full details
+of this release and to get the upgrade package from 7.3.x and 7.4.x
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4.3[7.4.3]
+-------------------------------------------------------------------
+
+Released Nov 23, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+SuiteCRM 7.4.3, the latest cutting edge release, introduces the new
+reminder meetings functionality.
+
+This functionality allows users to more efficiently manage call and
+meeting reminders with the following features:
+
+* Add multiple reminders to a Meeting/Call so that users can be reminded
+about a meeting at different intervals.
+* Select if all invitees should get a reminder so that users can choose
+who to remind about the Meeting/Call.
+* Choose people who should not get a reminder so that users can choose
+who to remind about the Meeting/Call.
+* Ability to select who receives reminders so that no one else is
+reminded about the Meeting/Call.
+
+In addition to the Reminder Meetings functionality, there have also been
+many bug-fixes implemented in SuiteCRM 7.4.3.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.4.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4.2[v7.4.2]
+--------------------------------------------------------------------
+
+_Merged branch 'reminders' into 7.4.2_
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4.1[7.4.1]
+-------------------------------------------------------------------
+
+Released this Nov 10, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.4 release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.4.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4[7.4.0]
+-----------------------------------------------------------------
+
+Released Oct 30, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This release bring many enhancements - Favourites, Knowledge Base,
+Improved PHP Compatibility and More..
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.3.2[7.3.2]
+-------------------------------------------------------------------
+
+Released Oct 22, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.3 release.
+
+* Fixed  #416 Studio: New Drop Down List Issue
+* Fixed Email user issue in workflow
+* Fixed report join issues
+* Fixed #430 Create Calendar entry on mobile view
+* Fixed issue #455
+* Prep module builder for php7 compatibility
+* Fixed issue #560
+* Fixed partners link in About screen. Fixes #547
+* Fixed issue #437
+* Fixed issue #360
+* Fixed #512 - Issue with all/more menu not being scrollable on resolutions that have a height smaller than 700px.
+* Remove duplicate hidden input causing issues
+* Fixed issue #506
+* Fixed issue #363
+* Update generatePdf.php to avoid blank pages
+* Reduced padding on Layout Editor. Previously caused all fields to move to the left side of editor on some resolutions, due to lack of space.
+* Removed gap between Quick-Create Plus on top-right and its Dropdown. Fixes #433
+* Removed Redundant Code that caused some pages to not load on some Mobile Devices.
+* Fixing multiple issues with Calendar and sidebar conflicts, sidebar white space appearing and small CSS fixes.
+* Fixed issue #380
+* Fixed issue #383
+* Escaping the ID in the query as it comes from the $_REQUEST object.
+* Adding additional checks on data.
+* Adding additional checks on data.
+* Fixed all major vunerabilities
+* Fixed issue #381
+* Fixed issue #353 This fix should be combined with Jims proposal to remove references
+* Fixed issue #305
+* Fixed issue #51
+* Fixed injection vunerability in the delete function.
+* XSS Vunerability echoing out request data.
+* XSS Vunerability
+* Adding the City field to the Lead Convert form in the Contact section
+* Scrolling in Edit of Layout in Studio/ModuleBuilder not possible
+* Update TemplateHandler.php
+* Fixed issue 446
+* Allow demodata in silent install
+* Fixed when login session expires. Alerts now looks for the login form then stops updating the alert manager.
+* Fixed #410 php didnt know to reference the button colour or the actual save button
+* Add id_name to the query in create_new_list_query
+* Add id_name to the query in create_new_list_query
+* Skip .git folder on file system checks
+* Fixed #403 - Dashlets dialog issues on Chrome.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.3.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4-rc[7.4 Release Candidate]
+------------------------------------------------------------------------------------
+
+Released Oct 19, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-rc.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.4RC to preview the new features coming in 7.4*
+
+Including Favourites, Knowledge Base, Improved PHP Compatibility and
+More.
+
+https://suitecrm.com/suitecrm?id=224[Click here] to get the full details
+of this release and to get the upgrade package from 7.3.x and 7.4 Beta 1
+or Beta 2
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4-beta.2[7.4 Beta 2]
+-----------------------------------------------------------------------------
+
+Released Oct 12, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-beta.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-beta.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.4 Beta 2 to preview the new features coming in 7.4.*
+
+Including Favourites, Knowledge Base, Improved Installer and More.
+
+https://suitecrm.com/suitecrm?id=222[Click here] to get the full details
+of this release and to get the upgrade package from 7.3.x and 7.4 Beta 1
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.4-beta[7.4 Beta]
+-------------------------------------------------------------------------
+
+Released Oct 5, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-beta.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.4 Beta to preview the new features coming in 7.4*
+
+Including Favourites, Knowledge Base and More.
+
+https://suitecrm.com/suitecrm?id=222[Click here] to get the full details
+of this release and to get the upgrade package from 7.3.x
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.3.1[7.3.1]
+-------------------------------------------------------------------
+
+Released Aug 25, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release for SuiteCRM 7.3 release.
+
+* Fixed #368 - Progress message added until Studio Field saving and show results.
+* Re-implementing another bootstrap fix that was overwritten updating to v3.3.5.
+* Fixed small issues with top right user menu link moving when screen resizes. Fixing small conflict in Bootstrap CSS.
+* Make cookies httponly by default in SugarApplication::setCookie
+* Mark the subpanel cookies as httponly
+* Mark cookies httponly in the users module.
+* Mark the user theme cookie as httponly.
+* Use httponly cookies in the facebook social connector.
+* Remove the deprecated linkedin code.
+* Fixed #392 - Issues with Action Menu CSS.
+* Fixed #374 - AOR Chart Label - show readable labels on all charts
+* Fixing link to wiki/documentation in README.md, updating links to https.
+* Implement desired menu icon for mobile navigation.
+* Small fixes to menu CSS, adding missing files which were causing errors in console.
+* Fixed #69, Fixed #197 - Addressing issues around the print page functionality.
+* Fixed #365 - Responsive template bugs related to css layers. This also addresses issues with the popup when navigating to Settings -> Mail Accounts -> Add.
+* Ensuring desktop notifications icon/section has its own div ID. It is bad practice to use the same ID twice or more as an ID should be unique.
+* Updated Bootstrap to version 3.3.5, removed redundant bootstrap.js file from the theme, moved images out of js directory for colour picker and placed in their own directory(so as to not conflict with theme images).
+* Removing non-required input closing tags as this is incorrect syntax.
+* Fixed #210 - Workflows firing date and 'Run On' select fixed.
+* Remove display errors
+* Fixed #181 - Error with AOR email link fixed
+* Added variable which was missing from campaign log - date_modified. (clashes with import wizard)
+* Remove references to the unknown expenses module from the events subpanel. Related to the 500 error in #353.
+* Check database name validation in different database types
+* Changes to make inline edit work with flexi relationships such as parent on task module
+* Fixed #249 - sugarcrm_login.png needs to be changed to suitecrm_login.png
+* Fixed #351 - Removed duplicate language entry for LBL_DELETE_USER_CONFIRM.
+* Fixed #359, Fixed #358. Issues which cause Calls to crash in Spanish language pack due to trailing comma.
+* Fixed #354 - Inline editing breaking module builder Vardefs.
+* Fixed #279, Fixed #300 - Addresses issues with scrolling on toolbox and panels sections of Studio.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.3.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.4[7.2.4]
+-------------------------------------------------------------------
+
+Released Aug 20, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug-fix release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.3[7.3.0]
+-----------------------------------------------------------------
+
+Released Aug 14, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+[discrete]
+===== Additional Features
+* Inline Editing
+	- Edit fields directly on the List and Detail View by double clicking the field.
+	- To turn inline editing off for a particular field view the field in studio and uncheck "Inline Editing"
+
+* Desktop Notifications
+	- Get Meeting/Calls Notifications direct to your desktop (enable per compatible browser in user preferences)
+	- View missed Notifications in the top bar
+
+[discrete]
+===== Enhancements
+* Improved Mobile Navigation
+	- New improved mobile menu layout, designed to give you full control, using less screen space.
+* Update cases from detail view.
+* Numerous workflow enhancements e.g is null, contains etc.
+* Numerous reports enhancements e.g date periods, dashlet improvements.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.3beta3[7.3 Beta 3]
+---------------------------------------------------------------------------
+
+Released Aug 7, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3beta3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3beta3.tar.gz[*Source
+code* (tar.gz)]
+
+_Don't do a final move for invalid/malicious files. See #333._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.3[7.2.3]
+-------------------------------------------------------------------
+
+Released Aug 7, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.3.tar.gz[*Source
+code* (tar.gz)]
+
+Update version number to the latest release version.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.8[7.1.8]
+-------------------------------------------------------------------
+
+Released Aug 7, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.8.tar.gz[*Source
+code* (tar.gz)]
+
+_Don't do a final move for invalid/malicious files. See #333._
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.3-beta[7.3 Beta]
+-------------------------------------------------------------------------
+
+Released Jun 5, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3-beta.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.3 Beta to preview the new features coming in 7.3*
+
+Including Inline Editing, Desktop Notifications and More.
+
+https://suitecrm.com/index.php?option=com_content&layout=edit&view=article&id=209[Click
+here] to get the full details of this release and to get the upgrade
+package from 7.2.x
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.2[7.2.2]
+-------------------------------------------------------------------
+
+Released May 20, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+SuiteCRM 7.2 has been updated to version 7.2.2.
+
+This is a bug fix release which addresses bugs in the SuiteCRM 7.2.1
+release and also Post-Auth RCE vulnerabilities in SuiteCRM.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/7.1.7[7.1.7]
+------------------------------------------------------------------
+
+Release Notes
+~~~~~~~~~~~~~
+
+Fix Post-Auth RCE Vulnerability
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.7[7.1.7]
+-------------------------------------------------------------------
+
+Released May 20, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.7.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+This is a bug fix release which addresses Post-Auth RCE vulnerabilities
+in SuiteCRM.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.1[7.2.1]
+-------------------------------------------------------------------
+
+Released this Mar 11, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.1.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+* Fixed - GitHub issue #159 workflow number formatting issues
+* Fixed - GitHub issue #158 - Currency Formatting Issue when Creating Opportunities from Quotes
+* Fixed - GitHub issue #157 MsSQL compatibility issues
+* Fixed - GitHub issue #156 invalid 'email' column when searching
+* Fixed - GitHub issue #155 missing Project Task dropdown definition
+* Fixed - GitHub issue #154 Product Category - Parent Category on list view
+* Fixed - GitHub issue #153 - Forgotten Password Link
+* Fixed - GitHub issue #149 - Collapsing Studio sidepanels
+* Fixed - GitHub issue #147 Fatal Error when AOP function redeclared
+* Fixed - GitHub issue #142 -  Issues with colour picker
+* Fixed - GitHub issue #141 Next/Previous navigation on Calendar Broken
+* Fixed - GitHub issue #140 Issue with custom currency field in reports
+* Fixed - GitHub issue #138 Theme colour changes only save pressing 'Enter'
+* Fixed - GitHub issue #135 disabled themes can still be used if users current theme
+* Fixed - GitHub issue #133 Calendar Shared view Items not showing correctly
+* Merged currency fix
+* Updated PHP version check to check for php 5.3+
+* Fix for search placeholder language and value default.
+* Removed old colour selector from install
+* Fix for detail view on mobile to make it more optimal.*Fix for colour picker default values in SuiteR theme, as some values were incorrect.
+* Removing un-required bootstrap-theme.css, bootstrap-theme.css.map, bootstrap-theme.min.css, bootstrap.css, bootstrap.css.map and Cal.css files from themes/Su$
+* Reverting Calendar change as is it causes a bug when navigating to calendar from another module.
+* Icons now output directly to the page so they can pickup on the page styles and do not need to load the css for each icon.
+* Moved calendar screensize check to cal.js so it only loads on the calendar module.
+
+Download here or https://suitecrm.com/download[click here] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.6[7.1.6]
+-------------------------------------------------------------------
+
+Released Mar 11, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.6.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+* Fixed - GitHub issue#159 workflow number formatting issues
+* Fixed - GitHub issue #158 - Currency Formatting Issue when Creating Opportunities from Quotes
+* Fixed - GitHub issue #157 MsSQL compatibility issues
+* Fixed - GitHub issue #140 Issue with custom currency field in reports
+* Fixed - GitHub issue #133 Calender Shared view items not showing correctly
+* Fixed - GitHub issue #124 AOW Modify Record uses string instead of bool.
+* Fixed - GitHub issue #122 Adding / removing tabs(contributed by Egarretsen).
+* Fixed - GitHub issue #117 Line Items cannot be edited.
+* Fixed - GitHub issue #102 Reschedule dropdown list in AOW.
+* Fixed - GitHub issue #85 Contact delete lines issue.
+* Fixed - AOW using wrong table name in condition values when working with a related module.
+* Fixed - Prevent unnecessary items showing in recently viewed.
+* Fixed - AOS_Line_Item_groups relationships bugs to Invoices, Quotes and Contracts.
+* Fixed - Allow overriding a workflow action with one in the custom folder.
+* Fixed - Spanish language bug in include/language/es_es.notify_template.html(contributed by arraintxo).
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2[7.2.0]
+-----------------------------------------------------------------
+
+Released this Mar 2, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+[discrete]
+===== Additional Features
+* Responsive theme
+* Image Field - New image field type, allowing adding of image fields via Studio.
+
+[discrete]
+===== Enhancements
+* *AOP 2.0*
+	- Add attachments to the case update thread within SuiteCRM.
+	- Better HTML Support.
+	- More Configuration Options.
+	- Re-open Cases from client email update (Configurable).
+	- Multiple inbound email box set up, allowing assignment of created cases to multiple users.
+	- Further enhancements to cases.
+	- Bug fixes.
+
+* *AOR*
+	- Multiple module relationships.
+	- In-module and dashlet charts.
+	- Page/column totals.
+	- UI improvements.
+	- Bug fixes
+
+* *Projects*
+	- Gantt Charts added to Projects.
+	- Resource Management added to Projects.
+	- Project Templates added to Projects.
+
+Download here or https://suitecrm.com/download[click here] to find the
+appropriate upgrade.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2beta3[7.2 Beta 3]
+---------------------------------------------------------------------------
+
+Released this Feb 9, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.2 Beta 3 to preview the new features coming in 7.2*
+
+Including reports, cases and project enhancements
+
+https://suitecrm.com/suitecrm?id=207:download&catid=126:suitecrm-beta[Click
+here] to get the full details of this release and to get the upgrade
+package from 7.1.x (also valid for upgrading from 7.2 beta/beta2)
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.5[7.1.5]
+-------------------------------------------------------------------
+
+Released Jan 19, 2015
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.5.tar.gz[*Source
+code* (tar.gz)]
+
+
+Release Notes
+~~~~~~~~~~~~~
+
+*SugarCRM version updated to 6.5.20*
+
+This update addresses some important Security issues, further details can be found http://support.sugarcrm.com/02_Documentation/01_Sugar_Editions/05_Sugar_Community_Edition/Sugar_Community_Edition_6.5/Sugar_Community_Edition_Release_Notes_6.5.20/[here]
+
+[discrete]
+===== Bug Fixes
+* Dynamic Dropdown doesn't load correctly when using Ajax
+* Blank password issue when sending test outbound email
+* JotPad issue with & symbol
+* Free/Busy cal showing tasks in error
+* db_port configuration option is ignored
+* JavaScript conflict with connectors and the SuiteCRM 7 theme
+* Regex issue with jsCharts.js when using php 5.5.
+* Fix for reply to all on email not picking up CC addresses.
+* AOP
+	- Trigger user email update even if contact is unknown.
+	- Fixed Localisation issue in case updates.
+
+* AOD
+	- Fix multienums not being indexed correctly.
+
+* AOR
+	- Added missing .pdf extension on reports.
+
+* AOW
+	- FIXED trying to send email to empty email address.
+
+* AOS
+	- Fixed bug saving line items save incorrectly, when pressing return on the line
+
+_Thanks to skrrp, Reza, Rick.Timmis, r3code_
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2beta2[7.2 Beta 2]
+---------------------------------------------------------------------------
+
+Released Dec 9, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.2 Beta 2 to preview the new features coming in 7.2.*
+
+Including reports, cases and project enhancements
+
+https://suitecrm.com/suitecrm?id=207:download&catid=126:suitecrm-beta[Click
+here] to get the full details of this release and to get the upgrade
+package from 7.1.x (also valid for upgrading from 7.2 beta)
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.2beta[7.2 Beta]
+------------------------------------------------------------------------
+
+Released Oct 31, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+
+*Try 7.2 Beta to preview the new features coming in 7.2.*
+
+The main new feature of this release is the new Project Management with
+Gantt charts
+
+In addition the SuiteCRM install process has been given a new look and
+feel as well as many bug fixes and other little additions, and there is
+still more to come.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.4[7.1.4]
+-------------------------------------------------------------------
+
+Released this Sep 25, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.4.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+SuiteCRM 7.1.4 features many bug fixes and addresses important security issues.
+
+*Upgraded Sugar to 6.5.18* +
+This update addresses some important Security issues, further details can be found http://support.sugarcrm.com/02_Documentation/01_Sugar_Editions/05_Sugar_Community_Edition/Sugar_Community_Edition_6.5/Sugar_Community_Edition_Release_Notes_6.5.18[here]
+
+*Upgraded QuickCRM* +
+This update addresses an important security issue.
+
+[discrete]
+===== Bug Fixes
+* FIXED Number separators causing incorrect tax calculations
+* FIXED Line items not automatically calculating on list price change
+* FIXED Function name conflict between AOS and Opportunities
+* FIXED Permission issues in AOS Quotes Actions e.g convert to invoice
+* FIXED Various import issue in AOS
+* FIXED Missing AOS Language entries
+* FIXED Filtering on Multi-select fields in dashlets not working correctly with blank values
+* FIXED Missing silent upgrade files
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.3[7.1.3]
+-------------------------------------------------------------------
+
+Released Aug 13, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.3.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+SuiteCRM 7.1.3 features many bug fixes which address bugs in previous SuiteCRM releases.
+
+[discrete]
+===== Bug Fixes
+* Fixed "main menu (Tab All) not with 2 column layout" (Courtesy of pcaesar)
+* Fixed Russian language file in Security Suite
+* Fix bug in AOD which could cause errors when trying to load certain modules.
+* Prevent AOD creating multiple indexes caused by security suite preventing access to the index.
+* Shortcut return when attemping to index on the save of AOD_Index
+* AOD now respects security groups when displaying results
+* Fix undefined index in AOD.
+* Add Print PDF option to contracts
+* Set quote/invoice numbers when records are created with an existing id.
+* Ensure that the contact in a contract is populated when converting.
+* Fix Workflow not sending emails on initial save.
+* Use UTC dates in Workflow to prevent incorrect date calculations
+* Fixed parsing relationships for email templates in workflow
+* Fixed "one of" not working with multiselect fields in workflow.
+* Prevent duplicate sugar feed entries being created by the portal
+* Fixed checks in FP_Events which would cause code to unnecessarily run.
+* Fix bug where using the select this page button for delegates would only appear to do so.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.2[7.1.2]
+-------------------------------------------------------------------
+
+Released Jul 7, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.2.tar.gz[*Source
+code* (tar.gz)]
+
+Release Notes
+~~~~~~~~~~~~~
+*Upgraded Sugar to 6.5.17* +
+
+SugarCRM have not released an official list of fixes, but thanks to Matthew Poer we have been able to list some fixes between SugarCRM 6.5.16 and 6.5.17:
+
+* When sending an email, the Asynchronous request is sent via POST instead of GET.
+* Module loader's security scanner now blocks simplexml_load_file and simplexml_load_string.
+* The RSS dashlet replaces a function that once used simplexml_load_file with a new set of commands that replicate the functionality, but more (I presume) more securely.
+* Quick Search can no longer be configured to search against users.user_hash (the user passwords).
+* Minor bugfix in modules/Users/controller.php, a new save function to help it support a different server environment.
+* Modules/Users/Save.php adjusted to further ensure that non-admins cannot adjust settings for other users. 
+
+{{% notice note %}}
+6.5.17 introduces an important security patch.
+{{% /notice %}}
+
+[discrete]
+===== Bug Fixes
+* Fixed IE11 detected as Mozilla browser
+* Fixed MSSQL vardef compatibility issues
+* Fixed history filters search conflicts with meetings search
+* Fixed Contact not populated in Contracts
+* Fixed install issues
+* Fixed Contracts print pdf missing
+* Fixed issue where workflow may cause errors while saving a record
+* Facebook/twiter fixes
+* Optimised Calendar query
+* Fixed footer response time text.
+* Fixed twitter/facebook connector defaults
+* Fixed Bugs admin panel is missing
+* Fixed AOD doesn't add default config entry on install
+* Fixed missing language strings on after install
+* Fixed QuickCRM didn’t work with Russian language and adds support for dynamicenum
+* Fixed invalid query when using relate fields in AOR
+* Fixed My Activity Stream pagination issues
+* Fixed My Activity Stream doesn't show in Add Dashlets
+* AOD Don't use the stored index since this may be closed.
+* AOD Update index on delete and restore.
+* Fixed AOD bug in removing indexed records causing duplicates. Add UTF8 support. Add support for indexing numbers. Add boosts on various modules and fields.
+* Fixed AOD bug caused by deleted beans appearing in search results.
+* Restored meetings searchdefs.php
+* Fixed Documents generated query errors
+* Fixed AOD install issue on MSSQL
+* Fixed issue where the export query would fail with a search on a related object
+* Fixed YUI Loader Calender dashlet issue
+* Fixed blank date wrongly formatted in WorkFlow when running on save
+* Fixed Issue where WorkFlow would duplicated line items in AOS
+* Fixed attachments from email templates don't appear when using workflow
+* Fixed Issue where line items would generate incorrectly in the pdf when only one item displayed in the line
+* Fixed bug "could not redeclare class in twitter connector"
+* Fixed Issue when modify record that has new_with_id set to true causes it to fail
+* Fixed Issue where workflow may fail on custom fields
+* QuickCRM : Fix bug with web app
+* Fixed in AOW lang. strings
+* Fixed Missing Reschedule Language strings
+* Fixed renamed reschedule field 'call', causing reserved keyword issue in query
+* Upgraded Security Suite to version 2.7.4
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1.1[7.1.1]
+-------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Apr 7, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.1.tar.gz[*Source
+code* (tar.gz)]
+
+This is a bug fix release
+
+For a full list of what has changed and been fixed check out the release
+notes on the wiki
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1[7.1]
+---------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Apr 1, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.tar.gz[*Source
+code* (tar.gz)]
+
+This release packs in many new features, most notably the many
+enhancements to workflow, the new lucene powered search, (to enable see
+AOD in the admin panel), the multi tabbed homepage, the ability to
+filter the history sub-panel and more
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1RC2[7.1 Release Candidate 2]
+--------------------------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Mar 28, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1RC2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1RC2.tar.gz[*Source
+code* (tar.gz)]
+
+Try out the Latest release of SuiteCRM, the final Release Candidate
+before Mondays release!
+
+Help to find the remaining bugs!
+
+Thanks all the feedback and fixes contributed for this release
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1RC[7.1 Release Candidate]
+-----------------------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Mar 24, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1RC.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1RC.tar.gz[*Source
+code* (tar.gz)]
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1beta2[7.1 Beta2]
+--------------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Mar 14, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1beta2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1beta2.tar.gz[*Source
+code* (tar.gz)]
+
+Try out the Latest Beta release of SuiteCRM with many improvements and
+some major enhancements to Workflow
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.1beta[7.1 Beta]
+------------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Feb 4, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1beta.tar.gz[*Source
+code* (tar.gz)]
+
+Try 7.1 Beta to preview the new features coming in 7.1 including
+enhanced search, improved workflow and default theme plus social
+integration.
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.0.2[v7.0.2]
+--------------------------------------------------------------------
+
+https://github.com/mattlorimer[mattlorimer] released this Jan 20, 2014
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.0.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.0.2.tar.gz[*Source
+code* (tar.gz)]
+
+Bug fix release which also adds in two new language translations for
+Spanish and Russian
+
+
+https://github.com/salesagility/SuiteCRM/releases/tag/v7.0.1[v7.0.1: Update README.md]
+--------------------------------------------------------------------------------------
+
+https://github.com/salesagility[salesagility] released this Nov 25, 2013
+
+Assets
+~~~~~~
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.0.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.0.1.tar.gz[*Source
+code* (tar.gz)]
+
+Adding details to SuiteCRM readme.md

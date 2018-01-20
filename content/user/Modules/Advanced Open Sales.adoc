@@ -157,12 +157,12 @@ image:188PDF_footer.png[title="PDF Header and Footer"]
 You can generate PDF documents for Accounts, Contacts and Leads using
 the Generate Letter functionality.
 
-image:image90.png[image90.png,title="image90.png"]
+image:GenerateLetter1.png[title="Generate Letter"]
 
 Clicking the 'Generate Letter' button found on these modules Detail View
 will prompt a pop-up asking to select a template.
 
-image:image91.png[image91.png,title="image91.png"]
+image:GenerateLetter2.png[title="Generate Letter"]
 
 The template selector pop-up will show all the active templates which
 have the same Type as the module of the record. Clicking the template
@@ -171,7 +171,7 @@ and it's related records. The Generate Letter functionality can also be
 actioned from the List View. This allows you to select multiple records
 and click the 'Generate Letter' button within the List View action menu.
 
-image:image92.png[image92.png,title="image92.png"]
+image:GenerateLetter3.png[title="Generate Letter"]
 
 The process for generating PDFs for Quotes, Invoices and Contracts is
 described in your respective sections.
