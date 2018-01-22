@@ -59,9 +59,9 @@ The main actions for the *Emails* module are contained within the buttons on the
 
 |======================================================================
 
-==== Select Folder
+=== Select Folder
 
-==== Deleting Mail
+=== Deleting Mail
 As only imported emails are stored in *SuiteCRM*, only imported email records can be deleted from the *Emails* module. 
 
 To delete an imported email record, open the email and then select Delete from the Actions menu.
