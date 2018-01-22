@@ -59,14 +59,12 @@ The main actions for the *Emails* module are contained within the buttons on the
 
 |======================================================================
 
-==== Select Folder
+=== Select Folder
 
-==== Deleting Mail
+=== Deleting Mail
 As only imported emails are stored in *SuiteCRM*, only imported email records can be deleted from the *Emails* module. 
 
-To delete an imported email record, open the email and then select Delete from the Actions menu.
-
-Note that this will only delete the SuiteCRM record and not the imap message. Deleting emails must be done via an external client.
+To delete an imported email record, open the email and then select Delete from the Actions menu. Note that this will only delete the SuiteCRM record and not the imap message. 
 
 == Compose Mail
 
@@ -241,12 +239,13 @@ image:287EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
 |======================================================================
 
 
-
 Once configured, inbound accounts, both group and personal will be listed under Inbound Accounts. These can be configured or deleted here.
 
 == Email Templates
 
 Email templates are created from the *Email Templates* module. 
+
+image:290EmailsTemplates.png[Email Templates]
 
 Templates created here can also be used in Workflows and Campaigns for example, as well as for system notifications.
 
@@ -254,34 +253,34 @@ There are a number of default system templates which are created on install. The
 
 === Creating a template
 
-Select *Create Email Template* from the sidebar.
+Select *Create Email Template* from the sidebar. This Create view will also appear if you choose to create a template from within another module such as Workflows, for example.
 
-new template image
+image:291EmailsNewTemplate.png[New email template]
 
-* *Name*
-* *Type* Select Email, Campaign or System depending on the use for the template. System templates are used to send system generated notifications such as case updates. 
-
-* *Assigned To*
-* *Description* 
-* *Insert Variable*
-* *Subject* Subject lines can contain variables
-* *Width Default*
+Select Email, Campaign or System depending on the use for the template. System templates are used to send system generated notifications such as case updates. 
 
 ==== Body
 
-To add text to the body of the template, drag and drop one of the layouts from the selection in the left hand pane.  
+To add text to the body of the template, drag and drop one of the layouts from the selection in the left hand pane and replace the text.
 
 ==== Adding Variables
-To add a variable, select the appropriate module and field name.  The variable name will be displayed. You can either enter this manually, or click *Add Variable* to insert the variable at the cursor point. Variables can be added to the subject line as well as the body of the email template.
+To add a variable, select the appropriate module and field name from the drop-down lists. The variable name will be displayed. 
 
-image here
+image:292EmailsInsertVariable.png[Insert template variable]
 
-* *Attachments*
+You can either enter this variable manually, or click *Add Variable* to insert the variable at the cursor point. Variables can be added to the subject line as well as the body of the email template.
+
+image:293EmailsInsertVariable2.png[Template variable in subject and body]
+
+
+==== Attachments
 
 === Editing a template
 
 
 === Setting System Notification Templates
+
+
 
 == Upgrading
 If you are upgrading from a version of SuiteCRM prior to *7.9.x*, you will need to use the *Sync Inbound Email Account Tool* on upgrading. This tool will synchronise mail already imported into SuiteCRM with your current IMAP accounts so that you will not have to synchronise in the future.
