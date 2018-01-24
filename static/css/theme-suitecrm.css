@@ -841,4 +841,54 @@ select::-ms-expand {
 }
 
 
+ /* buttons */
  
+.button {
+    color: #fff;
+    border-radius:3px;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: var(--MAIN-LINK-color);
+}
+.button:hover {
+    background: #00a5d4;
+    box-shadow: none;
+    color: #fff;
+    background-color: var(--MAIN-LINK-color);
+}
+.button:active {
+    box-shadow: none;
+}
+
+.button-secondary {
+    background-color:transparent;
+    color: var(--MAIN-LINK-color);
+    box-shadow: none;
+    cursor: pointer;
+    border-radius:3px;
+    border:1px solid var(--MAIN-LINK-color);
+}
+
+.button-secondary:hover {
+    background: #f7a733;
+    box-shadow: none;
+    color: #fff;
+    background-color:transparent;
+}
+
+.button-secondary:active {
+    box-shadow: none;
+}
+
+/* tables with no styles */
+
+table.frame-none {
+	border:none;
+	background-color: transparent;
+	width:auto;
+}
+
+table.frame-none td {
+	border:none;
+	padding:0;
+}
