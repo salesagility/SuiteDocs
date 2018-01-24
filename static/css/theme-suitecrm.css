@@ -417,7 +417,7 @@ div.notices.tip p:first-child:after {
 #topmenu li {
    display:inline-block;   
    letter-spacing:1px;
-   font-size:14px;
+   font-size:13px;
 }
 
 #topmenu li.guide_start {
@@ -439,7 +439,7 @@ div.notices.tip p:first-child:after {
    color: #fff;
    text-align: center;
    text-decoration: none;
-   padding: 15px 15px;
+   padding: 15px 13px;
 }
 
 #topmenu li:hover {
@@ -843,19 +843,25 @@ select::-ms-expand {
 
  /* buttons */
  
+.button, .button-secondary {
+    margin:0 3px 0 3px;
+    padding: 0px 10px;
+}
+
 .button {
-    color: #fff;
+    background-color:transparent;
+    color: var(--MAIN-LINK-color);
+    box-shadow: none;
     border-radius:3px;
-    box-shadow: none;
-    cursor: pointer;
-    background-color: var(--MAIN-LINK-color);
+    border:1px solid var(--MAIN-LINK-color);
 }
+
 .button:hover {
-    background: #00a5d4;
     box-shadow: none;
-    color: #fff;
-    background-color: var(--MAIN-LINK-color);
+    color: #f7a733;
+    background-color:transparent;
 }
+
 .button:active {
     box-shadow: none;
 }
@@ -864,15 +870,13 @@ select::-ms-expand {
     background-color:transparent;
     color: var(--MAIN-LINK-color);
     box-shadow: none;
-    cursor: pointer;
     border-radius:3px;
     border:1px solid var(--MAIN-LINK-color);
 }
 
 .button-secondary:hover {
-    background: #f7a733;
     box-shadow: none;
-    color: #fff;
+    color: #f7a733;
     background-color:transparent;
 }
 
