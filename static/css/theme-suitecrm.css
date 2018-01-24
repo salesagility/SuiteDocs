@@ -774,7 +774,7 @@ select::-ms-expand {
 }
 
 /* amended */
-@media only all and (max-width: 59.938em) {
+@media only all and (max-width: 600px) {
    #sidebar {
       width: 30%;
    }
@@ -858,7 +858,7 @@ select::-ms-expand {
 
 .button:hover {
     box-shadow: none;
-    color: #f7a733;
+    color: var(--MAIN-LINK-color);
     background-color:transparent;
 }
 
@@ -876,7 +876,7 @@ select::-ms-expand {
 
 .button-secondary:hover {
     box-shadow: none;
-    color: #f7a733;
+    color: var(--MAIN-LINK-color);
     background-color:transparent;
 }
 
