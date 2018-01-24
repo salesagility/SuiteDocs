@@ -774,7 +774,7 @@ select::-ms-expand {
 }
 
 /* amended */
-@media only all and (max-width: 600px) {
+@media only all and (max-width: 59.938em) {
    #sidebar {
       width: 30%;
    }
