@@ -23,7 +23,7 @@ Emails can be imported and associated with a related *SuiteCRM* record, for exam
 
 === Changes to the Emails Module
 
-In previous releases, *SuiteCRM* synchronised email headers before the user could view mail. From 7.9. onwards, *SuiteCRM* contacts the emails server directly, retrieving only the minimal information needed to process an operation. This eliminates the synchronisation process and significantly reduces the amount of email information that needs to be stored in the database. 
+In previous releases, *SuiteCRM* synchronised email headers before the user could view mail. From 7.9. onward, *SuiteCRM* contacts the emails server directly, retrieving only the minimal information needed to process an operation. This eliminates the synchronisation process and significantly reduces the amount of email information that needs to be stored in the database. 
 If you are upgrading from a version of *SuiteCRM* prior to 7.9.x, please see the <<Upgrading, Upgrade guide>> section of this document.
 
 == Email Client Overview
@@ -32,15 +32,15 @@ If you are upgrading from a version of *SuiteCRM* prior to 7.9.x, please see the
 You will need to set up and have access to at least one *personal* or *group* email account in order to use the *Emails* module. 
 {{% /notice %}}
 
-The *Emails* Module can be found on the *All* menu on the top naviagtion bar. The module opens in List View, showing all the the mail from the default mail account inbox in the main window. 
+The *Emails* Module can be found on the *All* menu on the top navigation bar. The module opens in List View, showing all the the mail from the default mail account inbox in the main window. 
 
 image:250EmailsListView.png[title="Emails Module List View"]
 
 The current inbox name is displayed on the button to the top right-hand side of the list view. Use this button to switch between accounts or other monitored folders.
 
-Unread emails have a purple highlight
+Unread emails have a purple highlight.
 
-[cols="10,90",frame="none", grid="none"]
+[cols = "10,90",frame="none", grid="none" ]
 |===
 |image:257EmailsImportedIcon.png[title="Imported mail icon"]|Emails which have been <<Import Mail,imported>> into *SuiteCRM* are indicated by a tick.
 |image:258EmailsFlaggedIcon.png[title="Flagged mail icon"]|Emails which have been flagged for follow up are indicated by an exclamation mark.
@@ -48,15 +48,10 @@ Unread emails have a purple highlight
 
 As in other *SuiteCRM* modules, emails can be sorted by clicking on the column headings. Filter and column selections can also be made in the same way as for other modules.
 
-[frame="none", grid="none"]
-|===
+The main actions for the *Emails* module are contained within the buttons on the *Emails* toolbar. Hover over these buttons to see the explanatory tooltip for each function.
 
-|The main actions for the *Emails* module are contained within the buttons on the *Emails* toolbar. Hover over these buttons to see the explanatory tooltip for each function.|image:251EmailsListViewtoolbar.png[title="Emails List View toolbar"]
+[cols="15,10,75",frame="none", grid="none"]
 |===
-
-[cols="10,10,80",frame="none", grid="none"]
-|===
-
 |image:253EmailsBulkAction.png[title="Bulk Action button"]|*Bulk Action*|Use the Bulk Action dropdown to bulk <<Import Mail,import mail>>, to mark mail as read/unread or to flag mail for follow up. Multiple emails can be selected in list view using the checkboxes.
 |image:252EmailsComposebutton.png[title="Compose Mail button"]|*Compose Mail* |Opens the <<Compose Mail, Compose>> window to create a new message.
 |image:254EmailsSettingsButton.png[title="Mail Settings button"]|*Settings*|Shortcut to your user profile where you can edit your <<User Profile Email Settings, mail settings>>.  Add and remove accounts and select folders to view here.
@@ -66,43 +61,40 @@ As in other *SuiteCRM* modules, emails can be sorted by clicking on the column h
 
 === Read Mail
 
-Click on the subject line of an email to open it in Detail view. Use the Actions menu to reply to, forward or <<Import Mail,import>> the email.
+Click on the subject line of an email to open it in *Detail* view. Use the *Actions* menu to reply to, forward or <<Import Mail,import>> the email.
 image:269EmailsActionMenu.png[title="Action menu"]
 
 === Compose Mail
 
-Click the btn:[Compose Mail] button or select *Compose* from the *Sidebar* to open a new compose mail window. 
+Click the Compose Mail button or select *Compose* from the *Sidebar* to open a new compose window. 
 
-Emails can also be composed directly from a *SuiteCRM* record by clicking the email address on the record. This will open compose view in the *Emails* module. For new emails opened in this way, the *To* field will be automatically populated and the email related to the relevant record. 
+Emails can also be composed directly from a *SuiteCRM* record by clicking the email address on the record. This will open compose view in the *Emails* module. For new emails opened in this way, the *To:* field will be automatically populated and the email will related to the relevant record. 
 
-If you have opted to use an external email client in your <<User Profile Email Settings, user profile email settings>>, clicking an email address on a record in *SuiteCRM* will open a new email in your chosen editor.
+{{% notice note %}}If you have opted to use an external email client in your <<User Profile Email Settings, user profile email settings>>, clicking an email address on a record in *SuiteCRM* will open a new email in your chosen editor.
+{{% /notice %}}
 
 image:260Emailcompose.png[title="Compose Email"]
 
-* *Email Template:* Select a template if required. See <<Email Templates>> for more information on creating email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. 
+* *Email Template:* Select a template if required. See <<Email Templates>> for more information on creating and editing email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. If you are using a template with variables, these will be populated with the relevant data from the related record when the email is sent. The *To:* field will also be automatically populated with the email address associated with the related record.
+
 // image:261EmailsAddtemplate.png[title="Adding Email template warning"]
 
-* *Related To:* To associate the email with a particular record, select the module (e.g. Accounts, Contacts, Leads) and then click the Search arrow to search for the record. alternatively, you can begin typing the name into the field and select the contact, lead, account from the list
-
-If you are using a template with variables, these will be populated with the relevant data from the related record when the email is sent. The *To* field will also be automatically populated with the email address associated with the related record.
+* *Related To:* To associate the email with a particular record, select the module (e.g. Accounts, Contacts, Leads) and then click the Search arrow to search for the record. Alternatively, you can begin typing the name into the field and select the relevant record from the autocomplete list which appears.
 
 * *From:* If you have more than one email account configured, select the account from which to send the email. The *Reply To* and *From* settings for the selected account are displayed alongside for information.
 
-* *To:* Selecting a related record in the with a valid email address will automatically populate the *To* field. Alternatively, the *To*, *Cc* and *Bcc* fields can be populated manually or via the select buttons which appear when you click inside the fields.
+* *To:* Selecting a related record in the with a valid email address will automatically populate the *To:* field. Alternatively, the *To:*, *Cc:* and *Bcc:* fields can be populated manually or via the select buttons which appear when you click inside the fields.
 
-* *Body:*  If you have configured a signature for each account in your <<User Mail Settings - General Tab, user profile email settings>>, this will appear automatically in the body of the email.
+* *Body:*  If you have configured a signature for this account in your <<User Mail Settings - General Tab, user profile email settings>>, this will appear automatically in the body of the email.
 
-[frame="none", grid="none"]
-|===
-|The toolbar at the bottom of the Compose view has the following buttons|image:262Emailscomposetoolbar.png[title="Emails - Compose toolbar"]
-|===
+The toolbar at the bottom of the Compose view has the following buttons:
 
 [cols="10,10,80",frame="none", grid="none"]
 |===
-|image:263EmailsSendMailbutton.png[title="Send Mail button"]|*Send Mail* |
+|image:263EmailsSendMailbutton.png[title="Send Mail button"]|*Send Mail* |A confirmation message will appear when the message has been sent.
 |image:264EmailsAddFilesbutton.png[title="Add Files button"]|*Attach Files*| Use this button to browse for and attach an *external* file to the email.
-|image:265EmailsAddDocumentsbutton.png[title="Add Documents button"]|*Attach Documents*|Use this button to attach a *SuiteCRM Document* to the email. Search for the required Document in the popup and click btn:[Select] to attach it.
-|image:266EmailsSaveDraftbutton.png[title="Save Draft button"]|*Save Draft*|Drafts can be viewed by <<Select Folder, changing the folder>> in list view.
+|image:265EmailsAddDocumentsbutton.png[title="Add Documents button"]|*Attach Documents*|Use this button to attach a *SuiteCRM Document* to the email. Search for the required Document in the popup and click btn:[SELECT] to attach it.
+|image:266EmailsSaveDraftbutton.png[title="Save Draft button"]|*Save Draft*|Drafts can be viewed by <<Select Folder, changing the folder>> in *List* view.
 |image:267EmailsDiscardbutton.png[title="Discard button"]|*Discard*|Discards the draft email without sending.
 |===
 
@@ -111,16 +103,25 @@ If you are using a template with variables, these will be populated with the rel
 Email can be imported into *SuiteCRM* and associated with a relevant *SuiteCRM* record (e.g. a contact or account record). This can be very useful in keeping a history of communication with a client, for example.
 Emails which have been imported and related to a record in *SuiteCRM* can be viewed from the record's history subpanel.
 
-There are two ways to import email from an *Emails* module inbox:
+==== Import Single Email
 
-* from detail view of email record Actions-> Import
-* from list view Bulk Action -> Import
+An individual email can be imported from *Detail* view. Open the email, and then select *Import* from the *Actions* dropdown menu.
 
-On importing, a dialog will open allowing you to select which record to relate the email(s) to. Select the module type from the drop-down and use the search arrow button to find and select the relevant record.
+image:268bEmailsImport.png[title="Import emails"]
 
-Note that if you are bulk importing mail, all emails will be related to the record selected here.
+==== Import One or More Emails
+
+One or more emails can be imported at the same time from *List* view. Select the email(s) you wish to import using the checkboxes to the left-hand side of the view. Select *Import* from the *Bulk Action* menu.
+
+image:268aEmailsImport.png[title="Import emails"]
+
+On importing, a dialog will open allowing you to select which record to relate the email(s) to. 
 
 image:268EmailsImportDialog.png[title="Import emails"]
+
+First select the module type from the drop-down.  Now use the search arrow button to find and select the relevant record, or begin typing the name into the field and select the required record from the auto-complete list. Click the btn:[OK] button.
+
+Note that if you are bulk importing mail, all emails will be related to the record selected here. If you need to relate mail to different records you will need to import these individually.
 
 *SuiteCRM* can also be configured to automatically import emails for group mail accounts. See <<Setting up A Group Email Account, Group Email Accounts>> for more information.
 
@@ -145,7 +146,7 @@ Open the user profile and scroll to the bottom of the main *User Profile tab* to
 
 image:270Emailusersettings.png[User Email Settings]
 
-* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. 
+* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. Where you have more than one email address, you can specify which is the mian address for your account using the *Primary* radio button. You cna also specify which account to use as the Reply-to account.
 * *Email Client* - This setting controls which editor is used to compose and send mail when you click on an email link in SuiteCRM, for example an email address on a contact or account record.
 	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
 	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
@@ -154,24 +155,32 @@ image:270Emailusersettings.png[User Email Settings]
 
 
 ==== Adding A Personal Mail Account
-Click the btn:[Settings] button at the bottom of the main User Profile tab to add a personal mail account.
+Click the btn:[SETTINGS] button at the bottom of the main User Profile tab to add a personal mail account.
 
 
-Select the Mail Accounts Tab and click btn:[Add] under Mail Accounts to set up your incoming mail account.
+Select the Mail Accounts Tab and click btn:[ADD] under Mail Accounts to set up your incoming mail account.
 image:271EmailsAddPersonalAccount.png[Mail Accounts tab]
 
-Complete the required details for the account in the dialog which appears. You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. You may also need to set the Mail Server Port if this differs from the default IMAP setting. Your system administrator should be able to provide you with these settings. Once entered, verify your mail settings by clicking the btn:[Test Settings] to test the connection to the account. 
+Complete the required details for the account in the dialog which appears. You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. You may also need to set the Mail Server Port if this differs from the default IMAP setting. Your system administrator should be able to provide you with these settings. 
+
+Once entered, you can verify your mail settings by clicking the btn:[TEST SETTINGS] to test the connection to the account. 
 
 image:272EmailsPersonalAccountSettings.png[User Email Settings] 
 
-*Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Sent* items folder here. Enter the folder names or click btn:[Select] to connect to the mail server and select the relevant folder(s) from the popup dialog.
+*Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Trash* folder here. Enter the folder names or click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
 image:273EmailsMonitoredFolders.png[Select monitored folders]
 
-*Signatures:* Select a sginature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to crete a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
+*Signatures:* Select a signature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to crete a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
 
-Once set up, the account will appear on the *Mail Accounts* tab. If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
-You can edit personal mail account settings here by clicking the pencil icon.
+Complete the *Outgoing Email* settings for the user account. 
+
+image:276EmailsAddPersonalAccount2.png[User Outgoing Mail Settings]
+
+Click btn:[DONE] to save the account settings and return to the *Mail Accounts* tab. 
+
 image:275EmailsAccountList.png[Accounts List]
+If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
+You can edit personal mail account settings here by clicking the pencil icon.
 
 ==== User Mail Settings - General Tab
 
@@ -181,16 +190,16 @@ image:274EmailsGeneralTab.png[User Mail Settings General tab]
 
 * *Check for New Mail* - Here you can specify a time interval to automatically check for new mail in your account's monitored folders. The default setting is to check for mail manually, using the Check Mail button in Emails list view. 
 
-* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[Create] to add a new one or select one from the list. Existing signatures can be edited and deleted here. 
+* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[CREATE] to add a new one or select one from the list. Existing signatures can be edited and deleted here. 
 
 * *Folder management* -Select the folder(s) which will be available to view from the *Emails* module. This list will show all the monitored folders from all the mail accounts to which you have access. Use ctrl+click to select more than one folder. 
 
-Click btn:[Done] to save your settings. A confirmation dialog will appear. 
+Click btn:[DONE] to save your settings. A confirmation dialog will appear. 
 You should now be able to <<Email Client Overview,view your emails>> in the *Emails* module.
 
 === Group Email Account
 
-A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example. In addition, group accounts are also used for sending email campaigns and as bounce handling mailboxes for campaigns.
+A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example. In addition, group accounts are also used for sending email campaigns and as bounce handling mailboxes for campaigns. See the link:../campaigns[Campaigns] documentation for more information.
 
 SuiteCRM can also be configured to automatically import emails and to automatically <<Create Case From Email,create cases>> from email.
 
@@ -205,7 +214,7 @@ Select *New Group Mail Account* from the Sidebar.
 
 You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by SuiteCRM is IMAP. 
 
-*Monitored Folders* are the folders which are checked for new (unread) mail. *Inbox* and *Trash* folder names must be specified here. Click btn:[Select] to connect to the mail server and select the relevant folder(s) from the popup dialog.
+*Monitored Folders* are the folders which are checked for new (unread) mail. *Inbox* and *Trash* folder names must be specified here. Click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
 
 image:280EmailsGroupMailSettings.png[Group Mail Settings]
 
@@ -215,16 +224,15 @@ image:281EmailsEmailHandlingOptions.png[Email Handling Options]
 
 ===== Import Emails Automatically
 
-Check this box to import emails automatically, which means that records will be created in SuiteCRM for all incoming emails. These associated emails can then be viewed via the History subpanel of the relevant record. 
+Check this box to import emails automatically, which means that records will be created in *SuiteCRM* for all incoming emails. These associated emails can then be viewed via the History subpanel of the relevant record. 
 This setting is selected by default in *SuiteCRM*.
 
 ===== Create Case From Email
-Check this box to set up SuiteCRM to create a *Case* record from an incoming email. 
+Check this box to set up SuiteCRM to create a *Case* record from an incoming email. Select a *Distribution Method* to specify how cases created from incoming email are assigned to users.
 
 image:282EmailsCreateCase2.png[Create Case]
 
-Select a *Distribution Method* to specify how cases created from incoming email are assigned to users.
-[cols="20,80",frame="none", grid="none"]
+[cols="20,80", frame = "none", grid = "none"]
 |===
 |*Use AOP default*|This will use the settings in link:../advanced-open-cases-with-portal[Advanced Open Portal], configurable via the Admin panel. 
 |*Single User*| Enter a username or click the select arrow to search for a user. Every automatically created case will be assigned to the specified user.
@@ -233,30 +241,25 @@ Select a *Distribution Method* to specify how cases created from incoming email 
 |*Random*| Select All Users or an existing security group or role. Cases will be assigned randomly to members of the specified group or role
 |===
 
-*New Case Auto-Reply template* 
-
-If *SuiteCRM* has been configured to auto-create cases, you can specify an <<Email Templates,email template>> to use as an automated reponse to notify email senders that a case has been created. If no template is specified here, this automated reponse will not be sent.
-
-image:286EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
-
-[cols="20,80",frame="none", grid="none"]
+[cols="20,80", frame = "none", grid = "none"]
 |===
-|No Auto_Reply to this Domain|No auto-reponses will be sent to the specifed domain. Use for example to exclude your company domain, so users do not receive auto-reply messages. 
-|Number of Auto-responses|This setting specifies the maximum number of replies to send to a particular email address in a 24hr period.
+|*New Case Auto-Reply template* |If *SuiteCRM* has been configured to auto-create cases, you can select or create an <<Email Templates,email template>> to use as an automated reponse to notify the sender that a case has been created. If no template is specified here, this automated reponse will not be sent. image:286EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
+|*No Auto_Reply to this Domain*|No auto-responses will be sent to the specified domain. Use this for example to exclude your company domain, so your users do not receive auto-reply messages. 
+|*Number of Auto-responses*|This setting specifies the maximum number of replies to send to a particular email address in a 24hr period.
 |===
 
-//image:287EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
+==== Reply To Settings
 
-[cols="20,80",frame="none", grid="none"]
+image:287EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
+
+[cols="20,80", frame = "none", grid = "none"]
 |===
-|*From Name*|
-|*From Address*| Used as the from address where supported, otherwise will use <<System Outbound Mail Settings,default system outbound>> mail server account 
-|*Reply To Name*|
-|*Reply-to Address*|
-|*Allow users to send emails using the From name and Address as the reply to address*| When checked, the From Name and From Address for this account will appear as a *From* option when composing an email for all users that have access to this group account.
+|* *From Address*| Used as the from address where supported, otherwise the <<System Outbound Mail Settings,default system outbound>> account will be used.
+|* *Allow users to send emails using the From name and Address as the reply to address*| When checked, the From Name and From Address for this account will appear as a *From* option when composing an email for all users that have access to this group account.
 |===
 
-Once configured, all inbound accounts are listed under *Inbound Accounts* on the *Admin* panel, from where they can be edited or removed. 
+{{% notice tip %}}Once configured, all inbound accounts are listed under *Inbound Accounts* on the *Admin* panel, from where they can be edited or removed. 
+{{% /notice %}}
 
 === Bounce Handling Account
 
@@ -285,14 +288,14 @@ users can still use the outgoing mail server after providing their own account i
 
 Click btn:[SEND TEST EMAIL] to check your settings. You will be asked to enter an email address for the test message to be sent to. A verification message will be displayed if the email was sent successfully. Check that you have received this test message.
 
-Once the settings have been verified, be sure to click btn:[Save] so that these settings are retained.
+Once the settings have been verified, be sure to click btn:[SAVE] so that these settings are retained.
 
 ==== Email Options
 
-[frame = "none", grid = "none"]
+[cols = "40, 60", frame = "none", grid = "none"]
 |===
-|Assignment Notifications| When selected, users will be emailed when a record is assigned to them.
-|Send notification from assigning user's email address|Where the mail server supports this, the assigning user's name and email address will be included in the From field of the notification email. Otherwise the default system outbound account will be used.
+|*Assignment Notifications*| When selected, users will be emailed when a record is assigned to them.
+|*Send notification from assigning user's email address*|Where the mail server supports this, the assigning user's name and email address will be included in the From field of the notification email. Otherwise the default system outbound account will be used.
 |===
 
 ==== Email Security Settings
@@ -326,7 +329,7 @@ To add a variable, select the appropriate module and field name from the drop-do
 
 image:302EmailsInsertVariable.png[Insert template variable]
 
-You can either enter this variable manually, or click btn:[Add Variable] to insert the variable at the cursor point. Variables can be added to the subject line as well as the body of the email template.
+You can either enter this variable manually, or click btn:[ADD VARIABLE] to insert the variable at the cursor point. Variables can be added to the subject line as well as the body of the email template.
 
 image:303EmailsInsertVariable2.png[Template variable in subject and body]
 
@@ -335,7 +338,7 @@ image:303EmailsInsertVariable2.png[Template variable in subject and body]
 
 [cols="20,80",frame="none", grid="none"]
 |===
-|image:304EmailsTemplateAttachment.png[Template attachments]|Click btn:[Browse] to attach an external file or btn:[Documents] to attach a *SuiteCRM* document to the template. Further items can be attached in the same way. The attached file(s) will be sent to all recipients of the template.
+|image:304EmailsTemplateAttachment.png[Template attachments]|Click btn:[BROWSE] to attach an external file or btn:[DOCUMENTS] to attach a *SuiteCRM* document to the template. Further items can be attached in the same way. The attached file(s) will be sent to all recipients of the template.
 |===
 
 ==== Security Groups
