@@ -417,7 +417,7 @@ div.notices.tip p:first-child:after {
 #topmenu li {
    display:inline-block;   
    letter-spacing:1px;
-   font-size:14px;
+   font-size:13px;
 }
 
 #topmenu li.guide_start {
@@ -439,7 +439,7 @@ div.notices.tip p:first-child:after {
    color: #fff;
    text-align: center;
    text-decoration: none;
-   padding: 15px 15px;
+   padding: 15px 13px;
 }
 
 #topmenu li:hover {
@@ -841,4 +841,58 @@ select::-ms-expand {
 }
 
 
+ /* buttons */
  
+.button, .button-secondary {
+    margin:0 3px 0 3px;
+    padding: 0px 10px;
+}
+
+.button {
+    background-color:transparent;
+    color: var(--MAIN-LINK-color);
+    box-shadow: none;
+    border-radius:3px;
+    border:1px solid var(--MAIN-LINK-color);
+}
+
+.button:hover {
+    box-shadow: none;
+    color: var(--MAIN-LINK-color);
+    background-color:transparent;
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+.button-secondary {
+    background-color:transparent;
+    color: var(--MAIN-LINK-color);
+    box-shadow: none;
+    border-radius:3px;
+    border:1px solid var(--MAIN-LINK-color);
+}
+
+.button-secondary:hover {
+    box-shadow: none;
+    color: var(--MAIN-LINK-color);
+    background-color:transparent;
+}
+
+.button-secondary:active {
+    box-shadow: none;
+}
+
+/* tables with no styles */
+
+table.frame-none {
+	border:none;
+	background-color: transparent;
+	width:auto;
+}
+
+table.frame-none td {
+	border:none;
+	padding:0;
+}
