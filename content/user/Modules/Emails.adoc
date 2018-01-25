@@ -167,9 +167,7 @@ image:272EmailsPersonalAccountSettings.png[User Email Settings]
 *Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Sent* items folder here. Enter the folder names or click btn:[Select] to connect to the mail server and select the relevant folder(s) from the popup dialog.
 image:273EmailsMonitoredFolders.png[Select monitored folders]
 
-*Signatures:* Specify the signature for this account. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
-
-
+*Signatures:* Select a sginature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to crete a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
 
 Once set up, the account will appear on the *Mail Accounts* tab. If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
 You can edit personal mail account settings here by clicking the pencil icon.
