@@ -12,21 +12,244 @@ Weight: 140
 
 == Introduction
 
+Configuring email for *SuiteCRM* provides a wide range of features, including sending personal emails to contacts, automatic creation of cases, sending notifications for events using link:../advanced-open-workflow/[workflows] and sending email marketing link:../campaigns/[campaigns]. This document explains the different types of mail accounts and how to set them up as well as a guide to using the *Emails* module. 
+
+
+== Email Settings 
+
+=== Overview
+
+Several different types of account can be configured within *SuiteCRM* for different purposes. These are:
+
+
+==== Outgoing Mail 
+
+Set up an outgoing mail server to sending automatic email notifications (such as record assignment notifications) and emails sent as link:../advanced-open-workflow[workflow] actions. 
+You will need to be an administrator to do this. 
+
+See <<Outgoing Mail Configuration Settings>> for instructions.
+
+Other outbound accounts can be configured in addition to the default account for specific purposes, such as sending link:../campaigns[campaigns]. These can be set up from the Admin panel, under outbound accounts. If no other outbound accounts are configured, the default outgoing mail server account will be used.
+
+
+==== Personal Accounts
+
+Set up a personal account to view and send email from a personal account within the Emails module. Emails will not be stored in *SuiteCRM* unless manually imported. 
+
+Personal accounts can be configured by the user from their user profile. Administrators can configure personal accounts for other users.
+
+See <<Personal Email Account Settings>> for instructions on setting up a personal account.
+
+
+			
+==== Group Accounts
+Set up a group account when you need several users to be able to view and send email from one mail account, for example a support or sales mailbox. Group accounts can be set up to automatically import and create records and Cases from incoming mail.
+
+Group accounts must be set up by an Administrator user. 
+
+See <<Group Email Account Settings>> for instructions on setting up a group account.
+
+
+
+==== Bounce Handling Accounts
+A Bounce Handling account is used with link:../campaigns[Campaigns] to handle bounced mail notifications when emails are undelivered. You will need to set up a Bounce Handling account in order to send a Campaign.
+
+Bounce Handling accounts must be set up by an Administrator. Once set up, users can select the bounce handling account when setting up a campaign.
+
+See <<Bounce Handling Account Settings>> for instructions on setting up a Bounce Handling account.
+
+=== Outgoing Mail Configuration Settings
+
+The default system outbound mail settings are used to send system notification emails such as password reset emails, record assignment notifications and link:../advanced-open-workflow[workflow] email notifications.
+
+{{%notice note %}}You will need administrator access to set up the system outbound account
+{{% /notice %}}
+
+Open the *Admin* panel and select *Email Settings* from the *Email* section. Enter the required configuration information for your system. 
+image:290EmailsSettings.png[default system settings]
+
+* *Allow users to use this account for outgoing mail* When this option selected, all users will be able to send emails using this outgoing mail account, which is the same as that used to send system notifications and alerts. If the option is not selected,
+users can still use the outgoing mail server after providing their own account information.
+
+Click btn:[SEND TEST EMAIL] to check your settings. You will be asked to enter an email address for the test message to be sent to. A verification message will be displayed if the email was sent successfully. Check that you have received this test message.
+
+Once the settings have been verified, be sure to click btn:[SAVE] so that these settings are retained.
+
+==== Email Options
+
+[cols = "40, 60", frame = "none", grid = "none"]
+|===
+|*Assignment Notifications*| When selected, users will be emailed when a record is assigned to them.
+|*Send notification from assigning user's email address*|Where the mail server supports this, the assigning user's name and email address will be included in the From field of the notification email. Otherwise the default system outbound account will be used.
+|===
+
+==== Email Security Settings
+
+=== Personal Email Account Settings
+
+Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually <<Importing Mail,imported>>. 
+Settings for personal email accounts are held within the user's profile. 
+
+{{% notice note %}}
+Individual users can set up their own personal accounts. Administrators can set up personal accounts for other users from the user profile in User Management.
+{{% /notice %}}
+
+==== User Profile Email Settings
+Open the user profile and scroll to the bottom of the main *User Profile tab* to view mail settings.
+
+image:270Emailusersettings.png[User Email Settings]
+
+* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. Where you have more than one email address, you can specify which is the main address for your account using the *Primary* radio button. You Can also specify which account to use as the Reply-to account.
+* *Email Client* - This setting controls which editor is used to compose and send mail when you click on an email link in SuiteCRM, for example an email address on a contact or account record.
+	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
+	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
+
+* *Email Editor* - This allows you to set the editor used when creating and editing <<Email Templates, email templates>> and also within the link:../campaigns[Campaigns] module. The *Email Editor* setting does not affect the *SuiteCRM Emails* module *Compose* view, which uses TinyMCE. This setting is not currently user-definable. 
+
+
+==== Adding A Personal Mail Account
+Click the btn:[SETTINGS] button at the bottom of the main User Profile tab to add a personal mail account.
+
+
+Select the Mail Accounts Tab and click btn:[ADD] under Mail Accounts to set up your incoming mail account.
+image:271EmailsAddPersonalAccount.png[Mail Accounts tab]
+
+Complete the required details for the account in the dialog which appears. You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. You may also need to set the Mail Server Port if this differs from the default IMAP setting. Your system administrator should be able to provide you with these settings. 
+
+Once entered, you can verify your mail settings by clicking the btn:[TEST SETTINGS] to test the connection to the account. 
+
+image:272EmailsPersonalAccountSettings.png[User Email Settings] 
+
+*Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Trash* folder here. Enter the folder names or click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
+image:273EmailsMonitoredFolders.png[Select monitored folders]
+
+*Signatures:* Select a signature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to crete a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
+
+Complete the *Outgoing Email* settings for the user account. 
+
+image:276EmailsAddPersonalAccount2.png[User Outgoing Mail Settings]
+
+Click btn:[DONE] to save the account settings and return to the *Mail Accounts* tab. 
+
+image:275EmailsAccountList.png[Accounts List]
+If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
+You can edit personal mail account settings here by clicking the pencil icon.
+
+==== User Mail Settings - General Tab
+
+There are further settings for mail on the *General Tab*:
+
+image:274EmailsGeneralTab.png[User Mail Settings General tab]
+
+* *Check for New Mail* - Here you can specify a time interval to automatically check for new mail in your account's monitored folders. The default setting is to check for mail manually, using the Check Mail button in Emails list view. 
+
+* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[CREATE] to add a new one or select one from the list. Existing signatures can be edited and deleted here. 
+
+* *Folder management* -Select the folder(s) which will be available to view from the *Emails* module. This list will show all the monitored folders from all the mail accounts to which you have access. Use ctrl+click to select more than one folder. 
+
+Click btn:[DONE] to save your settings. A confirmation dialog will appear. 
+You should now be able to <<Email Client Overview,view your emails>> in the *Emails* module.
+
+=== Group Email Account Settings
+
+A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example. In addition, group accounts are also used for sending email campaigns and as bounce handling mailboxes for campaigns. See the link:../campaigns[Campaigns] documentation for more information.
+
+SuiteCRM can also be configured to automatically import emails and to automatically <<Create Case From Email,create cases>> from email.
+
+{{% notice note %}}
+You will need to have Administrator access to set up and give access to a group email account.
+{{% /notice %}} 
+
+==== Group Mail Settings
+
+Open the *Admin* panel and select *Inbound Mail* from the *Email* section.
+Select *New Group Mail Account* from the Sidebar.
+
+You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. 
+
+*Monitored Folders* are the folders which are checked for new (unread) mail. *Inbox* and *Trash* folder names must be specified here. Click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
+
+image:280EmailsGroupMailSettings.png[Group Mail Settings]
+
+==== Email Handling Options
+
+image:281EmailsEmailHandlingOptions.png[Email Handling Options]
+
+===== Import Emails Automatically
+
+Check this box to import emails automatically, which means that records will be created in *SuiteCRM* for all incoming emails. These associated emails can then be viewed via the History subpanel of the relevant record. 
+This setting is selected by default in *SuiteCRM*.
+
+===== Create Case From Email
+Check this box to set up *SuiteCRM* to create a *Case* record from an incoming email. Select a *Distribution Method* to specify how cases created from incoming email are assigned to users.
+
+image:282EmailsCreateCase2.png[Create Case]
+
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|*Use AOP default*|This will use the settings in link:../advanced-open-cases-with-portal[Advanced Open Portal], configurable via the Admin panel. 
+|*Single User*| Enter a username or click the select arrow to search for a user. Every automatically created case will be assigned to the specified user.
+|*Round Robin*| Select All Users or an existing security group or role. Cases will be assigned to the next member of the specified group or role
+|*Least Busy*| Select All Users or an existing security group or role. Cases will be assigned to the member of the specified group or role with the least case assignments.
+|*Random*| Select All Users or an existing security group or role. Cases will be assigned randomly to members of the specified group or role
+|===
+
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|*New Case Auto-Reply template* |If *SuiteCRM* has been configured to auto-create cases, you can select or create an <<Email Templates,email template>> to use as an automated reponse to notify the sender that a case has been created. If no template is specified here, this automated reponse will not be sent. image:286EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
+|*No Auto_Reply to this Domain*|No auto-responses will be sent to the specified domain. Use this for example to exclude your company domain, so your users do not receive auto-reply messages. 
+|*Number of Auto-responses*|This setting specifies the maximum number of replies to send to a particular email address in a 24hr period.
+|===
+
+==== Reply To Settings
+
+image:287EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
+
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|* *From Address*| Used as the from address where supported, otherwise the <<System Outbound Mail Settings,default system outbound>> account will be used.
+|* *Allow users to send emails using the From name and Address as the reply to address*| When checked, the From Name and From Address for this account will appear as a *From* option when composing an email for all users that have access to this group account.
+|===
+
+Once configured, all inbound accounts are listed under *Inbound Accounts* on the *Admin* panel, from where they can be edited or removed. 
+
+=== Bounce Handling Account Settings
+
+When an email cannot be delivered to the intended recipient, it bounces. A Bounce Handling Account is used to manage these responses for an email link:../campaigns[campaign]. Bounced email addresses are recorded in the campaign status.
+
+Open the *Admin* panel and select *Inbound Mail* from the *Email* section.
+Select *New Bounce Handling Account* from the Sidebar.
+
+Once created, the bounce handling account can be selected when setting up a link:../campaigns[campaign].
+
+=== Other Mail Settings
+There are two other mail settings options on the Admin panel. 
+
+==== Campaign Mail Settings
+Configure the following additional settings for link:../campaigns[Campaigns] here
+
+* The batch size for sending campaign emails
+* Where campaign tracking files are located
+* Whether or not copies of campaign messages are kept
+
+==== Email Queue
+Scheduled campaign emails are queued here, with the option to send them immediately without waiting for the scheduler to do so.
+
+== Emails Module
+
 {{% notice note %}}
 This documentation is for *SuiteCRM* versions 7.9.x and later. For earlier versions of *SuiteCRM*, please see link:../emails-lts/[Emails-LTS].
 {{% /notice %}}
 
-Configuring email for *SuiteCRM* provides a wide range of features, including sending personal emails to contacts, automatic creation of cases, sending notifications for events using link:../advanced-open-workflow/[workflows] and sending email marketing link:../campaigns/[campaigns].
-
-The *Emails* module in *SuiteCRM* allows Users to view, store, compose, send and receive email from their own personal email account or a shared inbox, for example a Support or Sales inbox. 
-Emails can be imported and associated with a related *SuiteCRM* record, for example a Contact or an Account. These related emails can then be viewed on the history subpanel of the related record.
-
 === Changes to the Emails Module
 
 In previous releases, *SuiteCRM* synchronised email headers before the user could view mail. From 7.9. onward, *SuiteCRM* contacts the emails server directly, retrieving only the minimal information needed to process an operation. This eliminates the synchronisation process and significantly reduces the amount of email information that needs to be stored in the database. 
-If you are upgrading from a version of *SuiteCRM* prior to 7.9.x, please see the <<Upgrading, Upgrade guide>> section of this document.
+If you are upgrading from a version of *SuiteCRM* prior to 7.9.x, please see the <<Upgrading, Upgrading>> section of this document.
 
-== Email Client Overview
+=== Overview
+
+The *Emails* module in *SuiteCRM* allows Users to view, store, compose, send and receive email from their own personal email account or a shared inbox, for example a Support or Sales inbox. 
+Emails can be imported and associated with a related *SuiteCRM* record, for example a Contact or an Account. These related emails can then be viewed on the history subpanel of the related record.
 
 {{% notice note %}}
 You will need to set up and have access to at least one *personal* or *group* email account in order to use the *Emails* module. 
@@ -79,7 +302,7 @@ image:260Emailcompose.png[title="Compose Email"]
 
 // image:261EmailsAddtemplate.png[title="Adding Email template warning"]
 
-* *Related To:* To associate the email with a particular record, select the module (e.g. Accounts, Contacts, Leads) and then click the Search arrow to search for the record. Alternatively, you can begin typing the name into the field and select the relevant record from the autocomplete list which appears.
+* *Related To:* To associate the email with a particular record, select the module (e.g. Accounts, Contacts, Leads) and then click the Search arrow to search for the record. Alternatively, you can begin typing the name into the field and select the relevant record from the auto-complete list which appears.
 
 * *From:* If you have more than one email account configured, select the account from which to send the email. The *Reply To* and *From* settings for the selected account are displayed alongside for information.
 
@@ -130,175 +353,8 @@ As only imported emails are stored in *SuiteCRM*, only imported email records ca
 
 To delete an imported email record, open the email and then select Delete from the Actions menu dropdown. Note that this will only delete the SuiteCRM record and not the imap message. To remove emails from the Emails module, you will need to move or delete them using your external mail client.
 
-== Setting Up Mail Accounts
-
-=== Personal Email Account
-
-Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually <<Importing Mail,imported>>. 
-Settings for personal email accounts are held within the user's profile. 
-
-{{% notice note %}}
-Individual users can set up their own personal accounts. Administrators can set up personal accounts for other users from the user profile in User Management.
-{{% /notice %}}
-
-==== User Profile Email Settings
-Open the user profile and scroll to the bottom of the main *User Profile tab* to view mail settings.
-
-image:270Emailusersettings.png[User Email Settings]
-
-* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. Where you have more than one email address, you can specify which is the mian address for your account using the *Primary* radio button. You cna also specify which account to use as the Reply-to account.
-* *Email Client* - This setting controls which editor is used to compose and send mail when you click on an email link in SuiteCRM, for example an email address on a contact or account record.
-	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
-	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
-
-* *Email Editor* - This allows you to set the editor used when creating and editing <<Email Templates, email templates>> and also within the link:../campaigns[Campaigns] module. The *Email Editor* setting does not affect the *SuiteCRM Emails* module *Compose* view, which uses TinyMCE. This setting is not currently user-definable. 
 
 
-==== Adding A Personal Mail Account
-Click the btn:[SETTINGS] button at the bottom of the main User Profile tab to add a personal mail account.
-
-
-Select the Mail Accounts Tab and click btn:[ADD] under Mail Accounts to set up your incoming mail account.
-image:271EmailsAddPersonalAccount.png[Mail Accounts tab]
-
-Complete the required details for the account in the dialog which appears. You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. You may also need to set the Mail Server Port if this differs from the default IMAP setting. Your system administrator should be able to provide you with these settings. 
-
-Once entered, you can verify your mail settings by clicking the btn:[TEST SETTINGS] to test the connection to the account. 
-
-image:272EmailsPersonalAccountSettings.png[User Email Settings] 
-
-*Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Trash* folder here. Enter the folder names or click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
-image:273EmailsMonitoredFolders.png[Select monitored folders]
-
-*Signatures:* Select a signature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to crete a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
-
-Complete the *Outgoing Email* settings for the user account. 
-
-image:276EmailsAddPersonalAccount2.png[User Outgoing Mail Settings]
-
-Click btn:[DONE] to save the account settings and return to the *Mail Accounts* tab. 
-
-image:275EmailsAccountList.png[Accounts List]
-If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
-You can edit personal mail account settings here by clicking the pencil icon.
-
-==== User Mail Settings - General Tab
-
-There are further settings for mail on the *General Tab*:
-
-image:274EmailsGeneralTab.png[User Mail Settings General tab]
-
-* *Check for New Mail* - Here you can specify a time interval to automatically check for new mail in your account's monitored folders. The default setting is to check for mail manually, using the Check Mail button in Emails list view. 
-
-* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[CREATE] to add a new one or select one from the list. Existing signatures can be edited and deleted here. 
-
-* *Folder management* -Select the folder(s) which will be available to view from the *Emails* module. This list will show all the monitored folders from all the mail accounts to which you have access. Use ctrl+click to select more than one folder. 
-
-Click btn:[DONE] to save your settings. A confirmation dialog will appear. 
-You should now be able to <<Email Client Overview,view your emails>> in the *Emails* module.
-
-=== Group Email Account
-
-A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example. In addition, group accounts are also used for sending email campaigns and as bounce handling mailboxes for campaigns. See the link:../campaigns[Campaigns] documentation for more information.
-
-SuiteCRM can also be configured to automatically import emails and to automatically <<Create Case From Email,create cases>> from email.
-
-{{% notice note %}}
-You will need to have Administrator access to set up and give access to a group email account.
-{{% /notice %}} 
-
-==== Group Mail Settings
-
-Open the *Admin* panel and select *Inbound Mail* from the *Email* section.
-Select *New Group Mail Account* from the Sidebar.
-
-You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by SuiteCRM is IMAP. 
-
-*Monitored Folders* are the folders which are checked for new (unread) mail. *Inbox* and *Trash* folder names must be specified here. Click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
-
-image:280EmailsGroupMailSettings.png[Group Mail Settings]
-
-==== Email Handling Options
-
-image:281EmailsEmailHandlingOptions.png[Email Handling Options]
-
-===== Import Emails Automatically
-
-Check this box to import emails automatically, which means that records will be created in *SuiteCRM* for all incoming emails. These associated emails can then be viewed via the History subpanel of the relevant record. 
-This setting is selected by default in *SuiteCRM*.
-
-===== Create Case From Email
-Check this box to set up SuiteCRM to create a *Case* record from an incoming email. Select a *Distribution Method* to specify how cases created from incoming email are assigned to users.
-
-image:282EmailsCreateCase2.png[Create Case]
-
-[cols="20,80", frame = "none", grid = "none"]
-|===
-|*Use AOP default*|This will use the settings in link:../advanced-open-cases-with-portal[Advanced Open Portal], configurable via the Admin panel. 
-|*Single User*| Enter a username or click the select arrow to search for a user. Every automatically created case will be assigned to the specified user.
-|*Round Robin*| Select All Users or an existing security group or role. Cases will be assigned to the next member of the specified group or role
-|*Least Busy*| Select All Users or an existing security group or role. Cases will be assigned to the member of the specified group or role with the least case assignments.
-|*Random*| Select All Users or an existing security group or role. Cases will be assigned randomly to members of the specified group or role
-|===
-
-[cols="20,80", frame = "none", grid = "none"]
-|===
-|*New Case Auto-Reply template* |If *SuiteCRM* has been configured to auto-create cases, you can select or create an <<Email Templates,email template>> to use as an automated reponse to notify the sender that a case has been created. If no template is specified here, this automated reponse will not be sent. image:286EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
-|*No Auto_Reply to this Domain*|No auto-responses will be sent to the specified domain. Use this for example to exclude your company domain, so your users do not receive auto-reply messages. 
-|*Number of Auto-responses*|This setting specifies the maximum number of replies to send to a particular email address in a 24hr period.
-|===
-
-==== Reply To Settings
-
-image:287EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
-
-[cols="20,80", frame = "none", grid = "none"]
-|===
-|* *From Address*| Used as the from address where supported, otherwise the <<System Outbound Mail Settings,default system outbound>> account will be used.
-|* *Allow users to send emails using the From name and Address as the reply to address*| When checked, the From Name and From Address for this account will appear as a *From* option when composing an email for all users that have access to this group account.
-|===
-
-{{% notice tip %}}Once configured, all inbound accounts are listed under *Inbound Accounts* on the *Admin* panel, from where they can be edited or removed. 
-{{% /notice %}}
-
-=== Bounce Handling Account
-
-When an email cannot be delivered to the intended recipient, it bounces. A Bounce Handling Account is used to manage these responses for an email link:../campaigns[campaign]. Bounced email addresses are recorded in the campaign status.
-
-Open the *Admin* panel and select *Inbound Mail* from the *Email* section.
-Select *New Bounce Handling Account* from the Sidebar.
-
-Once created, the bounce handling account can be selected when setting up a link:../campaigns[campaign].
-
-Detail other campaign-specific email settings here? i.e. Campaign Email Settings and Email Queue?
-
-=== System Outbound Mail Settings
-
-The default system outbound mail settings are used to send system notification emails such as password reset emails, record assignment notifications and link:../advanced-open-workflow[workflow] email notifications.
-
-{{%notice note %}}You will need administrator access to set up the system outbound account
-{{% /notice %}}
-
-Open the *Admin* panel and select *Email Settings* from the *Email* section. Enter the required configuration information for your system. 
-image:290EmailsSettings.png[default system settings]
-
-*Allow users to use this account for outgoing mail*
-When this option selected, all users will be able to send emails using this outgoing mail account, which is the same as that used to send system notifications and alerts. If the option is not selected,
-users can still use the outgoing mail server after providing their own account information.
-
-Click btn:[SEND TEST EMAIL] to check your settings. You will be asked to enter an email address for the test message to be sent to. A verification message will be displayed if the email was sent successfully. Check that you have received this test message.
-
-Once the settings have been verified, be sure to click btn:[SAVE] so that these settings are retained.
-
-==== Email Options
-
-[cols = "40, 60", frame = "none", grid = "none"]
-|===
-|*Assignment Notifications*| When selected, users will be emailed when a record is assigned to them.
-|*Send notification from assigning user's email address*|Where the mail server supports this, the assigning user's name and email address will be included in the From field of the notification email. Otherwise the default system outbound account will be used.
-|===
-
-==== Email Security Settings
 
 == Email Templates
 
@@ -308,7 +364,7 @@ Email templates are created from the *Email Templates* module which can be opene
 
 image:300EmailsTemplates.png[Email Templates] 
 
-There are a number of default system templates which are created on install. These are used to send out system notifications such as new passwords or case updates. These can be viewed and edited here alongside user-generated templates. Templates created here can also be used in Workflows and Campaigns for example, as well as for system notifications.
+There are a number of default system templates which are created on install. These are used to send out system notifications such as new passwords or case updates. These can be viewed and edited here alongside user-generated templates. Templates created here can also be used in link:../advanced-open-workflow[Workflows] and link:../campaigns[Campaigns] for example, as well as for system notifications.
 
 Click on a template name to view the template. 
 
@@ -316,7 +372,7 @@ To edit an existing template, either open the template and select Edit from the 
 
 === Creating an Email Template
 
-Select *Create Email Template* from the sidebar. This Create view will also appear if you choose to create a template from within another module such as Workflows, for example. Select Email, Campaign or System depending on the use for the template. System templates are used to send system generated notifications such as case updates.
+Select *Create Email Template* from the sidebar. This Create view will also appear if you choose to create a template from within another module such as link:../advanced-open-workflow[Workflows], for example. Select *Email*, *Campaign* or *System* depending on the use for the template. *System* templates are used to send system generated notifications such as case updates.
 
 image:301EmailsNewTemplate.png[New email template]
 
@@ -346,9 +402,9 @@ image:303EmailsInsertVariable2.png[Template variable in subject and body]
 Restrict access to a template by selecting a Security Group. 
 
 == Upgrading
-If you are upgrading from a version of SuiteCRM prior to *7.9.x*, you will need to use the *Sync Inbound Email Account Tool* on upgrading. This tool will synchronise mail already imported into SuiteCRM with your current IMAP accounts so that you will not have to synchronise in the future.
+If you are upgrading from a version of *SuiteCRM* prior to *7.9.x*, you will need to use the *Sync Inbound Email Account Tool* on upgrading. This tool will synchronise mail already imported into *SuiteCRM* with your current IMAP accounts so that you will not have to synchronise in the future.
 
-The Sync Inbound Email Accounts tool goes through all the selected inbound email accounts and updates them to support new features in SuiteCRM 7.9 onwards:
+The Sync Inbound Email Accounts tool goes through all the selected inbound email accounts and updates them to support new features in *SuiteCRM* 7.9 onwards:
 
 * Connects to the email server (via IMAP)
 * Downloads the email header information
