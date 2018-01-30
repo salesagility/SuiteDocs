@@ -1,4 +1,3 @@
-
 ---
 weight: 19
 title: "19. Further Resources"
@@ -18,13 +17,13 @@ developing with SuiteCRM.
 The SuiteCRM website http://suitecrm.com[SuiteCRM.com] has many
 excellent resources including:
 
-* btn:[https://suitecrm.com/forum/index[SuiteCRM forums]] - Come and say hi!
-* btn:[https://suitecrm.com/suitecrm/blog[SuiteCRM Blog]]
-* btn:[https://suitecrm.com/wiki/index.php/Main_Page[SuiteCRM Wiki]]
+* https://suitecrm.com/forum/index[SuiteCRM forums] - Come and say hi!
+* https://suitecrm.com/suitecrm/blog[SuiteCRM Blog]
+* https://suitecrm.com/wiki/index.php/Main_Page[SuiteCRM Wiki]
 
 == External SuiteCRM Resources
 
-btn:[https://github.com/salesagility/SuiteCRM[SuiteCRM GitHub]] - The SuiteCRM source code is hosted on GitHub. Here you can get bleeding edge code changes and even contribute code.
+https://github.com/salesagility/SuiteCRM[SuiteCRM GitHub] - The SuiteCRM source code is hosted on GitHub. Here you can get bleeding edge code changes and even contribute code.
 
 == SugarCRM Resources
 
@@ -33,29 +32,29 @@ edition and much of the documentation is still valid. The appropriate
 version for SuiteCRM information is 6.5. Versions of documentation
 higher than this (i.e. 7) will probably not be relevant.
 
-* btn:[http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/[SugarCRM Developer docs]]
-* btn:[http://developer.sugarcrm.com/[SugarCRM Developer Blog]]
+* http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/[SugarCRM Developer docs]
+* http://developer.sugarcrm.com/[SugarCRM Developer Blog]
 
 == Technical Links
 
-* btn:[http://php.net/[PHP]] - The main language used by SuiteCRM
-* btn:[http://www.smarty.net/[Smarty]] - The templating language used throughout SuiteCRM.
-* btn:[http://xdebug.org[XDebug]] - Debugging/profiling extension for PHP
-* btn:[http://git-scm.com/[Git]] - Distributed version control system
-* btn:[http://yuilibrary.com/[YUI]] - Legacy Javascript library used in SuiteCRM
-* btn:[https://jquery.com/[JQuery]] - Javascript library used in SuiteCRM - to
+* http://php.net/[PHP] - The main language used by SuiteCRM
+* http://www.smarty.net/[Smarty] - The templating language used throughout SuiteCRM.
+* http://xdebug.org[XDebug] - Debugging/profiling extension for PHP
+* http://git-scm.com/[Git] - Distributed version control system
+* http://yuilibrary.com/[YUI] - Legacy Javascript library used in SuiteCRM
+* https://jquery.com/[JQuery] - Javascript library used in SuiteCRM - to
 be preferred over YUI.
-* btn:[https://github.com/PHPMailer/PHPMailer[PHPMailer]] Email library used
+* https://github.com/PHPMailer/PHPMailer[PHPMailer] Email library used
 in SuiteCRM
-* btn:[http://php.net/manual/en/book.apc.php[APC]] - Alternative PHP Cache.
+* http://php.net/manual/en/book.apc.php[APC] - Alternative PHP Cache.
 PHP Opcode cache supported by SuiteCRM
-* btn:[http://php.net/manual/en/book.wincache.php[WinCache]] - Windows PHP
+* http://php.net/manual/en/book.wincache.php[WinCache] - Windows PHP
 cache. PHP Opcode cache supported by SuiteCRM
-* btn:[https://www.jetbrains.com/phpstorm/[PHPStorm]] - PHP IDE (Paid)
-* btn:[https://eclipse.org/pdt/[Eclipse PHP Development Tools]] - PHP IDE
+* https://www.jetbrains.com/phpstorm/[PHPStorm] - PHP IDE (Paid)
+* https://eclipse.org/pdt/[Eclipse PHP Development Tools] - PHP IDE
 (Free and Open Source)
 
 == Other Links
 
-* btn:[https://salesagility.com/[SalesAgility]] - The company behind SuiteCRM.
-* btn:[http://www.jsmackin.co.uk[Jim Mackin]] - Me :) link:../19.-further-resources[↩]
+* https://salesagility.com/[SalesAgility] - The company behind SuiteCRM.
+* http://www.jsmackin.co.uk[Jim Mackin] - Me :) link:../19.-further-resources[↩]
