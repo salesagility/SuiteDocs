@@ -1,0 +1,54 @@
+---
+title: Target Lists
+weight: 185
+---
+
+== Target Lists
+
+The Target Lists module in SuiteCRM is used to separate Targets into
+groups, these can be groups of individuals that should be excluded from
+a particular Campaign, test groups or a list of Targets grouped by
+certain criteria, for example area or market an organisation works in.
+
+=== Target Lists Actions
+
+You can access the Target Lists actions from the Target Lists module
+menu drop down or via the Sidebar. The Target Lists actions are as
+follows:
+
+* *Create Target List* – A new form is opened in Edit View to allow you to
+create a new Target List record.
+* *View Target Lists* – Redirects you to the List View for the Target
+Lists module. This allows you to search and list Target List records.
+
+To view the full list of fields available when creating a Target List,
+See link:http://docs.suitecrm.com/user/appendix-a/#_targets_field_list[Target Lists Field List].
+
+=== Managing Target Lists
+
+* To sort records on the Target List List View, click any column title
+which is sortable. This will sort the column either ascending or
+descending.
+* To search for a Target List, see the link:http://docs.suitecrm.com/user/user-interface/#_search[Search] section of
+this user guide.
+* To update some or all the Target Lists on the List View, use the Mass
+Update panel as described in the link:http://docs.suitecrm.com/user/user-interface/#_mass_updating_records[Mass
+Updating Records] section of this user guide.
+* To duplicate a Target List, you can click the Duplicate button on the
+Detail View and then save the duplicate record.
+* To delete one or multiple Target Lists, you can select multiple
+records from the List View and click delete. You can also delete a
+Target List from the Detail View by clicking the Delete button. For a
+more detailed guide on deleting records, see the
+link:http://docs.suitecrm.com/user/user-interface/#_deleting_records[Deleting Records] section of this user guide.
+* To view the details of a Target List, click the Target List Name in
+the List View. This will open the record in Detail View.
+* To edit the Target List details, click Edit icon within the List View
+or click the edit button on the Detail View, make the necessary changes,
+and click Save.
+* For a detailed guide on importing and exporting Target Lists, see the
+link:http://docs.suitecrm.com/user/user-interface/#_importing_records[Importing Records] and
+link:http://docs.suitecrm.com/user/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+* To track all changes to audited fields, in the Target List, you can
+click the View Change Log button on the Target List's Detail View or
+Edit View.
