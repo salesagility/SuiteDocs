@@ -1,0 +1,52 @@
+---
+title: ListView Conditional Formatting
+---
+
+Sometimes you will want to format fields that are shown on the list view
+depending on the values. For example you may want to colour the
+direction field on calls differently or to highlight quotes that expire
+soon.
+
+In this post we’ll be adding a simple coloured border to the
+``Industry'' field in the Accounts list view. We’ll end up with
+something similar to this:
+link:%7Bfilename%7D/uploads/IndustryColours.png[image:%7Bfilename%7D/uploads/IndustryColours.png[Coloured
+fields on the list view]]
+
+This is fairly straightforward. We’ll define a logic hook which will
+override the industry value and add in the styling we want.
+
+First off we define the logic hook in
+`custom/Extension/modules/Accounts/Ext/LogicHooks/ListViewHighlight.php`
+with the following:
+
+[source,php]
+----
+<?php
+$hook_array['process_record'][] = Array(1, 'Highlight account industry', 'custom/modules/Accounts/HighlightIndustryLogicHook.php','HighlightIndustryLogicHook', 'highlightIndustry');
+----
+
+This sets up a `process_record` logic hook. This will be fired whenever
+a record is prepared for a list view or subpanel.
+
+Next up we will define the class which will actually perform the
+formatting in `custom/modules/Accounts/HighlightIndustryLogicHook.php`
+
+[source,php]
+----
+<?php
+class HighlightIndustryLogicHook{
+
+    public function highlightIndustry(SugarBean $bean, $event, $arguments){
+        $colour = substr(md5($bean->industry),0,6);
+        $bean->industry = "<div style='border: solid 5px #$colour;'>".$bean->industry."</div>";
+    }
+
+}
+----
+
+This simply generates colour based on the Accounts industry and sets it
+as a border for the field.
+
+Any issues? Let me know via the
+link:%7Bfilename%7D/pages/contact.md[Contact Form].
