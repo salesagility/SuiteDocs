@@ -84,7 +84,7 @@ Once the settings have been verified, be sure to click btn:[SAVE] so that these 
 
 == Personal Email Account Settings
 
-Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually <<Importing Mail,imported>>. 
+Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually link:../emails/#_import_mail[imported]. 
 Settings for personal email accounts are held within the user's profile. 
 
 {{% notice note %}}
