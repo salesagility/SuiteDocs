@@ -750,10 +750,10 @@ Release Notes
 ~~~~~~~~~~~~~
 
 [discrete]
-===== Security
+=== Security
 Resolved security issues
 
-===== Bug Fixes
+=== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/4375[#4375 ] Fixed 4375 - Html Field in edit view
 * https://github.com/salesagility/SuiteCRM/issues/4183[#4183 ] Fixed #4183 - SuiteP - Tabs not behaving correctly on small screens
 * https://github.com/salesagility/SuiteCRM/issues/4328[#4328 ] Fixed #4328 - TinyMCE brand name
