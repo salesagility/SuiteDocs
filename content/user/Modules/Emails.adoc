@@ -27,7 +27,7 @@ See link:../email-settings[Email Settings] for information on mail configuration
 You will need to set up and have access to at least one *personal* or *group* email account in order to use the *Emails* module. See link:../email-settings[Email Settings] for information on mail configuration for *SuiteCRM*.
 {{% /notice %}}
 
-The *Emails* Module can be found on the *All* menu on the top navigation bar. The module opens in List View, showing all the the mail from the default mail account inbox in the main window. 
+The *Emails* Module can be found on the *ALL* menu on the top navigation bar. The module opens in List View, showing all the the mail from the default mail account inbox in the main window. 
 
 image:250EmailsListView.png[title="Emails Module List View"]
 
@@ -49,7 +49,7 @@ The main actions for the *Emails* module are contained within the buttons on the
 |===
 |image:253EmailsBulkAction.png[title="Bulk Action button"]|*Bulk Action*|Use the Bulk Action dropdown to bulk <<Import Mail,import mail>>, to mark mail as read/unread or to flag mail for follow up. Multiple emails can be selected in list view using the checkboxes.
 |image:252EmailsComposebutton.png[title="Compose Mail button"]|*Compose Mail* |Opens the <<Compose Mail, Compose>> window to create a new message.
-|image:254EmailsSettingsButton.png[title="Mail Settings button"]|*Settings*|Shortcut to your user profile where you can edit your <<User Profile Email Settings, mail settings>>.  Add and remove accounts and select folders to view here.
+|image:254EmailsSettingsButton.png[title="Mail Settings button"]|*Settings*|Shortcut to your user profile where you can edit your link:../email-settings/#_user_profile_email_settings[user profile email settings].  Add and remove accounts and select folders to view here.
 |image:255EmailsCheckForMailButton.png[title="Check for Mail button"]|*Check For Mail*| For personal email accounts, you can check for new mail with this button . Note that for Group email accounts, checking for email is done automatically via the *Check Inbound Mailboxes* Scheduler. You will need to ensure that your cron settings are correct for the scheduler to run. Please see link for further information on Schedulers.
 |image:256EmailsChangeFolderButton.png[title="Select Folder button"]|*Select Folder*|This allows you to select which monitored folder you wish to view. If you have more than one account set up, you can also switch between accounts with this button. Expanding an account in the list will show all the monitored folders for the account. Select the required folder.
 |===
@@ -65,7 +65,7 @@ Click the Compose Mail button or select *Compose* from the *Sidebar* to open a n
 
 Emails can also be composed directly from a *SuiteCRM* record by clicking the email address on the record. This will open compose view in the *Emails* module. For new emails opened in this way, the *To:* field will be automatically populated and the email will related to the relevant record. 
 
-{{% notice note %}}If you have opted to use an external email client in your <<User Profile Email Settings, user profile email settings>>, clicking an email address on a record in *SuiteCRM* will open a new email in your chosen editor.
+{{% notice note %}}If you have opted to use an external email client in your link:../email-settings/#_user_profile_email_settings[user profile email settings], clicking an email address on a record in *SuiteCRM* will open a new email in your chosen editor.
 {{% /notice %}}
 
 image:260Emailcompose.png[title="Compose Email"]
@@ -80,7 +80,7 @@ image:260Emailcompose.png[title="Compose Email"]
 
 * *To:* Selecting a related record in the with a valid email address will automatically populate the *To:* field. Alternatively, the *To:*, *Cc:* and *Bcc:* fields can be populated manually or via the select buttons which appear when you click inside the fields.
 
-* *Body:*  If you have configured a signature for this account in your <<User Mail Settings - General Tab, user profile email settings>>, this will appear automatically in the body of the email.
+* *Body:*  If you have configured a signature for this account in your link:../email-settings/#_user_profile_email_settings[user profile email settings], this will appear automatically in the body of the email.
 
 The toolbar at the bottom of the Compose view has the following buttons:
 
@@ -106,7 +106,11 @@ image:268bEmailsImport.png[title="Import emails"]
 
 ==== Import One or More Emails
 
-One or more emails can be imported at the same time from *List* view. Select the email(s) you wish to import using the checkboxes to the left-hand side of the view. Select *Import* from the *Bulk Action* menu.
+One or more emails can be imported at the same time from *List* view. 
+
+Select the email(s) you wish to import using the checkboxes to the left-hand side of the view. 
+
+Select *Import* from the *Bulk Action* menu.
 
 image:268aEmailsImport.png[title="Import emails"]
 
@@ -114,7 +118,7 @@ On importing, a dialog will open allowing you to select which record to relate t
 
 image:268EmailsImportDialog.png[title="Import emails"]
 
-First select the module type from the drop-down.  Now use the search arrow button to find and select the relevant record, or begin typing the name into the field and select the required record from the auto-complete list. Click the btn:[OK] button.
+First select the module type from the drop-down.  Next, use the search arrow button to find and select the relevant record, or begin typing the name into the field and select the required record from the auto-complete list. Click the btn:[OK] button.
 
 Note that if you are bulk importing mail, all emails will be related to the record selected here. If you need to relate mail to different records you will need to import these individually.
 
@@ -125,14 +129,13 @@ As only imported emails are stored in *SuiteCRM*, only imported email records ca
 
 To delete an imported email record, open the email and then select Delete from the Actions menu dropdown. Note that this will only delete the SuiteCRM record and not the imap message. To remove emails from the Emails module, you will need to move or delete them using your external mail client.
 
-
 == Email Templates
 
 Email templates are used to send standardised responses and notifications via email. Adding variables allows you to personalise these communications and include additional relevant information such as order details.
 
-From *SuiteCRM* 7.9.x onwards, email templates can be viewed, edited and created from the *Email Templates* module which can be found on the *All* menu. Alternatively, templates can be created by the user directly from the workflow and campaigns modules.
+From *SuiteCRM* 7.9.x onwards, email templates can be viewed, edited and created from the *Email Templates* module which can be found on the *ALL* menu. Alternatively, templates can be created by the user directly from the workflow and campaigns modules.
 
-{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../email-settings/#_user_profile_email_settings[user profile email settings]. The default setting is Mosaik, which is shown in the following screen shots. {{% /notice %}}
+{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../email-settings/#_user_profile_email_settings[user profile email settings]. The default setting (Mosaik) is shown in the following screen shots. {{% /notice %}}
 
 image:300EmailsTemplates.png[Email Templates] 
 
@@ -144,7 +147,9 @@ To edit an existing template, either open the template and select *Edit* from th
 
 === Creating an Email Template
 
-Select *Create Email Template* from the sidebar. This Create view will also appear if you choose to create a template from within another module such as link:../advanced-open-workflow[Workflows], for example. Select *Email*, *Campaign* or *System* depending on the use for the template. *System* templates are used to send system generated notifications such as case updates.
+Select *Create Email Template* from the sidebar. This *Create* view will also appear if you choose to create a template from within another module such as link:../advanced-open-workflow[Workflows], for example. 
+
+Select *Email*, *Campaign* or *System* depending on the use for the template. *System* templates are used to send system generated notifications such as case updates.
 
 image:301EmailsNewTemplate.png[New email template]
 
@@ -166,7 +171,7 @@ image:303EmailsInsertVariable2.png[Template variable in subject and body]
 
 [cols="20,80",frame="none", grid="none"]
 |===
-|image:304EmailsTemplateAttachment.png[Template attachments]|Click btn:[BROWSE] to attach an external file or btn:[DOCUMENTS] to attach a *SuiteCRM* document to the template. Further items can be attached in the same way. The attached file(s) will be sent to all recipients of the template.
+|image:304EmailsTemplateAttachment.png[Template attachments]|Click btn:[BROWSE] to attach an external file or btn:[DOCUMENT] to attach a *SuiteCRM* document to the template. Further items can be attached in the same way. The attached file(s) will be sent to all recipients of the template.
 |===
 
 ==== Security Groups
@@ -184,10 +189,17 @@ If you are upgrading from a version of *SuiteCRM* prior to *7.9.x*, you will nee
 === Sync Inbound Emails Accounts Tool
 
 From the *Admin* panel, select *Repair* and then *Sync Inbound Email Accounts*.
+image:SyncInboundEmailAccounts.png[Sync Inbound Email Accounts]
 
 This will display a multiple selection box *Mail Account Name* listing all of the the active inbound email accounts (including personal accounts) and a btn:[SYNC] button.
 
-Select the required accounts from the multiple selection box (use ctrl + click to select more than one) and click btn:[SYNC]. The page will refresh and list the progression of the tool.
+[cols="20,80",frame="none", grid="none"]
+|===
+|image:SyncInboundEmailAccounts2.png[Select accounts to sync]
+|Select the required accounts from the multiple selection box (use *ctrl + click* to select more than one) and click btn:[SYNC]. 
+|===
+
+The page will refresh and list the progression of the tool.
 
 The tool goes through all the selected inbound email accounts and updates them to support new features in *SuiteCRM* 7.9 onwards:
 
