@@ -49,6 +49,9 @@ Assets
 Release Notes
 ~~~~~~~~~~~~~
 
+[discrete]
+===== Bug Fixes
+
 * https://github.com/salesagility/SuiteCRM/issues/5028[#5028] Fixed #5028 - Subpanel select not working in 7.8.11 and 7.9.10
 * https://github.com/salesagility/SuiteCRM/issues/5029[#5029] Fixed #5029 - DateTime calendar popup button & manual edit of data entry doesn't work in 7.9.10
 
@@ -73,6 +76,9 @@ Assets
 
 Release Notes
 ~~~~~~~~~~~~~
+
+[discrete]
+===== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5028[#5028] Fixed #5028 - Subpanel select not working in 7.8.11 and 7.9.10
 * https://github.com/salesagility/SuiteCRM/issues/5029[#5029] Fixed #5029 - DateTime calendar popup button & manual edit of data entry doesn't work in 7.9.10
