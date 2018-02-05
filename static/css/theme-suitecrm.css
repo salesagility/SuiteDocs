@@ -539,7 +539,7 @@ nav.webnav li.download:hover a {
    padding: 0;
    overflow: hidden;
    background-color: var(--MENU-TOP-BG-color);
-   background-color:#6B6577;
+   background-color:#DE6150;
 }
 
 #topmenu li {
@@ -550,7 +550,7 @@ nav.webnav li.download:hover a {
 
 #topmenu li.guide_start {
 	padding: 15px 2px 15px 15px;
-	color:#B7B6BC;
+	color:#fff;
 	font-weight:300;
 }
 
@@ -559,7 +559,7 @@ nav.webnav li.download:hover a {
 }
 
 #topmenu li.guide {
-	background-color:#44404F;
+	background-color:#BD5244;
 }
 
 #topmenu li a {
@@ -572,10 +572,12 @@ nav.webnav li.download:hover a {
 
 #topmenu li:hover {
    background-color: var(--MAIN-LINK-color);
+   background-color:#FA7564;
 }
 
 #topmenu li.guide_start:hover {
-   background-color:#44404F;
+   background-color:#BD5244;
+ 
 }
 
 
