@@ -399,7 +399,7 @@ nav.webnav.mini {
 
 nav.webnav {
 	z-index:9999;
-	font-family:'Lato';
+	font-family: 'Lato', sans-serif;
 	float:left;
 	width:75%;
 	background-color: var(--MENU-TOP-BG-color);
