@@ -94,7 +94,15 @@ image:GDPRRecordActionsMenu.png[title="Actions menu"]
 
 == Campaigns
 
+Your GDPR settings will affect your target lists for Campaigns. Campaign emails will NOT be sent to email addresses unless they are *Opted In* or *Confirmed Opted In*, depending on which settings you have chosen.
+
 === Web To Person Form Opt In
 
+When creating a Web To Person form, an *Opt In* checkbox will be automatically added after the email address field if *Opt In* or *Confirmed Opt In* is configured. 
 
+image:GDPRCreatePersonForm.png[title="Web To Person form"]
+
+If the user checks this box, the email address will be set as *Opted In* (or *Pending Confirmation* if you have *Confirmed Opt In* configured) when the record is created in *SuiteCRM*.
+
+Note that if you have *Confirmed Opt In* configured and *Automatic Opt In Email* selected, the Opt In email will be sent automatically following submission of the form. If *Automatic Opt In Email* is not selected, these emails will need to be sent <<Sending/Resending Opt In Email Manually,manually>>. 
 
