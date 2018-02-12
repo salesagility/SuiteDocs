@@ -14,7 +14,7 @@ Weight: 190
 
 The *Surveys* module allows you to create a web-based survey with a variety of question-type options.
 
-Surveys can be sent as part of a link:../15campaigns[Campaign], and survey results are presented in a report detailing the responses received.
+Surveys can be sent as part of a link:../15campaigns[Campaign]. Survey results can be presented in a report detailing the responses received.
 
 == Create Survey
 
@@ -24,15 +24,15 @@ image:SurveysSideBar.png[title="Surveys sidebar"]
 
 image:SurveysCreateSurvey.png[title="Create Survey"]
 
-*Name:* Set the title for the survey here. This will be displayed to survey users.
+*Name:* Enter the title of the survey to be displayed to users.
 
 *Status:*
 
 * *Draft*: Survey in preparation, not yet ready to publish and seek responses.
-* *Public*: Once ready, setting the survey status to *Public* will generate a URL link for the survey. Once responses have been received, the survey questions cannot be edited.
+* *Public*: Once ready, setting the survey status to *Public* will generate a URL link for the survey. The survey can be viewed and completed and any responses submitted will be recorded. Note that once responses have been received, the survey questions cannot be edited.
 * *Closed*: A *Closed* survey will not accept any further responses. Users navigating to the survey link will see a message informing them that the survey is now closed.
 
-*Description:* This description is for internal use only and will not be displayed to survey users.
+*Description:* Note that this description is internal only - it will not be displayed to users as part of the survey.
 
 === Add Questions
 
@@ -72,9 +72,11 @@ Click btn:[NEW QUESTION] to add more questions in the same way.
 
 ==== Deleting and Reordering Questions
 
-Questions can be reordered (moved up or down) or deleted using the Actions buttons to the left of the questions.
-
-image:SurveysQActionButtons.png[title="Survey question action buttons"]
+[cols="30,70",frame="none", grid="none"]
+|===
+|image:SurveysQActionButtons.png[title="Survey question action buttons"]
+|Questions can be reordered (moved up or down) or deleted using the Actions buttons to the right of the questions.
+|===
 
 === Further Options
 
@@ -85,9 +87,43 @@ image:SurveysMatrixText.png[title="Matrix question response text"]
 
 Click btn:[SAVE] to save the survey.
 
-== Survey Link
+== View Survey
+
+Once the survey is complete, edit the survey status and set to *Public*.
+
+Click btn:[SAVE]
+
+image:SurveysDemo.png[title="Survey detail view showing URL"]
+
+The Detail View for the survey will be displayed, now showing the URL for the survey. Click on the URL to view the survey.
+
+image:SurveysDemo2.png[title="Survey demo"]
+
+Responses can be submitted by clicking btn:[Submit] Users will be redirected to a thank you page and the responses will be recorded. 
+
+Responses can be viewed in the <<View Survey Reports, Survey Report>>.
+
+{{% notice warning %}} 
+Once responses have been received, survey questions cannot be edited.
+{{%/notice %}}
+
+{{% notice tip %}} 
+The logo displayed above the survey is the current logo set for your *SuiteCRM* instance, which can be set in *System Settings* on the *Admin* panel
+{{%/notice %}}
+
+== Edit Survey
 
 == View Survey Reports
+
+[frame="none", grid="none"]
+|===
+|To view the responses to the survey, select *View Survey Reports* from the *Actions* menu.
+|image:SurveysActionsMenu.png[title="Survey Actions Menu"]
+|===
+
+The report shows the responses broken down by question, with charts where appropriate. For example, the responses report for the second question in the demo survey above might look as follows:
+
+image:SurveysReport.png[title="Survey Report detail"]
 
 == Survey Campaign
 
