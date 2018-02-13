@@ -1,6 +1,9 @@
 ---
 title: ListView Conditional Formatting
+weight: 20
 ---
+
+:imagesdir: ./../../../images/en/community
 
 Sometimes you will want to format fields that are shown on the list view
 depending on the values. For example you may want to colour the
@@ -10,8 +13,8 @@ soon.
 In this post we’ll be adding a simple coloured border to the
 ``Industry'' field in the Accounts list view. We’ll end up with
 something similar to this:
-link:%7Bfilename%7D/uploads/IndustryColours.png[image:%7Bfilename%7D/uploads/IndustryColours.png[Coloured
-fields on the list view]]
+
+image:02IndustryColours.png[Coloured fields on the list view]
 
 This is fairly straightforward. We’ll define a logic hook which will
 override the industry value and add in the styling we want.

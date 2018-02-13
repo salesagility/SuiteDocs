@@ -391,6 +391,133 @@ div.notices.tip p:first-child:after {
 
 
 
+/*//-- WEB MENU --//*/
+
+nav.webnav.mini {
+	display: none;
+}
+
+nav.webnav {
+	z-index:9999;
+	font-family: 'Lato', sans-serif;
+	float:left;
+	width:75%;
+	background-color: var(--MENU-TOP-BG-color);
+	position:relative;
+}
+
+nav.webnav ul li:hover > ul {
+	display:block;
+}
+
+nav.webnav ul {
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	background-color:#5C566A;
+	font-size:16px;
+	text-align: center;
+}
+
+nav.webnav > ul {
+	width:100%;
+}
+
+nav.webnav ul li {
+	position:relative;
+	border-top:2px solid #5C566A;
+	display: inline-block;
+	margin:0;
+	padding:0;
+}
+
+nav.webnav ul li a {
+	display:block;
+	color:#fff;
+	text-decoration:none;
+	padding:27px 15px;
+}
+
+nav.webnav ul li.current-menu-item {
+	border-top:2px solid #dc6254;
+}
+
+nav.webnav ul li.current-menu-item a {
+	color:#dc6254;
+}
+
+nav.webnav ul li:hover {
+	background:#fff;
+	border-top:2px solid #dc6254;
+}
+
+nav.webnav ul li:hover a {
+	color:#5c566b;
+}
+
+nav.webnav ul ul {
+	display:none;	
+	position:absolute;
+	top:100%;
+	left:0;
+	padding:0;
+	background-color:#fff;
+	border-top:2px solid #dc6254;
+	font-size:14px;
+	text-align:left;
+}
+
+nav.webnav ul ul li {
+	float:none;
+	width:200px;
+	border-top:none;	
+}
+
+nav.webnav ul ul li a {
+	padding:8px 15px;
+}
+
+nav.webnav ul ul li:hover {
+	border-top:none;
+	background-color:#dc6254;
+}
+
+nav.webnav ul ul li:hover > a {
+	color:#fff;
+}
+
+nav.webnav ul ul ul {
+	top:-2px;
+	left:100%;
+	background-color:#fff;
+	font-size:14px;
+}
+
+nav.webnav li.download a {
+	background-color:#dc6254;
+	text-transform: uppercase;
+	border-radius:5px;
+	padding:5px 10px;
+	font-size:13px;
+}
+
+nav.webnav li.download:hover {
+	background-color:#5c566b;
+	border-top-color: #5c566b;
+}
+
+nav.webnav li.download:hover a {
+	color:#dc6254;
+	background-color: #fff;
+}
+
+
+
+
+
+
 
 
 /*//----- MENU -----//*/
@@ -412,6 +539,7 @@ div.notices.tip p:first-child:after {
    padding: 0;
    overflow: hidden;
    background-color: var(--MENU-TOP-BG-color);
+   background-color:#DE6150;
 }
 
 #topmenu li {
@@ -422,7 +550,7 @@ div.notices.tip p:first-child:after {
 
 #topmenu li.guide_start {
 	padding: 15px 2px 15px 15px;
-	color:#B7B6BC;
+	color:#fff;
 	font-weight:300;
 }
 
@@ -431,7 +559,7 @@ div.notices.tip p:first-child:after {
 }
 
 #topmenu li.guide {
-	background-color:#44404F;
+	background-color:#BD5244;
 }
 
 #topmenu li a {
@@ -444,10 +572,12 @@ div.notices.tip p:first-child:after {
 
 #topmenu li:hover {
    background-color: var(--MAIN-LINK-color);
+   background-color:#FA7564;
 }
 
 #topmenu li.guide_start:hover {
-   background-color:#44404F;
+   background-color:#BD5244;
+ 
 }
 
 
@@ -681,13 +811,13 @@ select::-ms-expand {
     	font-size: 3.0rem;
    }
 }
-@media only all and (max-width: 47.938em) {
+@media only all and (max-width: 59.938em) {
    body #chapter h1 {
    	font-size: 2.0rem;
    }
 }
 
-@media only all and (max-width: 47.938em) {
+@media only all and (max-width: 59.938em) {
    #sidebar-toggle-span {
       display: inline;
    }
@@ -773,6 +903,8 @@ select::-ms-expand {
    }
 }
 
+
+
 /* amended */
 @media only all and (max-width: 59.938em) {
    #sidebar {
@@ -797,10 +929,34 @@ select::-ms-expand {
 	}   
 }
 
-@media only all and (max-width: 47.938em) {
+/*@media only all and (max-width: 47.938em) {*/
+@media only all and (max-width: 59.938em) {
+   nav.webnav {
+	   display:none;
+   }
+   
+   nav.webnav.mini {
+	   display: block;
+	   z-index:10;
+	   width:100%;
+	   padding:15px 3%;
+   }
+   
+   nav.webnav.mini ul {
+	   text-align: right;
+	   float:right;
+	   width:auto;
+   }
+   
+   nav.webnav.mini img {
+	   width:150px;
+	   float:left;
+   }
+   
    #sidebar {
       width: 300px;
       left: -300px;
+      z-index:9999;
    }
    #body {
       margin-left: 0;
@@ -831,7 +987,7 @@ select::-ms-expand {
    }
 }
 
-@media only all and (max-width: 520px) {
+@media only all and (max-width: 610px) {
 	#topmenu ul.menu_mobile {
 		display: block;
 	}
@@ -839,6 +995,33 @@ select::-ms-expand {
 		display: none;
 	}
 }
+
+
+@media only all and (max-width: 370px) {
+	nav.webnav.mini ul {
+	   text-align: center;
+	   float:left;
+	   width:100%;
+   }
+   
+   nav.webnav.mini {
+	   text-align: center;
+   }
+   
+   nav.webnav.mini img {
+	   width:120px;
+	   float:none;
+	   margin-bottom:5px;
+   }
+   
+   nav.webnav li.download a {
+	   font-size:11px;
+	   padding:3px 8px;
+   }
+	
+}
+
+
 
 
  /* buttons */
@@ -885,7 +1068,6 @@ select::-ms-expand {
 }
 
 /* tables with no styles */
-
 table.frame-none {
 	border:none;
 	background-color: transparent;
