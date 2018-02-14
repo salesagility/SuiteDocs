@@ -1,9 +1,10 @@
 ---
 title: Nice Relationships
-weight: 10
+date: 2016-03-18T21:13:44+01:00
+author: Jim Mackin
+tags: [featured, development]
+hidden: true
 ---
-
-:imagesdir: ./../../../images/en/community
 
 Module builder and studio are both great tools. They allow simple
 customisation of a SuiteCRM instance without having to know all the
@@ -22,7 +23,7 @@ First off let’s add a relationship to try out our changes on. We can
 first add a one to many relationships between products and accounts like
 so:
 
-image:01nice-relationships.png[title="Adding a relationship"]
+![](/images/en/community/01nice-relationships.png)
 
 This will create an `accounts_aos_products_1_c` table (assuming this is
 your first custom relationship between these two modules).
@@ -39,7 +40,7 @@ We have two main issues here. The first is that those field names are
 pretty long. Secondly we may not even want a join table if the
 relationship is truly one to many.
 
-== Fixing many to many field names
+## Fixing many to many field names
 
 Often you will end up writing SQL to query the SuiteCRM tables, whether
 this is when querying the database or writing custom SQL to use in code
@@ -49,16 +50,17 @@ tiresome.
 Let’s look at how we would currently list account names and linked
 products:
 
-[source,.sql]
+```sql
 SELECT accounts.name, aos_products.name
 FROM accounts
 INNER JOIN accounts_aos_products_1_c
-    ON (accounts.id = accounts_aos_products_1_c.accounts_aos_products_1accounts_ida AND 
+    ON (accounts.id = accounts_aos_products_1_c.accounts_aos_products_1accounts_ida AND
         accounts_aos_products_1_c.deleted = 0) 7
 INNER JOIN aos_products
-    ON (aos_products.id = accounts_aos_products_1_c.accounts_aos_products_1aos_products_idb AND 
+    ON (aos_products.id = accounts_aos_products_1_c.accounts_aos_products_1aos_products_idb AND
         aos_products.deleted = 0)
 WHERE accounts.deleted = 0;
+```
 
 That is some ugly SQL…
 
@@ -89,15 +91,16 @@ you’ll be good to go.
 
 If you have existing data you will need to migrate this over:
 
-[source,.sql]
+```sql
 UPDATE accounts_aos_products_1_c
 SET accounts_id = accounts_aos_products_1accounts_ida, product_id = accounts_aos_products_1aos_products_idb
 WHERE account_id IS NULL AND product_id IS NULL
+```
 
 Our example join from earlier now looks much nicer (or at least, more
 readable):
 
-[source,.sql]
+```sql
 SELECT accounts.name, aos_products.name
 FROM accounts
 INNER JOIN accounts_aos_products_1_c
@@ -105,8 +108,9 @@ INNER JOIN accounts_aos_products_1_c
 INNER JOIN aos_products
     ON (aos_products.id = accounts_aos_products_1_c.products_id AND aos_products.deleted = 0)
 WHERE accounts.deleted = 0;
+```
 
-== Moving to a true one to many schema
+## Moving to a true one to many schema
 
 SuiteCRM by default will create a many to many database schema even for
 one to many relationships created through studio. This can be nice if,
@@ -116,99 +120,101 @@ writing SQL to query these tables you may want to consider switching to
 a one to many schema.
 
 We can start by deleting the join table definition. The file
-`custom/metadata/accounts_aos_products_1MetaData.php` can be removed. As
-can
+`custom/metadata/accounts_aos_products_1MetaData.php` can be removed. As can
 `custom/Extension/modules/relationships/relationships/accounts_aos_products_1MetaData.php`
 and
 `custom/Extension/application/Ext/TableDictionary/accounts_aos_products_1.php`
 
-Next up we will want to change the vardefs for AOS_Products so that it
-no longer uses the middle table. Instead we will add an id field to
-products to link to the account.
+Next up we will want to change the vardefs for AOS_Products so that it no longer
+uses the middle table. Instead we will add an id field to products to link to
+the account.
 
 Currently the file
 `custom/Extension/modules/AOS_Products/Ext/Vardefs/accounts_aos_products_1_AOS_Products.php`
 looks like:
 
-[source, php]
-<?php 
+```php
+<?php
 // created: 2016-03-18 22:09:16
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array ( 
-    'name' => 'accounts_aos_products_1', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array (
+    'name' => 'accounts_aos_products_1',
     'type' => 'link',
-    'relationship' => 'accounts_aos_products_1', 
+    'relationship' => 'accounts_aos_products_1',
     'source' => 'non-db',
-    'module' => 'Accounts', 
-    'bean_name' => 'Account', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
-    'id_name' => 'accounts_aos_products_1accounts_ida', 
+    'module' => 'Accounts',
+    'bean_name' => 'Account',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
+    'id_name' => 'accounts_aos_products_1accounts_ida',
 );
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array ( 
-    'name' => 'accounts_aos_products_1_name', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array (
+    'name' => 'accounts_aos_products_1_name',
     'type' => 'relate',
-    'source' => 'non-db', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
+    'source' => 'non-db',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
     'save' => true,
-    'id_name' => 'accounts_aos_products_1accounts_ida', 
-    'link' => 'accounts_aos_products_1', 
-    'table' => 'accounts', 
-    'module' => 'Accounts', 
+    'id_name' => 'accounts_aos_products_1accounts_ida',
+    'link' => 'accounts_aos_products_1',
+    'table' => 'accounts',
+    'module' => 'Accounts',
     'rname' => 'name', );
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1accounts_ida"] = array ( 
-    'name' => 'accounts_aos_products_1accounts_ida', 
-    'type' => 'link', 
-    'relationship' => 'accounts_aos_products_1', 
-    'source' => 'non-db', 
-    'reportable' => false, 
-    'side' => 'right', 'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1accounts_ida"] = array (
+    'name' => 'accounts_aos_products_1accounts_ida',
+    'type' => 'link',
+    'relationship' => 'accounts_aos_products_1',
+    'source' => 'non-db',
+    'reportable' => false,
+    'side' => 'right', 'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE',
 );
+```
 
 We just need to change the id name, and change some of the definitions so that we have:
 
-[source, php]
-<?php 
+```php
+<?php
 // created: 2016-03-18 22:09:16
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array ( 
-    'name' => 'accounts_aos_products_1', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array (
+    'name' => 'accounts_aos_products_1',
     'type' => 'link',
-    'relationship' => 'accounts_aos_products_1', 
+    'relationship' => 'accounts_aos_products_1',
     'source' => 'non-db',
-    'module' => 'Accounts', 
-    'bean_name' => 'Account', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
-    'id_name' => 'account_id', //Changed 
-        'link_type'=>'one', //Added 
-        'side' => 'left',//Added 
+    'module' => 'Accounts',
+    'bean_name' => 'Account',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
+    'id_name' => 'account_id', //Changed
+        'link_type'=>'one', //Added
+        'side' => 'left',//Added
 );
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array ( 
-    'name' => 'accounts_aos_products_1_name', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array (
+    'name' => 'accounts_aos_products_1_name',
     'type' => 'relate',
-    'source' => 'non-db', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
+    'source' => 'non-db',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
     'save' => true,
-    'id_name' => 'account_id', //Changed 
+    'id_name' => 'account_id', //Changed
     'link' => 'accounts_aos_products_1',
-    'table' => 'accounts', 
-    'module' => 'Accounts', 
-    'rname' => 'name', 
+    'table' => 'accounts',
+    'module' => 'Accounts',
+    'rname' => 'name',
 );
 $dictionary["AOS_Products"]["fields"]["account_id"] = array (
-    'name' => 'account_id', 
-    'type' => 'id', 'reportable' => false, 
+    'name' => 'account_id',
+    'type' => 'id', 'reportable' => false,
     'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE', );
+```
 
 If we do a quick repair and rebuild we will be prompted to add a new
 column to the aos_products table.
 
 If you have existing data you’ll want to pull this over:
 
-[source,.sql]
-UPDATE aos_products 
-SET account_id = ( 
-    SELECT accounts_aos_products_1_c.account_id 
+```sql
+UPDATE aos_products
+SET account_id = (
+    SELECT accounts_aos_products_1_c.account_id
     FROM accounts_aos_products_1_c
-    WHERE accounts_aos_products_1_c.product_id = aos_products.id AND accounts_aos_products_1_c.deleted =0) 
+    WHERE accounts_aos_products_1_c.product_id = aos_products.id AND accounts_aos_products_1_c.deleted =0)
     WHERE account_id IS NULL;
+```
 
 Unfortunately the above has now broken the products subpanel in
 accounts. Let’s fix this.
@@ -216,8 +222,7 @@ accounts. Let’s fix this.
 We just need to add the relationship definition to
 `custom/Extension/modules/Accounts/Ext/Vardefs/accounts_aos_products_1_Accounts.php`:
 
-[source,.php]
-----
+```php
 $dictionary["Account"]["relationships"]['accounts_aos_products_1'] = array(
     'lhs_module' => 'aos_products',
     'lhs_table' => 'aos_products',
@@ -227,20 +232,18 @@ $dictionary["Account"]["relationships"]['accounts_aos_products_1'] = array(
     'rhs_key' => 'id',
     'relationship_type' => 'one-to-many',
     );
-----
-
+```
 and we’re now finished. Our final example join SQL for our original
 query would look something like:
 
-[source,.sql]
-----
+```sql
 SELECT accounts.name, aos_products.name
 FROM accounts
 INNER JOIN aos_products
     ON (aos_products.account_id = accounts.id AND aos_products.deleted = 0)
 WHERE accounts.deleted = 0;
-----
+```
 
 Much nicer.
 
-If you have any issues or questions - Let Jim Mackin http://www.jsmackin.co.uk/contact/[know]
+If you have any issues or questions - [Let Jim Mackin know](http://www.jsmackin.co.uk/contact/)
