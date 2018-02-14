@@ -1,5 +1,5 @@
 ---
-Title: GDPR Settings
+Title: Confirmed Opt-In
 Weight: 140
 ---
 :experimental:   ////this is here to allow btn:[]syntax used below
@@ -8,17 +8,17 @@ Weight: 140
 
 :toc:
 
-= GDPR Settings
+= Confirmed Opt-In
 
 == Overview
 
-In order to facilitate GDPR compliance, *SuiteCRM 7.10* introduces two *Opt In* settings, *Opt In* and *Confirmed Opt In*.
+*SuiteCRM 7.10* introduces a new *Confirmed Opt-In* feature which provides two opt-in settings for email addresses: *Opt In* and *Confirmed Opt In*.
 
 . *Opt In* is used to indicate that a Contact, Lead or Target has opted in to receive marketing communications.
 
 . *Confirmed Opt In* further requires users to confirm their opt-in status by clicking a link sent to them via email. This email can be configured to send automatically (e.g. on submission of a Web-To-Person form) or manually, and the template used to send this email can be customised.
 
-Once Opt In settings have been selected:
+Once Opt In or Confirmed Opt In settings have been selected:
 
 * An additional *Opt In* checkbox will be visible in *Detail* and *Edit* views for email address fields in Contacts, Leads and Targets.
 
@@ -31,7 +31,7 @@ Once Opt In settings have been selected:
 == Opt In Email Settings
 
 To configure your Opt In settings, open the *Admin* panel and select *Email Settings*. Opt In settings can be found on the *Email Options* panel.
-image:GDPREmailOptions.png[title ="GDPR Settings"]
+image:GDPREmailOptions.png[title ="Confirmed Opt In Settings"]
 
 === Opt In
 
@@ -79,22 +79,29 @@ An *Opted In* checkbox indicates the opt in status in Edit view.
 
 image:GDPREditViewOptIn.png[title="Edit View"]
 
-Note that for *Confirmed Opt In*, checking the *Opted In* box here will result in a status of *Pending Confirmation*, rather than *Confirmed Opt In*. 
-The user will still be required to confirm their opt in via email.
+Note that for *Confirmed Opt In*, manually checking the *Opted In* box here will result in a status of *Pending Confirmation*, rather than *Confirmed Opt In*. 
+The user will still be required to confirm their opt-in via email.
 
-== Sending/Resending Opt In Email Manually
+== Sending/Resending Opt In Emails Manually
 
-If you have *Confirmed Opt In* configured, the confirmation emails can be sent/resent either in bulk or individually.
+If you have *Confirmed Opt In* configured, confirmation emails can be sent/resent manually, either in bulk or individually.
 
-To send in bulk, select the records to send to and select *Send Confirm Opt In Email* from the *Bulk Action* menu.
+To send in bulk, select the records to send to by checking the boxes to the left of the records in List view. 
+
+image:GDPRSelectContacts.png[title="List view, select contacts"]
+
+
+Select *Send Confirm Opt In Email* from the *Bulk Action* menu.
 image:GDPRBulkActionMenu.png[title="Bulk Action menu"]
 
-To send to an individual, open the record and select *Send Confirm Opt In Email* from the *Actions* menu.
+To send to an individual, open the contact record and select *Send Confirm Opt In Email* from the *Actions* menu.
 image:GDPRRecordActionsMenu.png[title="Actions menu"]
+
+Email(s) will be sent silently (without confirmation) using the predefined template. 
 
 == Campaigns
 
-Your GDPR settings will affect your target lists for Campaigns. Campaign emails will NOT be sent to email addresses unless they are *Opted In* or *Confirmed Opted In*, depending on which settings you have chosen.
+Your opt-in settings will affect your target lists for Campaigns. Campaign emails will NOT be sent to email addresses unless they are *Opted In* or *Confirmed Opted In*, depending on which settings you have chosen.
 
 === Web To Person Form Opt In
 
