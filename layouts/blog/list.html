@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+{{ range .Data.Pages }}
+  <p>{{ .Date.Format "January 2, 2006" }}</p>
+  <h3><a href="{{ .URL }}">{{ .Params.title }}</a></h3>
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <p>
+      <a href="{{ .RelPermalink }}">Read More…</a>
+    </p>
+{{ end }}
+{{ end }}
