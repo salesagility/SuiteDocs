@@ -1,0 +1,163 @@
+---
+Title: Surveys
+Weight: 190
+---
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/user
+
+:toc:
+
+= Surveys
+
+== Overview
+
+The *Surveys* module allows you to create a web-based survey with a variety of question-type options. The responses received are stored in *SuiteCRM* and can be viewed on a per-respondent basis or as a detailed summary report using charts where appropriate.
+
+Surveys can be sent as part of a link:../15campaigns[Campaign]. 
+
+== Create Survey
+
+To create a new survey, select *Create Survey* from the sidebar or the dropdown menu in the *Surveys* module.
+image:SurveysSideBar.png[title="Surveys sidebar"]
+
+
+image:SurveysCreateSurvey.png[title="Create Survey"]
+
+*Name:* Enter the title of the survey to be displayed to users.
+
+*Status:*
+
+* *Draft*: Survey in preparation, not yet ready to publish and seek responses.
+* *Public*: Once ready, setting the survey status to *Public* will generate a URL link for the survey. The survey can be viewed and completed and any responses submitted will be recorded. Note that once responses have been received, the survey questions cannot be edited.
+* *Closed*: A *Closed* survey will not accept any further responses. Users navigating to the survey link will see a message informing them that the survey is now closed.
+
+*Description:* Note that this description is internal only - it will not be displayed to users as part of the survey.
+
+=== Add Questions
+
+Click btn:[NEW QUESTION] to add a question to the survey.
+
+Enter the question text and select the question type from the dropdown list.
+
+image:SurveysAddQuestion.png[title="Surveys Add Question"]
+
+The available question types are as follows:
+
+[cols="10,90",frame="none", grid="none"]
+|===
+|*Text*|A standard text input
+|*Textbox*|A larger text input area
+|*Checkbox*|Displays a single checkbox alongside the question. 
+|*Radio*|Specify a number of answer options to choose from, with radio buttons. Only one answer can be selected.
+|*Dropdown*|Specify a number of answer options to choose from, in a dropdown list. Only one answer can be selected.
+|*Multiselect*|Similar to a dropdown list, but one or more answers can be selected.
+|*Matrix*|For each option specified, the user will be able to answer *"Satisfied"*, *"Neither Satisfied nor Dissatisfied"* or *"Dissatisfied"*. These responses can be also be customised  -see below.
+|*DateTime*|A Date/Time picker will be displayed for the user to select a date.
+|*Date*|A Date/Time picker will be displayed for the user to select a date and time.
+|*Scale*|A 1-10 scale will be displayed. Users can select one number on the scale in response to the question.
+|*Rating*|A five-star rating widget will be displayed. Users can select 0 to 5 stars in response to the question.
+|===
+
+==== Radio Button Question Example
+image:SurveysRadioQuestion.png[title="Surveys Radio Question example"]
+
+Click btn:[ADD OPTION] to add answer options to the question.
+
+Remove unwanted options by clicking btn:[x]
+
+{{% notice tip %}}Options for *Dropdown*, *Multiselect* and *Matrix* type questions are added in the same way.{{%/notice %}}
+
+Click btn:[NEW QUESTION] to add more questions in the same way.
+
+==== Deleting and Reordering Questions
+
+[cols="30,70",frame="none", grid="none"]
+|===
+|image:SurveysQActionButtons.png[title="Survey question action buttons"]
+|Questions can be reordered (moved up or down) or deleted using the Actions buttons to the right of the questions.
+|===
+
+=== Further Options
+
+*Submit:* Edit the text for the survey's Submit button here, if desired.
+
+Customise the responses for *Matrix* type questions by editing the default matrix response text here:
+image:SurveysMatrixText.png[title="Matrix question response text"]
+
+Click btn:[SAVE] to save the survey.
+
+The Detail View for the draft survey will be displayed. This overview shows all the survey questions and question types included in the survey.
+
+image:SurveysDraftDetailView.png[title="Survey detail view for draft survey"]
+
+{{%notice note%}}Note that the URL field is blank - this field will display the CRM-generated URL link for the survey once the survey status has been set to *Public*. {{% /notice %}}
+
+== View Survey
+
+Once completed, you can view the survey as it will be shown to participants. Select *Edit* from the *Actions* menu and then set the survey status to *Public*.
+
+Click btn:[SAVE]
+
+The Detail View for the survey will be displayed, now showing the URL for the survey. 
+
+image:SurveysPublicDetailView.png[title="Survey detail view for public survey"]
+
+Click on the URL to view the survey in your browser. 
+
+As an example, the following screenshot shows the Demo Survey:
+
+image:SurveysDemo2.png[title="Survey demo"]
+
+Responses can be submitted by clicking btn:[Submit] 
+
+Users will be redirected to a thank you page and the responses will be recorded. Responses can be viewed in the <<Survey Responses>> subpanel or the <<View Survey Reports, Survey Report>>.
+
+{{% notice warning %}} 
+Once responses have been received, survey questions cannot be edited.
+{{%/notice %}}
+
+{{% notice tip %}} 
+The logo displayed above the survey is the current logo set for your *SuiteCRM* instance, which can be set in *System Settings* on the *Admin* panel
+{{%/notice %}}
+
+== Edit Survey
+
+From *List* view, click the pencil icon beside the survey name to open the survey in *Edit* mode. 
+
+From *Detail* view, select *Edit* from the *Actions* menu.
+
+{{% notice note%}}Questions can only be edited in *Draft* surveys or in *Public* surveys which have not yet received responses.
+{{%/notice%}}
+
+== Survey Responses
+
+The Survey Responses subpanel shows the individual responses received from each respondent. To view a particular set of responses, first expand the Survey Responses subpanel in Detail View.
+
+image:SurveysSurveyResponsesSubpanel.png[title="Survey Responses subpanel"]
+
+Click on a respondent's name to view their responses. 
+
+image:SurveysResponses.png[title="Survey Responses"]
+
+== View Survey Reports
+
+The survey responses can also be viewed as a Survey Report, showing a summary of all the responses by question. Charts are used where appropriate to display the data. 
+
+Individual responses cannot be viewed from the Survey Report. If you wish to view a particular respondent's answers, these can be viewed from the survey's <<Survey Responses>> subpanel. 
+
+[frame="none", grid="none"]
+|===
+|Select *View Survey Reports* from the *Actions* menu.
+|image:SurveysActionsMenu.png[title="Survey Actions Menu"]
+|===
+The Survey Report will open showing a summary of all the responses for each question.
+
+As an example, the Survey Report for the demo survey above might contain the following summary for question 2:
+image:SurveysReport.png[title="Survey Report detail"]
+
+== Survey Campaign
+
+
+
+

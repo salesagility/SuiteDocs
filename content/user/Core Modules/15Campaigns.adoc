@@ -4,126 +4,82 @@ Weight: 190
 ---
 
 :imagesdir: ./../../../images/en/user
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:toc: 
 
 = Campaigns
 
-The Campaigns module in SuiteCRM can be a very powerful marketing and
-advertising tool for your organisation allowing you to create and track
-Newsletter, Email and non-email Campaigns to prospective or existing
-customers. With the tracking tools built into the Campaign module you
-can monitor the response you receive from your Campaign in real time,
-allowing you to view the return on investment (ROI) and many other
-useful metrics. This in turn helps you to plan your strategic marketing
-and advertising activities effectively by visualising which Campaigns
-work and which do not.
+== Overview
 
-== Campaign Actions
+The Campaigns module in *SuiteCRM* can be a very powerful marketing and advertising tool for your organisation allowing you to create and track Newsletter, Email, Survey and Non-Email based (e.g. telesales or radio) marketing campaigns to prospective or existing customers. 
 
-You can access the Campaign actions from the Campaign module menu drop
-down or via the Sidebar. The Campaign actions are as follows:
+With the tracking tools built into the Campaign module you can monitor the response you receive from your campaign in real time, allowing you to view the return on investment (ROI) and many other useful metrics. This in turn helps you to plan your strategic marketing and advertising activities effectively by visualising which campaigns work and which do not.
 
-* *Create Campaign* – This takes you to the Campaign Wizard page.
-* *View Campaigns* – Redirects you to the List View for the Campaign
-module. This allows you to search and list Campaign records.
-* *Create Email Template* – A WYSIWYG editor where you can create emails
-by dragging and dropping components, inserting variables and amending
-the plain text.
-* *View Email Templates* – Takes you to the List View page of your
-existing Email Templates. This allows you to search and list Email
-Template records.
-* *View Diagnostics* – Allows you to check that your Campaign Emails and
-Campaign schedulers are set up correctly. If this is the case then a
-green tick icon will appear, if there are any issues with the setup then
-a red cross icon will appear and you should contact your Admin for
-assistance.
-* *Create Person Form* – A web form template Wizard allowing you to create
-Leads, Contacts and Targets.
-* To view the full list of fields available when creating a Campaign,
-See link:http://docs.suitecrm.com/user/appendix-a/#_campaigns_field_list[Campaign Fields List].
+* To view the full list of fields available when creating a Campaign, see link:http://docs.suitecrm.com/user/appendix-a/#_campaigns_field_list[Campaign Fields List].
 
-== Creating a Campaign via Campaign Wizard
+== Create a Campaign
 
-To create a Campaign and to begin the Campaign Wizard click on the
-Create Campaign button on the sidebar or module menu drop down while in
-the Campaign module.
+From the *Campaigns* module, select *Create Campaign* from the sidebar or the module dropdown menu to start the *Campaign Wizard*.
 
-image:74Creating_a_campaign.png[title="Creating a Campaign"]
+image:CampaignsSidebarCreate.png[title="Creating a Campaign"]
 
-Alternatively click on the Create button at the top right of the screen
-when in the List View of the View Campaigns page. Once you click Create
-Campaign then you will be presented with three options, Newsletter,
-Email and Non-email based Campaign.
+Select the campaign you wish to create *Newsletter*, *Email*, link:../19surveys/[Survey] or *Non-email based Campaign*.
 
-image:75Creating_a_campaign.png[title="Select campaign"]
+image:CampaignTypes.png[title="Select campaign"]
 
-=== Campaign Wizard Header and Budget
+{{% notice note %}} 
+Note that for a Survey campaign you will first need to create the survey to attach to the campaign. 
+{{% /notice %}}
 
-On clicking your selected Campaign icon you will be taken to the first
-page of the Campaign Wizard, the Campaign Header page. In this page you
-will be prompted to complete the required fields of Name and Status as
-well as having the opportunity to record any information you may wish to
-about your Campaign Budget (Campaign Budget is on a separate page for
-Non-email based Campaigns).
+=== Campaign Header
 
-image:76Creating_a_campaign.png[title="Campaign Header"]
+The first page of the *Campaign Wizard* is the *Campaign Header* page. 
+image:CampaignHeader.png[title="Campaign Header"]
 
-Once you have completed the necessary fields and are ready to progress
-to the next stage then click Next.
+Enter a name for the campaign here and set the status (*Planning*, *Active*, *Inactive*, *Complete*). 
 
-image:77Creating_a_campaign.png[title="Next"]
+You can add an optional description. 
 
-=== Campaign Wizard Subscriptions – Newsletter Campaigns Only
+The campaign will be assigned to the currently logged on user by default and this can be changed here.
 
-For a Newsletter Campaign the next step of the Campaign Wizard allows
-you to specify your Subscription information.
+==== Survey Campaign
 
-image:78Newsletter_campaign.png[title="Newsletter Campaign"]
+For a *Survey* campaign, you will also need to relate the campaign to an existing survey. See link:../19surveys/[Surveys] for further information.
+image:CampaignSurveyHeader.png[title="Select survey for campaign"]
 
-This stage is made up of three components; the Subscription List,
-Unsubscription List and Test List.
+==== Campaign Budget 
+Scroll down to complete optional budget details for the campaign. These details are used to calculate ROI statistics. 
 
-* *The Subscription List* - Allows you to set a Target List for your
-Campaign. This Target List will be used to send out emails for this
-Campaign. If you have not already created a Target List then an empty
-list will be created for you and you can set this at a later time.
-* *The Unsubscription List* - Allows you to set a Target List of
-individuals who have opted out of your marketing and should not be
-contacted through email. If you have not already created a Target List
-then an empty list will be created for you and you can set this at a
-later time.
-* *The Test List* - Allows you to set a Target List to send out test
-emails for this Campaign. If you have not already created a Target List
-then an empty list will be created for you and you can set this at a
-later time.
+For non-email based campaigns, this section is on the next page.
 
-Once you have completed the necessary fields then click Next and you
-will be taken to the Templates page which the next stage of the Campaign
-Wizard.
+image:CampaignBudget.png[title="Campaign Budget"]
 
-=== Campaign Wizard Target Lists – Email and Non-Email Based Campaigns
+Click btn:[NEXT] at the top of the screen to continue.
 
-For all Email and non-email based Campaign the next step of the Campaign
-Wizard allows you to specify your Target Lists. For Email based
-Campaigns this is where you would choose a list of people to Email based
-on Existing Targets already created in the CRM. Or for Telesales
-(non-email based) Campaigns for example this could be a list of people
-that you would call.
+=== Target Lists 
 
-image:79E-mail_campaign.png[title="Email Campaign"]
+The next step is to specify your *Target List(s)*. 
+Any existing target lists will be listed for you to select under *Add Existing Target List*.
 
-Recipients that have previously opted out of your marketing Campaigns
-will automatically be removed from your Target List.
+Click on the target list name to add it to the campaign. Target lists added to the campaign will appear in the right-hand panel.
+
+To remove a target list, click btn:[rem]
+
+image:CampaignsTargetList.png[title="Target Lists"]
+
+
+==== Create Target List
+
+If you have not yet created a target list or wish to use a new list, you can create an empty one here and populate it after you have completed the rest of your Campaign setup. See link:../14target-lists/[Target Lists] for more information on the types of lists and how to use them.
 
 image:80E-mail_campaign.png[title="Target list"]
 
-If you have not at this stage created a Target List you can create an
-empty one using the dropdown menu in the image above and populate it
-after you have completed the rest of your Campaign setup by visiting the
-link:http://docs.suitecrm.com/user/appendix-a/#_target_lists_field_list[Target Lists] page. The next step for non-email based
-Campaigns is the link:#Campaign_Summary[Campaign Summary] page, Email
-based Campaigns however should move onto the Campaign Templates page.
+Enter a name for the new list and select the type from the list. 
 
-=== Campaign Wizard Templates
+Click btn:[CREATE]
+
+=== Templates
 
 image:81Campaign_template.png[title="Campaign Wizard Template"]
 
@@ -324,3 +280,5 @@ organisation's money spent on the Campaign has translated into potential
 business.
 
 image:Campaign_ROI_Graph.png[]
+
+
