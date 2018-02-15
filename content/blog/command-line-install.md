@@ -3,6 +3,7 @@ title: Command line install
 date: 2016-02-28T12:00:00+01:00
 author: Jim Mackin
 tags: []
+source: http://www.jsmackin.co.uk/suitecrm/suitecrm-command-line-install/
 hidden: true
 ---
 

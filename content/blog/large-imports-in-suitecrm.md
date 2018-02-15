@@ -3,8 +3,8 @@ title: Large Imports in SuiteCRM
 date: 2016-02-20T12:00:00+01:00
 author: Jim Mackin
 tags: ["development"]
-hidden: true
 source: http://www.jsmackin.co.uk/suitecrm/large-imports-in-suitecrm/
+hidden: true
 ---
 
 For an upcoming post on performance tuning I’ve been playing around with
