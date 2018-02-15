@@ -107,7 +107,7 @@ Click on the URL to view the survey in your browser.
 
 As an example, the following screenshot shows the Demo Survey:
 
-image:SurveysDemo2.png[title="Survey demo"]
+image:SurveysDemo.png[title="Survey demo"]
 
 Responses can be submitted by clicking btn:[Submit] 
 
@@ -132,19 +132,19 @@ From *Detail* view, select *Edit* from the *Actions* menu.
 
 == Survey Responses
 
-The Survey Responses subpanel shows the individual responses received from each respondent. To view a particular set of responses, first expand the Survey Responses subpanel in Detail View.
+The Survey Responses subpanel shows the individual responses received from each respondent. The subpanel can be found in Detail View for the survey. The Survey Responses subpanel can also be accessed from the Campaign Status page for a link:../15campaigns[campaign]. 
 
-image:SurveysSurveyResponsesSubpanel.png[title="Survey Responses subpanel"]
+image:SurveyResponses.png[title="Survey Responses subpanel"]
 
-Click on a respondent's name to view their responses. 
+Click on a respondent's name to view their responses.
 
-image:SurveysResponses.png[title="Survey Responses"]
+image:SurveysResponsesDetail.png[title="Survey Responses for selected respondent"]
 
-== View Survey Reports
+== Survey Reports
 
 The survey responses can also be viewed as a Survey Report, showing a summary of all the responses by question. Charts are used where appropriate to display the data. 
 
-Individual responses cannot be viewed from the Survey Report. If you wish to view a particular respondent's answers, these can be viewed from the survey's <<Survey Responses>> subpanel. 
+Individual responses cannot be viewed from the Survey Report. If you wish to view a particular respondent's answers, these can be viewed from the survey's <<Survey Responses>> subpanel, as shown above. 
 
 [frame="none", grid="none"]
 |===
@@ -153,10 +153,45 @@ Individual responses cannot be viewed from the Survey Report. If you wish to vie
 |===
 The Survey Report will open showing a summary of all the responses for each question.
 
-As an example, the Survey Report for the demo survey above might contain the following summary for question 2:
-image:SurveysReport.png[title="Survey Report detail"]
+As an example, the Survey Report for the Demo Survey above might contain the following summary for question 2:
+image:SurveysDemoReport.png[title="Survey Report detail"]
 
 == Survey Campaign
+
+{{%notice note%}}The following section will provide details on *Survey* specific campaign settings only, please see the link:../15campaigns[Campaigns] documentation for more detailed instructions on setting up a campaign.{{%/notice%}} 
+
+Surveys can be sent out as part of a campaign which will track and record the survey responses received from each recipient.
+
+From the *Campaigns* module, select *Create Campaign* from the sidebar. Select *Survey* to launch the Survey Campaign Wizard.
+
+image:CampaignTypes.png[title="Campaign types"]
+
+[discrete]
+=== Campaign Header
+
+The survey is attached to the campaign on the Campaign Header tab.
+
+image:SurveysCampaignHeader.png[title="Surveys Campaign Header"]
+
+Click btn:[SELECT] to select the survey from the popup.
+
+[discrete]
+=== Survey Email Template
+
+Create or edit an existing template for the survey. Survey variables are available from the dropdown list. 
+
+You will need to include the *Surveys URL* variable `$surveys_survey_url_display` in your template. This will include a unique link to the survey so that individual responses can be tracked.
+
+image:SurveysTemplate.png[title="Survey campaign template example"]
+
+Click btn:[SAVE] to retain your template settings.
+
+[discrete]
+=== Campaign Status
+
+On the *Campaign Status* page, the *Survey Responses* subpanel can be expanded to view survey responses from individual respondents. Click on a respondent's name to view the responses.
+
+image:SurveyResponses.png[title="Survey Responses subpanel"]
 
 
 
