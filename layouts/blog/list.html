@@ -5,7 +5,7 @@
   <h2><a href="{{ .URL }}">{{ .Params.title }}</a></h2>
 
   <p>
-    {{ if .Params.Author }}By: {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
+    {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
   </p>
 
     {{ .Summary }}
