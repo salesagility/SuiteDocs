@@ -3,7 +3,7 @@
 {{ .Content }}
 
 <p>
-  {{ if .Params.Author }}By: {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
+  {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
 </p>
 
 <footer class=" footline" >
