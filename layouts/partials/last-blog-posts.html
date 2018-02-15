@@ -1,14 +1,14 @@
 <h2>Latest technical blog posts</h2>
 
 {{ range first 10 ( sort (where .Data.Pages "Section" "blog") "Date" "desc" ) }}
-  <p>
-    {{ .Date.Format "January 2, 2006" }}
-  </p>
   <h3><a href="{{ .URL }}">{{ .Params.title }}</a></h3>
+  <p>
+    {{ if .Params.Author }}By: {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
+  </p>
   {{ .Summary }}
   {{ if .Truncated }}
-  <span>
+  <p>
     <a href="{{ .RelPermalink }}">Read More…</a>
-  </span>
+  </p>
   {{ end }}
 {{ end }}
