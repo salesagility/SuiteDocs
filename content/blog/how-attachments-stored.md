@@ -1,9 +1,9 @@
 ---
 title: How are Attachments stored?
+description: ""
+date: 2017-04-07T15:13:44+01:00
 author: Pedro Rodrigues
 tags: ["Database", "File System", "Attachments", "Notes"]
-date: 2017-04-07T15:13:44+01:00
-description: ""
 hidden: true
 ---
 
