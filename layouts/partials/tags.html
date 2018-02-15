@@ -3,7 +3,7 @@
   {{ range $index, $category := .Params.tags }}
        {{ if $index }}, {{ end }}
        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
-         {{ humanize  . }}
+         {{ . }}
        </a>
   {{ end }}
 {{end}}
