@@ -3,8 +3,8 @@ title: Creating custom field types in SuiteCRM
 date: 2015-10-30T12:00:00+01:00
 author: Jim Mackin
 tags: []
-hidden: true
 source: http://www.jsmackin.co.uk/suitecrm/creating-custom-field-type-suitecrm/
+hidden: true
 ---
 
 Like a lot of SuiteCRM the field types are customisable and you can add

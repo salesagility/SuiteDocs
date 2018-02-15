@@ -2,6 +2,8 @@
 date: 2017-04-14
 title: Scheduler Jobs in SuiteCRM in Linux - the Definitive Guide
 author: Pedro Rodrigues
+tags: []
+source: https://pgorod.github.io/Scheduler-Jobs/
 hidden: true
 ---
 

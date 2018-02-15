@@ -3,6 +3,7 @@ title: Setting up SuiteCRM on Digital Ocean
 date: 2015-10-30T12:00:00+01:00
 author: Jim Mackin
 tags: []
+source: http://www.jsmackin.co.uk/suitecrm/setting-up-suitecrm-on-digital-ocean/
 hidden: true
 ---
 

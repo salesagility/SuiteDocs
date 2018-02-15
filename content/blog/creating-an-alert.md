@@ -3,8 +3,8 @@ title: Creating an alert in SuiteCRM
 date: 2015-08-25T12:00:00+01:00
 author: Jim Mackin
 tags: []
-hidden: true
 source: http://www.jsmackin.co.uk/suitecrm/suitecrm-creating-an-alert/
+hidden: true
 ---
 
 With the release of SuiteCRM 7.3 comes Alerts. These are displayed
