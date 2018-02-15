@@ -2,7 +2,7 @@
 title: ListView Conditional Formatting
 date: 2016-03-04T12:00:00+01:00
 author: Jim Mackin
-tags: [development]
+tags: ["development"]
 hidden: true
 source: http://www.jsmackin.co.uk/suitecrm/suitecrm-list-view-conditional-formatting/
 ---

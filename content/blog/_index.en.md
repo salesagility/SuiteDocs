@@ -1,5 +1,5 @@
 ---
-title: "Tech Blog"
+title: "Technical Blog"
 weight: 50
-pre: "<i class='fa fa-pencil'> </i> "
+pre: "<i class='fa fa-cog'> </i> "
 ---

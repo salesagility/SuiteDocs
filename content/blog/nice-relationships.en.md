@@ -2,7 +2,7 @@
 title: Nice Relationships
 date: 2016-03-18T21:13:44+01:00
 author: Jim Mackin
-tags: [featured, development]
+tags: ["featured", "development"]
 hidden: true
 ---
 
