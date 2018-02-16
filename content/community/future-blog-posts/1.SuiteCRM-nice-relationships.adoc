@@ -49,6 +49,7 @@ tiresome.
 Let’s look at how we would currently list account names and linked
 products:
 
+.Example
 [source,.sql]
 SELECT accounts.name, aos_products.name
 FROM accounts
@@ -89,6 +90,7 @@ you’ll be good to go.
 
 If you have existing data you will need to migrate this over:
 
+.Example
 [source,.sql]
 UPDATE accounts_aos_products_1_c
 SET accounts_id = accounts_aos_products_1accounts_ida, product_id = accounts_aos_products_1aos_products_idb
@@ -97,6 +99,7 @@ WHERE account_id IS NULL AND product_id IS NULL
 Our example join from earlier now looks much nicer (or at least, more
 readable):
 
+.Example
 [source,.sql]
 SELECT accounts.name, aos_products.name
 FROM accounts
@@ -130,6 +133,7 @@ Currently the file
 `custom/Extension/modules/AOS_Products/Ext/Vardefs/accounts_aos_products_1_AOS_Products.php`
 looks like:
 
+.Example
 [source, php]
 <?php 
 // created: 2016-03-18 22:09:16
@@ -165,6 +169,7 @@ $dictionary["AOS_Products"]["fields"]["accounts_aos_products_1accounts_ida"] = a
 
 We just need to change the id name, and change some of the definitions so that we have:
 
+.Example
 [source, php]
 <?php 
 // created: 2016-03-18 22:09:16
@@ -202,6 +207,7 @@ column to the aos_products table.
 
 If you have existing data you’ll want to pull this over:
 
+.Example
 [source,.sql]
 UPDATE aos_products 
 SET account_id = ( 
@@ -216,8 +222,8 @@ accounts. Let’s fix this.
 We just need to add the relationship definition to
 `custom/Extension/modules/Accounts/Ext/Vardefs/accounts_aos_products_1_Accounts.php`:
 
+.Example
 [source,.php]
-----
 $dictionary["Account"]["relationships"]['accounts_aos_products_1'] = array(
     'lhs_module' => 'aos_products',
     'lhs_table' => 'aos_products',
@@ -227,11 +233,11 @@ $dictionary["Account"]["relationships"]['accounts_aos_products_1'] = array(
     'rhs_key' => 'id',
     'relationship_type' => 'one-to-many',
     );
-----
 
 and we’re now finished. Our final example join SQL for our original
 query would look something like:
 
+.Example
 [source,.sql]
 ----
 SELECT accounts.name, aos_products.name

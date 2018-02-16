@@ -37,9 +37,9 @@ name equal to the `id` of the `note` record.
 So, to see all the Email attachment files on your system, run this in
 MySql:
 
-....
+.Example
+[source,sql]
 SELECT notes.id, emails.id, CONCAT("upload/", filename), file_mime_type FROM notes INNER JOIN emails ON notes.parent_type = 'Emails' AND notes.parent_id = emails.id INNER JOIN emails_text ON emails.id = emails_text.email_id
-....
 
 That filename shown by this query is the filename as seen by the user.
 You can pull *other fields* from the "Notes" and "Emails" tables, if
