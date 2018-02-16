@@ -1,6 +1,10 @@
 ---
 title: Large Imports in SuiteCRM
-weight: 40
+date: 2016-02-20T12:00:00+01:00
+author: Jim Mackin
+tags: ["development"]
+source: http://www.jsmackin.co.uk/suitecrm/large-imports-in-suitecrm/
+hidden: true
 ---
 
 For an upcoming post on performance tuning I’ve been playing around with
@@ -12,6 +16,8 @@ could repeat to keep the comparisons fair.
 For this post I’ll look at inserting 40000 accounts with 100 contacts
 each and 100 larger accounts with 10000 contacts each.
 
+<!--more-->
+
 The usual (and correct) way to do this would be to use SuiteCRM’s
 inbuilt importer. This is good for reasonably sized imports but will
 quickly grind to a halt with the sizes I was trying.
@@ -20,10 +26,10 @@ The next solution was direct database access. This would be simpler than
 using the inbuilt importer for these large size of accounts.
 
 My first solution to both generate (using the
-https://github.com/fzaninotto/Faker[Faker library]) and insert the data
+[Faker library](https://github.com/fzaninotto/Faker)) and insert the data
 looked something like:
 
-[source,php]
+```php
 <?php
 require_once 'vendor/autoload.php';
 .
@@ -54,13 +60,14 @@ function doImport($db,$accountsCount,$contactsCount){
     $accountPrep->execute(array(':id' => $accountId, ':name' => $faker->company));
     for($y = 0; $y < $contactsCount; $y++){
       $contactId = getGUID();
-      $contactPrep->execute(array(':id' => $contactId, ':first_name' => $faker->firstName, ':last_name' => 
+      $contactPrep->execute(array(':id' => $contactId, ':first_name' => $faker->firstName, ':last_name' =>
       $faker->lastName));
       $contactLinkPrep->execute(array(':id'=>getGUID(),':contactId' => $contactId, ':accountId' => $accountId));
     }
   }
 }
 echo "\nComplete\n";
+```
 
 Turns out this is slow, _very_ slow. I left it running for a few days to
 provide data for this post but gave up after 41 hours. Even then it was
@@ -72,7 +79,7 @@ could batch the inserts. I was a bit sceptical that this would make
 enough of a difference to be worth it but here we go. Our pseudo code
 now looks something like:
 
-[source,php]
+```php
 <?php
 require_once 'vendor/autoload.php';
 .
@@ -103,7 +110,7 @@ function doImport($db,$accountsCount,$contactsCount){
     $accountVals[] = "('".$accountId."', \"".$faker->company."\",NOW(),NOW(),'1','1')";
     for($y = 0; $y < $contactsCount; $y++){
       $contactId = getGUID();
-      $contactVals[] = "('".$contactId."',\"".$faker->firstName."\",\"". $faker->lastName."\",'". $now."','". 
+      $contactVals[] = "('".$contactId."',\"".$faker->firstName."\",\"". $faker->lastName."\",'". $now."','".
       $now."','1','1')";
       $contactLinkVals[] = "('".getGUID()."','".$contactId."','".$accountId."', '0','".$now."')";
     }
@@ -114,18 +121,19 @@ function doImport($db,$accountsCount,$contactsCount){
   }
 }
 echo "\nComplete\n";
+```
 
 This was better. Again I gave up after a while but this time the
 estimate was a little over two days to complete. Still far too slow
 however. We need a different approach.
 
-MySQL provides the ``LOAD DATA INFILE'' command which the MySQL docs
+MySQL provides the `LOAD DATA INFILE` command which the MySQL docs
 suggest is up to 20x faster than INSERTS. Let’s give that a try.
 
 First we continue to use the script to generate data but now we have it
 generate a CSV file:
 
-[source,php]
+```php
 <?php
 require_once 'vendor/autoload.php';
 .
@@ -166,23 +174,25 @@ function doImport($db,$accountsCount,$contactsCount){
   }
 }
 echo "\nComplete\n";
+```
 
 This takes about 50 minutes
 
 Finally we can run the actual import:
 
-[source]
-mysql> LOAD DATA INFILE 'accounts.csv' INTO TABLE accounts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,name,date_entered, date_modified,modified_user_id,created_by);  
-Query OK, 40100 rows affected (30.15 sec)  
+```
+mysql> LOAD DATA INFILE 'accounts.csv' INTO TABLE accounts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,name,date_entered, date_modified,modified_user_id,created_by);
+Query OK, 40100 rows affected (30.15 sec)
 Records: 40100  Deleted: 0  Skipped: 0  Warnings: 0
 .
-LOAD DATA INFILE 'contacts.csv' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,first_name,last_name,date_entered, date_modified,modified_user_id,created_by);  
-Query OK, 5000000 rows affected (4 hours 56 min 52.34 sec)  
+LOAD DATA INFILE 'contacts.csv' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,first_name,last_name,date_entered, date_modified,modified_user_id,created_by);
+Query OK, 5000000 rows affected (4 hours 56 min 52.34 sec)
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
 .
-mysql> LOAD DATA INFILE 'accountsContacts.csv' INTO TABLE accounts_contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,contact_id, account_id,deleted,date_modified);  
-Query OK, 5000000 rows affected (2 hours 18 min 19.70 sec)  
+mysql> LOAD DATA INFILE 'accountsContacts.csv' INTO TABLE accounts_contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,contact_id, account_id,deleted,date_modified);
+Query OK, 5000000 rows affected (2 hours 18 min 19.70 sec)
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
+```
 
 This totals about 7.3 hours (+ 50 minutes to generate the data). At
 least this brings the time taken to less than a working day but still
@@ -193,7 +203,7 @@ can save it some work (and time) by removing the indexes and adding them
 back afterwards. Using SHOW CREATE TABLE we can check what indexes exist
 and remove them like so:
 
-[source]
+```sql
 SHOW CREATE TABLE accounts;
 ALTER TABLE accounts DROP KEY idx_accnt_id_del;
 ALTER TABLE accounts DROP KEY idx_accnt_name_del;
@@ -209,10 +219,11 @@ ALTER TABLE contacts DROP KEY idx_cont_assigned;
 SHOW CREATE TABLE accounts_contacts;
 ALTER TABLE accounts_contacts DROP KEY idx_account_contact;
 ALTER TABLE accounts_contacts DROP KEY idx_contid_del_accid;
+```
 
 Once the indexes are gone we we import the data:
 
-[source] 
+```sql
 LOAD DATA INFILE `accounts.csv' INTO TABLE accounts FIELDS
 TERMINATED BY `,' ENCLOSED BY ’“`LINES TERMINATED BY'’
 (id,name,date_entered, date_modified,modified_user_id,created_by); +
@@ -231,11 +242,12 @@ FIELDS TERMINATED BY `,' ENCLOSED BY ’“`LINES TERMINATED BY'’
 (id,contact_id, account_id,deleted,date_modified); +
 Query OK, 5000000 rows affected (32 min 55.77 sec) +
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
+``
 
 And, after a quick repair and rebuild we’ll be given the SQL needed to
 rebuild the indexes:
 
-[source,sql]
+```sql
 mysql> ALTER TABLE accounts ADD INDEX idx_accnt_id_del (id,deleted), ADD INDEX idx_accnt_name_del (name,deleted), ADD INDEX idx_accnt_assigned_del (deleted,assigned_user_id), ADD INDEX idx_accnt_parent_id (parent_id);
 Query OK, 0 rows affected (5.37 sec)
 .
@@ -250,10 +262,11 @@ Records: 0  Duplicates: 0  Warnings: 0
 mysql> ALTER TABLE accounts_contacts ADD INDEX idx_account_contact (account_id,contact_id), ADD INDEX idx_contid_del_accid (contact_id,deleted,account_id);
 Query OK, 0 rows affected (24 min 55.06 sec)
 Records: 0  Duplicates: 0  Warnings: 0
+```
 
 90 minutes (+50 to generate the data +45 to rebuild the indexes). Still
 slower than I would like but this at least brings it into the realms of
 the realistic. I can now run multiple tests with a large dataset to test
 performance tweaks.
 
-Any approaches/ tricks I’ve missed? Let me know in via the contact form!
+Any approaches or tricks I’ve missed? [Let me know in via the contact form](http://www.jsmackin.co.uk/contact/)!
