@@ -1,10 +1,13 @@
-.DS_Store
+# hugo destination build
 public/
-exampleSite/public
 
 # Microsoft Visual Studio exclusions
 *.sln
 *.suo
 *.phpproj
 
+# npm
 node_modules/
+
+# macOS
+.DS_Store
