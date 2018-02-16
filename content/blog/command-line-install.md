@@ -1,17 +1,23 @@
 ---
-title: Command-line Install
-weight: 30
+title: Command line install
+date: 2016-02-28T12:00:00+01:00
+author: Jim Mackin
+tags: []
+source: http://www.jsmackin.co.uk/suitecrm/suitecrm-command-line-install/
+hidden: true
 ---
 
 You may occasionally want to install SuiteCRM from some automated
-process. SuiteCRM provides a way to do a ``Silent'' install which, when
-given a config_si.php file containing some of the installation details
+process. SuiteCRM provides a way to do a _Silent_ install which, when
+given a `config_si.php` file containing some of the installation details
 will perform an install.
 
-The steps involved are quite straightforward. First off we create a
-config_si.php file in the SuiteCRM root:
+<!--more-->
 
-[source, php]
+The steps involved are quite straightforward. First off we create a
+`config_si.php` file in the SuiteCRM root:
+
+```php
 <?php
 $sugar_config_si  = array (
     'dbUSRData' => 'create',
@@ -41,9 +47,10 @@ $sugar_config_si  = array (
     'setup_site_url' => 'Site URL',
     'setup_system_name' => 'Site Name',
   );
+```
 
 This should contain the appropriate DB credentials as well as the new
-SuiteCRM install site url, admin username, e.t.c.
+SuiteCRM install site url, admin username, etc.
 
 With that file in place if you head to the appropriate SuiteCRM
 location, for example
@@ -54,18 +61,19 @@ browser then SuiteCRM will perform an unaided install.
 
 Alternatively you can also call the following in the terminal:
 
-[source, php]
+```php
 php -r "\$_SERVER['HTTP_HOST'] = 'localhost'; \$_SERVER['REQUEST_URI'] = 'install.php';\$_REQUEST = array('goto' => 'SilentInstall', 'cli' => true);require_once 'install.php';";
+```
 
- The following script takes the required arguments, including the
+The following script takes the required arguments, including the
 location of an unzipped SuiteCRM package and will create the necessary
 config file and run the installation:
 
-[source, php]
+```php
 <?php
 /*
- *  php suitecrmsilentinstall.php --install_location /var/www/html/suitecrmpath --db_host localhost 
- *  --db_user dbuser --db_pass dbpass --db_name dbname --site_username admin --site_pass password 
+ *  php suitecrmsilentinstall.php --install_location /var/www/html/suitecrmpath --db_host localhost
+ *  --db_user dbuser --db_pass dbpass --db_name dbname --site_username admin --site_pass password
  *  --site_host example.com --site_name "SuiteCRM Silent Install"
  */
 $args = getArguments();
@@ -132,6 +140,7 @@ function createConfigArray($args){
   );
   return $configArr;
 }
+```
 
 As always, you should always backup before running code you find on the
 internet.

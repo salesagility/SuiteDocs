@@ -1,10 +1,13 @@
 ---
-title: PHP code injection
+title: PHP code injection using an image in popular open source CRM systems
+date: 2017-09-05T12:00:00+01:00
 author: Greg Soper
-categories:
+tags:
   - Open Source
   - Developer
   - CRM
+source: https://suitecrm.com/php-code-injection-using-an-image-in-popular-open-source-crm-systems-0-day/
+hidden: true
 ---
 
 ## PHP code injection using an image in popular open source CRM systems [0-day]

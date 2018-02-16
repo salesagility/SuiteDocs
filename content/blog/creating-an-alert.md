@@ -1,23 +1,24 @@
 ---
-title: Creating an Alert in SuiteCRM
-weight: 80
+title: Creating an alert in SuiteCRM
+date: 2015-08-25T12:00:00+01:00
+author: Jim Mackin
+tags: []
+source: http://www.jsmackin.co.uk/suitecrm/suitecrm-creating-an-alert/
+hidden: true
 ---
 
-:imagesdir: ./../../../images/en/community
-
-[width="100", cols="80,20", frame="none", grid="none"]
-|===
-|With the release of SuiteCRM 7.3 comes Alerts. These are displayed
+With the release of SuiteCRM 7.3 comes Alerts. These are displayed
 within SuiteCRM as a small badge in the menu bar. I.e:
 
-|image:20SuiteCRMAlerts0.png[SuiteCRMAlerts0]
-|===
+![SuiteCRMAlerts0](/images/en/community/20SuiteCRMAlerts0.png)
+
+<!--more-->
 
 Since these are just stored as beans we can add notifications by simply
 creating a new record with the appropriate values and saving it. For
 example:
 
-[source,php]
+```php
 <?php
 $alert = BeanFactory::newBean('Alerts');
 $alert->name = 'My Alert';
@@ -28,10 +29,8 @@ $alert->assigned_user_id = '1';
 $alert->type = 'info';
 $alert->is_read = 0;
 $alert->save();
+```
 
 Calling this can be used to create an alert for a specific user like so:
 
-[width="70", cols="50,20", frame="none", grid="none"]
-|===
-|Calling this can be used to create an alert for a specific user like so: |image:21SuiteCRMExampleAlert.png[SuiteCRMExampleAlert]
-|===
+![SuiteCRMExampleAlert](/images/en/community/21SuiteCRMExampleAlert.png)

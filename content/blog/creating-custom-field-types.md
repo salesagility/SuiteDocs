@@ -1,46 +1,52 @@
 ---
 title: Creating custom field types in SuiteCRM
-weight: 50
+date: 2015-10-30T12:00:00+01:00
+author: Jim Mackin
+tags: []
+source: http://www.jsmackin.co.uk/suitecrm/creating-custom-field-type-suitecrm/
+hidden: true
 ---
-
-:imagesdir: ./../../../images/en/community
 
 Like a lot of SuiteCRM the field types are customisable and you can add
 your own types of fields. This post will explain how to add a colour
 picker as a custom field type.
+
+<!--more-->
 
 First off we need to add the option to studio to allow creating fields
 of our new type. We do this by adding a new file
 `custom/modules/DynamicFields/templates/Fields/TemplateColourPicker.php`
 with the following contents:
 
-[source,php]
+```php
 <?php
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 .
 require_once('modules/DynamicFields/templates/Fields/TemplateField.php');
 class TemplateColourPicker extends TemplateField{
     var $type='ColourPicker';
-.    
+.
     function get_field_def(){
         $def = parent::get_field_def();
         $def['dbType'] = 'varchar';
         return $def;
     }
 }
+```
 
 Next we create the language file
 `custom/Extensionmodules/ModuleBuilder/Ext/Language/en_us.ColourPicker.php`
 and define the label for our new field type:
 
-[source,php]
+```php
 <?php
 $mod_strings['fieldTypes']['ColourPicker'] = 'Colour Picker';
+```
 
 After a quick repair and rebuild this gives us the option to create a
-field with type ``Colour Picker'':
+field with type `Colour Picker`:
 
-image:03ColourPickerStudio.png[ColourPickerStudio]
+![ColourPickerStudio](/images/en/community/03ColourPickerStudio.png)
 
 This can then be added to views and the like through studio in the usual
 manner.
@@ -48,7 +54,7 @@ manner.
 However our field is pretty boring and doesn’t do anything yet. Let’s
 give it some personality.
 
-We’ll use http://www.dematte.at/tinyColorPicker/[TinyColorPicker] to add
+We’ll use [TinyColorPicker](http://www.dematte.at/tinyColorPicker/) to add
 some functionality to the field. This will get saved in a new directory
 in
 `custom/include/SugarFields/Fields/ColourPicker/js/jqColorPicker.min.js`
@@ -56,7 +62,7 @@ in
 Next we’ll add two templates, one for the Detail view at
 `custom/include/SugarFields/Fields/ColourPicker/DetailView.tpl`:
 
-[source,php]
+```php
 <script src="custom/include/SugarFields/Fields/ColourPicker/js/jqColorPicker.min.js"></script>
 {if strlen({{sugarvar key='value' string=true}}) <= 0}
     {assign var="value" value={{sugarvar key='default_value' string=true}} }
@@ -64,11 +70,11 @@ Next we’ll add two templates, one for the Detail view at
     {assign var="value" value={{sugarvar key='value' string=true}} }
 {/if}
 <input disabled="disabled" type='text' name='{{if empty($displayParams.idName)}}{{sugarvar key='name'}}{{else}}{{$displayParams.idName}}{{/if}}'
-       id='{{if empty($displayParams.idName)}}{{sugarvar key='name'}}{{else}}{{$displayParams.idName}}{{/if}}' 
+       id='{{if empty($displayParams.idName)}}{{sugarvar key='name'}}{{else}}{{$displayParams.idName}}{{/if}}'
        size='{{$displayParams.size|default:30}}'
        {{if isset($displayParams.maxlength)}}maxlength='{{$displayParams.maxlength}}'{{elseif isset($vardef.len)}}maxlength='{{$vardef.len}}'{{/if}}
        value='{$value}' title='{{$vardef.help}}' {{if !empty($tabindex)}} tabindex='{{$tabindex}}' {{/if}}
-        {{if !empty($displayParams.accesskey)}} accesskey='{{$displayParams.accesskey}}' {{/if}} 
+        {{if !empty($displayParams.accesskey)}} accesskey='{{$displayParams.accesskey}}' {{/if}}
         {{$displayParams.field}}>
 .
 <script>
@@ -79,11 +85,12 @@ Next we’ll add two templates, one for the Detail view at
     });
     {/literal}
 </script>
+```
 
 and one for the Edit View at
 `custom/include/SugarFields/Fields/ColourPicker/EditView.tpl`:
 
-[source,php]
+```php
 <script src="custom/include/SugarFields/Fields/ColourPicker/js/jqColorPicker.min.js"></script>
 {if strlen({{sugarvar key='value' string=true}}) <= 0}
     {assign var="value" value={{sugarvar key='default_value' string=true}} }
@@ -91,11 +98,11 @@ and one for the Edit View at
     {assign var="value" value={{sugarvar key='value' string=true}} }
 {/if}
 <input type='text' name='{{if empty($displayParams.idName)}}{{sugarvar key='name'}}{{else}}{{$displayParams.idName}}{{/if}}'
-       id='{{if empty($displayParams.idName)}}{{sugarvar key='name'}}{{else}}{{$displayParams.idName}}{{/if}}' 
+       id='{{if empty($displayParams.idName)}}{{sugarvar key='name'}}{{else}}{{$displayParams.idName}}{{/if}}'
        size='{{$displayParams.size|default:30}}'
        {{if isset($displayParams.maxlength)}}maxlength='{{$displayParams.maxlength}}'{{elseif isset($vardef.len)}}maxlength='{{$vardef.len}}'{{/if}}
        value='{$value}' title='{{$vardef.help}}' {{if !empty($tabindex)}} tabindex='{{$tabindex}}' {{/if}}
-        {{if !empty($displayParams.accesskey)}} accesskey='{{$displayParams.accesskey}}' {{/if}} 
+        {{if !empty($displayParams.accesskey)}} accesskey='{{$displayParams.accesskey}}' {{/if}}
         {{$displayParams.field}}>
 .
 <script>
@@ -106,8 +113,9 @@ and one for the Edit View at
     });
     {/literal}
 </script>
+```
 
 After a quick repair and rebuild (and assuming the field has been added
 to the views). You’ll see the new field:
 
-image:04ColourPicker.png[Colour Picker Exmaple]
+![Colour Picker Exmaple](/images/en/community/04ColourPicker.png)
