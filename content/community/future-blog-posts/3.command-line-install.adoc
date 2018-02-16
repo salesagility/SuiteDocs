@@ -11,6 +11,7 @@ will perform an install.
 The steps involved are quite straightforward. First off we create a
 config_si.php file in the SuiteCRM root:
 
+.Example
 [source, php]
 <?php
 $sugar_config_si  = array (
@@ -54,6 +55,7 @@ browser then SuiteCRM will perform an unaided install.
 
 Alternatively you can also call the following in the terminal:
 
+.Example
 [source, php]
 php -r "\$_SERVER['HTTP_HOST'] = 'localhost'; \$_SERVER['REQUEST_URI'] = 'install.php';\$_REQUEST = array('goto' => 'SilentInstall', 'cli' => true);require_once 'install.php';";
 
@@ -61,6 +63,7 @@ php -r "\$_SERVER['HTTP_HOST'] = 'localhost'; \$_SERVER['REQUEST_URI'] = 'instal
 location of an unzipped SuiteCRM package and will create the necessary
 config file and run the installation:
 
+.Example
 [source, php]
 <?php
 /*

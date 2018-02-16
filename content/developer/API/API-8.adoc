@@ -1,0 +1,757 @@
+---
+title: API-8
+weight:
+---
+
+SuiteCRM API version 8 exposes a set of resources, to be consumed by clients who wish to harness the powerful CRM functionality provided by SuiteCRM. The API framework employs a Restful design to facilitate the `http://jsonapi.org/format/1.0/[`JSON`` ``API`` ``1.0`]` standard messages over HTTPS. It includes meta objects to provide functionality which is not yet defined in the JSON API 1.0 standard. The SuiteCRM API is secured by the OAuth 2 Server provided in SuiteCRM.`
+
+[[suitecrm-api-requirements]]
+SuiteCRM API Requirements
+-------------------------
+
+In order to prevent man-in-the-middle attacks, the authorization server
+MUST require the use of TLS with server authentication as defined by
+https://tools.ietf.org/html/rfc2818[RFC2818] for any request sent to the
+authorization and token endpoints. The client MUST validate the
+authorization server’s TLS certificate as defined by
+https://tools.ietf.org/html/rfc6125[RFC6125] and in accordance with its
+requirements for server identity authentication.
+
+SuiteCRM uses key cryptography in order to encrypt and decrypt, as well
+as verify the integrity of signatures.
+
+Please ensure that you have the following:
+
+* OpenSSL PHP Extension installed and configured
+* The SuiteCRM instance must be configured use HTTPS/SSL
+* You need to have PHP version 5.5.9, or 7.0 and above
+
+[[configure-suitecrm-api-version-8]]
+Configure SuiteCRM API (Version 8)
+----------------------------------
+
+Before you can consume the API, you must first configure SuiteCRM to
+grant access to a client. SuiteCRM 7.10 does provide an administrative
+panel, through which you can add clients and revoke tokens.
+
+image:Admin-OAuth2Clients-3.png[Admin-OAuth2Clients-3.png,title="Admin-OAuth2Clients-3.png"]
+
+First you need to create a new client.
+
+image:Admin-OAuth2Clients-2.png[Admin-OAuth2Clients-2.png,title="Admin-OAuth2Clients-2.png"]
+
+The 'secret' will be hashed when saved, and will not be accessible
+later. The 'id' is created by SuiteCRM and will be visible once the
+client is saved.
+
+[cols=",",options="header",]
+|=======================================================================
+|Field |Description
+|ID |Defines the *client_id* which is posted to the server during
+authentication
+
+|Redirect URL |This parameter is optional, but if not sent the user will
+be redirected to a pre-registered redirect URI.
+
+|Is Confidential |A confidential client is an application that is
+capable of keeping a client password confidential to the world.
+
+|Secret |Defines the *client_secret* which is posted to the server
+during authentication
+|=======================================================================
+
+[[apache2-server]]
+Apache2 Server
+~~~~~~~~~~~~~~
+
+Those who have upgraded from an older version of SuiteCRM, will need to
+run the "rebuild .htaccess" tool. As the API uses "friendly" urls to
+define resources. It may be possible to use the API without this
+feature. However, you will want the .htaccess file to configure the
+_/api_ entrypoint to the _lib/API/public_ folder.
+
+*The Mod Rewrite Apache2 Module must be installed and configured*
+
+[[iis-server]]
+IIS Server
+~~~~~~~~~~
+
+IIS Server Administrators will need create a web.config file manually
+configure the _/api_ entrypoint to the _lib/API/public_ folder.
+
+*It is important to ensure that the lib/API/OAuth2/ directory cannot be
+accessed over a HTTP request*
+
+[[getting-the-available-resources]]
+Getting the Available Resources
+-------------------------------
+
+To see what resources and authentication methods are available, you can
+retrieve the https://swagger.io/specification/[swagger documentation]:
+
+<pre> GET /api/v8/swagger.json </pre>
+
+[[authentication-obtaining-a-session]]
+Authentication: Obtaining A Session
+-----------------------------------
+
+The SuiteCRM API requires that a client has an active session to consume
+the API. Sessions are acquired by authenticating with the
+http://oauth2.thephpleague.com/[OAuth 2 Server], using one of the
+available grant types.
+
+[[available-grant-types]]
+Available Grant Types
+~~~~~~~~~~~~~~~~~~~~~
+
+[cols=",",options="header",]
+|=======================================
+|SuiteCRM Version |Available Grant Types
+|7.10.0 |Password Grant
+|=======================================
+
+[[password-grant]]
+Password Grant
+~~~~~~~~~~~~~~
+
+A password grant is used for allow users to log into SuiteCRM with a
+username and a password:
+
+<pre> POST /api/oauth/access_token </pre>
+
+[[required-parameters]]
+Required parameters
+~~~~~~~~~~~~~~~~~~~
+
+[cols=",",options="header",]
+|======================================
+|param |value
+|grant_type |password
+|client_id |*ExampleClientName*
+|client_secret |*ExampleSecretPassword*
+|scope |basic
+|username |*admin*
+|password |*secret*
+|======================================
+
+Please change the values in bold to match your chosen authentication
+details.
+
+Example Request (PHP):
+
+<pre> $ch = curl_init();
+
+$header = array(
+
+`   'Content-type: application/vnd.api+json',` +
+`   'Accept: application/vnd.api+json',`
+
+);
+
+$postStr = json_encode(array(
+
+`   'grant_type' => 'password',` +
+`   'client_id' => '3D7f3fda97-d8e2-b9ad-eb89-5a2fe9b07650',` +
+`   'client_secret' => 'client_secret',` +
+`   'username' => 'admin',` +
+`   'password' => 'admin',` +
+`   'scope' => ''`
+
+));
+
+$url = 'https://path-to-instance/api/oauth/access_token';
+
+curl_setopt($ch, CURLOPT_URL, url); curl_setopt($ch,
+CURLOPT_CUSTOMREQUEST, 'POST'); curl_setopt($ch, CURLOPT_POSTFIELDS,
+$postStr); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch,
+CURLOPT_HTTPHEADER, $header);
+
+$output = curl_exec($ch); </pre>
+
+Example Response: <pre> \{
+
+`  "token_type":"Bearer",` +
+`  "expires_in":3600,` +
+`  "access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkOTEyODNhMjc1NDdkNDRlMzNmOTc5ZjVmMGRkYzQwNzg1ZGY5NGFhMWI5MDVlZGNmMzg3NWIxYjJkZDMzNDljZWEyNjZhMTQ2OTE5OWIzIn0.eyJhdWQiOiJzdWl0ZWNybV9jbGllbnQiLCJqdGkiOiI3ZDkxMjgzYTI3NTQ3ZDQ0ZTMzZjk3OWY1ZjBkZGM0MDc4NWRmOTRhYTFiOTA1ZWRjZjM4NzViMWIyZGQzMzQ5Y2VhMjY2YTE0NjkxOTliMyIsImlhdCI6MTUxODE5NTEwMiwibmJmIjoxNTE4MTk1MTAyLCJleHAiOjE1MTgxOTg3MDIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.EVGuRisoMxSIZut3IWtgOYISw8lEFSZgCWYCwseLEfOuPJ8lRMYL4OZxhu9gxJoGF0nj3yc6SYDPxovrsoj8bMoX38h4krMMOHFQLoizU0k2wAceOjZG1tWKPhID7KPT4TwoCXbb7MqAsYtVPExH4li7gSphJ8wvcWbFdS5em89Ndtwqq3faFtIq6bv1R4t0x98HHuT7sweHUJU40K9WQjbAfIOk8f5Y6T2wassN2wMCBB8CC6eUxLi14n2D6khHvkYvtPbXLHpXSHZWvEhqhvjAeSR5MmMrAth9WDSWUx7alO-ppsZpi8U7-g9Be5p6MRatc25voyTI2iTYbx02FQ",` +
+`  "refresh_token":"def50200d2fb757e4c01c333e96c827712dfd8f3e2c797db3e4e42734c8b4e7cba88a2dd8a9ce607358d634a51cadd7fa980d5acd692ab2c7a7da1d7a7f8246b22faf151dc11a758f9d8ea0b9aa3553f3cfd3751a927399ab964f219d086d36151d0f39c93aef4a846287e8467acea3dfde0bd2ac055ea7825dfb75aa5b8a084752de6d3976438631c3e539156a26bc10d0b7f057c092fce354bb10ff7ac2ab5fe6fd7af3ec7fa2599ec0f1e581837a6ca2441a80c01d997dac298e1f74573ac900dd4547d7a2a2807e9fb25438486c38f25be55d19cb8d72634d77c0a8dfaec80901c01745579d0f3822c717df21403440473c86277dc5590ce18acdb1222c1b95b516f3554c8b59255446bc15b457fdc17d5dcc0f06f7b2252581c810ca72b51618f820dbb2f414ea147add2658f8fbd5df20820843f98c22252dcffe127e6adb4a4cbe89ab0340f7ebe8d8177ef382569e2aa4a54d434adb797c5337bfdfffe27bd8d5cf4714054d4aef2372472ebb4"`
+
+} </pre>
+
+[cols=",",options="header",]
+|=======================================================================
+|param |description
+|token_type |the Bearer token value
+
+|expires_in |an integer representing the TTL of the access token
+
+|access_token |a https://tools.ietf.org/html/rfc7519[JWT] signed with
+the authorization server’s private key. It is required that you include
+this in the HTTP headers, each time you make a request to the API
+
+|refresh_token |an encrypted payload that can be used to refresh the
+access token when it expires.
+|=======================================================================
+
+You can store the bearer token in a database and use in your requests
+like this: <pre> $header = array(
+
+`   'Content-type: application/vnd.api+json',` +
+`   'Accept: application/vnd.api+json',` +
+`   'Authorization: Bearer ' . $your_saved_access_token`
+
+); </pre>
+
+[[managing-tokens]]
+Managing Tokens
+---------------
+
+The OAuth 2 admin panel displays which session have been successfully
+created.
+
+image:Admin-OAuth2Clients-3.png[Admin-OAuth2Clients-3.png,title="Admin-OAuth2Clients-3.png"]
+
+You can also revoke or end an active session by selected the session and
+then selecting "revoke token" in the action or bulk actions menu.
+
+image:Screenshot_20180215_130855.png[Screenshot_20180215_130855.png,title="Screenshot_20180215_130855.png"]
+
+Note: Please ensure that you include the meta middle table in each link
+in the relationship otherwise it will set all the middle table fields to
+the first meta object.
+
+[[json-api]]
+JSON API
+--------
+
+http://jsonapi.org/format/1.0/[JSON API] is a specification for how a
+client should request that resources be fetched or modified, and how a
+server should respond to those requests.
+
+JSON API is designed to minimize both the number of requests and the
+amount of data transmitted between clients and servers. This efficiency
+is achieved without compromising readability, flexibility, or
+discoverability.
+
+JSON API requires use of the JSON API media type
+(http://www.iana.org/assignments/media-types/application/vnd.api+json[<code>application/vnd.api+json</code>])
+for exchanging data.
+
+[[validating-the-messages]]
+Validating the messages
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To validate messages, you can retrieve the JSON Schema file:
+
+<pre> GET /api/v8/schema </pre>
+
+[[conventions]]
+Conventions
+~~~~~~~~~~~
+
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+document are to be interpreted as described in RFC 2119
+http://tools.ietf.org/html/rfc2119_RFC2119[http://tools.ietf.org/html/rfc2119
+RFC2119].
+
+[[content-negotiation]]
+Content Negotiation
+~~~~~~~~~~~~~~~~~~~
+
+Clients *MUST* send all JSON API data in request documents with the
+header <code>Content-Type: application/vnd.api+json</code> without any
+media type parameters.
+
+Clients that include the JSON API media type in their
+<code>Accept</code> header *MUST* specify the media type there at least
+once without any media type parameters.
+
+Clients *MUST* ignore any parameters for the
+<code>application/vnd.api+json</code> media type received in the
+<code>Content-Type</code> header of response documents.
+
+An example code could look like this:
+
+<pre> $ch = curl_init();
+
+$header = array(
+
+`   'Content-type: application/vnd.api+json',` +
+`   'Accept: application/vnd.api+json',`
+
+);
+
+$url = 'https://path-to-instance/api/v8/modules/meta/list';
+
+curl_setopt($ch, CURLOPT_URL, url); curl_setopt($ch,
+CURLOPT_CUSTOMREQUEST, 'GET');; curl_setopt($ch, CURLOPT_RETURNTRANSFER,
+1); curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+
+$output = curl_exec($ch); </pre>
+
+[[handling-errors]]
+Handling Errors
+~~~~~~~~~~~~~~~
+
+The JSON API specifies the errors object to send messages back to the
+user. SuiteCRM API errors are exceptions which have been thrown.
+
+The error elements are textual content which reside in brackets eg.
+&#91;409&#93;. A good method to quickly finding the source of the error,
+is to use the last error element in the message to search the Project.
+When the issue is a client side problem with the body of the request, it
+is likely that the source will display where the issue is. All errors
+are logged and posted back to the client application.
+
+*suitecrm.log* <pre> Tue Sep 26 13:51:17 2017 [697][1][FATAL] [ERROR]
+Code: [8006] Status: [409] Message: [SuiteCRM] [API] [Conflict] ["id"
+already exist] "11c48ede-e9c6-6c15-fa37-59b66a8dbeab" Detail: ["Unable
+create record, because it already exists."] Source:
+[/data/attributes/id] </pre>
+
+*Response* <pre> \{
+
+` "errors": [` +
+`   {` +
+`     "code": 8006,` +
+`     "title": "[SuiteCRM] [API] [Conflict] [\"id\" already exist] \"11c48ede-e9c6-6c15-fa37-59b66a8dbeab\"",` +
+`     "detail": "Unable create record, because it already exists.",` +
+`     "source": {` +
+`       "pointer": "/data/attributes/id"` +
+`     },` +
+`     "status": 409` +
+`   }` +
+` ]`
+
+} </pre>
+
+[[modules-api]]
+Modules API
+~~~~~~~~~~~
+
+SuiteCRM offers access to modules resources.
+
+[[available-modules]]
+Available Modules
+^^^^^^^^^^^^^^^^^
+
+To get a list of modules you can use the following url: <pre>GET
+https://path-to-instance/api/v8/modules/meta/list%3C/pre%3E;
+
+[[list-available-modules]]
+List available modules
+^^^^^^^^^^^^^^^^^^^^^^
+
+To get a list of records use the following url:
+
+<pre>https://path-to-instance/api/v8/%7Bmodule%7D%3C/pre%3E;
+
+Example Request:
+<pre>https://path-to-instance/api/v8/modules/Accounts%3C/pre%3E;
+
+Example Response: <pre> \{
+
+` "data": [{` +
+`   "type": "Accounts",` +
+`   "id": "1",` +
+`   "attributes": {` +
+`     "Name": "JSON API paints my bikeshed!"` +
+`   }` +
+` }, {` +
+`   "type": "Accounts",` +
+`   "id": "2",` +
+`   "attributes": {` +
+`     "Name": "Rails is Omakase"` +
+`   }` +
+` }]` +
+` "links": {` +
+`     "self": "`https://path-to-instance/api/v8/modules/Accounts?page%5Blimit%5D=20&page%5Boffset%5D=0%22[`https://path-to-instance/api/v8/modules/Accounts?page[limit]=20&page[offset]=0"`]`;,` +
+`     "first": "`https://path-to-instance/api/v8/modules/Accounts?page%5Blimit%5D=20&page%5Boffset%5D=0%22[`https://path-to-instance/api/v8/modules/Accounts?page[limit]=20&page[offset]=0"`]`;,` +
+`     "last": null,` +
+`     "prev": null,` +
+`     "next": null,` +
+`  }`
+
+} </pre>
+
+[[pagination]]
+Pagination
+^^^^^^^^^^
+
+SuiteCRM offers a offset-based strategy for pagination, a client MAY use
+the page[offset] and page[limit] parameter to request for pagination.
+The following keys MUST be used for pagination links:
+
+* first: the first page of data
+* last: the last page of data
+* prev: the previous page of data
+* next: the next page of data
+
+Keys MUST either be omitted or have a null value to indicate that a
+particular link is unavailable.
+
+[[sparse-fieldset]]
+Sparse fieldset
+^^^^^^^^^^^^^^^
+
+A client MAY request that an endpoint return only specific fields in the
+response on a per-type basis by including a fields[TYPE] parameter. The
+value of the fields parameter MUST be a comma-separated (U+002C COMMA,
+“,”) list that refers to the name(s) of the fields to be returned.
+
+<pre> GET
+https://path-to-instance/api/v8/Accounts?fields%5BAccounts%5D=name,date_created
+</pre>
+
+[[sorting]]
+Sorting
+^^^^^^^
+
+SuiteCRM offers sorting via the sort parameter.
+
+Example:
+
+<pre> GET
+https://path-to-instance/api/v8/Accounts?sort=name,-date_created </pre>
+
+The attribute is sorted in ascending order, however to sort in
+descending order you simply add MINUS (-) in front of the attribute
+name. The value of the sort parameter MUST be a comma-separated (U+002C
+COMMA, “,”) list.
+
+[[filtering]]
+Filtering
+^^^^^^^^^
+
+The JSON Api (v1.0.0) does not specify which strategy to use when
+filtering, instead the *filter* query parameter is reserved for
+filtering. So this section attempts to describe the filtering strategy
+implemented in SuiteCRM.
+
+[[pre-made-filters]]
+Pre-made Filters
+^^^^^^^^^^^^^^^^
+
+You can specify a pre-made filter like so
+
+<pre> GET /api/v8/modules/\{module}?filter=\{name} </pre>
+
+* *\{name}* represents the name of the filter
+
+Example use the roi filter and sort by total_revenue in descending order
+<pre> GET /api/v8/modules/Leads?filter=roi&sort=-total_revenue </pre>
+
+[[filter-by-id]]
+Filter by id
+^^^^^^^^^^^^
+
+If you need to retrieve a set of modules you can use the following call
+
+<pre> GET /api/v8/modules/\{module}?filter[id]=\{id},... </pre>
+
+* *\{type}* represents represent the module type:
+* *\{filter}* represents the id for the module type
+
+To get a list of accounts with the id of 1, 2, and 3: <pre> GET
+/api/v8/modules/Accounts?filter[Accounts]=1,2,3 </pre>
+
+[[filter-by-attributes]]
+Filter by attributes
+^^^^^^^^^^^^^^^^^^^^
+
+<pre> GET
+/api/v8/modules/\{module}?filter[\{type}.\{attribute}]=&#91;&#91;\{operator}&#93;&#93;\{comparator},...
+</pre>
+
+* *\{type}* represents represent the module type:
+* *\{attribute}* represents an attribute name eg. date_modified
+* *\{operator}* represents a &#91;&#91;API-8#Operators|filter
+operation&#93;&#93;
+* *\{comparator}* represents the attribute value to compare against eg
+2017-11-17T11:40:00+00:00
+
+<pre> GET
+/api/v8/modules/\{module}?filter[Accounts.date_modified]=&#91;&#91;gt&#93;&#93;2017-11-17T11:40:00+00:00
+</pre>
+
+[[filter-relationships]]
+Filter relationships
+^^^^^^^^^^^^^^^^^^^^
+
+<pre> GET /api/v8/modules/\{module}?filter[\{type}.\{related
+type}.\{attribute}]=&#91;&#91;\{operator}&#93;&#93;\{comparator},...
+</pre>
+
+<pre> GET
+/api/v8/modules/Accounts?filter[Accounts.Contacts.date_modified]=&#91;&#91;gt&#93;&#93;2017-11-17T11:40:00+00:00
+</pre>
+
+[[filter-middle-table-fields]]
+Filter Middle Table fields
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+<pre> GET /api/v8/modules/\{module}?filter[\{type}.\{related
+type}.meta.middle_table.\{attribute}]=&#91;&#91;\{operator}&#93;&#93;\{comparator},...
+</pre>
+
+* *\{related type}* represents the link for the related module type
+* *\{attribute}* represents an attribute name eg. date_modified
+* *\{operator}* represents a &#91;&#91;API-8#Operators|filter
+operation&#93;&#93;
+* *\{comparator}* represents the attribute value to compare against eg
+2017-11-17T11:40:00+00:00
+
+<pre> GET
+/api/v8/modules/Meetings?filter[Meetings.Users.meta.middle_table.accept_status]=&#91;&#91;eq&#93;&#93;Accept
+</pre>
+
+[[operators]]
+Operators
+^^^^^^^^^
+
+The operators are represented by string values, so that they are not
+encoded, plus it will make it easier to extend operations in the future.
+
+*Comparators*
+
+[cols=",,",options="header",]
+|=======================================================================
+|Operator |Name |Example
+|eq |Equal |filter[Accounts.deleted]=&#91;&#91;eq&#93;&#93;1
+
+|ne |Not Equal |filter[Accounts.deleted]=&#91;&#91;ne&#93;&#93;0
+
+|gt |Greater Than
+|filter[Accounts.date_modified]=&#91;&#91;gt&#93;&#93;2017-11-17T11:40:00+00:00
+
+|lt |Less Than
+|filter[Accounts.date_modified]=&#91;&#91;lt&#93;&#93;2017-11-17T11:40:00+00:00
+
+|gte |Greater Than or Equal
+|filter[Accounts.date_modified]=&#91;&#91;gte&#93;&#93;2017-11-17T11:40:00+00:00
+
+|lte |Less Than or Equal
+|filter[Accounts.date_modified]=&#91;&#91;lte&#93;&#93;2017-11-17T11:40:00+00:00
+
+|in |In List
+|filter[Accounts.name]=&#91;&#91;in&#93;&#93;inc,&#91;&#91;in&#93;&#93;ltd
+
+|nin |Not In List
+|filter[Accounts.name]=&#91;&#91;nin&#93;&#93;inc,&#91;&#91;nin&#93;&#93;ltd
+|=======================================================================
+
+*Strings*
+
+[cols=",,",options="header",]
+|================================================================
+|Operator |Name |Example
+|li |Like |filter[Accounts.name]=&#91;&#91;li&#93;&#93;sam%
+|nli |Not Like |filter[Accounts.name]=&#91;&#91;nli&#93;&#93;bob%
+|================================================================
+
+This convention was taken from the
+https://docs.mongodb.com/manual/reference/operator/query/[MongoDb]
+syntax.
+
+[[multiple-comparators-vs-multiple-filters]]
+Multiple Comparators vs Multiple Filters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When you need to create multiple conditions on a field, Due the length
+limitation of a url, it is recommended that you use the multiple
+comparator notation.
+
+Comparators separated by "," <pre> GET
+/api/v8/modules/Accounts?filter[Contacts.date_modified]=gte2017-11-17T11:40:00+00:00,lte2017-11-18T11:40:00+00:00
+</pre>
+
+When you need to filter by multiple fields, you should use the multiple
+filters notation.
+
+Filters separated by "&" <pre> GET
+/api/v8/modules/Accounts?filter[Contacts.date_modified]=gte2017-11-17T11:40:00+00:00&filter[Contacts.last_contacted]=lte2017-11-18T11:40:00+00:00
+</pre>
+
+[[compare-against-other-fields-idea-for-a-future-version]]
+Compare against other fields (idea for a future version)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+idea on how to compare other fields:
+
+<pre> GET
+/api/v8/modules/Meetings?filter[User.name]=&#91;&#91;eq&#93;&#93;[User.Contacts.name]
+</pre>
+
+[[compare-against-special-values-idea-for-a-future-version]]
+Compare against special values (idea for a future version)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+idea on how to compare special values:
+
+<pre> GET
+/api/v8/modules/Meetings?filter[User]=&#91;&#91;[current_user&#93;&#93;]
+</pre>
+
+[[or-operator-idea-for-a-future-version]]
+OR Operator (idea for a future version)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+idea on how to compare using boolean logic
+
+<pre> GET
+/api/v8/modules/Meetings?filter[Users.type]=&#91;&#91;eq&#93;&#93;Standard
+User,&#91;&#91;or&#93;&#93;,&#91;&#91;eq&#93;&#93;administrator </pre>
+
+[[parenthesis-operator-idea-for-a-future-version]]
+Parenthesis Operator (idea for a future version)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+idea on how to compare special values:
+
+<pre> GET
+/api/v8/modules/Meetings?filter[Users.type]=&#91;&#91;eq&#93;&#93;Standard
+User,&#91;&#91;opa&#93;&#93;,&#91;&#91;eq&#93;&#93;administrator,&#91;&#91;cpa&#93;&#93;
+</pre>
+
+[[design]]
+Design
+^^^^^^
+
+Here is an overview of the entire process: <pre> +->PSR 7 ServerRequest
+| |->Module Controller Action V |-->ModuleRepository (currently
+ModulesLib) V |---->FilterRepository (PSR 7 ServerRequest) V
+|------>FilterParser |----<Intermediate Data Structure V
+|--ModuleRepository V |-->Interpreter |---->Intermediate Data Structure
+|----<SuiteBeanResource |----<Builder |------<SQL V |--ModuleRepository
+|----<Inclusion Modules |----<Sparse Field Set |----<SuiteBeanResource[]
+|----<Build Paginated Results V |-<Module Controller Action | +-<PSR 7
+JsonApiResponse </pre>
+
+[[intermediate-data-structure]]
+Intermediate Data Structure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The intermediate data structure is used to translate a request into an
+tree structure which can be interpreted for various purposes, like
+building a SQL Query.
+
+<pre> +-[type||attribute] |----.... |------operator |------operand
+|------... </pre>
+
+*Simple Example*
+
+<pre> ?filter[Accounts.name]=link:eq[eqfoo] </pre>
+
+translates to
+
+<pre> +-[accounts] |--[name] |----eq |----foo </pre>
+
+*More elaborate example*
+
+<pre> ?filter[contacts.leads.name]=eq%foo%
+&filter[accounts.date_modified]=gt2017-11-17T11:40:00+00:00,lt2017-12-17T11:40:00+00:00
+&filter[assigned_to]=link:[current_user[[current_user]] </pre>
+
+translates to
+
+<pre> +-[contacts] |--[leads] |----[name] |------eq |------%foo%
+|-[accounts] |--[date_modified] |----gt] |----2017-11-17T11:40:00+00:00
+|----lt |----2017-12-17T11:40:00+00:00 |-[assigned_to]
+|----link:[current_user[[current_user]] </pre>
+
+[[list-recently-viewed-records]]
+List Recently Viewed Records
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+List recently viewed records of the currently logged in user for all
+modules <pre>GET /api/v8/modules/\{module}/viewed</pre>
+
+[[list-favourite-records]]
+List Favourite Records
+^^^^^^^^^^^^^^^^^^^^^^
+
+List favourite records of the currently logged in user for all modules
+<pre>GET /api/v8/modules/\{module}/favorites</pre>
+
+[[attribute-definitions]]
+Attribute Definitions
+^^^^^^^^^^^^^^^^^^^^^
+
+To get the definitions of the attributes / fields. This is useful to get
+the constraints for each attribute
+
+<pre>/api/v8/modules/\{module}/meta/attributes</pre>
+
+[[get-language-strings]]
+Get Language Strings
+^^^^^^^^^^^^^^^^^^^^
+
+*Module Strings* <pre>GET /api/v8/modules/\{module}/meta/language</pre>
+
+*Application and Drop Down Strings* <pre>GET
+/api/v8/modules/meta/languages</pre>
+
+[[module-record]]
+Module Record
+^^^^^^^^^^^^^
+
+To consume a record from a module, you can do the standard
+http://jsonapi.org/format/1.0/#crud[CRUD] operations
+
+*Create* <pre>POST /api/v8/modules/\{module}/\{id}</pre>
+
+*Retrieve* <pre>GET /api/v8/modules/\{module}/\{id}</pre>
+
+*Update* <pre>PUT /api/v8/modules/\{module}/\{id}</pre>
+
+*Delete* <pre>DELETE /api/v8/modules/\{module}/\{id}</pre>
+
+[[related-module-records]]
+Related Module records
+^^^^^^^^^^^^^^^^^^^^^^
+
+To consume a related module records, you can do the standard
+relationship
+http://jsonapi.org/format/1.0/#fetching-relationships[fetching] and
+http://jsonapi.org/format/1.0/#crud-updating-relationships[updating]
+operations:
+
+*Create* <pre>POST
+/api/v8/modules/\{module}/\{id}/relationships/\{link}</pre>
+
+*Read* <pre>GET
+/api/v8/modules/\{module}/\{id}/relationships/\{link}</pre>
+
+*Update* <pre>PUT
+/api/v8/modules/\{module}/\{id}/relationships/\{link}</pre>
+
+*Delete* <pre>DELETE
+/api/v8/modules/\{module}/\{id}/relationships/\{link}</pre>
+
+[[inclusion-of-fields]]
+Inclusion of fields
+^^^^^^^^^^^^^^^^^^^
+
+The filter only controls how the data is filtered. How the data is
+presented is handled separately. You can use the
+http://jsonapi.org/format/1.0/#fetching-includes[fields] query parameter
+to select the fields, or use the
+http://jsonapi.org/format/1.0/#fetching-sparse-fieldsets[include] query
+parameter to select to include the related types you wish to be in the
+response.
+
+[[references]]
+References
+----------
+
+* http://jsonapi.org/format/1.0/[JSON API 1.0]
+* https://tools.ietf.org/html/rfc2818[RFC2818]
+* https://tools.ietf.org/html/rfc6125[RFC6125]
+* https://swagger.io/specification/[swagger documentation]
+* http://oauth2.thephpleague.com/[OAuth 2 Server]
+
+`     ``t5iuxjhmef3pxgckv9x38p0efg8c09n` +
+`     ``wikitext` +
+`     ``text/x-wiki` +
+`   ` +
+` `

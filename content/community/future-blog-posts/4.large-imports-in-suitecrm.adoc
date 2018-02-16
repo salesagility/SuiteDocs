@@ -23,21 +23,22 @@ My first solution to both generate (using the
 https://github.com/fzaninotto/Faker[Faker library]) and insert the data
 looked something like:
 
+.Example
 [source,php]
 <?php
 require_once 'vendor/autoload.php';
-.
+                            //
 //Do the few, large accounts
 $accountsCount = 100;
 $contactsCount = 10000;
 doImport($accountsCount,$contactsCount);
-.
+                            //
 //Do the many, smaller accounts
 $accountsCount = 40000;
 $contactsCount = 100;
 doImport($accountsCount,$contactsCount);
-.
-.
+                            //
+                            //
 function doImport($db,$accountsCount,$contactsCount){
   $accountPrep = $db->prepare("INSERT INTO accounts (id,name,date_entered,date_modified,modified_user_id,created_by) VALUES(:id,:name, NOW(), NOW(),'1','1');");
   $contactPrep = $db->prepare("INSERT INTO contacts (id,first_name,last_name,date_entered, date_modified,modified_user_id,created_by) VALUES(:id,:first_name, :last_name, NOW(), NOW(),'1','1');");
@@ -72,21 +73,22 @@ could batch the inserts. I was a bit sceptical that this would make
 enough of a difference to be worth it but here we go. Our pseudo code
 now looks something like:
 
+.Example
 [source,php]
 <?php
 require_once 'vendor/autoload.php';
-.
+                            //
 //Do the few, large accounts
 $accountsCount = 100;
 $contactsCount = 10000;
 doImport($accountsCount,$contactsCount);
-.
+                            //
 //Do the many, smaller accounts
 $accountsCount = 40000;
 $contactsCount = 100;
 doImport($accountsCount,$contactsCount);
-.
-.
+                            //
+                            //
 function doImport($db,$accountsCount,$contactsCount){
   $accountVals = array();
   $contactVals = array();
@@ -125,21 +127,22 @@ suggest is up to 20x faster than INSERTS. Let’s give that a try.
 First we continue to use the script to generate data but now we have it
 generate a CSV file:
 
+.Example
 [source,php]
 <?php
 require_once 'vendor/autoload.php';
-.
+                            //
 //Do the few, large accounts
 $accountsCount = 100;
 $contactsCount = 10000;
 doImport($accountsCount,$contactsCount);
-.
+                            //
 //Do the many, smaller accounts
 $accountsCount = 40000;
 $contactsCount = 100;
 doImport($accountsCount,$contactsCount);
-.
-.
+                            //
+                            //
 function doImport($db,$accountsCount,$contactsCount){
   $faker = Faker\Factory::create();
   $outAccounts = 'accounts.csv';
@@ -171,15 +174,16 @@ This takes about 50 minutes
 
 Finally we can run the actual import:
 
+.Example
 [source]
 mysql> LOAD DATA INFILE 'accounts.csv' INTO TABLE accounts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,name,date_entered, date_modified,modified_user_id,created_by);  
 Query OK, 40100 rows affected (30.15 sec)  
 Records: 40100  Deleted: 0  Skipped: 0  Warnings: 0
-.
+                            //
 LOAD DATA INFILE 'contacts.csv' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,first_name,last_name,date_entered, date_modified,modified_user_id,created_by);  
 Query OK, 5000000 rows affected (4 hours 56 min 52.34 sec)  
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
-.
+                            //
 mysql> LOAD DATA INFILE 'accountsContacts.csv' INTO TABLE accounts_contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,contact_id, account_id,deleted,date_modified);  
 Query OK, 5000000 rows affected (2 hours 18 min 19.70 sec)  
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
@@ -193,6 +197,7 @@ can save it some work (and time) by removing the indexes and adding them
 back afterwards. Using SHOW CREATE TABLE we can check what indexes exist
 and remove them like so:
 
+.Example
 [source]
 SHOW CREATE TABLE accounts;
 ALTER TABLE accounts DROP KEY idx_accnt_id_del;
@@ -212,20 +217,21 @@ ALTER TABLE accounts_contacts DROP KEY idx_contid_del_accid;
 
 Once the indexes are gone we we import the data:
 
+.Example
 [source] 
 LOAD DATA INFILE `accounts.csv' INTO TABLE accounts FIELDS
 TERMINATED BY `,' ENCLOSED BY ’“`LINES TERMINATED BY'’
 (id,name,date_entered, date_modified,modified_user_id,created_by); +
 Query OK, 40100 rows affected (4.72 sec) +
 Records: 40100  Deleted: 0  Skipped: 0  Warnings: 0
-.
+                            //
 LOAD DATA INFILE `contacts.csv' INTO TABLE contacts FIELDS TERMINATED BY
 `,' ENCLOSED BY ’“`LINES TERMINATED BY'’
 (id,first_name,last_name,date_entered,
 date_modified,modified_user_id,created_by); +
 Query OK, 5000000 rows affected (58 min 8.44 sec) +
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
-.
+                            //
 LOAD DATA INFILE `accountsContacts.csv' INTO TABLE accounts_contacts
 FIELDS TERMINATED BY `,' ENCLOSED BY ’“`LINES TERMINATED BY'’
 (id,contact_id, account_id,deleted,date_modified); +
@@ -235,18 +241,19 @@ Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
 And, after a quick repair and rebuild we’ll be given the SQL needed to
 rebuild the indexes:
 
+.Example
 [source,sql]
 mysql> ALTER TABLE accounts ADD INDEX idx_accnt_id_del (id,deleted), ADD INDEX idx_accnt_name_del (name,deleted), ADD INDEX idx_accnt_assigned_del (deleted,assigned_user_id), ADD INDEX idx_accnt_parent_id (parent_id);
 Query OK, 0 rows affected (5.37 sec)
-.
+                            //
 mysql> ALTER TABLE contacts ADD INDEX idx_cont_last_first (last_name,first_name,deleted), ADD INDEX idx_contacts_del_last (deleted,last_name), ADD INDEX idx_cont_del_reports (deleted,reports_to_id,last_name), ADD INDEX idx_reports_to_id (reports_to_id), ADD INDEX idx_del_id_user (deleted,id,assigned_user_id), ADD INDEX idx_cont_assigned (assigned_user_id);
 Query OK, 0 rows affected (15 min 41.37 sec)
 Records: 0  Duplicates: 0  Warnings: 0
-.
+                            //
 mysql> ALTER TABLE contacts ADD INDEX idx_cont_last_first (last_name,first_name,deleted), ADD INDEX idx_contacts_del_last (deleted,last_name), ADD INDEX idx_cont_del_reports (deleted,reports_to_id,last_name), ADD INDEX idx_reports_to_id (reports_to_id), ADD INDEX idx_del_id_user (deleted,id,assigned_user_id), ADD INDEX idx_cont_assigned (assigned_user_id);
 Query OK, 0 rows affected (15 min 41.37 sec)
 Records: 0  Duplicates: 0  Warnings: 0
-.
+                            //
 mysql> ALTER TABLE accounts_contacts ADD INDEX idx_account_contact (account_id,contact_id), ADD INDEX idx_contid_del_accid (contact_id,deleted,account_id);
 Query OK, 0 rows affected (24 min 55.06 sec)
 Records: 0  Duplicates: 0  Warnings: 0

@@ -13,9 +13,6 @@ First you’ll need a
 https://www.digitalocean.com/?refcode=ec80c6be8923[Digital Ocean]
 account. If you don’t have one it’s easy to create one.
 
-From the droplets page of your account we’ll click on the "Create
-Droplet" button.
-
 [width="100", cols="70,30" frame="none", grid="none"]
 |===
 |From the droplets page of your account we’ll click on the "Create Droplet" button. |image:05CreateDroplet.png[Create Droplet Button]

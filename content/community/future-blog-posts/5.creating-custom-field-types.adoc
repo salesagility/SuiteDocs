@@ -14,14 +14,15 @@ of our new type. We do this by adding a new file
 `custom/modules/DynamicFields/templates/Fields/TemplateColourPicker.php`
 with the following contents:
 
+.Example
 [source,php]
 <?php
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-.
+                            //
 require_once('modules/DynamicFields/templates/Fields/TemplateField.php');
 class TemplateColourPicker extends TemplateField{
     var $type='ColourPicker';
-.    
+                            //    
     function get_field_def(){
         $def = parent::get_field_def();
         $def['dbType'] = 'varchar';
@@ -33,6 +34,7 @@ Next we create the language file
 `custom/Extensionmodules/ModuleBuilder/Ext/Language/en_us.ColourPicker.php`
 and define the label for our new field type:
 
+.Example
 [source,php]
 <?php
 $mod_strings['fieldTypes']['ColourPicker'] = 'Colour Picker';
@@ -56,6 +58,7 @@ in
 Next we’ll add two templates, one for the Detail view at
 `custom/include/SugarFields/Fields/ColourPicker/DetailView.tpl`:
 
+.Example
 [source,php]
 <script src="custom/include/SugarFields/Fields/ColourPicker/js/jqColorPicker.min.js"></script>
 {if strlen({{sugarvar key='value' string=true}}) <= 0}
@@ -70,7 +73,7 @@ Next we’ll add two templates, one for the Detail view at
        value='{$value}' title='{{$vardef.help}}' {{if !empty($tabindex)}} tabindex='{{$tabindex}}' {{/if}}
         {{if !empty($displayParams.accesskey)}} accesskey='{{$displayParams.accesskey}}' {{/if}} 
         {{$displayParams.field}}>
-.
+                            //
 <script>
     {literal}
     $(document).ready(function(){
@@ -83,6 +86,7 @@ Next we’ll add two templates, one for the Detail view at
 and one for the Edit View at
 `custom/include/SugarFields/Fields/ColourPicker/EditView.tpl`:
 
+.Example
 [source,php]
 <script src="custom/include/SugarFields/Fields/ColourPicker/js/jqColorPicker.min.js"></script>
 {if strlen({{sugarvar key='value' string=true}}) <= 0}
@@ -97,7 +101,7 @@ and one for the Edit View at
        value='{$value}' title='{{$vardef.help}}' {{if !empty($tabindex)}} tabindex='{{$tabindex}}' {{/if}}
         {{if !empty($displayParams.accesskey)}} accesskey='{{$displayParams.accesskey}}' {{/if}} 
         {{$displayParams.field}}>
-.
+                            //
 <script>
     {literal}
     $(document).ready(function(){

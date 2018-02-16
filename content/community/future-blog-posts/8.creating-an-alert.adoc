@@ -17,6 +17,7 @@ Since these are just stored as beans we can add notifications by simply
 creating a new record with the appropriate values and saving it. For
 example:
 
+.Example
 [source,php]
 <?php
 $alert = BeanFactory::newBean('Alerts');
@@ -31,7 +32,7 @@ $alert->save();
 
 Calling this can be used to create an alert for a specific user like so:
 
-[width="70", cols="50,20", frame="none", grid="none"]
+[width="80", cols="50,30", frame="none", grid="none"]
 |===
 |Calling this can be used to create an alert for a specific user like so: |image:21SuiteCRMExampleAlert.png[SuiteCRMExampleAlert]
 |===
