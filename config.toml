@@ -8,6 +8,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 
 [params]
+  GitHubRepo = "https://github.com/salesagility/SuiteDocs/"
   editURL =  "https://github.com/salesagility/SuiteDocs/edit/master/content/"
   issueURL = "https://github.com/salesagility/SuiteDocs/issues/new?"
   description = "Documentation for SuiteCRM"
