@@ -1,0 +1,11 @@
+{{ range  . }}
+	<h3>{{ .Lastmod.Format "2 January" }}</h3>
+	<p class="pv2 ph3">
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+	</p>
+	<p class="pv2 ph3">
+		<a href="{{.Site.Params.GitHubRepo}}/blob/master/content/{{.Path}}">
+			{{ with .GitInfo }}{{ .Subject }}{{ else }}Source{{ end }}
+		</a>
+	</p>
+{{ end }}
