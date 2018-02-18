@@ -10,6 +10,7 @@ hidden: true
 At some point you might need to go under the hood and see how SuiteCRM
 stores *Attachments* in the database, and in the file system. So here’s
 a guide to help you out.
+<!--more—>
 
 If haven’t read this already, start with a few non-obvious points about
 what Attachments _are_ in SuiteCRM, by reading

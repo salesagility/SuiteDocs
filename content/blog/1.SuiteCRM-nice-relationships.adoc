@@ -13,6 +13,7 @@ Module builder and studio are both great tools. They allow simple
 customisation of a SuiteCRM instance without having to know all the
 inner workings of SuiteCRM. In particular studio and module builder
 allows specifying relationships between modules.
+<!--more—>
 
 However these relationships can leave a lot to be desired. The generated
 relationship names and field names are often very verbose and, even for
