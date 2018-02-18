@@ -1,0 +1,5 @@
+<h2>Recently edited Documentation pages</h2>
+
+    {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
+    {{ $recent := ($byLastMod | last 5).Reverse }}
+    {{ partial "recently-edited-item" $recent }}
