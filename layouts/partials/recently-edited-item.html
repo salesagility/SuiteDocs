@@ -1,11 +1,20 @@
+<ul>
 {{ range  . }}
-	<h3>{{ .Lastmod.Format "2 January" }}</h3>
-	<p class="pv2 ph3">
+    <li>
+	<h4 class="">
 		<a href="{{ .Permalink }}">{{ .Title }}</a>
-	</p>
-	<p class="pv2 ph3">
-		<a href="{{.Site.Params.GitHubRepo}}/blob/master/content/{{.Path}}">
-			{{ with .GitInfo }}{{ .Subject }}{{ else }}Source{{ end }}
-		</a>
-	</p>
+	</h4>
+	<p class="">
+	   Edited on the {{ .Lastmod.Format "2 January" }} in commit "{{ with .GitInfo }}{{ .Subject }}{{ else }}[Commit description]{{ end }}", 
+             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank">
+                 see changes
+             </a>
+        </p>
+    </li>
 {{ end }}
+</ul>
+
+
+{{/* COMMENTED OUT
+ <a href="{{.Site.Params.GitHubRepo}}/blob/master/content/{{.Path}}"> 
+*/}}

@@ -1,4 +1,5 @@
-<h2>Latest technical blog posts</h2>
+<h2>Latest Posts</h2>
+<h4>from our Technical Blog</h4>
 
 {{ range first 3 ( sort (where .Data.Pages "Section" "blog") "Date" "desc" ) }}
   <h3><a href="{{ .URL }}">{{ .Params.title }}</a></h3>
