@@ -10,6 +10,7 @@ hidden: true
 SuiteCRM uses a number of `Scheduler jobs` that are supposed to run at
 scheduled times, supporting functionalities like search indexing,
 workflows, email notifications, database maintenance, etc.
+pass:[<!--more>]
 
 When completing installation, the Scheduler jobs need to be *manually
 enabled*. This is done by asking your operating system to run a script
