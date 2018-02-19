@@ -1,15 +1,15 @@
 <h2>Latest Posts</h2>
-<h4>from our Technical Blog</h4>
+<h4 class="hd">from our Technical Blog</h4>
 
 {{ range first 3 ( sort (where .Data.Pages "Section" "blog") "Date" "desc" ) }}
   <h3><a href="{{ .URL }}">{{ .Params.title }}</a></h3>
-  <p>
+  <p class="author">
     {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
   </p>
   {{ .Summary }}
   {{ if .Truncated }}
   <p>
-    <a href="{{ .RelPermalink }}">Read More ></a>
+    <a class="more" href="{{ .RelPermalink }}">Read More ></a>
   </p>
   {{ end }}
 {{ end }}
