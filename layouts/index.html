@@ -4,9 +4,11 @@
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
 </span>
 
-<h1 class="home-title">SuiteCRM Documentation Site</h1>
+<div class="home-title-wrap">
+	<h1 class="home-title">SuiteCRM Documentation Site</h1>
+</div>
 
-<div class="home-row1" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+<div class="home-ctas">
      <div class="home-cta1">
           {{ partial "home-cta1.html" . }}
      </div>
@@ -26,7 +28,7 @@
 </div>
 -->
 
-<div class="home-row3" style="display: grid; grid-template-columns: 1fr 1fr;">
+<div class="home-recent">
      <div class="home-blog-latest">
           {{ partial "last-blog-posts.html" . }}
      </div>
