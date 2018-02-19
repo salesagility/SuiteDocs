@@ -819,6 +819,11 @@ select::-ms-expand {
 	margin-bottom:30px;
 }
 
+.home-title-wrap p {
+	float:left;
+	width:100%;
+}
+
 h1.home-title {
 	float:left;
 	width:100%;
