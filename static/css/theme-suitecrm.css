@@ -809,7 +809,7 @@ select::-ms-expand {
 	background-color:#F4EBE9;
 	background-image: url('../images/home-title-bg.png');
 	background-repeat: no-repeat;
-	background-position: right center;
+	background-position: 97% center;
 	background-size: 170px 140px;
 	border-radius:5px;
 	margin-bottom:30px;
