@@ -6,6 +6,7 @@ title = "SuiteCRM Documentation"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
+enableGitInfo = true
 
 [params]
   GitHubRepo = "https://github.com/salesagility/SuiteDocs/"
