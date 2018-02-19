@@ -821,7 +821,7 @@ select::-ms-expand {
 
 h1.home-title {
 	float:left;
-	width:92%;
+	width:100%;
 	background-image: url('../images/home-title-h1-bg.png');
 	background-repeat: no-repeat;
 	background-position: left center;
