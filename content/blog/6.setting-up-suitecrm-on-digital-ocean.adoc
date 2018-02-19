@@ -7,11 +7,11 @@ source: http://www.jsmackin.co.uk/suitecrm/setting-up-suitecrm-on-digital-ocean/
 hidden: true
 ---
 
-:imagesdir: ./../../../images/en/community
-
 This post will cover deploying an instance of SuiteCRM to Digital Ocean
 from creating the droplet to logging into SuiteCRM. If there’s enough
 interest I’ll do similar guides for other hosts.
+
+<!--more-->
 
 First you’ll need a
 https://www.digitalocean.com/?refcode=ec80c6be8923[Digital Ocean]
@@ -24,6 +24,8 @@ account. If you don’t have one it’s easy to create one.
 
 This will bring us to the following page, where we will do the
 following:
+
+:imagesdir: ./../../../images/en/community
 
 image:06CreateDropletPage.png[CreateDropletPage]
 

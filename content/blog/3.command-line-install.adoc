@@ -12,6 +12,8 @@ process. SuiteCRM provides a way to do a ``Silent'' install which, when
 given a config_si.php file containing some of the installation details
 will perform an install.
 
+<!--more-->
+
 The steps involved are quite straightforward. First off we create a
 config_si.php file in the SuiteCRM root:
 
@@ -71,8 +73,8 @@ config file and run the installation:
 [source, php]
 <?php
 /*
- *  php suitecrmsilentinstall.php --install_location /var/www/html/suitecrmpath --db_host localhost 
- *  --db_user dbuser --db_pass dbpass --db_name dbname --site_username admin --site_pass password 
+ *  php suitecrmsilentinstall.php --install_location /var/www/html/suitecrmpath --db_host localhost
+ *  --db_user dbuser --db_pass dbpass --db_name dbname --site_username admin --site_pass password
  *  --site_host example.com --site_name "SuiteCRM Silent Install"
  */
 $args = getArguments();

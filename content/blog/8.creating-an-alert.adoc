@@ -7,8 +7,6 @@ source: http://www.jsmackin.co.uk/suitecrm/suitecrm-creating-an-alert/
 hidden: true
 ---
 
-:imagesdir: ./../../../images/en/community
-
 [width="100", cols="80,20", frame="none", grid="none"]
 |===
 |With the release of SuiteCRM 7.3 comes Alerts. These are displayed
