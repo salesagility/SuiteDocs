@@ -1,5 +1,5 @@
 <h2>Recently Edited</h2>
-<h4>documentation pages</h4>
+<h4 class="hd">documentation pages</h4>
 
     {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
     {{ $recent := ($byLastMod | last 5).Reverse }}
