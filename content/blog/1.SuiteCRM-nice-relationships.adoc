@@ -7,13 +7,12 @@ source: http://www.jsmackin.co.uk/suitecrm/suitecrm-nice-relationships/
 hidden: true
 ---
 
-:imagesdir: ./../../../images/en/community
-
 Module builder and studio are both great tools. They allow simple
 customisation of a SuiteCRM instance without having to know all the
 inner workings of SuiteCRM. In particular studio and module builder
 allows specifying relationships between modules.
-<!--more—>
+
+<!--more-->
 
 However these relationships can leave a lot to be desired. The generated
 relationship names and field names are often very verbose and, even for
@@ -26,6 +25,8 @@ will want to do a full backup before making any changes.
 First off let’s add a relationship to try out our changes on. We can
 first add a one to many relationships between products and accounts like
 so:
+
+:imagesdir: ./../../../images/en/community
 
 image:01nice-relationships.png[title="Adding a relationship"]
 
@@ -59,10 +60,10 @@ products:
 SELECT accounts.name, aos_products.name
 FROM accounts
 INNER JOIN accounts_aos_products_1_c
-    ON (accounts.id = accounts_aos_products_1_c.accounts_aos_products_1accounts_ida AND 
+    ON (accounts.id = accounts_aos_products_1_c.accounts_aos_products_1accounts_ida AND
         accounts_aos_products_1_c.deleted = 0) 7
 INNER JOIN aos_products
-    ON (aos_products.id = accounts_aos_products_1_c.accounts_aos_products_1aos_products_idb AND 
+    ON (aos_products.id = accounts_aos_products_1_c.accounts_aos_products_1aos_products_idb AND
         aos_products.deleted = 0)
 WHERE accounts.deleted = 0;
 
@@ -140,71 +141,71 @@ looks like:
 
 .Example
 [source, php]
-<?php 
+<?php
 // created: 2016-03-18 22:09:16
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array ( 
-    'name' => 'accounts_aos_products_1', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array (
+    'name' => 'accounts_aos_products_1',
     'type' => 'link',
-    'relationship' => 'accounts_aos_products_1', 
+    'relationship' => 'accounts_aos_products_1',
     'source' => 'non-db',
-    'module' => 'Accounts', 
-    'bean_name' => 'Account', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
-    'id_name' => 'accounts_aos_products_1accounts_ida', 
+    'module' => 'Accounts',
+    'bean_name' => 'Account',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
+    'id_name' => 'accounts_aos_products_1accounts_ida',
 );
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array ( 
-    'name' => 'accounts_aos_products_1_name', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array (
+    'name' => 'accounts_aos_products_1_name',
     'type' => 'relate',
-    'source' => 'non-db', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
+    'source' => 'non-db',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
     'save' => true,
-    'id_name' => 'accounts_aos_products_1accounts_ida', 
-    'link' => 'accounts_aos_products_1', 
-    'table' => 'accounts', 
-    'module' => 'Accounts', 
+    'id_name' => 'accounts_aos_products_1accounts_ida',
+    'link' => 'accounts_aos_products_1',
+    'table' => 'accounts',
+    'module' => 'Accounts',
     'rname' => 'name', );
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1accounts_ida"] = array ( 
-    'name' => 'accounts_aos_products_1accounts_ida', 
-    'type' => 'link', 
-    'relationship' => 'accounts_aos_products_1', 
-    'source' => 'non-db', 
-    'reportable' => false, 
-    'side' => 'right', 'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1accounts_ida"] = array (
+    'name' => 'accounts_aos_products_1accounts_ida',
+    'type' => 'link',
+    'relationship' => 'accounts_aos_products_1',
+    'source' => 'non-db',
+    'reportable' => false,
+    'side' => 'right', 'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE',
 );
 
 We just need to change the id name, and change some of the definitions so that we have:
 
 .Example
 [source, php]
-<?php 
+<?php
 // created: 2016-03-18 22:09:16
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array ( 
-    'name' => 'accounts_aos_products_1', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1"] = array (
+    'name' => 'accounts_aos_products_1',
     'type' => 'link',
-    'relationship' => 'accounts_aos_products_1', 
+    'relationship' => 'accounts_aos_products_1',
     'source' => 'non-db',
-    'module' => 'Accounts', 
-    'bean_name' => 'Account', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
-    'id_name' => 'account_id', //Changed 
-        'link_type'=>'one', //Added 
-        'side' => 'left',//Added 
+    'module' => 'Accounts',
+    'bean_name' => 'Account',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
+    'id_name' => 'account_id', //Changed
+        'link_type'=>'one', //Added
+        'side' => 'left',//Added
 );
-$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array ( 
-    'name' => 'accounts_aos_products_1_name', 
+$dictionary["AOS_Products"]["fields"]["accounts_aos_products_1_name"] = array (
+    'name' => 'accounts_aos_products_1_name',
     'type' => 'relate',
-    'source' => 'non-db', 
-    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE', 
+    'source' => 'non-db',
+    'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
     'save' => true,
-    'id_name' => 'account_id', //Changed 
+    'id_name' => 'account_id', //Changed
     'link' => 'accounts_aos_products_1',
-    'table' => 'accounts', 
-    'module' => 'Accounts', 
-    'rname' => 'name', 
+    'table' => 'accounts',
+    'module' => 'Accounts',
+    'rname' => 'name',
 );
 $dictionary["AOS_Products"]["fields"]["account_id"] = array (
-    'name' => 'account_id', 
-    'type' => 'id', 'reportable' => false, 
+    'name' => 'account_id',
+    'type' => 'id', 'reportable' => false,
     'vname' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE', );
 
 If we do a quick repair and rebuild we will be prompted to add a new
@@ -214,11 +215,11 @@ If you have existing data you’ll want to pull this over:
 
 .Example
 [source,.sql]
-UPDATE aos_products 
-SET account_id = ( 
-    SELECT accounts_aos_products_1_c.account_id 
+UPDATE aos_products
+SET account_id = (
+    SELECT accounts_aos_products_1_c.account_id
     FROM accounts_aos_products_1_c
-    WHERE accounts_aos_products_1_c.product_id = aos_products.id AND accounts_aos_products_1_c.deleted =0) 
+    WHERE accounts_aos_products_1_c.product_id = aos_products.id AND accounts_aos_products_1_c.deleted =0)
     WHERE account_id IS NULL;
 
 Unfortunately the above has now broken the products subpanel in

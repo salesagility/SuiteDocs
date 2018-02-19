@@ -10,7 +10,8 @@ hidden: true
 SuiteCRM uses a number of `Scheduler jobs` that are supposed to run at
 scheduled times, supporting functionalities like search indexing,
 workflows, email notifications, database maintenance, etc.
-pass:[<!--more>]
+
+<!--more-->
 
 When completing installation, the Scheduler jobs need to be *manually
 enabled*. This is done by asking your operating system to run a script
@@ -129,15 +130,15 @@ The relevant section of config.php might look like this:
 
 .config.php
 [source, php]
-1 'cron' => 
-2 	array ( 
+1 'cron' =>
+2 	array (
 3		`max_cron_jobs' => 10,
 4		`max_cron_runtime' => 30,
 5		`min_cron_interval' => 30,
-6		`allowed_cron_users' => 
-7		array ( 
+6		`allowed_cron_users' =>
+7		array (
 8			0 => `www-data',
-9		), 
+9		),
 10	),
 
 == Which command should I use in crontab?

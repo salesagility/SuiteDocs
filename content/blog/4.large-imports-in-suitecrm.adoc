@@ -13,6 +13,8 @@ larger databases. To do this I wrote a small script which would insert
 the data was taking a very long time and I was keen to have a process I
 could repeat to keep the comparisons fair.
 
+<!--more-->
+
 For this post I’ll look at inserting 40000 accounts with 100 contacts
 each and 100 larger accounts with 10000 contacts each.
 
@@ -59,7 +61,7 @@ function doImport($db,$accountsCount,$contactsCount){
     $accountPrep->execute(array(':id' => $accountId, ':name' => $faker->company));
     for($y = 0; $y < $contactsCount; $y++){
       $contactId = getGUID();
-      $contactPrep->execute(array(':id' => $contactId, ':first_name' => $faker->firstName, ':last_name' => 
+      $contactPrep->execute(array(':id' => $contactId, ':first_name' => $faker->firstName, ':last_name' =>
       $faker->lastName));
       $contactLinkPrep->execute(array(':id'=>getGUID(),':contactId' => $contactId, ':accountId' => $accountId));
     }
@@ -109,7 +111,7 @@ function doImport($db,$accountsCount,$contactsCount){
     $accountVals[] = "('".$accountId."', \"".$faker->company."\",NOW(),NOW(),'1','1')";
     for($y = 0; $y < $contactsCount; $y++){
       $contactId = getGUID();
-      $contactVals[] = "('".$contactId."',\"".$faker->firstName."\",\"". $faker->lastName."\",'". $now."','". 
+      $contactVals[] = "('".$contactId."',\"".$faker->firstName."\",\"". $faker->lastName."\",'". $now."','".
       $now."','1','1')";
       $contactLinkVals[] = "('".getGUID()."','".$contactId."','".$accountId."', '0','".$now."')";
     }
@@ -180,16 +182,16 @@ Finally we can run the actual import:
 
 .Example
 [source]
-mysql> LOAD DATA INFILE 'accounts.csv' INTO TABLE accounts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,name,date_entered, date_modified,modified_user_id,created_by);  
-Query OK, 40100 rows affected (30.15 sec)  
+mysql> LOAD DATA INFILE 'accounts.csv' INTO TABLE accounts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,name,date_entered, date_modified,modified_user_id,created_by);
+Query OK, 40100 rows affected (30.15 sec)
 Records: 40100  Deleted: 0  Skipped: 0  Warnings: 0
                             //
-LOAD DATA INFILE 'contacts.csv' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,first_name,last_name,date_entered, date_modified,modified_user_id,created_by);  
-Query OK, 5000000 rows affected (4 hours 56 min 52.34 sec)  
+LOAD DATA INFILE 'contacts.csv' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,first_name,last_name,date_entered, date_modified,modified_user_id,created_by);
+Query OK, 5000000 rows affected (4 hours 56 min 52.34 sec)
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
                             //
-mysql> LOAD DATA INFILE 'accountsContacts.csv' INTO TABLE accounts_contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,contact_id, account_id,deleted,date_modified);  
-Query OK, 5000000 rows affected (2 hours 18 min 19.70 sec)  
+mysql> LOAD DATA INFILE 'accountsContacts.csv' INTO TABLE accounts_contacts FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (id,contact_id, account_id,deleted,date_modified);
+Query OK, 5000000 rows affected (2 hours 18 min 19.70 sec)
 Records: 5000000  Deleted: 0  Skipped: 0  Warnings: 0
 
 This totals about 7.3 hours (+ 50 minutes to generate the data). At
@@ -222,7 +224,7 @@ ALTER TABLE accounts_contacts DROP KEY idx_contid_del_accid;
 Once the indexes are gone we we import the data:
 
 .Example
-[source] 
+[source]
 LOAD DATA INFILE `accounts.csv' INTO TABLE accounts FIELDS
 TERMINATED BY `,' ENCLOSED BY ’“`LINES TERMINATED BY'’
 (id,name,date_entered, date_modified,modified_user_id,created_by); +

@@ -7,11 +7,13 @@ source: http://www.jsmackin.co.uk/suitecrm/adding-custom-module-related-field-su
 hidden: true
 ---
 
-:imagesdir: ./../../../images/en/community
-
 Sometimes when you create a new module you want it to appear in the
 "Related To" dropdowns around SuiteCRM. This post will cover the
 simple method of adding modules to these dropdowns.
+
+<!--more-->
+
+:imagesdir: ./../../../images/en/community
 
 In this post we’ll add a fictional "Sport'' module to the dropdown.
 We’ll end up with this:
