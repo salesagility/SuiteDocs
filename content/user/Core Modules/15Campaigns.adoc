@@ -12,9 +12,9 @@ Weight: 190
 
 == Overview
 
-The Campaigns module in *SuiteCRM* can be a very powerful marketing and advertising tool for your organisation allowing you to create and track Newsletter, Email, Survey and Non-Email based (e.g. telesales or radio) marketing campaigns to prospective or existing customers. 
+The Campaigns module in *SuiteCRM* can be a very powerful marketing and advertising tool for your organisation allowing you to create and track both email and non-email based (e.g. telesales or radio) marketing campaigns to prospective or existing customers. 
 
-With the tracking tools built into the Campaign module you can monitor the response you receive from your campaign in real time, allowing you to view the return on investment (ROI) and many other useful metrics. This in turn helps you to plan your strategic marketing and advertising activities effectively by visualising which campaigns work and which do not.
+With the tracking tools built into the Campaign module you can monitor the response you receive from your campaign in real time, allowing you to view the Return On Investment (ROI) and many other useful metrics. This in turn helps you to plan your strategic marketing and advertising activities effectively by visualising which campaigns work and which do not.
 
 * To view the full list of fields available when creating a Campaign, see link:http://docs.suitecrm.com/user/appendix-a/#_campaigns_field_list[Campaign Fields List].
 
@@ -24,7 +24,7 @@ From the *Campaigns* module, select *Create Campaign* from the sidebar or the mo
 
 image:CampaignsSidebarCreate.png[title="Creating a Campaign"]
 
-Select the campaign you wish to create *Newsletter*, *Email*, link:../19surveys/[Survey] or *Non-email based Campaign*.
+Select the campaign you wish to create: *Newsletter*, *Email*, link:../19surveys/[Survey] or *Non-email based Campaign*. Non-email based campaigns  allow you to keep a record of any campaigns that are run outwith *SuiteCRM* (e.g. a telesales or radio based campaign).
 
 image:CampaignTypes.png[title="Select campaign"]
 
@@ -39,17 +39,23 @@ image:CampaignHeader.png[title="Campaign Header"]
 
 Enter a name for the campaign here and set the status (*Planning*, *Active*, *Inactive*, *Complete*). 
 
-You can add an optional description. 
+Add an optional description. 
 
-The campaign will be assigned to the currently logged on user by default and this can be changed here.
+The campaign will be assigned to the currently logged on user by default. Change this here if required.
 
 ==== Survey Campaign
 
-For a *Survey* campaign, you will also need to relate the campaign to an existing survey. See link:../19surveys/[Surveys] for further information.
+For a *Survey* campaign, you will also need to relate the campaign to an existing survey. See link:../19surveys/[Surveys] for information on creating a survey.
 image:CampaignSurveyHeader.png[title="Select survey for campaign"]
 
+==== Non-Email Based Campaign
+
+For a *Non-Email Based* campaign, you can optionally select the type of campaign. 
+
+image:CampaignsNonEmailTypes.png[title="Add type for non-email based campaign"]
+
 ==== Campaign Budget 
-Scroll down to complete optional budget details for the campaign. These details are used to calculate ROI statistics. 
+Scroll down to complete optional budget details for the campaign. These figures are used in ROI calculations. 
 
 For non-email based campaigns, this section is on the next page.
 
@@ -68,203 +74,134 @@ To remove a target list, click btn:[rem]
 
 image:CampaignsTargetList.png[title="Target Lists"]
 
-
 ==== Create Target List
 
-If you have not yet created a target list or wish to use a new list, you can create an empty one here and populate it after you have completed the rest of your Campaign setup. See link:../14target-lists/[Target Lists] for more information on the types of lists and how to use them.
+If you have not yet created a target list or wish to use a new list, you can create an empty one here and populate it after you have completed the rest of your campaign setup. See link:../14target-lists/[Target Lists] for more information on the types of lists and how to use them.
 
 image:80E-mail_campaign.png[title="Target list"]
 
-Enter a name for the new list and select the type from the list. 
+Enter a name for the new list and select the type from the list. Note that you will need to have at least one 'default' type target list attached to the campaign.
 
 Click btn:[CREATE]
 
 === Templates
 
+The template is the message that will be sent out to your target list. You can select or edit an existing email template or create a new one here.
+
+{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../modules/email-settings/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
+
 image:81Campaign_template.png[title="Campaign Wizard Template"]
 
-This page is a WYSIWYG Newsletter Template editor so you can create a
-template for your marketing emails.
+* *Select an existing template* – You can select from a drop down list of existing Email Templates
+* *Create a brand new template* – Create a new email template from scratch.
+* *Copy an existing template* – Allows you select an existing template and use this as a base to make amendments
 
-image:82Campaign_template.png[title="Template options"]
-
-The panel at the top presents you with three options which allows you to
-select an existing template, create a brand new template or copy an
-existing template.
-
-* *Select an existing template* – You can select from a drop down list of
-existing Email Templates
-* *Create a brand new template* – If you wish to start the Newsletter from
-scratch then you can select this option.
-* *Copy an existing template* – Allows you select an existing template and
-use this as a base to make amendments
-
-Once you have chosen an Email Template you can decide you want to insert
-a Tracker URL. This can be used to insert a link to your organisation's
-website or direct link to a new product that you have launched. Also,
-you are given the opportunity to place an 'Opt Out' link in your
-template.
-
-image:83Campaign_template.png[title="Tracker URL"]
-
-{{% notice note %}}
-The 'Opt Out' link is added to the template
-automatically even if you do not insert one at this point. Another
-interesting feature of the Email Templates page is the ability to
-personalise your templates by inserting variables. You can for example
-insert the 'Account ID' variable in the subject line, or even insert the
-addressee's first name and last name to add a more personal touch.
-{{% /notice %}}
-
-image:84Campaign_template.png[title="Email variables"]
-
-The WYSIWYG editor is displayed at the bottom of the Email Template
-page, this editor allows you to visualise how your template will
-actually look.
-
-image:85Campaign_template.png[title="WYSIWYG editor"]
-
-The panel on the left side of the editor allows you to drag and drop
-different layout components to your template. These then can be edited
-in the right side display panel. Once you have inserted a component into
-the display panel you can click on the added item and the editor menu
-will appear.
+The email template editor at the foot of the page shows how your template will look. 
+Drag and drop different layout components from the left-hand pane into the right-hand display panel where they can be edited.
 
 image:Email_Template_Editor.png[title="Email Template Editor"]
 
-This menu provides you with a multitude of additional options which
-allows you to customise the layout and appearance of your template. Font
-type can be selected, formatted, colours changed, text alignment chosen,
-images and even videos can be inserted.
+Clicking on a component will show the edit menu. This provides you with a multitude of additional options which allows you to customise the layout and appearance of your template. Font type can be selected, formatted, colours changed, text alignment chosen, images and even videos can be inserted.
 
-Insert HTML by clicking Tools > Source Code
+image:85Campaign_template.png[title="WYSIWYG editor"]
 
-The bottom panel offers the option to include attachments with your
-Email Template, this could be used if for example you wished to attach a
-something like a product catalogue to your Newsletter. Once you are
-satisfied with your Email Template you can click Next and you will be
-taken to the Marketing page which is the next stage of the Campaign
-Wizard.
+{{%notice tip%}}Insert HTML by clicking Tools > Source Code{{%/notice%}}
 
-=== Campaign Wizard Marketing
+==== Email Variables
 
-image:87Campaign_marketing.png[title="Campaign Wizard Marketing"]
+image:84Campaign_template.png[title="Email variables"]
 
-This section of the Campaign Wizard allows you to specify the Email
-settings for your Campaign including the Bounce Handling Account,
-Outgoing Email Account, From/Reply-to Name and Address. In addition to
-this, you can Schedule your Campaign by completing the Date and Time
-fields. Once you are satisfied with your Email Settings and Schedule you
-can click Next and you will be taken to the Summary page which is the
-final stage of the Campaign Wizard.
+=== Tracker URLs
 
-=== Campaign Wizard Summary
+Tracker URLs can be used to insert a link to your organisation's website or direct link to a new product that you have launched, for example. A unique id is added to the link for each recipient which allows *SuiteCRM* to track click-throughs. The information gathered can be viewed on the campaign status page.
 
-image:Newsletter_Summary_Review.png[title="Newsletter Summary Review"]
+image:83Campaign_template.png[title="Tracker URL"]
 
-The Summary page includes a checklist which indicates that each page of
-the Campaign Wizard has been completed satisfactorily. If a section is
-complete then this is shown with green tick icon, otherwise this will be
-highlighted with a red cross icon. If any section has not been completed
-then SuiteCRM will not permit the Campaign to be sent. In this instance
-in the image shown above the 'Choose Targets' section has not been
-completed correctly as indicated by the red cross icon. This would be
-resolved by clicking back to the Target List page and specifying a
-Subscription List with at least one entry. Once you have ensured all
-sections are complete then you can choose one of three options:
+To add your own tracker URL link, click btn:[CREATE TRACKER]
 
-* *Send Mail at Scheduled Time* – You can click this once you are sure all
-sections of the Campaign are set correctly and are confident that it is
-the finished article.
-* *Send Marketing Email as Test* – This option gives you the opportunity
-to send out your Campaign to your Test List that you specified in the
-Subscriptions section of the Campaign Wizard. By doing this you can view
-the Campaign as a recipient and double check that the Campaign appears
-as it should do before sending out to real prospective/live customers.
-* *View Details* – By clicking this option you are taken to the Detail
-View of the Campaign record you have just created through the Newsletter
-Campaign Wizard.
+image:CampaignsCreateTracker2.png[title="Create tracker"]
 
-== Create Person Form
+Specify the text to display as the link, and the URL.
 
-Another feature of the Campaign module is the web form template Wizard
-allowing you to create Leads, Contacts and Targets. This can be accessed
-by clicking on the Create Person Form button from the dropdown menu in
-the Campaign module or via the sidebar when in the module.
+Click btn:[CREATE TRACKER]
 
-image:88Create_person_form.png[title="Create Person Form"]
+Add your tracker(s) to the template in the same way as for a variable. Click inside the template in the desired location, then select the tracker in the drop down and click btn:[ INSERT TRACKER]
 
-Once you have clicked this, you will be taken to the first page of the
-Create Person Form Wizard.
+==== Opt Out Tracker URLs
 
-image:89Create_person_form.png[title="Create Person Form Wizard"]
+An Opt Out link allows the recipient to opt out of future marketing emails, and a default opt out link will be added to the template automatically. You can replace this default with your own Opt Out link text by adding a custom Opt Out Tracker.
 
-This stage allows you to specify the type of person you would like to
-create via your web form. The dropdown menu allows you to choose from a
-Lead, Contact or Target. On selecting the person type you would like to
-create the Available Fields dynamically change. Once you have chosen
-this you can drag and drop the fields you would like to include on your
-web form. Fields dropped into the First Form Column area are displayed
-on the left side of your web form and the fields dropped into the Second
-Form Column area are displayed on the right side of your web form. You
-can choose to have 1 or 2 columns, all on the left side, right side or
-on both sides. Please note as a minimum you need to include the required
-fields included in your web form as indicated by an asterisk. Once you
-are satisfied with the fields you wish to include click the Next button
-to progress to the next stage.
+Click btn:[CREATE TRACKER]
 
-=== Create Person Form – Additional Information
+image:CampaignsOptOutTracker.png[title="Create opt out tracker"]
 
-image:90Createperson_form.png[title="Additional information"]
+Specify the text you require for your opt out link.
 
-On this page you can configure your web form appearance by adding a Form
-Header/Footer, Form Description, change the label on the Submit button
-or change how the URL is displayed. As a minimum you have to relate the
-web form to an existing Campaign and assign to a User before clicking
-the Generate Form button to progress to the next stage.
+Check the Opt-Out Link box. Note that you cannot edit the TrackerURL itself, only the link text.
 
-=== Create Person Form – Editor
+Add your tracker to the template in the same way as for a variable. Click inside the template in the desired location, then select the tracker in the drop down and click btn:[ INSERT TRACKER]
 
-image:91Createperson_form.png[title="Web form"]
+Once your email template is complete, click btn:[SAVE].
 
-The final step of the Create Person Form Wizard allows you to format the
-web form you have setup by using the WYSIWYG editor. This editor
-provides you with a multitude of additional options which allows you to
-customise the layout and appearance of your web form. Font type can be
-selected, formatted, colours changed, text alignment chosen and images
-can be inserted. Once you are happy with the appearance of your web form
-click Save Web Form. On clicking this button you can either click on the
-link to download the web form you have just created or copy and paste
-the html to an existing document. By clicking the download link this
-will save the html form in your download folder.
+Click btn:[NEXT] at the top of the page to continue.
 
-image:92Createperson_form.png[title="Download form"]
+=== Marketing
 
-Please note that the web form will not be stored anywhere else on the
-CRM, to ensure the html is saved please carry out one of the two steps
-above.
+The Marketing section of the Campaign Wizard is where you need to specify the email settings for the campaign, and set a schedule for emails to be sent out.
 
-== Campaign Response Tracking
+image:CampaignsMarketing.png[title="Campaign Wizard Marketing"]
 
-When in the Detail View of a Campaign record you can access the inbuilt
-Campaign response tracking by clicking the View Status button.
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|*Marketing Email Name*|Enter a name for the this run of the campaign. 
+|*Bounce Handling Account*|Select the account set up to handle bounced campaign mail.
+|*Outgoing Email Account*|This will default to the system outbound mail account. If you have other outbound mail a 
+|*Schedule Date & Time*|The campaign emails will be queued for sending at the specified time and will be sent when the *Run Nightly Mass Email Campaigns* scheduled job is next run. 
+|===
+Specify the From and Reply To details for the campaign.
 
-image:93View_status.png[title="View status"]
+Once details have been completed, click btn:[NEXT] at the top of the screen to continue.
 
-On clicking this button you will be taken to the Status page for that
-Campaign record. This page gives an overview of the Campaign details as
-well as a graphical representation of your Campaign response including
-the number of messages sent, bounced messages, how many viewers, opt
-outs and how many clicked through links.
+=== Send Email and Summary
 
-image:View_Campaign_Status.png[title="Campaign response graph"]
+The Summary page includes a checklist which indicates whether or not each section of the Campaign Wizard has been completed satisfactorily. 
 
-These fields are expanded further down the page and detailed on an
-individual record level. These records can be added to a new Target List
-by clicking the Add to Target List button. This allows you to create
-new, more focussed Campaigns based on who has responded.
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|image:CampaignsGreenTick.png[title="Campaign section completed"]|If a section is complete then this is shown with green tick icon. 
+|image:CampaignsRedCross.png[title="Campaign section incomplete"]|Incomplete sections are shown with a red cross. These will need to be resolved before the campaign can be sent.
+|===
 
-image:94Campaign_response.png[title="Add to target list"]
+image:CampaignsSummary.png[title="Campaign Summary"]
+
+In the example above the *Choose Targets* section has not been completed correctly as indicated by the red cross icon. This would be resolved by specifying a
+'default' type target list with at least one entry. 
+
+Click on any incomplete entry in the list to navigate to the relevant section.
+
+Once you have ensured all sections are complete you have three options:
+
+* *Send Mail at Scheduled Time* – Once you are sure all sections of the campaign are set correctly and your campaign status is set to *Active*, click to send the campaign emails. Email will be queued at the scheduled time, and will send to recipients when the *Run Nightly Mass Email Campaigns* scheduled job is next run.   
+* *Send Marketing Email as Test* – If you have specified a 'test' type  target list, this will send the campaign only to the addresses on the test list. By doing this you can view the Campaign as a recipient and double check that it appears as it should do before sending out to real recipients. Test entries can be removed from the campaign status page.
+* *View Details* – Shows the Detail View of the campaign you have just created.
+
+== Campaign Status and Response Tracking
+
+From the campaign's detail view, click btn:[VIEW STATUS]
+
+The campaign status page gives an overview of the campaign details as well as a graphical representation of your campaign response. This includes the number of messages sent, bounced messages, number of views, opt-outs and click-thrus. 
+
+image:CampaignStatus3.png[title="Campaign status"]
+
+Detailed information can be viewed in the subpanels below the graph, where responses are detailed on an individual record level. Here you can see who has viewed your email or clicked on a link, or how they have responded to a survey, for example. 
+
+image:CampaignsStatusViewedMessage.png[title="Viewed messages"]
+
+If the campaign includes a Create Person Form, you will be able to see the details of any leads which have been created via the webform.
+
+image:CampaignsLeadsCreated.png[title="Campaign Leads created"]
+
+These records can be added to a new target list by clicking btn:[Add to Target List]. This allows you to create new, more focused campaigns based on who has responded.
 
 == Campaign ROI Tracking
 
@@ -282,3 +219,57 @@ business.
 image:Campaign_ROI_Graph.png[]
 
 
+== Troubleshooting Campaigns
+
+
+== Create Person Form
+
+The *Create Person Form* feature allows you to create a web-based form which will create a link:../4leads/[Lead], link:../2contacts/[Contact] or link:../13targets/[Target] record in *SuiteCRM* from the information submitted on the web form. These records can be assigned to a particular user and are linked to a campaign so responses can be tracked.
+
+{{%notice note%}}You will need to relate your Web-to-Person Form to an existing campaign. See <<Create a Campaign>> for instructions on how to do this. A non-email based type campaign is suitable for this{{%/notice%}}
+
+Click *Create Person Form* on the sidebar, or select *Create Person Form* from the *Campaigns* dropdown menu to open the wizard.
+
+image:CampaignsSidebarCreateForm.png[title="Create Person Form"]
+
+=== Create Person Form Wizard
+
+Select the type of record you wish to create from the web form information: *Lead*, *Contact* or *Target*, from the dropdown at the top. The list of available fields will update automatically following your selection. Use the scroll bar to see the complete list of available fields.
+
+image:CampaignsCreatePerson1.png[title="Create Person Form - select fields"]
+
+Drag and drop the fields you wish to include on the form into the empty form columns. You have the option of a one or two column layout. You must include any required fields (these are indicated with an asterisk* and are highlighted in the list).
+
+Click btn:[ADD ALL FIELDS] to add all available fields to the form. Clicking btn:[RESET ALL FIELDS] will remove all fields from the layout columns.
+
+image:CampaignsCreatePerson2.png[title="Create Person Form - select fields"]
+
+Once the required fields have been added, click btn:[NEXT] to continue.
+
+==== Create Person Form – Additional Information
+
+image:CampaignsCreatePerson3.png[title="Additional information"]
+
+Configure the web form's appearance by adding a header or footer and changing the label for the form's submit button if desired.
+
+*Redirect URL*: Specify a custom link to display once the form has been submitted.
+
+*Related Campaign*: You must relate the form to an existing campaign. Click btn:[SELECT] to select the campaign from the popup.
+
+Once complete, click btn:[GENERATE FORM]
+
+==== Create Person Form – Editor
+
+The final step of the Create Person Form Wizard allows you to format the web form you have setup using editor. Font type can be selected, formatted, colours changed, text alignment chosen and images can be inserted.
+
+image:CampaignsCreatePerson4.png[title="Web form"]
+
+Once you are happy with the appearance of your web form click btn:[SAVE WEB FORM]
+
+==== Save or download Form
+On clicking this button you can either click on the link to download the web form you have just created or copy and paste the HTML to an existing document. By clicking the download link this
+will save the HTML form in your download folder.
+
+image:CampaignsCreatePerson5.png[title="Download form"]
+
+Please note that the web form will not be stored anywhere else in *SuiteCRM*. To ensure the HTML is saved please carry out one of the two steps above.
