@@ -7,11 +7,15 @@ source: http://www.jsmackin.co.uk/suitecrm/suitecrm-super-logger/
 hidden: true
 ---
 
-I’ve previously created a very simple module for SuiteCRM which adds
-coloured logging link:./../../../files/suitesuperlogger.zip[(SuiteCRM Super Logger)]. I’ve now expanded it somewhat to add extra features.
+I’ve previously created a very simple module for SuiteCRM which adds coloured
+logging link:./../../../files/suitesuperlogger.zip[(SuiteCRM Super Logger)].
+I’ve now expanded it somewhat to add extra features.
 
-It’s now called *SuiteSuperLogger*
-and allows specifying the log format in the config. It can be downloaded from the original http://www.jsmackin.co.uk/suitecrm/suitecrm-super-logger/[blog post]
+It’s now called *SuiteSuperLogger* and allows specifying the log format in the
+config. It can be downloaded from the original
+http://www.jsmackin.co.uk/suitecrm/suitecrm-super-logger/[blog post]
+
+<!--more-->
 
 Enabling coloured logging can be done by adding
 
