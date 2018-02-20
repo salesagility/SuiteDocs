@@ -20,24 +20,23 @@ create a new Document record.
 module. This allows you to search and list Document records.
 
 To view the full list of fields available when creating a Document, See
-link:http://docs.suitecrm.com/user/appendix-a/#_documents_field_list[Documents Field List].
+link:/user/appendix-a/#_documents_field_list[Documents Field List].
 
 == Managing Documents
 
 * To sort records on the Documents List View, click any column title
 which is sortable. This will sort the column either ascending or
 descending.
-* To search for a Document, see the link:http://docs.suitecrm.com/user/user-interface/#_search[Search] section of this
+* To search for a Document, see the link:/user/introduction/user-interface/#_search[Search] section of this
 user guide.
 * To update some or all the Documents on the List View, use the Mass
-Update panel as described in the link:http://docs.suitecrm.com/user/user-interface/#_mass_updating_records[Mass
-Updating Records] section of this user guide.
+Update panel as described in the link:/user/introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
 * To duplicate a Document, you can click the Duplicate button on the
 Detail View and then save the duplicate record.
 * To delete one or multiple Documents, you can select multiple records
 from the List View and click delete. You can also delete a Document from
 the Detail View by clicking the Delete button. For a more detailed guide
-on deleting records, see the link:http://docs.suitecrm.com/user/user-interface/#_deleting_records[Deleting Records]
+on deleting records, see the link:/user/introduction/user-interface/#_deleting_records[Deleting Records]
 section of this user guide.
 * To view the details of a Document, click the Document Name in the List
 View. This will open the record in Detail View.
@@ -48,8 +47,8 @@ Document Revision.
 click the edit button on the Detail View, make the necessary changes,
 and click Save.
 * For a detailed guide on importing and exporting Documents, see the
-link:http://docs.suitecrm.com/user/user-interface/#_importing_records[Importing Records] and
-link:http://docs.suitecrm.com/user/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+link:/user/introduction/user-interface/#_importing_records[Importing Records] and
+link:/user/introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Document record, you
 can click the View Change Log button on the Document's Detail View or
 Edit View.

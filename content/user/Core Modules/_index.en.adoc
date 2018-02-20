@@ -5,3 +5,6 @@ chapter: true
 ---
 
 == Core Modules
+
+=== Table of Contents
+{{% children depth="3" showhidden="true" %}}

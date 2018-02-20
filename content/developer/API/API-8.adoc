@@ -8,8 +8,7 @@ weight: 18
 :toc:
 :toclevels: 4
 
-SuiteCRM API version 8 exposes a set of resources, to be consumed by clients who wish to harness the powerful CRM functionality provided by SuiteCRM. The API 
-framework employs a Restful design to facilitate the http://jsonapi.org/format/1.0/[JSON API 1.0] standard messages over HTTPS. It includes meta objects to provide functionality which is not yet defined in the JSON API 1.0 standard. The SuiteCRM API is secured by the OAuth 2 Server provided in SuiteCRM.
+SuiteCRM API version 8 exposes a set of resources, to be consumed by clients who wish to harness the powerful CRM functionality provided by SuiteCRM. The API framework employs a Restful design to facilitate the http://jsonapi.org/format/1.0/[JSON API 1.0] standard messages over HTTPS. It includes meta objects to provide functionality which is not yet defined in the JSON API 1.0 standard. The SuiteCRM API is secured by the OAuth 2 Server provided in SuiteCRM.
 
 == SuiteCRM API Requirements
 
@@ -131,33 +130,34 @@ details.
 .Example Request (PHP):
 [source,php]
 $ch = curl_init();
-										//
+													//
 $header = array(
-										//
-`   'Content-type: application/vnd.api+json',` +
-`   'Accept: application/vnd.api+json',`
-										//
+													//
+    'Content-type: application/vnd.api+json',
+    'Accept: application/vnd.api+json',`
+													//
 );
-										//
+													//
 $postStr = json_encode(array(
-										//
-`   'grant_type' => 'password',` +
-`   'client_id' => '3D7f3fda97-d8e2-b9ad-eb89-5a2fe9b07650',` +
-`   'client_secret' => 'client_secret',` +
-`   'username' => 'admin',` +
-`   'password' => 'admin',` +
-`   'scope' => ''`
-										//
+													//
+    'grant_type' => 'password',
+    'client_id' => '3D7f3fda97-d8e2-b9ad-eb89-5a2fe9b07650',
+    'client_secret' => 'client_secret',
+    'username' => 'admin',
+    'password' => 'admin',
+    'scope' => ''
+													//
 ));
-										//
+													//
 $url = 'https://path-to-instance/api/oauth/access_token';
-										//
-curl_setopt($ch, CURLOPT_URL, url); curl_setopt($ch,
-CURLOPT_CUSTOMREQUEST, 'POST'); curl_setopt($ch, CURLOPT_POSTFIELDS,
-$postStr); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch,
-CURLOPT_HTTPHEADER, $header);
-										//
-$output = curl_exec($ch); </pre>
+													//
+curl_setopt($ch, CURLOPT_URL, url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postStr);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+													//
+$output = curl_exec($ch);
 
 .Example Response:
 [source,php]
@@ -188,11 +188,11 @@ like this:
 .Example
 [source,php]
 $header = array(
-									//
-   'Content-type: application/vnd.api+json',` +
-   'Accept: application/vnd.api+json',` +
-   'Authorization: Bearer ' . $your_saved_access_token`
-									//
+													//
+   'Content-type: application/vnd.api+json',
+   'Accept: application/vnd.api+json',
+   'Authorization: Bearer ' . $your_saved_access_token
+													//
 );
 
 == Managing Tokens
@@ -252,21 +252,22 @@ Clients *MUST* ignore any parameters for the
 .Example
 [source,php]
 $ch = curl_init();
-									//
+													//
 $header = array(
-									//
+													//
    'Content-type: application/vnd.api+json',
    'Accept: application/vnd.api+json',
-									//
+													//
 );
-									//
+													//
 $url = 'https://path-to-instance/api/v8/modules/meta/list';
-									//
-curl_setopt($ch, CURLOPT_URL, url); curl_setopt($ch,
-CURLOPT_CUSTOMREQUEST, 'GET');; curl_setopt($ch, CURLOPT_RETURNTRANSFER,
-1); curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-									//
-$output = curl_exec($ch); </pre>
+													//
+curl_setopt($ch, CURLOPT_URL, url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');;
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+													//
+$output = curl_exec($ch);
 
 === Handling Errors
 
@@ -309,18 +310,18 @@ SuiteCRM offers access to modules resources.
 To get a list of modules you can use the following url: 
 
 [source,php]
-GET https://path-to-instance/api/v8/modules/meta/list%3C/pre%3E;
+GET https://path-to-instance/api/v8/modules/meta/list
 
 ==== List available modules
 
 To get a list of records use the following url:
 
 [source,php]
-https://path-to-instance/api/v8/%7Bmodule%7D%3C/pre%3E;
+https://path-to-instance/api/{module}
 
 .Example Request:
 [source,php]
-https://path-to-instance/api/v8/modules/Accounts%3C/pre%3E;
+https://path-to-instance/api/v8/modules/Accounts
 
 .Example Response: 
 [source,php]
@@ -372,7 +373,7 @@ value of the fields parameter MUST be a comma-separated (`U+002C COMMA,
 “,”`) list that refers to the name(s) of the fields to be returned.
 
 [source,php]
-GET https://path-to-instance/api/v8/Accounts?fields%5BAccounts%5D=name,date_created
+GET https://path-to-instance/api/v8/Accounts?fields[Accounts]=name,date_created
 
 ==== Sorting
 
@@ -380,7 +381,7 @@ SuiteCRM offers sorting via the sort parameter.
 
 .Example
 [source,php]
-GET https://path-to-instance/api/v8/Accounts?sort=name,-date_created </pre>
+GET https://path-to-instance/api/v8/Accounts?sort=name,-date_created
 
 The attribute is sorted in ascending order, however to sort in
 descending order you simply add MINUS (-) in front of the attribute
@@ -399,7 +400,7 @@ implemented in SuiteCRM.
 You can specify a pre-made filter like so
 
 [source,php]
-GET /api/v8/modules/\{module}?filter=\{name}
+GET /api/v8/modules/\{module}?filter={name}
 
 * *{name}* represents the name of the filter
 
@@ -408,14 +409,12 @@ Example use the roi filter and sort by total_revenue in descending order
 [source,php] 
 GET /api/v8/modules/Leads?filter=roi&sort=-total_revenue
 
-[[filter-by-id]]
-Filter by id
-^^^^^^^^^^^^
+==== Filter by id
 
 If you need to retrieve a set of modules you can use the following call
 
 [source,php]
-GET /api/v8/modules/\{module}?filter[id]=\{id},...
+GET /api/v8/modules/{module}?filter[id]=\{id},...
 
 * *{type}* represents represent the module type:
 * *{filter}* represents the id for the module type
@@ -423,12 +422,12 @@ GET /api/v8/modules/\{module}?filter[id]=\{id},...
 To get a list of accounts with the id of 1, 2, and 3:
 
 [source,php]
-GET /api/v8/modules/Accounts?filter[Accounts]=1,2,3 </pre>
+GET /api/v8/modules/Accounts?filter[Accounts]=1,2,3
 
 ==== Filter by attributes
 
 [source,php]
-GET /api/v8/modules/\{module}?filter[\{type}.\{attribute}]=&#91;&#91;\{operator}&#93;&#93;\{comparator},...
+GET /api/v8/modules/\{module}?filter[{type}.{attribute}]=[[{operator}]]{comparator},...
 
 * *{type}* represents represent the module type:
 * *{attribute}* represents an attribute name eg. date_modified
@@ -438,20 +437,20 @@ operation&#93;&#93;
 2017-11-17T11:40:00+00:00
 
 [source,php]
-GET /api/v8/modules/\{module}?filter[Accounts.date_modified]=&#91;&#91;gt&#93;&#93;2017-11-17T11:40:00+00:00
+GET /api/v8/modules/{module}?filter[Accounts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
 
 ==== Filter relationships
 
 [source,php]
-GET /api/v8/modules/\{module}?filter[\{type}.\{related type}.\{attribute}]=&#91;&#91;\{operator}&#93;&#93;\{comparator},...
+GET /api/v8/modules/{module}?filter[{type}.{related type}.{attribute}]=[[{operator}]]{comparator},...
 
 [source,php]
-GET /api/v8/modules/Accounts?filter[Accounts.Contacts.date_modified]=&#91;&#91;gt&#93;&#93;2017-11-17T11:40:00+00:00
+GET /api/v8/modules/Accounts?filter[Accounts.Contacts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
 
 ==== Filter Middle Table fields
 
 [source,php]
-GET /api/v8/modules/\{module}?filter[\{type}.\{related type}.meta.middle_table.\{attribute}]=&#91;&#91;\{operator}&#93;&#93;\{comparator},...
+GET /api/v8/modules/{module}?filter[{type}.{related type}.meta.middle_table.{attribute}]=[[{operator}]]{comparator},...
 
 * *{related type}* represents the link for the related module type
 * *{attribute}* represents an attribute name eg. date_modified
@@ -461,7 +460,7 @@ operation&#93;&#93;
 2017-11-17T11:40:00+00:00
 
 [source,php]
-GET /api/v8/modules/Meetings?filter[Meetings.Users.meta.middle_table.accept_status]=&#91;&#91;eq&#93;&#93;Accept
+GET /api/v8/modules/Meetings?filter[Meetings.Users.meta.middle_table.accept_status]=[[eq]]Accept
 
 ==== Operators
 
@@ -473,27 +472,22 @@ encoded, plus it will make it easier to extend operations in the future.
 [width="80",cols="10,20,50",options="header",]
 |=======================================================================
 |Operator |Name |Example
-|eq |Equal |filter[Accounts.deleted]=&#91;&#91;eq&#93;&#93;1
 
-|ne |Not Equal |filter[Accounts.deleted]=&#91;&#91;ne&#93;&#93;0
+|eq |Equal |filter[Accounts.deleted]=[[eq]]1
 
-|gt |Greater Than
-|filter[Accounts.date_modified]=&#91;&#91;gt&#93;&#93;2017-11-17T11:40:00+00:00
+|ne |Not Equal |filter[Accounts.deleted]=[[ne]]0
 
-|lt |Less Than
-|filter[Accounts.date_modified]=&#91;&#91;lt&#93;&#93;2017-11-17T11:40:00+00:00
+|gt |Greater Than |filter[Accounts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
 
-|gte |Greater Than or Equal
-|filter[Accounts.date_modified]=&#91;&#91;gte&#93;&#93;2017-11-17T11:40:00+00:00
+|lt |Less Than |filter[Accounts.date_modified]=[[lt]]2017-11-17T11:40:00+00:00
 
-|lte |Less Than or Equal
-|filter[Accounts.date_modified]=&#91;&#91;lte&#93;&#93;2017-11-17T11:40:00+00:00
+|gte |Greater Than or Equal |filter[Accounts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00
 
-|in |In List
-|filter[Accounts.name]=&#91;&#91;in&#93;&#93;inc,&#91;&#91;in&#93;&#93;ltd
+|lte |Less Than or Equal |filter[Accounts.date_modified]=[[lte]]2017-11-17T11:40:00+00:00
 
-|nin |Not In List
-|filter[Accounts.name]=&#91;&#91;nin&#93;&#93;inc,&#91;&#91;nin&#93;&#93;ltd
+|in |In List |filter[Accounts.name]=[[in]]inc,[[in]]ltd
+
+|nin |Not In List |filter[Accounts.name]=[[nin]]inc,[[nin]]ltd
 |=======================================================================
 
 *Strings*
@@ -501,8 +495,10 @@ encoded, plus it will make it easier to extend operations in the future.
 [width="50",cols="10,10,30",options="header",]
 |================================================================
 |Operator |Name |Example
-|li |Like |filter[Accounts.name]=&#91;&#91;li&#93;&#93;sam%
-|nli |Not Like |filter[Accounts.name]=&#91;&#91;nli&#93;&#93;bob%
+
+|li |Like |filter[Accounts.name]=[[li]]sam%
+
+|nli |Not Like |filter[Accounts.name]=[[nli]]bob%
 |================================================================
 
 This convention was taken from the
@@ -517,14 +513,14 @@ comparator notation.
 
 .Comparators separated by ","
 [source,php]
-GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=gte2017-11-17T11:40:00+00:00,lte2017-11-18T11:40:00+00:00
+GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00,[[lte]]2017-11-18T11:40:00+00:00
 
 When you need to filter by multiple fields, you should use the multiple
 filters notation.
 
 .Filters separated by "&"
 [source,php]
-GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=gte2017-11-17T11:40:00+00:00&filter[Contacts.last_contacted]=lte2017-11-18T11:40:00+00:00
+GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00&filter[Contacts.last_contacted]=[[lte]]2017-11-18T11:40:00+00:00
 
 ==== List Recently Viewed Records
 
@@ -553,7 +549,7 @@ the constraints for each attribute
 
 * *Module Strings* 
 [source,php]
-GET /api/v8/modules/\{module}/meta/language
+GET /api/v8/modules/{module}/meta/language
 
 * *Application and Drop Down Strings* 
 [source,php]
@@ -566,19 +562,19 @@ http://jsonapi.org/format/1.0/#crud[CRUD] operations
 
 * *Create* 
 [source,php]
-POST /api/v8/modules/\{module}/\{id}
+POST /api/v8/modules/{module}/{id}
 
 * *Retrieve* 
 [source,php]
-GET /api/v8/modules/\{module}/\{id}
+GET /api/v8/modules/{module}/{id}
 
 * *Update* 
 [source,php]
-PUT /api/v8/modules/\{module}/\{id}
+PUT /api/v8/modules/{module}/{id}
 
 * *Delete* 
 [source,php]
-DELETE /api/v8/modules/\{module}/\{id}
+DELETE /api/v8/modules/{module}/{id}
 
 ==== Related Module records
 
@@ -590,19 +586,19 @@ operations:
 
 * *Create* 
 [source,php]
-POST /api/v8/modules/\{module}/\{id}/relationships/\{link}
+POST /api/v8/modules/{module}/{id}/relationships/{link}
 
 * *Read*
 [source,php]
-GET /api/v8/modules/\{module}/\{id}/relationships/\{link}
+GET /api/v8/modules/{module}/{id}/relationships/{link}
 
 * *Update*
 [source,php] 
-PUT /api/v8/modules/\{module}/\{id}/relationships/\{link}
+PUT /api/v8/modules/{module}/{id}/relationships/{link}
 
 * *Delete* 
 [source,php]
-DELETE /api/v8/modules/\{module}/\{id}/relationships/\{link}
+DELETE /api/v8/modules/{module}/{id}/relationships/{link}
 
 ==== Inclusion of fields
 
@@ -613,6 +609,125 @@ to select the fields, or use the
 http://jsonapi.org/format/1.0/#fetching-sparse-fieldsets[include] query
 parameter to select to include the related types you wish to be in the
 response.
+
+=== Files
+
+To create notes and documents, you will need to be able to upload files. This uses fields which have the type set to "file". The SuiteCRM API expects the contents of the file to be assigned to the {fieldname}_file attribute. The contents must be a base64 encoded string. When requesting a note or a document, the API will decode the file in the same request.
+
+.Example payload for notes:
+[source,php]
+{
+  "data": {
+    "id": "",
+    "type": "Notes",
+    "attributes": {
+      "name": "Test",
+      "portal_flag": true,
+      "filename": "testFile.txt",
+      "filename_file": "U3VpdGVDUk0gaXMgdGhlIGJlc3Q="
+    }
+  }
+}
+
+.Example payload for documents:
+[source,php]
+{
+  "data": {
+  "id": "",
+  "type": "Documents",
+  "attributes": {
+    "name": "testFile.png",
+    "document_name": "testFile.png",
+    "active_date": "2017-11-17T11:40:00+00:00",
+    "portal_flag": true,
+    "revision": "1",
+    "filename": "testFile.txt",
+    "filename_file": "U3VpdGVDUk0gaXMgdGhlIGJlc3Q="
+  }
+}
+
+=== Relationship Fields
+
+To create a meeting, you need to provide the invitees and there accept status.
+
+[source,php]
+POST api/v8/modules/Meetings
+
+.Payload:
+[source,php]
+{
+  "data": {
+    "id": "",
+    "type": "Meetings",
+    "attributes": {
+      "name": "RelationshipsTest",
+      "date_start": "2017-11-07T10:55:43+00:00",
+      "date_end": "2017-11-07T11:10:43+00:00",
+      "duration_hours": "",
+      "duration_minutes": 15,
+      "assigned_user_id": "1",
+      "assigned_user_name": "Administrator"
+    },
+    "relationships": {
+      "users": {
+        "data": [
+          {
+            "id": "1",
+            "type": "User",
+            "meta": {
+              "middle_table": {
+                "data": {
+                  "id": "",
+                  "type": "Link",
+                  "attributes": {
+                    "accept_status": "accept",
+                    "user_id": "1"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "id": "seed_max_id",
+            "type": "Users",
+            "meta": {
+              "middle_table": {
+                "data": {
+                  "id": "",
+                  "type": "Link",
+                  "attributes": {
+                    "accept_status": "none",
+                    "user_id": "seed_max_id"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "id": "seed_chris_id",
+            "type": "Users",
+            "meta": {
+              "middle_table": {
+                "data": {
+                  "id": "",
+                  "type": "Link",
+                  "attributes": {
+                    "accept_status": "none",
+                    "user_id": "seed_chris_id"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+{{% notice note %}}
+Please ensure that you include the meta middle table in each link in the relationship otherwise it will set all the middle table fields to the first meta object.
+{{% /notice %}}
 
 == References
 

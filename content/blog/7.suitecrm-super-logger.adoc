@@ -5,6 +5,7 @@ author: Jim Mackin
 tags: ["development"]
 source: http://www.jsmackin.co.uk/suitecrm/suitecrm-super-logger/
 hidden: true
+draft: true
 ---
 
 I’ve previously created a very simple module for SuiteCRM which adds coloured
