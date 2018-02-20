@@ -12,12 +12,14 @@ In order to contribute to the Documentation efforts, you can edit pages directly
 which is the repository of our content.
 
 {{% notice info %}}
-You need a https://github.com/join[Github user account^] to edit pages on the SuiteCRM Documentation Site. If you don't have one yet, you will be given the opportunity to create one during this process.
+You need a https://github.com/join[Github user account^] to edit pages on the SuiteCRM Documentation Site. 
+If you don't have one yet, you will be given the opportunity to create one during this process.
 {{% /notice %}}
 
 === 1. Navigate to the place you want to edit
 
-Simply use your browser to go to the page you want to edit. You can use the menus and search feature to facilitate this.
+Simply use your browser to go to the page you want to edit. You can use the menus 
+and search feature to facilitate this.
 
 === 2. Click to "Edit this page"
 
@@ -28,7 +30,8 @@ image:24EditThisPage.png[title="Edit this page link"]
 === 3. Make your changes
 
 You are taken to GitHub where a text editor will allow you to edit the source code of the file. 
-The format used is called https://asciidoctor.org/docs/what-is-asciidoc/[Asciidoc^], and looks pretty much like plain text. 
+The format used is called https://asciidoctor.org/docs/what-is-asciidoc/[Asciidoc^], 
+and looks pretty much like plain text. 
 
 If you're just editing text, don't bother learning the format, just go ahead and edit it!
 
@@ -45,14 +48,16 @@ But for our first simple edit we'll do it immediately.
 image:26GitHubCreatePR.png[title="Edit this page link"]
 
 In this screen, you can improve the title of your proposal, add descriptive comments, and review your changes.  
-But that is all optional - all you _really_ have to do is press a green button again, this time it's labeled btn:[Create pull request].
+But that is all optional - all you _really_ have to do is press a green button again, this time 
+it's labeled btn:[Create pull request].
 
 === That's it, you're done!
 
 Your proposed change is now up for evaluation by the members of the Community in charge of the 
 SuiteCRM Documentation site. They will receive an e-mail notification as soon as you finish your proposal.
 
-You can check the status of every Pull Request, and participate in any discussion about them by visiting https://github.com/salesagility/SuiteDocs/pulls[this list^].
+You can check the status of every Pull Request, and participate in any discussion 
+about them by visiting https://github.com/salesagility/SuiteDocs/pulls[this list^].
 
 Every small contribution matters! Thanks for helping out. 
 

@@ -5,7 +5,6 @@ author: pgorod
 tags: ["development"]
 source: https://pgorod.github.io/Scheduler-Jobs/
 hidden: true
-draft: true
 ---
 
 SuiteCRM uses a number of `Scheduler jobs` that are supposed to run at
