@@ -5,6 +5,7 @@ author: Jim Mackin
 tags: ["development"]
 source: http://www.jsmackin.co.uk/suitecrm/setting-up-suitecrm-on-digital-ocean/
 hidden: true
+draft: true
 ---
 
 This post will cover deploying an instance of SuiteCRM to Digital Ocean

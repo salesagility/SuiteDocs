@@ -25,26 +25,25 @@ create a new Target record.
 This allows you to search and list Target records.
 * *Import Targets* – Redirects you will be taken to the Import Wizard for
 the Targets module. For more information, see
-link:http://docs.suitecrm.com/user/user-interface/#_importing_records[Importing Records].
+link:/user/introduction/user-interface/#_importing_records[Importing Records].
 
 To view the full list of fields available when creating a Target, See
-link:http://docs.suitecrm.com/user/appendix-a/#_targets_field_list[Targets Field List].
+link:/user/appendix-a/#_targets_field_list[Targets Field List].
 
 == Managing Targets
 
 * To sort records on the Targets List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
-* To search for a Target, see the link:http://docs.suitecrm.com/user/user-interface/#_search[Search] section of this
+* To search for a Target, see the link:/user/introduction/user-interface/#_search[Search] section of this
 user guide.
 * To update some or all the Targets on the List View, use the Mass
-Update panel as described in the link:http://docs.suitecrm.com/user/user-interface/#_mass_updating_records[Mass
-Updating Records] section of this user guide.
+Update panel as described in the link:/user/introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
 * To duplicate a Target, you can click the Duplicate button on the
 Detail View and then save the duplicate record.
 * To delete one or multiple Targets, you can select multiple records
 from the List View and click delete. You can also delete a Target from
 the Detail View by clicking the Delete button. For a more detailed guide
-on deleting records, see the link:http://docs.suitecrm.com/user/user-interface/#_deleting_records[Deleting Records]
+on deleting records, see the link:/user/introduction/user-interface/#_deleting_records[Deleting Records]
 section of this user guide.
 * To view the details of a Target, click the Target Name in the List
 View. This will open the record in Detail View.
@@ -52,8 +51,8 @@ View. This will open the record in Detail View.
 click the edit button on the Detail View, make the necessary changes,
 and click Save.
 * For a detailed guide on importing and exporting Targets, see the
-link:http://docs.suitecrm.com/user/user-interface/#_importing_records[Importing Records] and
-link:http://docs.suitecrm.com/user/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+link:/user/introduction/user-interface/#_importing_records[Importing Records] and
+link:/user/introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Target record, you can
 click the View Change Log button on the Target's Detail View or Edit
 View.

@@ -65,7 +65,7 @@ image:19Recently_viewed.png[title="Edit Recently Viewed"]
 
 There is also a grouped tab navigation structure for SuiteCRM. Users can
 set this option in their user preferences. For full details on modifying
-user preferences, see the link:http://docs.suitecrm.com/user/managing-user-accounts/[Managing User Accounts] 
+user preferences, see the link:/user/introduction/managing-user-accounts[Managing User Accounts]
 section of this user guide.
 
 image:20.png[title="Grouped Tabs"]

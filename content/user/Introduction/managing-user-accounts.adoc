@@ -34,16 +34,7 @@ image:13Password_tab.png[title="Password Tab"]
 
 If you have forgotten your password and cannot login, you can use the
 forgotten password functionality detailed in the
-link:http://docs.suitecrm.com/user/getting-started/[Getting Started] section of this User Guide.
-
-== Themes Tab
-
-You can easily manage the theme you are using to view SuiteCRM by
-navigating to the Themes Tab. This tab allows you to easily select the
-desired theme, and also shows a theme preview image (assuming this has
-also been provided with any third party or additional themes).
-
-image:image16.png[title="Themes Tab"]
+link:/user/introduction/getting-started[Getting Started] section of this User Guide.
 
 == Advanced Tab
 

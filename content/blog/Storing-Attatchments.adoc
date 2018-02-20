@@ -5,6 +5,7 @@ author: pgorod
 tags: ["development"]
 source: https://pgorod.github.io/How-Attachments-Stored/
 hidden: true
+draft: true
 ---
 
 At some point you might need to go under the hood and see how SuiteCRM

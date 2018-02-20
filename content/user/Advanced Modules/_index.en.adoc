@@ -3,4 +3,5 @@ title: Advanced Modules
 weight: 70
 ---
 
-== Core Modules
+=== Table of Contents
+{{% children depth="3" showhidden="true" %}}
