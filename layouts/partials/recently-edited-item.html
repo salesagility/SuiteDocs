@@ -5,13 +5,12 @@
 		<a href="{{ .Permalink }}">{{ .Title }}</a>
 	</h4>
 	<p class="">
-	   Edited on the {{ .Lastmod.Format "2 January" }} in commit <b>"{{ with .GitInfo }}{{ .Subject }}{{ else }}[Commit description]{{ end }}"</b>, see 
-             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank">changes</a>
+	   Edited on the {{ .Lastmod.Format "2 January" }} in commit <b>"{{ with .GitInfo }}{{ .Subject }}{{ else }}[Commit description]{{ end }}"</b>  
+             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank"><i class="fa fa-github"></i></a>
         </p>
     </li>
 {{ end }}
 </ul>
-
 
 {{/* COMMENTED OUT
  <a href="{{.Site.Params.GitHubRepo}}/blob/master/content/{{.Path}}"> 
