@@ -86,7 +86,7 @@ Click btn:[CREATE]
 
 === Templates
 
-The template is the message that will be sent out to your target list. You can select or edit an existing email template or create a new one here.
+The template is the message that will be sent out to your target list. You can select or edit an existing email template or create a new one here. See the Email Templates section of the user guide for more information.
 
 {{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../modules/email-settings/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
 
@@ -153,12 +153,11 @@ image:CampaignsMarketing.png[title="Campaign Wizard Marketing"]
 
 [cols="20,80", frame = "none", grid = "none"]
 |===
-|*Marketing Email Name*|Enter a name for the this run of the campaign. 
+|*Marketing Email Name*|Enter a name for the this run of the campaign. This allows you to resend the campaign at a later date to a different target list, or with a modified template. The campaign will store separate status details for each marketing record, and these can be selected on the campaign status page.
 |*Bounce Handling Account*|Select the account set up to handle bounced campaign mail.
 |*Outgoing Email Account*|This will default to the system outbound mail account. If you have other outbound mail a 
 |*Schedule Date & Time*|The campaign emails will be queued for sending at the specified time and will be sent when the *Run Nightly Mass Email Campaigns* scheduled job is next run. 
 |===
-Specify the From and Reply To details for the campaign.
 
 Once details have been completed, click btn:[NEXT] at the top of the screen to continue.
 
@@ -182,7 +181,7 @@ Click on any incomplete entry in the list to navigate to the relevant section.
 Once you have ensured all sections are complete you have three options:
 
 * *Send Mail at Scheduled Time* – Once you are sure all sections of the campaign are set correctly and your campaign status is set to *Active*, click to send the campaign emails. Email will be queued at the scheduled time, and will send to recipients when the *Run Nightly Mass Email Campaigns* scheduled job is next run.   
-* *Send Marketing Email as Test* – If you have specified a 'test' type  target list, this will send the campaign only to the addresses on the test list. By doing this you can view the Campaign as a recipient and double check that it appears as it should do before sending out to real recipients. Test entries can be removed from the campaign status page.
+* *Send Marketing Email as Test* – If you have specified a 'test' type  target list, this will send the campaign to the addresses on the test list only. By doing this you can view the campaign as a recipient and double check that it appears as it should do before sending out to real recipients. Test entries (views, click-thrus etc) generated can be removed later from the <<Campaign Status and Response Tracking,campaign status>> page.
 * *View Details* – Shows the Detail View of the campaign you have just created.
 
 == Campaign Status and Response Tracking
@@ -197,41 +196,39 @@ Detailed information can be viewed in the subpanels below the graph, where respo
 
 image:CampaignsStatusViewedMessage.png[title="Viewed messages"]
 
-If the campaign includes a Create Person Form, you will be able to see the details of any leads which have been created via the webform.
+If the campaign includes a <<Web To Person Form, Web To Person form>> you will be able to see the details of any leads which have been created via the webform in the *Leads Created* subpanel.
 
 image:CampaignsLeadsCreated.png[title="Campaign Leads created"]
 
-These records can be added to a new target list by clicking btn:[Add to Target List]. This allows you to create new, more focused campaigns based on who has responded.
+These records can be added to a new target list by clicking btn:[Add to Target List] This allows you to create new, more focused campaigns based on who has responded.
+
+[discrete]
+=== Delete Test Entries
+
+Click btn:[DELETE TEST ENTRIES] to remove any entries on the campaign status page that have been generated during testing with a 'test' type link:../14target-lists/[target list].
 
 == Campaign ROI Tracking
 
-When in the Detail View of a Campaign record you can access the inbuilt
-Campaign ROI tracking by clicking the View ROI button.
+The built-in campaign ROI tracking can be viewed from the campaign's detail or status view by clicking btn:[VIEW ROI]
 
-image:95Campaign_tracking.png[title="View ROI"]
+This page gives a graphical representation of your campaign's Return on Investment, allowing you to easily visualise how money spent on the campaign has translated into potential
+business. 
 
-On clicking this button you will be taken to the ROI page for that
-Campaign record. This page gives a graphical representation of your
-Campaign Return on Investment, allowing you to easily visualise how your
-organisation's money spent on the Campaign has translated into potential
-business.
+image:CampaignsROIChart.png[title="Return on Investment details"]
 
-image:Campaign_ROI_Graph.png[]
+{{%notice tip%}}Add or edit budget details for the campaign by clicking Launch Wizard and then navigating to the Campaign Header tab.{{%/notice%}}
 
-
-== Troubleshooting Campaigns
-
-
-== Create Person Form
+== Web To Person Form
 
 The *Create Person Form* feature allows you to create a web-based form which will create a link:../4leads/[Lead], link:../2contacts/[Contact] or link:../13targets/[Target] record in *SuiteCRM* from the information submitted on the web form. These records can be assigned to a particular user and are linked to a campaign so responses can be tracked.
 
-{{%notice note%}}You will need to relate your Web-to-Person Form to an existing campaign. See <<Create a Campaign>> for instructions on how to do this. A non-email based type campaign is suitable for this{{%/notice%}}
+{{%notice note%}}You will need to relate your Web-to-Person Form to an existing campaign. See the <<Create a Campaign, Create a Campaign>> section for instructions on how to do this. A non-email based type campaign is suitable for this{{%/notice%}}
 
 Click *Create Person Form* on the sidebar, or select *Create Person Form* from the *Campaigns* dropdown menu to open the wizard.
 
 image:CampaignsSidebarCreateForm.png[title="Create Person Form"]
 
+[discrete]
 === Create Person Form Wizard
 
 Select the type of record you wish to create from the web form information: *Lead*, *Contact* or *Target*, from the dropdown at the top. The list of available fields will update automatically following your selection. Use the scroll bar to see the complete list of available fields.
@@ -246,6 +243,7 @@ image:CampaignsCreatePerson2.png[title="Create Person Form - select fields"]
 
 Once the required fields have been added, click btn:[NEXT] to continue.
 
+[discrete]
 ==== Create Person Form – Additional Information
 
 image:CampaignsCreatePerson3.png[title="Additional information"]
@@ -258,18 +256,24 @@ Configure the web form's appearance by adding a header or footer and changing th
 
 Once complete, click btn:[GENERATE FORM]
 
+[discrete]
 ==== Create Person Form – Editor
 
-The final step of the Create Person Form Wizard allows you to format the web form you have setup using editor. Font type can be selected, formatted, colours changed, text alignment chosen and images can be inserted.
+The final step of the Create Person Form Wizard allows you to format the web form you have setup using the editor. Font type can be selected, colours changed, text alignment chosen and images can be inserted. View and edit the HTML directly by clicking the HTML link on the toolbar.
 
 image:CampaignsCreatePerson4.png[title="Web form"]
 
 Once you are happy with the appearance of your web form click btn:[SAVE WEB FORM]
 
-==== Save or download Form
-On clicking this button you can either click on the link to download the web form you have just created or copy and paste the HTML to an existing document. By clicking the download link this
-will save the HTML form in your download folder.
+[discrete]
+==== Save Form
+To save the web form you have just generated either:
+
+* Click on the *Web to Person Form* link to download the web form into your download folder *OR*
+* Copy and paste the HTML into an existing web page. Note the line to include in the <head> section of the web page.
 
 image:CampaignsCreatePerson5.png[title="Download form"]
 
-Please note that the web form will not be stored anywhere else in *SuiteCRM*. To ensure the HTML is saved please carry out one of the two steps above.
+{{%notice warning%}}Please note that the web form will not be stored anywhere else in *SuiteCRM*. To ensure the form is saved please carry out one of the two steps above{{%/notice%}}
+
+== Troubleshooting Campaigns
