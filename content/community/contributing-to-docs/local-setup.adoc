@@ -1,0 +1,86 @@
+---
+Title: "Local Setup to Contribute to Documentation"
+Weight: 40
+---
+
+In order to contribute to the Documentation efforts, you can edit pages directly on Github. But if you want a more powerful setup for a better work experience, you can choose to set up a local copy of the files, install our build engine Hugo, and build and serve the site locally.
+
+{{% notice warning %}}
+This is an advanced way of editing the Documentation, it should only be used by people with 
+the necessary technical skills and who want to work on this Documentation extensively.
+{{% /notice %}}
+
+== Install necessary software on your computer
+
+We need to be running the following packages:
+
+- Git (for source-control)
+- Asciidoctor (to handle Asciidoc mark-up)
+- Hugo (static-site engine)
+
+{{% notice info %}}
+The following instructions are specific to Ubuntu 64-bit, but should be easy to adapt 
+to other Linuxes and MacOS. A Windows installation is also possible.
+See the links at the bottom of this article for specific instructions for other environments.
+{{% /notice %}}
+
+`sudo apt-get update`
+
+`sudo apt-get install git`
+
+`wget https://github.com/gohugoio/hugo/releases/download/v0.36/hugo_0.36_Linux-64bit.deb`
+
+`sudo dpkg -i hugo_0.36_Linux-64bit.deb`
+
+Check Hugo is operational with 
+
+`hugo version`
+
+Go to some appropriate directory, and use this command to create the SuiteDocs subtree and download everything:
+
+`git clone https://github.com/salesagility/SuiteDocs.git`
+
+`cd SuiteDocs`
+
+`bundle install`
+
+That should pick up the local Gemfile asking for the "asciidoctor" package and install it. Check with:
+
+`asciidoctor --version`
+
+== Start running your local version of the site
+
+You're ready to go! To build the site you can simply type 
+
+`hugo`
+
+But you won't be using that very often because it's enough to launch the local web server, 
+and any outstanding changes will get rebuilt:
+
+`hugo server --bind=0.0.0.0 --baseUrl=http://10.0.0.200` --navigateToChanged
+
+Change that `10.0.0.200` into whatever is your local IP address. 
+
+This will be the URL you put in your browser to navigate the local website.
+
+While doing your work on content, we recommend keeping a second terminal window always running the server, 
+so you can check any error messages, and see the server picking up your edits automatically and redeploying.
+
+== Advantages
+
+Apart from the advantages of collaborating on content via GitHub, this local setup lets you use the full
+power of Linux over your content, to `grep` it, `bash` it, `php` it... mass operations are quick and easy.
+
+The fast, automatic redeployments, complete with automatic browser navigation to changed content, 
+are extremely convenient while editing content.
+
+Finally, the entire site is up for editing - not just textual content but also visual aspects, features, etc.
+Your contribution can be a new site feature coded in Golang.
+
+== Useful links
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git:[Installing Git^]
+
+https://gohugo.io/getting-started/installing/:[Installing Hugo^]
+
+https://asciidoctor.org/docs/install-toolchain/:[Installing Asciidoctor^]
