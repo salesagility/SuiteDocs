@@ -1,5 +1,5 @@
 ---
-Title: "Local Setup to Contribute to Documentation"
+Title: "Local Setup for Documentation Work"
 Weight: 40
 ---
 
@@ -57,7 +57,7 @@ You're ready to go! To build the site you can simply type
 But you won't be using that very often because it's enough to launch the local web server, 
 and any outstanding changes will get rebuilt:
 
-`hugo server --bind=0.0.0.0 --baseUrl=http://10.0.0.200` --navigateToChanged
+`hugo server --bind=0.0.0.0 --baseUrl=http://10.0.0.200 --navigateToChanged`
 
 Change that `10.0.0.200` into whatever is your local IP address. 
 
