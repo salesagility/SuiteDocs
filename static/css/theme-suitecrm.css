@@ -1343,3 +1343,20 @@ table.frame-none td {
 	border:none;
 	padding:0;
 }
+
+div.license {
+   position:absolute;
+   bottom:0;
+   height:20px;  
+   color:#CCC;
+   text-align:center;
+   width:75%;
+}
+
+div.license a {
+   color: #999;
+}
+
+div.license p {
+   font-size: smaller;
+}

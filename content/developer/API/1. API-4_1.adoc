@@ -6,7 +6,7 @@ title: "16. API-4_1"
 
 {{% notice warning %}}
 This documentation pertains to SuiteCRM versions up to v.7.9.x. 
-We have a brand new REST API in v.7.10, documentation for it should shortly follow its release.
+Since SuiteCRM version 7.10, a link:../api-8[brand new v8 REST API] is available.
 {{% /notice %}}
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
@@ -31,8 +31,7 @@ example.com/suitecrm/service/v4_1/soap.php?wsdl
 
 
 Where `example.com/suitecrm` is the address of your SuiteCRM instance.
-`v4_1` is the version of the API and can be changed, `v4_1` is the
-latest version at the time of writing.
+`v4_1` is the version of the API and can be changed.
 
 ==== SOAP Example
 The following PHP example uses the built in SoapClient class.
@@ -99,8 +98,7 @@ example.com/suitecrm/service/v4_1/rest.php
 
 
 Where example.com/suitecrm is the address of your SuiteCRM instance.
-v4_1 is the version of the API and can be changed, v4_1 is the latest
-version at the time of writing.
+v4_1 is the version of the API and can be changed.
 
 The SuiteCRM REST API is not a true REST API - all calls are performed
 as POSTs and all calls are to the base URL with the method passed in as
@@ -211,9 +209,8 @@ Sometimes the existing API methods are not sufficient or using them for
 a task would be overly complex. SuiteCRM allows the web services to be
 extended with additional methods or overriding existing methods.
 
-The recommended path for custom entry points is the following `custom/service/<version>_custom/`. At the time of writing the latest
-web service version is `v4_1` so this would be
-`custom/service/v4_1_custom/`.
+The recommended path for custom entry points is the following `custom/service/<version>_custom/`. 
+For web service version `v4_1` this would be `custom/service/v4_1_custom/`.
 
 Next we create the implementing class. This will create our new method.
 In our example we will simply create a new method which writes to the
