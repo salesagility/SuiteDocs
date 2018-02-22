@@ -1,6 +1,6 @@
 ---
 title: Test page
-weight: 10
+weight: 11
 hidden: true
 ---
 
