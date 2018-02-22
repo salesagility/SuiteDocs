@@ -18,13 +18,19 @@ With the tracking tools built into the Campaign module you can monitor the respo
 
 * To view the full list of fields available when creating a Campaign, see link:/user/appendix-a/#_campaigns_field_list[Campaign Fields List].
 
+{{% notice note %}} 
+You will need to configure your outbound and bounce handling mail accounts in order to send an email-based campaign. See Email Settings for information on how to do this. 
+
+Campaign mail is sent using a scheduled job. You will need to ensure your scheduler is configured to do this. 
+{{% /notice %}}
+
 == Create a Campaign
 
 From the *Campaigns* module, select *Create Campaign* from the sidebar or the module dropdown menu to start the *Campaign Wizard*.
 
 image:CampaignsSidebarCreate.png[title="Creating a Campaign"]
 
-Select the campaign you wish to create: *Newsletter*, *Email*, link:../19surveys/[Survey] or *Non-email based Campaign*. Non-email based campaigns  allow you to keep a record of any campaigns that are run outwith *SuiteCRM* (e.g. a telesales or radio based campaign).
+Select the campaign you wish to create: *Newsletter*, *Email*, link:../19surveys/[Survey] (*SuiteCRM 7.10* onwards) or *Non-email based Campaign*. Non-email based campaigns allow you to keep a record of any campaigns that are run outwith *SuiteCRM* (e.g. a telesales or radio based campaign).
 
 image:CampaignTypes.png[title="Select campaign"]
 
@@ -43,7 +49,7 @@ Add an optional description.
 
 The campaign will be assigned to the currently logged on user by default. Change this here if required.
 
-==== Survey Campaign
+==== Survey Campaign (*SuiteCRM 7.10* onwards)
 
 For a *Survey* campaign, you will also need to relate the campaign to an existing survey. See link:../19surveys/[Surveys] for information on creating a survey.
 image:CampaignSurveyHeader.png[title="Select survey for campaign"]
@@ -113,7 +119,7 @@ image:84Campaign_template.png[title="Email variables"]
 
 === Tracker URLs
 
-Tracker URLs can be used to insert a link to your organisation's website or direct link to a new product that you have launched, for example. A unique id is added to the link for each recipient which allows *SuiteCRM* to track click-throughs. The information gathered can be viewed on the campaign status page.
+Tracker URLs can be used to insert a link to your organisation's website or direct link to a new product that you have launched, for example. A unique id is added to the link for each recipient which allows *SuiteCRM* to track click-thrus. The information gathered can be viewed on the campaign status page.
 
 image:83Campaign_template.png[title="Tracker URL"]
 
@@ -185,8 +191,11 @@ Once you have ensured all sections are complete you have three options:
 * *View Details* – Shows the Detail View of the campaign you have just created.
 
 == Campaign Status and Response Tracking
-
-From the campaign's detail view, click btn:[VIEW STATUS]
+From the campaign's Detail view click btn:[VIEW STATUS]
+[cols="60,40", frame = "none", grid = "none"]
+|===
+|OR, from List view, click the the status icon|image:CampaignsViewStatusIcon.png[title="Status icon"]
+|===
 
 The campaign status page gives an overview of the campaign details as well as a graphical representation of your campaign response. This includes the number of messages sent, bounced messages, number of views, opt-outs and click-thrus. 
 
@@ -205,7 +214,7 @@ These records can be added to a new target list by clicking btn:[Add to Target L
 [discrete]
 === Delete Test Entries
 
-Click btn:[DELETE TEST ENTRIES] to remove any entries on the campaign status page that have been generated during testing with a 'test' type link:../14target-lists/[target list].
+Click btn:[DELETE TEST ENTRIES] to remove any entries on the campaign status page that have been generated during testing with a 'test' type link:../14target-lists/[target list]. 
 
 == Campaign ROI Tracking
 
@@ -274,6 +283,8 @@ To save the web form you have just generated either:
 
 image:CampaignsCreatePerson5.png[title="Download form"]
 
-{{%notice warning%}}Please note that the web form will not be stored anywhere else in *SuiteCRM*. To ensure the form is saved please carry out one of the two steps above{{%/notice%}}
+{{%notice warning%}}Please note that the web form will not be stored anywhere else in *SuiteCRM*. To ensure the form is saved please carry out one of the two steps above.{{%/notice%}}
 
-== Troubleshooting Campaigns
+
+
+
