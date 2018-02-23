@@ -1345,7 +1345,6 @@ table.frame-none td {
 }
 /*
 div.license {
-   position:absolute;
    bottom:0;
    height:20px;  
    color:#CCC;
@@ -1359,5 +1358,6 @@ div.license a {
 
 div.license p {
    font-size: smaller;
+   margin: 0px 0px;
 }
 */
