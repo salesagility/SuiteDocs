@@ -3,6 +3,8 @@ Title: Managing User Accounts
 Weight: 40
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Managing User Accounts
@@ -23,7 +25,7 @@ image:12User_profile.png[title="User Profile"]
 
 == Password Tab
 
-Clicking on the 'Password' tab will navigate you to allow you to change
+Clicking on the '*Password*' tab will navigate you to allow you to change
 your user account password. To change your password, specify a new
 password and confirm the new password. It is recommended that passwords
 are secure. The recommended minimum requirement is one upper case
@@ -48,17 +50,17 @@ image:14Advanced_tab.png[title="Advanced Tab"]
 == Resetting a Users Preferences
 
 You can reset your user preferences to the system default by clicking
-the 'Reset User Preferences' button on your profile.
+the btn:[Reset User Preferences] button on your profile.
 
 image:15User_preference.png[title="Reset User Preferences"]
 
 Clicking the button will prompt you to ensure you wish to reset your
-user preferences, with the following message: “Are you sure you want
-reset all of your user preferences? 
+user preferences, with the following message: _“Are you sure you want
+reset all of your user preferences?"_ 
 
 {{% notice warning %}}
 This will also log you out
-of the application.”. you can then click 'OK' or 'Cancel' to action
+of the application. You can then click 'OK' or 'Cancel' to action
 appropriately. If you select 'OK' you will be logged out and will need
 to re-login to SuiteCRM application.
 {{% /notice %}}
@@ -66,14 +68,14 @@ to re-login to SuiteCRM application.
 == Resetting a Users home page
 
 You can reset your home page to the system default by clicking the
-'Reset home page' button on your profile. This will reset both dashlet
+btn:[Reset home page] button on your profile. This will reset both dashlet
 and dashboard preferences/layouts to the system default.
 
 image:16Reset_homepage.png[title="Reset Homepage"]
 
 Clicking the button will prompt you to ensure you wish to reset your
-home page, with the following message: “Are you sure you want reset your
-home page?”. you can then click 'OK' or 'Cancel' to action
+home page, with the following message: _“Are you sure you want reset your
+home page?”_. You can then click 'OK' or 'Cancel' to action
 appropriately.
 
 == Summary

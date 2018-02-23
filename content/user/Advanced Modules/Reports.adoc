@@ -3,19 +3,21 @@ Title: Reports
 Weight: 265
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 == Reports
 
 Advanced Open Reports (AOR) is the reporting module within SuiteCRM. AOR
-can be accessed by clicking the 'Reports' link within the navigation
+can be accessed by clicking the *'Reports'* link within the navigation
 menu. The reporting module allows users to report on CRM data from any
 module and has many features to display key information quickly.
 
 === Creating Reports
 
 To create a report, hover over the Reports module on the navigation bar
-and select 'Create Report'.
+and select *'Create Report'*.
 
 image:152Create_report.png[title="Create Report"]
 
@@ -100,7 +102,7 @@ data. These are:
 * *Stacked Bar*
 * *Grouped Bar*
 
-To add a chart, you can click the 'Add Chart' button, below the
+To add a chart, you can click the *'Add Chart'* button, below the
 Conditions section within the Report Edit View.
 
 image:234Add_chart.png[title="Add Chart"]
@@ -145,7 +147,7 @@ the dashlet.
 
 image:159Report_dashlet_results.png[Reports Dashlet]
 
-Once you have selected the Report, click 'Save'. This will update your
+Once you have selected the Report, click btn:[Save]. This will update your
 Reports dashlet to show the results of the Report.
 
 {{% notice note %}}
@@ -161,7 +163,7 @@ option. This will then list all charts you have created for this Report.
 
 image:image182.png[title="Reports Charts Dashlets"]
 
-Select a chart or multiple charts and click 'Save'. This will display
+Select a chart or multiple charts and click btn:[Save]. This will display
 the results in the chart selected.
 
 image:image183.png[title="Reports Charts Dashlets"]
@@ -171,13 +173,13 @@ image:image183.png[title="Reports Charts Dashlets"]
 You can schedule reports to be automatically run and emailed to the
 required Contact(s). This allows users to schedule reports to be sent to
 Managers or Team Leads either Daily, Weekly or Monthly. To create a
-Scheduled Report, you can click the 'Create' option within the Scheduled
+Scheduled Report, you can click the *'Create'* option within the Scheduled
 Reports Sub-panel on the Detail View of the Report. You can also select
 existing Scheduled Reports to relate to the Report.
 
 image:236Scheduled_Reports.png[title="Create Report"]
 
-Once you have clicked 'Create', there are options to set for the
+Once you have clicked *'Create'*, there are options to set for the
 Scheduled Report. Give the Scheduled Report a relevant name. In this
 example, we will use 'Daily Opportunites Report for Managers'.
 
@@ -189,7 +191,7 @@ Administrators or advanced users.
 
 image:162Scheduled_report_edit.png[title="Create Report"]
 
-Once you have entered a name and selected a schedule, click 'Save'.
+Once you have entered a name and selected a schedule, click btn:[Save].
 
 image:162Scheduled_report_edit.png[title="Create Report"]
 
