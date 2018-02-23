@@ -6,8 +6,6 @@ title: "3. Working with Beans"
 
 = 3. Working with Beans
 
-Add an **important** sentence.
-
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
 architecture. They allow retrieving data from the database as objects
 and allow persisting and editing records. This section will go over the
