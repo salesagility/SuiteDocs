@@ -3,6 +3,8 @@ Title: User Interface
 Weight: 50
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = User Interface
@@ -150,7 +152,7 @@ all of the options that are configurable for the dashlet.
 image:28Configure_dashlet.png[title="Configure dashlet"]
 
 Once you have made the required changes in the dashlet configuration
-popup, you can click 'Save' to apply the changes, or cancel if you wish
+popup, you can click btn:[Save] to apply the changes, or btn:[Cancel] if you wish
 to revert to the current configuration.
 
 {{% notice note %}}
@@ -173,7 +175,7 @@ dashlet columns are required. You can opt for one, two or three columns.
 image:192Add_tab.png[title="Add tab"]
 
 Once you have specified the details for the dashboard tab, you can click
-'Save'. You can also click 'Cancel' to undo any changes. Once you have
+btn:[Save]. You can also click btn:[Cancel] to undo any changes. Once you have
 saved your changes, the Dashboard Tab will be added and will display on
 the tab list on user Homepage. You can then add Dashlets to your new
 dashboard tab.
@@ -217,7 +219,7 @@ timestamped.
 The Activity Stream is also a useful tool for internal messaging within
 your organisation, it is possible to send a message that will be
 broadcast to all users in your network. To do this type your message in
-the text field and click post.
+the text field and click btn:[Post]
 
 image:35Activity_post.png[title="Activity Stream post"]
 
@@ -299,7 +301,7 @@ image:195Search_my_items.png[title="Search my items"]
 Once a user has searched for a record, the search will be saved. This
 means that you can navigate to records and other modules within the CRM
 but the search will not be cleared. If you wish to clear your search,
-you can click 'Clear' and then click 'Search'. This will clear any saved
+you can click btn:[Clear] and then click btn:[Search]. This will clear any saved
 searches and return to the default result set for that module.
 
 {{% notice note %}}
@@ -420,9 +422,9 @@ image:42Edit_view.png[title="Edit View"]
 The Edit View allows you to modify record information that is displayed
 on the view. This allows users to update existing data and also
 add/remove data. Once you have made changes on the Edit View, you can
-click 'Save' to apply to changes or click 'Cancel'. Clicking either
+click 'Save' to apply to changes or click btn:[Cancel]. Clicking either
 options will redirect you to the Detail View of the record you are
-editing. You can click the 'View Change Log' button. This allows users
+editing. You can click the btn:[View Change Log] button. This allows users
 to view changes to audited fields which can be useful before making your
 intended changes.
 
@@ -469,7 +471,7 @@ image:47Edit_contact.png[title="Edit Record method 1"]
 
 image:48Edit_contact.png[title="Edir Record method 2"]
 
-Once you click the edit button(or pencil), you will be taken to the Edit
+Once you click the *edit* button(or pencil), you will be taken to the Edit
 View. This allows you to edit/populate the appropriate data for that
 record. Fields with the red star(*) are required fields. Validation is
 performed so that a record cannot be saved within the CRM unless data is
@@ -489,7 +491,7 @@ View. Detailed below are screen shots of record editing points:
 ===== Detail View Deletion method
 
 Deleting records from the Detail View is a simple process. You simply
-have to click the 'Delete' button.
+have to click the *'Delete'* button.
 
 image:49Delete_contact.png[title="Delete Records"]
 
@@ -498,7 +500,7 @@ which will ask you to confirm that you want to delete the record.
 
 image:50Delete_contact.png[title="Confirm deletion"]
 
-You can either click Cancel or OK. Clicking Cancel will revert you back
+You can either click *Cancel* or *OK*. Clicking Cancel will revert you back
 to the Detail View of the record and will not delete it. Clicking OK
 will action the record deletion. If you choose to delete the record, the
 record will be deleted and you will be redirected to the module List
@@ -515,14 +517,14 @@ module.
 
 image:51ListView_deletion.png[title="List View deletion method"]
 
-Once the records are selected to delete, you can click the 'Delete'
+Once the records are selected to delete, you can click the *'Delete'*
 button. When you click the delete button on a record, you will receive a
 popup which will display the number of records being deleted and ask you
 to confirm that you want to delete the record.
 
 image:image59.png[title="Confirm Deletion"]
 
-You can either click Cancel or OK. Clicking Cancel will revert you back
+You can either click *Cancel* or *OK*. Clicking Cancel will revert you back
 to the Detail View of the record and will not delete it. Clicking OK
 will action the record deletion. If you choose to delete the record, the
 record will be deleted and you will be redirected to the module List
@@ -544,7 +546,7 @@ you.
 image:53Mass_update.png[title="Mass update"]
 
 Once you have populated the fields you wish to mass update, you can
-either click 'Update' or 'Cancel'. Cancelling the mass update will
+either click btn:[Update] or btn:[Cancel]. Cancelling the mass update will
 cancel any changes and redirect you to the List View of the module.
 Clicking update will update all selected records with the changes
 specified in the <<Mass Updating Records>>
@@ -559,34 +561,34 @@ option is made available to you, or via the Detail View if you follow
 the 'Find Duplicates' process.
 
 To merge records, you have to check the records in the List View and
-then select the 'Merge' option from the dropdown menu (next to the
+then select the *'Merge'* option from the dropdown menu (next to the
 delete link).
 
 image:55Merge.png[title="Merge"]
 
-Once you have clicked on the 'Merge' option, you will be presented with
+Once you have clicked on the *'Merge'* option, you will be presented with
 a merge screen. This will show the primary record and the duplicates
 that you wish to merge with that primary record.
 
 image:182Merging_records.png["Merge screen"]
 
-You can select which record is primary using the 'Set as primary' button
+You can select which record is primary using the *'Set as primary'* button
 on the right of the merge view. You can move data from the duplicate
-records to the primary record using the '<<' buttons. In this example,
+records to the primary record using the *'<<'* buttons. In this example,
 we have moved the First Name and Last Name from the duplicate record to
 the primary record.
 
 image:183Merging_records.png[title="Merge fields"]
 
 Once you have made the required changes on the merge screen, you can
-click 'Save Merge' or 'Cancel'. Clicking cancel will discard the merge
+click btn:[Save Merge] or btn:[Cancel]. Clicking cancel will discard the merge
 changes and will revert you to the List View for that module. Clicking
 'Save Merge' will continue the Merge process and will prompt you to
 inform you that the duplicate record will be deleted.
 
 image:184Save_merge.png[title="Confirm merge"]
 
-You can click 'OK' or 'Cancel'. Clicking Cancel will discard the merge
+You can click *'OK'* or *'Cancel'*. Clicking Cancel will discard the merge
 changes and will revert you to the List View for that module. Clicking
 'OK' will save the merge and will redirect you to the Detail View for
 the merged record.
@@ -763,8 +765,8 @@ edited.
 
 image:image71.png[image71.png,title="image71.png"]
 
-You can either click cancel and continue editing and saving your change,
-or you can click OK which will discard the changes made.
+You can either click *Cancel* and continue editing and saving your change,
+or you can click *OK* which will discard the changes made.
 
 === Detail View In-line Editing
 
@@ -787,14 +789,14 @@ edited.
 
 image:image74.png[title="Unsaved Changes Warning"]
 
-You can either click cancel and continue editing and saving your change,
-or you can click OK which will discard the changes made.
+You can either click *Cancel* and continue editing and saving your change,
+or you can click *OK* which will discard the changes made.
 
 == Desktop Notifications
 
 === Enabling Desktop Notifications
 
-You can enable desktop notifications by accessing the 'Advanced' tab
+You can enable desktop notifications by accessing the *'Advanced'* tab
 within your user preferences. This will enable desktop notifications
 only for that browser on that computer. you can choose to enable the
 desktop notifications just for that browser session, or to always enable
@@ -848,5 +850,3 @@ entities within SuiteCRM which can be standalone, or related to one or
 many other modules. Each module has a different function but many
 modules work together to structure and automate day to day business
 processes.
-
-<<Importing Records>>

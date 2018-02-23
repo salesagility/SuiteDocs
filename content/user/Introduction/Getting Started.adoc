@@ -3,6 +3,8 @@ Title: Getting Started
 Weight: 20
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Getting Started
@@ -22,7 +24,7 @@ additional language packs available for other languages around the
 world.
 
 Once you have chosen your language and have entered your user
-credentials, you will be able to click the Login button to access the
+credentials, you will be able to click btn:[Log in] to access the
 CRM.
 
 image:191Log_in.png[title="Log in"]
@@ -31,8 +33,8 @@ image:191Log_in.png[title="Log in"]
 
 If you forget your CRM password and cannot access your CRM user account,
 you can use the 'Forgotten Password' feature to re-send your password to
-the email address associated to your user account. Clicking the 'Forgot
-Password?' link on the login form will display the forgotten password
+the email address associated to your user account. Clicking the *'Forgot
+Password?'* link on the login form will display the forgotten password
 form.
 
 image:179Forgot_password.png[title="Forgotten Password"]

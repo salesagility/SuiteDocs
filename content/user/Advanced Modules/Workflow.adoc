@@ -3,6 +3,8 @@ Title: Workflow
 Weight: 240
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Advanced Open Workflow
@@ -14,7 +16,7 @@ various system actions based on conditions from any SuiteCRM module.
 == Creating a Workflow Process
 
 You can create workflow processes by navigating to the 'WorkFlow' module
-within SuiteCRM. Click the 'Create WorkFlow' button within the action
+within SuiteCRM. Click the *'Create WorkFlow'* button within the action
 bar to start creating the process. The first panel allows users to set
 up the workflow process.
 
@@ -47,7 +49,7 @@ trigger the workflow actions.
 
 image:107Adding_conditions.png[title="Add Condition"]
 
-To add a Condition Line you must click the 'Add Condition' button.
+To add a Condition Line you must click btn:[Add Condition]
 
 {{% notice note %}}
 You must select your WorkFlow Module on the first panel before
@@ -57,7 +59,7 @@ adding a Condition Line.
 image:206Add_condition.png[title="Add Condition"]
 
 You can have an unlimited amount of Condition Lines. To add another line
-click the 'Add Condition' button again and it will appear. On the line
+click btn:[Add Condition] again and it will appear. On the line
 you will have four fields; Field, Operator, Type and Value.
 
 [discrete]
@@ -112,7 +114,7 @@ image:114Date_condition.png[title="Date"]
 [discrete]
 ==== Removing Conditions
 
-You can remove Condition Lines by clicking the '-' button on the left
+You can remove Condition Lines by clicking btn:[-] on the left
 hand side of the condition.
 
 image:115Removing_conditions.png[title="Removing COnditions"]
@@ -124,7 +126,7 @@ image:115Removing_conditions.png[title="Removing COnditions"]
 
 Actions are defined in the third panel. These specify what events should
 occur when the conditions have been met. You can add an Action by
-clicking the 'Add Action' button.
+clicking the btn:[Add Action] button.
 
 image:116Adding_actions.png[title="Add Action"]
 
@@ -140,13 +142,13 @@ process.
 [discrete]
 ==== Create Record
 
-If you select 'Create Record' you will be prompted to select a Record
+If you select *'Create Record'* you will be prompted to select a Record
 Type. This is the module type of the record you are looking to create.
 
 image:208Create_record.png[title="Create Record"]
 
 Once selected you can add fields or relationships to this record using
-the 'Add Field' and 'Add Relationship' buttons.
+the btn:[Add Field] and btn:[Add Relationship] buttons.
 
 image:209Add_field-relationship1.png[title="Add Field/Relationship"]
 
@@ -205,7 +207,7 @@ are not required to specify the Record Type.
 [discrete]
 ==== Send Email
 
-The 'Send Email' action allows users to create workflow processes which
+The *'Send Email'* action allows users to create workflow processes which
 will send an email based on an template to individuals. Using this
 action there are four different types of recipient.
 
@@ -214,7 +216,7 @@ specify the email address and the email template.
 
 image:213Send_email_to.png[title="Send Email"]
 
-Record Email – This will send an email to the primary email address
+* *Record Email* – This will send an email to the primary email address
 specified on the record which actioned the workflow process. This can
 only be used if the record has an email field such as Accounts and
 Contacts. For this option you only need to specify the template.
@@ -234,7 +236,7 @@ image:215Email_related_field.png[title="Related Field"]
 
 === Calculate Fields
 
-If you select 'Calculate Fields' from the Action dropdown the Calculate
+If you select *'Calculate Fields'* from the Action dropdown the Calculate
 Fields user interface will be loaded after a second and looks like the
 picture below.
 
@@ -248,8 +250,7 @@ in the Parameters section of the Calculate Fields’s user interface. The
 dropdown contains all of the (basic and custom) fields which belongs to
 the module selected in the basic fields section.
 
-To add a parameter, select the field from the dropdown and click on the
-Add parameter button. After this action, a new line appears in the
+To add a parameter, select the field from the dropdown and click btn:[Add parameter]. After this action, a new line appears in the
 parameter table with the name of the field and the given identifier.
 
 For some fields (dropdowns and multi-selects) an additional dropdown
@@ -258,7 +259,7 @@ should be used in Calculated Fields. The raw format means the value
 which is stored in the database and the formatted value means the label
 for that database value.
 
-To remove a parameter from the table, simply click on the minus button
+To remove a parameter from the table, simply click the btn:[-]
 in the row of the parameter. Be aware, that if you remove a parameter,
 all of the identifiers are recalculated, so the identifiers could change
 for fields!
@@ -288,7 +289,7 @@ As for parameters for some relation parameter fields (dropdowns and
 multi-selects) an additional dropdown shown up where the user can select
 if the raw or the formatted value should be used in Calculate Fields.
 
-To remove a relation parameter from the table, simply click on the minus
+To remove a relation parameter from the table, simply click on the btn:[-]
 button in the row of the relation parameter. Be aware, that if you
 remove a relation parameter, all of the identifiers are recalculated, so
 the identifiers could change for fields!
@@ -313,7 +314,7 @@ the Add formula button. After this action, a new line appears in the
 formula table with the name of the field and with the place for the
 formula.
 
-To remove a formula from the table, simply click on the minus button in
+To remove a formula from the table, simply click on the btn:[-] in
 the row of the formula.
 
 image:129Add_formula.png[title="Add Formula"]
@@ -1429,14 +1430,14 @@ AOW Calculated Fields was contributed by http://www.dtbc.eu/[diligent technology
 
 ===== Removing Actions
 
-You can remove Action Lines by clicking the 'X' button on the top right
+You can remove Action Lines by clicking the btn:[x] on the top right
 hand side of the Action.
 
 image:131Removing_actions.png[title="Removing Actions"]
 
 ===== Removing Field and Relationship Lines
 
-You can remove Field and Relationship Lines by clicking the '-' button
+You can remove Field and Relationship Lines by clicking the btn:[-]
 on the left hand side of the Action.
 
 image:132Removing_fields.png[Removing Fields/Relationship Lines]
@@ -1445,7 +1446,7 @@ image:132Removing_fields.png[Removing Fields/Relationship Lines]
 
 Advanced OpenWorkflow allows users to audit your processes. In the
 Detail View of each WorkFlow record there is a sub-panel called
-'Processed Flows'.
+*'Processed Flows'*.
 
 image:image132.png[title="Process Audit"]
 
@@ -1455,8 +1456,8 @@ it was created.
 
 image:image133.png[title="Process Audit"]
 
-You can view this information at a higher level by clicking the 'View
-Process Audit' button within the module action bar. This will show all
+You can view this information at a higher level by clicking the *'View
+Process Audit'* button within the module action bar. This will show all
 the processes that have run for all the WorkFlow records.
 
 == Tutorials
@@ -1467,8 +1468,8 @@ This tutorial will show you how to create a workflow process to add
 accounts who are customers to a Target-List when the record is created
 or modified. Set Up
 
-1.  Start by navigating to the WorkFlow module and clicking 'Create
-Workflow' from the the action bar.
+1.  Start by navigating to the WorkFlow module and clicking *'Create
+Workflow'* from the the action bar.
 2.  Give your workflow a Name such as 'Populate Target List.
 3.  Select Accounts as the WorkFlow Module.
 4.  Ensure Repeated Runs is NOT selected and the Status is Active (This
@@ -1478,7 +1479,7 @@ and add a Description.
 [discrete]
 ===== Conditions
 
-1.  Create a new Condition Line by clicking the 'Add Condition' button.
+1.  Create a new Condition Line by clicking btn:[Add Condition].
 2.  Select 'Type' from the Field drop down.
 3.  Keep the Operator as 'Equals To' and the Type as 'Value'.
 4.  From the Value drop down select 'Customer'.
@@ -1491,16 +1492,16 @@ image:134Conditions.png[title="Conditions"]
 [discrete]
 ===== Actions
 
-Create a new Action by clicking the 'Add Action' button.
+Create a new Action by clicking btn:[Add Action].
 
 1.  Select 'Modify Record from the Select Action drop down list.
 2.  Using the Name field, give the action a name such as 'Add to Target
 List'
-3.  Add a Relationship Line by clicking the 'Add Relationship' button.
+3.  Add a Relationship Line by clicking the btn:[Add Relationship] button.
 4.  A drop down will appear above the 'Add Relationship' button. Select
 the relationship from this drop down box. In this case we are looking
 for 'Target Lists: Prospect List'
-5.  This will populate the rest of the line. Click the arrow button next
+5.  This will populate the rest of the line. Click the *arrow* button next
 to the relate field to select your target list.
 
 Once these steps have been completed your Actions panel should look like
@@ -1514,8 +1515,8 @@ This tutorial will show you how to create a workflow process to notify
 the assigned user and then a particular manger user when an open Case
 has not been updated/modified within two days. Set Up
 
-1.  Start by navigating to the WorkFlow module and clicking 'Create
-Workflow' from the the action bar.
+1.  Start by navigating to the WorkFlow module and clicking *'Create
+Workflow'* from the the action bar.
 2.  Give your workflow a Name such as 'Case Escalation'.
 3.  Select Cases as the WorkFlow Module.
 4.  Ensure Repeated Runs is NOT selected and the Status is Active (This
@@ -1530,7 +1531,7 @@ image:136Case_Escalation.png[title="Case Reminder"]
 [discrete]
 ===== Conditions
 
-Create a new Condition Line by clicking the 'Add Condition' button.
+Create a new Condition Line by clicking btn:[Add Condition].
 
 Select 'Date Modified' from the Field drop down.
 
@@ -1560,8 +1561,8 @@ image:138Conditions.png[138Conditions.png,title="138Conditions.png"]
 [discrete]
 ===== Actions
 
-1.  Create a new Action by clicking the 'Add Action' button.
-2.  Select 'Send Email from the Select Action down down list.
+1.  Create a new Action by clicking btn:[Add Action] button.
+2.  Select 'Send Email' from the Select Action down down list.
 3.  Give the action a Name such as 'Assigned User Reminder'
 4.  On the Email Line select 'Related Field' from the first drop down,
 'Users: Assigned To' from the second drop down and a email template from
@@ -1575,7 +1576,7 @@ image:219Assigned_user_reminder_actions.png[title="Actions"]
 Repeat steps 1, 2 and 3 but change the name of this action to
 'Manager Escalation Email'. 2. On the Email Line select 'User' and then
 select you who should receive the email. Select an email template from
-the third drop down. 3. When you are finished click 'Save' to create
+the third drop down. 3. When you are finished click btn:[Save] to create
 your workflow. Once these steps have been completed the Actions panel
 should look like this:
 
@@ -1596,8 +1597,8 @@ system.
 [discrete]
 ===== Set Up
 
-1.  Start by navigating to the WorkFlow module and clicking 'Create
-Workflow' from the the action bar.
+1.  Start by navigating to the WorkFlow module and clicking *'Create
+Workflow'* from the the action bar.
 2.  Give your workflow a Name such as 'Web Lead Assignment and Follow
 Up'.
 3.  Select Leads as the WorkFlow Module.
@@ -1613,7 +1614,7 @@ image:141Set_up.png[title="Set Up"]
 [discrete]
 ===== Conditions
 
-1.  Create a new Condition Line by clicking the 'Add Condition' button.
+1.  Create a new Condition Line by clicking btn:[Add Condition].
 2.  Select 'Lead Source' from the Field drop down.
 3.  Keep the Operator as 'Equals To' and the Type as 'Value'
 4.  From the Value drop down select our condition, 'Web Site'
@@ -1626,13 +1627,13 @@ image:142Conditions.png[title="Conditions"]
 [discrete]
 ===== Actions
 
-1.  Create a new Action by clicking the 'Add Action' button.
+1.  Create a new Action by clicking btn:[Add Action].
 2.  Select 'Modify Record' from the Select Action down down list.
 3.  Using the Name field, give the action a name such as 'Assign to
 Sales'
-4.  Add a Field Line by clicking the 'Add Field' button.
+4.  Add a Field Line by clicking btn:[Add Field].
 5.  Select 'Assigned-To' from the new drop down box that has appeared
-above the 'Add Field' button.
+above the btn:[Add Field] button.
 6.  Change the middle drop down box from 'Value' to 'Round Robin'
 7.  Change the third drop down box from 'ALL Users' to 'ALL Users in
 Role'
@@ -1649,7 +1650,7 @@ list.
 3.  Using the Name field, give the action a name such as 'Create Follow
 Up Call'.
 4.  From the Record Type drop down select 'Calls'.
-5.  Click the Add Field button to add a new field:
+5.  Click the btn:[Add Field] button to add a new field:
 6.  Select 'Subject' from the first drop down box. Leave the second drop
 down box as 'Value' then type the desired subject into the text field at
 the end.
@@ -1664,7 +1665,7 @@ on the line select '+'.
 'Assigned-To' – This will relate the assigned User of the Lead to the
 Call.
 12. You can add any other fields that you wish to include in the call at
-this stage. To finish click 'Save'.
+this stage. To finish click btn:[Save].
 
 Once these steps have been completed the Actions panel should look like
 this:
