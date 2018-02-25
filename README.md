@@ -1,8 +1,8 @@
 # SuiteDocs
 
-This is the Project for the SuiteCRM Documentation Site which you can browse at <a href="https://docs.suitecrm.com" target="_blank">https://docs.suitecrm.com</a>.
+This is the Project for the SuiteCRM Documentation Site which you can browse at [https://docs.suitecrm.com](https://docs.suitecrm.com).
 
-You can find instructions about contributing at <a href="http://docs.suitecrm.com/community/contributing-to-docs/" target="_blank">http://docs.suitecrm.com/community/contributing-to-docs/</a>.
+You can find instructions about contributing at [http://docs.suitecrm.com/community/contributing-to-docs/](http://docs.suitecrm.com/community/contributing-to-docs/).
 
 ## Architectural Overview
 
