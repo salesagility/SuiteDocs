@@ -3,6 +3,8 @@ Title: Cases with Portal
 Weight: 250
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Advanced Open Cases with Portal
@@ -69,7 +71,7 @@ image:image147.png[title="Joomla AOP"]
 
 To create a Portal User a SuiteCRM User must first create a Contact for
 the Portal User using the standard SuiteCRM functionality. Once created
-you must click the 'Create Portal User' button. This can be found at the
+you must click btn:[Create Portal User]. This can be found at the
 top left hand side of the Contact record Detail View.
 
 {{% notice note %}}
@@ -98,7 +100,7 @@ editor tool within SuiteCRM.
 {{% notice note %}}
 This feature does use the Joomla cache so please clear cache
 after an update has been made. When the case is ready to be logged,
-click the 'Save' button. This will create the Case within SuiteCRM.
+click the button. This will create the Case within SuiteCRM.
 {{% /notice %}}
 
 [discrete]
@@ -113,7 +115,7 @@ find your result.
 image:image150.png[title="Viewing Cases"]
 
 To view more information on the case and to add updates then Portal
-Users can click the 'Subject' of case.
+Users can click the *'Subject'* of case.
 
 image:image151.png[title="Viewing Cases"]
 
@@ -156,8 +158,8 @@ Within Cases, you can specify both a State and a Status value. The State
 determines if the Case is Open or Closed. Depending on the State you
 will be offered different statuses. You can amend these statuses using
 the Dropdown Editor Tool within the Admin Developer Tools. When adding a
-new Status you must define the Item Name as “<parent dropdown item
-name>_ItemName” For example “Open_New” or “Closed_Rejected”. All values
-with an Item Name prefixed with “Open_” will show when the state is
-Open, similarly all with the prefix “Closed_” will show when the state
+new Status you must define the Item Name as “`<parent dropdown item
+name>_ItemName`” For example “`Open_New`” or “`Closed_Rejected`”. All values
+with an Item Name prefixed with “`Open_`” will show when the state is
+Open, similarly all with the prefix “`Closed_`” will show when the state
 is closed.

@@ -3,6 +3,8 @@ Title: Events
 Weight: 260
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Advanced Open Events
@@ -16,7 +18,7 @@ events are held.
 ==== Creating Locations
 
 *1.* Hover over the Locations module on the navigation bar and select
-'Create Location'.
+*'Create Location'*.
 
 image:146Create_location.png[title="Create Location"]
 
@@ -26,20 +28,20 @@ and must be completed prior to saving.
 
 image:147Location_edit_view.png[title="Location Edit View"]
 
-*3.* Once the necessary information is entered, click "Save".
+*3.* Once the necessary information is entered, click btn:[Save]
 
 == Events
 
 The Events module is used to capture information an particular event and
 send out invites to delegates. To view the Events held within the system
-click the 'Events' tab on the navigation bar. This will take you to the
+click the *'Events'* tab on the navigation bar. This will take you to the
 Events List View.
 
 [discrete]
 ==== Creating Events
 
 *1.* Hover over the Events module on the navigation bar and select
-'Create Event'.
+*'Create Event'*.
 
 image:148Create_event.png[title="Create Event"]
 
@@ -71,7 +73,7 @@ redirected to after you decline an invite using the link provided in the
 defaults to you who creates the event.
 * *Created* *By* – Which user created the event.
 
-*3.* Once the necessary information is entered, click "Save".
+*3.* Once the necessary information is entered, click btn:[Save]
 
 == Adding Delegates
 
@@ -82,7 +84,7 @@ panel.
 
 image:223Adding_delegates.png[title="Select Delegates"]
 
-*3.* Click 'Select Delegates'. A list of options will appear.
+*3.* Click *'Select Delegates'*. A list of options will appear.
 
 image:224Select_delegates.png[title="Select Delegates"]
 
@@ -109,7 +111,7 @@ image:225Delegates.png[title="Delegates"]
 
 *1.* Navigate to the Delegates sub-panel.
 
-*2.* Choose action 'Send Invites'.
+*2.* Choose action *'Send Invites'*.
 
 image:226Send_invites.png[title="Send Invites"]
 

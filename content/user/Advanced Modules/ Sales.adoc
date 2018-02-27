@@ -3,6 +3,8 @@ Title: Sales
 Weight: 230
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Advanced Open Sales
@@ -49,7 +51,7 @@ Total will not include Tax.
 
 image:173AOS_settings_edit.png[title="Customise AOS Settings"]
 
-Once configured, click 'Save' to apply your AOS Settings.
+Once configured, click btn:[Save] to apply your AOS Settings.
 
 == Products Module
 
@@ -78,7 +80,7 @@ Categories' button in the action bar.
 image:175Product_category.png[title="Product Categories Module"]
 
 The Parent Category field is a relationship field to another Product
-Categories record. If you check the 'Is Parent Category' field then this
+Categories record. If you check the *'Is Parent Category'* field then this
 signifies that the category is the highest level. Once selected you will
 not be able to select a Parent Category using the relate field.
 
@@ -111,7 +113,7 @@ image:177PDF_template_field.png[title="PDF Template Field"]
 
 This will populate the second drop down with all the fields found within
 that module. Once you have selected the field you wish to insert, the
-text field will populate with the field variable name. Click 'Insert' to
+text field will populate with the field variable name. Click btn:[Insert] to
 place this field into the Body of the template. If the Active check box
 is selected then users will be able to generate PDFs from this template.
 If it is not selected you will not.
@@ -155,11 +157,11 @@ image:188PDF_footer.png[title="PDF Header and Footer"]
 === Generate Letter
 
 You can generate PDF documents for Accounts, Contacts and Leads using
-the Generate Letter functionality.
+the *Generate Letter* functionality.
 
 image:GenerateLetter1.png[title="Generate Letter"]
 
-Clicking the 'Generate Letter' button found on these modules Detail View
+Clicking the btn:[Generate Letter] button found on these modules Detail View
 will prompt a pop-up asking to select a template.
 
 image:GenerateLetter2.png[title="Generate Letter"]
@@ -169,7 +171,7 @@ have the same Type as the module of the record. Clicking the template
 name will generate a PDF document with date populated from the record
 and it's related records. The Generate Letter functionality can also be
 actioned from the List View. This allows you to select multiple records
-and click the 'Generate Letter' button within the List View action menu.
+and click the *'Generate Letter'* button within the List View action menu.
 
 image:GenerateLetter3.png[title="Generate Letter"]
 
@@ -181,7 +183,7 @@ described in your respective sections.
 === Creating a Quote
 
 You can create a Quote by going to the Quotes module and clicking
-'Create Quote' from within the actions bar. The first panel allows you
+*'Create Quote'* from within the actions bar. The first panel allows you
 to specify details concerning the quote such as the Title, related
 Opportunity, Stage and Payment Terms. The Quote Number field is
 calculated automatically.
@@ -200,7 +202,7 @@ image:97Quotes_2nd_panel.png[title="Creating a Quote"]
 The third panel allows users to specify the Quote Groups, Line Items and
 the Currency. A Group is a collection of Line Items with its own Group
 Total. A Line Item can be a Product Line or a Service Line. To add a
-Quote Group, click the 'Add Group' button.
+Quote Group, click btn:[Add Group].
 
 {{% notice note %}}
 Add Group will be displayed if “Enable Line Item groups” is
@@ -214,7 +216,7 @@ a Product Line or Service Line. It will also display the Group Totals.
 
 image:200Add_group.png[title="Group Display"]
 
-To add a Product Line, click the 'Add Product Line' button. This will
+To add a Product Line, click btn:[Add Product Line]. This will
 allow users to quote for Products from the Products module.
 
 image:201Add_product_line.png[title="Add Product Line"]
@@ -231,7 +233,7 @@ Once you have selected a Product, the List, Sale Price and Total will
 populate automatically. You can change the Quality, add Discounts
 (Percentage or Amount) and increase the Tax percentage. These will alter
 the Sale Price, Total Price and Group Total fields. To add a Service
-Line, click the 'Add Service Line' button. This will allow users to
+Line, click btn:[Add Service Line]. This will allow users to
 quote for Services.
 
 image:203Add_service_line.png[title="Service Line"]
@@ -248,7 +250,7 @@ image:205Total_total.png[title="Combined Total"]
 
 The Shipping field allows you to add a shipping cost. The Shipping Tax
 field allows you to add tax to this value. Once the Quote has been
-compiled, click 'Save' to save the Quote.
+compiled, click btn:[Save] to save the Quote.
 
 === Line Items without Groups
 
@@ -281,21 +283,21 @@ within the body of the email.
 === Convert To Invoice
 
 With AOS you can convert Quotes to Invoices. This can be achieved by
-clicking the 'Convert to Invoice' button on the Quote Detail View.
+clicking the *'Convert to Invoice'* button on the Quote Detail View.
 
 image:100Conver_to_invoice.png[title="Convert to Invoice"]
 
 This functionality will redirect users to the Edit View of an Invoice
 record. Fields will be populated based on your Quote counterparts and
 Line Items will be copied over. When you are ready to create the
-Invoice, click the 'Save' button. Converting a Quote to an Invoice will
+Invoice, click the btn:[Save] button. Converting a Quote to an Invoice will
 set the Invoice Status of the quote to 'Invoiced'.
 
 === Create Contract
 
 As well as converting to an Invoice, AOS allows users to create a
-Contract based on a Quote. This can be done by clicking the 'Create
-Contract' button on the Quote Detail View.
+Contract based on a Quote. This can be done by clicking the *'Create
+Contract'* button on the Quote Detail View.
 
 image:101Create_contract.png[title="Create Contract"]
 
@@ -309,7 +311,7 @@ Items on the Quote.
 
 Creating an Invoice record is very similar to creating a Quote record.
 You can create an Invoice by going to the Invoices module and clicking
-'Create Invoice' from within the actions bar. The first panel allows you
+*'Create Invoice'* from within the actions bar. The first panel allows you
 to specify details about the Invoice such as Status and Due Date.
 
 image:102Invoice_panel_1.png[title="Creating an Invoice"]
