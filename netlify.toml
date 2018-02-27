@@ -7,7 +7,7 @@
 [context.production.environment]
   HUGO_VERSION = "0.36"
   HUGO_ENV = "production"
-  HUGO_BASEURL = "http://docs.suitecrm.com/"
+  HUGO_BASEURL = "https://docs.suitecrm.com/"
   HUGO_ENABLEGITINFO = "true"
 
 # The Deploy Preview Context applies to every Deploy Preview you create: 
@@ -27,5 +27,5 @@
 
 # Besides these three predefined contexts, you can also use branch names as context names:
 [context.preview.environment]
-  HUGO_BASEURL = "http://docs.suitecrm.com/"
+  HUGO_BASEURL = "https://docs.suitecrm.com/"
   HUGO_ENABLEGITINFO = "true"
