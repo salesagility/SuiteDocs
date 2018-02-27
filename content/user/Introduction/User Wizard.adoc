@@ -3,6 +3,8 @@ Title: User Wizard
 Weight: 30
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = User Wizard
@@ -14,7 +16,7 @@ will display in SuiteCRM, and these are specific to your user.
 == Welcome to SuiteCRM
 
 The first step you will see is a simple welcome page that displays once
-you have logged in. Click 'Next' on this page to progress to configure
+you have logged in. Click btn:[Next] on this page to progress to configure
 your user preferences.
 
 image:04SuiteCRM_welcome.png[title="Welcome to SuiteCRM!"]
@@ -29,7 +31,7 @@ valid data before you can progress.
 
 image:05Welcome_info.png[title="User Information"]
 
-Once you have filled in all information on this page, click 'Next' to
+Once you have filled in all information on this page, click btn:[Next] to
 progress to the next step in the wizard.
 
 == Your Locale
@@ -75,19 +77,19 @@ dependent on your requirement.
 
 image:181Name_format.png[title="Name Format"]
 
-Once you have specified all of your Locale preferences, click 'Next' to
+Once you have specified all of your Locale preferences, click btn:[Next] to
 progress to the final step/confirmation page of the User Wizard.
 
 == Final Step
 
 The final step of the User Wizard provides you with multiple useful
 links for learning more and obtaining further support from the SuiteCRM
-website and dedicated team. There is a 'Back' button if you have made
+website and dedicated team. There is a btn:[Back] button if you have made
 any mistakes you wish to amend in previous steps.
 
 image:241Finish User Wizard.png[title="Finish User Wizard"]
 
-Clicking 'Finish' will complete the User Wizard and will present you
+Clicking btn:[Finish] will complete the User Wizard and will present you
 with SuiteCRM login form.
 
 == Summary

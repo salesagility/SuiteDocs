@@ -3,6 +3,8 @@ Title: Leads
 Weight: 100
 ---
 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
 :imagesdir: ./../../../images/en/user
 
 = Leads
@@ -69,7 +71,7 @@ Contact, Account and Opportunity. The way in which a Lead is converted
 depends on how the System Administrator has set up SuiteCRM. To convert
 a Lead with the default SuiteCRM setup you have to click on an
 individual Lead record to access the Detail View of the Lead and click
-on the arrow next to the Other button, then click on 'Convert Lead' from
+on the arrow next to the Other button, then click on *'Convert Lead'* from
 the drop-down menu shown in the image below:
 
 image:68Converting_a_lead.png[title="Converting a Lead"]
@@ -113,7 +115,7 @@ Contacts/Accounts and Opportunities.
 
 image:72Convert_lead_options.png[title="Lead Conversion"]
 
-After you have completed the relevant sections click the Save button to
+After you have completed the relevant sections click btn:[Save] to
 confirm the changes.
 
 == Duplicate Record Check
@@ -125,6 +127,6 @@ found.
 image:73Duplicate_record_check.png[title="Duplicate Record Check"]
 
 If you find that the duplicate warning is not valid and you still wish
-to create a new record, then click the Create button. Otherwise if you
+to create a new record, then click btn:[Create]. Otherwise if you
 decide that the warning is correct and the record does already exist in
-the CRM then you should click on the Select button.
+the CRM then you should the *'select'* button.
