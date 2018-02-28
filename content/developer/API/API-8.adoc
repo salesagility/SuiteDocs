@@ -8,6 +8,8 @@ weight: 18
 :toc:
 :toclevels: 4
 
+
+== Introduction
 SuiteCRM API version 8 exposes a set of resources, to be consumed by clients who wish to harness the powerful CRM functionality provided by SuiteCRM. The API framework employs a Restful design to facilitate the http://jsonapi.org/format/1.0/[JSON API 1.0] standard messages over HTTPS. It includes meta objects to provide functionality which is not yet defined in the JSON API 1.0 standard. The SuiteCRM API is secured by the OAuth 2 Server provided in SuiteCRM.
 
 == SuiteCRM API Requirements
@@ -130,33 +132,33 @@ details.
 .Example Request (PHP):
 [source,php]
 $ch = curl_init();
-													//
+
 $header = array(
-													//
+
     'Content-type: application/vnd.api+json',
     'Accept: application/vnd.api+json',`
-													//
+
 );
-													//
+
 $postStr = json_encode(array(
-													//
+
     'grant_type' => 'password',
     'client_id' => '3D7f3fda97-d8e2-b9ad-eb89-5a2fe9b07650',
     'client_secret' => 'client_secret',
     'username' => 'admin',
     'password' => 'admin',
     'scope' => ''
-													//
+
 ));
-													//
+
 $url = 'https://path-to-instance/api/oauth/access_token';
-													//
+
 curl_setopt($ch, CURLOPT_URL, url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postStr);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-													//
+
 $output = curl_exec($ch);
 
 .Example Response:
@@ -188,11 +190,11 @@ like this:
 .Example
 [source,php]
 $header = array(
-													//
+
    'Content-type: application/vnd.api+json',
    'Accept: application/vnd.api+json',
    'Authorization: Bearer ' . $your_saved_access_token
-													//
+
 );
 
 == Managing Tokens
@@ -206,12 +208,6 @@ You can also revoke or end an active session by selected the session and
 then selecting "revoke token" in the action or bulk actions menu.
 
 image:Screenshot_20180215_130855.png[Screenshot_20180215_130855.png,title="Screenshot_20180215_130855.png"]
-
-{{% notice note %}}
-Please ensure that you include the meta middle table in each link
-in the relationship otherwise it will set all the middle table fields to
-the first meta object.
-{{% /notice %}}
 
 == JSON API
 
@@ -252,21 +248,21 @@ Clients *MUST* ignore any parameters for the
 .Example
 [source,php]
 $ch = curl_init();
-													//
+
 $header = array(
-													//
+
    'Content-type: application/vnd.api+json',
    'Accept: application/vnd.api+json',
-													//
+
 );
-													//
+
 $url = 'https://path-to-instance/api/v8/modules/meta/list';
-													//
+
 curl_setopt($ch, CURLOPT_URL, url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');;
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-													//
+
 $output = curl_exec($ch);
 
 === Handling Errors
@@ -473,21 +469,21 @@ encoded, plus it will make it easier to extend operations in the future.
 |=======================================================================
 |Operator |Name |Example
 
-|eq |Equal |filter[Accounts.deleted]=[[eq]]1
+|eq |Equal |filter[Accounts.deleted]=\[[eq]]1
 
-|ne |Not Equal |filter[Accounts.deleted]=[[ne]]0
+|ne |Not Equal |filter[Accounts.deleted]=\[[ne]]0
 
-|gt |Greater Than |filter[Accounts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
+|gt |Greater Than |filter[Accounts.date_modified]=[\[gt]]2017-11-17T11:40:00+00:00
 
-|lt |Less Than |filter[Accounts.date_modified]=[[lt]]2017-11-17T11:40:00+00:00
+|lt |Less Than |filter[Accounts.date_modified]=\[[lt]]2017-11-17T11:40:00+00:00
 
-|gte |Greater Than or Equal |filter[Accounts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00
+|gte |Greater Than or Equal |filter[Accounts.date_modified]=\[[gte]]2017-11-17T11:40:00+00:00
 
-|lte |Less Than or Equal |filter[Accounts.date_modified]=[[lte]]2017-11-17T11:40:00+00:00
+|lte |Less Than or Equal |filter[Accounts.date_modified]=\[[lte]]2017-11-17T11:40:00+00:00
 
-|in |In List |filter[Accounts.name]=[[in]]inc,[[in]]ltd
+|in |In List |filter[Accounts.name]=\[[in]]inc,\[[in]]ltd
 
-|nin |Not In List |filter[Accounts.name]=[[nin]]inc,[[nin]]ltd
+|nin |Not In List |filter[Accounts.name]=\[[nin]]inc,\[[nin]]ltd
 |=======================================================================
 
 *Strings*
@@ -496,9 +492,9 @@ encoded, plus it will make it easier to extend operations in the future.
 |================================================================
 |Operator |Name |Example
 
-|li |Like |filter[Accounts.name]=[[li]]sam%
+|li |Like |filter[Accounts.name]=\[[li]]sam%
 
-|nli |Not Like |filter[Accounts.name]=[[nli]]bob%
+|nli |Not Like |filter[Accounts.name]=\[[nli]]bob%
 |================================================================
 
 This convention was taken from the
