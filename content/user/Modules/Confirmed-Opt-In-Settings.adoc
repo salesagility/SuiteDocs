@@ -1,5 +1,5 @@
 ---
-Title: Confirmed Opt-In
+Title: Confirmed Opt In
 Weight: 145
 ---
 :experimental:   ////this is here to allow btn:[]syntax used below
@@ -8,15 +8,15 @@ Weight: 145
 
 :toc:
 
-= Confirmed Opt-In
+= Confirmed Opt In
 
 == Overview
 
-*SuiteCRM 7.10* introduces a new *Confirmed Opt-In* feature which provides two opt-in settings for email addresses: *Opt In* and *Confirmed Opt In*.
+*SuiteCRM 7.10* introduces a new *Confirmed Opt In* feature which provides two opt in settings for email addresses: *Opt In* and *Confirmed Opt In*.
 
 . *Opt In* is used to indicate that a Contact, Lead or Target has opted in to receive marketing communications.
 
-. *Confirmed Opt In* further requires users to confirm their opt-in status by clicking a link sent to them via email. This email can be configured to send automatically (e.g. on submission of a Web-To-Person form) or manually, and the template used to send this email can be customised.
+. *Confirmed Opt In* further requires users to confirm their opt in status by clicking a link sent to them via email. This email can be configured to send automatically (e.g. on submission of a Web-To-Person form) or manually, and the template used to send this email can be customised.
 
 Once Opt In or Confirmed Opt In settings have been selected:
 
@@ -80,7 +80,7 @@ An *Opted In* checkbox indicates the opt in status in Edit view.
 image:GDPREditViewOptIn.png[title="Edit View"]
 
 Note that for *Confirmed Opt In*, manually checking the *Opted In* box here will result in a status of *Pending Confirmation*, rather than *Confirmed Opt In*. 
-The user will still be required to confirm their opt-in via email.
+The user will still be required to confirm their opt in via email.
 
 == Sending/Resending Opt In Emails Manually
 
@@ -101,7 +101,7 @@ Email(s) will be sent silently (without confirmation) using the predefined templ
 
 == Campaigns
 
-Your opt-in settings will affect your target lists for Campaigns. Campaign emails will NOT be sent to email addresses unless they are *Opted In* or *Confirmed Opted In*, depending on which settings you have chosen.
+Your opt in settings will affect your target lists for Campaigns. Campaign emails will NOT be sent to email addresses unless they are *Opted In* or *Confirmed Opted In*, depending on which settings you have chosen.
 
 === Web To Person Form Opt In
 
@@ -111,5 +111,5 @@ image:GDPRCreatePersonForm.png[title="Web To Person form"]
 
 If the user checks this box, the email address will be set as *Opted In* (or *Pending Confirmation* if you have *Confirmed Opt In* configured) when the record is created in *SuiteCRM*.
 
-Note that if you have *Confirmed Opt In* configured and *Automatic Opt In Email* selected, the Opt In email will be sent automatically following submission of the form. If *Automatic Opt In Email* is not selected, these emails will need to be sent <<Sending/Resending Opt In Email Manually,manually>>. 
+Note that if you have *Confirmed Opt In* configured and *Automatic Opt In Email* selected, the Opt In email will be sent automatically following submission of the form. If *Automatic Opt In Email* is not selected, these emails will need to be sent <<#_sending_resending_opt_in_emails_manually, manually>>.
 
