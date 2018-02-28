@@ -11,7 +11,7 @@ architecture. They allow retrieving data from the database as objects
 and allow persisting and editing records. This section will go over the
 various ways of working with beans.
 
-== BeanFactory
+== The BeanFactory
 
 The BeanFactory allows dynamically loading bean instances or creating
 new records. For example to create a new bean you can use:
