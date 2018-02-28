@@ -13,7 +13,7 @@ title: "23. Appendix C - Automated Testing"
 
 == Introduction
 
-Automated testing provides a means to ensure that the quality of the SuiteCRM is kept to a high standard. SuiteCRM has automated test framework, which is powered by the http://codeception.com[codeception] testing framework.
+Automated testing provides a means to ensure that the quality of the SuiteCRM is kept to a high standard of quality. SuiteCRM has automated test framework, which is powered by the http://codeception.com[codeception] testing framework.
 
 === Installing the testing framework
 
@@ -43,7 +43,7 @@ SuiteCRM offers many different test suites.
 
 
 === Running Codeception for the first time
-Codeception and the other commands live inside the vendor/bin/ directory of your SuiteCRM instance. To test that your configuration is working you need to first install your copy of suitecrm. After install suitecrm you can run the unit tests:
+Codeception and the other commands live inside the vendor/bin/ directory of your SuiteCRM instance. To test that your configuration is working you need to first install your copy of suitecrm. After installing SuiteCRM you can run the unit tests:
 
 `./vendor/bin/codecept run unit`
 
