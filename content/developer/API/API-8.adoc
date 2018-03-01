@@ -134,31 +134,23 @@ details.
 $ch = curl_init();
 
 $header = array(
-
     'Content-type: application/vnd.api+json',
     'Accept: application/vnd.api+json',`
-
-);
-
+ );
 $postStr = json_encode(array(
-
     'grant_type' => 'password',
     'client_id' => '3D7f3fda97-d8e2-b9ad-eb89-5a2fe9b07650',
     'client_secret' => 'client_secret',
     'username' => 'admin',
     'password' => 'admin',
     'scope' => ''
-
 ));
-
 $url = 'https://path-to-instance/api/oauth/access_token';
-
 curl_setopt($ch, CURLOPT_URL, url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postStr);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-
 $output = curl_exec($ch);
 
 .Example Response:
@@ -190,11 +182,9 @@ like this:
 .Example
 [source,php]
 $header = array(
-
    'Content-type: application/vnd.api+json',
    'Accept: application/vnd.api+json',
    'Authorization: Bearer ' . $your_saved_access_token
-
 );
 
 == Managing Tokens
@@ -248,21 +238,15 @@ Clients *MUST* ignore any parameters for the
 .Example
 [source,php]
 $ch = curl_init();
-
 $header = array(
-
    'Content-type: application/vnd.api+json',
    'Accept: application/vnd.api+json',
-
 );
-
 $url = 'https://path-to-instance/api/v8/modules/meta/list';
-
 curl_setopt($ch, CURLOPT_URL, url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');;
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-
 $output = curl_exec($ch);
 
 === Handling Errors
