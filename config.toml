@@ -45,34 +45,46 @@ weight = 11
 # url = "https://gohugo.io/"
 # weight = 20
 
-# [[Languages.en.menu.shortcuts]]
-# name = "<i class='fa fa-bullhorn'></i> Credits"
-# url = "/credits"
-# weight = 30
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
 
-[Languages.fr]
-title = "Documentation de SuiteCRM"
+[Languages.es]
+title = "Documentación de SuiteCRM"
 weight = 2
-languageName = "Français"
+languageName = "Español"
 
-[[Languages.fr.menu.shortcuts]]
+[[Languages.es.menu.shortcuts]]
 name = "<i class='fa fa-github'></i> Github"
 identifier = "ds"
 url = "https://github.com/salesagility/SuiteCRM"
 weight = 10
 
-# [[Languages.fr.menu.shortcuts]]
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fa fa-newspaper-o'></i> Blog"
+url = "blog"
+weight = 10
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Github"
+identifier = "ds"
+url = "https://github.com/salesagility/SuiteCRM"
+weight = 11
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> Gracias"
+url = "/credits"
+weight = 30
+
+# [[Languages.es.menu.shortcuts]]
 # name = "<i class='fa fa-camera'></i> Vitrine"
 # url = "/showcase"
 # weight = 11
 
-# [[Languages.fr.menu.shortcuts]]
+# [[Languages.es.menu.shortcuts]]
 # name = "<i class='fa fa-bookmark'></i> Documentation Hugo"
 # identifier = "hugodoc"
 # url = "https://gohugo.io/"
 # weight = 20
 
-# [[Languages.fr.menu.shortcuts]]
-# name = "<i class='fa fa-bullhorn'></i> Crédits"
-# url = "/credits"
-# weight = 30
