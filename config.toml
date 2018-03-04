@@ -23,7 +23,8 @@ section = [ "HTML", "AMP", "RSS", "JSON"]
 
 [Languages]
 [Languages.en]
-title = "SuiteCRM Documentation"
+#title = "SuiteCRM Documentation"
+title = "Docs"
 weight = 1
 languageName = "English"
 
