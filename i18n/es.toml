@@ -1,0 +1,53 @@
+[Search-placeholder]
+other = "Buscar..."
+
+[Clear-History]
+other = "Desmarcar ya leídos"
+
+[Attachments-label]
+other = "Adjuntos"
+
+[title-404]
+other = "Error"
+
+[message-404]
+other = "Vaya, parece no existir esta página ¯\\_(ツ)_/¯."
+
+[Go-to-homepage]
+other = "Ir al inicio"
+
+[Edit-this-page]
+other = "Editar página"
+
+[Shortcuts-Title]
+other = "Más"
+
+[Expand-title]
+other = "Expandeme..."
+
+[Issue-for-page]
+other = "Discutir"
+
+[Documentation]
+other = "Documentación"
+
+[Guides]
+other = "Guías"
+
+[User]
+other = "Usuário"
+
+[Developer]
+other = "Desarollador"
+
+[Administrator]
+other = "Administrador"
+
+[Admin-SHORT]
+other = "Admin"
+
+[Community]
+other = "Comunidad"
+
+[TechnicalBlog]
+other = "Blog Técnico"

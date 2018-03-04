@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
   <head>
@@ -14,7 +15,7 @@
     <link href="{{"css/hybrid.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/featherlight.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/perfect-scrollbar.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
-    <link href="{{"css/auto-complete.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/horsey.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hugo-theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{with .Site.Params.themeVariant}}
@@ -39,18 +40,24 @@
     {{ partial "menu.html" . }}
         <section id="body">
         <div id="overlay"></div>
-        <div class="padding highlightable">
+        <div class="padding highlightable sticky-parent">
               {{if not .IsHome}}
-              <div>
+              <div class="sticky-spacer">
                 <div id="top-bar">
                 {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
                   {{ $File := .File }}
                   {{ $Site := .Site }}
                   {{with $File.Path }}
+                  <div id="top-github-link" style="margin-left: 5px;">
+                    <a class="github-link" href="{{ $Site.Params.issueURL }}title=Issue%20about%20Page%20{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}&labels=page-specific&assignee=pgorod" target="blank">
+                      <i class="fa fa-exclamation-circle"></i>
+                      {{ i18n "Issue-for-page" }}
+                    </a>
+                  </div>
                   <div id="top-github-link">
-                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+                    <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
                       <i class="fa fa-code-fork"></i>
-                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
+                      {{ i18n "Edit-this-page"}}
                     </a>
                   </div>
                   {{ end }}
@@ -66,7 +73,7 @@
                   <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
                   {{ end }}
                   <span class="links">
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}   
+                    {{ template "breadcrumbz" dict "page" . "value" .Title }}   
                   </span>
                 </div>
                 {{ if $toc }}
@@ -84,13 +91,12 @@
             <h1>{{.Title}}</h1>
           {{end}}
 
-        {{define "breadcrumb"}}
+        {{define "breadcrumbz"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}
             {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $parent.Title .value) }}
-            {{ template "breadcrumb" dict "page" $parent "value" $value }} 
+            {{ template "breadcrumbz" dict "page" $parent "value" $value }} 
           {{else}}
-            {{.value|safeHTML}}
+            {{ (replace .value .page.Title "<i class='fa fa-home'></i>") | safeHTML }}
           {{end}}
-        {{end}}
-
+         {{end}}
