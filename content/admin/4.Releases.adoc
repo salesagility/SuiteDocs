@@ -83,7 +83,6 @@ _Released 5th Mar 2018_
 * https://github.com/salesagility/SuiteCRM/issues/5223[#5223 ] Fixed #5223 - Menu ACTIONS its not translatable - SuiteP
 * https://github.com/salesagility/SuiteCRM/issues/5327[#5327 ] Fixed #5327 - SuiteCRM 7.10 - Subject broken in Notes detail view
 * https://github.com/salesagility/SuiteCRM/issues/5276[#5276 ] Fixed #5276 - Missing parameter field in reports module 
-* https://github.com/salesagility/SuiteCRM/pull/5337[#5337 ] fix survey variables with new parser
 * https://github.com/salesagility/SuiteCRM/pull/5341[#5341 ] Fix PHP Error in ListViewPackages.php
 * https://github.com/salesagility/SuiteCRM/pull/5365[#5365 ] htaccess generate after upgrade
 * https://github.com/salesagility/SuiteCRM/pull/5366[#5366 ] Update upgradeaccess.php
