@@ -14,7 +14,7 @@ s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<a
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>
 
-s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12>>, <<anchor-7.8.13, 7.8.13>>, <<anchor-7.8.14, 7.8.14>>, <<anchor-7.8.15, 7.8.15>>, <<anchor-7.8.16, 7.8.16>>
+s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>
 
 s|7.7.x, <<anchor-7.7Beta, 7.7 Beta>>, <<anchor-7.7Beta2, 7.7 Beta 2>>, <<anchor-7.7RC, 7.7 RC>>, <<anchor-7.7RC2, 7.7 RC 2>>, <<anchor-7.7.0, 7.7.0>>, <<anchor-7.7.1, 7.7.1>>, <<anchor-7.7.2, 7.7.2>>, <<anchor-7.7.3, 7.7.3>>, <<anchor-7.7.4, 7.7.4>>, <<anchor-7.7.5, 7.7.5>>, <<anchor-7.7.6, 7.7.6>>, <<anchor-7.7.7, 7.7.7>>, <<anchor-7.7.8, 7.7.8>>, <<anchor-7.7.9, 7.7.9>> 
 
@@ -97,7 +97,7 @@ _Released 5th Mar 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.10.1[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
 
@@ -175,7 +175,7 @@ _Released 19th Feb 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.10.0[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
 
@@ -209,7 +209,7 @@ _Released 5th Mar 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.15[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
 
@@ -272,7 +272,7 @@ _Released 5th Mar 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.16[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
 
