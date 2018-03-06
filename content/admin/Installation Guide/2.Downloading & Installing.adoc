@@ -60,8 +60,7 @@ locally and need assistance, visit our support forums.
 .  Set the following permissions on the SuiteCRM directory(Linux):
 ..  `sudo chown -R www-data:www-data .`
 ..  `sudo chmod -R 755 .`
-..  `sudo chmod -R 775 cache custom modules themes data upload`
-config_override.php
+..  `sudo chmod -R 775 cache custom modules themes data upload config_override.php`
 
 The commands/steps taken to setting permissions differs dependant on
 your operating system. If you are experiencing issues with setting
