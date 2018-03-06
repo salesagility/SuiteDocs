@@ -1,0 +1,90 @@
+---
+Title: Gestión de la cuenta de usuario
+Weight: 40
+---
+
+:imagesdir: /images/es/user
+
+= Gestión de la cuenta de usuario
+
+Hay muchas opciones de configuración disponibles para los usuarios una
+vez que hayan ingresado al sistema. Puede ver y/0 modificar sus
+preferencias haciendo clic en la opción ''Perfil'' que se despliega al
+posicionar el puntero del mouse sobre el ícono de usuario en la parte
+superior derecha de la pantalla.
+
+image:usuario_1.png[title="Usuario"]
+
+== Pestaña perfil de usuario
+
+Una vez que haya hecho clic para acceder a sus preferencias, se le
+llevará a la pestaña ''Perfil de usuario'' que le ofrece una descripción
+general de sus credenciales, como nombre de usuario, nombre, apellido,
+título, etc.
+
+image:usuario_2.png[title="Perfil de Usuario"]
+
+== Pestaña contraseña
+
+Al hacer clic en la pestaña ''Contraseña'', podrá cambiar la contraseña
+de su cuenta de usuario. Para cambiar su contraseña, especifique una
+nueva y confirme la misma. Se recomienda que las contraseñas sean
+seguras. El requisito mínimo recomendado es un carácter en mayúsculas,
+un carácter en minúscula, un carácter numérico y una longitud mínima de
+8 caracteres.
+
+image:usuario_3.png[title="Contraseña"]
+
+Si ha olvidado su contraseña y no puede iniciar sesión, puede utilizar
+la función de contraseña olvidada detallada en la sección Introducción
+de esta Guía del usuario.
+
+== Pestaña Avanzado
+
+La pestaña Avanzado le proporciona las preferencias que ha definido
+durante el proceso Asistente de usuario. Esto le da la posibilidad de
+cambiar cualquiera de sus preferencias de usuario, si hubo algún error o
+si necesita modificarlos en una fecha posterior.
+
+image:usuario_4.png[title="Avanzado"]
+
+== Restablecer preferencias de usuario
+
+Puede restablecer sus preferencias de usuario a la configuración
+predeterminada del sistema haciendo clic en el botón ''Restablecer
+preferencias de usuario'' de su perfil.
+
+image:usuario_5.png[title="Restablecer preferencias de usuario"]
+
+Al hacer clic en el botón le solicitará que confirme que desea
+restablecer sus preferencias de usuario, con el siguiente mensaje:
+''¿Está seguro de que desea restablecer todas sus preferencias?
+Advertencia: Su sesión actual será finalizada.''. Puede hacer clic en
+`Aceptar' o `Cancelar' para actuar apropiadamente. Si selecciona
+''Aceptar'', se cerrará sesión y tendrá que volver a iniciar sesión en
+la aplicación de SuiteCRM.
+
+== Restablecimiento de la página principal de un usuario
+
+Puede restablecer su página de inicio a la configuración predeterminada
+del sistema haciendo clic en el botón ''Restablecer página de inicio''
+de su perfil. Esto restablecerá las preferencias / diseños de dashlet y
+dashboard a las predeterminadas del sistema.
+
+image:usuario_6.png[title="Restablecer página de inicio"]
+
+Al hacer clic en el botón le solicitará que confirme que desea
+restablecer su página de inicio con el siguiente mensaje: ''¿Está seguro
+de que desea reiniciar su Página de Inicio?''. puede hacer clic en
+`Aceptar' o `Cancelar' para actuar apropiadamente.
+
+== Resumen
+
+En este capítulo, cubrimos la administración de una cuenta de usuario.
+Esto le permite administrar su información, modificar / restablecer las
+preferencias del usuario y más.
+
+En el próximo capítulo, cubriremos la Interfaz. La Interfaz es una parte
+integral de SuiteCRM. Con el conocimiento de su Interfaz, puede
+progresar hasta aprender más sobre la funcionalidad y los procesos de
+SuiteCRM.

@@ -1,0 +1,67 @@
+---
+Title: Contactos
+Weight: 80
+---
+
+= Contactos
+
+En SuiteCRM un Contacto es un individuo que está típicamente asociado
+con una Cuenta (organización) u Oportunidad (prospecto calificado). Por
+ejemplo si Techco es la Cuenta, entonces Juan Perez, Gerente de Ventas
+de Techco es un Contacto. Este módulo contiene toda la información
+relacionada a estos individuos y además provee una perspectiva para
+cualquier movimiento relacionada al registro de un Contacto, por ejemplo
+si estuvo involucrado en una Reunión, inició un Caso o envió un Email.
+
+== Acciones de Contactos
+
+You can access the Contacts actions from the Contacts module menu drop
+down or via the Sidebar. The Contacts actions are as follows:
+
+* *Crear Contacto* – Una vez cliqueada, un nuevo formulario se abre en la
+Vista de Edición para permitirte crear un nuevo registro de Contacto.
+* *Ver Contactos* – Una vez cliqueada, serás redireccionado a la Vista de
+Lista del módulo de Contactos. Esto te permite buscar y listar registros
+de Contactos.
+* *Importar Contactos* – Te redirige al Asistente de Importación para el
+módulo de Contactos. Para más información, ve a la sección de Importando
+Registros.
+
+Para ver la lista completa de campos disponibles al crear una Contacto,
+ve a la sección de Lista de Campos de Contactos.
+
+== Administrando Contactos
+
+* Para ordenar registros en la Vista de Lista de Contactos, cliquea
+sobre el título de cualquier columna que sea ordenable. Esto ordenará
+los registros según los valores de ese campo en orden ascendente o
+descendente.
+* Para buscar una Contacto, ver la sección de Búsqueda de la Guía de
+Usuario.
+* Para actualizar algunas o todas las cuentas en la Vista de Lista, usa
+el panel de Actualización Masiva según se describe en la sección de
+Actualización Masiva de Registros de la Guía de Usuario.
+* Para duplicar una Contacto, puedes cliquear el botón Duplicar en la
+Vista de Detalle y luego guardar el registro duplicado.
+* Para combinar Contactos duplicadas, selecciona los registros desde la
+Vista de Lista de Contactos, cliquea en el enlace de Combinar en el menú
+desplegable de Acciones para comenzar el proceso de combinado. Para más
+información sobre combinar duplicados, ver la sección de Combinado de
+Registros de la Guía de Usuario.
+* Para eliminar una o multiples Contactos, puedes seleccionar múltiples
+registros desde la Vista de Lista y cliquear Eliminar. También puedes
+eliminar una Contacto desde la Vista de Detalle utilizando el botón
+Eliminar de la misma. Para mayor información sobre el eliminado de
+registros, ver la sección Eliminando Registros de la Guía de Usuario.
+* Para ver los detalles de una Contacto, cliquea sobre el Nombre de la
+Contacto en la Vista de Lista. Esto abrirá la Vista de Detalle del
+registro.
+* Para editar los detalles de una Contacto, cliquea en el botón Editar
+en la Vista de Lista o en la Vista de Detalle, haz los cambios
+necesarios, y cliquea en Guardar.
+* Para una guía detallada sobre la importación y exportación de
+Contactos, ver la sección Importando Registros y Exportando Registros de
+la Guía de Usuario.
+* Para mantener un seguimiento de los cambios realizados sobre campos
+auditados en el registro de una Contacto, puedes cliquear el botón Ver
+Historial de Cambios en la Vista de Detalle o de Edición de la Contacto.
