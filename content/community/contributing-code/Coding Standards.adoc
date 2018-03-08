@@ -291,7 +291,7 @@ function __construct()
 
 {{% notice warning %}}
 Ensure your code is compatible with current supported Operating Systems, Databases and PHP
-versions and Browsers: see our link:/admin/compatibility-matrix[Compatibility Matrix].
+versions and Browsers: see our link:/admin/5.compatibility-matrix[Compatibility Matrix].
 {{% /notice %}}
 
 == House Keeping
