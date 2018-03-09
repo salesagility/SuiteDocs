@@ -38,29 +38,31 @@ something like this:
 
 .Example 15.1: Example $manifest array definition
 [source,php]
- 1 $manifest = array(
- 2   'name' => 'My First Package',
- 3   'description' => 'This is a simple package example manifest file',
- 4   'version' => '1.5',
- 5   'author' => 'Jim Mackin',
- 6   'readme' => 'readme.txt',
- 7   'acceptable_sugar_flavors' => array('CE'),
- 8   'acceptable_sugar_versions' => array(
- 9     'exact_matches' => array(),
-10     'regex_matches' => array('6\.5\.[0-9]$'),
-11   ),
-12   'copy_files' => array (
-13     'from_dir' => '<basepath>/custom/',    
-14     'to_dir' => 'custom',     
-15     'force_copy' => array (),
-16   ),
-17   'dependencies' => array(
-18     array(
-19       'id_name' => 'example_dependency_package',
-20       'version' => '2.4',
-21     ),
-22   ),
-23 );
+----
+$manifest = array(
+   'name' => 'My First Package',
+   'description' => 'This is a simple package example manifest file',
+   'version' => '1.5',
+   'author' => 'Jim Mackin',
+   'readme' => 'readme.txt',
+   'acceptable_sugar_flavors' => array('CE'),
+   'acceptable_sugar_versions' => array(
+     'exact_matches' => array(),
+     'regex_matches' => array('6\.5\.[0-9]$'),
+   ),
+   'copy_files' => array (
+     'from_dir' => '<basepath>/custom/',    
+     'to_dir' => 'custom',     
+     'force_copy' => array (),
+   ),
+   'dependencies' => array(
+     array(
+       'id_name' => 'example_dependency_package',
+       'version' => '2.4',
+     ),
+   ),
+);
+----
 
 
 

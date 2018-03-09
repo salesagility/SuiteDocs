@@ -47,15 +47,17 @@ similar to:
 
 .Example 5.1: View for a custom module
 [source,php]
-1 <?php
-2 
-3 require_once 'include/MVC/View/views/view.<viewname>.php';
-4 
-5 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-6 class <TheModule>View<ViewName> extends View<ViewName>
-7 {
-8 
-9 }
+----
+<?php
+
+require_once 'include/MVC/View/views/view.<viewname>.php';
+
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+class <TheModule>View<ViewName> extends View<ViewName>
+{
+
+}
+----
 
 
 
@@ -64,15 +66,17 @@ called ABC_Vehicles:
 
 .Example 5.2: Detail view for a custom module, ABC_Vehicles
 [source,php]
-1 <?php
-2 
-3 require_once 'include/MVC/View/views/view.detail.php';
-4 
-5 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-6 class ABC_VehiclesViewDetail extends ViewDetail
-7 {
-8 
-9 }
+----
+<?php
+
+require_once 'include/MVC/View/views/view.detail.php';
+
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+class ABC_VehiclesViewDetail extends ViewDetail
+{
+
+}
+----
 
 
 
@@ -92,15 +96,17 @@ Here we don’t extend the existing view or no such view exists:
 
 .Example 5.3: Custom view for an existing module
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 
-4 require_once 'include/MVC/View/views/view.<viewname>.php';
-5 
-6 class Custom<TheModule>View<ViewName> extends ViewDetail
-7 {
-8 
-9 }
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'include/MVC/View/views/view.<viewname>.php';
+
+class Custom<TheModule>View<ViewName> extends ViewDetail
+{
+
+}
+----
 
 
 
@@ -109,15 +115,17 @@ existing view:
 
 .Example 5.4: Overriding a view for an existing module
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 
-4 require_once 'modules/<TheModule>/views/view.<viewname>.php';
-5 
-6 class Custom<TheModule>View<ViewName> extends <TheModule>View<ViewName>
-7 {
-8 
-9 }
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'modules/<TheModule>/views/view.<viewname>.php';
+
+class Custom<TheModule>View<ViewName> extends <TheModule>View<ViewName>
+{
+
+}
+----
 
 
 
@@ -125,15 +133,17 @@ For example, overriding the List View of Accounts:
 
 .Example 5.5: Overriding the Accounts List View
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 
-4 require_once 'modules/Accounts/views/view.list.php';
-5 
-6 class CustomAccountsViewList extends AccountsViewList
-7 {
-8 
-9 }
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'modules/Accounts/views/view.list.php';
+
+class CustomAccountsViewList extends AccountsViewList
+{
+
+}
+----
 
 
 

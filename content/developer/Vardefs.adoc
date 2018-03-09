@@ -1,4 +1,3 @@
-
 ---
 weight: 4
 title: "4. Vardefs"
@@ -25,32 +24,34 @@ Let’s look at the Account vardefs (which have been edited for brevity):
 
 .Example 4.1: Account Vardefs
 [source,php]
- 1 $dictionary['Account'] =
- 2 array(
- 3  'table' => 'accounts',
- 4  'audited'=>true,
- 5  'unified_search' => true,
- 6  'unified_search_default_enabled' => true,
- 7  'duplicate_merge'=>true,
- 8  'comment' => 'Accounts are organizations or entities that ...',
- 9  'fields' => array (
-10    //Snipped for brevity. See the fields section.
-11  ),
-12  'indices' => array (
-13    //Snipped for brevity. See the indices section.
-14  ),
-15  'relationships' => array (
-16    //Snipped for brevity. See the relationship section.
-17  ),
-18  //This enables optimistic locking for Saves From EditView
-19  'optimistic_locking'=>true,
-20 );
-21 
-22 VardefManager::createVardef(
-23  'Accounts',
-24  'Account',
-25  array('default', 'assignable','company',)
-26 );
+----
+$dictionary['Account'] =
+array(
+  'table' => 'accounts',
+  'audited'=>true,
+  'unified_search' => true,
+  'unified_search_default_enabled' => true,
+  'duplicate_merge'=>true,
+  'comment' => 'Accounts are organizations or entities that ...',
+  'fields' => array (
+   //Snipped for brevity. See the fields section.
+  ),
+  'indices' => array (
+   //Snipped for brevity. See the indices section.
+  ),
+  'relationships' => array (
+   //Snipped for brevity. See the relationship section.
+  ),
+   //This enables optimistic locking for Saves From EditView
+  'optimistic_locking'=>true,
+);
+
+VardefManager::createVardef(
+  'Accounts',
+  'Account',
+  array('default', 'assignable','company',)
+);
+----
 
 
 
@@ -177,20 +178,22 @@ place on the database table for this module. Let’s look at an example:
 
 .Example 4.2: Example indices definition
 [source,php]
- 1 'indices' => array (
- 2  array(
- 3      'name' =>'idx_mymod_id_del',
- 4      'type' =>'index',
- 5      'fields'=>array('id', 'deleted')),
- 6  array(
- 7      'name' =>'idx_mymod_parent_id',
- 8      'type' =>'index',
- 9      'fields'=>array( 'parent_id')),
-10  array(
-11      'name' =>'idx_mymod_parent_id',
-12      'type' =>'unique',
-13      'fields'=>array( 'third_party_id')),
-14  ),
+----
+'indices' => array (
+  array(
+     'name' =>'idx_mymod_id_del',
+     'type' =>'index',
+     'fields'=>array('id', 'deleted')),
+  array(
+     'name' =>'idx_mymod_parent_id',
+     'type' =>'index',
+     'fields'=>array( 'parent_id')),
+  array(
+     'name' =>'idx_mymod_parent_id',
+     'type' =>'unique',
+     'fields'=>array( 'third_party_id')),
+  ),
+----
 
 
 
@@ -214,16 +217,18 @@ edited example from the Accounts module:
 
 .Example 4.3: Example relationships definition
 [source,php]
- 1 'relationships' => array (
- 2  'account_cases' => array(
- 3      'lhs_module'=> 'Accounts',
- 4      'lhs_table'=> 'accounts',
- 5      'lhs_key' => 'id',
- 6      'rhs_module'=> 'Cases',
- 7      'rhs_table'=> 'cases',
- 8      'rhs_key' => 'account_id',
- 9      'relationship_type' => 'one-to-many'),
-10 ),
+----
+'relationships' => array (
+  'account_cases' => array(
+      'lhs_module'=> 'Accounts',
+      'lhs_table'=> 'accounts',
+      'lhs_key' => 'id',
+      'rhs_module'=> 'Cases',
+      'rhs_table'=> 'cases',
+      'rhs_key' => 'account_id',
+      'relationship_type' => 'one-to-many'),
+),
+----
 
 
 
@@ -272,11 +277,13 @@ following is an example from the accounts vardefs:
 
 .Example 4.4: Example vardef template
 [source,php]
-22 VardefManager::createVardef(
-23      'Accounts',
-24      'Account',
-25      array('default', 'assignable','company',)
-26      );
+----
+VardefManager::createVardef(
+      'Accounts',
+      'Account',
+      array('default', 'assignable','company',)
+      );
+----
 
 
 

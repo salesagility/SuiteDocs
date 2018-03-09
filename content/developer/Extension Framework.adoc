@@ -1,4 +1,3 @@
-
 ---
 weight: 14
 title: "14. Extension Framework"
@@ -107,12 +106,14 @@ look like:
 
 .Example 14.1: Adding an entry point entry
 [source,php]
-1 <?php
-2 $extensions["sports_list"] =  array(
-3                 "section" => "sports_list",
-4                 "extdir" => "SportsList",
-5                 "file" => 'sportslist.ext.php',
-6                 "module" => "");
+----
+<?php
+$extensions["sports_list"] =  array(
+                "section" => "sports_list",
+                "extdir" => "SportsList",
+                "file" => 'sportslist.ext.php',
+                "module" => "");
+----
 
 
 

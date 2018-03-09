@@ -46,12 +46,14 @@ create a new file (if it doesn’t exist) at
 
 .Example 7.2: Creating a custom controller for a custom module
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 class <TheModule>Controller extends SugarController
-4 {
-5 
-6 }
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+class <TheModule>Controller extends SugarController
+{
+
+}
+----
 
 
 
@@ -72,12 +74,14 @@ exists:
 
 .Example 7.3: Creating a custom controller for an existing module
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 class Custom<TheModule>Controller extends SugarController
-4 {
-5 
-6 }
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+class Custom<TheModule>Controller extends SugarController
+{
+
+}
+----
 
 
 
@@ -86,15 +90,17 @@ requiring the existing controller:
 
 .Example 7.4: Creating a custom controller for an existing module with an existing controller
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 
-4 require_once 'modules/<TheModule>/controller.php';
-5 
-6 class Custom<TheModule>Controller extends <TheModule>Controller
-7 {
-8 
-9 }
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'modules/<TheModule>/controller.php';
+
+class Custom<TheModule>Controller extends <TheModule>Controller
+{
+
+}
+----
 
 
 
@@ -109,10 +115,12 @@ log the REQUEST and simply redirect:
 
 .Example 7.5: Adding a custom controller action method
 [source,php]
-1 public function action_echo(){
-2   $GLOBALS['log']->debug("Echo called with request: ".print_r($_REQUEST,1));
-3   SugarApplication::redirect('index.php');
-4 }
+----
+public function action_echo(){
+  $GLOBALS['log']->debug("Echo called with request: ".print_r($_REQUEST,1));
+  SugarApplication::redirect('index.php');
+}
+----
 
 
 
@@ -121,4 +129,4 @@ log the REQUEST and simply redirect:
 In previous versions of SugarCRM a new action was added by creating a
 file in either `modules/<TheModule>/<actionname>.php` or
 `custom/modules/<TheModule>/<actionname>.php`. Although this still works
-it is not recommended. link:../controllers[↩]
+it is not recommended. 
