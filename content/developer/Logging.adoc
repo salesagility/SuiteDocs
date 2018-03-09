@@ -22,8 +22,10 @@ method. For example:
 
 .Example 11.2: Logging messages
 [source,php]
-1 $GLOBALS['log']->debug('This is a debug message');
-2 $GLOBALS['log']->error('This is an error message');
+----
+$GLOBALS['log']->debug('This is a debug message');
+$GLOBALS['log']->error('This is an error message');
+----
 
 
 
@@ -31,9 +33,10 @@ This will produce the following output:
 
 .Example 11.3: Logging messages example output
 [source,php]
-1 Tue Apr 28 16:52:21 2015 [15006][1][DEBUG] This is a debug message
-2 Tue Apr 28 16:52:21 2015 [15006][1][ERROR] This is an error message
-
+----
+Tue Apr 28 16:52:21 2015 [15006][1][DEBUG] This is a debug message
+Tue Apr 28 16:52:21 2015 [15006][1][ERROR] This is an error message
+----
 
 
 == Logging output
@@ -77,5 +80,5 @@ The default log levels (in order of verbosity) are:
 Generally on a production instance you will use the less verbose levels
 (probably `error` or `fatal`). However whilst you are developing you can
 use whatever level you prefer. I prefer the most verbose level -
-`debug`. link:../logging[↩]
+`debug`. 
 {{% /notice %}}

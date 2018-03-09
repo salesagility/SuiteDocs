@@ -22,16 +22,17 @@ the following file in
 
 .Example A.1: IncidentLayoutdefs.php
 [source,php]
- 1 <?php
- 2 $layout_defs["Cases"]["subpanel_setup"]['incident_cases'] = array(
- 3   'module' => 'Cases',
- 4   'title_key' => 'LBL_INCIDENT_CASES',
- 5   'subpanel_name' => 'default',
- 6   'get_subpanel_data' => 'function:get_cases_by_incident',
- 7   'function_parameters' => 
- 8           array('import_function_file' => 'custom/modules/Cases/IncidentUtils.ph\
- 9 p',),
-10 );
+----
+<?php
+$layout_defs["Cases"]["subpanel_setup"]['incident_cases'] = array(
+   'module' => 'Cases',
+   'title_key' => 'LBL_INCIDENT_CASES',
+   'subpanel_name' => 'default',
+   'get_subpanel_data' => 'function:get_cases_by_incident',
+   'function_parameters' => 
+           array('import_function_file' => 'custom/modules/Cases/IncidentUtils.php',),
+);
+----
 
 
 
@@ -40,23 +41,23 @@ function `custom/modules/Cases/IncidentUtils.php`.
 
 .Example A.2: IncidentUtils.php
 [source,php]
- 1 <?php
- 2 function get_cases_by_incident(){
- 3         global $db;
- 4         //Get the current bean
- 5         $bean = $GLOBALS['app']->controller->bean;
- 6         $incidentCode = $db->quote($bean->incident_code_c);
- 7         //Create the SQL array
- 8         $ret = array();
- 9         $ret['select'] = ' SELECT id FROM cases ';
-10         $ret['from'] = ' FROM cases ';
-11         $ret['join'] = "";
-12         //Get all cases where the incident code matches but exclude the current \
-13 case.
-14         $ret['where']="WHERE cases.deleted = 0 AND cases_cstm.incident_code_c = \
-15 '{$incidentCode}' AND cases.id != '{$bean->id}'";
-16         return $ret;
-17 }
+----
+<?php
+ function get_cases_by_incident(){
+         global $db;
+         //Get the current bean
+         $bean = $GLOBALS['app']->controller->bean;
+         $incidentCode = $db->quote($bean->incident_code_c);
+         //Create the SQL array
+         $ret = array();
+         $ret['select'] = ' SELECT id FROM cases ';
+         $ret['from'] = ' FROM cases ';
+         $ret['join'] = "";
+         //Get all cases where the incident code matches but exclude the current case.
+         $ret['where']="WHERE cases.deleted = 0 AND cases_cstm.incident_code_c = '{$incidentCode}' AND cases.id != '{$bean->id}'";
+         return $ret;
+}
+----
 
 
 
@@ -67,105 +68,105 @@ link:../module-installer#module-installer-chapter[Module Installer] chapter.
 
 .Example A.3: Example manifest file
 [source,php]
-  1 $manifest = array(
-  2   'name' => 'Example manifest',
-  3   'description' => 'A basic manifest example',
-  4   'version' => '1.2.3',
-  5   'author' => 'Jim Mackin',
-  6   'readme' => 'This is a manifest example for the SuiteCRM for Developers book',
-  7   'acceptable_sugar_flavors' => array('CE'),
-  8   'acceptable_sugar_versions' => array(
-  9       'exact_matches' => array('6.5.20',),
- 10   ),
- 11   'dependencies' => array(
- 12     array(
- 13       'id_name' => 'hello_world',
- 14       'version' => '3.2.1'
- 15     ),
- 16   ),
- 17   'icon' => 'ManifestExample.png',
- 18   'is_uninstallable' => true,
- 19   'published_date' => '2015-05-05',
- 20   'type' => 'module',
- 21   'remove_tables' => 'prompt',
- 22 );
- 23 $installdefs = array(
- 24   'id' => 'suitecrmfordevelopers_example_manifest',
- 25   'image_dir' => '/images/',
- 26   'copy' => array(
- 27     array(
- 28       'from' => '/modules/ExampleModule',
- 29       'to' => 'modules/ExampleModule',
- 30     ),
- 31   ),
- 32   'dashlets' => array(  
- 33     array(
- 34       'from' => '/modules/ExampleModule/Dashlets/',  
- 35       'name' => 'ExampleModuleDashlet'  
- 36     )
- 37   ),
- 38   'language' => array(
- 39     array(
- 40       'from' => 'application/language/en_us.examplemoduleadmin.php',  
- 41       'to_module' => 'application',  
- 42       'language' => 'en_us'
- 43     ),
- 44     array(    
- 45       'from' => '/modules/Accounts/language/en_us.examplemodule.php',
- 46       'to_module' => 'Accounts',
- 47       'language' => 'en_us'
- 48     ),
- 49     array(
- 50       'from' => '/application/language/es_es.examplemoduleadmin.php',  
- 51       'to_module' => 'application',
- 52       'language' => 'es_es'
- 53     ),  
- 54     array(    
- 55       'from' => '/modules/Accounts/language/es_es.examplemodule.php',  
- 56       'to_module' => 'Accounts',
- 57       'language' => 'es_es'
- 58     ),  
- 59   ),
- 60   'custom_fields' => array(  
- 61     array(
- 62       'name' => 'example_field',
- 63       'label' => 'Example Field',
- 64       'type' => 'varchar',
- 65       'max_size' =>  100,
- 66       'module' => 'Accounts',  
- 67     ),
- 68   ),
- 69   'vardefs' => array(  
- 70     array(  
- 71       'from' => 'modules/Accounts/vardefs/examplemodule_vardefs.php',  
- 72       'to_module' => 'Accounts',  
- 73     ),
- 74   ),
- 75   'beans' => array(
- 76     array(
- 77       'module' => 'ExampleModule',  
- 78       'class' => 'ExampleModule',
- 79       'path' => 'modules/ExampleModule/ExampleModule.php',  
- 80     ),
- 81   ),
- 82   'logic_hooks' => array(
- 83     array(  
- 84       'module' => 'Accounts',
- 85       'hook' => 'before_save',  
- 86       'order' => 100,  
- 87       'description'  => 'Example module before save hook',  
- 88       'file' => 'modules/ExampleModule/ExampleModuleHook.php',
- 89       'class' => 'ExampleModuleLogicHooks',
- 90       'function' => 'accounts_before_save',  
- 91     ),
- 92   ),  
- 93   'administration' => array(  
- 94     array(  
- 95       'from' => 'modules/administration/examplemodule_admin.php',  
- 96     ),
- 97   ),
- 98 );
- 99 $upgrade_manifest = array(
-100 );
-
-link:../appendix-a---code-examples[↩]
+----
+$manifest = array(
+   'name' => 'Example manifest',
+   'description' => 'A basic manifest example',
+   'version' => '1.2.3',
+   'author' => 'Jim Mackin',
+   'readme' => 'This is a manifest example for the SuiteCRM for Developers book',
+   'acceptable_sugar_flavors' => array('CE'),
+   'acceptable_sugar_versions' => array(
+       'exact_matches' => array('6.5.20',),
+   ),
+   'dependencies' => array(
+     array(
+       'id_name' => 'hello_world',
+       'version' => '3.2.1'
+     ),
+   ),
+   'icon' => 'ManifestExample.png',
+   'is_uninstallable' => true,
+   'published_date' => '2015-05-05',
+   'type' => 'module',
+   'remove_tables' => 'prompt',
+ );
+ $installdefs = array(
+   'id' => 'suitecrmfordevelopers_example_manifest',
+   'image_dir' => '/images/',
+   'copy' => array(
+     array(
+       'from' => '/modules/ExampleModule',
+       'to' => 'modules/ExampleModule',
+     ),
+   ),
+   'dashlets' => array(  
+     array(
+       'from' => '/modules/ExampleModule/Dashlets/',  
+       'name' => 'ExampleModuleDashlet'  
+     )
+   ),
+   'language' => array(
+     array(
+       'from' => 'application/language/en_us.examplemoduleadmin.php',  
+       'to_module' => 'application',  
+       'language' => 'en_us'
+     ),
+     array(    
+       'from' => '/modules/Accounts/language/en_us.examplemodule.php',
+       'to_module' => 'Accounts',
+       'language' => 'en_us'
+     ),
+     array(
+       'from' => '/application/language/es_es.examplemoduleadmin.php',  
+       'to_module' => 'application',
+       'language' => 'es_es'
+     ),  
+     array(    
+       'from' => '/modules/Accounts/language/es_es.examplemodule.php',  
+       'to_module' => 'Accounts',
+       'language' => 'es_es'
+     ),  
+   ),
+   'custom_fields' => array(  
+     array(
+       'name' => 'example_field',
+       'label' => 'Example Field',
+       'type' => 'varchar',
+       'max_size' =>  100,
+       'module' => 'Accounts',  
+     ),
+   ),
+   'vardefs' => array(  
+     array(  
+       'from' => 'modules/Accounts/vardefs/examplemodule_vardefs.php',  
+       'to_module' => 'Accounts',  
+     ),
+   ),
+   'beans' => array(
+     array(
+       'module' => 'ExampleModule',  
+       'class' => 'ExampleModule',
+       'path' => 'modules/ExampleModule/ExampleModule.php',  
+     ),
+   ),
+   'logic_hooks' => array(
+     array(  
+       'module' => 'Accounts',
+       'hook' => 'before_save',  
+       'order' => 100,  
+       'description'  => 'Example module before save hook',  
+       'file' => 'modules/ExampleModule/ExampleModuleHook.php',
+       'class' => 'ExampleModuleLogicHooks',
+       'function' => 'accounts_before_save',  
+     ),
+   ),  
+   'administration' => array(  
+     array(  
+       'from' => 'modules/administration/examplemodule_admin.php',  
+     ),
+   ),
+ );
+ $upgrade_manifest = array(
+);
+----

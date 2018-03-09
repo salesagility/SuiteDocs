@@ -130,16 +130,18 @@ The relevant section of config.php might look like this:
 
 .config.php
 [source, php]
-1 'cron' =>
-2 	array (
-3		`max_cron_jobs' => 10,
-4		`max_cron_runtime' => 30,
-5		`min_cron_interval' => 30,
-6		`allowed_cron_users' =>
-7		array (
-8			0 => `www-data',
-9		),
-10	),
+----
+'cron' =>
+ 	array (
+		`max_cron_jobs' => 10,
+		`max_cron_runtime' => 30,
+		`min_cron_interval' => 30,
+		`allowed_cron_users' =>
+		array (
+ 			0 => `www-data',
+		),
+	),
+----
 
 == Which command should I use in crontab?
 
