@@ -3,14 +3,68 @@ Title: "Introducción"
 Weight: 10
 ---
 
-:imagesdir: ./../../images/es/user
+:imagesdir: ./../../images/en/user
 
 = Introducción
 
-== ¿Qué contiene la Guia del usuario?
+== El equipo de SuiteCRM y la Comunidad
 
-La Guía del usuario de SuiteCRM se ha escrito para el usuario final. Esta guía cubre el viaje del usuario de SuiteCRM de extremo a extremo. Exploraremos todas las áreas desde los aspectos básicos del ingreso en el sistema hasta la creación de flujos de trabajo automatizados complejos e informes.
 
-La Guía del usuario de SuiteCRM se divide en varios capítulos. Estos capítulos están ordenados para que progrese a través de la guía como lo haría lógicamente en el día a día el uso de CRM. Los capítulos contienen sub-secciones que rompen barreras para usted, explicando cómo optimizar el uso del sistema de gestión de relaciones con clientes para gestionar eficazmente los datos de ventas.
+Es justo decir que sin el trabajo constante del Equipo de SuiteCRM y su Comunidad, no habría tenido el impulso y el compromiso de sentarme a escribir esta guía del usuario. Nuevas funcionalidades y mejoras en el núcleo del sistema se agregan constantemente para hacer que SuiteCRM sea el mejor CRM de código abierto del mundo, y para competir con proveedores de CRM propietarios tales como SugarCRM, Salesforce y Microsoft.
 
-Los lectores de la Guía del usuario de SuiteCRM no necesitan tener conocimientos de desarrollo o conocimientos previos de SuiteCRM. Se aconseja que esté informado en la informática, que esté familiarizado con el uso del navegador web elegido y que ya se haya instalado y configurado SuiteCRM.
+En cuanto a la Comunidad de SuiteCRM, proporcionan pruebas, reportes y correcciones de errores. La comunidad está en el corazón de cualquier proyecto de Software Libre y esto no es diferente en SuiteCRM. Con cada nuevo lanzamiento, la comunidad crece y con ella aumentan los beneficios del ecosistema de Código Abierto.
+
+
+
+
+== ¿Qué es SuiteCRM?
+
+
+SuiteCRM es un fork del popular
+https://es.wikipedia.org/wiki/Customer_relationship_management[Gestor de Relaciones con el Cliente] (CRM por sus siglas en inglés) https://en.wikipedia.org/wiki/SugarCRM[SugarCRM], desarrollado y mantenido por SalesAgility. Es una alternativa gratuita de Código Abierto. Fue lanzado el 21 de octubre de 2013 como la versión 7.0. La última versión estable al momento de la publicación de esta Guía del usuario es SuiteCRM 7.10.1.
+
+
+
+SuiteCRM se ha descargado más de 500,000 veces desde su lanzamiento. Ha sido adoptado por NHS (Servicio Nacional de Salud) de Inglaterra 'Code for Health programme' que busca fomentar el código abierto en el Servicio Nacional de Salud de ese país.
+
+El proyecto SuiteCRM ha declarado que cada línea de código liberada será de código abierto. El proyecto SuiteCRM está destinado a ser un alternativa Libre de clase empresarial a productos privativos.
+
+Está disponible una Hoja de ruta del proyecto que detalla las mejoras planificadas.
+
+
+El proyecto cuenta con un foro de soporte con más de 25,000 miembros el cual está disponible para soporte gratuito y es regularmente monitoreado y actualizado por el Equipo de proyecto.
+
+Existe además, un directorio de extensiones donde están disponibles mejoras tanto gratuitas como de pago.
+
+
+El proyecto mantiene https://suitecrmondemand.com/[SuiteCRM:OnDemand], una instalación de Software As A Service para usuarios que buscan una implementación rápida y servicio libre de mantenimiento.
+
+
+No habrá software con licencias privativas como parte del proyecto administrado por SalesAgility. Todo el código es libre. Todo el código está disponible para su descarga gratuita. No hay una agenda oculta para cobrar por el acceso al software. SuiteCRM es, y siempre será, libre y de código abierto. No habrá pago por versiones.
+
+
+== ¿Quién es SalesAgility?
+
+
+SalesAgility es una Consultora de código abierto acreditada por ISO centrada en sistemas CRM (Gestor de Relaciones con el CLiente). Fue una de las primeras empresas en adoptar SugarCRM Community Edition. SalesAgility son los creadores y mantenedores detrás del fork de SugarCRM, SuiteCRM.
+
+SalesAgility ha implementado más de 300 proyectos SuiteCRM y SugarCRM, y es conocida por su conocimiento y experiencia de clase mundial en el rubro de los CRM de Código Abierto. Sus clientes incluyen gobiernos, empresas pequeñas, medianas y grandes en todo el mundo.
+
+
+SalesAgility tiene misión clara:
+
+[quote]
+Nuestro objetivo es innovar y proporcionar soluciones SuiteCRM y SugarCRM avanzados junto con el servicio al cliente líder de la industria.
+
+[quote]
+Creemos que el Código Abierto es lo mejor para nuestros clientes y continuaremos construyendo, innovando, evangelizando y brindando la mejor práctica de modelos de trabajo para la comunidad de código abierto.
+
+
+== ¿Qué es esta guía de usuario?
+
+
+La Guía del usuario de SuiteCRM se ha escrito para el usuario final. Esta guía cubre el viaje de un usuario de SuiteCRM de extremo a extremo. Exploraremos todas las áreas desde los conceptos básicos de iniciar sesión en el sistema, hasta crear complejos flujos de trabajo automatizados e informes.
+
+La Guía del usuario de SuiteCRM está dividida en varios capítulos. Estos capítulos están ordenados para que progreses a través de la misma como lo harías lógicamente en el uso cotidiano del CRM. Los capítulos contienen subsecciones que te ayudarán a derribar barreras, explicando cómo optimizar el uso del CRM para gestionar ventas de manera efectiva.
+
+Los lectores de la Guía del usuario de SuiteCRM no necesitan tener conocimientos de programación o conocimiento previo de SuiteCRM. Se aconseja que tengas algunos conocimientos de informática, que estés familiarizado con el uso del navegador web elegido y que SuiteCRM ya esté instalado y configurado.
