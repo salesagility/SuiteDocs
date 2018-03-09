@@ -31,8 +31,10 @@ with the following:
 
 .Example
 [source,php]
+----
 <?php
 $hook_array['process_record'][] = Array(1, 'Highlight account industry', 'custom/modules/Accounts/HighlightIndustryLogicHook.php','HighlightIndustryLogicHook', 'highlightIndustry');
+----
 
 This sets up a `process_record` logic hook. This will be fired whenever
 a record is prepared for a list view or subpanel.
@@ -42,14 +44,16 @@ formatting in `custom/modules/Accounts/HighlightIndustryLogicHook.php`
 
 .Example
 [source,php]
+----
 <?php
 class HighlightIndustryLogicHook{
-							//
+							
     public function highlightIndustry(SugarBean $bean, $event, $arguments){
         $colour = substr(md5($bean->industry),0,6);
         $bean->industry = "<div style='border: solid 5px #$colour;'>".$bean->industry."</div>";
     }
 }
+----
 
 This simply generates colour based on the Accounts industry and sets it
 as a border for the field.

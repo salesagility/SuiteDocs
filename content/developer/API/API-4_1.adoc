@@ -1,7 +1,8 @@
-
 ---
 weight: 16
 title: "16. API-4_1"
+:source-highlighter: coderay
+:coderay-linenums-mode: table
 ---
 
 {{% notice warning %}}
@@ -10,7 +11,7 @@ Since SuiteCRM version 7.10, a link:../api-8[brand new v8 REST API] is available
 {{% /notice %}}
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
-data and functionality.
+data and functionality. {source-highlighter}
 
 == Using the API
 
@@ -34,57 +35,59 @@ Where `example.com/suitecrm` is the address of your SuiteCRM instance.
 `v4_1` is the version of the API and can be changed.
 
 ==== SOAP Example
+
 The following PHP example uses the built in SoapClient class.
 
 .Example 16.2: Accessing the SOAP API
-[source,php]
- 1 <?php
- 2 //Create a new SoapClient
- 3 $wsdlURL = "http://example.com/suitecrm/service/v4_1/soap.php?wsdl";
- 4 $client = new SoapClient($wsdlURL);
- 5 
- 6 //Login to the API and get the session id
- 7 $userAuth = array(
- 8         'user_name' => '<suitecrmuser>',
- 9         'password' => md5('<suitecrmpassword>'),
-10 );
-11 $appName = 'My SuiteCRM SOAP Client';
-12 $nameValueList = array();
-13 $loginResults = $client->login($userAuth, $appName, $nameValueList);
-14 
-15 //Get a list of at most 10 accounts with a billing address in Ohio. Along with
-16 //The first and last names of any contacts in that Account.
-17 $results = $client->get_entry_list(
-18         //Session id - retrieved from login call
-19         $loginResults->id,
-20         //Module to get_entry_list for
-21         'Accounts',
-22         //Filter query - Added to the SQL where clause
-23         "accounts.billing_address_city = 'Ohio'",
-24         //Order by - unused
-25         '',
-26         //Start with the first record
-27         0,
-28         //Return the id and name fields
-29         array('id','name'),
-30         //Link to the "contacts" relationship and retrieve the
-31         //First and last names.
-32         array(
-33                 array(
-34                         'name' => 'contacts',
-35                         'value' => array(
-36                                 'first_name',
-37                                 'last_name',
-38                         ),
-39                 ),
-40         ),
-41         //Show 10 max results
-42         10,
-43         //Do not show deleted
-44         0
-45 );
-46 print_r($results);
+[source, PHP, numbered]
+----
+<?php
+//Create a new SoapClient
+$wsdlURL = "http://example.com/suitecrm/service/v4_1/soap.php?wsdl";
+$client = new SoapClient($wsdlURL);
 
+//Login to the API and get the session id
+$userAuth = array(
+        'user_name' => '<suitecrmuser>',
+        'password' => md5('<suitecrmpassword>'),
+);
+$appName = 'My SuiteCRM SOAP Client';
+$nameValueList = array();
+$loginResults = $client->login($userAuth, $appName, $nameValueList);
+
+//Get a list of at most 10 accounts with a billing address in Ohio. Along with
+//The first and last names of any contacts in that Account.
+$results = $client->get_entry_list(
+        //Session id - retrieved from login call
+        $loginResults->id,
+        //Module to get_entry_list for
+        'Accounts',
+        //Filter query - Added to the SQL where clause
+        "accounts.billing_address_city = 'Ohio'",
+        //Order by - unused
+        '',
+        //Start with the first record
+
+        //Return the id and name fields
+        array('id','name'),
+        //Link to the "contacts" relationship and retrieve the
+        //First and last names.
+        array(
+                array(
+                        'name' => 'contacts',
+                        'value' => array(
+                                'first_name',
+                                'last_name',
+                        ),
+                ),
+        ),
+        //Show 10 max results
+
+        //Do not show deleted
+
+);
+print_r($results);
+----
 
 
 === REST
@@ -127,77 +130,78 @@ not the name.
 
 .Example 16.4: Accessing the REST API
 [source,php]
- 1 <?php
- 2 
- 3 $url = "http://example.com/suitecrm/service/v4_1/rest.php";
- 4 
- 5 function restRequest($method, $arguments){
- 6  global $url;
- 7  $curl = curl_init($url);
- 8  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
- 9  $post = array(
-10          "method" => $method,
-11          "input_type" => "JSON",
-12          "response_type" => "JSON",
-13          "rest_data" => json_encode($arguments),
-14  );
-15 
-16  curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
-17 
-18  $result = curl_exec($curl);
-19  curl_close($curl);
-20  return json_decode($result,1);
-21 }
-22 
-23 
-24 $userAuth = array(
-25         'user_name' => 'suitecrmuser',
-26         'password' => md5('suitecrmpassword'),
-27 );
-28 $appName = 'My SuiteCRM REST Client';
-29 $nameValueList = array();
-30 
-31 $args = array(
-32             'user_auth' => $userAuth,
-33             'application_name' => $appName,
-34             'name_value_list' => $nameValueList);
-35 
-36 $result = restRequest('login',$args);
-37 $sessId = $result['id'];
-38 
-39 $entryArgs = array(
-40   //Session id - retrieved from login call
-41  'session' => $sessId,
-42   //Module to get_entry_list for
-43  'module_name' => 'Accounts',
-44   //Filter query - Added to the SQL where clause,
-45  'query' => "accounts.billing_address_city = 'Ohio'",
-46   //Order by - unused
-47  'order_by' => '',
-48   //Start with the first record
-49  'offset' => 0,
-50   //Return the id and name fields
-51  'select_fields' => array('id','name',),
-52  //Link to the "contacts" relationship and retrieve the
-53  //First and last names.
-54  'link_name_to_fields_array' => array(
-55          array(
-56                  'name' => 'contacts',
-57                  'value' => array(
-58                          'first_name',
-59                          'last_name',
-60                  ),
-61          ),
-62  ),
-63   //Show 10 max results
-64  'max_results' => 10,
-65   //Do not show deleted
-66  'deleted' => 0,
-67 );
-68 $result = restRequest('get_entry_list',$entryArgs);
-69 
-70 print_r($result);
-
+----
+<?php
+ 
+$url = "http://example.com/suitecrm/service/v4_1/rest.php";
+ 
+function restRequest($method, $arguments){
+ global $url;
+ $curl = curl_init($url);
+ curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+ $post = array(
+         "method" => $method,
+         "input_type" => "JSON",
+         "response_type" => "JSON",
+         "rest_data" => json_encode($arguments),
+ );
+ 
+ curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
+ 
+ $result = curl_exec($curl);
+ curl_close($curl);
+ return json_decode($result,1);
+}
+ 
+ 
+$userAuth = array(
+        'user_name' => 'suitecrmuser',
+        'password' => md5('suitecrmpassword'),
+);
+$appName = 'My SuiteCRM REST Client';
+$nameValueList = array();
+ 
+$args = array(
+            'user_auth' => $userAuth,
+            'application_name' => $appName,
+            'name_value_list' => $nameValueList);
+ 
+$result = restRequest('login',$args);
+$sessId = $result['id'];
+ 
+$entryArgs = array(
+ //Session id - retrieved from login call
+	'session' => $sessId,
+ //Module to get_entry_list for
+	'module_name' => 'Accounts',
+ //Filter query - Added to the SQL where clause,
+	'query' => "accounts.billing_address_city = 'Ohio'",
+ //Order by - unused
+	'order_by' => '',
+ //Start with the first record
+	'offset' => 0,
+ //Return the id and name fields
+	'select_fields' => array('id','name',),
+ //Link to the "contacts" relationship and retrieve the
+ //First and last names.
+	'link_name_to_fields_array' => array(
+        array(
+                'name' => 'contacts',
+                        'value' => array(
+                        'first_name',
+                        'last_name',
+                ),
+        ),
+),
+   //Show 10 max results
+  		'max_results' => 10,
+   //Do not show deleted
+  		'deleted' => 0,
+ );
+ $result = restRequest('get_entry_list',$entryArgs);
+ 
+print_r($result);
+----
 
 
 For a full list of API methods and their arguments see
@@ -221,58 +225,60 @@ SuiteCRM log We will call this method `write_log_message`.
 
 .Example 16.5: Custom v4_1 Web Service Implementation
 [source,php]
- 1 <?php
- 2 if(!defined('sugarEntry')){
- 3   define('sugarEntry', true);
- 4 }
- 5 require_once 'service/v4_1/SugarWebServiceImplv4_1.php';
- 6 class SugarWebServiceImplv4_1_custom extends SugarWebServiceImplv4_1
- 7 {
- 8 
- 9   function write_log_message($session, $message)
-10   {
-11     $GLOBALS['log']->info('Begin: write_log_message');
-12 
-13     //Here we check that $session represents a valid session
-14     if (!self::$helperObject->checkSessionAndModuleAccess(
-15                                                     $session, 
-16                                                     'invalid_session', 
-17                                                     '', 
-18                                                     '', 
-19                                                     '',  
-20                                                     new SoapError()))
-21     {
-22       $GLOBALS['log']->info('End: write_log_message.');
-23       return false;
-24     }
-25     $GLOBALS['log']->info($message);
-26     return true;
-27   }
-28 }
+----
+<?php
+if(!defined('sugarEntry')){
+  define('sugarEntry', true);
+}
+require_once 'service/v4_1/SugarWebServiceImplv4_1.php';
+class SugarWebServiceImplv4_1_custom extends SugarWebServiceImplv4_1
+{
+ 
+  function write_log_message($session, $message)
+  {
+    $GLOBALS['log']->info('Begin: write_log_message');
 
+    //Here we check that $session represents a valid session
+    if (!self::$helperObject->checkSessionAndModuleAccess(
+                                                    $session, 
+                                                    'invalid_session', 
+                                                    '', 
+                                                    '', 
+                                                    '',  
+                                                    new SoapError()))
+    {
+      $GLOBALS['log']->info('End: write_log_message.');
+      return false;
+    }
+    $GLOBALS['log']->info($message);
+    return true;
+  }
+}
+----
 
 
 Next we create the registry file which will register our new method.
 
 .Example 16.6: Custom v4_1 web service registry
 [source,php]
- 1 <?php
- 2     require_once 'service/v4_1/registry.php';
- 3     class registry_v4_1_custom extends registry_v4_1
- 4     {
- 5         protected function registerFunction()
- 6         {
- 7             parent::registerFunction();
- 8             $this->serviceClass->registerFunction('write_log_message', 
- 9                                                   array(
-10                                                     'session'=>'xsd:string',
-11                                                     'message'=>'xsd:string'), 
-12                                                   array(
-13                                                     'return'=>'xsd:boolean')
-14                                                   );
-15         }
-16     }
-
+----
+<?php
+    require_once 'service/v4_1/registry.php';
+    class registry_v4_1_custom extends registry_v4_1
+    {
+        protected function registerFunction()
+        {
+            parent::registerFunction();
+            $this->serviceClass->registerFunction('write_log_message', 
+                                                  array(
+                                                    'session'=>'xsd:string',
+                                                    'message'=>'xsd:string'), 
+                                                  array(
+                                                    'return'=>'xsd:boolean')
+                                                  );
+        }
+    }
+----
 
 
 Finally we create the entry point. This is the actual file that will be
@@ -281,35 +287,37 @@ have created and will call the webservice implementation with our files.
 
 .Example 16.7: Custom v4_1 REST Entry point
 [source,php]
- 1 <?php
- 2 chdir('../../..');
- 3 
- 4 require_once 'SugarWebServiceImplv4_1_custom.php';
- 5 
- 6 $webservice_path = 'service/core/SugarRestService.php';
- 7 $webservice_class = 'SugarRestService';
- 8 $webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
- 9 $registry_path = 'custom/service/v4_1_custom/registry.php';
-10 $registry_class = 'registry_v4_1_custom';
-11 $location = 'custom/service/v4_1_custom/rest.php';
-12 
-13 require_once 'service/core/webservice.php';
-
+----
+<?php
+chdir('../../..');
+ 
+require_once 'SugarWebServiceImplv4_1_custom.php';
+ 
+$webservice_path = 'service/core/SugarRestService.php';
+$webservice_class = 'SugarRestService';
+$webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
+$registry_path = 'custom/service/v4_1_custom/registry.php';
+$registry_class = 'registry_v4_1_custom';
+$location = 'custom/service/v4_1_custom/rest.php';
+ 
+require_once 'service/core/webservice.php';
+----
 
 
 .Example 16.8: Custom v4_1 SOAP Entry point
 [source,php]
- 1 <?php
- 2 chdir('../../..');
- 3 require_once('SugarWebServiceImplv4_1_custom.php');
- 4 $webservice_class = 'SugarSoapService2';
- 5 $webservice_path = 'service/v2/SugarSoapService2.php';
- 6 $webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
- 7 $registry_class = 'registry_v4_1_custom';
- 8 $registry_path = 'custom/service/v4_1_custom/registry.php';
- 9 $location = 'custom/service/v4_1_custom/soap.php';
-10 require_once('service/core/webservice.php');
-
+----
+<?php
+chdir('../../..');
+require_once('SugarWebServiceImplv4_1_custom.php');
+$webservice_class = 'SugarSoapService2';
+$webservice_path = 'service/v2/SugarSoapService2.php';
+$webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
+$registry_class = 'registry_v4_1_custom';
+$registry_path = 'custom/service/v4_1_custom/registry.php';
+$location = 'custom/service/v4_1_custom/soap.php';
+require_once('service/core/webservice.php');
+----
 
 
 === Usage
@@ -322,9 +330,11 @@ would use the following
 
 .Example 16.9: Custom v4_1 URLS
 [source,php]
-1 //SOAP WSDL
-2 example.com/suitecrm/custom/service/v4_1_custom/soap.php?wsdl
-3 //REST URL
-4 example.com/suitecrm/custom/service/v4_1_custom/rest.php
+----
+//SOAP WSDL
+example.com/suitecrm/custom/service/v4_1_custom/soap.php?wsdl
+//REST URL
+example.com/suitecrm/custom/service/v4_1_custom/rest.php
+----
 
 link:../16.-api[↩]

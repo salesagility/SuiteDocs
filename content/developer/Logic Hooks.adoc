@@ -118,84 +118,84 @@ event. It looks something like this:
 
 .Example 12.1: Logic hook file
 [source,php]
- 1 <?php
- 2 // Do not store anything in this file that is not part of the array or the hook
- 3 //version.  This file will be automatically rebuilt in the future.
- 4  $hook_version = 1;
- 5 $hook_array = Array();
- 6 // position, file, function
- 7 $hook_array['before_save'] = Array();
- 8 $hook_array['before_save'][] = Array(
- 9                               77,
-10                               'updateGeocodeInfo',
-11                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
-12                               'CasesJjwg_MapsLogicHook',
-13                               'updateGeocodeInfo');
-14 $hook_array['before_save'][] = Array(
-15                               10,
-16                               'Save case updates',
-17                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
-18                               'CaseUpdatesHook',
-19                               'saveUpdate');
-20 $hook_array['before_save'][] = Array(
-21                               11,
-22                               'Save case events',
-23                               'modules/AOP_Case_Events/CaseEventsHook.php',
-24                               'CaseEventsHook',
-25                               'saveUpdate');
-26 $hook_array['before_save'][] = Array(
-27                               12,
-28                               'Case closure prep',
-29                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
-30                               'CaseUpdatesHook',
-31                               'closureNotifyPrep');
-32 $hook_array['before_save'][] = Array(
-33                               1,
-34                               'Cases push feed',
-35                               'custom/modules/Cases/SugarFeeds/CaseFeed.php',
-36                               'CaseFeed',
-37                               'pushFeed');
-38 $hook_array['after_save'] = Array();
-39 $hook_array['after_save'][] = Array(
-40                               77,
-41                               'updateRelatedMeetingsGeocodeInfo',
-42                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
-43                               'CasesJjwg_MapsLogicHook',
-44                               'updateRelatedMeetingsGeocodeInfo');
-45 $hook_array['after_save'][] = Array(
-46                               10,
-47                               'Send contact case closure email',
-48                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
-49                               'CaseUpdatesHook',
-50                               'closureNotify');
-51 $hook_array['after_relationship_add'] = Array();
-52 $hook_array['after_relationship_add'][] = Array(
-53                               77,
-54                               'addRelationship',
-55                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
-56                               'CasesJjwg_MapsLogicHook',
-57                               'addRelationship');
-58 $hook_array['after_relationship_add'][] = Array(
-59                               9,
-60                               'Assign account',
-61                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
-62                               'CaseUpdatesHook',
-63                               'assignAccount');
-64 $hook_array['after_relationship_add'][] = Array(
-65                               10,
-66                               'Send contact case email',
-67                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
-68                               'CaseUpdatesHook',
-69                               'creationNotify');
-70 $hook_array['after_relationship_delete'] = Array();
-71 $hook_array['after_relationship_delete'][] = Array(
-72                               77,
-73                               'deleteRelationship',
-74                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
-75                               'CasesJjwg_MapsLogicHook',
-76                               'deleteRelationship');
-
-
+----
+<?php
+ // Do not store anything in this file that is not part of the array or the hook
+ //version.  This file will be automatically rebuilt in the future.
+$hook_version = 1;
+$hook_array = Array();
+ // position, file, function
+$hook_array['before_save'] = Array();
+$hook_array['before_save'][] = Array(
+                               77,
+                               'updateGeocodeInfo',
+                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
+                               'CasesJjwg_MapsLogicHook',
+                               'updateGeocodeInfo');
+ $hook_array['before_save'][] = Array(
+                               10,
+                               'Save case updates',
+                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
+                               'CaseUpdatesHook',
+                               'saveUpdate');
+ $hook_array['before_save'][] = Array(
+                               11,
+                               'Save case events',
+                               'modules/AOP_Case_Events/CaseEventsHook.php',
+                               'CaseEventsHook',
+                               'saveUpdate');
+ $hook_array['before_save'][] = Array(
+                               12,
+                               'Case closure prep',
+                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
+                               'CaseUpdatesHook',
+                               'closureNotifyPrep');
+ $hook_array['before_save'][] = Array(
+                               1,
+                               'Cases push feed',
+                               'custom/modules/Cases/SugarFeeds/CaseFeed.php',
+                               'CaseFeed',
+                               'pushFeed');
+ $hook_array['after_save'] = Array();
+ $hook_array['after_save'][] = Array(
+                               77,
+                               'updateRelatedMeetingsGeocodeInfo',
+                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
+                               'CasesJjwg_MapsLogicHook',
+                               'updateRelatedMeetingsGeocodeInfo');
+ $hook_array['after_save'][] = Array(
+                               10,
+                               'Send contact case closure email',
+                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
+                               'CaseUpdatesHook',
+                               'closureNotify');
+ $hook_array['after_relationship_add'] = Array();
+ $hook_array['after_relationship_add'][] = Array(
+                               77,
+                               'addRelationship',
+                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
+                               'CasesJjwg_MapsLogicHook',
+                               'addRelationship');
+ $hook_array['after_relationship_add'][] = Array(
+                               9,
+                               'Assign account',
+                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
+                               'CaseUpdatesHook',
+                               'assignAccount');
+ $hook_array['after_relationship_add'][] = Array(
+                               10,
+                               'Send contact case email',
+                               'modules/AOP_Case_Updates/CaseUpdatesHook.php',
+                               'CaseUpdatesHook',
+                               'creationNotify');
+ $hook_array['after_relationship_delete'] = Array();
+ $hook_array['after_relationship_delete'][] = Array(
+                               77,
+                               'deleteRelationship',
+                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
+                               'CasesJjwg_MapsLogicHook',
+                               'deleteRelationship');
+----
 
 Let’s go through each part of the file.
 
@@ -221,12 +221,14 @@ Here we are going to be adding some before_save hooks so we add an empty
 array for that key.
 
 [source,php]
- 8 $hook_array['before_save'][] = Array(
- 9                               77,
-10                               'updateGeocodeInfo',
-11                               'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
-12                               'CasesJjwg_MapsLogicHook',
-13                               'updateGeocodeInfo');
+----
+$hook_array['before_save'][] = Array(
+                              77,
+                              'updateGeocodeInfo',
+                              'custom/modules/Cases/CasesJjwg_MapsLogicHook.php',
+                              'CasesJjwg_MapsLogicHook',
+                              'updateGeocodeInfo');
+----
 
 
 Finally we reach an interesting line. This adds a new logic hook to the
@@ -282,13 +284,15 @@ hook type. For module hooks it will appear similar to:
 
 .Example 12.2: Example logic hook method
 [source,php]
-1     class SomeClass
-2     {
-3         function someMethod($bean, $event, $arguments)
-4         {
-5           //Custom Logic
-6         }
-7     }
+----
+     class SomeClass
+     {
+         function someMethod($bean, $event, $arguments)
+         {
+           //Custom Logic
+         }
+     }
+----
 
 
 
@@ -296,13 +300,15 @@ Application logic hooks omit the $bean argument:
 
 .Example 12.3: Example logic hook method for application hooks
 [source,php]
-1     class SomeClass
-2     {
-3         function someMethod($event, $arguments)
-4         {
-5           //Custom Logic
-6         }
-7     }
+----
+     class SomeClass
+     {
+         function someMethod($event, $arguments)
+         {
+           //Custom Logic
+         }
+     }
+----
 
 
 
@@ -341,5 +347,7 @@ Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user
 will need to wait for that code to run. This can be avoided by either
 ensuring the code runs quickly or by using the Job Queue (see the Job
-Queue chapter for more information). link:../12.-logic-hooks[↩]
+Queue chapter for more information).
 {{% /notice %}}
+
+link:../logic-hooks[↩]

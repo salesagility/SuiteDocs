@@ -1,4 +1,3 @@
-
 ---
 weight: 6
 title: "6. Metadata"
@@ -46,84 +45,86 @@ editviewdefs.php. Let’s look at an example for a fictional module
 
 .Example 6.2: DetailView metadata definition
 [source,php]
- 1 <?php
- 2 $viewdefs ['ABC_Vehicles'] ['DetailView'] = array (
- 3  'templateMeta' => array (
- 4      'form' => array (
- 5          'buttons' => array (
- 6              'EDIT',
- 7              'DUPLICATE',
- 8              'DELETE',
- 9              'FIND_DUPLICATES'
-10          )
-11      ),
-12      'maxColumns' => '2',
-13      'widths' => array (
-14          array (
-15              'label' => '10',
-16              'field' => '30'
-17          ),
-18          array (
-19              'label' => '10',
-20              'field' => '30'
-21          )
-22      ),
-23      'includes' => array (
-24          array (
-25              'file' => 'modules/ABC_Vehicles/ABC_VehiclesDetail.js'
-26          )
-27      )
-28  ),
-29  'panels' => array (
-30      'LBL_ABC_VEHICLES_INFO' => array (
-31          array (
-32              array (
-33                  'name' => 'name',
-34                  'comment' => 'The Name of the Vehicle',
-35                  'label' => 'LBL_NAME',
-36              ),
-37              'reg_number'
-38          ),
-39          array (
-40              array (
-41                  'name' => 'type',
-42                  'label' => 'LBL_TYPE',
-43              ),
-44              array (
-45                  'name' => 'phone_fax',
-46                  'comment' => 'The fax phone number of this company',
-47                  'label' => 'LBL_FAX'
-48              )
-49          ),
-50          array (
-51              array (
-52                  'name' => 'registered_address_street',
-53                  'label' => 'LBL_REGISTERED_ADDRESS',
-54                  'type' => 'address',
-55                  'displayParams' => array (
-56                      'key' => 'registered'
-57                  )
-58              ),
-59          ),
-60      ),
-61      'LBL_PANEL_ADVANCED' => array (
-62       array (
-63              array (
-64                  'name' => 'assigned_user_name',
-65                  'label' => 'LBL_ASSIGNED_TO'
-66              ),
-67              array (
-68                  'name' => 'date_modified',
-69                  'label' => 'LBL_DATE_MODIFIED',
-70                  'customCode' => '{$fields.date_modified.value} '
-71                          + '{$APP.LBL_BY} '
-72                          + '{$fields.modified_by_name.value}',
-73              )
-74          ),
-75      ),
-76  )
-77 );
-78 ?>
+----
+<?php
+$viewdefs ['ABC_Vehicles'] ['DetailView'] = array (
+ 'templateMeta' => array (
+     'form' => array (
+         'buttons' => array (
+             'EDIT',
+             'DUPLICATE',
+             'DELETE',
+             'FIND_DUPLICATES'
+         )
+     ),
+     'maxColumns' => '2',
+     'widths' => array (
+         array (
+             'label' => '10',
+             'field' => '30'
+         ),
+         array (
+             'label' => '10',
+             'field' => '30'
+         )
+     ),
+     'includes' => array (
+         array (
+             'file' => 'modules/ABC_Vehicles/ABC_VehiclesDetail.js'
+         )
+     )
+ ),
+ 'panels' => array (
+     'LBL_ABC_VEHICLES_INFO' => array (
+         array (
+             array (
+                 'name' => 'name',
+                 'comment' => 'The Name of the Vehicle',
+                 'label' => 'LBL_NAME',
+             ),
+             'reg_number'
+         ),
+         array (
+             array (
+                 'name' => 'type',
+                 'label' => 'LBL_TYPE',
+             ),
+             array (
+                 'name' => 'phone_fax',
+                 'comment' => 'The fax phone number of this company',
+                 'label' => 'LBL_FAX'
+             )
+         ),
+         array (
+             array (
+                 'name' => 'registered_address_street',
+                 'label' => 'LBL_REGISTERED_ADDRESS',
+                 'type' => 'address',
+                 'displayParams' => array (
+                     'key' => 'registered'
+                 )
+             ),
+         ),
+     ),
+     'LBL_PANEL_ADVANCED' => array (
+      array (
+             array (
+                 'name' => 'assigned_user_name',
+                 'label' => 'LBL_ASSIGNED_TO'
+             ),
+             array (
+                 'name' => 'date_modified',
+                 'label' => 'LBL_DATE_MODIFIED',
+                 'customCode' => '{$fields.date_modified.value} '
+                         + '{$APP.LBL_BY} '
+                         + '{$fields.modified_by_name.value}',
+             )
+         ),
+     ),
+  )
+);
+?>
+----
 
 
 
@@ -160,14 +161,16 @@ the following definition:
 
 .Example 6.3: DetailView metadata row definition
 [source,php]
-31 array(
-32  array (
-33      'name' => 'name',
-34      'comment' => 'The Name of the Vehicle',
-35      'label' => 'LBL_NAME',
-36  ),
-37  'reg_number',
-38 ),
+----
+array(
+  array (
+     'name' => 'name',
+     'comment' => 'The Name of the Vehicle',
+     'label' => 'LBL_NAME',
+  ),
+  'reg_number',
+),
+----
 
 
 
@@ -198,10 +201,12 @@ values. Values most commonly used are:
 
 .Example 6.4: DetailView metadata displayParams
 [source,php]
-1 'displayParams' => array(
-2     'rows' => 2,
-3     'cols' => 30,
-4 ),
+----
+'displayParams' => array(
+    'rows' => 2,
+    'cols' => 30,
+),
+----
 
 
 
@@ -228,46 +233,48 @@ view for that module will display. Let’s take a look at an example:
 
 .Example 6.5: ListView metadata definition
 [source,php]
- 1 $listViewDefs ['AOR_Reports'] =
- 2 array (
- 3   'NAME' =>
- 4   array (
- 5     'width' => '15%',
- 6     'label' => 'LBL_NAME',
- 7     'default' => true,
- 8     'link' => true,
- 9   ),
-10   'REPORT_MODULE' =>
-11   array (
-12     'type' => 'enum',
-13     'default' => true,
-14     'studio' => 'visible',
-15     'label' => 'LBL_REPORT_MODULE',
-16     'width' => '15%',
-17   ),
-18   'ASSIGNED_USER_NAME' =>
-19   array (
-20     'width' => '15%',
-21     'label' => 'LBL_ASSIGNED_TO_NAME',
-22     'module' => 'Employees',
-23     'id' => 'ASSIGNED_USER_ID',
-24     'default' => true,
-25   ),
-26   'DATE_ENTERED' =>
-27   array (
-28     'type' => 'datetime',
-29     'label' => 'LBL_DATE_ENTERED',
-30     'width' => '15%',
-31     'default' => true,
-32   ),
-33   'DATE_MODIFIED' =>
-34   array (
-35     'type' => 'datetime',
-36     'label' => 'LBL_DATE_MODIFIED',
-37     'width' => '15%',
-38     'default' => true,
-39   ),
-40 );
+----
+$listViewDefs ['AOR_Reports'] =
+array (
+  'NAME' =>
+  array (
+    'width' => '15%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+  ),
+  'REPORT_MODULE' =>
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_REPORT_MODULE',
+    'width' => '15%',
+  ),
+  'ASSIGNED_USER_NAME' =>
+  array (
+    'width' => '15%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
+    'default' => true,
+  ),
+  'DATE_ENTERED' =>
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '15%',
+    'default' => true,
+  ),
+  'DATE_MODIFIED' =>
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '15%',
+   'default' => true,
+  ),
+);
+----
 
 
 
@@ -306,71 +313,73 @@ Let’s look at the default popupdefs.php for the Accounts module:
 
 .Example 6.6: PopupView metadata definition
 [source,php]
- 1 $popupMeta = array(
- 2  'moduleMain' => 'Case',
- 3  'varName' => 'CASE',
- 4  'className' => 'aCase',
- 5  'orderBy' => 'name',
- 6  'whereClauses' =>
- 7      array('name' => 'cases.name',
- 8              'case_number' => 'cases.case_number',
- 9              'account_name' => 'accounts.name'),
-10  'listviewdefs' => array(
-11      'CASE_NUMBER' => array(
-12          'width' => '5',
-13          'label' => 'LBL_LIST_NUMBER',
-14          'default' => true),
-15      'NAME' => array(
-16          'width' => '35',
-17          'label' => 'LBL_LIST_SUBJECT',
-18          'link' => true,
-19          'default' => true),
-20      'ACCOUNT_NAME' => array(
-21          'width' => '25',
-22          'label' => 'LBL_LIST_ACCOUNT_NAME',
-23          'module' => 'Accounts',
-24          'id' => 'ACCOUNT_ID',
-25          'link' => true,
-26          'default' => true,
-27          'ACLTag' => 'ACCOUNT',
-28          'related_fields' => array('account_id')),
-29      'PRIORITY' => array(
-30          'width' => '8',
-31          'label' => 'LBL_LIST_PRIORITY',
-32          'default' => true),
-33      'STATUS' => array(
-34          'width' => '8',
-35          'label' => 'LBL_LIST_STATUS',
-36          'default' => true),
-37      'ASSIGNED_USER_NAME' => array(
-38          'width' => '2',
-39          'label' => 'LBL_LIST_ASSIGNED_USER',
-40          'default' => true,
-41         ),
-42      ),
-43  'searchdefs'   => array(
-44      'case_number',
-45      'name',
-46      array(
-47          'name' => 'account_name',
-48          'displayParams' => array(
-49              'hideButtons'=>'true',
-50              'size'=>30,
-51              'class'=>'sqsEnabled sqsNoAutofill'
-52          )
-53      ),
-54      'priority',
-55      'status',
-56      array(
-57          'name' => 'assigned_user_id',
-58          'type' => 'enum',
-59          'label' => 'LBL_ASSIGNED_TO',
-60          'function' => array(
-61              'name' => 'get_user_array',
-62              'params' => array(false))
-63          ),
-64    )
-65 );
+----
+$popupMeta = array(
+  'moduleMain' => 'Case',
+  'varName' => 'CASE',
+  'className' => 'aCase',
+  'orderBy' => 'name',
+  'whereClauses' =>
+      array('name' => 'cases.name',
+              'case_number' => 'cases.case_number',
+              'account_name' => 'accounts.name'),
+  'listviewdefs' => array(
+      'CASE_NUMBER' => array(
+          'width' => '5',
+          'label' => 'LBL_LIST_NUMBER',
+          'default' => true),
+      'NAME' => array(
+          'width' => '35',
+          'label' => 'LBL_LIST_SUBJECT',
+          'link' => true,
+          'default' => true),
+      'ACCOUNT_NAME' => array(
+          'width' => '25',
+          'label' => 'LBL_LIST_ACCOUNT_NAME',
+          'module' => 'Accounts',
+          'id' => 'ACCOUNT_ID',
+          'link' => true,
+          'default' => true,
+          'ACLTag' => 'ACCOUNT',
+          'related_fields' => array('account_id')),
+      'PRIORITY' => array(
+          'width' => '8',
+          'label' => 'LBL_LIST_PRIORITY',
+          'default' => true),
+      'STATUS' => array(
+          'width' => '8',
+          'label' => 'LBL_LIST_STATUS',
+          'default' => true),
+      'ASSIGNED_USER_NAME' => array(
+          'width' => '2',
+          'label' => 'LBL_LIST_ASSIGNED_USER',
+          'default' => true,
+         ),
+      ),
+  'searchdefs'   => array(
+      'case_number',
+      'name',
+      array(
+          'name' => 'account_name',
+          'displayParams' => array(
+              'hideButtons'=>'true',
+              'size'=>30,
+              'class'=>'sqsEnabled sqsNoAutofill'
+          )
+      ),
+      'priority',
+      'status',
+      array(
+          'name' => 'assigned_user_id',
+          'type' => 'enum',
+          'label' => 'LBL_ASSIGNED_TO',
+          'function' => array(
+              'name' => 'get_user_array',
+              'params' => array(false))
+          ),
+    )
+);
+----
 
 
 
@@ -418,118 +427,120 @@ Let’s look at an example.
 
 .Example 6.7: Search View metadata definition
 [source,php]
-  1 $searchdefs ['Accounts'] = array (
-  2     'templateMeta' => array (
-  3         'maxColumns' => '3',
-  4         'maxColumnsBasic' => '4',
-  5         'widths' => array (
-  6             'label' => '10',
-  7             'field' => '30'
-  8         )
-  9     ),
- 10     'layout' => array (
- 11         'basic_search' => array (
- 12             'name' => array (
- 13                 'name' => 'name',
- 14                 'default' => true,
- 15                 'width' => '10%'
- 16             ),
- 17             'current_user_only' => array (
- 18                 'name' => 'current_user_only',
- 19                 'label' => 'LBL_CURRENT_USER_FILTER',
- 20                 'type' => 'bool',
- 21                 'default' => true,
- 22                 'width' => '10%'
- 23             )
- 24         )
- 25         ,
- 26         'advanced_search' => array (
- 27             'name' => array (
- 28                 'name' => 'name',
- 29                 'default' => true,
- 30                 'width' => '10%'
- 31             ),
- 32             'website' => array (
- 33                 'name' => 'website',
- 34                 'default' => true,
- 35                 'width' => '10%'
- 36             ),
- 37             'phone' => array (
- 38                 'name' => 'phone',
- 39                 'label' => 'LBL_ANY_PHONE',
- 40                 'type' => 'name',
- 41                 'default' => true,
- 42                 'width' => '10%'
- 43             ),
- 44             'email' => array (
- 45                 'name' => 'email',
- 46                 'label' => 'LBL_ANY_EMAIL',
- 47                 'type' => 'name',
- 48                 'default' => true,
- 49                 'width' => '10%'
- 50             ),
- 51             'address_street' => array (
- 52                 'name' => 'address_street',
- 53                 'label' => 'LBL_ANY_ADDRESS',
- 54                 'type' => 'name',
- 55                 'default' => true,
- 56                 'width' => '10%'
- 57             ),
- 58             'address_city' => array (
- 59                 'name' => 'address_city',
- 60                 'label' => 'LBL_CITY',
- 61                 'type' => 'name',
- 62                 'default' => true,
- 63                 'width' => '10%'
- 64             ),
- 65             'address_state' => array (
- 66                 'name' => 'address_state',
- 67                 'label' => 'LBL_STATE',
- 68                 'type' => 'name',
- 69                 'default' => true,
- 70                 'width' => '10%'
- 71             ),
- 72             'address_postalcode' => array (
- 73                 'name' => 'address_postalcode',
- 74                 'label' => 'LBL_POSTAL_CODE',
- 75                 'type' => 'name',
- 76                 'default' => true,
- 77                 'width' => '10%'
- 78             ),
- 79             'billing_address_country' => array (
- 80                 'name' => 'billing_address_country',
- 81                 'label' => 'LBL_COUNTRY',
- 82                 'type' => 'name',
- 83                 'options' => 'countries_dom',
- 84                 'default' => true,
- 85                 'width' => '10%'
- 86             ),
- 87             'account_type' => array (
- 88                 'name' => 'account_type',
- 89                 'default' => true,
- 90                 'width' => '10%'
- 91             ),
- 92             'industry' => array (
- 93                 'name' => 'industry',
- 94                 'default' => true,
- 95                 'width' => '10%'
- 96             ),
- 97             'assigned_user_id' => array (
- 98                 'name' => 'assigned_user_id',
- 99                 'type' => 'enum',
-100                 'label' => 'LBL_ASSIGNED_TO',
-101                 'function' => array (
-102                     'name' => 'get_user_array',
-103                     'params' => array (
-104                             0 => false
-105                     )
-106                 ),
-107                 'default' => true,
-108                 'width' => '10%'
-109             )
-110         )
-111     )
-112 );
+----
+$searchdefs ['Accounts'] = array (
+     'templateMeta' => array (
+         'maxColumns' => '3',
+         'maxColumnsBasic' => '4',
+         'widths' => array (
+             'label' => '10',
+             'field' => '30'
+         )
+     ),
+     'layout' => array (
+         'basic_search' => array (
+             'name' => array (
+                 'name' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'current_user_only' => array (
+                 'name' => 'current_user_only',
+                 'label' => 'LBL_CURRENT_USER_FILTER',
+                 'type' => 'bool',
+                 'default' => true,
+                 'width' => '10%'
+             )
+         )
+         ,
+         'advanced_search' => array (
+             'name' => array (
+                 'name' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'website' => array (
+                 'name' => 'website',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'phone' => array (
+                 'name' => 'phone',
+                 'label' => 'LBL_ANY_PHONE',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'email' => array (
+                 'name' => 'email',
+                 'label' => 'LBL_ANY_EMAIL',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_street' => array (
+                 'name' => 'address_street',
+                 'label' => 'LBL_ANY_ADDRESS',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_city' => array (
+                 'name' => 'address_city',
+                 'label' => 'LBL_CITY',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_state' => array (
+                 'name' => 'address_state',
+                 'label' => 'LBL_STATE',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_postalcode' => array (
+                 'name' => 'address_postalcode',
+                 'label' => 'LBL_POSTAL_CODE',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'billing_address_country' => array (
+                 'name' => 'billing_address_country',
+                 'label' => 'LBL_COUNTRY',
+                 'type' => 'name',
+                 'options' => 'countries_dom',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'account_type' => array (
+                 'name' => 'account_type',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'industry' => array (
+                 'name' => 'industry',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'assigned_user_id' => array (
+                 'name' => 'assigned_user_id',
+                 'type' => 'enum',
+                 'label' => 'LBL_ASSIGNED_TO',
+                 'function' => array (
+                     'name' => 'get_user_array',
+                     'params' => array (
+                        0 => false
+                     )
+                 ),
+                 'default' => true,
+                 'width' => '10%'
+            )
+        )
+    )
+);
+----
 
 
 
@@ -555,67 +566,69 @@ appear in the detail view of a module. Let’s look at an example:
 
 .Example 6.8: Subpanel metadata definition
 [source,php]
- 1 $layout_defs['AOS_Quotes'] = array (
- 2  'subpanel_setup' => array (
- 3      'aos_quotes_aos_contracts' => array (
- 4          'order' => 100,
- 5          'module' => 'AOS_Contracts',
- 6          'subpanel_name' => 'default',
- 7          'sort_order' => 'asc',
- 8          'sort_by' => 'id',
- 9          'title_key' => 'AOS_Contracts',
-10          'get_subpanel_data' => 'aos_quotes_aos_contracts',
-11          'top_buttons' => array (
-12              0 => array (
-13                  'widget_class' => 'SubPanelTopCreateButton'
-14              ),
-15              1 => array (
-16                  'widget_class' => 'SubPanelTopSelectButton',
-17                  'popup_module' => 'AOS_Contracts',
-18                  'mode' => 'MultiSelect'
-19              )
-20          )
-21      ),
-22      'aos_quotes_aos_invoices' => array (
-23          'order' => 100,
-24          'module' => 'AOS_Invoices',
-25          'subpanel_name' => 'default',
-26          'sort_order' => 'asc',
-27          'sort_by' => 'id',
-28          'title_key' => 'AOS_Invoices',
-29          'get_subpanel_data' => 'aos_quotes_aos_invoices',
-30          'top_buttons' => array (
-31              0 => array (
-32                  'widget_class' => 'SubPanelTopCreateButton'
-33              ),
-34              1 => array (
-35                  'widget_class' => 'SubPanelTopSelectButton',
-36                  'popup_module' => 'AOS_Invoices',
-37                  'mode' => 'MultiSelect'
-38              )
-39          )
-40      ),
-41      'aos_quotes_project' => array (
-42          'order' => 100,
-43          'module' => 'Project',
-44          'subpanel_name' => 'default',
-45          'sort_order' => 'asc',
-46          'sort_by' => 'id',
-47          'title_key' => 'Project',
-48          'get_subpanel_data' => 'aos_quotes_project',
-49          'top_buttons' => array (
-50              0 => array (
-51                  'widget_class' => 'SubPanelTopCreateButton'
-52              ),
-53              1 => array (
-54                  'widget_class' => 'SubPanelTopSelectButton',
-55                  'popup_module' => 'Accounts',
-56                  'mode' => 'MultiSelect'
-57              )
-58          )
-59      )
-60  )
-61 );
+----
+$layout_defs['AOS_Quotes'] = array (
+  'subpanel_setup' => array (
+      'aos_quotes_aos_contracts' => array (
+          'order' => 100,
+          'module' => 'AOS_Contracts',
+          'subpanel_name' => 'default',
+          'sort_order' => 'asc',
+          'sort_by' => 'id',
+          'title_key' => 'AOS_Contracts',
+          'get_subpanel_data' => 'aos_quotes_aos_contracts',
+          'top_buttons' => array (
+              0 => array (
+                  'widget_class' => 'SubPanelTopCreateButton'
+              ),
+              1 => array (
+                  'widget_class' => 'SubPanelTopSelectButton',
+                  'popup_module' => 'AOS_Contracts',
+                  'mode' => 'MultiSelect'
+              )
+          )
+      ),
+      'aos_quotes_aos_invoices' => array (
+          'order' => 100,
+          'module' => 'AOS_Invoices',
+          'subpanel_name' => 'default',
+          'sort_order' => 'asc',
+          'sort_by' => 'id',
+          'title_key' => 'AOS_Invoices',
+          'get_subpanel_data' => 'aos_quotes_aos_invoices',
+          'top_buttons' => array (
+              0 => array (
+                  'widget_class' => 'SubPanelTopCreateButton'
+              ),
+              1 => array (
+                  'widget_class' => 'SubPanelTopSelectButton',
+                  'popup_module' => 'AOS_Invoices',
+                  'mode' => 'MultiSelect'
+              )
+          )
+      ),
+      'aos_quotes_project' => array (
+          'order' => 100,
+          'module' => 'Project',
+          'subpanel_name' => 'default',
+          'sort_order' => 'asc',
+          'sort_by' => 'id',
+          'title_key' => 'Project',
+          'get_subpanel_data' => 'aos_quotes_project',
+          'top_buttons' => array (
+              0 => array (
+                  'widget_class' => 'SubPanelTopCreateButton'
+              ),
+              1 => array (
+                  'widget_class' => 'SubPanelTopSelectButton',
+                  'popup_module' => 'Accounts',
+                  'mode' => 'MultiSelect'
+              )
+          )
+      )
+   )
+);
+----
 
 
 
@@ -695,60 +708,62 @@ the parent module. The usual subpanel file is simply called
 
 .Example 6.8: Module Subpanels definition
 [source,php]
- 1 $subpanel_layout = array(
- 2  'top_buttons' => array(
- 3      array(
- 4          'widget_class' => 'SubPanelTopCreateButton'
- 5      ),
- 6      array(
- 7          'widget_class' => 'SubPanelTopSelectButton', 
- 8          'popup_module' => 'Accounts'
- 9      ),
-10  ),
-11  'where' => '',
-12  'list_fields' => array (
-13    'name' =>
-14    array (
-15     'vname' => 'LBL_LIST_ACCOUNT_NAME',
-16     'widget_class' => 'SubPanelDetailViewLink',
-17     'width' => '45%',
-18     'default' => true,
-19    ),
-20    'billing_address_city' =>
-21    array (
-22      'vname' => 'LBL_LIST_CITY',
-23      'width' => '20%',
-24      'default' => true,
-25    ),
-26    'billing_address_country' =>
-27    array (
-28      'type' => 'varchar',
-29      'vname' => 'LBL_BILLING_ADDRESS_COUNTRY',
-30      'width' => '7%',
-31      'default' => true,
-32    ),
-33    'phone_office' =>
-34    array (
-35      'vname' => 'LBL_LIST_PHONE',
-36      'width' => '20%',
-37      'default' => true,
-38    ),
-39    'edit_button' =>
-40    array (
-41      'vname' => 'LBL_EDIT_BUTTON',
-42      'widget_class' => 'SubPanelEditButton',
-43      'width' => '4%',
-44      'default' => true,
-45    ),
-46    'remove_button' =>
-47    array (
-48      'vname' => 'LBL_REMOVE',
-49      'widget_class' => 'SubPanelRemoveButtonAccount',
-50      'width' => '4%',
-51      'default' => true,
-52    ),
-53    )
-54 );
+----
+$subpanel_layout = array(
+  'top_buttons' => array(
+      array(
+          'widget_class' => 'SubPanelTopCreateButton'
+      ),
+      array(
+          'widget_class' => 'SubPanelTopSelectButton', 
+          'popup_module' => 'Accounts'
+      ),
+  ),
+  'where' => '',
+  'list_fields' => array (
+    'name' =>
+    array (
+     'vname' => 'LBL_LIST_ACCOUNT_NAME',
+     'widget_class' => 'SubPanelDetailViewLink',
+     'width' => '45%',
+     'default' => true,
+    ),
+    'billing_address_city' =>
+    array (
+      'vname' => 'LBL_LIST_CITY',
+      'width' => '20%',
+      'default' => true,
+    ),
+    'billing_address_country' =>
+    array (
+      'type' => 'varchar',
+      'vname' => 'LBL_BILLING_ADDRESS_COUNTRY',
+      'width' => '7%',
+      'default' => true,
+    ),
+    'phone_office' =>
+    array (
+      'vname' => 'LBL_LIST_PHONE',
+      'width' => '20%',
+      'default' => true,
+    ),
+    'edit_button' =>
+    array (
+      'vname' => 'LBL_EDIT_BUTTON',
+      'widget_class' => 'SubPanelEditButton',
+      'width' => '4%',
+      'default' => true,
+    ),
+    'remove_button' =>
+    array (
+      'vname' => 'LBL_REMOVE',
+      'widget_class' => 'SubPanelRemoveButtonAccount',
+      'width' => '4%',
+      'default' => true,
+    ),
+  )
+);
+----
 
 
 
