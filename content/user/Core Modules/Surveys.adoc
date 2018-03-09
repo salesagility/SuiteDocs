@@ -14,7 +14,7 @@ Weight: 190
 
 The *Surveys* module allows you to create a web-based survey with a variety of question-type options. The responses received are stored in *SuiteCRM* and can be viewed on a per-respondent basis or as a detailed summary report using charts where appropriate.
 
-Surveys can be sent as part of a link:../15campaigns[Campaign]. 
+Surveys can be sent as part of a link:../campaigns[Campaign]. 
 
 == Create Survey
 
@@ -132,7 +132,7 @@ From *Detail* view, select *Edit* from the *Actions* menu.
 
 == Survey Responses
 
-The Survey Responses subpanel shows the individual responses received from each respondent. The subpanel can be found in Detail View for the survey. The Survey Responses subpanel can also be accessed from the Campaign Status page for a link:../15campaigns[campaign]. 
+The Survey Responses subpanel shows the individual responses received from each respondent. The subpanel can be found in Detail View for the survey. The Survey Responses subpanel can also be accessed from the Campaign Status page for a link:../campaigns[campaign]. 
 
 image:SurveyResponses.png[title="Survey Responses subpanel"]
 
@@ -158,7 +158,7 @@ image:SurveysDemoReport.png[title="Survey Report detail"]
 
 == Survey Campaign
 
-{{%notice note%}}The following section will provide details on *Survey* specific campaign settings only, please see the link:../15campaigns[Campaigns] documentation for more detailed instructions on setting up a campaign.{{%/notice%}} 
+{{%notice note%}}The following section will provide details on *Survey* specific campaign settings only, please see the link:../campaigns[Campaigns] documentation for more detailed instructions on setting up a campaign.{{%/notice%}} 
 
 Surveys can be sent out as part of a campaign which will track and record the survey responses received from each recipient.
 

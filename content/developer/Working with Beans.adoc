@@ -467,5 +467,5 @@ contact:
 {{% notice warning %}}
 Be careful with the
 delete method. Omitting the second argument will cause all relationships
-for this link to be removed. link:../3.-working-with-beans[↩]
+for this link to be removed. link:../working-with-beans[↩]
 {{% /notice %}}

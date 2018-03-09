@@ -188,7 +188,7 @@ values. Values most commonly used are:
 `label`::
   The language key for this label. If the language key is not recognised
   then this value will be used instead (see the
-  link:../9.-language-strings#language-chapter[chapter on language]).
+  link:../language-strings#language-chapter[chapter on language]).
 `displayParams`::
   An array used to pass extra arguments for the field display. For the
   options and how they are used you can have a look into the appropriate
@@ -652,7 +652,7 @@ entry for each subpanel usually has the following defined:
   the form `function:theFunctionName`. Additionally you can specify the
   location of the function and any additional parameters that are needed
   by using the `function_parameters` key. An example of a subpanel which
-  uses a function can be found in link:../20.-appendix-a---code-examples#appendix-a[Appendix
+  uses a function can be found in link:../appendix-a---code-examples#appendix-a[Appendix
   A].
 `function_parameters`::
   Specifies the parameters for a subpanel which gets it’s information
@@ -775,4 +775,4 @@ used to confirm if a module should be shown in studio for user tweaking.
 Note that, unlike other metadata files, the file in
 `modules/<TheModule>/metadata/studio.php` will be the only one checked.
 A file in `custom/modules/<TheModule>/metadata/studio.php` will have no
-effect. link:../6.-metadata[↩]
+effect. link:../metadata[↩]

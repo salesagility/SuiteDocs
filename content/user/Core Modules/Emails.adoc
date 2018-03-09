@@ -69,7 +69,7 @@ Emails can also be composed directly from a *SuiteCRM* record by clicking the em
 
 image:260Emailcompose.png[title="Compose Email"]
 
-* *Email Template:* Select a template if required. See link:../18emailtemplates/[Email Templates] for more information on creating and editing email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. If you are using a template with variables, these will be populated with the relevant data from the related record when the email is sent. The *To:* field will also be automatically populated with the email address associated with the related record.
+* *Email Template:* Select a template if required. See link:../emailtemplates/[Email Templates] for more information on creating and editing email templates. Once you have selected a template, a popup will warn you that the subject line and body of the email will be replaced by the contents of the email template. If you are using a template with variables, these will be populated with the relevant data from the related record when the email is sent. The *To:* field will also be automatically populated with the email address associated with the related record.
 
 // image:261EmailsAddtemplate.png[title="Adding Email template warning"]
 

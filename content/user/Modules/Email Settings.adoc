@@ -25,7 +25,7 @@ The outgoing mail configuration will need to be set up by an Administrator.
 
 See <<Outgoing Mail Configuration Settings>> for instructions on setting up the default outgoing mail configuration.
 
-Other outbound accounts can be configured in addition to the default account for specific purposes, such as sending link:../../core-modules/15campaigns[Campaigns]. These can be set up from the Admin panel, under outbound accounts. If no other outbound accounts are configured, the default outgoing mail server account will be used.
+Other outbound accounts can be configured in addition to the default account for specific purposes, such as sending link:../../core-modules/campaigns[Campaigns]. These can be set up from the Admin panel, under outbound accounts. If no other outbound accounts are configured, the default outgoing mail server account will be used.
 
 
 === Personal Accounts
@@ -47,7 +47,7 @@ See <<Group Email Account Settings>> for instructions on setting up a group acco
 
 
 === Bounce Handling Accounts
-A Bounce Handling account is used with link:../../core-modules/15campaigns[Campaigns] to handle bounced mail notifications when emails are undelivered. You will need to set up a Bounce Handling account in order to send a Campaign.
+A Bounce Handling account is used with link:../../core-modules/campaigns[Campaigns] to handle bounced mail notifications when emails are undelivered. You will need to set up a Bounce Handling account in order to send a Campaign.
 
 Bounce Handling accounts must be set up by an Administrator. Once set up, users can select the bounce handling account when setting up a campaign.
 
@@ -94,7 +94,7 @@ Click btn:[SAVE] to retain your settings.
 
 == Personal Email Account Settings
 
-Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually link:../../core-modules/8emails/#_import_mail[imported]. 
+Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually link:../../core-modules/emails/#_import_mail[imported]. 
 Settings for personal email accounts are held within the user's profile. 
 
 {{% notice note %}}
@@ -112,7 +112,7 @@ image:270Emailusersettings.png[User Email Settings]
 	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
 	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
 
-* *Email Editor* - This allows you to set the editor used when creating and editing link:../../core-modules/8emails#_email_templates[email templates] and also within the link:../../core-modules/15campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
+* *Email Editor* - This allows you to set the editor used when creating and editing link:../../core-modules/emails#_email_templates[email templates] and also within the link:../../core-modules/campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
 
 [discrete]
 === Adding A Personal Mail Account
@@ -158,11 +158,11 @@ image:274EmailsGeneralTab.png[User Mail Settings General tab]
 
 Click btn:[DONE] to save your settings. A confirmation dialog will appear. 
 
-You should now be able to view your emails in the link:../../core-modules/8emails[*Emails* module].
+You should now be able to view your emails in the link:../../core-modules/emails[*Emails* module].
 
 == Group Email Account Settings
 
-A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example. In addition, group accounts are also used for sending email campaigns and as bounce handling mailboxes for campaigns. See the link:../../core-modules/15campaigns[Campaigns] documentation for more information.
+A group email account allows more than one user to access a particular mail account. This can be useful for sales or support email accounts for example. In addition, group accounts are also used for sending email campaigns and as bounce handling mailboxes for campaigns. See the link:../../core-modules/campaigns[Campaigns] documentation for more information.
 
 *SuiteCRM* can also be configured to automatically import emails and to automatically <<Create Case From Email,create cases>> from email.
 
@@ -196,7 +196,7 @@ Check this box to import emails automatically, which means that records will be 
 This setting is selected by default in *SuiteCRM*.
 
 === Create Case From Email
-Check this box to set up *SuiteCRM* to create a link:../../core-modules/16cases[Case] record from an incoming email. 
+Check this box to set up *SuiteCRM* to create a link:../../core-modules/cases[Case] record from an incoming email. 
 
 image:282EmailsCreateCase2.png[Create Case]
 
@@ -214,7 +214,7 @@ Select a *Distribution Method* to specify how cases created from incoming email 
 
 *New Case Auto-Reply template* 
 
-If *SuiteCRM* has been configured to auto-create cases, you can select or create an link:../../core-modules/8emails/#_email_templates[email template] to use as an automated reponse to notify the sender that a case has been created. If no template is specified here, this automated reponse will not be sent. image:286EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
+If *SuiteCRM* has been configured to auto-create cases, you can select or create an link:../../core-modules/emails/#_email_templates[email template] to use as an automated reponse to notify the sender that a case has been created. If no template is specified here, this automated reponse will not be sent. image:286EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
 
 
 [cols="20,80", frame = "none", grid = "none"]
@@ -237,9 +237,9 @@ Once configured, all inbound accounts are listed under *Inbound Accounts* on the
 
 == Bounce Handling Account Settings
 
-A Bounce Handling Account is used to manage bounce notifications for an email link:../../core-modules/15campaigns[campaign]. Bounced email addresses are recorded in the campaign status.
+A Bounce Handling Account is used to manage bounce notifications for an email link:../../core-modules/campaigns[campaign]. Bounced email addresses are recorded in the campaign status.
 
-Once created, the bounce handling account can be selected by users when setting up a link:../../core-modules/15campaigns[campaign].
+Once created, the bounce handling account can be selected by users when setting up a link:../../core-modules/campaigns[campaign].
 
 {{% notice note %}}
 You will need to have Administrator access to set up and give access to a group email account.
@@ -266,7 +266,7 @@ There are two other mail settings options on the Admin panel.
 
 image:296EmailsCampaignEmailSettings.png[Campaign Email Settings]
 
-Configure the following additional settings for link:../../core-modules/15campaigns[Campaigns] here:
+Configure the following additional settings for link:../../core-modules/campaigns[Campaigns] here:
 
 * The batch size for sending campaign emails
 * Where campaign tracking files are located

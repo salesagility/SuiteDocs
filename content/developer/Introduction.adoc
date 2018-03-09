@@ -81,7 +81,7 @@ SuiteCRM will cache various files that it processes, such as Smarty
 templates. Developer mode will turn off some of the caching so that
 changes to files will be seen immediately (though this isn’t always the
 case - as is the case with
-link:../14.-extension-framework#extensions-chapter[extensions]). This can be enabled
+link:../extension-framework#extensions-chapter[extensions]). This can be enabled
 either through the config file or via the General settings page inside
 admin.
 
@@ -92,7 +92,7 @@ The default log level of SuiteCRM is `fatal`. This is a good default for
 production instances but you may want to increase the log level to
 `info` or `debug`. This will make the log output more verbose so, should
 anything go wrong, you’ll have something to refer to. See the
-link:../11.-logging#logging-chapter[chapter on logging] for more
+link:../logging#logging-chapter[chapter on logging] for more
 information.
 
 [discrete]
@@ -114,4 +114,4 @@ creating additional notices, warnings or errors.
 http://xdebug.org[XDebug] is a PHP extension which provides profiling
 and debugging capabilities to PHP. This can massively improve developer
 productivity by simplifying development and, particularly, tracking down
-any issues. See the XDebug site for information on XDebug. link:../1.-introduction[↩]
+any issues. See the XDebug site for information on XDebug. link:../introduction[↩]

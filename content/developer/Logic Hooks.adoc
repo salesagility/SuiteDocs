@@ -99,11 +99,11 @@ hooks these hooks must be defined in the top level logic hook (i.e.
 `job_failure`::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception and it will not be retried. See the section on
-  link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
+  link:../scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 `job_failure_retry`::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception but it will be retried. See the section on
-  link:../13.-scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
+  link:../scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 
 == Implementing
 
@@ -341,5 +341,5 @@ Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user
 will need to wait for that code to run. This can be avoided by either
 ensuring the code runs quickly or by using the Job Queue (see the Job
-Queue chapter for more information). link:../12.-logic-hooks[↩]
+Queue chapter for more information). link:../logic-hooks[↩]
 {{% /notice %}}

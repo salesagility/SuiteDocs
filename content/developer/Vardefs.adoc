@@ -313,4 +313,4 @@ existing one e.g changing a field type:
 [source,php]
 $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
 
-link:../4.-vardefs[↩]
+link:../vardefs[↩]
