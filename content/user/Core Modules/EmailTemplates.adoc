@@ -18,7 +18,7 @@ From *SuiteCRM* 7.9.x onwards, email templates can be viewed, edited and created
 
 image:300EmailsTemplates.png[Email Templates] 
 
-There are a number of default *System* templates which are created on install. These are used to send out system notifications such as new passwords or case updates. These can be viewed and edited here alongside user-generated templates. Templates created here can also be used in link:../../advanced-modules/advanced-open-workflow[Workflows] and link:../15campaigns[Campaigns] for example, as well as for system notifications.
+There are a number of default *System* templates which are created on install. These are used to send out system notifications such as new passwords or case updates. These can be viewed and edited here alongside user-generated templates. Templates created here can also be used in link:../../advanced-modules/advanced-open-workflow[Workflows] and link:../campaigns[Campaigns] for example, as well as for system notifications.
 
 Click on a template name to view the template. 
 

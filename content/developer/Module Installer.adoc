@@ -20,7 +20,7 @@ to install the package.
 
 The `manifest.php` file contains the definition of three arrays. Let’s
 look at each of these arrays in turn. See
-link:../20.-appendix-a---code-examples#appendix-a[Appendix A] for the full sample
+link:../appendix-a---code-examples#appendix-a[Appendix A] for the full sample
 `manifest.php` file.
 
 {{% notice info %}}
@@ -186,7 +186,7 @@ the following keys:
 |`language` |The language that this file is for (i.e. en_us or es_es).
 |=======================================================================
 
-See the chapter on link:../9.-language-strings#language-chapter[Language Strings]
+See the chapter on link:../language-strings#language-chapter[Language Strings]
 for more information.
 
 `layoutdefs` ::
@@ -256,7 +256,7 @@ array with the following keys:
 
 `custom_fields` ::
 An array of new custom fields to be installed (See the
-link:../4.-vardefs#vardefs-chapter[Vardefs] chapter for more information
+link:../vardefs#vardefs-chapter[Vardefs] chapter for more information
 on this). Each entry is an array with the following keys:
 
 [cols="20,80",options="header",]
@@ -299,7 +299,7 @@ added.
 
 `logic_hooks` ::
 An array of logic hooks to be installed. See the
-link:../12.-logic-hooks#logic-hooks-chapter[Logic Hooks] chapter for more
+link:../logic-hooks#logic-hooks-chapter[Logic Hooks] chapter for more
 information. Each entry is an array with the following keys:
 
 [cols="20,80",options="header",]
@@ -407,4 +407,4 @@ functionality.
   will be called before the package is uninstalled.
 `scripts/post_uninstall.php`::
   A PHP script which defines a method `post_uninstall()`. This method
-  will be called after the package is uninstalled. link:../15.-module-installer[↩]
+  will be called after the package is uninstalled. link:../module-installer[↩]

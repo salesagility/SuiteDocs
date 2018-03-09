@@ -77,5 +77,5 @@ The default log levels (in order of verbosity) are:
 Generally on a production instance you will use the less verbose levels
 (probably `error` or `fatal`). However whilst you are developing you can
 use whatever level you prefer. I prefer the most verbose level -
-`debug`. link:../11.-logging[↩]
+`debug`. link:../logging[↩]
 {{% /notice %}}

@@ -30,7 +30,7 @@ From the *Campaigns* module, select *Create Campaign* from the sidebar or the mo
 
 image:CampaignsSidebarCreate.png[title="Creating a Campaign"]
 
-Select the campaign you wish to create: *Newsletter*, *Email*, link:../19surveys/[Survey] (*SuiteCRM 7.10* onwards) or *Non-email based Campaign*. Non-email based campaigns allow you to keep a record of any campaigns that are run outwith *SuiteCRM* (e.g. a telesales or radio based campaign).
+Select the campaign you wish to create: *Newsletter*, *Email*, link:../surveys/[Survey] (*SuiteCRM 7.10* onwards) or *Non-email based Campaign*. Non-email based campaigns allow you to keep a record of any campaigns that are run outwith *SuiteCRM* (e.g. a telesales or radio based campaign).
 
 image:CampaignTypes.png[title="Select campaign"]
 
@@ -51,7 +51,7 @@ The campaign will be assigned to the currently logged on user by default. Change
 
 ==== Survey Campaign (*SuiteCRM 7.10* onwards)
 
-For a *Survey* campaign, you will also need to relate the campaign to an existing survey. See link:../19surveys/[Surveys] for information on creating a survey.
+For a *Survey* campaign, you will also need to relate the campaign to an existing survey. See link:../surveys/[Surveys] for information on creating a survey.
 image:CampaignSurveyHeader.png[title="Select survey for campaign"]
 
 ==== Non-Email Based Campaign
@@ -82,7 +82,7 @@ image:CampaignsTargetList.png[title="Target Lists"]
 
 ==== Create Target List
 
-If you have not yet created a target list or wish to use a new list, you can create an empty one here and populate it after you have completed the rest of your campaign setup. See link:../14target-lists/[Target Lists] for more information on the types of lists and how to use them.
+If you have not yet created a target list or wish to use a new list, you can create an empty one here and populate it after you have completed the rest of your campaign setup. See link:../target-lists/[Target Lists] for more information on the types of lists and how to use them.
 
 image:80E-mail_campaign.png[title="Target list"]
 
@@ -214,7 +214,7 @@ These records can be added to a new target list by clicking btn:[Add to Target L
 [discrete]
 === Delete Test Entries
 
-Click btn:[DELETE TEST ENTRIES] to remove any entries on the campaign status page that have been generated during testing with a 'test' type link:../14target-lists/[target list]. 
+Click btn:[DELETE TEST ENTRIES] to remove any entries on the campaign status page that have been generated during testing with a 'test' type link:../target-lists/[target list]. 
 
 == Campaign ROI Tracking
 
@@ -229,7 +229,7 @@ image:CampaignsROIChart.png[title="Return on Investment details"]
 
 == Web To Person Form
 
-The *Create Person Form* feature allows you to create a web-based form which will create a link:../4leads/[Lead], link:../2contacts/[Contact] or link:../13targets/[Target] record in *SuiteCRM* from the information submitted on the web form. These records can be assigned to a particular user and are linked to a campaign so responses can be tracked.
+The *Create Person Form* feature allows you to create a web-based form which will create a link:../leads/[Lead], link:../contacts/[Contact] or link:../targets/[Target] record in *SuiteCRM* from the information submitted on the web form. These records can be assigned to a particular user and are linked to a campaign so responses can be tracked.
 
 {{%notice note%}}You will need to relate your Web-to-Person Form to an existing campaign. See the <<Create a Campaign, Create a Campaign>> section for instructions on how to do this. A non-email based type campaign is suitable for this{{%/notice%}}
 

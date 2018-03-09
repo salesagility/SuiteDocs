@@ -121,4 +121,4 @@ log the REQUEST and simply redirect:
 In previous versions of SugarCRM a new action was added by creating a
 file in either `modules/<TheModule>/<actionname>.php` or
 `custom/modules/<TheModule>/<actionname>.php`. Although this still works
-it is not recommended. link:../7.-controllers[↩]
+it is not recommended. link:../controllers[↩]

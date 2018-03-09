@@ -112,7 +112,7 @@ once a day.
 
 Sometimes you will require code to perform a long running task but you
 do not need the user to wait for this to be completed. A good example of
-this is sending an email in a logic hook (see the link:../12.-logic-hooks[Logic Hooks] chapter
+this is sending an email in a logic hook (see the link:../logic-hooks[Logic Hooks] chapter
 for information on these). Assuming we have the following logic hook:
 
 .Example 13.3: Example Email sending Logic Hook
@@ -284,7 +284,7 @@ We can revisit our previous example and add two retries:
 
 
 
-See the section on link:../12.-logic-hooks#logic-hooks-chapter[logic hooks]
+See the section on link:../logic-hooks#logic-hooks-chapter[logic hooks]
 for more information on how job failures can be handled.
 
 == Debugging
@@ -362,4 +362,4 @@ php -f cron.php
 
 
 Using this in addition to outputting any useful information should track
-down even the oddest of bugs. link:../13.-scheduled-tasks[↩]
+down even the oddest of bugs. link:../scheduled-tasks[↩]
