@@ -23,7 +23,7 @@ other = "Editar página"
 other = "Más"
 
 [Expand-title]
-other = "Expandeme..."
+other = "Expándeme..."
 
 [Issue-for-page]
 other = "Discutir"
@@ -35,7 +35,7 @@ other = "Documentación"
 other = "Guías"
 
 [User]
-other = "Usuário"
+other = "Usuario"
 
 [Developer]
 other = "Desarollador"
