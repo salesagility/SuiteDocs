@@ -1,4 +1,3 @@
-
 ---
 weight: 17
 title: "18. Best Practices"
@@ -112,19 +111,21 @@ you can check for the DB type. For example:
 
 .Example 17.1: Checking for the database engine
 [source,php]
- 1 function getSomeSQLQuery(){
- 2     global $sugar_config;
- 3     switch($sugar_config['dbconfig']['db_type']){
- 4         case 'mssql':
- 5             $sql = 'MSSQL specific SQL';
- 6             break;
- 7         case 'mysql':
- 8         default:
- 9             $sql = 'MySQL specific SQL';
-10             break;
-11     }
-12     return $sql;
-13 }
+----
+function getSomeSQLQuery(){
+     global $sugar_config;
+     switch($sugar_config['dbconfig']['db_type']){
+         case 'mssql':
+             $sql = 'MSSQL specific SQL';
+             break;
+         case 'mysql':
+         default:
+             $sql = 'MySQL specific SQL';
+             break;
+     }
+     return $sql;
+}
+----
 
 
 
@@ -159,4 +160,4 @@ redirect. This simply accepts a URL. As follows:
 [source,php]
 SugarApplication::redirect('index.php?module=<TheModule>');
 
-link:../17.-best-practices[↩]
+link:../best-practices[↩]

@@ -153,28 +153,30 @@ section for other ways of accessing `$mod_strings`).
 
 .Example 9.1: Accessing language strings globally
 [source,php]
- 1 function someFunction(){
- 2     global $mod_strings, $app_strings, $app_list_strings;
- 3     /*
- 4      * Grab the label LBL_NAME for the current module
- 5      * In most modules this will be the label for the
- 6      * name field of the module.
- 7      */
- 8     $modLabel = $mod_strings['LBL_NAME'];
- 9 
-10     $appLabel = $app_strings['LBL_GENERATE_LETTER'];
-11 
-12     /*
-13      * Unlike the previous two examples $appListLabel will be an
-14      * array of the dropdowns keys to it's display labels.
-15      */
-16     $appListLabel = $app_list_strings['aos_quotes_type_dom'];
-17 
-18     //Here we just log out the strings
-19     $GLOBALS['log']->debug("The module label is $modLabel");
-20     $GLOBALS['log']->debug("The app label is $appLabel");
-21     $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
-22 }
+----
+function someFunction(){
+    global $mod_strings, $app_strings, $app_list_strings;
+    /*
+     * Grab the label LBL_NAME for the current module
+     * In most modules this will be the label for the
+     * name field of the module.
+     */
+    $modLabel = $mod_strings['LBL_NAME'];
+
+    $appLabel = $app_strings['LBL_GENERATE_LETTER'];
+
+    /*
+     * Unlike the previous two examples $appListLabel will be an
+     * array of the dropdowns keys to it's display labels.
+     */
+    $appListLabel = $app_list_strings['aos_quotes_type_dom'];
+
+    //Here we just log out the strings
+    $GLOBALS['log']->debug("The module label is $modLabel");
+    $GLOBALS['log']->debug("The app label is $appLabel");
+    $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
+}
+----
 
 
 
@@ -186,10 +188,12 @@ than the language string you wish to retrieve you can use the
 
 .Example 9.2: translate method signature
 [source,php]
-1 translate(
-2         $string,
-3         $mod='',
-4         $selectedValue='')
+----
+translate(
+        $string,
+        $mod='',
+        $selectedValue='')
+----
 
 
 
@@ -209,27 +213,29 @@ order - the first matching value will be returned).
 
 .Example 9.3: Example translate method calls
 [source,php]
- 1 function someFunction(){
- 2   //Grab the label LBL_NAME for the current module
- 3   $modLabel = translate('LBL_NAME');
- 4 
- 5   //Grab the label LBL_NAME for the AOS_Products module
- 6   $productModLabel = translate('LBL_NAME','AOS_Products');
- 7 
- 8   $appLabel = translate('LBL_GENERATE_LETTER');
- 9 
-10   /*
-11    * Return the label for the `Other` option of the `aos_quotes_type_dom`
-12    * We don't care about the module so this is left blank.
-13    */
-14   $appListLabel = translate('aos_quotes_type_dom','','Other');
-15 
-16   //Here we just log out the strings
-17   $GLOBALS['log']->debug("The module label is $modLabel");
-18   $GLOBALS['log']->debug("The module label for Products is $productModLabel");
-19   $GLOBALS['log']->debug("The app label is $appLabel");
-20   $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
-21 }
+----
+function someFunction(){
+   //Grab the label LBL_NAME for the current module
+   $modLabel = translate('LBL_NAME');
+ 
+   //Grab the label LBL_NAME for the AOS_Products module
+   $productModLabel = translate('LBL_NAME','AOS_Products');
+ 
+   $appLabel = translate('LBL_GENERATE_LETTER');
+ 
+   /*
+    * Return the label for the `Other` option of the `aos_quotes_type_dom`
+    * We don't care about the module so this is left blank.
+    */
+   $appListLabel = translate('aos_quotes_type_dom','','Other');
+ 
+   //Here we just log out the strings
+   $GLOBALS['log']->debug("The module label is $modLabel");
+   $GLOBALS['log']->debug("The module label for Products is $productModLabel");
+   $GLOBALS['log']->debug("The app label is $appLabel");
+   $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
+}
+----
 
 
 
@@ -242,10 +248,12 @@ in example 9.3.
 
 .Example 9.4: SUGAR.language.get method signature
 [source,php]
-1 SUGAR.language.get(
-2               module,
-3               str
-4 );
+----
+SUGAR.language.get(
+              module,
+              str
+);
+----
 
 
 
@@ -258,28 +266,30 @@ in example 9.3.
 
 .Example 9.5: Example SUGAR.language.get method calls
 [source,php]
- 1 function someFunction(){
- 2 
- 3   /*
- 4    * Grab the label LBL_NAME for AOS_Products
- 5    * Note that, unlike the translate function in example 9.3
- 6    * the module name is required.
- 7    */
- 8 
- 9   var modLabel = SUGAR.language.get('AOS_Products', 'LBL_NAME');
-10 
-11   /*
-12    * As mentioned above we explicitly need to pass if we are retrieving
-13    * an app_string or app_list_string
-14    */
-15   var appLabel = SUGAR.language.get('app_strings', 'LBL_GENERATE_LETTER');
-16   var appListLabel = SUGAR.language.get('app_list_strings',
-17                                         'aos_quotes_type_dom');
-18 
-19   //Here we just log out the strings
-20   console.log("The module label is "+modLabel);
-21   console.log("The app label is "+appLabel);
-22   console.log("The app list label is "+appListLabel);
-23 }
+----
+function someFunction(){
+ 
+   /*
+    * Grab the label LBL_NAME for AOS_Products
+    * Note that, unlike the translate function in example 9.3
+    * the module name is required.
+    */
+ 
+   var modLabel = SUGAR.language.get('AOS_Products', 'LBL_NAME');
+ 
+   /*
+    * As mentioned above we explicitly need to pass if we are retrieving
+    * an app_string or app_list_string
+    */
+   var appLabel = SUGAR.language.get('app_strings', 'LBL_GENERATE_LETTER');
+   var appListLabel = SUGAR.language.get('app_list_strings',
+                                         'aos_quotes_type_dom');
+ 
+   //Here we just log out the strings
+   console.log("The module label is "+modLabel);
+   console.log("The app label is "+appLabel);
+   console.log("The app list label is "+appListLabel);
+}
+----
 
 link:../9.-language-strings[↩]

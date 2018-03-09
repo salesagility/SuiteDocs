@@ -28,17 +28,19 @@ database settings first:
 
 .Example 10.1: Database config definition
 [source,php]
- 1 'dbconfig' =>
- 2 array (
- 3   'db_host_name' => 'localhost',
- 4   'db_host_instance' => 'SQLEXPRESS',
- 5   'db_user_name' => 'dbuser',
- 6   'db_password' => 'dbpass',
- 7   'db_name' => 'dbname',
- 8   'db_type' => 'mysql',
- 9   'db_port' => '',
-10   'db_manager' => 'MysqliManager',
-11 ),
+----
+'dbconfig' =>
+array (
+   'db_host_name' => 'localhost',
+   'db_host_instance' => 'SQLEXPRESS',
+   'db_user_name' => 'dbuser',
+   'db_password' => 'dbpass',
+   'db_name' => 'dbname',
+   'db_type' => 'mysql',
+   'db_port' => '',
+   'db_manager' => 'MysqliManager',
+),
+----
 
 
 
@@ -50,7 +52,7 @@ The site url settings are even simpler:
 
 .Example 10.2: Setting the site URL
 [source,php]
-  'site_url' => 'http://example.com/suitecrm',
+'site_url' => 'http://example.com/suitecrm',
 
 
 
@@ -94,13 +96,15 @@ that). We can easily get the config using the php global keyword:
 
 .Example 10.5: Accessing a config setting within SuiteCRM
 [source,php]
-1 function myCustomLogic(){
-2   //Get access to config
-3   global $sugar_config;
-4   //use the config values
-5   if(!empty($sugar_config['enable_the_awesome'])){
-6     doTheAwesome();
-7   }
-8 }
+----
+function myCustomLogic(){
+  //Get access to config
+  global $sugar_config;
+  //use the config values
+  if(!empty($sugar_config['enable_the_awesome'])){
+    doTheAwesome();
+  }
+}
+----
 
 link:../10.-config[↩]

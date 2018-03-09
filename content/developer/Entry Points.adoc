@@ -1,4 +1,3 @@
-
 ---
 weight: 8
 title: "8. Entry Points"
@@ -42,11 +41,13 @@ accessing the entry point will need to be logged into SuiteCRM.
 
 .Example 8.3: Adding an entry point entry
 [source,php]
-1 <?php
-2   $entry_point_registry['MyTimeEntryPoint'] = array(
-3       'file' => 'custom/MyTimeEntryPoint.php',
-4       'auth' => true,
-5   );
+----
+<?php
+  $entry_point_registry['MyTimeEntryPoint'] = array(
+      'file' => 'custom/MyTimeEntryPoint.php',
+      'auth' => true,
+  );
+----
 
 
 
@@ -55,10 +56,12 @@ custom/MyTimeEntryPoint.php:
 
 .Example 8.4: Example entry point that outputs the current time
 [source,php]
-1 <?php
-2 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
-3 $date = new DateTime();
-4 echo $date->format('r');
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+$date = new DateTime();
+echo $date->format('r');
+----
 
 
 
