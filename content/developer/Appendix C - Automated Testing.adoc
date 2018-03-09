@@ -66,11 +66,11 @@ The functional and api tests require that you import the database (or .sql) file
 
 You can run the functional test suite using the command:
 
-`./vendor/bin/codecept run unit`
+`./vendor/bin/codecept run functional`
 
 You can run the api test suite using the command:
 
-`./vendor/bin/codecept run unit`
+`./vendor/bin/codecept run api`
 
 === Acceptance, Demo and Install tests
 
