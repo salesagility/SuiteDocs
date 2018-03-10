@@ -33,8 +33,14 @@ threaded log of all updates
 Emails Advanced OpenPortal (AOP) uses the standard SuiteCRM
 functionality to send emails and create cases from inbound emails.
 Details on how to configure your outgoing email settings can be found
-here. Details on how to set up a group email account which will
-automatically generate cases can be found here.
+link:/user/modules/email-settings/#_outgoing_mail_configuration_settings[here]. 
+Details on how to set up a group email account which will
+automatically generate cases can be found link:/user/modules/email-settings/#_group_accounts[here].
+
+== Downloading
+
+The plug-in can be downloaded for free from the SuiteCRM site at 
+the https://suitecrm.com/resources/suitecrm-joomla-portal-plug-in/[Joomla Portal Plug-in page^].
 
 == Installation & Configuration
 
@@ -47,7 +53,7 @@ Here you can enable or disable the AOP functionality, configure the
 Joomla URL, set the case distribution method, “email from” details and
 the different email templates.
 
-To install the Joomla AOP component, use the Joomla Extension Manager.
+To install the Joomla AOP component, use the "Extension Manager" inside Joomla.
 Once installed you must configure the SuiteCRM URL and a valid SuiteCRM
 username and password. This can be done by navigating to Components →
 advancedopen-portal.
