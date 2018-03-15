@@ -586,7 +586,7 @@ nav.webnav li.download:hover a {
 }
 
 #prefooter hr {
-	margin:0 0 40px 0;
+	margin:0 0 20px 0;
 	padding:0;
 }
 
@@ -788,6 +788,18 @@ select::-ms-expand {
 
 #sidebar hr {
    border-color: var(--MENU-SECTION-HR-color);
+}
+
+#lang-selector {
+   background-color: #ECEBEB;
+}
+
+#lang-selector hr {
+   margin-top: 0px;
+}
+
+#select-language {
+   background-color: var(--MENU-SECTIONS-BG-color);
 }
 
 #sidebar #logo img {

@@ -1,0 +1,17 @@
+---
+Title: "Translate"
+Weight: 50
+---
+:experimental: ////this is here to allow btn:[]syntax used below 
+
+:imagesdir: ./../../../images/en/community
+
+You can help translate the SuiteCRM Documentation site to your own language.
+
+First, learn how to link:/community/contributing-to-docs/simple-edit/[edit pages].
+
+Then, you simply create a new page with the exact same name as the page you're translating, 
+but add your language code before the extension.
+
+So a file named `upgrade.adoc` would become `upgrade.es.adoc` in the Spanish translation.
+
