@@ -168,7 +168,7 @@ image:Admin-OAuth2Clients-7.png[View a password grant client]
 [source,php]
 POST /api/oauth/access_token
 
-[[required-parameters]]
+[[required-parameters-1]]
 Required parameters
 ~~~~~~~~~~~~~~~~~~~
 
