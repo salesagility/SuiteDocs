@@ -1,0 +1,10 @@
+---
+title: Introduction
+weight: 1
+---
+
+:imagesdir: ./../../../../images/en/developer
+
+
+== Introduction
+SuiteCRM API version 8 exposes a set of resources, to be consumed by clients who wish to harness the powerful CRM functionality provided by SuiteCRM. The API framework employs a Restful design to facilitate the http://jsonapi.org/format/1.0/[JSON API 1.0] standard messages over HTTPS. It includes meta objects to provide functionality which is not yet defined in the JSON API 1.0 standard. The SuiteCRM API is secured by the OAuth 2 Server provided in SuiteCRM.
