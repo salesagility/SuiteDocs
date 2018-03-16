@@ -11,24 +11,24 @@ weight: 3
 === Apache2 Server
 
 Those who have upgraded from an older version of SuiteCRM, will need to
-run the "rebuild .htaccess" tool. As the API uses "friendly" urls to
+run the `rebuild .htaccess` tool. As the API uses "friendly" urls to
 define resources. It may be possible to use the API without this
 feature. However, you will want the .htaccess file to configure the
-_/api_ entrypoint to the _lib/API/public_ folder.
+`/api` entrypoint to the `lib/API/public` folder.
 
-*The Mod Rewrite Apache2 Module must be installed and configured*
+*The Mod Rewrite Apache2 Module must be installed and configured.*
 
 === IIS Server
 
 IIS Server Administrators will need create a web.config file manually
-configure the _/api_ entrypoint to the _lib/API/public_ folder.
+configure the `/api` entrypoint to the `lib/API/public` folder.
 
-*It is important to ensure that the lib/API/OAuth2/ directory cannot be
-accessed over a HTTP request*
+*It is important to ensure that the `lib/API/OAuth2/` directory cannot be
+accessed over a HTTP request.*
 
 === Configure Encryption Keys
-Provided that the file permissions enable your web server to write to lib/API/OAuth2/ folder, SuiteCRM will attempt
-to auto-generate the keys in this location.
+Provided that the file permissions enable your web server to write to `lib/API/OAuth2/` folder, 
+SuiteCRM will attempt to auto-generate the keys in this location.
 
 ==== Generating public and private keys manually
 
