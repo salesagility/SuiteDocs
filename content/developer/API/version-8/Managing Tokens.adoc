@@ -1,0 +1,17 @@
+---
+title: Managing Tokens
+weight: 5
+---
+
+:imagesdir: ./../../../../../images/en/developer
+
+
+The OAuth 2 admin panel displays which session have been successfully
+created.
+
+image:Admin-OAuth2Clients-3.png[Admin-OAuth2Clients-3.png,title="Admin-OAuth2Clients-3.png"]
+
+You can also revoke or end an active session by selected the session and
+then selecting "revoke token" in the action or bulk actions menu.
+
+image:Screenshot_20180215_130855.png[Screenshot_20180215_130855.png,title="Screenshot_20180215_130855.png"]
