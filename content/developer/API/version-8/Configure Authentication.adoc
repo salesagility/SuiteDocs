@@ -8,14 +8,14 @@ weight: 4
 :toc:
 :toclevels: 4
 
-= Configure Authentication: Obtaining A Session
+== Configure Authentication: Obtaining A Session
 
 The SuiteCRM API requires that a client has an active session to consume
 the API. Sessions are acquired by authenticating with the
 http://oauth2.thephpleague.com/[OAuth 2 Server], using one of the
 available grant types.
 
-= Configure Grant Types
+== Configure Grant Types
 Before you can consume the API, you must first configure SuiteCRM to
 grant access to a client. SuiteCRM 7.10 does provide an administrative
 panel, through which you can add clients and revoke tokens. To configure the grant types, select the admin panel, and then select OAuth2 Clients and Tokens:
