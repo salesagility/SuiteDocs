@@ -8,21 +8,21 @@ weight: 4
 :toc:
 :toclevels: 4
 
-== Configure Authentication: Obtaining A Session
+= Configure Authentication: Obtaining A Session
 
 The SuiteCRM API requires that a client has an active session to consume
 the API. Sessions are acquired by authenticating with the
 http://oauth2.thephpleague.com/[OAuth 2 Server], using one of the
 available grant types.
 
-== Configure Grant Types
+= Configure Grant Types
 Before you can consume the API, you must first configure SuiteCRM to
 grant access to a client. SuiteCRM 7.10 does provide an administrative
 panel, through which you can add clients and revoke tokens. To configure the grant types, select the admin panel, and then select OAuth2 Clients and Tokens:
 
 image:Admin-OAuth2Clients-3.png[Configure SuiteCRM API]
 
-=== Available Grant Types
+== Available Grant Types
 
 [width="50, cols="25,25",options="header",]
 |=======================================
@@ -33,7 +33,7 @@ image:Admin-OAuth2Clients-3.png[Configure SuiteCRM API]
 
 image:Admin-OAuth2Clients-4.png[Create a new grant]
 
-=== Client Credentials Grant
+== Client Credentials Grant
 
 A client credentials grant is the simplest of all of the grants types, this grant is used to authenticate a machine or service. Select new client credentials client:
 
@@ -62,7 +62,7 @@ client is saved.
 image:Admin-OAuth2Clients-5.png[View a Client Credentials Client]
 
 
-==== Authentication with Client Credentials
+=== Authentication with Client Credentials
 
 [source,php]
 POST /api/oauth/access_token
@@ -138,7 +138,7 @@ $header = array(
 );
 
 
-=== Password Grant
+== Password Grant
 
 A password grant is used for allow users to log into SuiteCRM with a
 username and a password. Select new password client:

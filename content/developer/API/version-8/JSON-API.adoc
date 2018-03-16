@@ -21,14 +21,14 @@ discoverability.
 http://www.iana.org/assignments/media-types/application/vnd.api+json[`application/vnd.api+json`]
 for exchanging data.
 
-=== Validating the messages
+== Validating the messages
 
 To validate messages, you can retrieve the JSON Schema file:
 
 [source,php]
 GET /api/v8/schema
 
-=== Content Negotiation
+== Content Negotiation
 
 Clients *MUST* send all JSON API data in request documents with the
 header `Content-Type: application/vnd.api+json` without any
@@ -56,7 +56,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 $output = curl_exec($ch);
 
-=== Handling Errors
+== Handling Errors
 
 The JSON API specifies the errors object to send messages back to the
 user. SuiteCRM API errors are exceptions which have been thrown. Errors are logged in suitecrm.log and posted back to the client application.
@@ -81,18 +81,18 @@ Tue Sep 26 13:51:17 2017 [697][1][FATAL] [ERROR] Code: [8006] Status: [409] Mess
  ]
 }
 
-=== Modules API
+== Modules API
 
 SuiteCRM offers access to modules resources.
 
-==== Available Modules
+=== Available Modules
 
 To get a list of modules you can use the following url: 
 
 [source,php]
 GET https://path-to-instance/api/v8/modules/meta/list
 
-==== List available modules
+=== List available modules
 
 To get a list of records use the following url:
 
@@ -128,7 +128,7 @@ https://path-to-instance/api/v8/modules/Accounts
   }`
 }
 
-==== Pagination
+=== Pagination
 
 SuiteCRM offers a offset-based strategy for pagination, a client MAY use
 the page[offset] and page[limit] parameter to request for pagination.
@@ -145,7 +145,7 @@ The following keys MUST be used for pagination links:
 Keys *MUST* either be omitted or have a null value to indicate that a
 particular link is unavailable.
 
-==== Sparse fieldset
+=== Sparse fieldset
 
 A client *MAY* request that an endpoint return only specific fields in the
 response on a per-type basis by including a fields[TYPE] parameter. The
@@ -155,7 +155,7 @@ value of the fields parameter MUST be a comma-separated (`U+002C COMMA,
 [source,php]
 GET https://path-to-instance/api/v8/Accounts?fields[Accounts]=name,date_created
 
-==== Sorting
+=== Sorting
 
 SuiteCRM offers sorting via the sort parameter.
 
@@ -168,14 +168,14 @@ descending order you simply add MINUS (-) in front of the attribute
 name. The value of the sort parameter MUST be a comma-separated (`U+002C
 COMMA, “,”`) list.
 
-==== Filtering
+=== Filtering
 
 The JSON Api (v1.0.0) does not specify which strategy to use when
 filtering, instead the *filter* query parameter is reserved for
 filtering. So this section attempts to describe the filtering strategy
 implemented in SuiteCRM.
 
-==== Pre-made Filters
+=== Pre-made Filters
 
 You can specify a pre-made filter like so
 
@@ -189,7 +189,7 @@ Example use the roi filter and sort by total_revenue in descending order
 [source,php] 
 GET /api/v8/modules/Leads?filter=roi&sort=-total_revenue
 
-==== Filter by id
+=== Filter by id
 
 If you need to retrieve a set of modules you can use the following call
 
@@ -204,7 +204,7 @@ To get a list of accounts with the id of 1, 2, and 3:
 [source,php]
 GET /api/v8/modules/Accounts?filter[Accounts]=1,2,3
 
-==== Filter by attributes
+=== Filter by attributes
 
 [source,php]
 GET /api/v8/modules/\{module}?filter[{type}.{attribute}]=[[{operator}]]{comparator},...
@@ -219,7 +219,7 @@ operation&#93;&#93;
 [source,php]
 GET /api/v8/modules/{module}?filter[Accounts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
 
-==== Filter relationships
+=== Filter relationships
 
 [source,php]
 GET /api/v8/modules/{module}?filter[{type}.{related type}.{attribute}]=[[{operator}]]{comparator},...
@@ -227,7 +227,7 @@ GET /api/v8/modules/{module}?filter[{type}.{related type}.{attribute}]=[[{operat
 [source,php]
 GET /api/v8/modules/Accounts?filter[Accounts.Contacts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
 
-==== Filter Middle Table fields
+=== Filter Middle Table fields
 
 [source,php]
 GET /api/v8/modules/{module}?filter[{type}.{related type}.meta.middle_table.{attribute}]=[[{operator}]]{comparator},...
@@ -242,7 +242,7 @@ operation&#93;&#93;
 [source,php]
 GET /api/v8/modules/Meetings?filter[Meetings.Users.meta.middle_table.accept_status]=[[eq]]Accept
 
-==== Operators
+=== Operators
 
 The operators are represented by string values, so that they are not
 encoded, plus it will make it easier to extend operations in the future.
@@ -285,7 +285,7 @@ This convention was taken from the
 https://docs.mongodb.com/manual/reference/operator/query/[MongoDb]
 syntax.
 
-==== Multiple Comparators vs Multiple Filters
+=== Multiple Comparators vs Multiple Filters
 
 When you need to create multiple conditions on a field, Due the length
 limitation of a url, it is recommended that you use the multiple
@@ -302,7 +302,7 @@ filters notation.
 [source,php]
 GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00&filter[Contacts.last_contacted]=[[lte]]2017-11-18T11:40:00+00:00
 
-==== List Recently Viewed Records
+=== List Recently Viewed Records
 
 List recently viewed records of the currently logged in user for all
 modules 
@@ -310,14 +310,14 @@ modules
 [source,php]
 GET /api/v8/modules/\{module}/viewed
 
-==== List Favourite Records
+=== List Favourite Records
 
 List favourite records of the currently logged in user for all modules
 
 [source,php]
 GET /api/v8/modules/\{module}/favorites
 
-==== Attribute Definitions
+=== Attribute Definitions
 
 To get the definitions of the attributes / fields. This is useful to get
 the constraints for each attribute
@@ -325,7 +325,7 @@ the constraints for each attribute
 [source,php]
 /api/v8/modules/\{module}/meta/attributes
 
-==== Get Language Strings
+=== Get Language Strings
 
 * *Module Strings* 
 [source,php]
@@ -335,7 +335,7 @@ GET /api/v8/modules/{module}/meta/language
 [source,php]
 GET /api/v8/modules/meta/languages
 
-==== Module Record
+=== Module Record
 
 To consume a record from a module, you can do the standard
 http://jsonapi.org/format/1.0/#crud[CRUD] operations
@@ -356,7 +356,7 @@ PUT /api/v8/modules/{module}/{id}
 [source,php]
 DELETE /api/v8/modules/{module}/{id}
 
-==== Related Module records
+=== Related Module records
 
 To consume a related module records, you can do the standard
 relationship
@@ -380,7 +380,7 @@ PUT /api/v8/modules/{module}/{id}/relationships/{link}
 [source,php]
 DELETE /api/v8/modules/{module}/{id}/relationships/{link}
 
-==== Inclusion of fields
+=== Inclusion of fields
 
 The filter only controls how the data is filtered. How the data is
 presented is handled separately. You can use the
@@ -390,7 +390,7 @@ http://jsonapi.org/format/1.0/#fetching-sparse-fieldsets[include] query
 parameter to select to include the related types you wish to be in the
 response.
 
-=== Files
+== Files
 
 To create notes and documents, you will need to be able to upload files. This uses fields which have the type set to "file". The SuiteCRM API expects the contents of the file to be assigned to the {fieldname}_file attribute. The contents must be a base64 encoded string. When requesting a note or a document, the API will decode the file in the same request.
 
@@ -426,7 +426,7 @@ To create notes and documents, you will need to be able to upload files. This us
   }
 }
 
-=== Relationship Fields
+== Relationship Fields
 
 To create a meeting, you need to provide the invitees and there accept status.
 
