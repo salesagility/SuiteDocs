@@ -1,0 +1,30 @@
+---
+Title: Exceptions and Localization
+---
+
+LangException class
+-------------------
+
+Extension for PHP standar Exception with an extra LangText parameter, tipically use case to send messages to users too.
+
+Usage
+~~~~~
+
+[source, php]
+--
+try {
+
+  // throw new LangException with located exception message:
+  thow new LangException('Exception message for developers', EXCEPTION_CODE, null, new LangText('LBL_TRANSLATABLE_USER_MESSAGE'));
+  
+} catch (LangException $e) {
+
+  // using loger to inform the developer about the exception
+  $log = LoggerManager::getLoger();  
+  $log->fatal('Exception happend in the example: ' . $e->getMessage() . ', code: ' . $e->getCode());
+  
+  // using SugarApplication to inform the user about the problem with translated message:
+  SugarApplication::appendErrorMessage($e->getLangMessage());
+}
+
+--
