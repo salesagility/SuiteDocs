@@ -2,7 +2,7 @@
 Title: JSON API Error Object
 ---
 
-= JsonApiErrorObject class
+== JsonApiErrorObject class
 
 Implementation of JSON API Error Object Specification. 
 See more: http://jsonapi.org/format/#error-objects[^]
