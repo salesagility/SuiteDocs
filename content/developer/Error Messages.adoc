@@ -2,13 +2,11 @@
 title: "Error Messages"
 ---
 
-ErrorMessage class
-------------------
+= ErrorMessage class
 
 Helper class for using log error messages.
 
-Usage
-~~~~~
+== Usage
 
 [source, php]
 --
