@@ -2,8 +2,10 @@
 title: "Error Messages"
 ---
 
-Error Messages
---------------
+ErrorMessage class
+------------------
+
+Helper class for using log error messages.
 
 Usage
 ~~~~~
@@ -17,6 +19,6 @@ ErrorMessage::log('An error occured for some reason');
 ErrorMessage::log('It\'s a debug message, only in debug level', 'debug');
 
 // critical error messages can throw an exception
-const OPTIONAL_ERROR_CODE = 1234;
-ErrorMessage::drop('Critical error occured for some reason', OPTIONAL_ERROR_CODE);
+const OPTIONAL_EXCEPTION_CODE = 1234;
+ErrorMessage::drop('Critical error occured for some reason', OPTIONAL_EXCEPTION_CODE); // throws new ErrorMessageException
 --
