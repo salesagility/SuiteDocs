@@ -1,0 +1,22 @@
+---
+title: "Error Messages"
+---
+
+Error Messages
+--------------
+
+Usage
+~~~~~
+
+[source, php]
+--
+// simply add an error message
+ErrorMessage::log('An error occured for some reason');
+
+// using different error level
+ErrorMessage::log('It\'s a debug message, only in debug level', 'debug');
+
+// critical error messages can throw an exception
+const OPTIONAL_ERROR_CODE = 1234;
+ErrorMessage::drop('Critical error occured for some reason', OPTIONAL_ERROR_CODE);
+--
