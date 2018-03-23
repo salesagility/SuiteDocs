@@ -17,7 +17,7 @@ Usage
 // creating a new Error Object:
 $error = new JsonApiErrorObject();
 
-// set some know data about the error:
+// set some known data about the error:
 $error->setTitle(new LangText('LBL_ERROR_LABEL_TITLE'));
 $error->setDetail(new LangText('LBL_ERROR_LABEL_DETAIL'));
 $error->setCode(ERROR_CODE);
