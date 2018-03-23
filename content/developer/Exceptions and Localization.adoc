@@ -5,7 +5,7 @@ Title: Exceptions and Localization
 LangException class
 -------------------
 
-Extension for PHP standar Exception with an extra LangText parameter, tipically use case sending messages to users too.
+Extension for PHP standard Exception with an extra LangText parameter, typical use case sending messages to users too.
 
 Usage
 ~~~~~
@@ -22,7 +22,7 @@ try {
 } catch (LangException $e) {
 
   // using logger to inform the developer about the exception
-  $log = LoggerManager::getLoger();  
+  $log = LoggerManager::getLogger();  
   $log->fatal('Exception happend in the example: ' . $e->getMessage() . ', code: ' . $e->getCode());
   
   // using SugarApplication to inform the user about the problem with translated message:

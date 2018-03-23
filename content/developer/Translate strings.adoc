@@ -12,7 +12,7 @@ Usage
 
 [source,php]
 --
-// example string definition (only for understansing the next examples):
+// example string definition (only for understanding the next examples):
 $app_strings['LBL_EXAMPLE_APP_STR'] = 'Example Application String';
 $mod_strings['LBL_EXAMPLE_MOD_STR'] = 'Example string for a specified module';
 $mod_strings['LBL_EXAMPLE_VARIABLE'] = 'Example string to use value of {foo}';
