@@ -2,13 +2,11 @@
 Title: Translate strings
 ---
 
-LangText class
---------------
+== LangText class
 
 Helper class to translate strings.
 
-Usage
-~~~~~
+== Usage
 
 [source,php]
 --
