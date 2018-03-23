@@ -2,7 +2,7 @@
 Title: Exceptions and Localization
 ---
 
-= LangException class
+== LangException class
 
 Extension for PHP standard Exception with an extra LangText parameter, typical use case sending messages to users too.
 
