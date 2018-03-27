@@ -350,7 +350,7 @@ GET /api/v8/modules/{module}/{id}
 
 * *Update* 
 [source,php]
-PUT /api/v8/modules/{module}/{id}
+PATCH /api/v8/modules/{module}/{id}
 
 * *Delete* 
 [source,php]
@@ -374,7 +374,7 @@ GET /api/v8/modules/{module}/{id}/relationships/{link}
 
 * *Update*
 [source,php] 
-PUT /api/v8/modules/{module}/{id}/relationships/{link}
+PATCH /api/v8/modules/{module}/{id}/relationships/{link}
 
 * *Delete* 
 [source,php]
