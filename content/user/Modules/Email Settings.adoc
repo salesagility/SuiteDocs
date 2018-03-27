@@ -86,7 +86,7 @@ image:291EmailsSystemEmailOptions.png[Email options]
 [cols = "40, 60", frame = "none", grid = "none"]
 |===
 |*Assignment Notifications*| When selected, users will be emailed when a record is assigned to them.
-|*Send notification from assigning user's email address*|Where the mail server supports this, the assigning user's name and email address will be included in the From field of the notification email. Otherwise the default system outbound account will be used.
+|*Send notification from the email address of the assigning user*|Where the mail server permits this, the assigning user's name and email address will be included in the From field of the notification email. Otherwise the default system outbound account will be used.
 |*Email Security Settings*|Tags selected here will be stripped from inbound email and will not be displayed in the *Emails* module.
 |===
 
