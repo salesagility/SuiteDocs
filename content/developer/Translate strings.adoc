@@ -1,0 +1,34 @@
+---
+Title: Translate strings
+---
+
+== LangText class
+
+Helper class to translate strings.
+
+== Usage
+
+[source,php]
+--
+// example string definition (only for understanding the next examples):
+$app_strings['LBL_EXAMPLE_APP_STR'] = 'Example Application String';
+$mod_strings['LBL_EXAMPLE_MOD_STR'] = 'Example string for a specified module';
+$mod_strings['LBL_EXAMPLE_VARIABLE'] = 'Example string to use value of {foo}';
+
+
+// Using translation for any strings
+$text = new LangText('LBL_EXAMPLE_APP_STR');
+echo $text;
+
+// Using translation for any strings with replaced strings values
+$text = new LangText('LBL_EXAMPLE_VARIABLE', ['foo' => 'bar']);
+echo $text; // output: Example string to use value of bar
+
+// Using translation only for Module Strings
+$text = new LangText('LBL_EXAMPLE_MOD_STR', null, LangText::USING_MOD_STRINGS);
+echo $text;
+
+// Using translation only for Application Strings
+$text = new LangText('LBL_EXAMPLE_APP_STR', null, LangText::USING_APP_STRINGS);
+echo $text;
+--
