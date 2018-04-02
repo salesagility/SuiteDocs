@@ -6,6 +6,8 @@ Title: Translate strings
 
 Helper class to translate strings.
 
+{{%notice note %}}This documentation refers to *SuiteCRM* version 7.10.3 onwards{{% /notice %}}
+
 == Usage
 
 [source,php]
