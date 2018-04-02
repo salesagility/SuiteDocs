@@ -6,6 +6,8 @@ title: "Error Messages"
 
 Helper class for using log error messages.
 
+{{%notice note %}}This documentation refers to *SuiteCRM* version 7.10.3 onwards{{% /notice %}}
+
 == Usage
 
 [source, php]
