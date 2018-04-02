@@ -7,6 +7,8 @@ Title: JSON API Error Object
 Implementation of JSON API Error Object Specification. 
 See more: http://jsonapi.org/format/#error-objects[^]
 
+{{%notice note %}}This documentation refers to *SuiteCRM* version 7.10.3 onwards{{% /notice %}}
+
 == Usage
 
 [source,php]
