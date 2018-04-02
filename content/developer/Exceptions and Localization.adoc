@@ -6,6 +6,8 @@ Title: Exceptions and Localization
 
 Extension for PHP standard Exception with an extra LangText parameter, typical use case sending messages to users too.
 
+{{%notice note %}}This documentation refers to *SuiteCRM* version 7.10.3 onwards{{% /notice %}}
+
 == Usage
 
 [source, php]
