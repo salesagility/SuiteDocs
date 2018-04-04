@@ -839,7 +839,7 @@ select::-ms-expand {
 	width:100%;
 }
 
-#home-title h1 {
+h1.home-title {
 	float:left;
 	width:100%;
 	background-image: url('../images/home-title-h1-bg.png');
