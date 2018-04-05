@@ -111,7 +111,7 @@ The arguments to the REST API calls are:
 
 `method`::
   The method which will be called, i.e. `login` or `get_entry_list`. See
-  link:../appendix-b---api-methods#appendix-b[Appendix B] for a list of API methods.
+  link:../../appendix-b---api-methods#appendix-b[Appendix B] for a list of API methods.
 `input_type`::
   The input type of the rest_data. This is usually `JSON` but can also
   be `Serialize`.
@@ -205,7 +205,7 @@ print_r($result);
 
 
 For a full list of API methods and their arguments see
-link:../appendix-b---api-methods#appendix-b[Appendix B].
+link:../../appendix-b---api-methods#appendix-b[Appendix B].
 
 == Adding custom API methods
 
