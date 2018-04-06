@@ -94,11 +94,14 @@ Click btn:[SAVE] to retain your settings.
 
 == Personal Email Account Settings
 
-Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless manually link:../../core-modules/emails/#_import_mail[imported]. 
+Setting up a personal email account in *SuiteCRM* allows the user to view personal mail accounts within 
+the *Emails* module. Emails from personal mailboxes are not stored in the *SuiteCRM* database unless 
+manually link:../../core-modules/emails/#_import_mail[imported]. 
 Settings for personal email accounts are held within the user's profile. 
 
 {{% notice note %}}
-Individual users can set up their own personal accounts. Administrators can set up personal accounts for other users from the User Management section of the Admin panel.
+Individual users can set up their own personal accounts. Administrators can set up personal accounts 
+for other users from the User Management section of the Admin panel.
 {{% /notice %}}
 
 [discrete]
@@ -107,12 +110,20 @@ Open the user profile and scroll to the bottom of the main *User Profile tab* to
 
 image:270Emailusersettings.png[User Email Settings]
 
-* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. Where you have more than one email address, you can specify which is the main address for your account using the *Primary* radio button. You can also specify which account to use as the Reply-to account.
-* *Email Client* - This setting controls which editor is used to compose and send mail when you click on an email link in SuiteCRM, for example an email address on a contact or account record.
+* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. 
+Where you have more than one email address, you can specify which is the main address for your account 
+using the *Primary* radio button. 
+You can also specify which account to use as the Reply-to account.
+* *Email Client* - This setting controls which editor is used to compose and send mail when you click on 
+an email link in SuiteCRM, for example an email address on a contact or account record.
 	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
 	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
 
-* *Email Editor* - This allows you to set the editor used when creating and editing link:../../core-modules/emails#_email_templates[email templates] and also within the link:../../core-modules/campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
+* *Email Editor* - This allows you to set the editor used when creating and 
+editing link:../../core-modules/emails#_email_templates[email templates] and also within the 
+link:../../core-modules/campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect 
+the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
+Available options are *Mozaik*, *TinyMCE* and *Direct HTML*.
 
 [discrete]
 === Adding A Personal Mail Account
