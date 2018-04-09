@@ -267,7 +267,8 @@ for fields!
 image:217Add_parameter.png[title="Adding Parameters"]
 
 The identifier is used to reference this field when the user creates the
-formula. For example all appearances of the \{P0} identifier will be
+formula. For example all appearances of the 
+{P0} identifier will be
 replaced with the Account’s name in the formula. All parameters are like
 \{Px} where x is the sequential order of the parameter. The amount of
 the parameters is not limited.
@@ -915,7 +916,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=====================================================
 
-|*Signature* |\{date(format; timestamp)}
+|*Signature* | \{date(format; timestamp)}
 
 .2+|*Parameters* |format: format text |timestamp: date/time value
 
@@ -923,7 +924,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |*timestamp* in the given *format*
 
-|*Example call* |\{date(ymd; 2016-02-11)} returns 160211
+|*Example call* | \{date(ymd; 2016-02-11)} returns 160211
 |=====================================================
 
 ===== now
@@ -931,7 +932,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=============================================================
 
-|*Signature* |\{now(format)}
+|*Signature* | \{now(format)}
 
 |*Parameters* |format: format text
 
@@ -939,7 +940,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Current date/time in the given *format*
 
-|*Example call* |\{now(Y-m-d H:i:s)} returns 2016-04-29 15:08:03
+|*Example call* | \{now(Y-m-d H:i:s)} returns 2016-04-29 15:08:03
 |=============================================================
 
 ===== yesterday
@@ -947,7 +948,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |===================================================================
 
-|*Signature* |\{yesterday(format)}
+|*Signature* | \{yesterday(format)}
 
 |*Parameters* |format: format text
 
@@ -955,7 +956,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Yesterday’s date/time in the given *format*
 
-|*Example call* |\{yesterday(Y-m-d H:i:s)} returns 2016-04-28 15:08:03
+|*Example call* | \{yesterday(Y-m-d H:i:s)} returns 2016-04-28 15:08:03
 |===================================================================
 
 ===== tomorrow
