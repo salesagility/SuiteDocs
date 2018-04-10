@@ -26,7 +26,7 @@ export INSTANCE_CLIENT_SECRET=$INSTANCE_CLIENT_SECRET;
 
 if [ -f $HOME/.bash_aliases ]
 then echo "found aliases";
-else touch $HOME/.bash_aliasesa;
+else touch $HOME/.bash_aliases;
 fi;
 
 if grep -q "source $HOME/.codecept.sh" ~/.bash_aliases;
