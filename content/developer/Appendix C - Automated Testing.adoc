@@ -136,7 +136,7 @@ You can automate different development environments using environment variables.
 |=======================================================================
 | Variable | Description
 
-| INSTANCE_URL |Url of the SuiteCRM which  the tester need to access
+| INSTANCE_URL |URL of the SuiteCRM instance which  the tester need to access
 | INSTANCE_ADMIN_USER |admin user for logging in
 | INSTANCE_ADMIN_PASSWORD |admin password for logging in
 |=======================================================================
