@@ -188,7 +188,7 @@ setx INSTANCE_CLIENT_SECRET "secret"
 
 . Open terminal and run
 [source,shell]
-./codecept.bat
+codecept.bat
 
 ==== Setup environment variables (Docker Compose):
 

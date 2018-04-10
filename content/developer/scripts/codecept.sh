@@ -10,7 +10,7 @@ export INSTANCE_ADMIN_PASSWORD=admin
 export INSTANCE_CLIENT_ID=suitecrm_client
 export INSTANCE_CLIENT_SECRET=secret
 
-# Saves it perminal
+# Saves it perminantly
 echo "
 export DATABASE_DRIVER=$DATABASE_DRIVER;
 export DATABASE_NAME=$DATABASE_NAME;
