@@ -77,7 +77,7 @@ Required parameters
 |grant_type |client_credentials
 |client_id |*ExampleClientName*
 |client_secret |*ExampleSecretPassword*
-|scope |basic
+|scope | standard:create standard:read standard:update standard:delete standard:delete standard:relationship:create standard:relationship:read standard:relationship:update standard:relationship:delete
 |======================================
 
 
@@ -92,7 +92,7 @@ $postStr = json_encode(array(
     'grant_type' => 'client_credentials',
     'client_id' => '3D7f3fda97-d8e2-b9ad-eb89-5a2fe9b07650',
     'client_secret' => 'client_secret',
-    'scope' => ''
+    'scope' => 'standard:create standard:read standard:update standard:delete standard:delete standard:relationship:create standard:relationship:read standard:relationship:update standard:relationship:delete'
 ));
 $url = 'https://path-to-instance/api/oauth/access_token';
 curl_setopt($ch, CURLOPT_URL, url);
@@ -178,7 +178,7 @@ Required parameters
 |grant_type |password
 |client_id |*ExampleClientName*
 |client_secret |*ExampleSecretPassword*
-|scope |basic
+|scope | standard:create standard:read standard:update standard:delete standard:delete standard:relationship:create standard:relationship:read standard:relationship:update standard:relationship:delete
 |username |*admin*
 |password |*secret*
 |======================================
@@ -199,7 +199,7 @@ $postStr = json_encode(array(
     'client_secret' => 'client_secret',
     'username' => 'admin',
     'password' => 'admin',
-    'scope' => ''
+    'scope' => 'standard:create standard:read standard:update standard:delete standard:delete standard:relationship:create standard:relationship:read standard:relationship:update standard:relationship:delete'
 ));
 $url = 'https://path-to-instance/api/oauth/access_token';
 curl_setopt($ch, CURLOPT_URL, url);
