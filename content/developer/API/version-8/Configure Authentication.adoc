@@ -77,7 +77,7 @@ Required parameters
 |grant_type |client_credentials
 |client_id |*ExampleClientName*
 |client_secret |*ExampleSecretPassword*
-|scope |basic
+|scope | standard:create standard:read standard:update standard:delete standard:delete standard:relationship:create standard:relationship:read standard:relationship:update standard:relationship:delete
 |======================================
 
 
@@ -178,7 +178,7 @@ Required parameters
 |grant_type |password
 |client_id |*ExampleClientName*
 |client_secret |*ExampleSecretPassword*
-|scope |basic
+|scope | standard:create standard:read standard:update standard:delete standard:delete standard:relationship:create standard:relationship:read standard:relationship:update standard:relationship:delete
 |username |*admin*
 |password |*secret*
 |======================================
