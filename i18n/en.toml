@@ -58,8 +58,81 @@ other = "Community"
 [TechnicalBlog]
 other = "Technical Blog"
 
+[From-technical-blog]
+other = "From Our Technical Blog"
 
+[LatestPosts]
+other = "Latest Posts"
 
+[GettingStarted]
+other = "Getting Started"
 
+[Installing]
+other = "Installing"
 
+[Upgrading]
+other = "Upgrading"
+
+[An-existing-installation]
+other = " an existing SuiteCRM installation"
+
+[Add-features-with]
+other = "Add features with "
+
+[3rdPartyAdd-Ons]
+other ="3rd party add-ons"
+
+[Using-SuiteCRM]
+other = "Using SuiteCRM"
+
+[Learn-the]
+other = "Learn the"
+
+[UserInterface]
+other = "User Interface"
+
+[Understand-the]
+other = "Understand the"
+
+[CoreModules]
+other = "Core Modules"
+
+[Its-open-source]
+other = "It's open source and"
+
+[Developers]
+other = "Developers"
+
+[Customize-all-the-code]
+other = "customize all the code!"
+
+[Contribute]
+other = "Contribute"
+
+[Learn-how-to]
+other = "Learn how to "
+
+[Edit-a-page]
+other = "Edit a Page"
+
+[In-this-site]
+other = " in this site"
+
+[Report-an]
+other = "Report an "
+
+[Issue]
+other = "Issue"
+
+[About-a-page]
+other = " about a page"
+
+[Code]
+other = "Code"
+
+[RecentlyEdited]
+other = "Recently Edited"
+
+[DocumentationPages]
+other = "Documentation Pages"
 

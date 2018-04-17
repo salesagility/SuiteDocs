@@ -1,5 +1,5 @@
-<h2>Latest Posts</h2>
-<h4 class="hd">from our Technical Blog</h4>
+<h2>{{ T "LatestPosts" }}</h2>
+<h4 class="hd">{{ T "FromTechnicalBlog" }}</h4>
 
 <div class="blog_wrap">
 {{ range first 3 ( sort (where .Data.Pages "Section" "blog") "Date" "desc" ) }}
