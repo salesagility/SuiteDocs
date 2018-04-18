@@ -537,8 +537,23 @@ See at `SuiteCRM\StateCheckerConfig` class.
 === State safe tests
 about `StateSaver` and `StateChecker`
 
+- State check library for SuperGlobals, FileSystem and DataBase etc.
+  (Implemented for: PHP Unit tests and Codeception Cests.)
+
+- State saver library - helper classes for developers.
+
 *Keep clean the system global environment state, especially in tests.* +
 If a test leaves some extra data in the database, file system or super globals etc. could change the behaviore of the other test processes. When you wrote a new test make sure it *state safe*, which means tests should not leaves any 'garbage' data in the test environment state such as database, file system, superglobals etc..
+
+- Check System State
+
+Unit test should be stateless, developers can change `class StateCheckerConfig` properties in local instance to make sure Unit tests don't change the system-state.
+
+PHPUnit test have to `extends SuiteCRM\StateCheckerPHPUnitTestCaseAbstract` instead `PHPUnit_Framework_TestCase`.
+
+Codeception Cests should extends `SuiteCRM\StateCheckerCestAbstract` class. 
+(note: don't forget to call parent::_before() and parent::_after() if you want to override these methods in your tests)
+
 
 The following classes helps you to write state-safe code (tests), of course some of these classes you can use in any case when you have to change and restore anything in the global system state:
 
@@ -603,6 +618,113 @@ $stateSaver->pushTable('stufftable');
 $stateSaver->popTable('stufftable');
 
 // here your database table 'stufftable' restored.
+
+--
+
+
+ - Examples for Check System State in Tests:
+
+
+Example output, when the test redefine superglobals:
+
+for e.g:
+
+       `$_POST['foo'] = 'bar';`
+
+output:
+[source]
+--
+"/usr/bin/php" "/var/www/html/SuiteCRM/vendor/bin/codecept" "run" "unit" "-f" "--steps" "-vvv" "--debug"
+Cannot load Xdebug - extension already loaded
+Codeception PHP Testing Framework v2.4.0
+Powered by PHPUnit 4.8.36 by Sebastian Bergmann and contributors.
+
+Unit Tests (1583) --------------------------------------------------------------
+Modules: Asserts, \Helper\Unit
+--------------------------------------------------------------------------------
+- configTest: Test_config
+✖ configTest: Test_config (16.57s)
+--------------------------------------------------------------------------------
+
+
+Time: 29.52 seconds, Memory: 2288.50MB
+
+There was 1 failure:
+
+---------
+1) configTest: Test_config
+ Test  tests/unit/configTest.php:test_config
+Incorrect state hash: Hash doesn't match at key "globals::_POST"
+...
+--
+
+Example 2: file changed:
+
+
+        `file_put_contents('foo.txt', rand(0, 1234));`
+
+output:
+[source]
+--
+"/usr/bin/php" "/var/www/html/SuiteCRM/vendor/bin/codecept" "run" "unit" "-f" "--steps" "-vvv" "--debug"
+Cannot load Xdebug - extension already loaded
+Codeception PHP Testing Framework v2.4.0
+Powered by PHPUnit 4.8.36 by Sebastian Bergmann and contributors.
+
+Unit Tests (1583) --------------------------------------------------------------
+Modules: Asserts, \Helper\Unit
+--------------------------------------------------------------------------------
+- configTest: Test_config
+✖ configTest: Test_config (10.79s)
+--------------------------------------------------------------------------------
+
+
+Time: 23.12 seconds, Memory: 1875.00MB
+
+There was 1 failure:
+
+---------
+1) configTest: Test_config
+ Test  tests/unit/configTest.php:test_config
+Incorrect state hash: Hash doesn't match at key "filesys::/var/www/html/SuiteCRM/foo.txt".
+...
+--
+
+ - Example usage for System State Saver in test scripts:
+
+StateSaver class is a helper library, typically for test scripts but usable everywhere:
+
+[source,php]
+--
+	// Save state 
+
+        // Create an instance of StateChecker
+        $state = new \SuiteCRM\StateSaver();
+        $state->pushGlobals();    // saving superglobals
+        $state->pushTable('your_module_stuffs'); // saving a database table
+        $state->pushFile('your_file.txt');
+
+        // Tests 
+
+	// Do some test changes in superglobals
+        $_POST['foo'] = 'bar';
+
+        // Test changes in database tables (example only)
+        $stuff = BeanFactory::getBean('YourModuleStuff', '{your-module-stuff-id}');
+        $stuff->your_property = 'baz';
+        $stuff->save();
+
+        // Some changes in your test file:
+        file_put_contents('your-file.txt', 'New contents here: ' . rand(1, 10000));
+        
+
+        // Clean up 
+        
+        $state->popFile('your_file.txt');
+        $state->popTable('your_module_stuffs');  // restore table
+        $state->popGlobals();  // restore globals
+
+        // ... here you should get the restored super globals, database tables and files.
 
 --
 
