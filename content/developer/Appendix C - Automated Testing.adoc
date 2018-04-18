@@ -374,6 +374,870 @@ using the following command:
 `codecept run demo --env browser-stack-hub,browser-stack-local,browser-stack-chrome-fhd`
 
 
+
+== Writing and Running test
+
+
+=== PHPUnit tests
+
+PHPUnit test are related to a unit you are testing. The path of the tests is identical to the path of the unit inside the `tests/...` folder. Each Unit test class has a suffix `...Test` and should extends the `SuiteCRM\StateCheckerPHPUnitTestCaseAbstract` class. Test methods prefix is `test...`.
+
+For e.g.: the `/path/to/Example.php` contains a `class Example` then the related test should be in the `tests/path/to/ExampleTest.php`: + 
+
+
+*Example for a PHPUnit test*
+
+contents of `tests/path/to/ExampleTest.php`:
+
+[source,php]
+--
+
+use SuiteCRM;
+
+// note: SuiteCRM\StateCheckerPHPUnitTestCaseAbstract extends PHPUnit_Framework_TestCase;
+
+class ExampleTest extends StateCheckerPHPUnitTestCaseAbstract {
+    
+    public function testDoingSomething() {
+        $example = new Example();
+        $results = $example->goSomthing();
+        $this->assertSame('expected value', $results);
+    }
+    
+}
+
+--
+
+See more about PHPUnit tests:
+https://phpunit.readthedocs.io
+  
+
+  
+=== Codeception Unit tests
+
+Codeception also support unit test based on PHPUnit framework.
+see more about Codeception unit tests:
+https://codeception.com/docs/05-UnitTests
+
+*Example for a Codeception Unit test*
+
+[source,php]
+--
+
+use SuiteCRM;
+
+// note: SuiteCRM\StateCheckerUnitAbstract extends \Codeception\Test\Unit;
+
+
+class ExampleTest extends StateCheckerUnitAbstract
+{
+    public function testDoingSomething()
+    {
+        $example = new Example();
+        $results = $example->goSomthing();
+        $this->assertSame('expected value', $results);
+    }
+}
+
+--
+
+
+
+=== Codeception Functional and Acceptance tests
+
+Implementation of state safe functional and acceptance test.
+
+*Example for a Functional and/or Acceptance tests*
+
+[source,php]
+--
+
+use SuiteCRM;
+
+class SigninCest extends StateCheckerCestAbstract
+{
+    public function tryToTest(AcceptanceTester $I)
+    {
+        $I->wantTo('test my page');
+    }
+}
+
+--
+
+---
+
+*Test classes:*
+
+ - abstract class `SuiteCRM\StateCheckerPHPUnitTestCaseAbstract`
+
+Implementation of state checker Codeception tests, class StateCheckerPHPUnitTestCaseAbstract extends PHPUnit_Framework_TestCase and override setUp() and tearDown() methods so if you want to call these methods in the heritance test classes you should call parent::setUp() and parent::tearDown() in it.
+
+
+---
+
+ - abstract class `SuiteCRM\StateCheckerUnitAbstract`
+
+Implementation of state checker Codeception tests, class StateCheckerUnitAbstract extends Codeception\Test\Unit and override _before() and _after() methods so if you want to call these methods in the heritance test classes you should call parent::_before() and parent::_after() in it.
+
+
+---
+
+ - abstract class `SuiteCRM\StateCheckerCestAbstract`
+
+Implementation of state checker Codeception tests, it is using _before() and _after() methods so if you want to call these methods in the heritance test classes you should call parent::_before() and parent::_after() in it.
+
+
+---
+
+ - trait `SuiteCRM\StateCheckerCodeceptionTrait`
+
+Using in state checker Codeception tests.
+
+
+---
+
+ - trait `SuiteCRM\StateCheckerTrait`
+
+Using in state checker tests.
+
+
+---
+
+ - Running all unit tests class:
+
+`$ vendor/bin/codecept run unit -f --steps -vvv --debug`
+
+
+ - Running only one unit tests class:
+
+`$ vendor/bin/codecept run unit -f --steps -vvv --debug /path/to/YourTest.php`
+
+
+ - Running unit tests state check per classes
+
+By default the state checker tests store and check the system state only before and after the test classes. + 
+You can manipulate this behavior in your `config_override.php` with + 
+`$sugar_config['state_checker']['test_state_check_mode']` value OR + 
+just simply switch on/off the developer mode in administration panel. + 
+See more at `class SuiteCRM\StateCheckerConfig`
+
+
+ - Running unit tests state check per methods
+
+Slow working but give a detailed information about which test method change the state in the class. + 
+You can manipulate this behavior in your `config_override.php` with + 
+`$sugar_config['state_checker']['test_state_check_mode']` value OR + 
+just simply switch on/off the developer mode in administration panel. + 
+See more at `class SuiteCRM\StateCheckerConfig`
+
+ - Cofiguration of state checker tests
+See at `SuiteCRM\StateCheckerConfig` class.
+
+
+=== State safe tests
+about `StateSaver` and `StateChecker`
+
+*Keep clean the system global environment state, especially in tests.* +
+If a test leaves some extra data in the database, file system or super globals etc. could change the behaviore of the other test processes. When you wrote a new test make sure it *state safe*, which means tests should not leaves any 'garbage' data in the test environment state such as database, file system, superglobals etc..
+
+The following classes helps you to write state-safe code (tests), of course some of these classes you can use in any case when you have to change and restore anything in the global system state:
+
+
+
+
+
+
+---
+
+ - class `SuiteCRM\StateSaver`
+
+Save and check the system state and reports you about any state change in the following: + 
+
+- Database
+- File system
+- Super globals
+- PHP error reporting level
+- PHP configuration options
+
+See more at the `SuiteCRM\StateChecker` class.
+
+ - Examples for storing superglobals:
+
+[source,php]
+--
+
+use SuiteCRM;
+
+$_POST['foo'] = 'bar';
+
+// create a new instane of StateChecker:
+$stateSaver = new StateSaver();
+
+// save all superglobals
+$stateSaver->pushGlobals();
+
+$_POST['foo'] = 'bazz';
+
+// restore super globals
+$stateSaver->popGlobals();
+
+echo $_POST['foo']; // output: bar
+
+--
+
+
+ - Examples for storing database tables:
+
+[source,php]
+--
+
+use SuiteCRM;
+
+// create a new instane of StateChecker:
+$stateSaver = new StateSaver();
+$stateSaver->pushTable('stufftable');
+
+// modify your database table here. (insert/update/delete..)
+...
+
+$stateSaver->popTable('stufftable');
+
+// here your database table 'stufftable' restored.
+
+--
+
+
+ - Available methods:
+
+Error Collection:
+ 
+[source, php]
+--
+    
+    /**
+     * Retrieve if any error occurred in storing/restoring processes.
+     *
+     * @return array
+     */
+    public function getErrors();
+--
+[source, php]
+--
+    /**
+     * Clear all collected error information about latest storing/restoring processes.
+     */
+    public function clearErrors();
+--
+[source, php]
+--
+    
+    /**
+     * Retrieve if any error occurred in storing/restoring processes and
+     * clear all collected error information about latest storing/restoring processes.
+     *
+     * @return array
+     */
+    public function getErrorsClear();
+--
+
+Push/pop stack storeage:
+
+[source, php]
+--
+
+    /**
+     * Save any value into state store at a key and namespace.
+     *
+     * @param mixed $value
+     * @param string $key
+     * @param string $namespace
+     */
+    public function push($value, $key, $namespace);
+--
+[source, php]
+--
+    
+    /**
+     * Restore any value from state store at a key and namespace.
+     *
+     * @param string $key
+     * @param string $namespace
+     * @return mixed
+     */
+    public function pop($key, $namespace);
+--
+[source, php]
+--
+    
+    /**
+     * Save a global variable into storage at an optional namespace.
+     *
+     * @param string $key
+     * @param string $namespace
+     */
+    public function pushGlobal($key, $namespace = 'GLOBALS');
+--
+[source, php]
+--
+    
+    /**
+     * Restore a global value from storage at an optional namespace.
+     *
+     * @param string $key
+     * @param string $namespace
+     */
+    public function popGlobal($key, $namespace = 'GLOBALS');
+--
+[source, php]
+--
+    
+    /**
+     * Save all super globals which are specified in configuration.
+     * @see StateCheckerConfig
+     *
+     * pushGlobals
+     */
+    public function pushGlobals();
+--
+[source, php]
+--
+    
+    /**
+     * Restore all super globals which are specified in configuration.
+     * @see StateCheckerConfig
+     *
+     * popGlobals
+     */
+    public function popGlobals();
+--
+[source, php]
+--
+    
+    /**
+     * Save all defined global variable name.
+     * (note: this function does not store the values, so use it carefully)
+     *
+     * pushGlobalKeys
+     */
+    public function pushGlobalKeys();
+--
+[source, php]
+--
+    
+    /**
+     * Restore all defined global variable name.
+     * (note: this function does not restore the values, so use it carefully)
+     *
+     * popGlobalKeys
+     */
+    public function popGlobalKeys();
+--
+[source, php]
+--
+    
+    /**
+     * Save Error Reporting Level into the store at an optional key and namespace.
+     * (note: error level should not be changed for any reason, so use it for own risk)
+     *
+     * @param string $key
+     * @param string $namespace
+     */
+    public function pushErrorLevel($key = 'level', $namespace = 'error_reporting');
+--
+[source, php]
+--
+    
+    /**
+     * Restore Error Reporting Level from the store at an optional key and namespace.
+     * (note: error level should not be changed for any reason, so use it for own risk)
+     *
+     * @param string $key
+     * @param string $namespace
+     */
+    public function popErrorLevel($key = 'level', $namespace = 'error_reporting');
+--
+[source, php]
+--
+    
+    /**
+     * Save all data from a database table into store at an optional namespace.
+     *
+     * @param string $table
+     * @param string $namespace
+     * @throws StateSaverException
+     */
+    public function pushTable($table, $namespace = 'db_table');
+--
+[source, php]
+--
+    
+    /**
+     * Restore all data into a database table from store at an optional namespace.
+     *
+     * @param string $table
+     * @param string $namespace
+     */
+    public function popTable($table, $namespace = 'db_table');
+--
+
+File system
+
+[source, php]
+--
+    
+    /**
+     * Save a file contents.
+     *
+     * @param string $filename
+     * @throws StateSaverException
+     */
+    public function pushFile($filename);
+--
+[source, php]
+--
+    
+    /**
+     * Restore a file contents.
+     *
+     * @param string $filename
+     * @return boolean
+     * @throws StateSaverException
+     */
+    public function popFile($filename);
+--
+
+PHP Configuration options:
+
+[source, php]
+--
+    
+    /**
+     * Getter for PHP Configuration Options
+     * @see more at StateCheckerConfig::$phpConfigOptionKeys
+     * 
+     * @return array
+     */
+    public static function getPHPConfigOptions();
+--
+[source, php]
+--
+    
+    /**
+     * Setter for PHP Configuration Options
+     * @see more at StateCheckerConfig::$phpConfigOptionKeys
+     * 
+     * @param array $configOptions
+     * @throws StateSaverException
+     */
+    public static function setPHPConfigOptions($configOptions);
+--
+[source, php]
+--
+    
+    /**
+     * Store PHP Configuration Options
+     * @see more at StateCheckerConfig::$phpConfigOptionKeys
+     * 
+     * @param string $key
+     * @param string $namespace
+     */
+    public function pushPHPConfigOptions($key = 'all', $namespace = 'php_config_options');
+--
+[source, php]
+--
+    
+    /**
+     * Restore PHP Configuration Options
+     * @see more at StateCheckerConfig::$phpConfigOptionKeys
+     * 
+     * @param string $key
+     * @param string $namespace
+     */
+    public function popPHPConfigOptions($key = 'all', $namespace = 'php_config_options');
+
+--
+
+
+---
+
+ - class `SuiteCRM\StateSaverException` (Exception)
+
+Simple Exception to catch and handle the state changes.
+
+
+
+
+
+
+
+---
+
+ - class `SuiteCRM\StateChecker`
+
+Save and check the system state and reports you about any state change in the following:
+- Database
+- File system
+- Super globals
+- PHP error reporting level
+- PHP configuration options
+
+See more about the `SuiteCRM\StateChecker` configuration at the `SuiteCRM\StateCheckerConfig` class.
+
+Examples:
+
+[source,php]
+--
+
+use SuiteCRM;
+
+// saving a hash of the current state at this point.
+$stateChecker = new StateChecker();
+
+// ... do something to change the current system state
+
+try {
+
+    // getting a hash of the current state or 
+    // throws an exception if the state doesn't match with the previously saved state.
+    
+    $hash = $stateChecker->getStateHash();
+    
+} catch (StateCheckerException $e) {
+    
+    // state is changed!
+    // use the following exception to detect / debug the problem: (optional)
+    
+    $info = $e->getMessage();
+    
+}
+
+--
+
+---
+
+ - class `SuiteCRM\StateCheckerException` 
+(extends PHP standard Exception)
+
+Simple Exception to catch and handle the state changes.
+
+---
+
+ - class `SuiteCRM\StateCheckerConfig`
+
+Configuration of SuiteCRM\StateChecker and StateChecker Tests classes such as: + 
+
+`SuiteCRM\StateCheckerPHPUnitTestCaseAbstract` + 
+`SuiteCRM\StateCheckerUnitAbstract` + 
+`SuiteCRM\StateCheckerCestAbstract` + 
+ 
+SuiteCRM\StateCheckerConfig configuration options have default values and each available in + 
+`$sugar_config['state_checker'][$key]`.
+ 
+Each configuration value available with a getter method: + 
+`SuiteCRM\StateCheckerConfig::get($key)` where `$key` could be any of the following:
+
+---
+
+*globalKeys*
+
+SuperGlobals Collection determines which super globals are stored and restored.
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('globalKeys')
+--
+
+Default return value:
+[source, php]
+--
+array('_POST', '_GET', '_REQUEST', '_SESSION', '_SERVER', '_ENV', '_FILES', '_COOKIE')
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['global_keys']
+--
+
+---
+
+*fileExludeRegexes*
+
+Array of regexp for excluding files from state checking. +
+Tests won't checking hash at these files so won't failing.
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('fileExludeRegexes')
+--
+
+Default value:
+[source, php]
+--
+array(
+    '/\/\.git\//',
+    '/\/cache\//',
+    '/\.log$/',
+    '/\/tests\/_output\//',
+    '/\/blowfish\//',
+    '/\/upload\//',
+    '/\/vendor\//',
+    '/\/sugarfield_jjwg_maps_/',
+    '/\/vardefs.ext.php$/',
+    '/\/modules\/AOD_Index\/Index\/Index\//',
+    '/\/travis\/build\//',
+)
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['file_exlude_regexes']
+--
+
+---
+
+*autoRun*
+
+Automatically run state collection in StateChecker constructor.
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('autoRun')
+--
+
+Default value:
+[source, php]
+--
+true
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['auto_run']
+--
+
+---
+
+
+*saveTraces*
+
+Save trace info on state-hash mismatch +
+(Slow working but give more information about the error location, use in development only)
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('saveTraces')
+--
+
+Default value:
+[source, php]
+--
+false
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['save_traces']
+--
+
+---
+
+
+*redefineMemoryLimit*     
+
+Redefine memory limit +
+(For more memory expensive task, for e.g collection stack trace information when `$saveTraces` is ON, + 
+use in development only)
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('redefineMemoryLimit')
+--
+
+Default value:
+[source, php]
+--
+false
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['redefine_memory_limit']
+--
+
+---
+
+
+*storeDetails*
+
+Store more information about hash-mismatch, which part having state of globals/filesys/database. +
+(Slow working but give more information about the error location, use in development only)
+
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('storeDetails')
+--
+
+Default value:
+[source, php]
+--
+true
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['store_details']
+--
+
+---
+
+
+*testStateCheckMode*
+
+Enum specified that tests needs to check system state, for Test Cases behaviour, possible values: +
+
+`SuiteCRM\StateCheckerConfig::RUN_NEVER`: State check and save never run. +
+`SuiteCRM\StateCheckerConfig::RUN_PER_TEST`: State check runs after each test methods. +
+`SuiteCRM\StateCheckerConfig::RUN_PER_CLASSES`: State check runs after each test class. +
+
+Note: Mode `RUN_PER_CLASSES` affects PHPUnit Test Cases only +
+Note: Developer mode overrides this value. +
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('testStateCheckMode')
+--
+
+Default value:
+[source, php]
+--
+SuiteCRM\StateCheckerConfig::::RUN_PER_CLASSES
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['test_state_check_mode']
+--
+
+---
+
+
+*testsUseStateChecker*
+
+Test using StateChecker + 
+(Slow working but give more information about the error location, use in development only)
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('testsUseStateChecker')
+--
+
+Default value:
+[source, php]
+--
+true
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['tests_use_state_checker']
+--
+
+---
+
+
+*testsUseAssertionFailureOnError*
+
+Test shows up an assertion failure when hash-mismatch, + 
+use `$testsUseStateChecker` also, `$testsUseAssertionFailureOnError` applied only if `$testsUseStateChecker = true`
+(use in development only)
+     
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('testsUseAssertionFailureOnError')
+--
+
+Default value:
+[source, php]
+--
+true
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['tests_use_assertion_failure_on_error']
+--
+
+---
+
+
+*testsFailureExcludeKeys*
+
+Tests won't checking hash at these keys so won't failing + 
+(It should be empty)
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('testsFailureExcludeKeys')
+--
+
+Default value:
+[source, php]
+--
+array()
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['tests_failure_exclude_keys']
+--
+
+---
+
+
+*phpConfigOptionKeys*
+
+Sate saver needs to know which PHP configuration option needs to save/restore.
+
+Usage:
+[source, php]
+--
+$value = SuiteCRM\StateCheckerConfig::get('phpConfigOptionKeys')
+--
+
+Default value:
+[source, php]
+--
+array('max_execution_time', 'display_errors', 'display_startup_errors')
+--
+
+SuiteCRM config overrides:
+[source, php]
+--
+$sugar_config['state_checker']['php_configuration_option_keys']
+--
+
+
 == References
 
 * http://codeception.com[codeception]
