@@ -1,0 +1,40 @@
+---
+title: Automated Tasks
+weight: 17
+---
+
+:toc:
+
+== Robo
+
+SuiteCRM Utilises  https://robo.li[robo tasks] to provide automation for common tasks.
+
+=== Listing the available automated tasks in Robo
+
+==== bash:
+Open terminal and run robo
+
+[source,shell]
+vendor/bin/robo
+
+==== Command Prompt:
+
+Open Command Prompt and run robo
+[source,shell]
+.\vendor\bin\robo
+
+
+=== Getting help automated tasks in Robo
+
+==== bash:
+Open terminal and run robo [taskname] -h
+
+[source,shell]
+vendor/bin/robo
+
+==== Command Prompt:
+
+Open Command Prompt and run robo
+[source,shell]
+.\vendor\bin\robo [taskname] -h
+
