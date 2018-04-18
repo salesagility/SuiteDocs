@@ -7,8 +7,8 @@ Title: "Building Sass"
 SuiteCRM provies an automated to task to build suitep colors
 
 === Build Each SuiteP Colors (bash):
-Open terminal and run robo
 
+Open terminal and run robo
 [source,shell]
 vendor/bin/robo build:suitep
 
@@ -20,8 +20,8 @@ Open Command Prompt and run robo
 
 
 === Build a specific SuiteP Color (bash):
-Open terminal and run robo
 
+Open terminal and run robo
 [source,shell]
 vendor/bin/robo build:suitep --color_scheme=[ColorName]
 
