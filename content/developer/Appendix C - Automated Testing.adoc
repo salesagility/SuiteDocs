@@ -153,14 +153,13 @@ You can automate different development environments using environment variables.
 ==== Setup environment variables (bash):
 Open terminal and run robo
 
-[source,shell]
-vendor/bin/robo configure:tests
+`./vendor/bin/robo configure:tests`
 
 ==== Setup environment variables (Command Prompt):
 
 Open terminal and run robo
-[source,shell]
-.\vendor\bin\robo configure:tests
+
+`.\vendor\bin\robo configure:tests`
 
 ==== Setup environment variables (Docker Compose):
 
