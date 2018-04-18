@@ -632,7 +632,7 @@ for e.g:
        `$_POST['foo'] = 'bar';`
 
 output:
-[source]
+[source,shell]
 --
 "/usr/bin/php" "/var/www/html/SuiteCRM/vendor/bin/codecept" "run" "unit" "-f" "--steps" "-vvv" "--debug"
 Cannot load Xdebug - extension already loaded
@@ -664,7 +664,7 @@ Example 2: file changed:
         `file_put_contents('foo.txt', rand(0, 1234));`
 
 output:
-[source]
+[source,shell]
 --
 "/usr/bin/php" "/var/www/html/SuiteCRM/vendor/bin/codecept" "run" "unit" "-f" "--steps" "-vvv" "--debug"
 Cannot load Xdebug - extension already loaded
