@@ -12,10 +12,10 @@ SuiteCRM Utilises  https://robo.li[robo tasks] to provide automation for common 
 === Listing the available automated tasks in Robo
 
 ==== bash:
-Open terminal and run robo
 
+Open terminal and run robo
 [source,shell]
-vendor/bin/robo
+./vendor/bin/robo
 
 ==== Command Prompt:
 
@@ -27,10 +27,10 @@ Open Command Prompt and run robo
 === Getting help automated tasks in Robo
 
 ==== bash:
-Open terminal and run robo [taskname] -h
 
+Open terminal and run robo [taskname] -h
 [source,shell]
-vendor/bin/robo
+./vendor/bin/robo
 
 ==== Command Prompt:
 
