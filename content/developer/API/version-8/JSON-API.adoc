@@ -153,7 +153,7 @@ value of the fields parameter MUST be a comma-separated (`U+002C COMMA,
 “,”`) list that refers to the name(s) of the fields to be returned.
 
 [source,php]
-GET https://path-to-instance/api/v8/Accounts?fields[Accounts]=name,date_created
+GET https://path-to-instance/api/v8/modules/Accounts?fields[Accounts]=name,date_created
 
 === Sorting
 
