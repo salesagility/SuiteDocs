@@ -1085,7 +1085,7 @@ array(
 SuiteCRM config overrides:
 [source, php]
 --
-$sugar_config['state_checker']['file_exlude_regexes']
+$sugar_config['state_checker']['file_exclude_regexes']
 --
 
 ---
