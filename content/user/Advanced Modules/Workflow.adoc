@@ -7,6 +7,8 @@ Weight: 240
 
 :imagesdir: ./../../../images/en/user
 
+:toc:
+
 = Advanced Open Workflow
 
 Advanced OpenWorkflow (AOW) is a module for SuiteCRM, allowing users to
@@ -270,7 +272,7 @@ The identifier is used to reference this field when the user creates the
 formula. For example all appearances of the 
 {P0} identifier will be
 replaced with the Account’s name in the formula. All parameters are like
-\{Px} where x is the sequential order of the parameter. The amount of
+{Px} where x is the sequential order of the parameter. The amount of
 the parameters is not limited.
 
 [discrete]
@@ -298,9 +300,9 @@ the identifiers could change for fields!
 image:128Adding_relation_parameter.png[title="Relation Parameters"]
 
 The identifier is used to reference this field when the user creates the
-formula. For example all appearances of the \{R0} identifier will be
+formula. For example all appearances of the {R0} identifier will be
 replaced with the creator user‘s username in the formula. All relation
-parameters are like \{Rx} where x is the sequential order of the
+parameters are like {Rx} where x is the sequential order of the
 relation parameter. The amount of the relation parameters is not
 limited.
 
@@ -325,10 +327,10 @@ module evaluates the formula on the given time (on save, on scheduler
 run or both) and fills the selected field with the evaluated value.
 
 The formula can contain any text (with full UTF-8 support), but only the
-function parts (functions with parameters between ‘\{‘ and ‘}’) are
+function parts (functions with parameters between ‘{‘ and ‘}’) are
 evaluated. For example and with the parameters added in the previous
-sections, if we fill the formula like: Account \{P0} created by user
-name \{R0}, then the description field will have the following value
+sections, if we fill the formula like: Account {P0} created by user
+name {R0}, then the description field will have the following value
 after save: Account My Account created by user name MyUser (implying the
 account’s name is My Account and the creator user’s username is MyUser).
 
@@ -339,8 +341,8 @@ described in the next section.
 [discrete]
 ===== Calculate Fields - Usable functions
 
-As it is mentioned above, all of the functions are wrapped between ‘\{‘
-and ‘}’ signs, and they look like \{functionName(parameter1; parameter2;
+As it is mentioned above, all of the functions are wrapped between ‘{‘
+and ‘}’ signs, and they look like {functionName(parameter1; parameter2;
 …)}. The count of the parameters are different for the different
 functions. The module evaluates the functions and changes them with
 their result in the formula.
@@ -369,7 +371,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |================================================================
 
-|*Signature* |\{equal(parameter1;parameter2)}
+|*Signature* |{equal(parameter1;parameter2)}
 
 .2+|*Parameters* |parameter1: can be any value of any type |parameter2: can be any value of any type
 
@@ -377,7 +379,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if the two parameters are equal or 0 if not
 
-|*Example call* |\{equal(1; 2)} returns 0
+|*Example call* |{equal(1; 2)} returns 0
 |================================================================
 
 ===== notEqual
@@ -385,7 +387,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |====================================================================
 
-|*Signature* |\{notEqual(parameter1; parameter2)}
+|*Signature* |{notEqual(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: can be any value of any type |parameter2: can be any value of any type
 
@@ -393,7 +395,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |0 if the two parameters are equal or 1 if not
 
-|*Example call* |\{notEqual(1; 2)} returns 1
+|*Example call* |{notEqual(1; 2)} returns 1
 |====================================================================
 
 ===== greaterThan
@@ -401,7 +403,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |=================================================================
 
-|*Signature* |\{greaterThan(parameter1; parameter2)}
+|*Signature* |{greaterThan(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: can be any value of any type |parameter2: can be any value of any type
 
@@ -409,7 +411,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter1* greater than *parameter2*, 0 if not
 
-|*Example call* |\{greaterThan(3; 3)} returns 0
+|*Example call* |{greaterThan(3; 3)} returns 0
 |=================================================================
 
 ===== greaterThanOrEqual
@@ -417,7 +419,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{greaterThanOrEqual(parameter1; parameter2)}
+|*Signature* |{greaterThanOrEqual(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: can be any value of any type |parameter2: can be any value of any type
 
@@ -426,7 +428,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter1* greater than or equal *parameter2*, 0 if not
 
-|*Example call* |\{greaterThanOrEqual(3; 3)} returns 1
+|*Example call* |{greaterThanOrEqual(3; 3)} returns 1
 |=======================================================================
 
 ===== lessThan
@@ -434,7 +436,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |==============================================================
 
-|*Signature* |\{lessThan(parameter1; parameter2)}
+|*Signature* |{lessThan(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: can be any value of any type |parameter2: can be any value of any type
 
@@ -442,7 +444,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter1* less than *parameter2*, 0 if not
 
-|*Example call* |\{lessThan(3; 3)} returns 0
+|*Example call* |{lessThan(3; 3)} returns 0
 |==============================================================
 
 ===== lessThanOrEqual
@@ -450,7 +452,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{lessThanOrEqual(parameter1; parameter2)}
+|*Signature* |{lessThanOrEqual(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: can be any value of any type |parameter2: can be any value of any type
 
@@ -458,7 +460,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter1* less than or equal *parameter2*, 0 if not
 
-|*Example call* |\{lessThanOrEqual(3; 3)} returns 1
+|*Example call* |{lessThanOrEqual(3; 3)} returns 1
 |=======================================================================
 
 ===== empty
@@ -466,7 +468,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |===============================================
 
-|*Signature* |\{empty(parameter)}
+|*Signature* |{empty(parameter)}
 
 |*Parameters* |parameter: text value
 
@@ -474,7 +476,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter* is empty, 0 if not
 
-|*Example call* |\{empty(any text)} returns 0
+|*Example call* |{empty(any text)} returns 0
 |===============================================
 
 ===== notEmpty
@@ -482,7 +484,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |===================================================
 
-|*Signature* |\{notEmpty(parameter)}
+|*Signature* |{notEmpty(parameter)}
 
 |*Parameters* |parameter: text value
 
@@ -490,7 +492,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter* is not empty, 0 if empty
 
-|*Example call* |\{notEmpty(any text)} returns 1
+|*Example call* |{notEmpty(any text)} returns 1
 |===================================================
 
 ===== not
@@ -498,7 +500,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |=========================================================
 
-|*Signature* |\{not(parameter)}
+|*Signature* |{not(parameter)}
 
 |*Parameters* |parameter: logical value
 
@@ -506,7 +508,7 @@ also used as the logical condition for the ifThenElse function.
 
 |*Returns* |1 if *parameter* is 0, 0 if *parameter* is 1
 
-|*Example call* |\{not(0)} returns 1
+|*Example call* |{not(0)} returns 1
 |=========================================================
 
 ===== and
@@ -514,7 +516,7 @@ also used as the logical condition for the ifThenElse function.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{and(parameter1; parameter2)}
+|*Signature* |{and(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: logical value |parameter2: logical value
 
@@ -523,7 +525,7 @@ also used as the logical condition for the ifThenElse function.
 |*Returns* |1 if *parameter1* and *parameter2* is 1, 0 if any parameters
 are 0
 
-|*Example call* |\{and(1; 0)} returns 0
+|*Example call* |{and(1; 0)} returns 0
 |=======================================================================
 
 ===== or
@@ -531,7 +533,7 @@ are 0
 [cols="30,50", width="80%""]
 |=======================================================================
 
-|*Signature* |\{or(parameter1; parameter2)}
+|*Signature* |{or(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: logical value |parameter2: logical value
 
@@ -540,7 +542,7 @@ are 0
 |*Returns* |1 if *parameter1* or *parameter2* is 1, 0 if both parameters
 are 0
 
-|*Example call* |\{or(1; 0)} returns 1
+|*Example call* |{or(1; 0)} returns 1
 |=======================================================================
 
 ==== Text Functions
@@ -554,7 +556,7 @@ characters should not raise any problems.
 [cols="30,70",]
 |=======================================================================
 
-|*Signature* |\{substring(text; start; length)}
+|*Signature* |{substring(text; start; length)}
 
 .3+|*Parameters* |text: text value |start: decimal value |length [optional parameter]: decimal value
 
@@ -565,7 +567,7 @@ Indexing of a text’s characters starting from 0.
 
 |*Returns* |Substring of the given text
 
-.2+|*Example call* |\{substring(This is my text; 5)} returns is my text |\{substring(This is my text; 5; 5)} returns is my
+.2+|*Example call* |{substring(This is my text; 5)} returns is my text |{substring(This is my text; 5; 5)} returns is my
 |=======================================================================
 
 ===== length
@@ -573,7 +575,7 @@ Indexing of a text’s characters starting from 0.
 [cols="30,50", width="80%"]
 |===============================================
 
-|*Signature* |\{length(parameter)}
+|*Signature* |{length(parameter)}
 
 |*Parameters* |parameter: text value
 
@@ -581,7 +583,7 @@ Indexing of a text’s characters starting from 0.
 
 |*Returns* |The count of the characters in a text.
 
-|*Example call* |\{length(sample text)} returns 11
+|*Example call* |{length(sample text)} returns 11
 |===============================================
 
 ===== replace
@@ -589,7 +591,7 @@ Indexing of a text’s characters starting from 0.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|Signature |\{replace(search; replace; subject)}
+|Signature |{replace(search; replace; subject)}
 
 .3+|Parameters |search: text value |replace: text value |subject: text value
 
@@ -598,7 +600,7 @@ text *subject*.
 
 |Returns |*subject* with replaced values.
 
-|Example call |\{replace(apple; orange; This is an apple tree)} returns
+|Example call |{replace(apple; orange; This is an apple tree)} returns
 This is an orange tree
 |=======================================================================
 
@@ -607,7 +609,7 @@ This is an orange tree
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{position(subject; search)}
+|*Signature* |{position(subject; search)}
 
 .2+|*Parameters* |subject: text value |search: text value
 
@@ -617,7 +619,7 @@ This is an orange tree
 |*Returns* |Numeric position of *search* in *subject* or -1 if *search*
 not present in *subject*
 
-|*Example call* |\{position(Where is my text?; text)} returns 12
+|*Example call* |{position(Where is my text?; text)} returns 12
 |=======================================================================
 
 ===== lowercase
@@ -625,7 +627,7 @@ not present in *subject*
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{lowercase(parameter)}
+|*Signature* |{lowercase(parameter)}
 
 |*Parameters* |parameter: text value
 
@@ -633,7 +635,7 @@ not present in *subject*
 
 |*Returns* |The lowercased text.
 
-|*Example call* |\{lowercase(ThIs iS a sAmPlE tExT)} returns this is a
+|*Example call* |{lowercase(ThIs iS a sAmPlE tExT)} returns this is a
 sample text
 |=======================================================================
 
@@ -642,7 +644,7 @@ sample text
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{uppercase(parameter)}
+|*Signature* |{uppercase(parameter)}
 
 |*Parameters* |parameter: text value
 
@@ -650,7 +652,7 @@ sample text
 
 |*Returns* |The uppercased text.
 
-|*Example call* |\{uppercase(ThIs iS a sAmPlE tExT)} returns THIS IS A
+|*Example call* |{uppercase(ThIs iS a sAmPlE tExT)} returns THIS IS A
 SAMPLE TEXT
 |=======================================================================
 
@@ -665,7 +667,7 @@ Fields.
 [cols="30,50", width="80%"]
 |=================================================
 
-|*Signature* |\{add(parameter1; parameter2)}
+|*Signature* |{add(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: number value |parameter2: number value
 
@@ -673,7 +675,7 @@ Fields.
 
 |*Returns* |The sum of *parameter1* and *parameter2*
 
-|*Example call* |\{add(3.12; 4.83)} returns 7.95
+|*Example call* |{add(3.12; 4.83)} returns 7.95
 |=================================================
 
 ===== subtract
@@ -681,7 +683,7 @@ Fields.
 [cols="30,50", width="80%"]
 |=========================================================
 
-|*Signature* |\{subtract(parameter1; parameter2)}
+|*Signature* |{subtract(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: number value |parameter2: number value
 
@@ -689,7 +691,7 @@ Fields.
 
 |*Returns* |The distinction of *parameter2* and *parameter1*
 
-|*Example call* |\{subtract(8; 3)} returns 5
+|*Example call* |{subtract(8; 3)} returns 5
 |=========================================================
 
 ===== multiply
@@ -697,7 +699,7 @@ Fields.
 [cols="30,50", width="80%""]
 |=====================================================
 
-|*Signature* |\{multiply(parameter1; parameter2)}
+|*Signature* |{multiply(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: number value |parameter2: number value
 
@@ -705,7 +707,7 @@ Fields.
 
 |*Returns* |The product of *parameter1* and *parameter2*
 
-|*Example call* |\{multiply(2; 4)} returns 8
+|*Example call* |{multiply(2; 4)} returns 8
 |=====================================================
 
 ===== divide
@@ -713,7 +715,7 @@ Fields.
 [cols="30,50", width="80%"]
 |======================================================
 
-|*Signature* |\{divide(parameter1; parameter2)}
+|*Signature* |{divide(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: number value |parameter2: number value
 
@@ -721,7 +723,7 @@ Fields.
 
 |*Returns* |The division of *parameter2* and *parameter1*
 
-|*Example call* |\{divide(8; 2)} returns 4
+|*Example call* |{divide(8; 2)} returns 4
 |======================================================
 
 ===== power
@@ -729,7 +731,7 @@ Fields.
 [cols="30,50", width="80%"]
 |=============================================================
 
-|*Signature* |\{power(parameter1; parameter2)}
+|*Signature* |{power(parameter1; parameter2)}
 
 .2+|*Parameters* |parameter1: number value |parameter2: number value
 
@@ -737,7 +739,7 @@ Fields.
 
 |*Returns* |*parameter1* raised to the power of *parameter2*
 
-|*Example call* |\{power(2; 7)} returns 128
+|*Example call* |{power(2; 7)} returns 128
 |=============================================================
 
 ===== squareRoot
@@ -745,7 +747,7 @@ Fields.
 [cols="30,50", width="80%"]
 |======================================================
 
-|*Signature* |\{squareRoot(parameter)}
+|*Signature* |{squareRoot(parameter)}
 
 |*Parameters* |parameter: number value
 
@@ -753,7 +755,7 @@ Fields.
 
 |*Returns* |The square root of *parameter*
 
-|*Example call* |\{squareRoot(4)} returns 2
+|*Example call* |{squareRoot(4)} returns 2
 |======================================================
 
 ===== absolute
@@ -761,7 +763,7 @@ Fields.
 [cols="30,50", width="80%"]
 |=========================================================
 
-|*Signature* |\{absolute(parameter)}
+|*Signature* |{absolute(parameter)}
 
 |*Parameters* |parameter: number value
 
@@ -769,7 +771,7 @@ Fields.
 
 |*Returns* |The absolute value of *parameter*
 
-|*Example call* |\{absolute(-4)} returns 4
+|*Example call* |{absolute(-4)} returns 4
 |=========================================================
 
 ==== Date functions
@@ -916,7 +918,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=====================================================
 
-|*Signature* | \{date(format; timestamp)}
+|*Signature* | {date(format; timestamp)}
 
 .2+|*Parameters* |format: format text |timestamp: date/time value
 
@@ -924,7 +926,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |*timestamp* in the given *format*
 
-|*Example call* | \{date(ymd; 2016-02-11)} returns 160211
+|*Example call* | {date(ymd; 2016-02-11)} returns 160211
 |=====================================================
 
 ===== now
@@ -932,7 +934,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=============================================================
 
-|*Signature* | \{now(format)}
+|*Signature* | {now(format)}
 
 |*Parameters* |format: format text
 
@@ -940,7 +942,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Current date/time in the given *format*
 
-|*Example call* | \{now(Y-m-d H:i:s)} returns 2016-04-29 15:08:03
+|*Example call* |{now(Y-m-d H:i:s)} returns 2016-04-29 15:08:03
 |=============================================================
 
 ===== yesterday
@@ -948,7 +950,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |===================================================================
 
-|*Signature* | \{yesterday(format)}
+|*Signature* | {yesterday(format)}
 
 |*Parameters* |format: format text
 
@@ -956,7 +958,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Yesterday’s date/time in the given *format*
 
-|*Example call* | \{yesterday(Y-m-d H:i:s)} returns 2016-04-28 15:08:03
+|*Example call* | {yesterday(Y-m-d H:i:s)} returns 2016-04-28 15:08:03
 |===================================================================
 
 ===== tomorrow
@@ -964,7 +966,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80"]
 |==================================================================
 
-|*Signature* |\{tomorrow(format)}
+|*Signature* |{tomorrow(format)}
 
 |*Parameters* |format: format text
 
@@ -972,7 +974,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Tomorrow’s date/time in the given *format*
 
-|*Example call* |\{tomorrow(Y-m-d H:i:s)} returns 2016-04-30 15:08:03
+|*Example call* |{tomorrow(Y-m-d H:i:s)} returns 2016-04-30 15:08:03
 |==================================================================
 
 ===== datediff
@@ -980,7 +982,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |==================================================================
 
-|*Signature* |\{datediff(timestamp1; timestamp2; unit)}
+|*Signature* |{datediff(timestamp1; timestamp2; unit)}
 
 .3+|*Parameters* |timestamp1: date/time value |timestamp2: date/time value |unit: years/months/days/hours/minutes/seconds; default: days
 
@@ -988,7 +990,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |The difference between the two dates returned in *unit*
 
-|*Example call* |\{datediff(2016-02-01; 2016-04-22; days)} returns 81
+|*Example call* |{datediff(2016-02-01; 2016-04-22; days)} returns 81
 |==================================================================
 
 ===== addYears
@@ -996,7 +998,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |==============================================================
 
-|*Signature* |\{addYears(format; timestamp; amount)}
+|*Signature* |{addYears(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1004,7 +1006,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Incremented date in *format*
 
-|*Example call* |\{addYears(Ymd; 2016-04-22; 1)} returns 20170422
+|*Example call* |{addYears(Ymd; 2016-04-22; 1)} returns 20170422
 |==============================================================
 
 ===== addMonths
@@ -1012,7 +1014,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |===============================================================
 
-|*Signature* |\{addMonths(format; timestamp; amount)}
+|*Signature* |{addMonths(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1020,7 +1022,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Incremented date in *format*
 
-|*Example call* |\{addMonths(Ymd; 2016-04-22; 1)} returns 20160522
+|*Example call* |{addMonths(Ymd; 2016-04-22; 1)} returns 20160522
 |===============================================================
 
 ===== addDays
@@ -1028,7 +1030,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=============================================================
 
-|*Signature* |\{addDays(format; timestamp; amount)}
+|*Signature* |{addDays(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1036,7 +1038,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Incremented date in *format*
 
-|*Example call* |\{addDays(Ymd; 2016-04-22; 1)} returns 20160423
+|*Example call* |{addDays(Ymd; 2016-04-22; 1)} returns 20160423
 |=============================================================
 
 ===== addHours
@@ -1044,7 +1046,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{addHours(format; timestamp; amount)}
+|*Signature* |{addHours(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1052,7 +1054,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Incremented date in *format*
 
-|*Example call* |\{addHours(Ymd H:i:s; 2016-04-22 23:30; 5)} returns
+|*Example call* |{addHours(Ymd H:i:s; 2016-04-22 23:30; 5)} returns
 20160423 04:30:00
 |=======================================================================
 
@@ -1061,7 +1063,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{addMinutes(format; timestamp; amount)}
+|*Signature* |{addMinutes(format; timestamp; amount)}
 
 |*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1069,7 +1071,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Incremented date in *format*
 
-|*Example call* |\{addMinutes(Ymd H:i:s; 2016-04-22 22:58; 5)} returns
+|*Example call* |{addMinutes(Ymd H:i:s; 2016-04-22 22:58; 5)} returns
 20160422 23:03:00
 |=======================================================================
 
@@ -1078,7 +1080,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{addSeconds(format; timestamp; amount)}
+|*Signature* |{addSeconds(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1086,7 +1088,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Incremented date in *format*
 
-|*Example call* |\{addSeconds(Ymd H:i:s; 2016-04-22 22:58; 5)} returns
+|*Example call* |{addSeconds(Ymd H:i:s; 2016-04-22 22:58; 5)} returns
 20160422 22:58:05
 |=======================================================================
 
@@ -1095,7 +1097,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |===================================================================
 
-|*Signature* |\{subtractYears(format; timestamp; amount)}
+|*Signature* |{subtractYears(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1103,7 +1105,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Decremented date in *format*
 
-|*Example call* |\{subtractYears(Ymd; 2016-04-22; 5)} returns 20110422
+|*Example call* |{subtractYears(Ymd; 2016-04-22; 5)} returns 20110422
 |===================================================================
 
 ===== subtractMonths
@@ -1111,7 +1113,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |====================================================================
 
-|*Signature* |\{subtractMonths(format; timestamp; amount)}
+|*Signature* |{subtractMonths(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1119,7 +1121,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Decremented date in *format*
 
-|*Example call* |\{subtractMonths(Ymd; 2016-04-22; 5)} returns 20151122
+|*Example call* |{subtractMonths(Ymd; 2016-04-22; 5)} returns 20151122
 |====================================================================
 
 ===== subtractDays
@@ -1127,7 +1129,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |==================================================================
 
-|Signature |\{subtractDays(format; timestamp; amount)}
+|Signature |{subtractDays(format; timestamp; amount)}
 
 .3+|Parameters |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1135,7 +1137,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |Returns |Decremented date in *format*
 
-|Example call |\{subtractDays(Ymd; 2016-04-22; 5)} returns 20160417
+|Example call |{subtractDays(Ymd; 2016-04-22; 5)} returns 20160417
 |==================================================================
 
 ===== subtractHours
@@ -1143,7 +1145,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{subtractHours(format; timestamp; amount)}
+|*Signature* |{subtractHours(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1151,7 +1153,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Decremented date in *format*
 
-|*Example call* |\{subtractHours(Ymd H:i:s; 2016-04-22 12:37; 5)} returns
+|*Example call* |{subtractHours(Ymd H:i:s; 2016-04-22 12:37; 5)} returns
 20160422 07:37:00
 |=======================================================================
 
@@ -1160,7 +1162,7 @@ current date/time is 2016.04.29. 15:08:03
 [cols="30,50", width="80%""]
 |=======================================================================
 
-|*Signature* |\{subtractMinutes(format; timestamp; amount)}
+|*Signature* |{subtractMinutes(format; timestamp; amount)}
 
 .3+|*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1168,7 +1170,7 @@ current date/time is 2016.04.29. 15:08:03
 
 |*Returns* |Decremented date in *format*
 
-|*Example call* |\{subtractMinutes(Ymd H:i:s; 2016-04-22 12:37; 5)}
+|*Example call* |{subtractMinutes(Ymd H:i:s; 2016-04-22 12:37; 5)}
 returns 20160422 12:32:00
 |=======================================================================
 
@@ -1177,7 +1179,7 @@ returns 20160422 12:32:00
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{subtractSeconds(format; timestamp; amount)}
+|*Signature* |{subtractSeconds(format; timestamp; amount)}
 
 |*Parameters* |format: format text |timestamp: date/time value |amount: decimal number
 
@@ -1185,7 +1187,7 @@ returns 20160422 12:32:00
 
 |*Returns* |Decremented date in *format*
 
-|*Example call* |\{subtractSeconds(Ymd H:i:s; 2016-04-22 12:37; 5)}
+|*Example call* |{subtractSeconds(Ymd H:i:s; 2016-04-22 12:37; 5)}
 returns 20160422 12:36:55
 |=======================================================================
 
@@ -1201,7 +1203,7 @@ other, the user can write junctions with many branches.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{ifThenElse(condition; trueBranch; falseBranch)}
+|*Signature* |{ifThenElse(condition; trueBranch; falseBranch)}
 
 .3+|*Parameters* |condition: logical value |trueBranch: any expression |falseBranch: any expression
 
@@ -1209,7 +1211,7 @@ other, the user can write junctions with many branches.
 
 |*Returns* |*trueBranch* if *condition* is true, *falseBranch* otherwise
 
-|*Example call* |\{ifThenElse(\{equal(1; 1)}; 1 equals 1; 1 not equals 1)}
+|*Example call* |{ifThenElse(\{equal(1; 1)}; 1 equals 1; 1 not equals 1)}
 returns 1 equals 1
 |=======================================================================
 
@@ -1232,7 +1234,7 @@ incremented value will be 5 with the given format.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{GlobalCounter(name; numberLength)}
+|*Signature* |{GlobalCounter(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1241,7 +1243,7 @@ incremented value will be 5 with the given format.
 
 |*Returns* |Counter with length *numberLength*
 
-|*Example call* |\{GlobalCounter(myName; 4)} returns 0005
+|*Example call* |{GlobalCounter(myName; 4)} returns 0005
 |=======================================================================
 
 ===== GlobalCounterPerUser
@@ -1249,7 +1251,7 @@ incremented value will be 5 with the given format.
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{GlobalCounterPerUser(name; numberLength)}
+|*Signature* |{GlobalCounterPerUser(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1258,7 +1260,7 @@ who creates the entity with length *numberLength*
 
 |*Returns* |Counter with length *numberLength*
 
-|*Example call* |\{GlobalCounterPerUser(myName; 3)} returns 005
+|*Example call* |{GlobalCounterPerUser(myName; 3)} returns 005
 |=======================================================================
 
 ===== GlobalCounterPerModule
@@ -1266,7 +1268,7 @@ who creates the entity with length *numberLength*
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{GlobalCounterPerModule(name; numberLength)}
+|*Signature* |{GlobalCounterPerModule(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1275,7 +1277,7 @@ module of the entity with length *numberLength*
 
 |*Returns* |Counter with length *numberLength*
 
-|*Example call* |\{GlobalCounterPerModule(myName; 2)} returns 05
+|*Example call* |{GlobalCounterPerModule(myName; 2)} returns 05
 |=======================================================================
 
 ===== GlobalCounterPerUserPerModule
@@ -1283,7 +1285,7 @@ module of the entity with length *numberLength*
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{GlobalCounterPerUserPerModule(name; numberLength)}
+|*Signature* |{GlobalCounterPerUserPerModule(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1293,7 +1295,7 @@ who creates the entity and for the module of the entity with length
 
 |*Returns* |Counter with length *numberLength*
 
-|*Example call* |\{GlobalCounterPerUserPerModule(myName; 1)} returns 5
+|*Example call* |{GlobalCounterPerUserPerModule(myName; 1)} returns 5
 |=======================================================================
 
 ===== DailyCounter
@@ -1301,7 +1303,7 @@ who creates the entity and for the module of the entity with length
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{DailyCounter(name; numberLength)}
+|*Signature* |{DailyCounter(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1311,7 +1313,7 @@ who creates the entity and for the module of the entity with length
 |*Returns* |Counter with length *numberLength*, or if the counter is not
 incremented this day then 1 with length *numberLength*
 
-|*Example call* |\{DailyCounter(myName; 1)} returns 5
+|*Example call* |{DailyCounter(myName; 1)} returns 5
 |=======================================================================
 
 ===== DailyCounterPerUser
@@ -1319,7 +1321,7 @@ incremented this day then 1 with length *numberLength*
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{DailyCounterPerUser(name; numberLength)}
+|*Signature* |{DailyCounterPerUser(name; numberLength)}
 
 |*Parameters* |name: any text |numberLength: decimal number
 
@@ -1329,7 +1331,7 @@ who creates the entity with length *numberLength*
 |*Returns* |Counter with length *numberLength*, or if the counter is not
 incremented this day for this user then 1 with length *numberLength*
 
-|*Example call* |\{DailyCounter(myName; 1)} returns 5
+|*Example call* |{DailyCounter(myName; 1)} returns 5
 |=======================================================================
 
 ===== DailyCounterPerModule
@@ -1337,7 +1339,7 @@ incremented this day for this user then 1 with length *numberLength*
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{DailyCounterPerModule(name; numberLength)}
+|*Signature* |{DailyCounterPerModule(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1347,7 +1349,7 @@ module of the entity with length *numberLength*
 |*Returns* |Counter with length *numberLength*, or if the counter is not
 incremented this day for this module then 1 with length *numberLength*
 
-|*Example call* |\{DailyCounterPerModule(myName; 1)} returns 5
+|*Example call* |{DailyCounterPerModule(myName; 1)} returns 5
 |=======================================================================
 
 ===== DailyCounterPerUserPerModule
@@ -1355,7 +1357,7 @@ incremented this day for this module then 1 with length *numberLength*
 [cols="30,50", width="80%"]
 |=======================================================================
 
-|*Signature* |\{DailyCounterPerUserPerModule(name; numberLength)}
+|*Signature* |{DailyCounterPerUserPerModule(name; numberLength)}
 
 .2+|*Parameters* |name: any text |numberLength: decimal number
 
@@ -1367,7 +1369,7 @@ who creates the entity and for the module of the entity with length
 incremented this day for the user who creates the entity and for this
 module then 1 with length *numberLength*
 
-|*Example call* |\{DailyCounterPerUserPerModule(myName; 1)} returns 5
+|*Example call* |{DailyCounterPerUserPerModule(myName; 1)} returns 5
 |=======================================================================
 
 ==== Example - Calculate monthly fee for an opportunity
