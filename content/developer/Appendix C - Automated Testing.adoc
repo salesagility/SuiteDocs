@@ -150,45 +150,15 @@ You can automate different development environments using environment variables.
 |=======================================================================
 
 ==== Setup environment variables (bash):
-. Download link:/developer/scripts/codecept.sh[set up script] as codecept.sh
-. Edit codecept.sh
-[source,shell]
-export DATABASE_DRIVER=MYSQL
-export DATABASE_NAME=automated_tests
-export DATABASE_HOST=localhost
-export DATABASE_USER=automated_tests
-export DATABASE_PASSWORD=automated_tests
-export INSTANCE_URL=http://path/to/instance
-export INSTANCE_ADMIN_USER=admin
-export INSTANCE_ADMIN_PASSWORD=admin
-export INSTANCE_CLIENT_ID=suitecrm_client
-export INSTANCE_CLIENT_SECRET=secret
+Open terminal and run robo
 
-. Open terminal and run
-[source,shell]
-chmod a+x codecept.sh
-./codecept.sh
+`./vendor/bin/robo configure:tests`
 
 ==== Setup environment variables (Command Prompt):
-. Download link:/developer/scripts/codecept.bat[set up script] as
-codecept.bat
-. Edit codecept.bat
-[source,bat]
-setx DATABASE_DRIVER "MYSQL"
-setx DATABASE_NAME "automated_tests"
-setx DATABASE_HOST "localhost"
-setx DATABASE_USER "automated_tests"
-setx DATABASE_PASSWORD "automated_tests"
-setx INSTANCE_URL "http://localhost/"
-setx INSTANCE_ADMIN_USER "admin"
-setx INSTANCE_ADMIN_PASSWORD "admin"
-setx INSTANCE_CLIENT_ID "suitecrm_client"
-setx INSTANCE_CLIENT_SECRET "secret"
 
+Open terminal and run robo
 
-. Open terminal and run
-[source,shell]
-codecept.bat
+`.\vendor\bin\robo configure:tests`
 
 ==== Setup environment variables (Docker Compose):
 
