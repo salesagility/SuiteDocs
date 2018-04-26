@@ -3,15 +3,13 @@ Title: Oportunidades
 Weight: 90
 ---
 
-= Oportunidades
-
 Una oportunidad es un prospect cualificado con una alta probabilidad de
 hacer negocios con su compañia. Se ha establecido que tiene posibilidad
 de compra y a entrado en el ciclo de ventas. Este módulo permite seguir 
 las oportunidades a través del proceso de ventas hasta que el acuerdo 
 es cerrado como 'perdido' o 'ganado'.
 
-== Acciones de Oportunidades.
+== Acciones de Oportunidades
 
 Se puede acceder a las acciones desde el menu desplegable del módulo 
 o desde la barra lateral. Las acciones disponibles son las siguientes:
@@ -25,7 +23,7 @@ link:/user/introduction/user-interface/#_importing_records[Importing Records].
 To view the full list of fields available when creating an Opportunity,
 See link:/user/appendix-a/#_opportunities_field_list[Opportunities Field List].
 
-== Managing Opportunities
+== Gestionando Oportunidades
 
 *Para ordenar registros en la Vista de Lista de oportunidades, cliquea sobre el título de cualquier columna que sea ordenable. Esto ordenará los registros según los valores de ese campo en orden ascendente o descendente.
 * Para buscar una oportunidad, ver la sección de Búsqueda de la Guía de
