@@ -1,0 +1,58 @@
+---
+Title: System
+weight: 30
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/user
+
+:toc:
+
+= System
+
+== System Setttings
+
+image:SystemSettings.png[title = "System Settings"]
+
+These settings apply system-wide, although some (for example *Show Full Names*) can be overridden by individual users in their user profile.
+
+[cols = "30, 70", frame = "none", grid = "none"]
+|===
+|*Listview items per page*| The number of records to display per page in the list view of each module.
+|*System Name*|This name will be displayed on the browser tab.
+|*Current Logo*|This shows the logo currently displaying on the login screen 
+|*Select Logo*|Change the logo 
+|===
+
+== Import Wizard
+
+== Locale
+
+== Upgrade Wizard
+
+== Currencies
+
+== Backups
+
+== Languages
+
+== Repair
+
+== Global Search
+
+== Diagnostic Tool
+
+== Connectors
+
+== Themes
+
+== Scheduler
+
+== Activity Streams
+
+== OAuth Keys
+
+
+
+

@@ -1,0 +1,297 @@
+---
+Title: Users
+weight: 20
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/user
+
+:toc:
+
+= Users
+
+== Overview
+
+This guide documents the settings on the Users section of the Administration panel.
+
+A *user* represents someone who can log in to your *SuiteCRM* system. 
+In addition to the basic information (name, title, address, phone number etc) 
+contained in the *Employees* module, a user has a username and password 
+to enable them to log in to the system, and an email address. When a new User 
+is created in SuiteCRM, a matching Employee record is created. Similarly, when a 
+new Employee record is created, a new User record is also created. 
+This new user record will need to be edited (if required) to add a username/password 
+and email address before it can be used to log in to *SuiteCRM*.
+
+The *Users* section of the *Administration Panel* holds settings for *SuiteCRM* 
+user accounts and security access settings. 
+
+{{%notice note %}}You must have Administrator access to add new user accounts and 
+edit access settings. Regular users have access to their own user account details 
+and can edit address details, set preferences, set up personal email and change 
+their password.{{% /notice %}}
+
+Open the Administration panel by selecting *Admin* from the dropdown at the top 
+right-hand of the *SuiteCRM* screen.
+
+image:AdminPanelOpenPanel.png["Open Admin Panel"]
+
+== User Management
+
+Select User Management to view, edit and add new user accounts.
+
+image:UsersAdminPanel.png["Users Admin Panel"]
+
+image:UsersListView.png["User Management - List View"]
+
+=== Add New User
+
+Select *Create New User* from the sidebar to add a new user account.
+
+image:UsersSidebarCreateNewUser.png["Users sidebar - create new user"]
+
+==== User Profile Tab
+
+image:UsersCreateUser.png["Create new user"]
+
+On the default *User Profile* tab, enter the new username, user's first and last 
+names and the account status (Active or Inactive). 
+
+{{%notice info %}}Only *Active* accounts can be used to log in to *SuiteCRM*. 
+In addition, *Inactive* account usernames are not included in dropdown username 
+lists (e.g. assigned to or modified by lists) used for record searching.{{% /notice %}}
+
+Select the User Type from the drop down. A System Administrator User can 
+access the Administration panel and all records in *SuiteCRM*. A regular user 
+has access to modules and records based on the role(s) assigned to them. See 
+the <<Role Management, Role Management>> section of this document for further 
+information.
+
+An optional photograph can be attached to the user record. Browse for the required 
+file using the btn:[Choose file] button. The photo will be displayed on the detail 
+view of the user record once the record has been saved.
+
+==== Two Factor Authentication
+
+{{%notice note %}}Two Factor Authentication is available in *SuiteCRM* version 
+7.10 onwards{{% /notice %}}
+
+Two Factor Authentication can be enabled on a per-user basis. Once enabled, a 
+user will be required to enter a code received via email each time they log on 
+to *SuiteCRM*.
+
+Check the Two Factor Authentication box to enable.
+
+image:TwoFactorAuth.png["Two Factor Authentication - user settings]
+
+Click btn:[SAVE] to retain the settings.
+
+When the user logs on, after entering their username and password, they 
+will be asked to enter the code which will have been sent to them via email.
+
+image:TwoFactorAuthCodeSent.png[title="Two Factor Authentication code required"]
+
+Once they have entered the correct code and clicked btn:[VERIFY] they will 
+be logged into *SuiteCRM*.
+
+{{%notice tip %}}The template for the Two Factor Authentication code email 
+which is sent to users can be set in *Password Management* {{% /notice %}}
+
+==== Employee Information
+
+Optional further information about the user can be added in the Employee 
+Information panel. Changes made here will be reflected in the corresponding 
+Employee record.
+
+==== Email Settings
+
+An email address is also required for a user account. This address is used 
+to send system generated emails such as workflow notifications and record 
+assignments. Further accounts can be added using the btn:[+] button. 
+Where there is more than one account, select the account to be used as 
+the primary account.
+
+For further information regarding user email settings, see 
+link:../../../user/modules/email-settings/#_user_profile_email_settings[user profile email settings]
+ 
+==== Password Tab
+
+Set the password for a new user here, or reset the password for an existing user.
+
+{{%notice note %}}The Password tab will not be visible on the user record if you 
+have the *System-Generated Passwords Feature* enabled. To enable/disable 
+system-generated passwords, please see the <<Password Management, Password Management>> 
+section of this document.
+{{% /notice %}}
+
+image:UsersAddPassword.png[User - add password]
+
+Enter the new password details and click btn:[SAVE]
+
+==== Advanced Tab
+
+User settings (including notification and reminder settings and import settings), 
+Locale settings (date/time, currency etc) and Calendar options for iCal 
+integration can be set here. These are all user-configurable. 
+
+==== Layout Options
+{{%notice note %}}The Layout Options tab appears in *SuiteCRM* version 
+7.10 onwards{{% /notice %}}
+
+The Layout Options tab allows you to set colour choices for the *SuiteP* 
+theme. These settings can be configured by the user. 
+Please see the link:../../../user/modules/themes[user Themes documentation] 
+for more information on these settings.
+
+== Password Management
+
+From the *Admin* panel, select *Password Management* to open the settings page.
+
+=== System-Generated Passwords
+
+If this feature is enabled, passwords for new user accounts will be generated 
+automatically and emailed to the address on the user's account.
+
+{{%notice note%}}This requires both an outbound email server to be configured 
+and a valid email address on the user's record {{%/notice%}}
+
+=== Password Security Settings
+
+These are optional password security settings for user passwords. 
+Once set, user passwords must meet the selected criteria.
+
+image:PasswordSecuritySettings.png[title = "Password security settings"]
+
+Check the boxes to select the required password features.
+
+Note that special characters are #$%^&*()+=-[]';,./{}|:<>?~
+
+Click btn:[Save] to retain the settings.
+
+=== User Reset Password
+
+When this feature is enabled, users will be able to reset their passwords 
+from a link on the *SuiteCRM* login page. 
+
+{{%notice note%}}This requires both an outbound email server to be configured 
+and a valid email address on the user's record {{%/notice%}}
+	
+image:UsersResetPassword.png[title = "User Password Reset settings"]
+
+=== Email Templates
+
+The templates for password-related system-generated emails can be edited here. 
+Please see the link:../../../user/modules/emailtemplates[Email Templates] 
+documentation for further information regarding creating and editing email 
+templates.
+
+image:UsersEmailTemplates.png[title = "User password email template settings"]
+
+=== LDAP Support
+
+If LDAP Authentication is enabled, none of the *SuiteCRM* Password 
+Management settings will apply. Passwords will be managed by LDAP settings.
+
+=== SAML Authentication
+
+If SAML Authentication is enabled, none of the *SuiteCRM* Password 
+Management settings will apply. Passwords will be managed by SAML settings.
+
+= Roles and Security Group Settings
+
+Security Suite allows you to restrict access to sensitive data in *SuiteCRM* 
+to specific teams (groups). There are many options to allow you to configure it
+to your exact needs, and a number of automatic assignment
+options to ensure that your users can always access the data that you
+need.
+
+*Roles* are used to define access rights to modules and determine what a 
+user can do with a record once they have access to it.
+
+*Security Groups* allow you to define groups of users with particular access rights 
+defined by the roles attached to the group.
+
+=== Role Management
+
+==== Create Role
+
+Select Role Management, and then Create Role from the Role Management sidebar.
+Enter a name and a description for the role you are creating.
+
+=== Security Suite Management
+
+==== Create Group
+
+=== Security Suite Settings
+
+SuiteCRM System Administrators can configure many advanced options for
+Security Suite. This allows you to control various access/rights,
+inheriting of records, filters and more.
+
+image:SecurityGroupsConfigure.png[title="Security Groups Management: Configure"]
+
+==== Additive Rights
+
+User gets greatest rights of all roles assigned to the user or the user's
+group(s)
+
+==== Strict Rights
+
+If a user is a member of several groups only the respective rights from
+the group assigned to the current record are used.
+
+==== New User Group Popup
+
+If this is checked, a Security Groups popup will open when a new user is created, 
+allowing you to add the user to a security group(s)
+
+==== User Role Precedence
+
+If any role is assigned directly to a user that role should take
+precedence over any group roles.
+
+==== Filter User List
+
+With this selected, non-admin users can only assign records to users who are in the same group(s)
+
+==== Use Creator Group Select
+
+Adds a panel to a record creation screen if a user is a member of more
+than one inheritable group that allows a user to select one or more
+groups (that the user belongs to) that should be associated with the newly
+created record. If a user is in just one group the normal inheritance
+rules will instead be applied.
+
+{{% notice note %}}
+The new record will still inherit from the Assigned To user or
+Parent record if these options are set. This setting only overrides the
+Created By setting.
+{{% /notice %}}
+
+==== Inherit from Created By User
+
+The record will inherit all the groups assigned to the user who created it.
+
+==== Inherit from Assigned To User
+
+The record will inherit all the groups of the user assigned to the record.
+{{% notice note %}}Other groups assigned to the record will NOT be removed.{{% /notice %}}
+
+==== Inherit from Parent Record
+
+E.g. If a case is created for a contact the case will inherit the groups
+associated with the contact.
+
+==== Inbound email account
+
+Locks down inbound email accounts in the email client to only list those
+that belong to the same group as the current user.
+
+==== Default Groups for New Records
+
+Set groups that should always be attached when a specific module record is
+created, e.g. you can set a group to be assigned to all newly created Account records.
+
+
+
