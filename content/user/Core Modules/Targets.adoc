@@ -27,6 +27,11 @@ This allows you to search and list Target records.
 the Targets module. For more information, see
 link:/user/introduction/user-interface/#_importing_records[Importing Records].
 
+{{% notice tip %}}
+When importing Targets, at the final step of the Wizard you will be given an option to add 
+all imported Targets to a Target List of your choice.
+{{% /notice %}}
+
 To view the full list of fields available when creating a Target, See
 link:/user/appendix-a/#_targets_field_list[Targets Field List].
 
