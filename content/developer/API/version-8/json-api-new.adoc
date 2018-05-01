@@ -175,12 +175,22 @@ GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
 
 Available parameters: fields
 
+Example:
+
+[source,php]
+V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
+
 === Get collection of modules
 
 [source,php]
 GET {{your-SuiteCRM-url}}/V8/module/{moduleName}
 
 Available parameters: fields, page
+
+Example:
+
+[source,php]
+V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
 
 === Create a module record
 
@@ -194,7 +204,7 @@ Example body:
   "data": {
     "type": "Accounts",
     "attributes": {
-      "name": "Test"
+      "name": "Test account"
     }
   }
 }
@@ -210,13 +220,12 @@ Example body:
 {
   "data": {
     "type": "Accounts",
-    "id": "e6e0af95-4772-5773-ae70-5ae70f931fe"
+    "id": "11a71596-83e7-624d-c792-5ab9006dd493",
     "attributes": {
-      "name": "Test"
+      "name": "Updated name"
     }
   }
 }
-
 
 === Delete a module record
 
