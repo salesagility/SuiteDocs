@@ -153,7 +153,7 @@ value of the fields parameter MUST be a comma-separated (`U+002C COMMA,
 “,”`) list that refers to the name(s) of the fields to be returned.
 
 [source,php]
-GET https://path-to-instance/api/v8/Accounts?fields[Accounts]=name,date_created
+GET https://path-to-instance/api/v8/modules/Accounts?fields[Accounts]=name,date_created
 
 === Sorting
 
@@ -161,7 +161,7 @@ SuiteCRM offers sorting via the sort parameter.
 
 .Example
 [source,php]
-GET https://path-to-instance/api/v8/Accounts?sort=name,-date_created
+GET https://path-to-instance/api/v8/modules/Accounts?sort=name,-date_created
 
 The attribute is sorted in ascending order, however to sort in
 descending order you simply add MINUS (-) in front of the attribute

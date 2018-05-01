@@ -8,9 +8,8 @@ weight: 30
 
 == Upgrading SuiteCRM
 
-Log into your SuiteCRM instance to use the Upgrade Wizard. There is
-currently no silent upgrade path available for SuiteCRM. CAUTION: It is
-strongly recommended that you run the upgrade process on a copy of your
+Log into your SuiteCRM instance to use the Upgrade Wizard.
+CAUTION: It is strongly recommended that you run the upgrade process on a copy of your
 production system.
 
 === Compatibility matrix for upgrade
