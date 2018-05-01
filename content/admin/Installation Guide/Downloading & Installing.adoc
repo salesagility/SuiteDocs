@@ -22,8 +22,6 @@ latest SuiteCRM files” section).
 
 .  Navigate to the SuiteCRM Downloads section at
 http://suitecrm.com/download
-.  Login using your username and password. If you do not have an
-account, you can register using the registration form.
 .  Download your flavour of SuiteCRM. We advise that all users download
 the latest SuiteCRM release. The latest version will contain the latest
 features and bug fixes.
@@ -44,25 +42,22 @@ subdirectory).
 “SuiteCRM” directory within your selected parent directory.
 .  At this stage, you may wish to rename the default “SuiteCRM”
 directory.
-.  Set ownership of the SuiteCRM directory:
-..  chgrp ApacheUser.ApacheGroup <suitecrmroot> -R recursively sets
-ownership for root directory to Apache user and group.
-.  The system user that your web server uses varies depending on your
+.  Set the correct permissions on the SuiteCRM directory (Linux):
++
+[source]
+----
+  sudo chown -R www-data:www-data .
+  sudo chmod -R 755 .
+  sudo chmod -R 775 cache custom modules themes data upload
+  sudo chmod -R 775 config_override.php 2>/dev/null
+----
+.  That `www-data` needs to be replaced by the actual system user that your web server runs under. This varies depending on your
 operating system. Common web server users are as follows:
+..  www-data (Ubuntu Linux/Apache)
 ..  apache (Linux/Apache)
 ..  nobody (Linux/Apache)
 ..  IUSR_computerName (Windows/IIS)
-
-If you are unsure how to set your web server user on your operating
-system, contact your web server host. If you are installing SuiteCRM
-locally and need assistance, visit our support forums.
-
-.  Set the following permissions on the SuiteCRM directory(Linux):
-..  `sudo chown -R www-data:www-data .`
-..  `sudo chmod -R 755 .`
-..  `sudo chmod -R 775 cache custom modules themes data upload config_override.php`
-
-The commands/steps taken to setting permissions differs dependant on
+The commands/steps taken to setting permissions differ dependant on
 your operating system. If you are experiencing issues with setting
 permissions on your SuiteCRM instance, visit our support forums.
 

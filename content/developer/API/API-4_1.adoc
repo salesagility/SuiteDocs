@@ -7,7 +7,7 @@ title: "API-4_1"
 
 {{% notice warning %}}
 This documentation pertains to SuiteCRM versions up to v.7.9.x. 
-Since SuiteCRM version 7.10, a link:../api-8[brand new v8 REST API] is available.
+Since SuiteCRM version 7.10, a link:../version-8[brand new v8 REST API] is available.
 {{% /notice %}}
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
