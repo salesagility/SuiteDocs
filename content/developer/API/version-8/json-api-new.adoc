@@ -85,14 +85,140 @@ SuiteCRM Api allows two kind of grant types:
 
 == Available parameters
 
+According to JsonApi specification, the available parameters are the following depending on the GET endpoint:
 
+=== Fields
 
-== Modules
+Fields can filter on attribute object. Allowed keys are valid bean properties.
+
+Example:
+
+[source,php]
+{{your-SuiteCRM-url}}/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
+
+Result:
+
+[source,json]
+{
+    "data": {
+        "type": "Account",
+        "id": "11a71596-83e7-624d-c792-5ab9006dd493",
+        "attributes": {
+            "name": "lol1111",
+            "account_type": "Customer"
+        },
+        "relationships": {
+            "AOS_Contracts": {
+                "links": {
+                    "related": "/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493/relationships/aos_contracts"
+                }
+            }
+        }
+    }
+}
+
+=== Page
+
+Page can filter beans and set pagination. Allowed key are *number* and *size*.
+
+* *page[number*] : number of the wanted page
+* *page[size*] : size of the result
+
+Example:
+
+[source,php]
+{{suitecrm71.url}}/V8/module/Accounts?fields[Account]=name,account_type&page[number]=3&page[size]=1
+
+Result:
+
+[source,json]
+{
+    "meta": {
+        "total-pages": 54
+    },
+    "data": [
+        {
+            "type": "Account",
+            "id": "e6e0af95-4772-5773-ae70-5ae70f931feb",
+            "attributes": {
+                "name": "",
+                "account_type": ""
+            },
+            "relationships": {
+                "AOS_Contracts": {
+                    "links": {
+                        "related": "/V8/module/Accounts/e6e0af95-4772-5773-ae70-5ae70f931feb/relationships/aos_contracts"
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "first": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=1&page[size]=1",
+        "prev": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=2&page[size]=1",
+        "next": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=4&page[size]=1",
+        "last": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=54&page[size]=1"
+    }
+}
+
+== Endpoints
+
+=== Logout
+
+[source,php]
+GET {{your-SuiteCRM-url}}/V8/logout
 
 === Get a module by ID
 
 [source,php]
 GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
 
+Available parameters: fields
 
-== Relationships
+=== Get collection of modules
+
+[source,php]
+GET {{your-SuiteCRM-url}}/V8/module/{moduleName}
+
+Available parameters: fields, page
+
+=== Create a module record
+
+[source,php]
+POST {{your-SuiteCRM-url}}/V8/module/{moduleName}
+
+Example body:
+
+[source,json]
+{
+  "data": {
+    "type": "Accounts",
+    "attributes": {
+      "name": "Test"
+    }
+  }
+}
+
+=== Update a module record
+
+[source,php]
+PATCH {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
+
+Example body:
+
+[source,json]
+{
+  "data": {
+    "type": "Accounts",
+    "id": "e6e0af95-4772-5773-ae70-5ae70f931fe"
+    "attributes": {
+      "name": "Test"
+    }
+  }
+}
+
+
+=== Delete a module record
+
+[source,php]
+DELETE {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
