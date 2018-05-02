@@ -32,7 +32,7 @@ directory. For example to override the Accounts detailviewdefs (found in
 the file in `custom/modules/Accounts/metadata/detailviewdefs.php`. One
 exception to this rule is the studio.php file. The modules metadata
 folder is the only location checked - any version in
-`custom/<TheModule>/metadata/studio.php` is ignored.
+`custom/modules/<TheModule>/metadata/studio.php` is ignored.
 
 == Different metadata
 
