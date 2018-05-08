@@ -1,0 +1,108 @@
+
+---
+weight: 1
+title: "Introduction"
+---
+
+= 1. Introducción
+
+
+== ¿Qué es SuiteCRM?
+
+La historia de https://www.suitecrm.com[SuiteCRM] comienza con SugarCRM.
+SugarCMR, creado en 2004, contaba con una versión open source llamada Community Edition junto a varias versiones de pago.
+Sin embargo, y de forma inesperada, SugarCRM no incluyó en el release de la version 7 la version Community Edition y además, informó
+que solo brindaría soporte limitado a las anteriores versiones abiertas.
+
+Es entonces que SalesAgility genera un Fork sobre SugarCRM Community Edition para crear SuiteCRM, desarrollándose sober las
+fortalezas del antiguo SugarCRM pero extendiendo y añadiendo funcionalidades integradas con nuevos plugins de código abierto.
+
+== Acerca de ésta guía
+
+Ésta guía está pensada para desarrolladores que son familiares (o al menos tuvieron algún tipo de contacto previo) con la version base de
+SuiteCRM, pero que desean llevar a cabo sus propias customizaciones. SuiteCRM es un software extenso que ya cuenta
+con más de diez años de desarrollo, lo cual torna impráctico desarrollar una guia que cubra todos los aspectos de su composición.
+Sin embargo, ésta guía está construida sobre los ejes más importantes del software, permitiendo satisfacer el 99% de las necesidades
+de personalización que puedan ser necesarias. Para el 1% de los casos restante, al final de la guía fue incluido un capítulo sobre recursos extras
+que deberían dar solucion a cualquier otra eventualidad. Finalmente, por favor siéntase libre de llevar a cabo cualquier comentario (o corrección)
+que usted considere importante contactándome en http://www.jsmackin.co.uk[JSMackin.co.uk].
+
+== Cómo leer ésta guía
+
+Cada capítulo en esta guía guarda la intención de abordar cada tema de forma independiente, de manera que el lector pueda saltar
+entre capítulos en base a sus intereses y necesidades. Eso produce ligeros solapamientos sobre algunos tópicos y términos que estarán debidamente
+vinculados via links con los capítulos donde se extiende la información respecto a sus aplicaciones y funcionalidades.
+
+Algunos pasajes también pueden hacer referencias a rutas de archivos u otros bloques de código que puedan tener valores variables; por ejemplo,
+los nombres de los controller contienen el nombre del módulo o archivo, los cuales el cual son arbitrarios. En esos casos, se los marcará con
+la etiqueta `<TheModuleName>` (para nombres de módulos), `<TheFileName>`(para nombres de archivos) o lo que corresponda según el caso. En esos casos,
+se debe interpretar por los nombres concretos de los módulos, archivos, etc... dependiendo del caso.
+
+== Configuración de SuiteCRM
+
+Ésta guía está desarrollada tomando como base SuiteCRM v7.1.5, la cual es la versión más actualizada al momento de la redacción del documento.
+Para obtener las instrucciones de instalación más actualizada en todo momento, se puede consultar a en SuiteCRM wiki
+https://suitecrm.com/wiki/index.php/Installation[suitecrm.com/wiki/index.php/Installation].
+
+[discrete]
+==== Website
+
+El instalador de SuiteCRM se lo puede encontrar en
+https://suitecrm.com/[SuiteCRM.com]. Si se desea comenzar con una interfaz completa y customizarla
+en base a las necesidades, la opción mas recomendable es SuiteCRM Max. Caso contrario, puede elegir la que mejor
+se adapte a sus necesidades.
+
+[discrete]
+==== GitHub
+
+SuiteCRM también está disponible vía http://github.com[GitHub] en
+https://github.com/salesagility/SuiteCRM[github.com/salesagility/SuiteCRM].
+Cada versión de SuiteCRM está taggeada, de forma que fácilmente pueda descargar la versión que usted necesite.
+
+== Ajustes Iniciales
+
+Realizada la instalación, se pueden realizar algunas configuraciones para llevar a cabo ajustes sobre
+la instancia sobre la que se está desarrollando. Éstos cambios deberían mejorar el flujo de desarrollo y
+productividad así como ayudar a identificar problemas que puedan llegar a generarse en el curso de su customización.
+
+[discrete]
+==== Developer Mode (Modo Desarrollador)
+
+SuiteCRM guardará en cache diversos archivos de los procesados a fin de mejorar la performance,
+tales como las plantillas (templates) de Smarty. El modo desarrollador desactiva algunos de
+esos procesos de caching, de manera que los cambios en los archivos modificados
+se vean de forma inmediata (salvando algunas excepciones, tales como las del caso de link:../extension-framework#extensions-chapter[extensions]) ).
+Esta opción puede ser activada tanto desde la edición del archivo de configuración como desde la página
+General settings (ajustes generales) dentro del administrador.
+
+[discrete]
+==== Log Level (Nivel de Log de error)
+
+El nivel por defecto de log de errores de SuiteCRM es `fatal`. Éste es un buen nivel de log para instancias de producción,
+pero quizás en entorno de desarrollo usted desee mantener el nivel del log en `info` o `debug`, de manera que la salida del
+log sea más verboso y que de forma que si algo sale mal, se pueda capturar la referencia al error.
+Para más información, puede dirigirse a link:../logging#logging-chapter[chapter on logging]
+
+[discrete]
+==== Display errors (Muestra de mensajes de error)
+
+Es probable que le resulte práctico apagar la muestra de mensajes de error. Lamentablemente, en la actualidad SuiteCRM tiene
+varios mensajes y advertencias de error por default. Con la opción `display_errors` activa, se pueden generar conflictos
+con las páginas AJAX y sus links, rompiéndose su enlace.
+
+Considerando ésto, es recomendable el checkeo directo de los logs PHP o de realizar la activación + `display_errors` a fin
+de asegurar que el código creado no está generando notificaciones, advertencias o errores.
+
+[discrete]
+==== XDebug
+
+http://xdebug.org[XDebug] es una extensión que provee de los perfiles con capacidad de debugging para PHP. Ésta es una
+herramienta que puede mejorar masivamente la productividad del desarrollador simplificando la codificación y además,
+realizar seguimiento de los errores.
+
+Verifique el sitio de XDebug para conocer más acerca de XDebug.
+
+is a PHP extension which provides profiling
+and debugging capabilities to PHP. This can massively improve developer
+productivity by simplifying development and, particularly, tracking down
+any issues. See the XDebug site for information on XDebug. link:../introduction[↩]
