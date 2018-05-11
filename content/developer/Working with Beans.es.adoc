@@ -43,7 +43,7 @@ $bean = BeanFactory::getBean('<TheModule>');
 
 
 
-{{% advertencia %}}
+{{% notice warning %}}
 `BeanFactory::getBean` cachea hasta diez resultados. Ésto puede generar comportamientos erráticos, sobre todo si se ejecuta `getBean` nuevamente sobre un registro ya cacheado, debido a
  que el valor de retorno sera la misma instancia del llamado anterior, cualquiera sea quien consulte al Bean. Además, cambios en la declaración de un Bean se veran reflejados para todos
  los elementos que hagan llamados a éste, indistintamente del método que haga uso del Bean.
@@ -252,83 +252,79 @@ $beanList = $accountBean->retrieve_by_string_fields(
 
 == Accediendo a los campos
 
+Todos los métodos tratados en la sección anterior retornan un bean,
+que es un objeto formado con los campos del registro
+consultado. La manipulación de los campos del registro se puede
+producir sencillamente accediendo o seteando las propiedades del bean tal como en
+cualquier otro objeto PHP; por ejemplo:
 
-
-If you have used one of the above methods we now have a bean record.
-This bean represents the record that we have retrieved. We can access
-the fields of that record by simply accessing properties on the bean
-just like any other PHP object. Similarly we can use property access to
-set the values of beans. Some examples are as follows:
-
-.Example 3.12: Accessing fields examples
+.Ejemplo 3.12: Acceso a los campos
 [source,php]
 ----
-//Get the Name field on account bean
+//Consultar al campo 'name' del bean 'accountBean'.
 $accountBean->name;
 
-//Get the Meeting start date
+//Recuperar la fecha de inicio del bean 'meeting' (reuniones).
 $meetingBean->date_start;
 
-//Get a custom field on a case
+//Obtener un campo custom de un bean 'case'.
 $caseBean->third_party_code_c;
 
-//Set the name of a case
+//Setear el campo 'name' en un bean case.
 $caseBean->name = 'New Case name';
 
-//Set the billing address post code of an account
+//Setear el código postal de la dirección de facturación (billing address) de un bean account.
 $accountBean->billing_address_postalcode = '12345';
 ----
 
+Sin embargo, los cambios en una instancia bean no se persisten de forma inmediata.
+Para salvar los cambios en una base de datos se debe realizar una llamada al método `save` del bean.
+Así mismo, enviar el mensaje `save` a un bean completamente nuevo va a insertar un nuevo registro en la base.
 
-
-When changes are made to a bean instance they are not immediately
-persisted. We can save the changes to the database with a call to the
-beans `save` method. Likewise a call to `save` on a brand new bean will
-add that record to the database:
-
-.Example 3.13: Persisting bean changes
+.Ejemplo 3.13: Persistiendo los cambios en un Bean
 [source,php]
 ----
-//Get the Name field on account bean
+//Setear el campo 'name' en el bean 'account'
 $accountBean->name = 'New account name';
-//Set the billing address post code of an account
+//Setear el codigo postal de 'billing address post code' de 'account'
 $accountBean->billing_address_postalcode = '12345';
-//Save both changes.
+//Salvar ambos cambios.
 $accountBean->save();
 
-//Create a new case (see the BeanFactory section)
+//Usando Beanfactory, crear un nuevo bean tipo case (ver sección BeanFactory en el encabezado)
 $caseBean = BeanFactory::newBean('Cases');
-//Give it a name and save
+//Asignar un nombre y persistir en BBDD.
 $caseBean->name = 'New Case name';
 $caseBean->save();
 ----
 
 
-{{% notice info %}}
-Whether to
-save or update a bean is decided by checking the `id` field of the bean.
-If `id` is set then SuiteCRM will attempt to perform an update. If there
-is no `id` then one will be generated and a new record will be inserted
-into the database. If for some reason you have supplied an `id` but the
-record is new (perhaps in a custom import script) then you can set
-`new_with_id` to true on the bean to let SuiteCRM know that this record
-is new.
+{{% notice warning %}}
+La decisión entre insertar un nuevo registro o solo actualizar un bean será determinada
+por según el campo `ìd` del bean. Si éste ya existe en la base, SuiteCRM realizará el intento
+de llevar a cabo un update. Si no existe el `id`, se autogenerará uno y el nuevo registor
+será insertado dentro de la base de datos.
+En el caso particular de que el registro ya cuente con un `id` pero que aún así se
+quiera insertar un registro nuevo (quizás mediante un script personalizado de importación) se puede
+setear el parámetro `new_with_id` = true en el bean para que SuiteCRM lo manipule como un registro
+distinto y nuevo.
 {{% /notice %}}
 
-== Related beans
+== Beans relacionados
 
-We have seen how to save single records but, in a CRM system,
-relationships between records are as important as the records
-themselves. For example an account may have a list of cases associated
-with it, a contact will have an account that it falls under etc. We can
-get and set relationships between beans using several methods.
+Para un sistema CRM, poder consultar, manipular y salvar solo un registro es muy útil pero no suficiente:
+las relaciones entre los distintos registros son tan importante como los datos que éste contiene.
+Por ejemplo, podemos considerar que una cuenta (account) puede tener un listado con casos (cases)
+asociados a ella, y a su vez, que un contacto (contact) va a contar con un account relacionado a el mismo.
+Para consultar o editar relaciones entre beans podemos usar distintos métodos.
 
 === get_linked_beans
 
-The `get_linked_beans` method allows retrieving a list of related beans
-for a given record.
+El método `get_linked_beans` permite consultar la lista completa de beans relacionados con un registro
+determinado.
 
-.Example 3.14: get_linked_beans method signature
+
+.Example 3.14: firma de get_linked_beans method
 [source,php]
 ----
 get_linked_beans(
@@ -344,31 +340,32 @@ get_linked_beans(
 
 
 `$field_name`::
-  The link field name for this link. Note that this is not the same as
-  the name of the relationship. If you are unsure of what this should be
-  you can take a look into the cached vardefs of a module in
-  `cache/modules/<TheModule>/<TheModule>Vardefs.php` for the link
-  definition.
+  El nombre del campo link para éste enlace. Debe notarse que éste no es el
+  nombre de la relación. En caso de no estar seguro sobre cuál debería ser
+  el valor de éste campo, se puede echar un vistazo al módulo que se encuentra en
+  `cache/modules/<TheModule>/<TheModule>Vardefs.php` para hallar la definición
+  del enlace.
 `$bean_name`::
-  The name of the bean that we wish to retrieve.
+  El nombre del bean sobre el que se desea realizar la consulta.
 `$sort_array`::
-  This is a legacy parameter and is unused.
+  Parámetro legacy, no debe ser usado.
 `$begin_index`::
-  Skips the initial `$begin_index` results. Can be used to paginate.
+  Salteo de los primeros resultados, `$begin_index` debe ser un valor entero.
+  Se lo puede usar para paginar.
 `$end_index`::
-  Return up to the `$end_index` result. Can be used to paginate.
+  Valor entero, representa la cantidad de registros a visualizar.
+  Se lo puede usar para paginar.
 `$deleted`::
-  Controls whether deleted or non deleted records are shown. If true
-  only deleted records will be returned. If false only non deleted
-  records will be returned.
+  Determina si se muestran los campos borrados o no. Si está seteado en true,
+  solo retornará los registros borrados. Si es false, solo mostrará los vigentes.
 `$optional_where`::
-  Allows filtering the results using an SQL WHERE clause. See the
-  `get_list` method for more details.
+  Permite filtrado de los resultados usando una cláusula WHERE de SQL. Ver
+  el método `get_list` para más referencia.
 
-==== Results
-`get_linked_beans` returns an array of the linked beans.
+==== Resultado
+`get_linked_beans` retorna un array de los beans relacionados..
 
-.Example 3.15: Example get_linked_beans call
+.Ejemplo 3.15: Ejemplo de llamada a get_linked_beans
 [source,php]
 ----
 $accountBean->get_linked_beans(
@@ -383,90 +380,82 @@ $accountBean->get_linked_beans(
 
 
 
-=== Relationships
+=== Relaciones
 
-In addition to the `get_linked_beans` call you can also load and access
-the relationships more directly.
+Adicionalmente a la llamada `get_linked_beans`, los enlaces entre beans pueden ser
+llamados de formas mas directas.
 
-==== Loading
-Before accessing a relationship you must use the `load_relationship`
-call to ensure it is available. This call takes the link name of the
-relationship (not the name of the relationship). As mentioned previously
-you can find the name of the link in
-`cache/modules/<TheModule>/<TheModule>Vardefs.php` if you’re not sure.
+==== Carga
 
-.Example 3.16: Loading a relationship
+Antes de acceder a una relación, se debe ejecutar el método `load_relationship` para
+asegurar que éstas están disponibles. Ésta llamada toma el nombre del link de la relación
+(no confundir con el nombre de la relación). Como se mencionó previamente, los nombres
+del link buscandos se pueden verificar en `cache/modules/<TheModule>/<TheModule>Vardefs.php`.
+
+.Ejemeplo  3.16: Cargando una relación
 [source,php]
 ----
-//Load the relationship
+//Carga de una relación.
 $accountBean->load_relationship('contacts');
-//Can now call methods on the relationship object:
+//Ahora se pueden llamar métodos del objecto relación:
 $contactIds = $accountBean->contacts->get();
 ----
 
 
-
-
-==== Methods
+==== Metodos
 
 `get` ::
-Returns the ids of the related records in this relationship e.g for the
-account - contacts relationship in the example above it will return the
-list of ids for contacts associated with the account.
-
+Retorna los ids de los registros relacinados en ésta relación. ie. para
+la relación account - contacts del ejemplo anterior va a retornar la lista de
+ids por contactos asociados con la cuenta.
 `getBeans` ::
-Similar to `get` but returns an array of beans instead of just ids.
+Similar al método anterior, pero retorna un array de beans en lugar de solos ids.
 
 {{% notice warning %}}
-`getBeans` will
-load the full bean for each related record. This may cause poor
-performance for relationships with a large number of beans.
+`getBeans` va a cargar el bean completo por cada registro relacionado.
+Ésto puede provocar baja performance en las relaciones con gran cantidad de beans.
 {{% /notice %}}
 
 `add` ::
-Allows relating records to the current bean. `add` takes a single id or
-bean or an array of ids or beans. If the bean is available this should
-be used since it prevents reloading the bean. For example to add a
-contact to the relationship in our example we can do the following:
+Permite relacionar registros con el bean actual. `add` acepta un id o un bean únicos o,
+en su defecto, un array de ids o beans (Idealmente, siempre que el bean sea accesible, deberia usarse éste a
+fin de prevenir reloadear el bean). Por ejemplo, para añadir un contacto a la
+relación de nuestro ejemplo, podemos hacer lo siguiente:
 
-.Example 3.18: Adding a new contact to a relationship
+.Example 3.18: Añadir un nuevo contacto a la relación.
 [source,php]
 ----
-//Load the relationship
+//Cargar la relación
 $accountBean->load_relationship('contacts');
 
-//Create a new demo contact
+//Crear un nuevo contacto demo
 $contactBean = BeanFactory::newBean();
 $contactBean->first_name = 'Jim';
 $contactBean->last_name = 'Mackin';
 $contactBean->save();
 
-//Link the bean to $accountBean
+//Linkear el bean a $accountBean
 $accountBean->contacts->add($contactBean);
 ----
 
 
-
-
 `delete` ::
-`delete` allows unrelating beans. Counter-intuitively it accepts the ids
-of both the bean and the related bean. For the related bean you should
-pass the bean if it is available e.g when unrelating an account and
-contact:
+`delete` permite romper las relaciones entre beans. De forma algo contraintuitiva,
+acepta los ids del bean de origen como el del bean relacionado. Donde va el
+argumento relacionado, y si se encuentra disponible, se debe pasar el bean completo.
+Por ejemplo, para romper una relación entre un Account y un Contact:
 
-.Example 3.19: Removing a new contact from a relationship
+.Ejemplo 3.19: Eliminando un nuevo contacto de una relación.
 [source,php]
 ----
-//Load the relationship
+//Carga de la relación
 $accountBean->load_relationship('contacts');
 
-//Unlink the contact from the account - assumes $contactBean is a Contact SugarBean
+//Desconexión del contact desde el account - se asumen que $contactBean es un Contact de SugarBean
 $accountBean->contacts->delete($accountBean->id, $contactBean);
 ----
 
-
 {{% notice warning %}}
-Be careful with the
-delete method. Omitting the second argument will cause all relationships
-for this link to be removed. link:../working-with-beans[↩]
+Si en el método delete se omite el segundo argumento, todas las relaciones de éste
+link serán removidas. link:../working-with-beans[↩]
 {{% /notice %}}
