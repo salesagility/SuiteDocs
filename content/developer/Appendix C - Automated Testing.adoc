@@ -340,6 +340,13 @@ using the following command:
 
 `codecept run demo --env browser-stack-hub,browser-stack-local,browser-stack-chrome-fhd`
 
+== Code Coverage Infos
+
+terminal command:
+`./vendor/bin/codecept run unit --coverage --coverage-html`
+
+output in:
+`path/to/SuiteCRM/tests/_output/coverage/index.html`
 
 == Writing and Running Tests
 
