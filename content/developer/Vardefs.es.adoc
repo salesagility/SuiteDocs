@@ -1,0 +1,315 @@
+---
+weight: 4
+title: "Vardefs"
+---
+
+= 4. Vardefs
+
+== Qué son los Vardefs
+
+Los Vardefs son usados para proveer de información a SuiteCRM acerca de un
+Bean particular. Suelen ser usados para especificar los campos, relaciones e
+índices de un módulo determinado, para declarar información adicional, tal como si
+se trata de un módulo auditado o para especificar el nombre de la tabla con
+la que está vinculado, entre otros.
+
+== Definiendo Vardefs
+
+=== Módulo
+
+Los Vardefs son inicialmente definidos en las carpetas de sus respectivos módulos.
+Para el caso del módulo Account, la carpeta se ubicaría en modules/Accounts/vardefs.php.
+La información es localizada en un array nombrada $dictionary, usando el módulo name como
+la key de referencia. En Accounts, la llave será `$dictionary['Account']`.
+Así, el Vardef de Accounts sería:
+
+.Ejemplo 4.1: Vardefs de Account (Editado para abreviar y simplificar)
+[source,php]
+----
+$dictionary['Account'] =
+array(
+  'table' => 'accounts',
+  'audited'=>true,
+  'unified_search' => true,
+  'unified_search_default_enabled' => true,
+  'duplicate_merge'=>true,
+  'comment' => 'Accounts are organizations or entities that ...',
+  'fields' => array (
+   //Acotado para abreviar. Para más referencias, ver sección campos.
+  ),
+  'indices' => array (
+   //Acotado para abreviar. Para más referencias, ver sección indices.
+  ),
+  'relationships' => array (
+   //Acotado para abreviar. Para más referencias, ver sección relaciones.
+  ),
+   //Ésta opción permite activar optimistic locking cuando se guardan cambios desde el EditView
+  'optimistic_locking'=>true,
+);
+
+VardefManager::createVardef(
+  'Accounts',
+  'Account',
+  array('default', 'assignable','company',)
+);
+----
+
+
+=== Keys (Llaves)
+
+Las siguientes son algunas de las keys que pueden ser especificadas para
+los Vardefs, salvo por Campos, Indices y Relaciones, que serán analizados
+en sus respectivas secciones.
+
+`table`::
+  El nombre de la tabla en la BBDD para éste módulo.
+`audited`::
+  Determina si éste módulo debe ser auditado o no por SuiteCRM. Debe considerarse
+  que ésta opción también debe ser parametrizada a nivel campo para que el mismo
+  sea efectivamente auditado.
+`unified_search`::
+  Determina si éste módulo puede ser buscado vía búsqueda global.
+`unified_search_default_enabled`::
+  Especifica si el módulo puede ser buscado por defecto mediante el buscador global.
+`duplicate_merge`::
+  Permite determinar si la funcionalidad de combinar (merging) duplicados está habilitada
+  o no para éste módulo.
+`comment`::
+  Una descripción del módulo.
+`optimistic_locking`::
+  Opción que habilita o deshabilita al opción de optimistic locking para éste
+  módulo. Optimistic locking bloquea las ediciones concurrentes sobre un registro
+  asumiendo que no existirán conflictos es ésta índole. Así, al momento del guardado
+  post edición del registro, se verificará el timestamp (marca de fecha/hora) de la
+  última modificación versus el timestap del inicio de la edición. Si son distintos,
+  significa que una modificación fue realizada desde que la vista fue cargada, y en
+  éste caso el usuario será derivado a una página donde se muestren las diferencias
+  entre los dos edits y se le solicitará que confirme cuál versión deberá ser utilizada.
+
+=== Campos
+
+La matriz campos es una agrupación de los campos del módulo donde se
+definen el comportamiento y los atributos de cada uno de ellos.
+
+`name`::
+  El nombre del campo.
+`vname`::
+  La clave para la etiqueta de idioma que debe ser usado por éste campo.
+`type`::
+  El tipo de datos del campo. Para más referencia, ver la sección tipos de campos.
+`isnull`::
+  Si se permite el ingreso de valores nulos.
+`len`::
+  Si el campo es de tipo string, determina el máximo de caracteres permitidos.
+`options`::
+  Aplicable a campos tipo enum, determina la etiqueta de idioma para los valores
+  desplegables para este campo.
+`dbtype`::
+  El tipo del campo que va a ser usado para el guardado del valor en la base de datos. No es
+  requerido ya que el usualmente el tipo apropiado suele ser elegido.
+`default`::
+  El valor del campo por defecto.
+`massupdate`::
+  Define si el campo permite ser editado mediante actualizaciones masivas (mass updates).
+  Algunos campos tienen ésta opción restringida siempre.
+`rname`::
+  Válido únicamente para campos relacionados. Es el nombre de campo con el que va a ser
+  identificado por  por el módulo relacionado.
+`id_name`::
+  Válido únicamente para campos relacionados. Define al campo de éste Bean que contiene
+  el id de relación.
+`source`::
+  La fuente de éste campo. Puede ser seteado como ‘non-db’ si el campo no existe en la
+  base de datos - por ejemplo, para campos linkeados, o campos cuyos valores son cargados
+  por ganchos lógicos u otras formas de carga.
+`sort_on`::
+  Para campos concatenados (i.e. campos de nombres), define el campo que debe usarse para ordenar.
+`fields`::
+  Para campos concatenados. Define el array de campos que deberían ser concatenados.
+`db_concat_fields`::
+  Para campos concatenados. Se trata del array de campos que deberían ser concatenados en la base de datos.
+  Comunmente, se usa el mismo parámetro que para el campo anterior `fields`.
+`unified_search`::
+  Se carga en verdadero si se desea que éste campo pueda ser buscado vía buscador global.
+`enable_range_search`::
+  Permitir al List View habilitar la búsqueda por rango para éste campo. Ésto se usa para campos de fecha o
+  de valores numéricos.
+`studio`::
+  Define si el campo es mostrado en Studio.
+`audited`::
+  Define si los cambios sobre éste campo deben o no ser auditados.
+
+=== Tipos de Campos
+
+Los siguientes son los tipos de campos comunmente utilizados:
+
+`id`::
+  Campo del tipo id.
+`name`::
+  Un campo tipo nombre. Usualmente es una concatenación de otros campos.
+`bool`::
+  Campo booleano.
+`varchar`::
+  Un campo tipo string de longitud variable.
+`char`::
+  Campo del tipo caracter.
+`text`::
+  Un campo del tipo área de texto.
+`decimal`::
+  Un campo del tipo decimal.
+`date`::
+  Campo del tipo fecha.
+`datetime`::
+  Campo de tipo Fecha y Hora
+`enum`::
+  Un campo del tipo desplegable (dropdown)
+`phone`::
+  Campo de tipo número telefónico.
+`link`::
+  Link a otro módulo por medio de una relación.
+`relate`::
+  Un campo de relación con un Bean.
+
+=== Indices
+
+El array de índices permite definir todos los índices de la base de datos, que
+deberían corresponderse con la tabla de la base de datos de éste módulo.
+Estudiando un ejemplo:
+
+.Ejemplo 4.2: Ejemplo de la definición de índices
+[source,php]
+----
+'indices' => array (
+  array(
+     'name' =>'idx_mymod_id_del',
+     'type' =>'index',
+     'fields'=>array('id', 'deleted')),
+  array(
+     'name' =>'idx_mymod_parent_id',
+     'type' =>'index',
+     'fields'=>array( 'parent_id')),
+  array(
+     'name' =>'idx_mymod_parent_id',
+     'type' =>'unique',
+     'fields'=>array( 'third_party_id')),
+  ),
+----
+Cada entrada del array debería tener, al menos, los siguientes parámetros:
+
+`name`::
+  Nombre del índice. Es usado habitualmente por la base de datos para hacer
+  referencia al índice; la mayoría de las bases de datos requiren que sea único.
+`type`::
+  El tipo de índice creado. Puede ser tipo `index` para simplemente añadir un índice al campo,
+  `unique` que genera una restricción de valor único al campo, o `primary` que añade al campo
+  como una llave primaria (primary key).
+`fields`::
+  Un array de los campos que deben ser indexados. El orden del éste array va a ser
+  usado como orden de los campos en el índice.
+
+{{% notice info %}}
+
+De momento, no es posible agregar índices a campos personalizados (*custom*)
+{{% /notice %}}
+
+=== Relaciones
+
+Los Vardefs también especifican las relaciones dentro de éste módulo.
+A continuación, un ejemplo editador del módulo Accounts:
+
+.Ejemplo 4.3: Ejemplo de definición de relación
+[source,php]
+----
+'relationships' => array (
+  'account_cases' => array(
+      'lhs_module'=> 'Accounts',
+      'lhs_table'=> 'accounts',
+      'lhs_key' => 'id',
+      'rhs_module'=> 'Cases',
+      'rhs_table'=> 'cases',
+      'rhs_key' => 'account_id',
+      'relationship_type' => 'one-to-many'),
+),
+----
+
+El ejemplo pertenece al link entre accounts y cases, que se especifica con las siguientes llaves:
+
+`lhs_module`::
+  El módulo del lado izquierdo de ésta relación. Para una relación *Uno a Muchos*,
+  éste sería el lado del *Uno*.
+`lhs_table`::
+  La tabla correspondiente al módulo de la izquierda. En caso de no estar seguro, la tabla
+  de un módulo puede buscarse en su archivo de Vardefs.
+`lhs_key`::
+  Los campos a ser usados por el lado izquierdo del vínculo. En el ejemplo anterior,
+  éste sería el `id` del Account.
+`rhs_module`::
+  El módulo del lado derecho. En el ejemplo previo, el correspondiente al lado del *Muchos*
+  de la relación.
+`rhs_table`::
+  La tabla del lado derecho de la relación. Como fue previamente sugerido,
+  la tabla correspondiente puede ser encontrada en el Vardefs del módulo de la derecha.
+`rhs_key`::
+  El campo a ser usado en el lado derecho de la relación. En éste caso, se trata del campo `account_id`
+  del módulo Cases.
+`relationship_type`::
+  El tipo de relación definido. Puede ser *uno-a-muchos* (one-to-many) o *muchos-a-muchos* (many-to-many).
+  Ya que en el ejemplo es una relación one-to-many, significa que cada Case está relacionado con un
+  único Account pero un Account puede tener múltiples Cases.
+
+Para una relación de campos *many-to-many*, las siguientes llaves también están disponibles:
+
+`join_table`::
+  El nombre de la tabla de unión (join) para ésta relación.
+`join_key_lhs`::
+  El nombre del campo de la tabla a unir por el lado izquierdo.
+`join_key_rhs`::
+  El nombre del campo de la tabla a unir por el lado derecho.
+
+
+=== Modelos de Vardef (templates)
+
+Los templates de Vardef proveen un atajo para definir Vardefs comunes. Ésto
+se realiza mediante una llamada al método `VardefManager::createVardef` y
+pasando el nombre del módulo, el nombre del objeto y el array de templates a ser
+asignados. El siguiente es un ejemplo para el Vardef de Accounts:
+
+.Example 4.4: Ejemplo de template de Vardef
+[source,php]
+----
+VardefManager::createVardef(
+      'Accounts',
+      'Account',
+      array('default', 'assignable','company',)
+      );
+----
+
+En éste ejemplo, son usados los templates `default`, `assignable` y `company`.
+Los templates disponibles serían los siguientes:
+
+`basic` ::
+`default`::
+  Añade la base de campos comunes, tales como `id`, `name`, `date_entered`, etc.
+`assignable`::
+  Agrega los campos y relaciones necesarias para asignar un registro un usuario.
+`person`::
+  Añade campos comunes a los registros de las personas, tales como `first_name`,
+  `last_name`, direcciones, etc.
+`company`::
+  Agrega campos comunes para compañías, tales como un dropdown de tipo de industria,
+  direcciones, etc.
+
+===  Vardefs customizados.
+
+Los Vardefs pueden ser personalizados añadiendo un archivo en:
+
+.Ejemplo 4.5: Localización de vardef custom.
+[source,php]
+custom/Extension/modules/<TheModule>/Ext/SomeFile.php
+
+Éste archivo puede ser usado para añadir un campo nuevo a la definición o
+para personalizar uno existente, por ejemplo, cambiar el tipo de un campo:
+
+.Ejemplo 4.6: Ejemplo de override sobre un vardef existente
+[source,php]
+$dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
