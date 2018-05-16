@@ -8,7 +8,7 @@ weight: 185
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/core-modules/TargetLists
+:imagesdir: ./../../../../images/ru/user/core-modules/TargetLists
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/TargetLists]
 

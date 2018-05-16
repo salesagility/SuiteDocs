@@ -12,7 +12,7 @@ weight: 20
 
 :experimental:
 
-:imagesdir: ./../../../images/ru/admin/Installing
+:imagesdir: ./../../../../images/ru/admin/Installing
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Installing]
 
