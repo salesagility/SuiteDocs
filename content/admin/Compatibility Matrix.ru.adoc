@@ -1,0 +1,296 @@
+---
+Title: Таблица совместимости
+weight: 60
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+== Версии SuiteCRM
+
+=== SuiteCRM 7.10.x
+
+[[smaller-table-spacing-7]]
+[cols="1s,2" ]
+|========
+
+2+^h| Платформа 
+
+| Linux, Unix, Mac OS | Любая версия с поддержкой PHP 
+
+| Windows | Windows Server 2008+
+
+| PHP | 5.5.9, 5.6, 7.0, 7.1, 7.2 
+
+2+^h| Веб-сервер 
+
+| Apache |2.2, 2.4 
+
+| IIS |8, 8.5
+
+2+^h| Базы данных 
+
+| MariaDB |5.5, 10, 10.1, 10.2 
+
+| MySQL |5.5, 5.6, 5.7 
+
+| SQL Server |SQL Server 2008+
+
+2+^h| Браузеры 
+
+| Chrome |55+
+
+| Firefox |52+
+
+| IE | 11 (режим совместимости не поддерживается) 
+
+| Edge |26 
+
+| Safari |6+
+|========
+
+=== SuiteCRM 7.9.x
+
+[[smaller-table-spacing-1]]
+[cols="1s,2" ]
+|========
+
+2+^h| Платформа 
+
+| Linux, Unix, Mac OS | Любая версия с поддержкой PHP 
+
+| Windows | Windows Server 2008+
+
+| PHP | 5.5, 5.6, 7.0, 7.1 
+
+2+^h| Веб-сервер 
+
+| Apache |2.2, 2.4 
+
+| IIS |8, 8.5
+
+2+^h| Базы данных 
+
+| MariaDB |5.5, 10, 10.1 
+
+| MySQL |5.5, 5.6, 5.7 
+
+| SQL Server |SQL Server 2008+
+
+2+^h| Браузеры 
+
+| Chrome |55+ 
+
+| Firefox |52+
+
+| IE | 11 (режим совместимости не поддерживается) 
+
+| Edge |26 
+
+| Safari |6+
+|========
+
+=== SuiteCRM 7.8.x
+
+[[smaller-table-spacing-2]]
+[cols="1s,2",]
+|=========
+
+2+^h|Платформа
+
+|Linux, Unix, Mac OS |Любая версия с поддержкой PHP 
+
+|Windows |Windows Server 2008+ 
+
+|PHP |5.5, 5.6, 7.0, 7.1 
+
+2+^h|Веб-сервер
+
+|Apache |2.2, 2.4
+
+|IIS |8, 8.5
+
+2+^h|Базы данных
+
+|MariaDB |5.5, 10, 10.1
+
+|MySQL |5.5, 5.6, 5.7
+
+|SQL Server |SQL Server 2008+
+
+2+^h|Браузеры
+
+|Chrome |55+ 
+
+|Firefox |52+
+
+|IE |11 (режим совместимости не поддерживается)
+
+|Edge |26 
+
+|Safari |6+
+|=========
+
+
+=== SuiteCRM 7.7.x
+
+[[smaller-table-spacing-3]]
+[cols="1s,2",]
+|====
+
+2+^h| Платформа 
+
+|Linux, Unix, Mac OS |Любая версия с поддержкой PHP 
+
+|Windows |Windows Server 2008+
+
+|PHP |5.3, 5.5, 5.6, 7.0
+
+2+^h| Веб-сервер 
+
+|Apache |2.2, 2.4 
+
+|IIS |8, 8.5
+
+2+^h| Базы данных 
+
+|MariaDB |5.5, 10, 10.1
+
+|MySQL |5.5, 5.6 
+
+|SQL Server |SQL Server 2008+
+
+2+^h|Браузеры
+
+|Chrome |43+ 
+
+|Firefox |38+
+
+|IE |11 (режим совместимости не поддерживается) 
+
+|Edge |26 
+
+|Safari |6+ 
+|====
+
+=== SuiteCRM 7.6.x
+
+[[smaller-table-spacing-4]]
+[cols="1s,2",]
+|====
+
+2+^h|Платформа
+
+|Linux, Unix, Mac OS |Любая версия с поддержкой PHP
+
+|Windows |Windows Server 2008+ 
+
+|PHP |5.5, 5.6, 7.0 
+
+2+^h|Веб-сервер 
+
+|Apache |2.2, 2.4 
+
+|IIS |8, 8.5
+
+2+^h|Базы данных 
+
+|MariaDB |5.5, 10, 10.1
+
+|MySQL |5.5, 5.6 
+
+|SQL Server |SQL Server 2008+
+
+2+^h|Браузеры 
+
+|Chrome |43+
+
+|Firefox |38+
+
+|IE |11 (режим совместимости не поддерживается) 
+
+|Edge |26 
+
+|Safari |6+
+|====
+
+=== SuiteCRM 7.5.x
+
+[[smaller-table-spacing-5]]
+[cols="1s,2",]
+|====
+
+2+^h|Платформа 
+
+|Linux, Unix, Mac OS |Любая версия с поддержкой PHP 
+
+|Windows |Windows Server 2008+
+
+|PHP |5.5, 5.6, 7.0 
+
+2+^h|Веб-сервер
+
+|Apache |2.2
+
+|IIS |8, 8.5 
+
+2+^h|Базы данных 
+
+|MariaDB |5.5, 10, 10.1
+
+|MySQL |5.5, 5.6 
+
+|SQL Server |SQL Server 2008+
+
+2+^h|Браузеры
+
+|Chrome |43+ 
+
+|Firefox |38+
+
+|IE |11 (режим совместимости не поддерживается) 
+
+|Edge |26 
+
+|Safari |6+
+|====
+
+=== SuiteCRM 7.4.x
+
+[[smaller-table-spacing-6]]
+[cols="1s,2",]
+|====
+
+2+^h|Платформа 
+
+|Linux, Unix, Mac OS |Любая версия с поддержкой PHP 
+
+|Windows |Windows Server 2008+ 
+
+|PHP |5.3, 5.4, 5.5, 5.6 
+
+2+^h|Веб-сервер
+
+|Apache |2.0, 2.2 
+
+|IIS |7.0, 7.5, 8, 8.5 
+
+2+^h| Базы данных 
+
+|MariaDB |5.5, 10, 10.1 
+
+|MySQL |5.1, 5.5, 5.6 
+
+|SQL Server |SQL Server 2008+
+
+2+^h| Браузеры
+
+|Chrome |38+ 
+
+|Firefox |32+
+
+|IE |9, 10, 11 (режим совместимости не поддерживается) 
+
+|Safari |6+ 
+|====

@@ -1,0 +1,33 @@
+---
+Title: Темы
+Weight: 140
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+= Темы
+
+== Изменение цветовой схемы в SuiteCRM версии 7.10 и последующих
+
+В системе по умолчанию присутствует единственая тема - SuiteP, которая представлена 4 цветовыми стилями. +
+Смена стиля производится в профиле пользователя на закладке 
+ifndef::env-github[link:/user/introduction/managing-user-accounts.ru/#_Параметры_макета[Параметры макета]]
+ifdef::env-github[link:/content/user/Introduction/managing-user-accounts.ru.adoc/#Параметры-макета[Параметры макета]]
+.
+
+== Изменение цветовой схемы в SuiteCRM версии 7.8 и более ранних
+
+В системе присутствует несколько тем, доступных для выбора в профиле пользователя на закладке 
+ifndef::env-github[link:/user/introduction/managing-user-accounts.ru/#_Настройка_тем[Темы]]
+ifdef::env-github[link:/content/user/Introduction/managing-user-accounts.ru.adoc/#Настройка-тем[Темы]]
+. Параметры тем могут быть настроены индивидуально в 
+ifndef::env-github[link:/admin/administration-panel/system.ru/#_Темы[панели администратора]]
+ifdef::env-github[link:/content/admin/Administration%20Panel/System.ru.adoc/#Темы[панели администратора]]
+.
+
+
+
+
+
