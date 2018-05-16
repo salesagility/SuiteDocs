@@ -12,7 +12,7 @@ Weight: 250
 :experimental:   
 
 
-:imagesdir: ./../../../images/ru/user/advanced-modules/CasesWithPortal
+:imagesdir: ./../../../../images/ru/user/advanced-modules/CasesWithPortal
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/CasesWithPortal]
 

@@ -11,7 +11,7 @@ Weight: 30
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/UserWizard
+:imagesdir: ./../../../../images/ru/user/UserWizard
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/UserWizard]
 
@@ -42,7 +42,7 @@ image:image3.png[Мастер настройки-3]
 image:image4.png[Мастер настройки-4]
 
 Указанные в мастере параметры при необходимости вы всегда можете изменить на 
-ifndef::env-github[link:/user/introduction/managing-user-accounts.ru/[странице настроек]]
+ifndef::env-github[link:../managing-user-accounts/[странице настроек]]
 ifdef::env-github[link:/content/user/Introduction/managing-user-accounts.ru.adoc/[странице настроек]]
  текущего пользователя.
 

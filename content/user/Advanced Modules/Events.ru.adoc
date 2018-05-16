@@ -11,7 +11,7 @@ Weight: 260
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/advanced-modules/Events
+:imagesdir: ./../../../../images/ru/user/advanced-modules/Events
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/Events]
 
