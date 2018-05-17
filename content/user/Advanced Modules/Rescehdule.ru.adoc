@@ -1,0 +1,42 @@
+---
+Title: Отложенные звонки
+Weight: 270
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:imagesdir: ./../../../../images/ru/user/core-modules/Calls
+
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Calls]
+
+//// 
+:notice-head: \\{{% notice note %}}
+:notice-foot: \{{% /notice %}}
+ifdef::env-github[:notice-head: :tip-caption: :pencil2:]
+ifdef::env-github[:notice-foot:]
+
+
+{notice-head} 
+bla-bla   
+{notice-foot} 
+////
+
+= Отложенные звонки
+
+Если 
+ifndef::env-github[link:/user/core-modules/calls.ru[звонок]]
+ifdef::env-github[link:/content/user/Core%20Modules/Calls.ru.adoc[звонок]]
+ по какой-либо причине не состоятся, вы можете пометить его как отложенный, указав причину переноса звонка. Для этого в меню действий Формы просмотра звонка выберите пункт *Отложить звонок*.
+
+image:image9.png[Отложенные звонки-меню]
+
+По умолчанию предлагается всего две причины переноса звонка, но, при необходимости, вы можете расширить этот список в Студии, дополнив соответствующее поле со списком (call_reschedule_dom) необходимыми элементами. За дополнительной информацией  об изменении полей со списками обратитесь к разделу 
+ifndef::env-github[link:/admin/administration-panel/developer-tools.ru/#_Редактор_комбобоксов[Редактор комбобоксов]]
+ifdef::env-github[link:/content/admin/Administration%20Panel/Developer%20Tools.ru.adoc/#Редактор-комбобоксов[Редактор комбобоксов]]
+.
+
+image:image10.png[Фиксация отложенного звонка]
+ 
+Впоследствии можно будет просмотреть историю дозвона на соответствующей закладке Формы просмотра звонка.
