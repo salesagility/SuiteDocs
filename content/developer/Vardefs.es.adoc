@@ -9,9 +9,9 @@ title: "Vardefs"
 
 Los Vardefs son usados para proveer de información a SuiteCRM acerca de un
 Bean particular. Suelen ser usados para especificar los campos, relaciones e
-índices de un módulo determinado, para declarar información adicional, tal como si
+índices de un módulo determinado o para declarar información adicional (por ejemplo, si
 se trata de un módulo auditado o para especificar el nombre de la tabla con
-la que está vinculado, entre otros.
+la que está vinculado), entre otras.
 
 == Definiendo Vardefs
 
