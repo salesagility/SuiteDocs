@@ -583,9 +583,7 @@ image:image34a.png[Меню действий Формы списка]
 
 {{% notice tip %}}
 При необходимости перечень полей  в Фильтре/Расширенном фильтре может быть настроен администратором системы в 
-ifndef::env-github[link:/admin/administration-panel/developer-tools.ru/#_Студия[Студии]]
-ifdef::env-github[link:/content/admin/Administration%20Panel/Developer%20Tools.ru.adoc/#Студия[Студии]]
-. 
+link:/admin/administration-panel/developer-tools.ru/#_Студия[Студии]. 
 {{% /notice %}}
 
 ==== Настройка колонок
@@ -794,9 +792,7 @@ image:image49.png[Форма списка]
 минимальное допустимое значение, для большинства полей может быть
 настроена всплывающая подсказка, значение по умолчанию и т.д. Более
 подробная информация на эту тему описана в разделе 
-ifndef::env-github[link:/admin/administration-panel/developer-tools.ru/#_Создание_и_редактирование_полей[Создание и редактирование полей]]
-ifdef::env-github[link:/content/admin/Administration%20Panel/Developer%20Tools.ru.adoc/#Создание-и-редактирование-полей[Создание и редактирование полей]]
-.
+link:/admin/administration-panel/developer-tools.ru/#_Создание_и_редактирование_полей[Создание и редактирование полей].
 
 Если необходимо добавить в редактируемую запись информацию, уже
 присутствующую в системе в виде перечня элементов, например, выбрать
@@ -823,9 +819,7 @@ image:image55.png[Быстрый поиск]
 {{% /notice %}}
 
 При выборе необходимых значений в выпадающих списках обратите внимание на то, что если в перечне нет необходимого значения – оно может быть добавлено в Студии. За дополнительной информацией об изменении полей со списками обратитесь к разделу 
-ifndef::env-github[link:/admin/administration-panel/developer-tools.ru/#_Редактор_комбобоксов[Редактор комбобоксов]]
-ifdef::env-github[link:/content/admin/Administration%20Panel/Developer%20Tools.ru.adoc/#Редактор-комбобоксов[Редактор комбобоксов]]
-.
+link:/admin/administration-panel/developer-tools.ru/#_Редактор_комбобоксов[Редактор комбобоксов].
 
 [start=2]
  .  После внесения всех необходимых изменений в Форму редактирования
