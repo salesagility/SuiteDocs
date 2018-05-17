@@ -22,9 +22,9 @@ $bean = BeanFactory::newBean('<TheModule>');
 $accountBean = BeanFactory::newBean('Cuentas');
 ----
 
-La extracción de datos desde un Bean existente puede llevarse a cabo de una manera similar de la siguiente forma:
+La extracción de datos desde un Bean existente puede llevarse a cabo de manera similar a la siguiente:
 
-.Ejemplo 3.2: Recuperando un Bean existente con BeanFactory
+.Ejemplo 3.2: Consultando un Bean existente mendiante BeanFactory
 [source,php]
 ----
 $bean = BeanFactory::getBean('<TheModule>', $beanId);
@@ -32,21 +32,22 @@ $bean = BeanFactory::getBean('<TheModule>', $beanId);
 $bean = BeanFactory::getBean('Cuentas', $beanId);
 ----
 
-`getBean` retornará un objeto Bean vacío en caso de que un `$beanId` no sea definido o si no existiese ese registro.
+`getBean` retornará un objeto Bean vacío en caso de que un `$beanId` no sea definido o si no existiese el registro solicitado.
 La generación de un Bean no poblado puede ser útil en caso de que se desee utilizar un método estático (static methods) del Bean (para ver un ejemplo, avanzar hasta la
 sección Buscando Beans).
 Para forzar deliberadamente el retorno de un Bean despoblado (es decir, vacío) se puede omitir el segundo término de la llamada al método `getBean`.
 
-.Ejemplo 3.3: Recuperando un Bean vacío
+.Ejemplo 3.3: Generando un Bean vacío
 [source,php]
+----
 $bean = BeanFactory::getBean('<TheModule>');
-
+----
 
 
 {{% notice warning %}}
 `BeanFactory::getBean` cachea hasta diez resultados. Ésto puede generar comportamientos erráticos, sobre todo si se ejecuta `getBean` nuevamente sobre un registro ya cacheado, debido a
  que el valor de retorno sera la misma instancia del llamado anterior, cualquiera sea quien consulte al Bean. Además, cambios en la declaración de un Bean se veran reflejados para todos
- los elementos que hagan llamados a éste, indistintamente del método que haga uso del Bean.
+ los elementos que hagan llamados a éste, indistintamente del método que haga uso del mismo.
 {{% /notice %}}
 
 
@@ -65,7 +66,9 @@ la sección anterior, por ejemplo:
 
 .Ejemplo 3.4: Extrayendo un Account Bean vacío (despoblado)
 [source,php]
+----
 $accountBean = BeanFactory::getBean('Accounts');
+----
 
 === get_list
 
@@ -105,10 +108,10 @@ get_list(
 `$max`::
   El máximo numero de registros retornados por página. -1 establece el máximo por default (habitualmente 20)
 `$show_deleted`::
-  Incluir en la respuesta a la consulta resultados que hayan sido borrados.
+  Incluir en la respuesta a la consulta los resultados que hayan sido borrados (SugarCRM usa un campo para borrado lógico).
 
 ==== Resultados
-get_list retorna una matriz (array) con los resultados, los resultados de paginación y la lista de beans.
+get_list retorna una matriz (array) con los resultados con la paginación deseada y la lista de beans.
 El array va a contar con las siguientes llaves (keys):
 
 `list`::
@@ -123,7 +126,7 @@ El array va a contar con las siguientes llaves (keys):
   Offset de la página actual respecto al inicio del subconjunto de registros consultados.
 
 ==== Ejemplo
-Trabajemos con un ejemplo concreto. Vamos a retornar la tercera página de todas las cuentas cuyo campo `'industry'` sea `Media`
+En el siguiente ejemplo, se va a consultar la tercera página de todas las cuentas cuyo campo `'industry'` sea `Media`
 usando un tamaño de página de 10 y ordenadas por nombre.
 
 .Ejemplo 3.6: Uso de get_list
@@ -222,7 +225,7 @@ retrieve_by_string_fields(
 `$encode`::0
   Valor booleano, representa si los resultados deben ser encodeados en HTML.
 `$deleted`::
-  Considerar o no filtros eliminados.
+  Considerar o no el filtro de eliminados.
 
 {{% notice Tener en cuenta %}}
 Tener en consideración que el el flag `$deleted` funciona de forma distinta a todos los otros métodos que se revisaron
@@ -302,7 +305,7 @@ $caseBean->save();
 {{% notice warning %}}
 La decisión entre insertar un nuevo registro o solo actualizar un bean será determinada
 por según el campo `ìd` del bean. Si éste ya existe en la base, SuiteCRM realizará el intento
-de llevar a cabo un update. Si no existe el `id`, se autogenerará uno y el nuevo registor
+de llevar a cabo un update. Si no existe el `id`, se autogenerará uno y el nuevo registro
 será insertado dentro de la base de datos.
 En el caso particular de que el registro ya cuente con un `id` pero que aún así se
 quiera insertar un registro nuevo (quizás mediante un script personalizado de importación) se puede
@@ -314,8 +317,8 @@ distinto y nuevo.
 
 Para un sistema CRM, poder consultar, manipular y salvar solo un registro es muy útil pero no suficiente:
 las relaciones entre los distintos registros son tan importante como los datos que éste contiene.
-Por ejemplo, podemos considerar que una cuenta (account) puede tener un listado con casos (cases)
-asociados a ella, y a su vez, que un contacto (contact) va a contar con un account relacionado a el mismo.
+Por ejemplo, podemos considerar que una cuenta (Account) puede tener un listado con casos (Cases)
+asociados a ella, y a su vez, que un contacto (Contact) va a tener con un Account relacionado con sí mismo.
 Para consultar o editar relaciones entre beans podemos usar distintos métodos.
 
 === get_linked_beans
@@ -324,7 +327,7 @@ El método `get_linked_beans` permite consultar la lista completa de beans relac
 determinado.
 
 
-.Example 3.14: firma de get_linked_beans method
+.Example 3.14: Firma de get_linked_beans method
 [source,php]
 ----
 get_linked_beans(
@@ -402,11 +405,11 @@ $contactIds = $accountBean->contacts->get();
 ----
 
 
-==== Metodos
+==== Métodos
 
 `get` ::
-Retorna los ids de los registros relacinados en ésta relación. ie. para
-la relación account - contacts del ejemplo anterior va a retornar la lista de
+Retorna los ids de los registros asociados en ésta relación. Por ejemplo, para
+la relación account - contacts del ejemplo anterior, se va a retornar la lista de
 ids por contactos asociados con la cuenta.
 `getBeans` ::
 Similar al método anterior, pero retorna un array de beans en lugar de solos ids.
@@ -441,7 +444,7 @@ $accountBean->contacts->add($contactBean);
 
 `delete` ::
 `delete` permite romper las relaciones entre beans. De forma algo contraintuitiva,
-acepta los ids del bean de origen como el del bean relacionado. Donde va el
+acepta tanto los ids del bean de origen como el del bean relacionado. Donde va el
 argumento relacionado, y si se encuentra disponible, se debe pasar el bean completo.
 Por ejemplo, para romper una relación entre un Account y un Contact:
 
