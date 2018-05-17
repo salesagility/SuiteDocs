@@ -23,7 +23,7 @@ https://ru.wikipedia.org/wiki/Общий_регламент_по_защите_д
 link:/user/core-modules/targets.ru/[Адресаты маркетинговых кампаний], 
 link:/user/core-modules/contacts.ru/[Контакты] и 
 link:/user/core-modules/leads.ru/[Предварительные контакты], как правило добавленные в систему через 
-link:/user/core-modules/campaigns.ru/#_Создание_Веб_формы_регистрации[Веб-форму регистрации]. 
+link:/user/core-modules/campaigns/#_Создание_Веб_формы_регистрации[Веб-форму регистрации]. 
 
 == Настройка подтверждения подписки
 
@@ -153,7 +153,7 @@ image:https://user-images.githubusercontent.com/5983672/36300706-2778607c-12fa-1
 
 
 Настройка осуществляется в разделе 
-link:/admin/administration-panel/email.ru/#_Настройка_e_mail[Настройка E-mail] панели администратора.
+link:/admin/administration-panel/email/#_Настройка_e_mail[Настройка E-mail] панели администратора.
 
 *Подтверждение подписки.* 
 Включение или отключение подтверждения подписки. +
