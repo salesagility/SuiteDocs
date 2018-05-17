@@ -65,73 +65,73 @@ other = "De Nuestro Blog Técnico"
 other = "Ultimas Publicaciones"
 
 [GettingStarted]
-other = "Getting Started"
+other = "Empezar"
 
 [Installing]
-other = "Installing"
+other = "Instalar"
 
 [Upgrading]
-other = "Upgrading"
+other = "Actualizar"
 
 [An-existing-installation]
-other = " an existing SuiteCRM installation"
+other = " una instalación de SuiteCRM existente"
 
 [Add-features-with]
-other = "Add features with "
+other = "Añadir funcionalidad con "
 
 [3rdPartyAdd-Ons]
-other ="3rd party add-ons"
+other ="Complementos de terceros"
 
 [Using-SuiteCRM]
-other = "Using SuiteCRM"
+other = "Utilizar SuiteCRM"
 
 [Learn-the]
-other = "Learn the"
+other = "Aprende el"
 
 [UserInterface]
-other = "User Interface"
+other = "Interfaz de usuario"
 
 [Understand-the]
-other = "Understand the"
+other = "Comprende los"
 
 [CoreModules]
-other = "Core Modules"
+other = "Módulos Centrales"
 
 [Its-open-source]
-other = "It's open source and"
+other = "Todo es código abierto y los"
 
 [Developers]
-other = "Developers"
+other = "Desarolladores"
 
 [Customize-all-the-code]
-other = "customize all the code!"
+other = "¡pueden presonalizar todo el código!"
 
 [Contribute]
-other = "Contribute"
+other = "Contribuye"
 
 [Learn-how-to]
-other = "Learn how to "
+other = "Aprende como "
 
 [Edit-a-page]
-other = "Edit a Page"
+other = "Editar una Página"
 
 [In-this-site]
-other = " in this site"
+other = " en este sítio"
 
 [Report-an]
-other = "Report an "
+other = "Informa una "
 
 [Issue]
-other = "Issue"
+other = "Cuestión"
 
 [About-a-page]
-other = " about a page"
+other = " sobre una página"
 
 [Code]
-other = "Code"
+other = "Código"
 
 [RecentlyEdited]
-other = "Recently Edited"
+other = "Ediciones recientes"
 
 [DocumentationPages]
-other = "Documentation Pages"
+other = "Páginas de Documentación"
