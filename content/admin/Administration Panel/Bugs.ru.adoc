@@ -20,9 +20,7 @@ ifdef::env-github[:btn:]
 = Управление версиями
 
 В данном разделе вы можете управлять перечнем версий вашей продукции. Перечень версий отображается в выпадающем списке при описании новой 
-ifndef::env-github[link:/user/core-modules/errors.ru[Ошибки]]
-ifdef::env-github[link:/content/user/Core%20Modules/Errors.ru.adoc[Ошибки]]
-.  
+link:/user/core-modules/errors.ru[Ошибки].  
 
 Для добавления версии в перечень выполните следующее:
 
@@ -34,9 +32,7 @@ image:image1.png[Управление версиями]
  
  Версия:: Введите необходимый номер версии.
 Статус:: Из выпадающего списка выберите статус *Активна*, чтобы версия отображалась в модуле 
-ifndef::env-github[link:/user/core-modules/errors.ru[Ошибки]]
-ifdef::env-github[link:/content/user/Core%20Modules/Errors.ru.adoc[Ошибки]]
-. 
+link:/user/core-modules/errors.ru[Ошибки]. 
 Порядок:: Укажите позицию создаваемой версии в списке версий. 
 
 [start=4]
