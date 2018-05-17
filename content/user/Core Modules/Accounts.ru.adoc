@@ -9,7 +9,7 @@ Weight: 70
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/core-modules/Accounts
+:imagesdir: ./../../../../images/ru/user/core-modules/Accounts
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Accounts]
 
@@ -30,7 +30,7 @@ image:image1.png[Контрагенты]
 Контрагенты :: Выберите эту опцию для просмотра существующих контрагентов.
 Создать контрагента :: Выберите эту опцию для создания нового контрагента.
 Импорт контрагентов :: Выберите эту опцию, если необходимо 
-ifndef::env-github[link:/user/introduction/user-interface.ru/#_Импорт_данных[импортировать]]
+ifndef::env-github[link:../../introduction/user-interface#_Импорт_данных[импортировать]]
 ifdef::env-github[link:/content/user/Introduction/User%20Interface.ru.adoc/#Импорт-данных[импортировать]]
  информацию о контрагентах из внешнего приложения или файла.
 
