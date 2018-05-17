@@ -10,7 +10,7 @@ Weight: 140
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/core-modules/EmailTemplates
+:imagesdir: ./../../../../images/ru/user/core-modules/EmailTemplates
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/EmailTemplates]
 

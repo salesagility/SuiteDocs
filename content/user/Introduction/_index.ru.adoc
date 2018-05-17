@@ -64,10 +64,10 @@ SugarCRM Inc. с самых первых своих версий и вплоть
 
 {{% notice note %}}
 Пользователям, не знакомым с SuiteCRM, и не планирующим заниматься администрированием системы, в первую очередь рекомендуются к прочтению раздел 
-ifndef::env-github[link:/user/introduction/getting-started.ru/[Начало работы]]
+ifndef::env-github[link:../introduction/getting-started/[Начало работы]]
 ifdef::env-github[link:/content/user/Introduction/Getting%20Started.ru.adoc/[Начало работы]]
 , описывающий основные технические требования, необходимые для работы в системе, и раздел  
-ifndef::env-github[link:/user/introduction/user-interface.ru#_Описание_пользовательского_интерфейса[Описание пользовательского интерфейса]]
+ifndef::env-github[link:../introduction/user-interface#_Описание_пользовательского_интерфейса[Описание пользовательского интерфейса]]
 ifdef::env-github[link:/content/user/Introduction/User%20Interface.ru.adoc#Описание-пользовательского-интерфейса[Описание пользовательского интерфейса]]
 , знакомящий с основными настройками системы. В описании присутствует масса перекрёстных ссылок, позволяющих быстро перейти к подробному описанию рассматриваемого функционала.
 {{% /notice %}}

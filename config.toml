@@ -89,3 +89,9 @@ weight = 30
 # url = "https://gohugo.io/"
 # weight = 20
 
+
+
+[Languages.ru]
+title = "Русскоязычная документация"
+weight = 3
+languageName = "Русский"

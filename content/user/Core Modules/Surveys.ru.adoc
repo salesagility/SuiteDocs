@@ -12,7 +12,7 @@ Weight: 190
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/core-modules/Surveys
+:imagesdir: ./../../../../images/ru/user/core-modules/Surveys
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Surveys]
 

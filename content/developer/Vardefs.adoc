@@ -210,6 +210,10 @@ Each array entry should have, at least, the following entries:
   An array of the fields to be indexed. The order of this array will be
   used as the order of the fields in the index.
 
+{{% notice info %}}
+At the moment it is not possible to add indexes to *custom* fields. 
+{{% /notice %}}
+
 === Relationships
 
 The Vardefs also specify the relationships within this module. Here’s an
@@ -319,5 +323,3 @@ existing one e.g changing a field type:
 .Example 4.6: Example overriding an existing vardef
 [source,php]
 $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
-
-link:../vardefs[↩]
