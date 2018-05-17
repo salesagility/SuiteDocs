@@ -12,7 +12,7 @@ weight: 40
 
 :experimental:
 
-:imagesdir: ./../../../images/ru/admin/UpgradeWizard
+:imagesdir: ./../../../../images/ru/admin/UpgradeWizard
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/UpgradeWizard]
 

@@ -9,7 +9,7 @@ Weight: 195
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/core-modules/Errors
+:imagesdir: ./../../../../images/ru/user/core-modules/Errors
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Errors]
 
