@@ -33,9 +33,7 @@ image:image2.png[Сотрудники]
 == Ввод информации о сотруднике
 
 Только администратор системы может 
-ifndef::env-github[link:/admin/administration-panel/employee-records.ru[добавлять новые записи о сотрудниках]]
-ifdef::env-github[link:/content/admin/Administration%20Panel/Employee%20Records.ru.adoc[добавлять новые записи о сотрудниках]]
-. 
+link:../../../admin/administration-panel/employee-records[добавлять новые записи о сотрудниках]. 
 Обычные пользователи могут только просматривать имеющиеся данные.
 
  .	В меню пользователя выберите пункт *Сотрудники*.
@@ -48,18 +46,12 @@ ifdef::env-github[link:/content/admin/Administration%20Panel/Employee%20Records.
 
 
 Поиск сотрудника:: используйте 
-ifndef::env-github[link:/user/introduction/user-interface.ru/#_Поиск_информации_в_системе[Фильтры или Расширенные фильтры]]
-ifdef::env-github[link:/content/user/Introduction/User%20Interface.ru.adoc/#Поиск-информации-в-системе[Фильтры или Расширенные фильтры]]
- в Форме списка модуля. 
+link:../../../user/introduction/user-interface/#_Поиск_информации_в_системе[Фильтры или Расширенные фильтры] в Форме списка модуля. 
 Просмотр детальной информации о сотруднике:: Для этого нажмите на имени сотрудника в общем списке.
 
-ifndef::env-github[link:/user/introduction/user-interface.ru/#_Экспорт_данных[Экспорт]]
-ifdef::env-github[link:/content/user/Introduction/User%20Interface.ru.adoc/#Экспорт-данных[Экспорт]]
- записей:: Для этого в форме списка выберите необходимые записи и в меню над выбранными записями выберите пункт *Экспортировать*.
+link:../../../user/introduction/user-interface/#_Экспорт_данных[Экспорт] записей:: Для этого в форме списка выберите необходимые записи и в меню над выбранными записями выберите пункт *Экспортировать*.
 Удаление записи о сотруднике:: Для этого нажмите на кнопку {btn}[Удалить] в Форме просмотра.
 Обновление информации сразу о нескольких сотрудниках:: Для этого используйте 
-ifndef::env-github[link:/user/introduction/user-interface.ru/#_Массовое_обновление_или_удаление_записей[панель массового обновления]]
-ifdef::env-github[link:/content/user/Introduction/User%20Interface.ru.adoc/#Массовое-обновление-или-удаление-записей[панель массового обновления]]
-.
+link:../../../user/introduction/user-interface/#_Массовое_обновление_или_удаление_записей[панель массового обновления].
  
  
