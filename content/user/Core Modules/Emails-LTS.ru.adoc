@@ -10,5 +10,5 @@ Weight: 140
 = E-mail (для версии 7.8 и более ранних)
 
 В версиях SuiteCRM 7.9 и более поздних 
-link:/user/core-modules/emails.ru/[почтовый интерфейс] был значительно переработан, описание почтового интерфейса для более ранних версий системы содержится в  разделе *Модуль "E-mail"* link:https://github.com/likhobory/SuiteCRM7RU/blob/ver.7.8/DOCS/Russian_Rapira_Application_Guide_for_SuiteCRM.pdf[этого руководства пользователя].
+link:../../../user/core-modules/emails[почтовый интерфейс] был значительно переработан, описание почтового интерфейса для более ранних версий системы содержится в  разделе *Модуль "E-mail"* link:https://github.com/likhobory/SuiteCRM7RU/blob/ver.7.8/DOCS/Russian_Rapira_Application_Guide_for_SuiteCRM.pdf[этого руководства пользователя].
 

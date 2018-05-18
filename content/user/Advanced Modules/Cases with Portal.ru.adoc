@@ -20,7 +20,7 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advance
 = Интеграция Обращений с внешним порталом
 
 При необходимости функционал 
-link:/user/core-modules/cases.ru/[Обращений] может быть интегрирован с link:http://joomla.ru/[CMS Joomla!] В этом случае через портал можно как отслеживать имеющиеся в системе обращения, так и создавать новые.  Для интеграции необходимо:
+link:../../../user/core-modules/cases[Обращений] может быть интегрирован с link:http://joomla[CMS Joomla!] В этом случае через портал можно как отслеживать имеющиеся в системе обращения, так и создавать новые.  Для интеграции необходимо:
 
  .	Настроить соответствующие параметры  портала в SuiteCRM
  .	Скачать со страницы загрузок SuiteCRM расширение link:https://suitecrm.com/resources/suitecrm-joomla-portal-plug-in/[Joomla! - Portal Component] 
@@ -29,7 +29,7 @@ link:/user/core-modules/cases.ru/[Обращений] может быть инт
 == Настройка портала
 
 Настройка параметров портала со стороны SuiteCRM описана в разделе 
-link:/admin/administration-panel/advanced-openadmin/#_Настройка_портала[Настройка портала].
+link:../../../admin/administration-panel/advanced-openadmin/#_Настройка_портала[Настройка портала].
 
 Для установки в Joomla! скачанного расширения выполните следующее:
 
@@ -54,7 +54,7 @@ image:image6.png[Создание пользователя портала]
  
 {{% notice note %}}
 Пункт *Создать пользователя портала* отображается  только в том случае, если настроены 
-link:/admin/administration-panel/advanced-openadmin/#_Настройка_портала[параметры портала].
+link:../../../admin/administration-panel/advanced-openadmin/#_Настройка_портала[параметры портала].
 {{% /notice %}}
 
 После чего пользователь будет создан в Joomla!, а на E-mail контакта будут оправлены соответствующие учётные данные.
@@ -67,7 +67,7 @@ image:image7.png[Создание обращения из портала]
 
 {{% notice note %}}
 Если необходимо отредактировать элементы полей со списками – сделайте это в 
-link:/admin/administration-panel/developer-tools/#_Редактор_комбобоксов[Редакторе комбобоксов] SuiteCRM, после чего *обязательно* почистите кэш в Joomla!
+link:../../../admin/administration-panel/developer-tools/#_Редактор_комбобоксов[Редакторе комбобоксов] SuiteCRM, после чего *обязательно* почистите кэш в Joomla!
 {{% /notice %}}
 
 Созданное в портале Обращение появится в перечне записей модуля *Обращения* SuiteCRM, где с ним можно продолжить работу.
