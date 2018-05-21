@@ -51,6 +51,7 @@ _Released 21st May 2018_
 [discrete]
 ===== Enhancements
 
+* https://github.com/salesagility/SuiteCRM/pull/5733[#5733 ] Feature - Lawful Basis for GDPR
 * https://github.com/salesagility/SuiteCRM/pull/5750[#5750 ] Feature - Mocking
 * https://github.com/salesagility/SuiteCRM/pull/5735[#5735 ] Feature - Robo
 * https://github.com/salesagility/SuiteCRM/pull/5773[#5773 ] Feature - Codeception code coverage
