@@ -12,7 +12,7 @@ Weight: 140
 
 {{%notice note%}}This documentation refers to *SuiteCRM 7.10.5 and later*. {{%/notice%}}
 
-*SuiteCRM 7.10.5* introduces new abilities to track the basis for which the a business has permission to both store and process a users information.
+*SuiteCRM 7.10.5* introduces new abilities to track the basis for which a business has permission to both store and process a users information.
 
 == Opt In Email Settings
 
