@@ -29,7 +29,11 @@ image:GDPREmailOptionsConfirmed.png[title ="Confirmed Opt In Settings"]
 
 The lawful basis feature covers the following fields: Lawful basis, Lawful basis source and Date Reviewed. You can ensure fields are included by default by opening the *Admin* panel, *Studio*, *Desired Module*, *Edit/Detail View*, and then adding the fields into the display.
 
+image:LawfulBasisStudio.png[title ="Lawful Basis Studio"]
+
 By using the "View Change Log" action you will be able to see that these three fields are availible to be tracked as audiable fields.
+
+image:LawfulBasisChangeLog.png[title ="Lawful Basis Change Log"]
 
 === Updating Lawful Basis Manually
 
