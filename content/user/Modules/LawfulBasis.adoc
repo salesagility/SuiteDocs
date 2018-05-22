@@ -1,0 +1,41 @@
+---
+Title: Lawful basis
+Weight: 140
+---
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/user
+
+:toc:
+
+= Lawful basis
+
+{{%notice note%}}This documentation refers to *SuiteCRM 7.10.5 and later*. {{%/notice%}}
+
+*SuiteCRM 7.10.5* introduces new abilities to track the basis for which a business has permission to both store and process a users information.
+
+== Lawful Basis
+
+The lawful basis feature covers the following fields: Lawful basis, Lawful basis source and Date Reviewed. You can ensure fields are included by default by opening the *Admin* panel -> *Studio* -> *Desired Module* -> *Edit/Detail View*, and then adding the fields into the display.
+
+image:LawfulBasisStudio.png[title ="Lawful Basis Studio"]
+
+By using the "View Change Log" action you will be able to see that these three fields are available to be tracked as auditable fields.
+
+image:LawfulBasisChangeLog.png[title ="Lawful Basis Change Log"]
+
+=== Updating Lawful Basis Manually
+
+To update any of the lawful basis fields manually you can either edit the detail/edit view directly or take advantage of the "Mass Update" action in the list-view. This is accomplished by selecting the checkboxes on one or more records on the list-view and then selecting the "Bulk Action" drop-down, "Mass Update". After scrolling to the bottom of the list-view you will see the three lawful basis fields visible and able to be mass updated.
+
+== Lawful Basis Automisation
+
+By updating your email settings to use "Confirmed Opt In" you are able to automatically update the lawful basis fields of records when using campaigns web to lead forms or by sending confirmed opt-in emails. See link:../confirmed-opt-in-settings[confirmed-opt-in-settings] for further details.
+
+=== Updating Lawful Basis Automatically (WebToLead)
+
+By using WebToLead functionality you are able to automatically update the lawful basis fields of a record. With opt in email settings set to "Confirmed Opt In", any person form created in the campaigns module will automatically update generated records with the correct lawful basis information. E.g. Lawful Basis: Consent, Lawful Basis Source: Website, Date Reviewed: The date that the link was clicked in the users format.
+
+=== Updating Lawful Basis Automatically (Email)
+
+With a contact, lead or target that has been set to "Opt in" you are able to automatically update the lawful basis fields through email. By navigating to the list-view and selecting the checkbox for each record you want to update you can then select "Bulk Action", "Send Confirm Opt In". This will then send an email to the primary email address of each record which upon completion of the confirmed opt in step will result in the related records in the CRM having their lawful basis fields updated to match. E.g. Lawful Basis: Consent, Lawful Basis Source: Email, Date Reviewed: The date that the link was clicked in the users format.
