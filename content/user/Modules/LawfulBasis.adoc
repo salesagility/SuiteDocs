@@ -20,7 +20,7 @@ The lawful basis feature covers the following fields: Lawful basis, Lawful basis
 
 image:LawfulBasisStudio.png[title ="Lawful Basis Studio"]
 
-By using the "View Change Log" action you will be able to see that these three fields are available to be tracked as audiable fields.
+By using the "View Change Log" action you will be able to see that these three fields are available to be tracked as auditable fields.
 
 image:LawfulBasisChangeLog.png[title ="Lawful Basis Change Log"]
 
@@ -30,7 +30,7 @@ To update any of the lawful basis fields manually you can either edit the detail
 
 == Lawful Basis Automisation
 
-By updating your email settings to use "Confirmed Opt In" you are able to automatically update the lawful basis fields of records when using campaigns web to lead forms or by sending confirmed opt-in emails. See link:/confirmed-opt-in-settings/[confirmed-opt-in-settings] for further detail.
+By updating your email settings to use "Confirmed Opt In" you are able to automatically update the lawful basis fields of records when using campaigns web to lead forms or by sending confirmed opt-in emails. See link:../confirmed-opt-in-settings[confirmed-opt-in-settings] for further details.
 
 === Updating Lawful Basis Automatically (WebToLead)
 
