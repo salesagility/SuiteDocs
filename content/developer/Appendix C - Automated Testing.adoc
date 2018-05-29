@@ -1192,7 +1192,7 @@ $value = SuiteCRM\StateCheckerConfig::get('testStateCheckMode')
 Default value:
 [source, php]
 --
-SuiteCRM\StateCheckerConfig::::RUN_PER_CLASSES
+SuiteCRM\StateCheckerConfig::RUN_PER_CLASSES
 --
 
 SuiteCRM config overrides:
