@@ -1,0 +1,264 @@
+---
+Title: Studio
+weight: 55
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/admin
+
+:toc:
+
+=== Introduction
+
+The Studio tools allow you to customise the information shown in the
+modules and how it is displayed.
+
+When Studio is opened, it will display a list of all the modules which 
+can be customised. Click to select the required module.
+
+image:StudioModuleList.png["Studio module list"]
+
+For each module, there are several components which can be edited.
+
+image:StudioModuleComponents.png["Studio module components"]
+
+*Labels:* View/edit field labels and the module name
+
+*Fields:* View/edit field properties and add new fields
+
+*Relationships:* View/edit/add relationships between modules 
+
+*Layouts:* Customise the edit/detail/list and filter views
+
+*Subpanels:* Set which columns are displayed on module subpanels
+
+=== Labels
+
+Selecting the Labels component lists all the field labels for the module. Edits to labels
+will be reflected on the module layouts.
+
+Click and type to make the required changes to the labels and then click
+btn:[SAVE & DEPLOY]. 
+
+A confirmation message will appear once the changes have been saved. You should now be
+able to see the changes to the labels when you navigate to the module.
+
+image:StudioEditLabels.png["Studio -edit module labels"]
+
+Clicking btn:[CHANGE MODULE NAME] will allow you to change the label for the
+module itself. See the 
+link:../developer-tools/#_rename_modules[Rename Modules] section of the 
+Developer Tools documentation for more details.
+
+=== Fields
+
+Selecting the Fields component displays all the available fields for the module, 
+with their display label and data type. 
+
+image:StudioFields.png["studio - module fields list"]
+
+==== Adding A Field
+
+You can add a custom field to the selected module by clicking btn:[ADD FIELD].
+
+image:StudioFieldsAddField.png["studio - add field"]
+
+Enter the details for the new field. Depending on the data type selected for the field, some or all of the following properties 
+can be set for the field:
+
+[cols = "20, 80", frame = "none", grid = "none"]
+|===
+|*Data Type:*|The type you select determines what kind of characters can be entered 
+for the field. For example, only numbers that are integers may be entered into 
+fields that are of the Integer data type.
+|*Field Name:*|The field name must be alphanumeric and must not contain any spaces. Underscores 
+are valid.
+|*Display Label*|The label which will be displayed alongside the field in the views.
+|*System Label:*|This label is used to refer to the field in the code.
+|*Help Text:*| Optional explanatory text to display temporarily when the 
+user hovers over the field.
+|*Comment Text:*|This is only visible in Studio and Module Builder, as a 
+description for administrator use.
+|*Default Value:*|The field will have the value set here unless the user enters a new value.
+|*Max Size:*|The maximum number of characters that can be entered into the field.
+|*Mass Update:*| Enable to mass Update feature for this field.
+|*Required Field:*|Whether or not a value must be entered for the field before a record 
+containing the field can be saved.
+|*Audit:*|If this is selected, changes made to the field value can be tracked from the 
+record's Change Log.
+|*Inline Edit:*|Whether or not the field can be edited inline, when this option is enabled
+in the link:../system/#_user_interface[System Settings].
+|*Importable:*|Select an option to allow, disallow or require 
+the field to be imported when using the Import Wizard.
+|*DuplicateMerge:*|Select an optionto enable or disable the Merge Duplicates
+and Find Duplicates features.
+|===
+
+[discrete]
+==== Adding A Dropdown Field
+
+When adding a field of type DropDown, you need to additionally specify the
+dropdown list. This contains the list items which will be displayed for the dropdown.
+image:StudioFieldsAddDropDown5.png["studio - add a dropdown field"]
+
+You can select an existing dropdown list if appropriate, or click btn:[ADD] to create a 
+new one.
+
+image:StudioFieldsAddDropDown2.png["studio - add a dropdown field"]
+
+For each item to include in the list, enter:
+
+[cols = "20, 80", frame = "none", grid = "none"]
+|===
+|*Item Name*|Used to refer to the dropdown item in the code, this must be alphanumeric, begin 
+with a letter and contain no spaces. 
+|*Display Name*|The text shown to the user. This may contain spaces and special characters
+|===
+
+Click btn:[ADD] to add each new entry.
+
+The list can be optionally sorted alphabetically by the Display Label by clicking the appropriate
+sort button.
+
+Click btn:[SAVE] to save the new dropdown list and return to the field properties. 
+
+The dropdown list items you have created will now be visible. If desired, you can select 
+a default value for the dropdown.
+
+image:StudioFieldsAddDropDown4.png["studio - add a dropdown field"]
+
+==== Editing A Field
+
+Click on a field to view the field's properties. These can be edited in the same way as detailed 
+above for adding a new field.
+
+==== Deleting A Field
+
+Only fields that have been created in Studio can be deleted via Studio. Core fields cannot be deleted.
+
+Select the field you wish to delete and click btn:[DELETE] A warning message will appear asking you to 
+confirm the deletion as both the field and any data related to the custom field will be deleted from the 
+database and the field will no longer appear on any module views.
+
+image:StudioFieldsDeleteField.png["studio - delete field "]
+
+=== Relationships
+
+A relationship represents a two-way link between two modules. Selecting the Relationships component 
+displays all the relationships between the currently selected module
+and other deployed modules.
+
+image:StudioRelationships.png["studio - module relationships"]
+
+Click on a relationship to view the relationship properties. 
+
+Click btn:[ADD RELATIONSHIP] to add a new relationship for the selected module.
+
+image:StudioAddRelationship.png["studio - add relationship"]
+
+The *Primary Module* will be set to the currently selected module. 
+
+Specify the relationship type:
+
+*One to One*
+
+With a One-to-One relationship, each record in the primary module may only have one related record in 
+the related module, and vice versa. This type of relationship will add a relate field to both 
+modules' records.
+
+*One to Many*
+
+With a One-To-Many relationship, records in the primary module may be related to one or more records 
+in the related module, but each related module record is only related to one primary module record.
+This will add a relate field to the related module's records, but the primary module will display 
+a subpanel where more than one related module records can be added.
+
+*Many to Many*
+
+With a Many-To-Many relationship, records in the primary module cna be related to one or more records 
+in the related module, and vice versa. Each module's records will contain a subpanel for the related records.
+
+Select the *Related Module* from the dropdown list.
+
+Where there are subpanels, subpanel views for the module(s) can be selected. 
+
+Click btn:[SAVE AND DEPLOY] to save the relationship.
+
+=== Layouts
+
+Layouts can be edited in Studio to customise the module views shown to users. 
+
+==== Edit View
+
+Edit view is displayed when editing a record or createing a new one.
+
+image:StudioEditView.png["studio - edit view"]
+
+The current layout is displayed in the main panel on the right-hand side.
+Unused fields are shown in the list on the left hand side.
+
+{{% notice tip%}}Select *Sync to Detail View* if you wish any changes made to fields or field placement 
+to be automatically applied to the corresponding Detail View. Note that 
+layout changes cannot be made to the Detail View when this option is set. {{%/notice%}}
+
+*Adding Fields*
+
+Fields can be added to the view either as a new row in an existing panel (section),
+or by adding a new panel.
+
+Click and drag the *New Row* or *New Panel* element to the desired location in the layout
+on the right-hand side.
+
+image:StudioEditViewAddPanel.png["studio - add panel to view"]
+
+If you have added a new panel, this can be renamed by clicking the the pencil icon. 
+This will open the edit view for the panel label. Edit the label and click btn:[SAVE]
+to return to the layout.
+
+image:StudioEditViewRenamePanel.png["studio - rename panel"]
+
+A new row will auomatically be created with two columns.
+
+Drag and drop the required fields to the new row. Clicking the + button will span the field
+across both columns. 
+
+Click btn:[SAVE AND DEPLOY] to save the layout changes. These should now be visible when
+you navigate to the Edit view for the module.
+
+*Deleting Fields*
+
+Delete fields, row or panels from the layout by dragging them to the Delete area on the left-hand side.
+
+Click btn:[SAVE AND DEPLOY] to save the layout changes. 
+
+==== Detail View
+
+Detail View is a read-only view, shown when a record is opened.
+
+The Detail View layout can be edited in exactly the same way as for the Edit View. Note that if you have
+*Sync to Detail View* selected on the Edit View, you will not be able to make changes to the Detail View.
+
+==== List View
+
+The List VIew is shown when a module is opened, and lists all the records in the module. 
+
+Customise which fields are shown in the list view, and the order in which they are displayed here.
+
+[cols = "20, 80", frame = "none", grid = "none"]
+|===
+|*Default*| Fields in this column will be shown by default in the list view. Re-order by dragging and dropping
+the field names.
+|*Available*|Fields in this column are available for users to add to the list view using the Column Chooser 
+button on the list view. 
+|*Hidden*|These fields are hidden from users and cannot be added to the view.
+|===
+
+Drag and drop the module fields between the columns to customise the list view.
+
+=== Subpanels
+
+image:StudioSubpanels.png["studio - subpanels"]
+image:StudioSubpanels2.png["studio - subpanels"]
+
+=== Export Customizations
