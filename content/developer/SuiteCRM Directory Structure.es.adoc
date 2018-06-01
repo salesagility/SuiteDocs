@@ -1,0 +1,47 @@
+
+---
+weight: 2
+title: "Estructura de Directorios SuiteCRM"
+---
+
+= 2. Estructura de directorios de SuiteCRM
+
+`cache`::
+  Contiene los archivos cacheados usados por SuiteCRM para mejorar la performance de la aplicación. Los mismos pueden ser
+  plantillas compiladas de Smarty, Vardefs agrupados y archivos JavaScript minificados y agrupados.
+  Así mismo, algunos módulos estándares y customizados pueden guardar (temporalmente) información específica de su funcionalidad allí.
+`custom`::
+  Contiene customizaciones del usuario y del desarrollador para SuiteCRM. Además, contiene bloques de código que sostienen la
+  compatibilidad con SugarCRM; esto último es muy probable sea modificado en el futuro.
+`data`::
+  Almacena las clases y archivos que son usados para transaccionar con SugarBeans y sus relaciones.
+`examples`::
+  Contiene ejemplos sencillos de lead capture (pantallas de inicio de gestión) y uso de las API. Actualmente se encuentran
+  severamente desactualizadas.
+`include`::
+  Contiene la mayoria del código de SuiteCRM, excluyendo los módulos y los datos.
+`install`::
+  Código usado por el instalador de SuiteCRM.
+`jssource`::
+  La carpeta `jssource` contiene la fuente sin minificar de algunos de los archivos JavaScript usados dentro de SuiteCRM.
+`metadata`::
+  Almacena la metadata relacional de los distintos módulos standard de SuiteCRM.
+  No debe confundirse éste directorio con el la metadata del módulo, que contiene informacion sobre las definiciones de vista,
+  dashlets (componentes de dashboard) y definiciones de búsquedas.
+`mobile`::
+  Contiene el código de la aplicación móvil http://www.quickcrm.fr[QuickCRM] .
+`ModuleInstall`::
+  Código del instalador de módulos.
+`modules`::
+  Almacena el código de todos los módulos predeterminados (stock) y custom de SuiteCRM.
+`service`::
+  Códigos de las APIs Soap y REST de SuiteCRM.
+`themes`::
+  Código, data e imágenes del tema visual SuiteCRM.
+`upload`::
+  El archivo `upload` contiene documentos que han sido cargados a SuiteCRM. Los nombres de los archivos provienen del ID correspondiente
+  a la Nota/Documento de Revisión.
+  `upload`/`upgrades` además contiene los archivos y paquetes de los módulos que pudieron haber sido instalados.
+`log4php`, `soap`, `XTemplate`, `Zend` ::
+  Código fuente de varias librerías usadas por SuiteCRM, muchas de las cuales ya fueron deprecadas.
+  link:../suitecrm-directory-structure[↩]
