@@ -3,5 +3,5 @@ title: Administration Panel
 weight: 10
 ---
 
-== Introduction
-
+=== Table of Contents
+{{% children depth="3" showhidden="true" %}}
