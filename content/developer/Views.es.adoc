@@ -1,0 +1,165 @@
+
+---
+weight: 5
+title: "Views"
+---
+
+= 5. Vistas
+
+SuiteCRM sigue el patrón MVC (Modelo-Vista-Control), por lo que utiliza la
+estructura de Vistas como las entidades responsables de reunir y mostrar información.
+Existe una cantidad de Vistas por default en SuiteCRM. Éstas son:
+
+*ListView*::
+  Muestra una lista de registros y provee vínculos a los EditViews y
+  DetailViews de esos registros. La ListView además permite algunas
+  operaciones, tales como el borrado o el update masivo de registros.
+  Ésta vista (usualmente) se incluye por defecto en el default view de
+  cada módulo.
+*DetailView*::
+  Muestra los detalles de un registro, así como también los subpaneles
+  de registros relacionados con el mismo.
+*EditView*::
+  El EditView permite la edición de varios campos de un registro y
+  provee las validaciones para esos valores.
+
+== Localización
+
+Las vistas pueden ser encontradas en `modules/<TheModule>/views/` o, para una
+vista customizada, en `custom/modules/<TheModule>/views/`, y son nombradas siguiendo
+el siguiente formato: `view.<nombreDeLaVista>.php`. Por ejemplo, el DetailView de Accounts
+puede ser encontrado en `modules/Accounts/views/view.detail.php` con una
+versión customizada en `custom/modules/Accounts/views/view.detail.php`.
+Si existe una versión custom, es la que será usada. Si no, entonces la versión original
+del DetailView será la utilizada. Finalmente, si ninguna de éstas dos existe, se recurrirá
+al default de SuiteCRM que está en `include/MVC/View/views/`.
+
+== Personalización (customising)
+
+Para llevar a cabo la customización de una Vista, primero se debe crear
+un archivo de vista apropiado. Sin embargo, éste va a variar dependiendo del
+módulo al que deseemos personalizar.
+
+=== Módulo custom
+
+En éste caso, se puede crear un archivo directamente en el módulo personalizado.
+Para ello, se crea un archivo (si éste no existe) en `modules/<TheModule>/views/view.<viewname>.php`
+cuyo contenido sea similar a:
+
+.Ejemplo 5.1: View para un módulo custom
+[source,php]
+----
+<?php
+
+require_once 'include/MVC/View/views/view.<viewname>.php';
+
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+class <TheModule>View<ViewName> extends View<ViewName>
+{
+
+}
+----
+
+Un ejemplo más concreto podría ser el de una vista detalle para un módulo custom
+llamado ABC_Vehicles:
+
+.Ejemplo 5.2: Vista de detalle para un módulo custom ABC_Vehicles
+[source,php]
+----
+<?php
+
+require_once 'include/MVC/View/views/view.detail.php';
+
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+class ABC_VehiclesViewDetail extends ViewDetail
+{
+
+}
+----
+
+=== Módulos preexistentes
+
+Para módulos preexistentes se debe añadir la vista a +
+`custom/modules/<TheModule>/views/view.<viewname>.php`.
+
+El contenido de éste archivo va a variar dependiendo de se desee
+extender la vista existente (siempre que haya una vista preexistente)
+o crear su propia versión, completamente nueva. Generalmente, la opción
+de extender una vista existente es la más recomendable, ya que con ella
+también se heredan los bloques de lógica más importantes.
+Cabe aclarar que la convención de notación también se ve modificada; el nombre
+de la clase responde al formato `Custom<TheModule>View<ViewName>` (por
+ejemplo, `CustomAccountsViewDetail`)
+
+En el caso a continuación, no extendemos de ninguna vista existente o
+la misma no existe.
+
+.Ejemplo 5.3: View customizada para un módulo existente.
+[source,php]
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'include/MVC/View/views/view.<viewname>.php';
+
+class Custom<TheModule>View<ViewName> extends ViewDetail
+{
+
+}
+----
+
+Por otro lado, si extendemos de una View existente, debemos incluir un
+requerimiento a la misma:
+
+Otherwise we extend the existing view. Note that we are requiring the
+existing view:
+
+.Example 5.4: Overrideando una View de un módulo existente
+[source,php]
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'modules/<TheModule>/views/view.<viewname>.php';
+
+class Custom<TheModule>View<ViewName> extends <TheModule>View<ViewName>
+{
+
+}
+----
+
+Por ejemplo, overridear el List View de Accounts:
+
+.Example 5.5: Overrideando el List View de Accounts
+[source,php]
+----
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+require_once 'modules/Accounts/views/view.list.php';
+
+class CustomAccountsViewList extends AccountsViewList
+{
+
+}
+----
+
+
+
+=== Making changes
+
+Now that we have a custom view what can we actually do? The views have
+various methods which we can now override to change/add behaviour. The
+most common ones to override are:
+
+`preDisplay`::
+  Explicitly intended to allow logic to be called before display() is
+  called. This can be used to alter arguments to the list view or to
+  output anything to appear before the main display code (such as, for
+  example, adding JavaScript).
+`display`::
+  Does the actual work of displaying the view. Can be overridden to
+  alter this behaviour or to output anything after the main display. You
+  usually want to call parent::display(); to ensure that the display
+  code is run (unless, of course, you are adding your own display
+  logic). link:../views[↩]
