@@ -34,9 +34,7 @@ ifdef::env-github[:btn:]
 == Таблица совместимости 
 
 Таблицы совместимости для всех версий системы рассматриваются на 
-ifndef::env-github[link:/admin/compatibility-matrix.ru[этой]]
-ifdef::env-github[link:/content/admin/Compatibility%20Matrix.ru[этой]]
- странице.
+link:../../../admin/compatibility-matrix[этой] странице.
 
 Поддерживаемые платформы, веб-серверы, базы данных и браузеры представлены ниже:
 

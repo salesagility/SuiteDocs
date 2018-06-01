@@ -27,17 +27,11 @@ ifdef::env-github[:btn:]
 ==== Меню модуля содержит следующие пункты:  
 
 Назначить звонок:: Выберите эту опцию для назначения звонка. За более подробной информацией обратитесь к разделу 
-ifndef::env-github[link:/user/core-modules/calls.ru/[Назначение звонков]]
-ifdef::env-github[link:/content/user/Core%20Modules/Calls.ru.adoc/[Назначение звонков]]
-.
+link:../../../user/core-modules/calls[Назначение звонков].
 Назначить встречу:: Выберите эту опцию для назначения встречи. За более подробной информацией обратитесь к разделу 
-ifndef::env-github[link:/user/core-modules/meetings.ru/[Назначение встреч]]
-ifdef::env-github[link:/content/user/Core%20Modules/Meetings.ru.adoc/[Назначение встреч]]
-.
+link:../../../user/core-modules/meetings[Назначение встреч].
 Создать задачу:: Выберите эту опцию для  создания задачи. За более подробной информацией обратитесь к разделу 
-ifndef::env-github[link:/user/core-modules/tasks.ru/[Создание задач]]
-ifdef::env-github[link:/content/user/Core%20Modules/Tasks.ru.adoc/[Создание задач]]
-.
+link:../../../user/core-modules/tasks[Создание задач].
 Сегодня:: Выберите эту опцию для просмотра мероприятий на текущий день.
 
 Используйте календарь для планирования ваших мероприятий – звонков, встреч, задач и событий. 
@@ -89,13 +83,9 @@ image:image5.png[Настройка параметров календаря]
 {{% notice tip %}}
 По умолчанию в системе первым днём недели установлено воскресенье, оно же отображается первым днём недели в модуле *Календарь*.  +
 Вы можете сменить его на понедельник в разделе 
-ifndef::env-github[link:/user/introduction/managing-user-accounts.ru/#_Настройки_календаря[Настройки календаря]]
-ifdef::env-github[link:/content/user/Introduction/managing-user-accounts.ru.adoc/#Настройки-календаря[Настройки календаря]]
- на странице настроек пользователя.
+link:../../../user/introduction/managing-user-accounts/#_Настройки_календаря[Настройки календаря] на странице настроек пользователя.
 {{% /notice %}}
 
 Вы можете создать 
-ifndef::env-github[link:/user/introduction/managing-user-accounts.ru/#_Настройки_календаря[публичный ключ]]
-ifdef::env-github[link:/content/user/Introduction/managing-user-accounts.ru.adoc/#Настройки-календаря[публичный ключ]]
- и позволить пользователям других приложений  (например, Microsoft Outlook) просматривать мероприятия, указанные в вашем календаре. 
+link:../../../user/introduction/managing-user-accounts/#_Настройки_календаря[публичный ключ] и позволить пользователям других приложений  (например, Microsoft Outlook) просматривать мероприятия, указанные в вашем календаре. 
 
