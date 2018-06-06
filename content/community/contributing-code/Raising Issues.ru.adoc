@@ -1,0 +1,70 @@
+---
+Title: Сообщения об ошибках (англ.)
+Weight: 20
+---
+
+== Raising Issues
+
+An issue is an area where you can feel the project could be improved,
+for example, you could report a problem or bug you've encountered while
+using the software, a feature you feel is missing, or a gap in the
+project's documentation.
+
+When raising issues via our GitHub repository ensure you state the issue
+clearly with a full description of steps to reproduce, what version(s)
+of SuiteCRM the issue was found in and; if relevant what platform it is
+running on and a screenshot of the issue. This will allow any
+contributor to easily identify and potentially address the issue. Here
+is the GitHub guide to all things issues.
+
+Good example of a raised issue:
+
+https://github.com/salesagility/SuiteCRM/issues/1519[https://github.com/salesagility/SuiteCRM/issues/1519]
+
+== Security
+
+We take Security seriously here at SuiteCRM so if you have discovered a
+security risk report it by emailing security@suitecrm.com. This will be
+delivered to the product team who handle security issues. *Please don't
+disclose security bugs publicly* until they have been handled by the
+security team.
+
+Your email will be acknowledged within 24 hours during the business week
+(Mon - Fri), and you’ll receive a more detailed response to your email
+within 72 hours during the business week (Mon - Fri) indicating the next
+steps in handling your report.
+
+== Labelling
+
+We have a number of labels that we tag issues with to define it's type,
+priority, and action.
+
+[discrete]
+===== Type:
+
+* bug
+* duplicate
+* invalid
+* question
+* suggestion
+
+[discrete]
+===== Priority:
+
+* Low Priority
+* Medium Priority
+* High Priority
+
+[discrete]
+===== Action:
+
+* Resolved: Next Release
+* Fixed Proposed
+* Pending Input
+* Wrong Branch
+* In Review
+
+We encourage users whom feel an issue should be raised as a higher
+priority for a next release that they should make a comment to that
+affect. This also applies to incorrect labelling.
+

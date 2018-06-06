@@ -1,0 +1,56 @@
+---
+Title: Создание копии проекта (англ.)
+Weight: 30
+---
+
+== Quick Guide to Fork SuiteCRM
+
+=== Fork the SuiteCRM repository
+
+You can do this entirely from the github website. See
+https://help.github.com/articles/fork-a-repo/[Forking Git] to learn how.
+
+=== Setup Git on your local machine
+
+Follow the guide produced by
+https://help.github.com/articles/set-up-git/[Github], which provides
+detailed instructions on setting up git and connecting to Github from
+your local machine.
+
+=== Clone your repository on your local machine
+
+With git setup and your Github fork created, we can now clone the git
+repository to our local machine. Change to the directory you wish to do
+this at, and issue this command to clone the SuiteCRM repository (
+changing username for your username in Github ) 
+
+`git clone git@github.com:username/SuiteCRM.git`
+
+Now that we have cloned the repository locally, we next need to setup
+the remote repositories that this repository will reference. By default,
+git creates the origin remote, which points to the fork you created on
+github (https://github.com/username/SuiteCRM) . However, in order to
+stay up to date with the changes to the parent repository
+(https://github.com/salesagility/SuiteCRM) you'll want to setup the
+upstream remote as well. Here's how: 
+
+`cd SuiteCRM` + 
+`git remote add upstream git://github.com/salesagility/SuiteCRM` + 
+`git fetch upstream` + 
+
+Now anytime you want to update your forked branch it's a simple process.
+Just change to the branch you want to update from the upstream (for
+example, the master branch) and then issue the commands below: 
+
+`git checkout master` + 
+`git fetch upstream` + 
+`git merge upstream/master` + 
+`git push origin master` + 
+
+These commands will pull down the latest changes from the upstream repo
+(https://github.com/salesagility/SuiteCRM) to your local repo, then
+merge the changes into your local clone's master branch, and finally
+push those changes back up to your fork's repository on Github. This is
+key to keep your master, hotfix, and develop up to date after a minor
+and major release.
+
