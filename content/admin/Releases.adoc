@@ -47,15 +47,12 @@ _Released 00 000 2018_
 
 === Release Notes
 
-[discrete]
 ===== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5957[#5957 ] Email performance
 * https://github.com/salesagility/SuiteCRM/pull/5911[#5911 ] Acceptance testing
 * https://github.com/salesagility/SuiteCRM/pull/5864[#5864 ] Adding CodeCov Badge To README.md
 * https://github.com/salesagility/SuiteCRM/pull/5959[#5959 ] Composer html purifier
-
-[discrete]
 
 ===== Bug Fixes
 
@@ -641,8 +638,6 @@ _Released 00th 000 2018_
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.20.tar.gz[*Source code* (tar.gz)]
 
 === Release Notes
-
-[discrete]
 
 ===== Bug Fixes
 
