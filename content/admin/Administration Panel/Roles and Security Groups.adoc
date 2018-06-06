@@ -5,7 +5,7 @@ weight: 25
 
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/user
+:imagesdir: ./../../../images/en/admin
 
 :toc:
 
@@ -38,8 +38,8 @@ use logic hooks, workflow, or do a direct database insert into the
 securitygroups_records table if doing a one-time initial setup.
 
 {{%notice info%}}Further advanced security group settings and functionality are available with 
-the purchase of the https://www.sugaroutfitters.com/addons/securitysuite[SecuritySuite] 
-plugin{{%/notice%}}
+the purchase of the https://store.suitecrm.com/addons/securitysuite[SecuritySuite^] 
+add-on{{%/notice%}}
 
 == Role Management
 
@@ -246,10 +246,8 @@ created, e.g. you can set a group to be assigned to all newly created Account re
 For more help and information on setting up and configuring roles and security groups, 
 please see 
 
-* https://www.sugaroutfitters.com/docs/securitysuite/example-of-a-typical-setup[Example
-of a Typical Setup]
-* https://www.sugaroutfitters.com/docs/securitysuite/introduction-video[Introduction
-Video]
+* link:/user/security-suite-groups/#_a_typical_hierarchy_setup[Example of a Typical Setup]
+* https://www.youtube.com/watch?v=yJ-BzM3GTgA[Introduction Video^]
 
 
 
