@@ -1,0 +1,84 @@
+
+---
+weight: 11
+title: "Logging"
+---
+
+= 11. Logging
+
+== Logging messages
+
+Logging in SuiteCRM is achieved by accessing the log global. Accessing
+an instance of the logger is as simple as
+
+.Example 11.1: Accessing the log
+[source,php]
+$GLOBALS['log']
+
+
+
+This can then be used to log a message. Each log level is available as a
+method. For example:
+
+.Example 11.2: Logging messages
+[source,php]
+----
+$GLOBALS['log']->debug('This is a debug message');
+$GLOBALS['log']->error('This is an error message');
+----
+
+
+
+This will produce the following output:
+
+.Example 11.3: Logging messages example output
+[source,php]
+----
+Tue Apr 28 16:52:21 2015 [15006][1][DEBUG] This is a debug message
+Tue Apr 28 16:52:21 2015 [15006][1][ERROR] This is an error message
+----
+
+
+== Logging output
+
+The logging output displays the following information by default:
+
+.Example 11.4: Logging messages example output
+[source,php]
+<Date> [<ProcessId>][<UserId>][<LogLevel>] <LogMessage>
+
+
+
+`<Date>`::
+  The date and time that the message was logged.
+`<ProcessId>`::
+  The PHP process id.
+`<UserId>`::
+  The ID of the user that is logged into SuiteCRM.
+`<LogLevel>`::
+  The log level for this log message.
+`<LogMessage>`::
+  The contents of the log message.
+
+== Log levels
+
+Depending on the level setting in admin some messages will not be added
+to the log e.g if your logger is set to `error` then you will only see
+log levels of `error` or higher (`error`, `fatal` and `security`).
+
+The default log levels (in order of verbosity) are:
+
+* `debug`
+* `info`
+* `warn`
+* `deprecated`
+* `error`
+* `fatal`
+* `security`
+
+{{% notice note %}}
+Generally on a production instance you will use the less verbose levels
+(probably `error` or `fatal`). However whilst you are developing you can
+use whatever level you prefer. I prefer the most verbose level -
+`debug`. 
+{{% /notice %}}

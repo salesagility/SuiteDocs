@@ -1,0 +1,793 @@
+---
+weight: 6
+title: "Metadata"
+---
+
+= 6. Metadata
+
+== Intro
+
+Module metadata are used to describe how various views behave in the
+module. The main use of this is providing field and layout information
+but this can also be used to filter subpanels and to describe what
+fields are used in the search.
+
+== Location
+
+Module metadata can be found in:
+
+.Example 6.1: Module metadata location
+[source,php]
+modules/<TheModule>/metadata/
+
+== Customising
+
+Usually studio is the best way of customising metadata. Even when you do
+wish to make customisations that are not possible through studio it can
+be simpler to set everything up in studio first. This is particularly
+true for layout based metadata. However if you are customising metadata
+it is as simple as placing, or editing, the file in the custom
+directory. For example to override the Accounts detailviewdefs (found in
+`modules/Accounts/metadata/detailviewdefs.php`) we would place (or edit)
+the file in `custom/modules/Accounts/metadata/detailviewdefs.php`. One
+exception to this rule is the studio.php file. The modules metadata
+folder is the only location checked - any version in
+`custom/modules/<TheModule>/metadata/studio.php` is ignored.
+
+== Different metadata
+
+=== detailviewdefs.php
+
+detailviewdefs.php provides information on the layout and fields of the
+detail view for this module. This file uses the same structure as
+editviewdefs.php. Let’s look at an example for a fictional module
+`ABC_Vehicles`:
+
+.Example 6.2: DetailView metadata definition
+[source,php]
+----
+<?php
+$viewdefs ['ABC_Vehicles'] ['DetailView'] = array (
+ 'templateMeta' => array (
+     'form' => array (
+         'buttons' => array (
+             'EDIT',
+             'DUPLICATE',
+             'DELETE',
+             'FIND_DUPLICATES'
+         )
+     ),
+     'maxColumns' => '2',
+     'widths' => array (
+         array (
+             'label' => '10',
+             'field' => '30'
+         ),
+         array (
+             'label' => '10',
+             'field' => '30'
+         )
+     ),
+     'includes' => array (
+         array (
+             'file' => 'modules/ABC_Vehicles/ABC_VehiclesDetail.js'
+         )
+     )
+ ),
+ 'panels' => array (
+     'LBL_ABC_VEHICLES_INFO' => array (
+         array (
+             array (
+                 'name' => 'name',
+                 'comment' => 'The Name of the Vehicle',
+                 'label' => 'LBL_NAME',
+             ),
+             'reg_number'
+         ),
+         array (
+             array (
+                 'name' => 'type',
+                 'label' => 'LBL_TYPE',
+             ),
+             array (
+                 'name' => 'phone_fax',
+                 'comment' => 'The fax phone number of this company',
+                 'label' => 'LBL_FAX'
+             )
+         ),
+         array (
+             array (
+                 'name' => 'registered_address_street',
+                 'label' => 'LBL_REGISTERED_ADDRESS',
+                 'type' => 'address',
+                 'displayParams' => array (
+                     'key' => 'registered'
+                 )
+             ),
+         ),
+     ),
+     'LBL_PANEL_ADVANCED' => array (
+      array (
+             array (
+                 'name' => 'assigned_user_name',
+                 'label' => 'LBL_ASSIGNED_TO'
+             ),
+             array (
+                 'name' => 'date_modified',
+                 'label' => 'LBL_DATE_MODIFIED',
+                 'customCode' => '{$fields.date_modified.value} '
+                         + '{$APP.LBL_BY} '
+                         + '{$fields.modified_by_name.value}',
+             )
+         ),
+     ),
+  )
+);
+?>
+----
+
+
+
+We see that line 2 defines an array
+`$viewdefs['ABC_Vehicles']['DetailView']` which places a DetailView
+entry for the module ABC_Vehicles into `$viewdefs` (DetailView will be
+EditView or QuickCreateView as appropriate). This array has two main
+keys defined here:
+
+=== templateMeta
+The templateMeta key provides information about the view in general. The
+`['form']['buttons']` entries define the buttons that should appear in
+this view.
+
+`maxColumns`::
+  Defines the number of columns to use for this view. It is unusual for
+  this to be more than 2.
+`widths`::
+  An array defining the width of the label and field for each column.
+`includes`::
+  An array of additional JavaScript files to include. This is useful for
+  adding custom JavaScript behaviour to the page.
+
+=== panels
+The panels entry defines the actual layout of the Detail (or Edit) view.
+Each entry is a new panel in the view with the key being the label for
+that panel. We can see in our example that we have 2 panels. One uses
+the label defined by the language string `LBL_ABC_VEHICLES_INFO`, the
+other uses `LBL_PANEL_ADVANCED`.
+
+Each panel has an array entry for each row, with each array containing
+an entry for each column. For example we can see that the first row has
+the following definition:
+
+.Example 6.3: DetailView metadata row definition
+[source,php]
+----
+array(
+  array (
+     'name' => 'name',
+     'comment' => 'The Name of the Vehicle',
+     'label' => 'LBL_NAME',
+  ),
+  'reg_number',
+),
+----
+
+
+
+This has an array definition for the first row, first column and a
+string definition for the first row, second column. The string
+definition is very straightforward and simply displays the detail (or
+edit, as appropriate) view for that field. It will use the default
+label, type, etc. In our example we are displaying the field named
+`reg_number`.
+
+The array definition for the first row, first column is a little more
+complex. Each array definition must have a `name` value. In our example
+we are displaying the `name` field. However we also supply some other
+values. Values most commonly used are:
+
+`comment`::
+  Used to note the purpose of the field.
+`label`::
+  The language key for this label. If the language key is not recognised
+  then this value will be used instead (see the
+  link:../language-strings#language-chapter[chapter on language]).
+`displayParams`::
+  An array used to pass extra arguments for the field display. For the
+  options and how they are used you can have a look into the appropriate
+  field type in `include/SugarFields/Fields` or
+  `custom/include/SugarFields/Fields`. An example is setting the size of
+  a textarea:
+
+.Example 6.4: DetailView metadata displayParams
+[source,php]
+----
+'displayParams' => array(
+    'rows' => 2,
+    'cols' => 30,
+),
+----
+
+
+
+`customCode`::
+  Allows supplying custom smarty code to be used for the display. The
+  code here can include any valid smarty code and this will also have
+  access to the current fields in this view via `$fields`. An example of
+  outputing the ID field would be `{$fields.id.value}`. Additionally the
+  module labels and app labels can be accessed via `$MOD` and `$APP`
+  respectively. Finally you can use `@@FIELD@@` to output the value of
+  the field that would have been used. For example
+  `{if $someCondition}@@FIELD@@{/if}` will conditionally show the field.
+
+=== editviewdefs.php
+
+`editviewdefs.php` provides information on the layout and fields of the
+edit view for this module. This file uses the same structure as
+detailviewdefs.php. Please see the information on detailviewdefs.php.
+
+=== listviewdefs.php
+
+The `listviewdefs.php` file for a module defines what fields the list
+view for that module will display. Let’s take a look at an example:
+
+.Example 6.5: ListView metadata definition
+[source,php]
+----
+$listViewDefs ['AOR_Reports'] =
+array (
+  'NAME' =>
+  array (
+    'width' => '15%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+  ),
+  'REPORT_MODULE' =>
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_REPORT_MODULE',
+    'width' => '15%',
+  ),
+  'ASSIGNED_USER_NAME' =>
+  array (
+    'width' => '15%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
+    'default' => true,
+  ),
+  'DATE_ENTERED' =>
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '15%',
+    'default' => true,
+  ),
+  'DATE_MODIFIED' =>
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '15%',
+   'default' => true,
+  ),
+);
+----
+
+
+
+To define the list view defs we simply add a key to the `$listViewDefs`
+array. In this case we add an entry for `AOR_Reports` This array
+contains an entry for each field that we wish to show in the list view
+and is keyed by the upper case name of the field. For example, the
+`REPORT_MODULE` key refers to the `report_module` field of AOR_Reports.
+
+`type`::
+  The type of the field. This can be used to override how a field is
+  displayed.
+`default`::
+  Whether this field should be shown in the list view by default. If
+  false then the field will appear in the available columns list in
+  studio.
+`studio`::
+  Whether or not this field should be displayed in studio. This can be
+  useful to ensure that a critical field is not removed.
+`label`::
+  The label to be used for this field. If this is not supplied then the
+  default label for that field will be used.
+`width`::
+  The width of the field in the list view. Note that, although this is
+  usually given as a percentage it is treated as a proportion. The
+  example above has five columns with a width of `15%` but these will
+  actually be `20%` since this is a ratio.
+
+=== popupdefs.php
+
+popupdefs.php provides information on the layout, fields and search
+options of the module popup that is usually used when selecting a
+related record.
+
+Let’s look at the default popupdefs.php for the Accounts module:
+
+.Example 6.6: PopupView metadata definition
+[source,php]
+----
+$popupMeta = array(
+  'moduleMain' => 'Case',
+  'varName' => 'CASE',
+  'className' => 'aCase',
+  'orderBy' => 'name',
+  'whereClauses' =>
+      array('name' => 'cases.name',
+              'case_number' => 'cases.case_number',
+              'account_name' => 'accounts.name'),
+  'listviewdefs' => array(
+      'CASE_NUMBER' => array(
+          'width' => '5',
+          'label' => 'LBL_LIST_NUMBER',
+          'default' => true),
+      'NAME' => array(
+          'width' => '35',
+          'label' => 'LBL_LIST_SUBJECT',
+          'link' => true,
+          'default' => true),
+      'ACCOUNT_NAME' => array(
+          'width' => '25',
+          'label' => 'LBL_LIST_ACCOUNT_NAME',
+          'module' => 'Accounts',
+          'id' => 'ACCOUNT_ID',
+          'link' => true,
+          'default' => true,
+          'ACLTag' => 'ACCOUNT',
+          'related_fields' => array('account_id')),
+      'PRIORITY' => array(
+          'width' => '8',
+          'label' => 'LBL_LIST_PRIORITY',
+          'default' => true),
+      'STATUS' => array(
+          'width' => '8',
+          'label' => 'LBL_LIST_STATUS',
+          'default' => true),
+      'ASSIGNED_USER_NAME' => array(
+          'width' => '2',
+          'label' => 'LBL_LIST_ASSIGNED_USER',
+          'default' => true,
+         ),
+      ),
+  'searchdefs'   => array(
+      'case_number',
+      'name',
+      array(
+          'name' => 'account_name',
+          'displayParams' => array(
+              'hideButtons'=>'true',
+              'size'=>30,
+              'class'=>'sqsEnabled sqsNoAutofill'
+          )
+      ),
+      'priority',
+      'status',
+      array(
+          'name' => 'assigned_user_id',
+          'type' => 'enum',
+          'label' => 'LBL_ASSIGNED_TO',
+          'function' => array(
+              'name' => 'get_user_array',
+              'params' => array(false))
+          ),
+    )
+);
+----
+
+
+
+The popupdefs.php specifies a `$popupMeta` array with the following
+keys:
+
+`moduleMain`::
+  The module that will be displayed by this popup.
+`varName`::
+  The variable name used to store the search preferences etc. This will
+  usually simply the upper case module name.
+`className`::
+  The class name of the SugarBean for this module. If this is not
+  supplied then `moduleMain` will be used. This is only really required
+  for classes where the class name and module name differ (such as
+  Cases).
+`orderBy`::
+  The default field the list of records will be sorted by.
+`whereClauses`::
+  Legacy option. This is only used as a fallback when there are no
+  searchdefs. Defines the names of fields to allow searching for and
+  their database representation.
+`listviewdefs`::
+  The list of fields displayed in the popup list view. See
+  `listviewdefs.php`.
+`searchdefs`::
+  An array of the fields that should be available for searching in the
+  popup. See the individual search defs in the searchdefs.php section
+  (for example the `basic_search` array).
+
+=== quickcreatedefs.php
+
+`quickcreatedefs.php` provides information on the layout and fields of
+the quick create view for this module (this is the view that appears
+when creating a record from a subpanel). This file uses the same
+structure as `detailviewdefs.php`. Please see the information on
+`detailviewdefs.php`.
+
+=== searchdefs.php
+
+The search defs of a module define how searching in that module looks
+and behaves.
+
+Let’s look at an example.
+
+.Example 6.7: Search View metadata definition
+[source,php]
+----
+$searchdefs ['Accounts'] = array (
+     'templateMeta' => array (
+         'maxColumns' => '3',
+         'maxColumnsBasic' => '4',
+         'widths' => array (
+             'label' => '10',
+             'field' => '30'
+         )
+     ),
+     'layout' => array (
+         'basic_search' => array (
+             'name' => array (
+                 'name' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'current_user_only' => array (
+                 'name' => 'current_user_only',
+                 'label' => 'LBL_CURRENT_USER_FILTER',
+                 'type' => 'bool',
+                 'default' => true,
+                 'width' => '10%'
+             )
+         )
+         ,
+         'advanced_search' => array (
+             'name' => array (
+                 'name' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'website' => array (
+                 'name' => 'website',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'phone' => array (
+                 'name' => 'phone',
+                 'label' => 'LBL_ANY_PHONE',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'email' => array (
+                 'name' => 'email',
+                 'label' => 'LBL_ANY_EMAIL',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_street' => array (
+                 'name' => 'address_street',
+                 'label' => 'LBL_ANY_ADDRESS',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_city' => array (
+                 'name' => 'address_city',
+                 'label' => 'LBL_CITY',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_state' => array (
+                 'name' => 'address_state',
+                 'label' => 'LBL_STATE',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'address_postalcode' => array (
+                 'name' => 'address_postalcode',
+                 'label' => 'LBL_POSTAL_CODE',
+                 'type' => 'name',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'billing_address_country' => array (
+                 'name' => 'billing_address_country',
+                 'label' => 'LBL_COUNTRY',
+                 'type' => 'name',
+                 'options' => 'countries_dom',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'account_type' => array (
+                 'name' => 'account_type',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'industry' => array (
+                 'name' => 'industry',
+                 'default' => true,
+                 'width' => '10%'
+             ),
+             'assigned_user_id' => array (
+                 'name' => 'assigned_user_id',
+                 'type' => 'enum',
+                 'label' => 'LBL_ASSIGNED_TO',
+                 'function' => array (
+                     'name' => 'get_user_array',
+                     'params' => array (
+                        0 => false
+                     )
+                 ),
+                 'default' => true,
+                 'width' => '10%'
+            )
+        )
+    )
+);
+----
+
+
+
+Here we setup a new array for `Accounts` in the `$searchdefs` array.
+This has two keys:
+
+`templateMeta` ::
+The `templateMeta` key controls the basic look of the search forms. Here
+we define some overall layout info such as the maximum columns (3) and
+the maximum number of columns for the basic search (4). Finally we set
+the widths for the search fields and their labels.
+
+`layout` ::
+The `layout` key contains the layout definitions for the basic search
+and advanced search. This is simply a list of array definition of the
+fields. See the section on listviewdefs.php for a description of some of
+the options.
+
+=== subpaneldefs.php
+
+The subpaneldefs.php file provides definitions for the subpanels that
+appear in the detail view of a module. Let’s look at an example:
+
+.Example 6.8: Subpanel metadata definition
+[source,php]
+----
+$layout_defs['AOS_Quotes'] = array (
+  'subpanel_setup' => array (
+      'aos_quotes_aos_contracts' => array (
+          'order' => 100,
+          'module' => 'AOS_Contracts',
+          'subpanel_name' => 'default',
+          'sort_order' => 'asc',
+          'sort_by' => 'id',
+          'title_key' => 'AOS_Contracts',
+          'get_subpanel_data' => 'aos_quotes_aos_contracts',
+          'top_buttons' => array (
+              0 => array (
+                  'widget_class' => 'SubPanelTopCreateButton'
+              ),
+              1 => array (
+                  'widget_class' => 'SubPanelTopSelectButton',
+                  'popup_module' => 'AOS_Contracts',
+                  'mode' => 'MultiSelect'
+              )
+          )
+      ),
+      'aos_quotes_aos_invoices' => array (
+          'order' => 100,
+          'module' => 'AOS_Invoices',
+          'subpanel_name' => 'default',
+          'sort_order' => 'asc',
+          'sort_by' => 'id',
+          'title_key' => 'AOS_Invoices',
+          'get_subpanel_data' => 'aos_quotes_aos_invoices',
+          'top_buttons' => array (
+              0 => array (
+                  'widget_class' => 'SubPanelTopCreateButton'
+              ),
+              1 => array (
+                  'widget_class' => 'SubPanelTopSelectButton',
+                  'popup_module' => 'AOS_Invoices',
+                  'mode' => 'MultiSelect'
+              )
+          )
+      ),
+      'aos_quotes_project' => array (
+          'order' => 100,
+          'module' => 'Project',
+          'subpanel_name' => 'default',
+          'sort_order' => 'asc',
+          'sort_by' => 'id',
+          'title_key' => 'Project',
+          'get_subpanel_data' => 'aos_quotes_project',
+          'top_buttons' => array (
+              0 => array (
+                  'widget_class' => 'SubPanelTopCreateButton'
+              ),
+              1 => array (
+                  'widget_class' => 'SubPanelTopSelectButton',
+                  'popup_module' => 'Accounts',
+                  'mode' => 'MultiSelect'
+              )
+          )
+      )
+   )
+);
+----
+
+
+
+In the example above we set up a definition for a module (in this case
+`AOS_Quotes`) in the `$layout_defs` array. This has a single key
+`subpanel_setup` which is an array of each of the subpanel definitions
+keyed by a name. This name should be something recognisable. In the case
+above it is the name of the link field displayed by the subpanel. The
+entry for each subpanel usually has the following defined:
+
+`order`::
+  A number used for sorting the subpanels. The values themselves are
+  arbitrary and are only used relative to other subpanels.
+`module`::
+  The module which will be displayed by this subpanel. For example the
+  `aos_quotes_project` def in the example above will display a list of
+  `Project` records.
+`subpanel_name`::
+  The subpanel from the displayed module which will be used. See the
+  subpanels section of this chapter.
+`sort_by`::
+  The field to sort the records on.
+`sort_order`::
+  The order in which to sort the `sort_by` field. `asc` for ascending
+  `desc` for descending.
+`title_key`::
+  The language key to be used for the label of this subpanel.
+`get_subpanel_data`::
+  Used to specify where to retrieve the subpanel records. Usually this
+  is just a link name for the current module. In this case the related
+  records will be displayed in the subpanel. However, for more complex
+  links, it is possible to specify a function to call. When specifying a
+  function you should ensure that the `get_subpanel_data` entry is in
+  the form `function:theFunctionName`. Additionally you can specify the
+  location of the function and any additional parameters that are needed
+  by using the `function_parameters` key. An example of a subpanel which
+  uses a function can be found in link:../appendix-a---code-examples#appendix-a[Appendix
+  A].
+`function_parameters`::
+  Specifies the parameters for a subpanel which gets it’s information
+  from a function (see +
+  `get_subpanel_data`). This is an array which allows specifying where
+  the function is by using the `import_function_file` key (if this is
+  absent but `get_subpanel_data` defines a function then the function
+  will be called on the bean for the parent of the subpanel).
+  Additionally this array will be passed as an argument to the function
+  defined in `get_subpanel_data` which allows passing in arguments to
+  the function.
+`generate_select`::
+  For function subpanels (see `get_subpanel_data`) whether or not the
+  function will return an array representing the query to be used (for
+  `generate_select = true`) or whether it will simply return the query
+  to be used as a string.
+`get_distinct_data`::
+  Whether or not to only return distinct rows. Relationships do not
+  allow linking two records more than once therefore this only really
+  applies if the subpanel source is a function. See +
+  `get_subpanel_data` for information on function subpanel sources.
+`top_buttons`::
+  Allows defining the buttons to appear on the subpanel. This is simply
+  an array of the button definitions. These definitions have, at least,
+  the `widget_class` defined which decides the button class to use in
+  `include/generic/SugarWidgets`. Depending on the button this array may
+  also be used to pass in extra arguments to the widget class.
+
+=== subpanels
+
+Inside the metadata folder is the `subpanels` folder. This allows
+creating different subpanel layouts for different parent modules. For
+example, the Contacts module will display differently in the subpanel on
+an account than it will in the subpanel of a case. The files inside the
+`subpanels` folder can be named anything. All that matters is that it
+can be referenced in the `subpanel_name` of the `subpaneldefs.php` of
+the parent module. The usual subpanel file is simply called
+`default.php`. Let’s look at the
+`modules/Accounts/metadata/subpanels/default.php` file:
+
+.Example 6.8: Module Subpanels definition
+[source,php]
+----
+$subpanel_layout = array(
+  'top_buttons' => array(
+      array(
+          'widget_class' => 'SubPanelTopCreateButton'
+      ),
+      array(
+          'widget_class' => 'SubPanelTopSelectButton', 
+          'popup_module' => 'Accounts'
+      ),
+  ),
+  'where' => '',
+  'list_fields' => array (
+    'name' =>
+    array (
+     'vname' => 'LBL_LIST_ACCOUNT_NAME',
+     'widget_class' => 'SubPanelDetailViewLink',
+     'width' => '45%',
+     'default' => true,
+    ),
+    'billing_address_city' =>
+    array (
+      'vname' => 'LBL_LIST_CITY',
+      'width' => '20%',
+      'default' => true,
+    ),
+    'billing_address_country' =>
+    array (
+      'type' => 'varchar',
+      'vname' => 'LBL_BILLING_ADDRESS_COUNTRY',
+      'width' => '7%',
+      'default' => true,
+    ),
+    'phone_office' =>
+    array (
+      'vname' => 'LBL_LIST_PHONE',
+      'width' => '20%',
+      'default' => true,
+    ),
+    'edit_button' =>
+    array (
+      'vname' => 'LBL_EDIT_BUTTON',
+      'widget_class' => 'SubPanelEditButton',
+      'width' => '4%',
+      'default' => true,
+    ),
+    'remove_button' =>
+    array (
+      'vname' => 'LBL_REMOVE',
+      'widget_class' => 'SubPanelRemoveButtonAccount',
+      'width' => '4%',
+      'default' => true,
+    ),
+  )
+);
+----
+
+
+
+There are three keys in the `$subpanel_layout` variable for this
+subpanel. These are:
+
+`top_buttons`::
+  Defines the buttons that will appear at the top of the subpanel. See
+  the `top_buttons` key in `subpaneldefs.php`.
+`where`::
+  Allows the addition of conditions to the `where` clause. For example
+  this could be used to exclude Cases that are closed
+  (`cases.state != "Closed"`) or only include Accounts of a specific
+  industry (`accounts.industry = "Media"`). Note that in these examples
+  we specify the table to remove any ambiguity in the query.
+`list_fields`::
+  Defines the list of fields to be displayed in this subpanel. See the
+  section on `listviewdefs.php` for more information.
+
+=== studio.php
+
+studio.php is the simplest file in metadata and it’s existence is simply
+used to confirm if a module should be shown in studio for user tweaking.
+Note that, unlike other metadata files, the file in
+`modules/<TheModule>/metadata/studio.php` will be the only one checked.
+A file in `custom/modules/<TheModule>/metadata/studio.php` will have no
+effect. link:../metadata[↩]
