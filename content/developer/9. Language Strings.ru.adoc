@@ -1,0 +1,285 @@
+
+---
+weight: 9
+title: "9. Language Strings"
+---
+
+= 9. Language Strings
+
+Language strings provide an element of internationalisation to SuiteCRM.
+It allows specifying different strings to be used in different languages
+making it much easier to provide translations for modules and
+customisations. Even if you are only targeting a single language it is
+still worth using the language string functionality in SuiteCRM because
+it allows the simple changing of strings within SuiteCRM and it also
+allows users to customise the labels used in your customisations. There
+are three main types of language strings that we will cover here.
+
+At the core, the language strings are a key value store. The keys are
+used throughout SuiteCRM and the values are loaded based on the current
+language.
+
+Languages are handled in SuiteCRM by prefixing the file name with the
+IETF language code for the language that this file contains. Here are
+some examples of different language file names:
+
+• *Core Accounts language file for en_us (United States English)* - `modules/Accounts/language/en_us.lang.php`
+
+• *Core Cases language file for es_es (Spanish as spoken in Spain)* - `modules/Cases/language/es_es.lang.php`
+
+• *Custom language file for de_de (German)* - `custom/Extension/application/Ext/Language/de_de.SomeCustomPackage.php`
+
+
+
+SuiteCRM will choose the language prefix to be used based on the
+language the user selected when logging in or the default language if
+none was selected. Generally when a language file is loaded the default
+language files and the `en_us` files will also be loaded. These files
+are then merged. This ensures that there will still be a definition if
+there are language keys in either `en_us` or the default language that
+don’t have definitions in the current language. In essence the language
+“falls back” to the default language and `en_us` if there are missing
+keys.
+
+== Module Strings
+
+[discrete]
+==== Use
+Module strings are strings associated with a particular module. These
+are usually, for example, field labels and panel name labels, but they
+may be used for anything that is specific to a single module.
+
+[discrete]
+==== Definition location
+Module strings are defined in the `$mod_strings` array. This is
+initially defined in `modules/<TheModule>/language/<LanguageTag>.lang.php`, for example +
+`modules/Accounts/language/en_us.lang.php`.
+
+[discrete]
+==== Customisation location
+Customisations can be made to the module strings by adding a new file
+in + 
+`custom/Extension/modules/<TheModule>/Ext/Language/<LanguageTag>.<Name>.php`
+
+(`<Name>` in this case should be used to give it a descriptive name). An example is +
+`custom/Extension/modules/Accounts/Ext/Language/en_us.MyLanguageFile.php`.
+
+See the link:../14.-extension-framework#extensions-chapter[extensions] section for more information on the Extensions
+folder.
+
+== Application Strings
+
+[discrete]
+==== Use
+Application strings are used for language strings and labels that are
+not specific to a single module. Examples of these may include labels
+that will appear in the headers or footers, labels that appear on search
+buttons throughout SuiteCRM or labels for pagination controls.
+
+[discrete]
+==== Definition location
+The application strings are defined in the `$app_strings` array. This is
+initially defined in +
+`include/language/<LanguageTag>.lang.php`.
+
+[discrete]
+==== Customisation location
+Customisations can be made to the application strings in two ways.
+Firstly you can edit the file +
+`custom/include/language/<LanguageTag>.lang.php`.
+
+However to promote modularity it is recommended that you add a new file in the location +
+`custom/Extension/application/Ext/Language/<LanguageTag>.<Name>.php`.
+
+For example `custom/Extension/application/Ext/Language/es_es.MyAppLanguageFile.php`.
+`<Name>` should be used to give the file a descriptive name.
+
+See the link:../14.-extension-framework#extensions-chapter[extensions] section for more information on the Extensions folder.
+
+== Application List Strings
+
+[discrete]
+==== Use
+Application list strings are used to store the various dropdowns and
+lists used in SuiteCRM. Most of these are used as options for the
+various enum fields in SuiteCRM e.g the account type or the opportunity
+sales stage.
+
+[discrete]
+==== Definition location
+The application list strings are defined in the `$app_list_strings`
+array. Similar to the `$app_strings` array this is initially defined in
+`include/language/en_us.lang.php`.
+
+[discrete]
+==== Customisation location
+Customisations can be made to the application list strings in two ways.
+Firstly you can edit the file +
+`custom/include/language/<LanguageTag>.lang.php`. 
+
+However to promote modularity it is recommended that you add a new file in the location +
+`custom/Extension/application/Ext/Language/<LanguageTag>.<Name>.php`
+
+(`<Name>` should be used to give the file a descriptive name). For example +
+`custom/Extension/application/Ext/Language/es_es.MyAppListLanguageFile.php`.
+
+See the link:../14.-extension-framework#extensions-chapter[extensions] section for more information on the Extensions
+folder.
+
+== Why and when to customise
+
+Generally language strings should be changed from within SuiteCRM using
+the studio tool. However there are times when it can be simpler to add
+or modify language strings as described in the previous section. If you
+are importing a large number of language strings or dropdown options it
+can be simpler to create a new file to add these values. Similarly if
+you are adding entirely new functionality, it is usually best to simply
+add these language strings as new values.
+
+== Usage
+
+Language strings are used automatically throughout SuiteCRM. For example
+in metadata you can specify the language strings to display for fields.
+However in some cases you will want to access and use the language
+strings in custom code. There are several ways to do this.
+
+=== Globals
+
+The `$mod_strings`, `$app_strings` and `$app_list_strings` variables are
+all global and can be accessed as such. `$app_strings` and
+`$app_list_strings` will always be available. However `$mod_strings`
+will only contain the strings for the current module (see the next
+section for other ways of accessing `$mod_strings`).
+
+.Example 9.1: Accessing language strings globally
+[source,php]
+ 1 function someFunction(){
+ 2     global $mod_strings, $app_strings, $app_list_strings;
+ 3     /*
+ 4      * Grab the label LBL_NAME for the current module
+ 5      * In most modules this will be the label for the
+ 6      * name field of the module.
+ 7      */
+ 8     $modLabel = $mod_strings['LBL_NAME'];
+ 9 
+10     $appLabel = $app_strings['LBL_GENERATE_LETTER'];
+11 
+12     /*
+13      * Unlike the previous two examples $appListLabel will be an
+14      * array of the dropdowns keys to it's display labels.
+15      */
+16     $appListLabel = $app_list_strings['aos_quotes_type_dom'];
+17 
+18     //Here we just log out the strings
+19     $GLOBALS['log']->debug("The module label is $modLabel");
+20     $GLOBALS['log']->debug("The app label is $appLabel");
+21     $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
+22 }
+
+
+
+=== Translate
+
+As an alternative to using globals or, if you are in a different module
+than the language string you wish to retrieve you can use the
+`translate` method.
+
+.Example 9.2: translate method signature
+[source,php]
+1 translate(
+2         $string,
+3         $mod='',
+4         $selectedValue='')
+
+
+
+`$string`::
+  The language string to be translated.
+`$mod`::
+  The module this string should come from. Defaults to the current
+  module if empty.
+`$selectedValue`::
+  For dropdown strings. This will return the label for the key
+  `$selectedValue`
+
+Here is an example of the above in action. Note that we do not have to
+worry about whether the label is a Module string, an Application string
+or an Application list string, as all of these will be checked (in that
+order - the first matching value will be returned).
+
+.Example 9.3: Example translate method calls
+[source,php]
+ 1 function someFunction(){
+ 2   //Grab the label LBL_NAME for the current module
+ 3   $modLabel = translate('LBL_NAME');
+ 4 
+ 5   //Grab the label LBL_NAME for the AOS_Products module
+ 6   $productModLabel = translate('LBL_NAME','AOS_Products');
+ 7 
+ 8   $appLabel = translate('LBL_GENERATE_LETTER');
+ 9 
+10   /*
+11    * Return the label for the `Other` option of the `aos_quotes_type_dom`
+12    * We don't care about the module so this is left blank.
+13    */
+14   $appListLabel = translate('aos_quotes_type_dom','','Other');
+15 
+16   //Here we just log out the strings
+17   $GLOBALS['log']->debug("The module label is $modLabel");
+18   $GLOBALS['log']->debug("The module label for Products is $productModLabel");
+19   $GLOBALS['log']->debug("The app label is $appLabel");
+20   $GLOBALS['log']->debug("The app list label is ".print_r($appListLabel,1));
+21 }
+
+
+
+=== JavaScript
+
+Finally, you may be using JavaScript (for example in a view), and wish
+to display a language string. For this you can use the
+`SUGAR.language.get` method, which is similar to the `translate` method
+in example 9.3.
+
+.Example 9.4: SUGAR.language.get method signature
+[source,php]
+1 SUGAR.language.get(
+2               module,
+3               str
+4 );
+
+
+
+`module`::
+  The module a language string will be returned for. You should supply
+  `app_strings` or `app_list_strings` if the label you wish to retrieve is not a module
+  string.
+`str`::
+  The key you want to retrieve a label for.
+
+.Example 9.5: Example SUGAR.language.get method calls
+[source,php]
+ 1 function someFunction(){
+ 2 
+ 3   /*
+ 4    * Grab the label LBL_NAME for AOS_Products
+ 5    * Note that, unlike the translate function in example 9.3
+ 6    * the module name is required.
+ 7    */
+ 8 
+ 9   var modLabel = SUGAR.language.get('AOS_Products', 'LBL_NAME');
+10 
+11   /*
+12    * As mentioned above we explicitly need to pass if we are retrieving
+13    * an app_string or app_list_string
+14    */
+15   var appLabel = SUGAR.language.get('app_strings', 'LBL_GENERATE_LETTER');
+16   var appListLabel = SUGAR.language.get('app_list_strings',
+17                                         'aos_quotes_type_dom');
+18 
+19   //Here we just log out the strings
+20   console.log("The module label is "+modLabel);
+21   console.log("The app label is "+appLabel);
+22   console.log("The app list label is "+appListLabel);
+23 }
+
+link:../9.-language-strings[↩]

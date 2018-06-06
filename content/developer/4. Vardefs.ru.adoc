@@ -1,0 +1,316 @@
+
+---
+weight: 4
+title: "4. Vardefs"
+---
+
+= 4. Vardefs
+
+== What are Vardefs
+
+The Vardefs are used to supply information to SuiteCRM about a
+particular bean. These generally specify the fields, relationships and
+indexes in a given module as well as additional information such as
+whether it is audited, the table name etc.
+
+== Defining Vardefs
+
+=== Module
+
+Vardefs are initially defined in their respective modules folder. For
+the Accounts module this will be in modules/Accounts/vardefs.php. The
+information is stored in an array named $dictionary using the module
+name as the key. For Accounts this will be `$dictionary['Account']`.
+Let’s look at the Account vardefs (which have been edited for brevity):
+
+.Example 4.1: Account Vardefs
+[source,php]
+ 1 $dictionary['Account'] =
+ 2 array(
+ 3  'table' => 'accounts',
+ 4  'audited'=>true,
+ 5  'unified_search' => true,
+ 6  'unified_search_default_enabled' => true,
+ 7  'duplicate_merge'=>true,
+ 8  'comment' => 'Accounts are organizations or entities that ...',
+ 9  'fields' => array (
+10    //Snipped for brevity. See the fields section.
+11  ),
+12  'indices' => array (
+13    //Snipped for brevity. See the indices section.
+14  ),
+15  'relationships' => array (
+16    //Snipped for brevity. See the relationship section.
+17  ),
+18  //This enables optimistic locking for Saves From EditView
+19  'optimistic_locking'=>true,
+20 );
+21 
+22 VardefManager::createVardef(
+23  'Accounts',
+24  'Account',
+25  array('default', 'assignable','company',)
+26 );
+
+
+
+
+=== Keys
+The following are some of the keys that can be specified for the
+vardefs. Fields, indices and relationships are covered in their own
+sections.
+
+`table`::
+  The database table name for this module.
+`audited`::
+  Whether or not this module should be audited. Note that `audited` must
+  also be set at the fields level for a field to be audited.
+`unified_search`::
+  Whether this module can be searchable via the global search.
+`unified_search_default_enabled`::
+  Whether this module is searchable via the global search by default.
+`duplicate_merge`::
+  Whether or not duplicate merging functionality is enabled for this
+  module.
+`comment`::
+  A description of this module.
+`optimistic_locking`::
+  Whether optimistic should be enabled for this module. Optimistic
+  locking locks concurrent edits on a record by assuming that there will
+  be no conflict. On save the last modified timestamp on the record will
+  be checked. If it is different then an edit has occurred since this
+  record was loaded. If this is the case then the user will be prompted
+  with a page showing the differences in the two edits and asked to
+  choose which edits are to be used.
+
+=== Fields
+
+The field defines the behaviour and attributes of each field in the
+module.
+
+`name`::
+  The name of the field.
+`vname`::
+  The name of the language label to be used for this field.
+`type`::
+  The type of the field. See the field types section.
+`isnull`::
+  Whether null values are allowed
+`len`::
+  If the field is a string type, the max number of characters allowed.
+`options`::
+  For enum fields the language label for the dropdown values for this
+  field
+`dbtype`::
+  The type to be used by the database to store this field. This is not
+  required as the appropriate type is usually chosen.
+`default`::
+  The default value of this field.
+`massupdate`::
+  Whether or not this field should be mass updatable. Note that some
+  field types are always restricted from mass updates.
+`rname`::
+  For related fields only. The name of the field to be taken from the
+  related module.
+`id_name`::
+  For related fields only. The field in this bean which contains the
+  related id.
+`source`::
+  The source of this field. Can be set to ‘non-db’ if the field is not
+  stored in the database - for example for link fields, fields populated
+  by logic hooks or by other means.
+`sort_on`::
+  For concatenated fields (i.e. name fields) the field which should be
+  used to sort.
+`fields`::
+  For concatenated fields (i.e. name fields) an array of the fields
+  which should be concatenated.
+`db_concat_fields`::
+  For concatenated fields (i.e. name fields) an array of the fields
+  which should be concatenated in the database. Usually this is the same
+  as fields.
+`unified_search`::
+  True if this field should be searchable via the global search.
+`enable_range_search`::
+  Whether the list view search should allow a range search of this
+  field. This is used for date and numeric fields.
+`studio`::
+  Whether the field should display in studio.
+`audited`::
+  Whether or not changes to this field should be audited.
+
+=== Field types
+
+The following are common field types used:
+
+`id`::
+  An id field.
+`name`::
+  A name field. This is usually a concatenation of other fields.
+`bool`::
+  A boolean field.
+`varchar`::
+  A variable length string field.
+`char`::
+  A character field.
+`text`::
+  A text area field.
+`decimal`::
+  A decimal field.
+`date`::
+  A date field.
+`datetime`::
+  A date and time field.
+`enum`::
+  A dropdown field.
+`phone`::
+  A phone number field.
+`link`::
+  A link to another module via a relationship.
+`relate`::
+  A related bean field.
+
+=== Indices
+
+The indices array allows defining any database indexes that should be in
+place on the database table for this module. Let’s look at an example:
+
+.Example 4.2: Example indices definition
+[source,php]
+ 1 'indices' => array (
+ 2  array(
+ 3      'name' =>'idx_mymod_id_del',
+ 4      'type' =>'index',
+ 5      'fields'=>array('id', 'deleted')),
+ 6  array(
+ 7      'name' =>'idx_mymod_parent_id',
+ 8      'type' =>'index',
+ 9      'fields'=>array( 'parent_id')),
+10  array(
+11      'name' =>'idx_mymod_parent_id',
+12      'type' =>'unique',
+13      'fields'=>array( 'third_party_id')),
+14  ),
+
+
+
+Each array entry should have, at least, the following entries:
+
+`name`::
+  The name of the index. This is usually used by the database to
+  reference the index. Most databases require that these are unique.
+`type`::
+  The type of the index to create. `index` will simply add an index on
+  the fields, `unique` will add a unique constraint on the fields,
+  `primary` will add the fields as a primary key.
+`fields`::
+  An array of the fields to be indexed. The order of this array will be
+  used as the order of the fields in the index.
+
+=== Relationships
+
+The Vardefs also specify the relationships within this module. Here’s an
+edited example from the Accounts module:
+
+.Example 4.3: Example relationships definition
+[source,php]
+ 1 'relationships' => array (
+ 2  'account_cases' => array(
+ 3      'lhs_module'=> 'Accounts',
+ 4      'lhs_table'=> 'accounts',
+ 5      'lhs_key' => 'id',
+ 6      'rhs_module'=> 'Cases',
+ 7      'rhs_table'=> 'cases',
+ 8      'rhs_key' => 'account_id',
+ 9      'relationship_type' => 'one-to-many'),
+10 ),
+
+
+
+Here we see the link between accounts and cases. This is specified with
+the following keys:
+
+`lhs_module`::
+  The module on the left hand side of this relationship. For a one to
+  many relationship this will be the “One” side.
+`lhs_table`::
+  The table for the left hand side module. If you are unsure the table
+  for a module can be found in it’s vardefs.
+`lhs_key`::
+  The field to use for the left hand side of this link. In this case it
+  is the `id` of the account.
+`rhs_module`::
+  The right hand side module. In this case the “many” side of the
+  relationship.
+`rhs_table`::
+  The table for the right hand side module. As stated previously you can
+  find the table for a module can be found in it’s vardefs.
+`rhs_key`::
+  The field to use on the right hand side. In this case the `account_id`
+  field on cases.
+`relationship_type`::
+  The type of relationship - “one-to-many” or “many-to-many”. Since this
+  is a one to many relationship it means a case is related to a single
+  account but a single account can have multiple cases.
+
+For *many to many* relationship fields the following keys are also
+available:
+
+`join_table`::
+  The name of the join table for this relationship.
+`join_key_lhs`::
+  The name of the field on the join table for the left hand side.
+`join_key_rhs`::
+  The name of the field on the join table for the right hand side.
+
+=== Vardef templates
+
+Vardef templates provide a shortcut for defining common vardefs. This is
+done by calling `VardefManager::createVardef` and passing the module
+name, object name and an array of templates to be assigned. The
+following is an example from the accounts vardefs:
+
+.Example 4.4: Example vardef template
+[source,php]
+22 VardefManager::createVardef(
+23      'Accounts',
+24      'Account',
+25      array('default', 'assignable','company',)
+26      );
+
+
+
+In this example the `default`, `assignable` and `company` templates are
+used. The following are some of the available templates:
+
+`basic` ::
+`default`::
+  Adds the common base fields such as `id`, `name`, `date_entered`, etc.
+`assignable`::
+  Adds the fields and relationships necessary to assign a record to a
+  user.
+`person`::
+  Adds fields common to people records such as `first_name`,
+  `last_name`, address, etc.
+`company`::
+  Adds fields common to companies such as an industry dropdown, address,
+  etc.
+
+=== Customising vardefs
+
+Vardefs can be customised by adding a file into
+
+.Example 4.5: Custom vardef location
+[source,php]
+custom/Extension/modules/<TheModule>/Ext/SomeFile.php
+
+
+
+This file can then be used to add a new field definition or customise an
+existing one e.g changing a field type:
+
+.Example 4.6: Example overriding an existing vardef
+[source,php]
+$dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
+
+link:../4.-vardefs[↩]
