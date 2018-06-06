@@ -47,6 +47,7 @@ _Released 00 000 2018_
 
 === Release Notes
 
+[discrete]
 ===== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5957[#5957 ] Email performance
@@ -54,6 +55,7 @@ _Released 00 000 2018_
 * https://github.com/salesagility/SuiteCRM/pull/5864[#5864 ] Adding CodeCov Badge To README.md
 * https://github.com/salesagility/SuiteCRM/pull/5959[#5959 ] Composer html purifier
 
+[discrete]
 ===== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/5984[#5984 ] Small css fix
@@ -639,6 +641,7 @@ _Released 00th 000 2018_
 
 === Release Notes
 
+[discrete]
 ===== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5829[#5829 ] Fixed #5829 - templateParser.php generating incorrect values for Quote Discounts
