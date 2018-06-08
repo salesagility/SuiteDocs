@@ -528,7 +528,7 @@ div.sidebar-announcement a {
 div.sidebar-announcement a:hover {
 	color:#dc6254 !important;
 	background-color: #fff;
-	border-color: #5c566b;
+	border: solid 1px #dc6254;
 }
 
 
