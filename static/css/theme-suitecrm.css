@@ -519,6 +519,19 @@ nav.webnav li.download:hover a {
 	background-color: #fff;
 }
 
+div.sidebar-announcement { 
+    background-color: #dc6254;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 13px;
+    display: block;
+    color: #fff;
+}
+div.sidebar-announcement a {
+    color: #fff!important;
+}
+
 
 
 /*//----- MENU -----//*/
