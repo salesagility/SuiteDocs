@@ -501,14 +501,6 @@ nav.webnav li.download a {
 	font-size:13px;
 }
 
-nav.webnav li.download masterclass a {
-	background-color:#dc6254;
-	text-transform: uppercase;
-	border-radius:5px;
-	padding:5px 10px 5px 15px;
-	font-size:13px;
-}
-
 nav.webnav li.download:hover {
 	background-color:#5c566b;
 	border-top-color: #5c566b;
@@ -520,17 +512,20 @@ nav.webnav li.download:hover a {
 }
 
 div.sidebar-announcement { 
-    background-color: #dc6254;
-    text-transform: uppercase;
-    border-radius: 5px;
-    padding: 5px 15px;
-    font-size: 13px;
-    display: block;
-    color: #fff;
+  	background-color:#ECEBEB;
+	display: block;
+	padding: 15px;
 }
 div.sidebar-announcement a {
-    color: #fff!important;
+	background-color: #dc6254;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 5px 15px;
+	font-size: 13px;
+	display: block;
+	color: #fff;
 }
+
 
 
 
