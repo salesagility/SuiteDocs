@@ -511,7 +511,7 @@ nav.webnav li.download:hover a {
 	background-color: #fff;
 }
 
-nav.webnav div.download { 
+div.download { 
     background-color: #dc6254;
     text-transform: uppercase;
     border-radius: 5px;
