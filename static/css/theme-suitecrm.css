@@ -523,7 +523,12 @@ div.sidebar-announcement a {
 	padding: 5px 15px;
 	font-size: 13px;
 	display: block;
-	color: #fff;
+	text-align: center;
+	color: #fff !important;
+}
+div.sidebar-announcement a:hover {
+	color:#dc6254 !important;
+	background-color: #fff;
 }
 
 
