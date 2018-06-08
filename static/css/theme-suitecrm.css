@@ -511,6 +511,16 @@ nav.webnav li.download:hover a {
 	background-color: #fff;
 }
 
+nav.webnav div.download { 
+    background-color: #dc6254;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 13px;
+    display: block;
+    color: #fff;
+}
+
 
 
 
