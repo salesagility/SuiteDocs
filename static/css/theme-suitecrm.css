@@ -501,6 +501,14 @@ nav.webnav li.download a {
 	font-size:13px;
 }
 
+nav.webnav li.download masterclass a {
+	background-color:#dc6254;
+	text-transform: uppercase;
+	border-radius:5px;
+	padding:5px 10px 5px 15px;
+	font-size:13px;
+}
+
 nav.webnav li.download:hover {
 	background-color:#5c566b;
 	border-top-color: #5c566b;
@@ -510,25 +518,6 @@ nav.webnav li.download:hover a {
 	color:#dc6254;
 	background-color: #fff;
 }
-
-div.download { 
-    background-color: #dc6254;
-    text-transform: uppercase;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 13px;
-    display: block;
-    color: #fff;
-}
-
-div.download a {
-    color: #fff!important;
-}
-
-
-
-
-
 
 
 
