@@ -10,6 +10,13 @@ weight: 50
 :toc:
 
 == Studio
+
+The Studio tools allow you to customise the information shown in the
+modules and how it is displayed. 
+
+See the dedicated link:../studio[Studio guide] for more
+information on how to use the Studio tools.
+
 == Rename Modules
 
 Use this panel to rename a *SuiteCRM* module. For example, you may wish 
@@ -122,5 +129,31 @@ re-installed or deleted.
 image:ModuleLoader8.png["Module Loader"]
 
 == Configure Module Menu Filters
+
+Use this section to configure the module menus on the top navigation bar.
+
+image:ConfigureModuleMenuFilters.png["Configure Module Menu Filters"]
+
+Drag modules from the list to the required menu, or delete an item by dragging it to 
+the wastepaper bin icon.
+Edit the menu name by clicking the pencil icon next to the module name. 
+Delete a menu entirely by clicking the wastepaper bin icon next to the module name.
+
+A new custom menu can be added by clicking btn:[ADD FILTER]
+Add menu items by dragging and dropping as before
+
+Any changes made will not take effect until you click btn:[SAVE & DEPLOY]
+
 == Dropdown Editor
+
+The Dropdown Editor shows all the dropdown lists currently installed on the system.
+
+Click on the dropdown name to edit it. If you are unsure which dropdown you require, it can be 
+easier to edit via Studio where you can find the dropdown by its field name.
+See the link:../../administration-panel/studio/#_adding_a_dropdown_field[Studio guide] for full 
+instructions on adding or editing a dropdown list. 
+
+image:StudioDropdownEditor.png["Dropdown Editor"]
+
+.
 
