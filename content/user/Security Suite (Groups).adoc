@@ -63,20 +63,15 @@ manager who is a part of the group, but who should see be able to see
 all records in the group would have a role directly assigned to you
 record that gives Group access.
 
-For more help check out:
+For more help check out this 
+https://www.youtube.com/watch?v=yJ-BzM3GTgA[Introduction
+Video^].
 
-* https://www.sugaroutfitters.com/docs/securitysuite/example-of-a-typical-setup[Example
-of a Typical Setup]
-* https://www.sugaroutfitters.com/docs/securitysuite/introduction-video[Introduction
-Video]
-
-Roles determine what a user can do with a record once they have access
-to it.
+Roles determine what a user can do with a record once they have access to it.
 
 1.  Create the roles
 2.  Edit role(s) to Enable Security Groups Management
-3.  Edit role(s) to set List to All or Group for Security Groups
-Management as desired
+3.  Edit role(s) to set List to All or Group for Security Groups Management as desired
 
 == A Typical Hierarchy Setup
 

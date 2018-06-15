@@ -511,9 +511,25 @@ nav.webnav li.download:hover a {
 	background-color: #fff;
 }
 
-
-
-
+div.sidebar-announcement { 
+  	background-color:#ECEBEB;
+	display: block;
+	padding: 15px;
+}
+div.sidebar-announcement a {
+	background-color: #dc6254;
+	border-radius: 5px;
+	padding: 5px 15px;
+	font-size: 13px;
+	display: block;
+	text-align: center;
+	color: #fff !important;
+}
+div.sidebar-announcement a:hover {
+	color:#dc6254 !important;
+	background-color: #fff;
+	border: solid 1px #dc6254;
+}
 
 
 
