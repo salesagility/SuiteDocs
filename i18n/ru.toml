@@ -1,0 +1,138 @@
+[suitedocs-title]
+other= "SuiteCRM. Сайт официальной документации."
+
+[navigation] 
+other="Navigation"
+
+[Search-placeholder]
+other = "Поиск..."
+
+[Clear-History]
+other = "Пометить всё как непрочитанное"
+
+[Attachments-label]
+other = "Вложения"
+
+[title-404]
+other = "Ошибка"
+
+[message-404]
+other = "Ой. Похоже на то, что эта страница не существует ¯\\_(ツ)_/¯."
+
+[Go-to-homepage]
+other = "Перейти на ГЛАВНУЮ"
+
+[Edit-this-page]
+other = "Править страницу"
+
+[Shortcuts-Title]
+other = "Показать больше"
+
+[Expand-title]
+other = "Развернуть..."
+
+[Issue-for-page]
+other = "Ошибка"
+
+[Documentation]
+other = "Документация"
+
+[Guides]
+other = "Руководства"
+
+[User]
+other = "Пользователю"
+
+[Developer]
+other = "Разработчику"
+
+[Administrator]
+other = "Системному администатору"
+
+[Admin-SHORT]
+other = "Админу"
+
+[Community]
+other = "Сообщество"
+
+[TechnicalBlog]
+other = "Блог разработчиков"
+
+[FromTechnicalBlog]
+other = "из блога разработчиков"
+
+[LatestPosts]
+other = "Последние статьи"
+
+[GettingStarted]
+other = "Начало работы"
+
+[Installing]
+other = "Установка"
+
+[Upgrading]
+other = "Обновление"
+
+[An-existing-installation]
+other = " установленной версии SuiteCRM"
+
+[Add-features-with]
+other = "Расширение функционала при помощи"
+
+[3rdPartyAdd-Ons]
+other ="дополнений сторонних разработчиков"
+
+[Using-SuiteCRM]
+other = "Использование SuiteCRM"
+
+[Learn-the]
+other = "Изучение"
+
+[UserInterface]
+other = "пользовательского интерфейса"
+
+[Understand-the]
+other = "Знакомство с "
+
+[CoreModules]
+other = "основными модулями"
+
+[Its-open-source]
+other = "Это система с открытым исходным кодом, содержащая"
+
+[Developers]
+other = "подробную документацию"
+
+[Customize-all-the-code]
+other = "для разработчиков"
+
+[Contribute]
+other = "Внеси свой вклад"
+
+[Learn-how-to]
+other = "Как "
+
+[Edit-a-page]
+other = "отредактировать страницу"
+
+[In-this-site]
+other = " на этом сайте"
+
+[Report-an]
+other = "Как сообщить об  "
+
+[Issue]
+other = "ошибке"
+
+[About-a-page]
+other = " на странице сайта"
+
+[Code]
+other = "в исходный код SuiteCRM"
+
+[RecentlyEdited]
+other = "Недавно отредактированные"
+
+[DocumentationPages]
+other = "страницы документации"
+

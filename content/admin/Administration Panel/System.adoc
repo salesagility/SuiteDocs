@@ -2,7 +2,6 @@
 Title: System
 weight: 30
 ---
-
 :experimental:   ////this is here to allow btn:[]syntax used below
 
 :imagesdir: ./../../../images/en/admin
@@ -182,14 +181,12 @@ image:AdminThemes.png[title = "AdminThemes"]
 
 From 7.10 onwards, there is a choice of theme colours for SuiteP which can be set from the User profile.
 
-
 == Scheduler
 
 SuiteCRM uses a number of Scheduler jobs running at scheduled times, supporting functionalities like search indexing, 
 workflows, email notifications, database maintenance and sending campaign emails.
 
 image:AdminScheduler.png[title = "Scheduler"]
-
 
 === Setting up the Scheduler
 
@@ -216,7 +213,6 @@ familiar with the crontab notation. Re-checking Advanced Options will let you se
 
 image:AdminEditScheduledTask.png[title = "Edit Scheduled Task"]
 
-
 == Activity Streams
 
 By default the Activity Stream dashlet displays recent updates for the Opportunities, Contacts, Leads and Cases modules. 
@@ -233,7 +229,6 @@ image:SystemActivityStreams.png[title = "Configure Activity Stream"]
 |===
 
 Please see the link:../../../../user/introduction/user-interface#_activity_streams[user interface guide] for further information on how to use the Activity Stream.
-
 
 == OAuth Keys
 
