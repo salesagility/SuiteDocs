@@ -243,11 +243,11 @@ created, e.g. you can set a group to be assigned to all newly created Account re
 
 == Further Information
 
-For more help and information on setting up and configuring roles and security groups, 
-please see 
+{{% notice note %}}For more help and information on setting up and configuring roles and security groups, 
+please see an link:/user/security-suite-groups/#_a_typical_hierarchy_setup[Example of a Typical Setup] and this
+https://www.youtube.com/watch?v=yJ-BzM3GTgA[Introduction Video^]
+{{% /notice %}}
 
-* link:/user/security-suite-groups/#_a_typical_hierarchy_setup[Example of a Typical Setup]
-* https://www.youtube.com/watch?v=yJ-BzM3GTgA[Introduction Video^]
 
 
 
