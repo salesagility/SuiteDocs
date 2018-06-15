@@ -108,7 +108,7 @@
 	  <li><a href="https://suitecrm.com/demo/">Demo</a></li>
 	  
 	  <li class="download"><a href="https://suitecrm.com/download/">Download</a></li>
-	  
+	 	
 	</ul>
 </nav>
 
@@ -141,10 +141,14 @@
         {{ partial "search.html" . }}
     {{end}}
   </div>
+	
+	<div class="sidebar-announcement masterclass"><a href="https://suitecrm.com/suitecrm-master-classes/">SUITECRM MASTER CLASSES
+		<br/>
+		SalesAgility's developers will show you how to customise and extend SuiteCRM. Reserve your seat today!
+		</a></div>
 
     {{ if .Site.IsMultiLingual }}
     <section id="lang-selector">
-      <hr/>
       <ul>
       {{ if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
