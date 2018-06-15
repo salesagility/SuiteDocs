@@ -2,7 +2,6 @@
 Title: Email
 weight: 40
 ---
-
 :experimental:   ////this is here to allow btn:[]syntax used below
 
 :imagesdir: ./../../../images/en/admin
@@ -238,7 +237,6 @@ when composing an email for all users that have access to this group account.
 Once configured, all inbound accounts are listed under *Inbound Accounts* on the *Admin* panel, 
 from where they can be edited or removed. 
 
-
 === Bounce Handling Account
 
 A Bounce Handling Account is used to manage bounce notifications for an email 
@@ -288,5 +286,5 @@ runs to send them out. By default this is the *Run Nightly Mass Email Campaigns*
 See the link:../system/#_scheduler[Scheduler] section for 
 further information on scheduled jobs.
 
-
 Click btn:[SEND QUEUED CAMPAIGN EMAILS] to send them immediately without waiting for the scheduler to do so.
+

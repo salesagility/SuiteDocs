@@ -1,0 +1,464 @@
+---
+weight: 3
+title: "Trabajando con Beans"
+---
+
+= 3. Trabajando con Beans
+
+Los Beans forman parte del Model del patrón MVC (Model-View-Controller) adoptado por la arquitectura de SuiteCRM.
+Ellos nos habilitan a extraer datos desde las BBDD como objetos, permitiéndonos editar o persistir registros.
+En ésta sección estudiaremos las distintas vías de trabajar con Beans.
+
+== La "BeanFactory" (Fábrica de Beans)
+
+El comando BeanFactory nos permite cargar dinámicamente instancias Bean o crear nuevos registros.
+Por ejemplo, para crear un nuevo Bean se puede usar:
+
+.Ejemplo 3.1: Creando un Bean usando BeanFactory
+[source,php]
+----
+$bean = BeanFactory::newBean('<TheModule>');
+//Por ejemplo, un caso de un nuevo bean de Cuentas:
+$accountBean = BeanFactory::newBean('Cuentas');
+----
+
+La extracción de datos desde un Bean existente puede llevarse a cabo de manera similar a la siguiente:
+
+.Ejemplo 3.2: Consultando un Bean existente mendiante BeanFactory
+[source,php]
+----
+$bean = BeanFactory::getBean('<TheModule>', $beanId);
+//Un ejemplo de extracción de un id de la tabla Cuentas
+$bean = BeanFactory::getBean('Cuentas', $beanId);
+----
+
+`getBean` retornará un objeto Bean vacío en caso de que un `$beanId` no sea definido o si no existiese el registro solicitado.
+La generación de un Bean no poblado puede ser útil en caso de que se desee utilizar un método estático (static methods) del Bean (para ver un ejemplo, avanzar hasta la
+sección Buscando Beans).
+Para forzar deliberadamente el retorno de un Bean despoblado (es decir, vacío) se puede omitir el segundo término de la llamada al método `getBean`.
+
+.Ejemplo 3.3: Generando un Bean vacío
+[source,php]
+----
+$bean = BeanFactory::getBean('<TheModule>');
+----
+
+
+{{% notice warning %}}
+`BeanFactory::getBean` cachea hasta diez resultados. Ésto puede generar comportamientos erráticos, sobre todo si se ejecuta `getBean` nuevamente sobre un registro ya cacheado, debido a
+ que el valor de retorno sera la misma instancia del llamado anterior, cualquiera sea quien consulte al Bean. Además, cambios en la declaración de un Bean se veran reflejados para todos
+ los elementos que hagan llamados a éste, indistintamente del método que haga uso del mismo.
+{{% /notice %}}
+
+
+El uso de BeanFactory asegura una correcta configuración para la llamada a la BBDD, además de forzar la inclusión de todos los archivos necesarios para su funcionamiento.
+
+== SugarBean
+
+SugarBean es la super clase de todos los Beans en SuiteCRM; todos extienden de él, y en él se proveen la interfaz mínima para la recuperación
+e interactividad con los registros consultados.
+
+== Buscando Beans
+
+Los siguientes ejemplos explican cómo buscar por Beans específicos usando una clase Bean.
+El ejemplo asume la existencia de un Bean vacío de nombre $accountBean, que puede ser una instancia de datos extraídos usando el método `getBean` tal como fue mencionado en
+la sección anterior, por ejemplo:
+
+.Ejemplo 3.4: Extrayendo un Account Bean vacío (despoblado)
+[source,php]
+----
+$accountBean = BeanFactory::getBean('Accounts');
+----
+
+=== get_list
+
+El método get_list permite la generación de una lista de beans coincidentes con las condiciones dadas, así como también permite la paginación de los resultados.
+
+.Ejemplo 3.5: firma del método get_list
+[source,php]
+----
+get_list(
+    $order_by = "",
+    $where = "",
+    $row_offset = 0,
+    $limit=-1,
+    $max=-1,
+    $show_deleted = 0)
+----
+
+
+`$order_by`::
+  Controla el orden de la lista retornada. Se trata de una cadena de texto (string) similar a los usados en cláusulas ORDER BY de SQL.
+  Por ejemplo, si la tabla tiene un campo `name` por el se desea ordenar los resultados devueltos, el parámetro declarado debe ser `name`. Si se desea
+  ordenar segun `date_entered` de forma descendente, se usa `date_entered_DESC` .
+  Además, se pueden ordenar por múltiples campos, separando cada argumento con comas. En este caso, si quisiera ordenar por id y fecha de modificación,
+  se puede usar `date_modified, id DESC`.
+`$where`::
+  Permite el filtrado de los resultados usando una cláusula WHERE de SQL.
+  Siempre se debe usar como parámetro un string conteniendo las condiciones SQL.
+  Por ejemplo, si en el módulo contactos se busca filtrar a los que tienen un primer nombre específico,
+  se debería usar `contacts.first_name='Jim'`. Nótese que en el ejemplo se especifica la tabla,
+  ya que la consulta podría cruzarse contra otras tablas y deseamos eliminar incertidumbres o
+  ambigüedades que puedan generarse sobre el campo de filtrado.
+`$row_offset`::
+  El corrimiento (offset) de filas respecto al inicio del listado que se devuelve en los resultados; también se puede pensar como cantidad de registros no incluídos
+  en los resultados retornados en cantidad de filas respecto al inicio de la tabla. Se puede usar para paginar los resultados.
+`$limit`::
+  El valor máximo numérico de registros que pueden ser devueltos por la consulta. -1 significa que no hay límite definido.
+`$max`::
+  El máximo numero de registros retornados por página. -1 establece el máximo por default (habitualmente 20)
+`$show_deleted`::
+  Incluir en la respuesta a la consulta los resultados que hayan sido borrados (SugarCRM usa un campo para borrado lógico).
+
+==== Resultados
+get_list retorna una matriz (array) con los resultados con la paginación deseada y la lista de beans.
+El array va a contar con las siguientes llaves (keys):
+
+`list`::
+  La lista de beans devueltos por la consulta de la lista.
+`row_count`::
+  Total de números de filas en los resultados.
+`next_offset`::
+  Cantidad de registros en las páginas siguientes. -1 si no hay más páginas.
+`previous_offset`::
+  Cantidad de registros previos a la ventana de registros mostrados en la página actual. -1 si es la primera-
+`current_offset`::
+  Offset de la página actual respecto al inicio del subconjunto de registros consultados.
+
+==== Ejemplo
+En el siguiente ejemplo, se va a consultar la tercera página de todas las cuentas cuyo campo `'industry'` sea `Media`
+usando un tamaño de página de 10 y ordenadas por nombre.
+
+.Ejemplo 3.6: Uso de get_list
+[source,php]
+----
+$beanList = $accountBean->get_list(
+                                //Ordenar por nombre de la cuenta
+                                'name',
+                                //Filtrar solo cuentas con el campo `'industry'` contenga el valor `Media`
+                                "accounts.industry = 'Media'",
+                                //Comienza con el 30avo registro (tercera página)
+                                30,001
+                                //Sin límite - muestra el máximo de registros por página por default
+                                -1,
+                                //Muestra 10 items por pagina
+);
+----
+
+Este comando va a retornar:
+
+.Ejemplo 3.7: Retorno get_list
+[source,php]
+----
+Array
+(
+    //Acotado para abreviar - es la lista de Cuentas, beans que se instancian como clases heredadas de SugarBeans.
+    [list] => Array()
+    //Cantidad de registros devueltos por la consulta.
+    [row_count] => 36
+    //Esta es la última página, por lo tanto, el offset de la página siguiente es -1.
+    [next_offset] => -1
+    //Cantidad de registros existentes en las páginas anteriores.
+    [previous_offset] => 20
+    //El offset usado para mostrar los resultados actuales.
+    [current_offset] => 30
+)
+----
+
+
+=== get_full_list
+
+`get_list` es útil cuando se precisan listados paginados. Sin embargo, si se está interesando en una lista de todos los
+ beans coincidentes se puede usar `get_full_list`. La firma del método `get_full_list` se puede ver a continuación:
+
+.Ejemplo 3.8: Firma del método get_full_list
+[source,php]
+----
+get_full_list(
+            $order_by = "",
+            $where = "",
+            $check_dates=false,
+            $show_deleted = 0
+----
+
+El uso de éstos argumentos es idéntico al de `get_list`, exceptuando la diferencia del
+argumento `$check_dates`. El mismo existe para determinar si los valores de campos fecha
+deben ser convertidos o no al formato local de fecha del usuario.
+
+==== Resultados
+El método get_full_list simplemente retorna una matriz con los beans que se correspondan al dominio con la consulta.
+
+==== Ejemplo
+Partiendo del ejemplo del método `get_list`, se puede obtener la lista completa de cuentas coincidentes utilizando:
+.Example 3.9: Llamado al método get_full_list
+[source,php]
+----
+$beanList = $accountBean->get_full_list(
+                                //Orden por nombre de las Cuentas
+                                'name',
+                                //Solo cuentas con el campo 'industry' contenga el valor 'Media'
+                                "accounts.industry = 'Media'"
+                                );
+----
+
+
+
+=== retrieve_by_string_fields
+
+En algún caso quizás solo sea preciso consultar una única fila pero no se tenga disponible
+el id del registro. `retrieve_by_string_fields` permite el retorno de un registro único basado en la coincidencia de
+los valores de uno o varios campos con los valores pasados por argumentos como cadenas de texto.
+
+.Ejemplo 3.10: Firma del método retrieve_by_string_fields
+[source,php]
+----
+retrieve_by_string_fields(
+                          $fields_array,
+                          $encode=true,
+                          $deleted=true)
+----
+
+
+
+`$fields_array`::
+  Matriz donde se explicitan los campos de búsqueda. La sintaxis es del tipo ''nombre_campo''=> ''string_valor_buscado''
+`$encode`::0
+  Valor booleano, representa si los resultados deben ser encodeados en HTML.
+`$deleted`::
+  Considerar o no el filtro de eliminados.
+
+{{% notice Tener en cuenta %}}
+Tener en consideración que el el flag `$deleted` funciona de forma distinta a todos los otros métodos que se revisaron
+previamente, ya que filtra de forma inversa a los casos anteriores: Si el flag está activo, los valores eliminados _no_
+estarán incluídos
+{{% /notice %}}
+
+==== Resultados
+retrieve_by_string_fields retorna un único bean si encuentra resultados o null en caso de que no haya coincidencia alguna.
+
+==== Ejemplo
+El ejemplo buscará retornar la cuenta que tenga el nombre (name) `Tortoise Corp` y el campo account_type sea `Customer`.
+Entonces, usaremos la siguiente expresión:
+
+.Ejemplo 3.11: Llamado a retrieve_by_string_fields
+[source,php]
+----
+$beanList = $accountBean->retrieve_by_string_fields(
+                                array(
+                                  'name' => 'Tortoise Corp',
+                                  'account_type' => 'Customer'
+                                )
+                              );
+----
+
+
+
+== Accediendo a los campos
+
+Todos los métodos tratados en la sección anterior retornan un bean,
+que es un objeto formado con los campos del registro
+consultado. La manipulación de los campos del registro se puede
+producir sencillamente accediendo o seteando las propiedades del bean tal como en
+cualquier otro objeto PHP; por ejemplo:
+
+.Ejemplo 3.12: Acceso a los campos
+[source,php]
+----
+//Consultar al campo 'name' del bean 'accountBean'.
+$accountBean->name;
+
+//Recuperar la fecha de inicio del bean 'meeting' (reuniones).
+$meetingBean->date_start;
+
+//Obtener un campo custom de un bean 'case'.
+$caseBean->third_party_code_c;
+
+//Setear el campo 'name' en un bean case.
+$caseBean->name = 'New Case name';
+
+//Setear el código postal de la dirección de facturación (billing address) de un bean account.
+$accountBean->billing_address_postalcode = '12345';
+----
+
+Sin embargo, los cambios en una instancia bean no se persisten de forma inmediata.
+Para salvar los cambios en una base de datos se debe realizar una llamada al método `save` del bean.
+Así mismo, enviar el mensaje `save` a un bean completamente nuevo va a insertar un nuevo registro en la base.
+
+.Ejemplo 3.13: Persistiendo los cambios en un Bean
+[source,php]
+----
+//Setear el campo 'name' en el bean 'account'
+$accountBean->name = 'New account name';
+//Setear el codigo postal de 'billing address post code' de 'account'
+$accountBean->billing_address_postalcode = '12345';
+//Salvar ambos cambios.
+$accountBean->save();
+
+//Usando Beanfactory, crear un nuevo bean tipo case (ver sección BeanFactory en el encabezado)
+$caseBean = BeanFactory::newBean('Cases');
+//Asignar un nombre y persistir en BBDD.
+$caseBean->name = 'New Case name';
+$caseBean->save();
+----
+
+
+{{% notice warning %}}
+La decisión entre insertar un nuevo registro o solo actualizar un bean será determinada
+por según el campo `ìd` del bean. Si éste ya existe en la base, SuiteCRM realizará el intento
+de llevar a cabo un update. Si no existe el `id`, se autogenerará uno y el nuevo registro
+será insertado dentro de la base de datos.
+En el caso particular de que el registro ya cuente con un `id` pero que aún así se
+quiera insertar un registro nuevo (quizás mediante un script personalizado de importación) se puede
+setear el parámetro `new_with_id` = true en el bean para que SuiteCRM lo manipule como un registro
+distinto y nuevo.
+{{% /notice %}}
+
+== Beans relacionados
+
+Para un sistema CRM, poder consultar, manipular y salvar solo un registro es muy útil pero no suficiente:
+las relaciones entre los distintos registros son tan importante como los datos que éste contiene.
+Por ejemplo, podemos considerar que una cuenta (Account) puede tener un listado con casos (Cases)
+asociados a ella, y a su vez, que un contacto (Contact) va a tener con un Account relacionado con sí mismo.
+Para consultar o editar relaciones entre beans podemos usar distintos métodos.
+
+=== get_linked_beans
+
+El método `get_linked_beans` permite consultar la lista completa de beans relacionados con un registro
+determinado.
+
+
+.Example 3.14: Firma de get_linked_beans method
+[source,php]
+----
+get_linked_beans(
+                $field_name,
+                $bean_name,
+                $sort_array = array(),
+                $begin_index = 0,
+                $end_index = -1,
+                $deleted=0,
+                $optional_where="");
+----
+
+
+
+`$field_name`::
+  El nombre del campo link para éste enlace. Debe notarse que éste no es el
+  nombre de la relación. En caso de no estar seguro sobre cuál debería ser
+  el valor de éste campo, se puede echar un vistazo al módulo que se encuentra en
+  `cache/modules/<TheModule>/<TheModule>Vardefs.php` para hallar la definición
+  del enlace.
+`$bean_name`::
+  El nombre del bean sobre el que se desea realizar la consulta.
+`$sort_array`::
+  Parámetro legacy, no debe ser usado.
+`$begin_index`::
+  Salteo de los primeros resultados, `$begin_index` debe ser un valor entero.
+  Se lo puede usar para paginar.
+`$end_index`::
+  Valor entero, representa la cantidad de registros a visualizar.
+  Se lo puede usar para paginar.
+`$deleted`::
+  Determina si se muestran los campos borrados o no. Si está seteado en true,
+  solo retornará los registros borrados. Si es false, solo mostrará los vigentes.
+`$optional_where`::
+  Permite filtrado de los resultados usando una cláusula WHERE de SQL. Ver
+  el método `get_list` para más referencia.
+
+==== Resultado
+`get_linked_beans` retorna un array de los beans relacionados..
+
+.Ejemplo 3.15: Ejemplo de llamada a get_linked_beans
+[source,php]
+----
+$accountBean->get_linked_beans(
+                'contacts',
+                'Contacts',
+                array(),
+                0,
+                10,
+                0,
+                "contacts.primary_address_country = 'USA'");
+----
+
+
+
+=== Relaciones
+
+Adicionalmente a la llamada `get_linked_beans`, los enlaces entre beans pueden ser
+llamados de formas mas directas.
+
+==== Carga
+
+Antes de acceder a una relación, se debe ejecutar el método `load_relationship` para
+asegurar que éstas están disponibles. Ésta llamada toma el nombre del link de la relación
+(no confundir con el nombre de la relación). Como se mencionó previamente, los nombres
+del link buscandos se pueden verificar en `cache/modules/<TheModule>/<TheModule>Vardefs.php`.
+
+.Ejemeplo  3.16: Cargando una relación
+[source,php]
+----
+//Carga de una relación.
+$accountBean->load_relationship('contacts');
+//Ahora se pueden llamar métodos del objecto relación:
+$contactIds = $accountBean->contacts->get();
+----
+
+
+==== Métodos
+
+`get` ::
+Retorna los ids de los registros asociados en ésta relación. Por ejemplo, para
+la relación account - contacts del ejemplo anterior, se va a retornar la lista de
+ids por contactos asociados con la cuenta.
+`getBeans` ::
+Similar al método anterior, pero retorna un array de beans en lugar de solos ids.
+
+{{% notice warning %}}
+`getBeans` va a cargar el bean completo por cada registro relacionado.
+Ésto puede provocar baja performance en las relaciones con gran cantidad de beans.
+{{% /notice %}}
+
+`add` ::
+Permite relacionar registros con el bean actual. `add` acepta un id o un bean únicos o,
+en su defecto, un array de ids o beans (Idealmente, siempre que el bean sea accesible, deberia usarse éste a
+fin de prevenir reloadear el bean). Por ejemplo, para añadir un contacto a la
+relación de nuestro ejemplo, podemos hacer lo siguiente:
+
+.Example 3.18: Añadir un nuevo contacto a la relación.
+[source,php]
+----
+//Cargar la relación
+$accountBean->load_relationship('contacts');
+
+//Crear un nuevo contacto demo
+$contactBean = BeanFactory::newBean();
+$contactBean->first_name = 'Jim';
+$contactBean->last_name = 'Mackin';
+$contactBean->save();
+
+//Linkear el bean a $accountBean
+$accountBean->contacts->add($contactBean);
+----
+
+
+`delete` ::
+`delete` permite romper las relaciones entre beans. De forma algo contraintuitiva,
+acepta tanto los ids del bean de origen como el del bean relacionado. Donde va el
+argumento relacionado, y si se encuentra disponible, se debe pasar el bean completo.
+Por ejemplo, para romper una relación entre un Account y un Contact:
+
+.Ejemplo 3.19: Eliminando un nuevo contacto de una relación.
+[source,php]
+----
+//Carga de la relación
+$accountBean->load_relationship('contacts');
+
+//Desconexión del contact desde el account - se asumen que $contactBean es un Contact de SugarBean
+$accountBean->contacts->delete($accountBean->id, $contactBean);
+----
+
+{{% notice warning %}}
+Si en el método delete se omite el segundo argumento, todas las relaciones de éste
+link serán removidas. link:../working-with-beans[↩]
+{{% /notice %}}
