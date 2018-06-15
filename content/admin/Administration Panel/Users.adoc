@@ -64,8 +64,8 @@ lists (e.g. assigned to or modified by lists) used for record searching.{{% /not
 
 Select the User Type from the drop down. A System Administrator User can 
 access the Administration panel and all records in *SuiteCRM*. A regular user 
-has access to modules and records based on the role(s) assigned to them. See 
-the <<Role Management, Role Management>> section of this document for further 
+has access to modules and records based on the role(s) assigned to them. See
+link:../roles-and-security-groups[Roles and Security Groups] for further 
 information.
 
 An optional photograph can be attached to the user record. Browse for the required 
