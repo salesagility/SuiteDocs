@@ -223,7 +223,7 @@ a particular email address in a 24hr period.
 
 ==== Reply To Settings
 
-image:287EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
+image:EmailsGroupReplyToSettings.png[Group Mail Reply To settings]
 
 [cols="20,80", frame = "none", grid = "none"]
 |===
@@ -267,6 +267,8 @@ Click btn:[SELECT] to connect to the mail server and select
 the relevant folder(s) from the popup dialog.
 
 == Outbound Email
+
+This section is to be completed.
 
 == Campaign Email Settings
 

@@ -173,6 +173,8 @@ Once complete, click the link to download the zipped diagnostic file.
 
 == Connectors
 
+This section to be completed.
+
 == Themes
 
 From 7.9 onwards, only the SuiteP theme is available. For earlier versions, you can set the default theme
@@ -185,7 +187,7 @@ From 7.10 onwards, there is a choice of theme colours for SuiteP which can be se
 
 == Scheduler
 
-SuiteCRM uses a number of Scheduler jobs running at scheduled times, supporting functionalities like search indexing, 
+SuiteCRM uses a number of Scheduler jobs running at scheduled times, supporting functionality such as search indexing, 
 workflows, email notifications, database maintenance and sending campaign emails.
 
 image:AdminScheduler.png[title = "Scheduler"]
