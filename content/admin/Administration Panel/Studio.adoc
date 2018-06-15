@@ -91,7 +91,7 @@ record's Change Log.
 in the link:../system/#_user_interface[System Settings].
 |*Importable:*|Select an option to allow, disallow or require 
 the field to be imported when using the Import Wizard.
-|*DuplicateMerge:*|Select an optionto enable or disable the Merge Duplicates
+|*DuplicateMerge:*|Select an option to enable or disable the Merge Duplicates
 and Find Duplicates features.
 |===
 
@@ -176,7 +176,7 @@ a subpanel where more than one related module records can be added.
 
 *Many to Many*
 
-With a Many-To-Many relationship, records in the primary module cna be related to one or more records 
+With a Many-To-Many relationship, records in the primary module can be related to one or more records 
 in the related module, and vice versa. Each module's records will contain a subpanel for the related records.
 
 Select the *Related Module* from the dropdown list.
@@ -191,7 +191,7 @@ Layouts can be edited in Studio to customise the module views shown to users.
 
 ==== Edit View
 
-Edit view is displayed when editing a record or createing a new one.
+Edit view is displayed when editing a record or creating a new one.
 
 image:StudioEditView.png["studio - edit view"]
 
@@ -218,7 +218,7 @@ to return to the layout.
 
 image:StudioEditViewRenamePanel.png["studio - rename panel"]
 
-A new row will auomatically be created with two columns.
+A new row will automatically be created with two columns.
 
 Drag and drop the required fields to the new row. Clicking the + button will span the field
 across both columns. 
@@ -241,7 +241,7 @@ The Detail View layout can be edited in exactly the same way as for the Edit Vie
 
 ==== List View
 
-The List VIew is shown when a module is opened, and lists all the records in the module. 
+The List View is shown when a module is opened, and lists all the records in the module. 
 
 Customise which fields are shown in the list view, and the order in which they are displayed here.
 
@@ -267,7 +267,7 @@ Click btn:[SAVE & DEPLOY]
 
 image:StudioSubpanels2.png["studio - subpanels"]
 
-=== Export Customizations
+=== Export Customisations
 
 You can export module customisations that you have made in Studio, and upload these into another 
 SuiteCRM instance via link:/admin/administration-panel/developer-tools#_module_loader[Module Loader] 
@@ -276,8 +276,8 @@ image:StudioExportCustomisations.png["Studio Customisations"]
 
 Enter a name for the package, and optional author and description details.
 
-Select the module(s) that contain the customizations you wish to export. 
-Only modules containing customizations will appear for you to select.
+Select the module(s) that contain the customisations you wish to export. 
+Only modules containing customisations will appear for you to select.
 
 Click btn:[EXPORT]. This will create and download a .zip file containing the module customisations.
 Use link:/admin/administration-panel/developer-tools#_module_loader[Module Loader] to upload and install
