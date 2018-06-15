@@ -49,7 +49,8 @@ Emails from personal accounts are not stored in *SuiteCRM* unless manually impor
 Personal accounts can be configured by the user from their user profile. Administrators can configure 
 personal accounts for other users.
 
-See Managing User Accounts for instructions on setting up a personal account.
+See link:../../../user/introduction/managing-user-accounts[Managing User Accounts] for instructions on
+setting up a personal account.
 			
 *Group Accounts*
 
