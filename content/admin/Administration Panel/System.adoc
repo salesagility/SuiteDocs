@@ -2,10 +2,9 @@
 Title: System
 weight: 30
 ---
-
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/user
+:imagesdir: ./../../../images/en/admin
 
 :toc:
 
@@ -173,16 +172,65 @@ Once complete, click the link to download the zipped diagnostic file.
 
 == Connectors
 
+This section to be completed.
+
 == Themes
 
-Set the default system theme and which other themes are available for users to select here.
+From 7.9 onwards, only the SuiteP theme is available. For earlier versions, you can set the default theme
+and which other themes are available for users to select here.
+
+image:AdminThemes.png[title = "AdminThemes"]
+
+From 7.10 onwards, there is a choice of theme colours for SuiteP which can be set from the User profile.
 
 == Scheduler
+
+SuiteCRM uses a number of Scheduler jobs running at scheduled times, supporting functionality such as search indexing, 
+workflows, email notifications, database maintenance and sending campaign emails.
+
+image:AdminScheduler.png[title = "Scheduler"]
+
+=== Setting up the Scheduler
+
+Scheduler jobs need to be manually enabled. This is done by running a script called cron.php 
+every minute. This, in turn, manages all SuiteCRM jobs according to their proper schedules. 
+
+In Windows this is setup using Task Scheduler, and in Linux and iOS, it is setup in crontab. Detailed instructions 
+for your system will be displayed during installation and can also be found on the Schedulers page, under the list
+of scheduled jobs. 
 
 See link:../../../blog/scheduler-jobs/[Scheduler Jobs in SuiteCRM in Linux - the Definitive Guide]
  for an in-depth guide to setting up and managing scheduled jobs in Linux.
 
+=== Configuring Scheduled Jobs
+
+Click on a scheduled job to view settings
+
+image:AdminScheduledTask.png[title = "Scheduled Task"]
+
+In edit mode, you can set the job status (only Active jobs will run) and configure the interval at which the job runs
+as well as the start time.
+Unckecking the the 'Advanced Options' box will show a more user-friendly way to set the job interval if you are not 
+familiar with the crontab notation. Re-checking Advanced Options will let you set the initial start time. 
+
+image:AdminEditScheduledTask.png[title = "Edit Scheduled Task"]
+
 == Activity Streams
+
+By default the Activity Stream dashlet displays recent updates for the Opportunities, Contacts, Leads and Cases modules. 
+
+The Activity Stream admin panel allows you to configure what is displayed on the activity feed and which features are available to users.
+
+image:SystemActivityStreams.png[title = "Configure Activity Stream"]
+
+[cols = "40, 60", frame = "none", grid = "none"]
+|===
+|*Enable MyActivity Stream Dashlet:*|Enables/disables the Activity Stream dashlet for all users
+|*Activate Feeds For:*|Select the modules to display activity for
+|*Activate User Feed:*|Allows users to enter messages in the status update field for broadcast to all users
+|===
+
+Please see the link:../../../../user/introduction/user-interface#_activity_streams[user interface guide] for further information on how to use the Activity Stream.
 
 == OAuth Keys
 
