@@ -49,7 +49,7 @@ directory.
   sudo chown -R www-data:www-data .
   sudo chmod -R 755 .
   sudo chmod -R 775 cache custom modules themes data upload
-  sudo chmod -R 775 config_override.php 2>/dev/null
+  sudo chmod 775 config_override.php 2>/dev/null
 ----
 .  That `www-data` needs to be replaced by the actual system user that your web server runs under. This varies depending on your
 operating system. Common web server users are as follows:
