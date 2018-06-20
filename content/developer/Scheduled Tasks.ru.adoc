@@ -1,0 +1,376 @@
+---
+weight: 13
+title: "Scheduled Tasks"
+---
+
+:imagesdir: ./../../../images/en/developer
+
+= 13. Scheduled Tasks
+
+== Intro
+
+Scheduled tasks are performed in SuiteCRM by the scheduler module. Jobs
+are placed into the queue either through the defined scheduled tasks or,
+for one off tasks, by code creating job objects. Note that both
+scheduled tasks and using the job queue requires that you have the
+schedulers set up. This will vary depending on your system but usually
+requires adding an entry either to Cron (for Linux systems) or to the
+windows scheduled tasks (for windows). Opening the scheduled tasks page
+within SuiteCRM will let you know the format for the entry.
+
+== Scheduler
+
+Scheduled tasks allow SuiteCRM to perform recurring tasks. Examples of
+these which ship with SuiteCRM include checking for incoming mail,
+sending email reminder notifications and indexing the full text search.
+What if you want to create your own tasks?
+
+SuiteCRM lets you define your own Scheduler. We do this by creating a
+file in +
+`custom/Extension/modules/Schedulers/Ext/ScheduledTasks/`. 
+
+You can give this file a name of your choice but it is more helpful to give it a
+descriptive name. Let’s create a simple file named +
+`custom/Extension/modules/Schedulers/Ext/ScheduledTasks/CleanMeetingsScheduler.php`.
+
+This will add a new job to the job strings and a new method that the
+scheduler will call:
+
+.Example 13.1: Example Clean Meetings Scheduler
+[source,php]
+----
+<?php
+ /*
+  * We add the method name to the $job_strings array.
+  * This is the method that jobs for this scheduler will call.
+  */
+ $job_strings[] = 'cleanMeetingsScheduler';
+ 
+ /**
+  * Example scheduled job to change any 'Planned' meetings older than a month
+  * to 'Not Held'.
+  * @return bool
+  */
+ function cleanMeetingsScheduler(){
+   //Get the cutoff date for which meetings will be considered
+      $cutOff = new DateTime('now - 1 month');
+      $cutOff = $cutOff->format('Y-m-d H:i:s');
+ 
+      //Get an instance of the meetings bean for querying
+   //see the Working With Beans chapter.
+   $bean = BeanFactory::getBean('Meetings');
+ 
+   //Get the list of meetings older than the cutoff that are marked as Planned
+   $query = "meetings.date_start < '$cutOff' AND meetings.status = 'Planned'";
+   $meetings = $bean->get_full_list('',$query);
+ 
+   foreach($meetings as $meeting){
+     //Mark each meeting as Not Held
+     $meeting->status = 'Not Held';
+     //Save the meeting changes
+     $meeting->save();
+   }
+   //Signify we have successfully ran
+   return true;
+}
+----
+
+
+
+We also make sure that we add a language file in `custom/Extension/modules/Schedulers/Ext/Language/en_us.cleanMeetingsScheduler.php`
+again, the name of the file doesn’t matter but it is helpful to use
+something descriptive. This will define the language string for our job
+so the user sees a nice label. See the section on language strings for
+more information. The key for the mod strings will be
+LBL_UPPERMETHODNAME. In our case our method name is
+`cleanMeetingsScheduler` so our language label key will be
+`LBL_CLEANMEETINGSSCHEDULER`.
+
+.Example 13.2: Example Language string for Clean Meetings Scheduler
+[source,php]
+----
+<?php
+//We add the mod string for our method here.
+$mod_strings['LBL_CLEANMEETINGSSCHEDULER'] = 'Mark old, planned meetings as Not \
+Held';
+----
+
+
+
+If we perform a repair and rebuild our method will now be packaged up
+into the scheduler ext file (see the Extensions section for more
+information on this process) and will be available in the schedulers
+page. Note that for any changes to the scheduler method you will need to
+perform another quick repair and rebuild - even in developer mode. We
+can now create a new scheduler to call our new method:
+
+image:CreateMeetingsScheduler.png[Creating a scheduler that uses our new method]
+
+This will now behave just like any other scheduler and we can have this
+run as often (or as rarely) as we would like. Take care here. The
+default frequency is every one minute. If your task is heavy duty or
+long running this may not be what you would prefer. Here we settle for
+once a day.
+
+== Job Queue
+
+Sometimes you will require code to perform a long running task but you
+do not need the user to wait for this to be completed. A good example of
+this is sending an email in a logic hook (see the link:../logic-hooks[Logic Hooks] chapter
+for information on these). Assuming we have the following logic hook:
+
+.Example 13.3: Example Email sending Logic Hook
+[source,php]
+----
+class SomeClass
+ {
+     function SomeMethod($bean, $event, $arguments)
+     {
+ 
+         //Perform some setup of the email class
+         require_once "include/SugarPHPMailer.php";
+         $mailer=new SugarPHPMailer();
+         $admin = new Administration();
+         $admin->retrieveSettings();
+         $mailer->prepForOutbound();
+         $mailer->setMailerForSystem();
+         $admin = new Administration();
+         $admin->retrieveSettings();
+         $admin->settings['notify_fromname']
+         $mailer->From     = $admin->settings['notify_fromaddress']
+         $mailer->FromName = $emailSettings['from_name'];
+         $mailer->IsHTML(true);
+ 
+         //Add message and recipient.
+         //We could go all out here and load and populate an email template
+         //or get the email address from the bean
+         $mailer->Subject = 'My Email Notification! '.$bean->name;
+         $mailer->Body = $event. ' fired for bean '.$bean->name;
+         $mailer->AddAddress('Jim@example.com');
+         return $mailer->Send();
+     }
+}
+----
+
+
+
+This will work fine. However you do not want the user to have to wait
+for the email to be sent out as this can cause the UI to feel sluggish.
+Instead you can create a Job and place it into the job queue and this
+will be picked by the scheduler. Let’s look at an example of how you
+would do this.
+
+First we want our Logic Hook class to create the scheduled job:
+
+.Example 13.4: Example Scheduled Job Creation
+[source,php]
+----
+class SomeClass
+ {
+     function SomeMethod($bean, $event, $arguments)
+     {
+       require_once 'include/SugarQueue/SugarJobQueue.php';
+       $scheduledJob = new SchedulersJob();
+ 
+       //Give it a useful name
+       $scheduledJob->name = "Email job for {$bean->module_name} {$bean->id}";
+ 
+       //Jobs need an assigned user in order to run. You can use the id
+       //of the current user if you wish, grab the assigned user from the
+       //current bean or anything you like.
+       //Here we use the default admin user id for simplicity
+       $scheduledJob->assigned_user_id = '1';
+ 
+       //Pass the information that our Email job will need
+       $scheduledJob->data = json_encode(array(
+                                             'id' => $bean->id,
+                                             'module' => $bean->module_name)
+                                         );
+ 
+       //Tell the scheduler what class to use
+       $scheduledJob->target = "class::BeanEmailJob";
+ 
+       $queue = new SugarJobQueue();
+       $queue->submitJob($scheduledJob);
+     }
+}
+----
+
+
+
+Next we create the BeanEmailJob class. This is placed into the `custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/` directory
+with the same name as the class. So in our example we will have: +
+`custom/Extensions/modules/Schedulers/Ext/ScheduledTasks/BeanEmailJob.php`
+
+.Example 13.5: Example Scheduler job
+[source,php]
+----
+class BeanEmailJob implements RunnableSchedulerJob
+{
+   public function run($arguments)
+   {
+ 
+     //Only different part of the email code.
+     //We grab the bean using the supplied arguments.
+     $arguments = json_decode($arguments,1);
+     $bean = BeanFactory::getBean($arguments['module'],$arguments['id']);
+ 
+     //Perform some setup of the email class
+     require_once "include/SugarPHPMailer.php";
+     $mailer=new SugarPHPMailer();
+     $admin = new Administration();
+     $admin->retrieveSettings();
+     $mailer->prepForOutbound();
+     $mailer->setMailerForSystem();
+     $admin = new Administration();
+     $admin->retrieveSettings();
+     $mailer->From     = $admin->settings['notify_fromaddress'];
+     $mailer->FromName = $emailSettings['from_name'];
+     $mailer->IsHTML(true);
+ 
+     //Add message and recipient.
+     //We could go all out here and load and populate an email template
+     //or get the email address from the bean
+     $mailer->Subject = 'My Email Notification! '.$bean->name;
+     $mailer->Body = $event. ' fired for bean '.$bean->name;
+     $mailer->AddAddress('Jim@example.com');
+     return $mailer->Send();
+   }
+   public function setJob(SchedulersJob $job)
+   {
+     $this->job = $job;
+   }
+}
+----
+
+
+
+Now whenever a user triggers the hook it will be much quicker since we
+are simply persisting a little info to the database. The scheduler will
+run this in the background.
+
+=== Retries
+
+Occasionally you may have scheduled jobs which could fail
+intermittently. Perhaps you have a job which calls an external API. If
+the API is unavailable it would be unfortunate if the job failed and was
+never retried. Fortunately the SchedulersJob class has two properties
+which govern how retries are handled. These are `requeue` and
+`retry_count`.
+
+`requeue`::
+  Signifies that this job is eligible for retries.
+`retry_count`::
+  Signifies how many retries remain for this job. If the job fails this
+  value will be decremented.
+
+We can revisit our previous example and add two retries:
+
+.Example 13.6: Setting the retry count on a scheduled job
+[source,php]
+----
+       $scheduledJob = new SchedulersJob();
+ 
+       //Give it a useful name
+       $scheduledJob->name = "Email job for {$bean->module_name} {$bean->id}";
+ 
+       //Jobs need an assigned user in order to run. You can use the id
+       //of the current user if you wish, grab the assigned user from the
+       //current bean or anything you like.
+       //Here we use the default admin user id for simplicity
+       $scheduledJob->assigned_user_id = '1';
+ 
+       //Pass the information that our Email job will need
+       $scheduledJob->data = json_encode(array(
+                                             'id' => $bean->id,
+                                             'module' => $bean->module_name)
+                                         );
+ 
+       //Tell the scheduler what class to use
+       $scheduledJob->target = "class::BeanEmailJob";
+ 
+       //Mark this job for 2 retries.
+       $scheduledJob->requeue = true;
+       $scheduledJob->retry = 2;
+----
+
+
+
+See the section on link:../logic-hooks#logic-hooks-chapter[logic hooks]
+for more information on how job failures can be handled.
+
+== Debugging
+
+With Scheduled tasks and jobs running in the background it can sometimes
+be difficult to determine what is going on when things go wrong. If you
+are debugging a scheduled task the the scheduled task page is a good
+place to start. For both scheduled tasks and job queue tasks you can
+also check the job_queue table. For example, in MySQL we can check the
+last five scheduled jobs:
+
+.Example 13.7: Example MySQL query for listing jobs
+[source,php]
+SELECT * FROM job_queue ORDER BY date_entered DESC LIMIT 5
+
+
+
+This will give us information on the last five jobs. Alternatively we
+can check on specific jobs:
+
+.Example 13.8: Example MySQL query for listing BeanEmailJobs
+[source,php]
+SELECT * FROM job_queue WHERE target = 'class::BeanEmailJob'
+
+
+
+In either case this will give details for the job(s):
+
+.Example 13.9: Example MySQL list of jobs
+[source,php]
+*************************** 1. row ***************************
+assigned_user_id: 1
+              id: 6cdf13d5-55e9-946e-9c98-55044c5cecee
+            name: Email job for Accounts 103c4c9b-336f-0e87-782e-5501defb5900
+         deleted: 0
+    date_entered: 2015-03-14 14:58:15
+   date_modified: 2015-03-14 14:58:25
+    scheduler_id:
+    execute_time: 2015-03-14 14:58:00
+          status: done
+      resolution: success
+         message: NULL
+          target: class::BeanEmailJob
+            data: {"id":"103c4c9b-336f-0e87-782e-5501defb5900","module":"Accounts"}
+         requeue: 0
+     retry_count: NULL
+   failure_count: NULL
+       job_delay: 0
+          client: CRON3b06401793b3975cd00c0447c071ef9a:7781
+percent_complete: NULL
+1 row in set (0.00 sec)
+
+
+
+Here we can check the status, resolution and message fields. If the
+status is `queued` then either the scheduler has not yet run or it isn’t
+running. Double check your Cron settings if this is the case.
+
+It may be the case that the job has ran but failed for some reason. In
+this case you will receive a message telling you to check the logs.
+Checking the logs usually provides enough information, particularly if
+you have made judicious use of logging (see the chapter on logging) in
+your job.
+
+It is possible that the job is failing outright, in which case your
+logging may not receive output before the scheduler exits. In this case
+you can usually check your PHP logs.
+
+As a last resort you can manually run the scheduler from the SuiteCRM
+directory using:
+
+.Example 13.10: Running the scheduler manually
+[source,php]
+php -f cron.php
+
+Using this in addition to outputting any useful information should track
+down even the oddest of bugs. 

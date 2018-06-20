@@ -1,0 +1,410 @@
+
+---
+weight: 15
+title: "15. Module Installer"
+---
+
+= 15. Module Installer
+
+As detailed in the other chapters of this book there are many ways to
+customise SuiteCRM. The module installer allows you to package these
+changes and install them onto other SuiteCRM instances. This is achieved
+by creating a package.
+
+At the minimum a package is a zip file that contains a `manifest.php`
+file in it’s root. The manifest file is responsible for providing
+information about the installer as well as providing information on how
+to install the package.
+
+== manifest.php
+
+The `manifest.php` file contains the definition of three arrays. Let’s
+look at each of these arrays in turn. See
+link:../20.-appendix-a---code-examples#appendix-a[Appendix A] for the full sample
+`manifest.php` file.
+
+{{% notice info %}}
+Within path
+in the manifest file you can use `<basepath>` to refer to the base
+directory of the installer. For example `<basepath>/Foo.txt` will refer
+to the `Foo.txt` file in the root of the installer package.
+{{% /notice %}}
+
+`$manifest` ::
+The `$manifest` array provides information on the package itself such as
+it’s name, readme etc. (it also defines the `copy` array for `patch`
+packages). A sample definition of the manifest array will appear
+something like this:
+
+.Example 15.1: Example $manifest array definition
+[source,php]
+ 1 $manifest = array(
+ 2   'name' => 'My First Package',
+ 3   'description' => 'This is a simple package example manifest file',
+ 4   'version' => '1.5',
+ 5   'author' => 'Jim Mackin',
+ 6   'readme' => 'readme.txt',
+ 7   'acceptable_sugar_flavors' => array('CE'),
+ 8   'acceptable_sugar_versions' => array(
+ 9     'exact_matches' => array(),
+10     'regex_matches' => array('6\.5\.[0-9]$'),
+11   ),
+12   'copy_files' => array (
+13     'from_dir' => '<basepath>/custom/',    
+14     'to_dir' => 'custom',     
+15     'force_copy' => array (),
+16   ),
+17   'dependencies' => array(
+18     array(
+19       'id_name' => 'example_dependency_package',
+20       'version' => '2.4',
+21     ),
+22   ),
+23 );
+
+
+
+`name`::
+  The name of the package. This is how the package will appear to the
+  user during installation and in the Module Loader package list. The
+  package name is required.
+`description`::
+  A brief description of the package.
+`version`::
+  The version of this package. This can be any string but is usually a
+  traditional version number (such as `3.1.4`).
+`author`::
+  The author of the package.
+`readme`::
+  A brief readme string. Note that if a `README.txt` is found in the
+  root of the package this will be used instead.
+`acceptable_sugar_flavors`::
+  A remnant of the SugarCRM packages. This should always be an array
+  with (at least) a `CE` entry. If you would like the installer to
+  target both SuiteCRM and SugarCRM editions then this can contain one
+  of the other SugarCRM flavours (`PRO`, `CORP` , `ULT` or `ENT`).
+`acceptable_sugar_versions`::
+  An array detailing the matching SugarCRM versions. Note that the
+  SugarCRM version is distinct from the SuiteCRM version. This array has
+  two keys. `exact_matches` is simply an array of the allowed versions.
+  `regex_matches` allows specifying regexes to match versions. For
+  SuiteCRM you only need to worry about supporting the `6.5.*` versions
+  which can be matched with the regex `6\.5\.[0-9]$`. At the time of
+  writing the current SugarCRM version for SuiteCRM is `6.5.20`.
+`copy_files`::
+  This is only used for `patch` installers and will copy files in the
+  `from_dir` key to those in the `to_dir` key. Finally the `force_copy`
+  key can be used to specify files that should be forcibly copied over.
+`dependencies`::
+  An array of other packages that are relied on by this package. Each
+  entry is an array with `id_name` - the id of the package and `version` the required version of the package.
+`icon`::
+  The path (within the installer) to an icon to be displayed during
+  installation.
+`is_uninstallable`::
+  Whether or not uninstalls should be allowed.
+`published_date`::
+  The date that the package was published. There is no fixed format for
+  the date, it is simply a string.
+`key`::
+  Specifies a key to ensure that modules do not clash. This will prefix
+  the installed modules and tables with `key`. This is used by the
+  module builder when creating packages but can be specified if you
+  wish.
+`remove_tables`::
+  A string specifying whether module tables should be removed when
+  uninstalling this package. Accepted values are `true`, `false` and
+  `prompt`. The default is `true`.
+`type`::
+  The type of the installer, one of `langpack`, `module`, `patch` or
+  `theme`. See the types section.
+
+=== $install_defs
+
+Provides information on how the package is to be installed, which files
+go where and any additional information such as logic hooks, custom
+fields etc.
+
+`id` ::
+A unique identifier for the module.
+
+`connectors` ::
+An array of connectors to be installed. Each entry is an array with the
+following keys:
+
+[cols="20,80",options="header",]
+|======================================================================
+|Key |Description
+|`name` |The name of the connector.
+|`connector` |The directory to copy the connector files from.
+|`formatter` |The directory to copy the connector formatter files from.
+|======================================================================
+
+`copy` ::
+An array of files and directories to be copied on install. Each entry is
+an array with the following keys:
+
+[cols="20,80",options="header",]
+|=================================================
+|Key |Description
+|`from` |The source file/directory in the package.
+|`to` |The destination file/directory.
+|=================================================
+
+{{% notice info %}}
+In general
+if a file can be handled by one of the other keys then that key should
+be used. For example new admin entries should be copied using the
+`administration` key rather than using the `copy` key.
+{{% /notice %}}
+
+`dashlets` ::
+An array of dashlets to be installed. Each entry is an array with the
+following keys:
+
+[cols="20,80",options="header",]
+|=======================================================================
+|Key |Description
+|`name` |The name of the new dashlet.
+
+|`from` |The path in the install package from which the dashlet files
+will be copied.
+|=======================================================================
+
+`language` ::
+An array of language files to be installed. Each entry is an array with
+the following keys:
+
+[cols="20,80",options="header",]
+|=======================================================================
+|Key |Description
+|`from` |The location of the language file inside the package.
+
+|`to_module` |The module this language file is intended for (or
+‘application’ for application language strings).
+
+|`language` |The language that this file is for (i.e. en_us or es_es).
+|=======================================================================
+
+See the chapter on link:../9.-language-strings#language-chapter[Language Strings]
+for more information.
+
+`layoutdefs` ::
+An array of layoutdef files which are used to add, remove or edit
+subpanels. Each entry is an array with the following keys:
+
+[cols="20,80",options="header",]
+|============================================================
+|Key |Description
+|`from` |The path in the package to the file to be installed.
+|`to_module` |The module that this file will be installed to.
+|============================================================
+
+`vardefs` ::
+An array of the vardefs to be added to specific modules. Each entry is
+an array with the following keys:
+
+[cols="20,80",options="header",]
+|=======================================================
+|Key |Description
+|`from` |The location of the vardef file in the package.
+|`to_module` |The destination module.
+|=======================================================
+
+{{% notice info %}}
+Generally
+you should install custom fields using the `custom_fields` key. However
+this key can be used to alter existing fields or add more complex
+fields.
+{{% /notice %}}
+
+`menu` ::
+An array of menus to be installed. Each entry is an array with the
+following keys:
+
+[cols="20,80",options="header",]
+|=====================================================
+|Key |Description
+|`from` |The location of the menu file in the package.
+|`to_module` |The destination module for this menu.
+|=====================================================
+
+`beans` ::
+An array of beans to be installed. Each entry is an array with the
+following keys:
+
+[cols="20,80",options="header",]
+|============================================================
+|Key |Description
+|`module` |The name of the module.
+|`class` |The name of the bean class.
+|`path` |The path (within the package) to the bean file.
+|`tab` |Whether or not a tab should be added for this module.
+|============================================================
+
+`relationships` ::
+An array detailing any new relationships added (in particular
+relationships where one side is an existing module). Each entry is an
+array with the following keys:
+
+[cols="20,80",options="header",]
+|=====================================================================
+|Key |Description
+|`module` |The module that this relationship will be attached to.
+|`meta_data` |The location of the metadata file for this relationship.
+|=====================================================================
+
+`custom_fields` ::
+An array of new custom fields to be installed (See the
+link:../4.-vardefs#vardefs-chapter[Vardefs] chapter for more information
+on this). Each entry is an array with the following keys:
+
+[cols="20,80",options="header",]
+|=======================================================================
+|Key |Description
+|`name` |The name of the new custom field.
+
+|`label` |The key for the language string which will act as the label
+for this custom field.
+
+|`type` |The type of this custom field.
+
+|`max_size` |For string field types, the maximum number of characters.
+
+|`require_option` |Whether or not the field is required.
+
+|`default_value` |The default value of this field.
+
+|`ext1` |Extended field information. Different field types will use this
+value differently. For example Enum fields will store the key for the
+options in this field, decimal and float fields will store the
+precision.
+
+|`ext2` |Extended field information. Different field types will use this
+value differently. For example, dynamic dropdowns will store the parent
+dropdown, text areas will store the number of rows.
+
+|`ext3` |Extended field information. Different field types will use this
+value differently. For example, text areas will store the number of
+columns.
+
+|`ext4` |Extended field information. Different field types will use this
+value differently. For HTML field types this will store the HTML.
+
+|`audited` |Whether or not changes to this field should be audited.
+
+|`module` |Used to specify the module where the custom field will be
+added.
+|=======================================================================
+
+`logic_hooks` ::
+An array of logic hooks to be installed. See the
+link:../12.-logic-hooks#logic-hooks-chapter[Logic Hooks] chapter for more
+information. Each entry is an array with the following keys:
+
+[cols="20,80",options="header",]
+|=======================================================================
+|Key |Description
+|`module` |The module to where this logic hook should be installed.
+Leaving this empty will install into the top level logic hook.
+
+|`hook` |The logic hook type (i.e. `after_save`, `after_login`, etc.).
+
+|`order` |The sort order for this logic hook.
+
+|`description` |A description of the hook.
+
+|`file` |The file containing the class for this logic hook, relative to
+the SuiteCRM root.
+
+|`class` |The class that contains the logic hook function that should be
+called by this hook.
+
+|`function` |The function to be invoked when this hook is triggered.
+|=======================================================================
+
+`image_dir` ::
+A path to a directory of images to be included in the install.
+
+`schedulers` ::
+An array of schedulers to be installed. Each entry is an array with a
+single key:
+
+[cols="20,80",options="header",]
+|===================================================
+|Key |Description
+|`from` |The file containing the new scheduled task.
+|===================================================
+
+`administration` ::
+An array of admin panels to be installed. Each entry is an array with a
+single key:
+
+[cols="20,80",options="header",]
+|===========================================================
+|Key |Description
+|`from` |The file containing the new admin panel definition.
+|===========================================================
+
+`pre_execute` ::
+Defines an array of files to be executed before the package is
+installed. Each entry is a path to a file within the package. Any output
+will be displayed to the user in the install log.
+
+`post_execute` ::
+Defines an array of files to be executed after the package is installed.
+Each entry is a path to a file within the package. Any output will be
+displayed to the user in the install log.
+
+`pre_uninstall` ::
+Defines an array of files to be executed before the package is
+uninstalled. Each entry is a path to a file within the package. Any
+output will be displayed to the user in the uninstall log.
+
+`post_uninstall` ::
+Defines an array of files to be executed after the package is
+uninstalled. Each entry is a path to a file within the package. Any
+output will be displayed to the user in the uninstall log.
+
+=== $upgrade_manifest
+
+Provides a means of upgrading an already installed package by providing
+different `install_defs`.
+
+== Types
+
+[cols="20,80",options="header",]
+|=======================================================================
+|Type |Description
+|langpack |A language installer. This will add an entry to the language
+dropdown.
+
+|module |A module installer. Will install new modules and/or
+functionality.
+
+|patch |A patch installer. This is used to upgrade SuiteCRM.
+
+|theme |A theme installer. This will add a new option to the themes.
+|=======================================================================
+
+[discrete]
+==== Other files
+
+`README.txt`::
+  Contains the readme for this package. If `README.txt` and a readme
+  entry in the `manifest.php` is defined then this file will be used.
+`LICENSE.txt`::
+  Provides information on the license for this package.
+`scripts/pre_install.php`::
+  A PHP script which defines a method `pre_install()`. This method will
+  be called before the package is installed. Any output will be
+  displayed to the user in the install log.
+`scripts/post_install.php`::
+  A PHP script which defines a method `post_install()`. This method will
+  be called after the package is installed.
+`scripts/pre_uninstall.php`::
+  A PHP script which defines a method `pre_uninstall()`. This method
+  will be called before the package is uninstalled.
+`scripts/post_uninstall.php`::
+  A PHP script which defines a method `post_uninstall()`. This method
+  will be called after the package is uninstalled. link:../15.-module-installer[↩]

@@ -1,0 +1,52 @@
+
+---
+weight: 2
+title: "2. SuiteCRM Directory Structure"
+---
+
+= 2. SuiteCRM Directory Structure
+
+`cache`::
+  Contains cache files used by SuiteCRM including compiled smarty
+  templates, grouped vardefs, minified and grouped JavaScript. Some
+  modules and custom modules may also store (temporary) module specific
+  info here.
+`custom`::
+  Contains user and developer customisations to SuiteCRM. Also contains
+  some SuiteCRM code to maintain compatibility with SugarCRM. However
+  this is likely to change in the future.
+`data`::
+  Stores the classes and files used to deal with SugarBeans and their
+  relationships.
+`examples`::
+  Contains a few basic examples of lead capture and API usage. However
+  these are very outdated.
+`include`::
+  Contains the bulk of non module and non data SuiteCRM code.
+`install`::
+  Code used by the SuiteCRM installer.
+`jssource`::
+  The `jssource` folder contains the unminified source of some of the
+  JavaScript files used within SuiteCRM.
+`metadata`::
+  Stores relationship metadata for the various stock SuiteCRM modules.
+  This should not be confused with module metadata which contains
+  information on view, dashlet and search definitions.
+`mobile`::
+  Stores code for the http://www.quickcrm.fr[QuickCRM] mobile app.
+`ModuleInstall`::
+  Code for the module installer.
+`modules`::
+  Contains the code for any stock or custom SuiteCRM modules.
+`service`::
+  Code for the SuiteCRM Soap and REST APIs.
+`themes`::
+  Code, data and images for the bundled SuiteCRM theme.
+`upload`::
+  The `upload` folder contains documents that have been uploaded to
+  SuiteCRM. The names of the files comes from the ID of the matching
+  Document Revision/Note. `upload`/`upgrades` will also contain various
+  upgrade files and the packages of installed modules.
+ `log4php`, `soap`, `XTemplate`, `Zend` ::
+  Source code for various libraries used by SuiteCRM some of which are
+  deprecated. link:../2.-suitecrm-directory-structure[↩]
