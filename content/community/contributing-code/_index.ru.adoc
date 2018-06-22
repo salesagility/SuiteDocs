@@ -13,8 +13,11 @@ weight: 10
  - приглашаются все желающие, чтобы поддержать статус SuiteCRM как лучшего в мире CRM с открытым исходным кодом!
 
 
-=== Содержание
-{{% children depth="3" showhidden="true" %}}
+{{% notice info %}}
+Содержимое раздела не русифицировано, для переходя к оригинальному описанию нажмите link:https://docs.suitecrm.com/community/contributing-code[здесь]. +
+Желающие внести свой вклад в создании русскоязычной документации могут ознакомиться с деталями в link:../../../community/contributing-to-docs[этом] разделе. +
+Обсудить документацию можно в link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17907-suitecrm#60470[русскоязычном разделе форума].
+{{% /notice %}}
 
 
 
