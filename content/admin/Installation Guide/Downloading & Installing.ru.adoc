@@ -114,9 +114,9 @@ link:../../../admin/installation-guide/upgrading[Обновление систе
 [source,shell]
 ----
 sudo chown -R www-data:www-data 
-sudo chmod -R 755 
+sudo chmod -R 755 .
 sudo chmod -R 775 cache custom modules themes data upload
-sudo chmod -R 775 config_override.php 2>/dev/null
+sudo chmod 775 config_override.php 2>/dev/null
 
 chgrp ApacheUser.ApacheGroup <SuiteCRMInstallRoot> -R
 ----
