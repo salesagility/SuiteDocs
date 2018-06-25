@@ -47,7 +47,7 @@ other = "Пользователю"
 other = "Разработчику"
 
 [Administrator]
-other = "Системному администатору"
+other = "Администатору"
 
 [Admin-SHORT]
 other = "Админу"
