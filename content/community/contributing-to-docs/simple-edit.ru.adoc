@@ -8,7 +8,7 @@ Weight: 10
 
 :experimental:  
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: ./../../../../images/en/community
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/en/community]
 
