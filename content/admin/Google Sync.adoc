@@ -1,0 +1,122 @@
+---
+Title: Google Credentials and Syncing
+Weight: 20
+---
+
+:imagesdir: ./../../../images/en/googleapi
+
+:toc:
+
+== Overview
+
+SuiteCRM has the ability to synchronize a user's meetings with their Google Calendar. This is
+a bidirectional sync, and changes on either end of the synchronization cause updates on the other.
+
+There is no middle-man in this process. Your data does not pass though any 3rd parties. It's just your
+SuiteCRM instance, and Google's servers.
+
+=== Requirements
+
+==== Valid API Credentials
+In order to synchronize a user's SuiteCRM meetings with their Google Calendar, the system must have valid credentials saved.
+
+These credentials are created on the Google Developer's Console, downloaded as a JSON file, and imported into SuiteCRM.
+There are instructions on how to do this further down this page.
+
+==== Internet Access from the SuiteCRM Server
+The SuiteCRM server must also have access to the internet. However, the SuiteCRM server does not need to be publicly accessible.
+The user must be able to reach both Google and SuiteCRM at the same time to authorize calendar access. Once that is done, the synchronization
+process runs on a schedule without any user interaction. The user does not need to be logged in to SuiteCRM for the synchronization to function.
+
+==== At Least One Google Account
+You'll need a Google Account to create the API credentials, and an account to synchronize with. They can be the same account if you only have one user.
+The API credentials only need to be generated once, from a single account. These credentials can be used to synchronize all the users once they authorize
+access to their account. These accounts can be generic @gmail.com accounts, or any level of GSuite accounts (Basic/Business/Enterprise).
+
+== Generating & Installing Google Credentials
+=== Generating Credentials
+Make sure you're logged into a Google account before proceeding.
+
+Go to https://console.developers.google.com/apis/dashboard[Google Developers Console]
+|===
+
+|Click on the drop-down at the top of the screen.|image:cred_1.png[float=left]
+
+|Click on the 'New Project' Button.|image:cred_2.png[float=left] 
+|Give the project a descriptive name, like 'SuiteCRM Google Sync', and click 'Create'.|image:cred_3.png[float=left]
+
+|At the top of the page, click on the 'Select a project' dropdown...|image:cred_4.png[float=left]
+
+|...then click on the project you just created.|image:cred_5.png[float=left]
+
+|You’ll now see the project in the dropdown, and a notice that no API’s are enabled. Click on the ‘Library’ link in the notice.|image:cred_6.png[float=left]
+
+|In the search window, type in “Calendar”, then click on the ‘Google Calendar API’ result.|image:cred_7.png[float=left]
+
+|Click the ‘Enable’ button.|image:cred_8.png[float=left]
+
+|Now that we’ve enabled the API, we create the credentials. Click the ‘Create credentials’ button.|image:cred_9.png[float=left]
+
+|Set the options in section 1 like this. Click on ‘What credentials do I need?’ to continue.|image:cred_10.png[float=left]
+
+|For Section 2, give it a descriptive name. Leave ‘JavaScript origins’ blank. +
+ +
+Under ‘Authorized redirect URIs’, you need to fill in the full URI to the ‘saveGoogleApiKey’ Entry Point. +
+ +
+Note that this does not need to be a public URL. It only needs to be accessible to the user who is enabling the calendar sync. It is strongly recommend having an https enabled site for production on a publicly accessible site. +
+ +
+Then click on ‘Create OAuth client ID’.|image:cred_11.png[float=left]
+
+|Again, create a descriptive name. There are more options under ‘More customization options’, but they are unnecessary for this to function. Then click ‘Continue’.|image:cred_12.png[float=left]
+
+|Click on the ‘Download’ button. Save the .json file. We use this later in SuiteCRM. Click ‘Done’ when finished. This is all we need for all our users to be able to sync their calendars.|image:cred_13.png[float=left]
+
+|===
+
+=== Installing Credentials
+Log into SuiteCRM as the administrative user.
+
+Go to ‘Administration’, then ‘System Settings’.
+
+|===
+
+|Find the 'Google Authentication' section in the middle of the page. +
+Note how it says 'Unconfigured'. This means there is no JSON file currently installed. +
+Click on the 'Choose File' button here, and select the JSON file you downloaded from the Developer's Console. +
+Click the ‘Save’ button at the bottom of the screen.|image:cred_14.png[float=left]
+
+|This will return you to the 'Administration' menu. Go back into 'System Settings'. +
+Now it says 'Configured' in green to show that the JSON file has been successfuly saved.|image:cred_15.png[float=left]
+
+|===
+
+If you ever need to install new credentials, simply upload them. They will overwrite the old ones.
+
+== Authorizing Calendar Access
+This needs to be performed by the User to enable syncing with their Google Calendar
+
+|===
+
+|Click on your name dropdown in the upper right of the SuiteCRM site, then on ‘Profile’.| image:cred_16.png[float=left]
+
+|Go to the ‘Advanced’ tab.|image:cred_17.png[float=left]
+
+|You should see the ‘Google Account Synchronization’ Subheading at the bottom. If it’s not shown, then the SuiteCRM server doesn't have Google Credentials installed. +
+Click on the ‘Authorize’ button.|image:cred_18.png[float=left]
+
+|If you are logged into multiple Google accounts, you’ll be asked which Google account you want to sync with. Otherwise, you’ll be taken directly to this dialog:|image:cred_19.png[float=left]
+
+|Once you click on ‘Allow’, you’ll be taken back to the user profile page. Click on the ‘Advanced’ tab again, and you should see:|image:cred_20.png[float=left]
+
+|===
+
+Check the ‘Enable Calendar Sync’ checkbox, and then click the ‘Save’ button.
+
+That’s it! By default, the sync happens every quarter hour. That can be changed by the Administrator in the Scheduler configuration.
+
+
+
+
+
+
+
