@@ -20,10 +20,10 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advance
 = Интеграция Обращений с внешним порталом
 
 При необходимости функционал 
-link:../../../user/core-modules/cases[Обращений] может быть интегрирован с link:http://joomla[CMS Joomla!] В этом случае через портал можно как отслеживать имеющиеся в системе обращения, так и создавать новые.  Для интеграции необходимо:
+link:../../core-modules/cases[Обращений] может быть интегрирован с link:https://www.joomla.org[CMS Joomla!^] В этом случае через портал можно как отслеживать имеющиеся в системе обращения, так и создавать новые.  Для интеграции необходимо:
 
  .	Настроить соответствующие параметры  портала в SuiteCRM
- .	Скачать со страницы загрузок SuiteCRM расширение link:https://suitecrm.com/resources/suitecrm-joomla-portal-plug-in/[Joomla! - Portal Component] 
+ .	Скачать со страницы загрузок SuiteCRM расширение link:https://suitecrm.com/resources/suitecrm-joomla-portal-plug-in/[Joomla! - Portal Component^] 
  . Установить скачанное расширение в Joomla!
 
 == Настройка портала
