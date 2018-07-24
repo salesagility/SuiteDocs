@@ -8,7 +8,7 @@ Weight: 20
 
 :experimental:  
 
-:imagesdir: ./../../../../images/en/community
+:imagesdir: ./../../../../images/ru/community
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/en/community]
 
@@ -27,7 +27,7 @@ ifdef::env-github[:btn:]
  . Откройте страницу, которую вы хотите прокомментировать.
  . Перейдите по ссылке "Ошибка", расположенной в верхней части каждой станицы.
 
-image:/../../../images/ru/community/AddIssue.png[Ошибка]
+image:AddIssue.png[Ошибка]
 
 [start=3]
  . Введите необходимое сообщение, используя встроенный текстовый редактор GitHub. 
@@ -39,7 +39,7 @@ image:/../../../images/ru/community/AddIssue.png[Ошибка]
 Таким образом, если вам необходимо что-либо уточнить в документации, осветить на странице более детально какой-либо аспект,
  либо исправить обнаруженную в документации ошибку - смело пишите ваше сообщение, нажав на ссылку *Ошибка*.
 
-image:28EditIssue.png[Сообщение об ошибке]
+image:SubmitNewIssue.png[Сообщение об ошибке]
  
 После ввода сообщения нажмите на кнопку {btn}[Submit new issue].
 
