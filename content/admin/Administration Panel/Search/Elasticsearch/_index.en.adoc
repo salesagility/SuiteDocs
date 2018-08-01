@@ -3,5 +3,5 @@ title: Elasticsearch
 weight: 10
 ---
 
-=== Table of Contents
+== Table of Contents
 {{% children depth="3" showhidden="true" %}}
