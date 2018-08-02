@@ -1,0 +1,29 @@
+---
+title: Set up Elasticsearch integration
+weight: 3
+---
+
+:imagesdir: ./../../../../../images/en/admin
+:experimental:
+
+Go to to admin panel, scroll down to the Search settings, and open the Elasticsearch setting page.
+Enable Elasticsearch from the checkbox and fill the host, user and password fields.
+Simply leave user and password blank if you have anonymous access enabled.
+
+{{% notice note %}}
+If you are running both SuiteCRM and Elasticsearch via Docker, the hostname must be the name of the Elasticsearch container.
+{{% /notice %}}
+
+image:ElasticsearchSearchSetting.png["Configure Elasticsearch"]
+
+You can use btn:[Test connection] to see if the current configuration is working.
+
+Once you are satisfied with your settings hit btn:[Save].
+
+Go to the Elasticsearch settings again and perform a full indexing by pressing btn:[Schedule full indexing].
+
+Now go to the Search Settings, and make sure that the search controller is set to `Search (new)` and
+`Elasticsearch Engine` is the default search engines.
+You can customize the modules that are used for indexing in the modules section.
+
+image:SearchSettingsForElasticsearch.png["Configure the search Settings"]
