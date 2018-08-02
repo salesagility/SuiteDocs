@@ -1,0 +1,110 @@
+---
+title: Search Syntax
+weight: 4
+---
+
+:toc:
+
+SuiteCRM Elasticsearch engine makes use of Elasticsearch's _Query String DSL_.
+This allows very advanced search query to be performed.
+
+For a complete understanding check the https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html#query-string-syntax[official documentation]. A quick overview will be provided here.
+
+== Examples
+
+Search for all the records having both 'John' and 'Doe' in any field:
+
+[source]
+John AND Doe
+
+Search for all the records having the first name 'John' (note that this won't include 'Johnny'):
+
+[source]
+name.first:John
+
+Search for all the records having with the name starting with 'John':
+
+[source]
+named:John*
+
+Search for all the Accounts having 'corp' in their name:
+
+[source]
+named:corp AND _type:Accounts
+
+== Joining
+
+By default keywords are joined by OR clauses,
+meaning that searching for `John Doe` will be the same as searching for `John OR Doe`.
+Of course results containing both 'John' and 'Doe' will appear on top.
+
+== Boosting
+
+Names are boosted, meaning that if one of the keywords match in the name the record will very likely appear on top.
+
+== Wildcards
+
+By default the entire keywords must match. Thus searching with 'John' won't match someone named 'Johnathan'.
+To do that you need to use a wildcard character.
+`*` can be use interchangeably to replace zero or more characters.
+`?` can be used to replace exactly one character.
+
+Search for both 'John' and 'Johnathan':
+
+[source]
+named:john*
+
+Search for all the surnames starting with either 'Mc' or 'Mac':
+
+[source]
+name.last:(Mc* OR Mac*)
+
+Wildcards can be used at the beginning of the keyword too, but it will make the search slightly slower.
+
+Search for all the records having the last name ending with 'Connor':
+
+[source]
+name.last:*connor
+
+== Searching by modules
+
+You can restrict search to one or more module by using the `_type` keyword and the module name.
+
+Search for all the Users:
+
+[source]
+_type:Users
+
+== Fuzzy search
+
+Using the `~` will make a keyword fuzzy, meaning that it will make a proximity search,
+finding all matches that have one different character (distance).
+The distance can be customised by adding a number after the tilde,
+
+Search for 'MacKenzie', 'McKenzie', 'Makenzie', etc.
+
+[source]
+MacKenzie~3
+
+== Metadata
+
+Each records has the following meta fields that can be searched:
+
+- meta.created.date
+- meta.created.user_id
+- meta.created.user_name
+- meta.modified.date
+- meta.modified.user_id
+- meta.modified.user_name
+- meta.assigned.user_id
+- meta.assigned.user_name
+
+Search all the records created by 'John Doe':
+
+[source]
+meta.created.user_name:(John Doe)
+
+Search all the records modified on the first of August.
+
+[source]
+meta.modified.date:"2018-08-01"
