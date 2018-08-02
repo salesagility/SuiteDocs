@@ -61,7 +61,6 @@ services:
         environment:
             - discovery.type=single-node
             - xpack.security.enabled=false
-            - ELASTIC_PASSWORD="SECRET123"
             - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
 ----
 
