@@ -3,7 +3,7 @@ title: Set up Elasticsearch integration
 weight: 3
 ---
 
-:imagesdir: ./../../../../../images/en/admin
+:imagesdir: ./../../../../../images/en/admin/ElasticSearch
 :experimental:
 
 Go to to admin panel, scroll down to the Search settings, and open the Elasticsearch setting page.
