@@ -5,7 +5,7 @@ weight: 1
 
 https://www.elastic.co/[Elasticsearch] is an indexing engine that is built specifically to
 have almost real time search results, optimised for searching text strings.
-It is built in Java and runs and runs as a separate server/process.
+It is built in Java and runs as a separate server/process.
 
 Elasticsearch can be integrated with SuiteCRM to widely improve search quality and time.
 To achieve this, search-enabled modules are indexed on the Elasticsearch server.
