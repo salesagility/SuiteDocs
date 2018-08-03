@@ -1,0 +1,76 @@
+---
+weight: 1
+title: Overview
+---
+
+:imagesdir: ./../../../../../images/en/developer/SearchFramework
+
+The Search Framework aims to make the creation of search engines for SuiteCRM as easy as possible,
+with a minimal impact on the user experience, allowing reuse of UI elements.
+
+Its components live in the `lib\Search`. An overview of the file structure will follow:
+
+    lib\Search
+    ├── Exceptions
+    │   ├── SearchEngineNotFoundException.php
+    │   ├── SearchException.php
+    │   └── SearchInvalidRequestException.php
+    ├── UI
+    │   ├── MVC
+    │   │   ├── Controller.php
+    │   │   └── View.php
+    │   ├── templates
+    │   │   ├── search.form.tpl
+    │   │   └── search.results.tpl
+    │   ├── SearchFormController.php
+    │   ├── SearchFormView.php
+    │   ├── SearchResultsController.php
+    │   └── SearchResultsView.php
+    ├── SearchEngine.php
+    ├── SearchQuery.php
+    ├── SearchResults.php
+    └── SearchWrapper.php
+
+== Main Classes
+
+=== SearchWrapper
+The main class of the Search Framework that allows to easily perform searches using static methods.
+
+=== SearchEngine
+Abstract class that contains utilities for classes implementing it.
+The built-in methods take care of showing the results and the search view, and can be overridden if necessary.
+Subclasses are only required to implement the `search(SearchQuery $query)` method, although it is recommended
+override the `validateQuery(SearchQuery $query)` method too.
+
+=== SearchQuery
+The SearchQuery object wraps all the parameters used by the SearchWrapper and SearchEngine.
+
+It has a set of factory methods to populate the parameters in a standard manner.
+
+It contains the following fields (available via getters):
+
+- `$query` ─ A string containing the search query. When empty no search will be performed.
+- `$size` ─ An int specifying how many results are requested. Defaults to 10.
+- `$from` ─ An int used for pagination, effectively an offset. Defaults to 0.
+- `$engine` ─ A string containing the name of the SearchEngine class to use. Defaults according to the configuration.
+- `$options` ─ An array containing options that might be needed by custom SearchEngines.
+
+=== SearchResults
+The SearchResults class holds the results of a search, along with metadata such as the search time, total number of hits
+and the score of the results.
+
+It contains the following fields (available via getters):
+
+- `$hits` ─ An array containing the search results. Results are nested by module.
+- `$scores` ─ An array with indexes matching those of `$hits` containing a float specifying the results.
+- `$options` ─ An array containing custom options to be used by engines.
+- `$searchTime` ─ A float with the amount of seconds it took to perform the search.
+- `$total` ─ An int with the total number of hits (without pagination).
+- `$groupedByModule` ─ Flag specifying if the `$hits` array is grouped by module.
+
+== Communication Diagram
+The diagram below illustrates how the search process works, when a user performs a search.
+
+The `Search` class is located in `modules/Home/`, and is effectively the controller that handles the browser request.
+
+image:SearchFrameworkDiagram.png["Overview of the Search Framework"]
