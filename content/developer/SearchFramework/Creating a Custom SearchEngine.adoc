@@ -1,0 +1,70 @@
+---
+weight: 2
+title: Creating a Custom SearchEngine
+---
+
+At the core of the SearchFramework there is the customisable nature of the SearchEngine class.
+In order to make a SearchEngine sub-class that will be detected by the `SearchWrapper`
+all you need to do is create a file in the `custom/Extension/SearchEngines` folder that
+extends the SearchEngine class and implements the `search(SearchQuery $query)` method.
+
+The example below shows a search engine that, regardless of your search query, will return the Administrator.
+
+[source,php]
+----
+use SuiteCRM\Search\SearchEngine;
+use SuiteCRM\Search\SearchQuery;
+use SuiteCRM\Search\SearchResults;
+
+class FakeSearch extends SearchEngine
+{
+    public function search(SearchQuery $query)
+    {
+        return new SearchResults([
+            'Users' => [1]
+        ]);
+    }
+}
+----
+
+The example above is perfectly valid and would work, but it's rather useless. Let's try making a simple SearchEngine
+that searches for Accounts that have the address in a given town.
+
+[source,php]
+----
+use SuiteCRM\Search\SearchEngine;
+use SuiteCRM\Search\SearchQuery;
+use SuiteCRM\Search\SearchResults;
+
+class CitySearch extends SearchEngine
+{
+    public function search(SearchQuery $query)
+    {
+        $sql = "SELECT id FROM accounts WHERE billing_address_city = '%s' OR shipping_address_city LIKE '%s' LIMIT %d OFFSET %d";
+
+        // Format the query with the values
+        $sql = sprintf(
+            $sql, // SQL Query above
+            $query->getSearchString(), // First equals
+            $query->getSearchString(), // Second equals
+            $query->getSize(), // LIMIT
+            $query->getFrom() // OFFSET
+        );
+
+        // Get an instance of the dabatabase manager
+        $db = DBManagerFactory::getInstance();
+        // Perform the query
+        $rows = $db->query($sql);
+        // Initialize an array with the results
+        $results = ['Accounts' => []];
+
+        // Fetch the row and push the id in the results array
+        while ($row = $db->fetchRow($rows)) {
+            $results['Accounts'][] = $row['id'];
+        }
+
+        // Make a new SearchResults object with the results array and return
+        return new SearchResults($results);
+    }
+}
+----
