@@ -130,8 +130,6 @@ class SomeClass
          //Perform some setup of the email class
          require_once "include/SugarPHPMailer.php";
          $mailer=new SugarPHPMailer();
-         $admin = new Administration();
-         $admin->retrieveSettings();
          $mailer->prepForOutbound();
          $mailer->setMailerForSystem();
          $admin = new Administration();
