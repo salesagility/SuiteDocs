@@ -81,11 +81,12 @@ you can override the `searchAndDisplay()` method entirely.
 
 By default, `displayForm()` (displaying the search bar) and `displayResults()`
 (displaying results and errors) call `SearchFormController` and `SearchResultsController`
-to create the views. These to classes are intended to be used and customised by custom Search Engines.
+respectively to create the views. These two classes are intended to be used and customised by custom search engines.
 
-In the example below we will override the `displayResults()` for the class above, and tell
+In the example below we will override the `displayResults()` method for the class above, and tell
 the engine to load a different template file. The template file is a custom one placed in the same
-folder as the engine, and will show a table view with three columns: bean name, shipping address and billing address.
+folder as the engine, and it will show a table view with three columns: bean name, shipping address and billing address.
+The said smarty template file can be found just after the code for the class.
 
 [source,php]
 ----
@@ -120,7 +121,7 @@ class CitySearchWithView extends SearchEngine
 }
 ----
 
-citysearch.tpl::
+citysearch.tpl
 [source,html]
 ----
 <h2 class="moduleTitle">Results</h2>
