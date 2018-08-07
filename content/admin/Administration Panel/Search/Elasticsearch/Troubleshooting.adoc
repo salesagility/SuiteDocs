@@ -1,0 +1,13 @@
+---
+title: Troubleshooting
+weight: 5
+---
+
+In order to make the troubleshooting process easier for the Elasticsearch extension, a separate file is used to offer
+very verbose and dedicated logging: `search_index.log`. This is mostly because the indexing procedures are run in the
+background, where they are hard to debug. Logging calls get redirected to the standard logging, filtered with the
+configured logging level.
+
+In addition to checking the logs, you could try running the search or the indexing from the command line using the
+link:../command-line-tools[command line tools]. Given the verbosity of the console output, this should surely help
+narrowing down the issue.
