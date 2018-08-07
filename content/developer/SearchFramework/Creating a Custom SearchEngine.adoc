@@ -44,7 +44,7 @@ class CitySearch extends SearchEngine
 {
     public function search(SearchQuery $query)
     {
-        $sql = "SELECT id FROM accounts WHERE billing_address_city = '%s' OR shipping_address_city LIKE '%s' LIMIT %d OFFSET %d";
+        $sql = "SELECT id FROM accounts WHERE billing_address_city = '%s' OR shipping_address_city = '%s' LIMIT %d OFFSET %d";
 
         // Format the query with the values
         $sql = sprintf(
