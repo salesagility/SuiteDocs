@@ -3,6 +3,8 @@ weight: 2
 title: Creating a Custom SearchEngine
 ---
 
+:imagesdir: ./../../../../../images/en/developer/SearchFramework
+
 At the core of the SearchFramework there is the customisable nature of the SearchEngine class.
 In order to make a SearchEngine sub-class that will be detected by the `SearchWrapper`
 all you need to do is create a file in the `custom/Extension/SearchEngines` folder that
@@ -159,6 +161,22 @@ citysearch.tpl
     </tbody>
 </table>
 ----
+
+== Throwing errors
+You can safely throw exceptions at any point while writing your own SearchEngine. Errors will be caught
+by the `SearchThrowableHandler` class and a friendly message will be shown to the user.
+
+If your SuiteCRM instance is in developer mode a detailed exception page will be shown, making it easier for you to
+debug.
+
+In the example below the same erroneous query is shown with `developer mode` on (left) and off (right). image:ErrorPage.png[asd]
+
+If you wish to directly show an error message to the user, you can throw a `SearchUserFriendlyException`. Remember to
+use the translation framework if you want the error to be localised, and never show details that are (too) technical.
+
+Example of throwing a user-friendly error message:
+[source, php]
+throw new SearchUserFriendlyException(translate('LBL_ERROR_MESSAGE_INVALID_QUERY'));
 
 == Conclusions
 
