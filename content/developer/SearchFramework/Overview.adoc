@@ -14,7 +14,8 @@ Its components live in the `lib\Search`. An overview of the file structure will 
     ├── Exceptions
     │   ├── SearchEngineNotFoundException.php
     │   ├── SearchException.php
-    │   └── SearchInvalidRequestException.php
+    │   ├── SearchInvalidRequestException.php
+    │   └── SearchUserFriendlyException.php
     ├── UI
     │   ├── MVC
     │   │   ├── Controller.php
@@ -25,7 +26,8 @@ Its components live in the `lib\Search`. An overview of the file structure will 
     │   ├── SearchFormController.php
     │   ├── SearchFormView.php
     │   ├── SearchResultsController.php
-    │   └── SearchResultsView.php
+    │   ├── SearchResultsView.php
+    │   └── SearchThrowableHandler.php
     ├── SearchEngine.php
     ├── SearchQuery.php
     ├── SearchResults.php
