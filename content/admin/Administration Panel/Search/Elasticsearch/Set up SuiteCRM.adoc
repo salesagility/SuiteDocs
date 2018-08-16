@@ -20,10 +20,9 @@ You can use btn:[Test connection] to see if the current configuration is working
 
 Once you are satisfied with your settings hit btn:[Save].
 
-Go to the Elasticsearch settings again and perform a full indexing by pressing btn:[Schedule full indexing].
+After having saved, perform a full indexing by pressing btn:[Schedule full indexing].
 
-Now go to the Search Settings, and make sure that the search controller is set to `Search (new)` and
-`Elasticsearch Engine` is the default search engines.
+Now go to the Search Settings, and set `Elasticsearch Engine` as the search engine.
 You can customize the modules that are used for indexing in the modules section.
 
 image:SearchSettingsForElasticsearch.png["Configure the search Settings"]
