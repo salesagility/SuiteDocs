@@ -11,7 +11,7 @@ These two commands allow to perform indexing and searches from the command line,
 with external tools easier.
 
 {{% notice note %}}
-This commands require a working connection to the database, if you are running SuiteCRM behind Docker or a VM,
+These commands require a working connection to the database, if you are running SuiteCRM behind Docker or a VM,
 please execute them from a shell on the same host as the SuiteCRM web server.
 {{% /notice %}}
 
