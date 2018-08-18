@@ -118,11 +118,11 @@
 <nav id="topmenu" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 	
 	<ul class="menu_desktop">
-		<li><a title="Documentation" href="/">{{ i18n "Documentation" }}</a></li><li class="guide guide_start">{{ i18n "Guides" }}:</li><li class="guide"><a title="User Guide" href="/user">{{ i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer">{{ i18n "Developer" }}</a></li><li class="guide"><a title="Administrator Guide" href="/admin">{{ i18n "Administrator" }}</a></li><li class="guide guide_end"><a href="/community">{{i18n "Community" }}</a></li><li><a title="Technical Blog" href="/blog">{{ i18n "TechnicalBlog" }}</a></li>
+		<li><a title="Documentation" href="/">{{ i18n "Documentation" }}</a></li><li class="guide guide_start">{{ i18n "Guides" }}:</li><li class="guide"><a title="User Guide" href="/user/">{{ i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer/">{{ i18n "Developer" }}</a></li><li class="guide"><a title="Administrator Guide" href="/admin/">{{ i18n "Administrator" }}</a></li><li class="guide guide_end"><a href="/community/">{{i18n "Community" }}</a></li><li><a title="Technical Blog" href="/blog/">{{ i18n "TechnicalBlog" }}</a></li>
 	</ul> 
 	
 	<ul class="menu_mobile">
-		<li><a title="Documentation" href="/">>{{i18n "Documentation" }}</a></li><li><a title="Technical Blog" href="/blog">>{{i18n "Technical Blog" }}</a></li><br><li class="guide guide_start">>{{i18n "Guides"}}:</li><li class="guide"><a title="User Guide" href="/user">>{{i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer">>{{i18n "Developer" }}</a></li><li class="guide guide_end"><a title="Administrator Guide" href="/admin">>{{i18n "Admin-SHORT" }}</a></li><li class="guide guide_end"><a href="/community">>{{i18n "Community" }}</a></li>
+		<li><a title="Documentation" href="/">>{{i18n "Documentation" }}</a></li><li><a title="Technical Blog" href="/blog/">>{{i18n "Technical Blog" }}</a></li><br><li class="guide guide_start">>{{i18n "Guides"}}:</li><li class="guide"><a title="User Guide" href="/user/">>{{i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer/">>{{i18n "Developer" }}</a></li><li class="guide guide_end"><a title="Administrator Guide" href="/admin/">>{{i18n "Admin-SHORT" }}</a></li><li class="guide guide_end"><a href="/community/">>{{i18n "Community" }}</a></li>
 	</ul>
 	
 	
@@ -218,7 +218,7 @@
       <hr/>
       <ul>
       {{ if $showvisitedlinks}}
-        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
+        <li><a class="padding" href="#" data-proofer-ignore data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
       {{ end }}
       </ul>
     </section>
