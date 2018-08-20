@@ -130,8 +130,8 @@ the message has been sent.
 an *external* file to the email.
 |image:265EmailsAddDocumentsbutton.png[title="Add Documents button"]|*Attach Documents*|Use this button to attach 
 a *SuiteCRM Document* to the email. Search for the required Document in the popup and click btn:[SELECT] to attach it.
-|image:266EmailsSaveDraftbutton.png[title="Save Draft button"]|*Save Draft*|Drafts can be viewed by <<Select Folder, 
-changing the folder>> in *List* view.
+|image:266EmailsSaveDraftbutton.png[title="Save Draft button"]|*Save Draft*|Drafts can be viewed 
+by changing the folder in *List* view.
 |image:267EmailsDiscardbutton.png[title="Discard button"]|*Discard*|Discards the draft email without sending.
 |===
 
