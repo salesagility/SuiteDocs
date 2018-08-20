@@ -229,9 +229,13 @@ image:CampaignsROIChart.png[title="Return on Investment details"]
 
 == Web To Person Form
 
-The *Create Person Form* feature allows you to create a web-based form which will create a link:../leads/[Lead], link:../contacts/[Contact] or link:../targets/[Target] record in *SuiteCRM* from the information submitted on the web form. These records can be assigned to a particular user and are linked to a campaign so responses can be tracked.
+The *Create Person Form* feature allows you to create a web-based form which will create a 
+link:../leads/[Lead], link:../contacts/[Contact] or link:../targets/[Target] record in *SuiteCRM* 
+from the information submitted on the web form. These records can be assigned to a particular user 
+and are linked to a campaign so responses can be tracked.
 
-{{%notice note%}}You will need to relate your Web-to-Person Form to an existing campaign. See the <<Create a Campaign, Create a Campaign>> section for instructions on how to do this. A non-email based type campaign is suitable for this{{%/notice%}}
+{{%notice note%}}You will need to relate your Web-to-Person Form to an existing campaign. 
+See the <<#_create_a_campaign, Create a Campaign>> section for instructions on how to do this. A non-email based type campaign is suitable for this{{%/notice%}}
 
 Click *Create Person Form* on the sidebar, or select *Create Person Form* from the *Campaigns* dropdown menu to open the wizard.
 
@@ -268,7 +272,9 @@ Once complete, click btn:[GENERATE FORM]
 [discrete]
 ==== Create Person Form – Editor
 
-The final step of the Create Person Form Wizard allows you to format the web form you have setup using the editor. Font type can be selected, colours changed, text alignment chosen and images can be inserted. View and edit the HTML directly by clicking the HTML link on the toolbar.
+The final step of the Create Person Form Wizard allows you to format the web form you have setup using the editor. 
+Font type can be selected, colours changed, text alignment chosen and images can be inserted. 
+View and edit the HTML directly by clicking the HTML link on the toolbar.
 
 image:CampaignsCreatePerson4.png[title="Web form"]
 

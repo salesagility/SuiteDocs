@@ -121,7 +121,7 @@ Set the password for a new user here, or reset the password for an existing user
 
 {{%notice note %}}The Password tab will not be visible on the user record if you 
 have the *System-Generated Passwords Feature* enabled. To enable/disable 
-system-generated passwords, please see the <<Password Management, Password Management>> 
+system-generated passwords, please see the <<#_password_management, Password Management>> 
 section of this document.
 {{% /notice %}}
 
