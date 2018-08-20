@@ -13,11 +13,11 @@ Weight: 10
 
 Добро пожаловать в SuiteCRM, систему управления взаимоотношениями с клиентами (Customer Relationship Management System, CRM-систему), основанную на открытом исходном коде. 
 
-SuiteCRM - это бесплатный форк популярной CRM-системы link:https://ru.wikipedia.org/wiki/SugarCRM[SugarCRM]. Автор системы - компания SalesAgility. Первая версия системы за номером 7.0 была выпущена 21 октября 2013 года на базе бесплатной версии SugarCRM Community Edition 6.5.16. В систему были добавлены как серия модулей собственной разработки, так и несколько бесплатных модулей сторонних разработчиков.
+SuiteCRM - это бесплатный форк популярной CRM-системы link:https://ru.wikipedia.org/wiki/SugarCRM[SugarCRM^]. Автор системы - компания SalesAgility. Первая версия системы за номером 7.0 была выпущена 21 октября 2013 года на базе бесплатной версии SugarCRM Community Edition 6.5.16. В систему были добавлены как серия модулей собственной разработки, так и несколько бесплатных модулей сторонних разработчиков.
 Система имеет открытый код и распространяется под лицензией AGPL версии 3.
 
  
-Как и SugarCRM, SuiteCRM построена на архитектуре link:https://ru.wikipedia.org/wiki/LAMP[LAMP/WAMP], для корректной работы системы требуется версия PHP 5.5 и выше. В качестве СУБД могут выступать MySQL 5.1 и выше, MariaDB 5.1 и выше, MS SQL 2005 и выше. 
+Как и SugarCRM, SuiteCRM построена на архитектуре link:https://ru.wikipedia.org/wiki/LAMP[LAMP/WAMP^], для корректной работы системы требуется версия PHP 5.5 и выше. В качестве СУБД могут выступать MySQL 5.1 и выше, MariaDB 5.1 и выше, MS SQL 2005 и выше. 
 
 Система позволяет эффективно вносить, систематизировать и хранить информацию обо всех аспектах взаимоотношений организации с клиентами, а также обеспечивает интегрированное управление корпоративной информацией о контрагентах, контактах, предварительных контактах (потенциальных покупателях), сделках, а также о мероприятиях (звонках, встречах, задачах). Система сочетает в себе многие функции, необходимые для управления информацией во многих аспектах вашего бизнеса, в интуитивно понятном и удобном веб-интерфейсе.
 
@@ -70,7 +70,7 @@ link:../introduction/user-interface#_Описание_пользовательс
 
 
 {{% notice info %}}
-Все желающие дополнить данную документацию могу сделать это самостоятельно, детали описаны в разделе link:../../../community/contributing-to-docs[Вклад в создание документации]. Обсудить документацию можно в link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17907-suitecrm#60470[русскоязычном разделе форума].
+Все желающие дополнить данную документацию могу сделать это самостоятельно, детали описаны в разделе link:../../../community/contributing-to-docs[Вклад в создание документации^]. Обсудить документацию можно в link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17907-suitecrm#60470[русскоязычном разделе форума^].
 {{% /notice %}}
 
 == Краткий обзор системы
@@ -83,15 +83,15 @@ link:../introduction/user-interface#_Описание_пользовательс
  
 == Полезные ссылки
 
-*	https://suitecrm.com/forum/index[Официальный форум]
+* https://suitecrm.com/forum/index[Официальный форум]
 
-*	https://github.com/salesagility/SuiteCRM[Исходный код SuiteCRM]
+* https://github.com/salesagility/SuiteCRM[Исходный код SuiteCRM]
 
-* https://github.com/likhobory/SuiteAsciiDocRU[Исходный текст данного руководства в формате AsciiDoc]
+* https://github.com/salesagility/SuiteDocs[Исходный текст данного руководства в формате AsciiDoc]
 
-*	https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/59[Обсуждение русификации]
+* https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/59[Обсуждение русификации]
 
-*	https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17910-suitecrm[Установка пакетов русификации в SuiteCRM]
+* https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17910-suitecrm[Установка пакетов русификации в SuiteCRM]
 
 * https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17971-suitecrm[Обсуждение данного руководства]
 
