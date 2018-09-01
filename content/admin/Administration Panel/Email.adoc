@@ -36,7 +36,7 @@ See <<Outgoing Mail Configuration>> for instructions on setting up the default o
 configuration.
 
 Other outbound accounts can be configured in addition to the default account for specific purposes, 
-such as sending link:../../../user/core-modules/campaigns[Campaigns]. These can be set up from the 
+such as sending link:../../../user/core-modules/campaigns/[Campaigns]. These can be set up from the 
 Admin panel, under outbound accounts. If no other outbound accounts are configured, the default 
 outgoing mail server account will be used.
 
@@ -65,7 +65,7 @@ Set up a group account from the <<Inbound Email>> page.
 
 *Bounce Handling Accounts*
 
-A Bounce Handling account is used with link:../../core-modules/campaigns[Campaigns] to handle bounced 
+A Bounce Handling account is used with link:../../core-modules/campaigns/[Campaigns] to handle bounced 
 mail notifications when emails are undelivered. You will need to set up a Bounce Handling account in 
 order to send a Campaign.
 
@@ -156,7 +156,7 @@ You can also manage personal inbound mail account information for users from thi
 
 A group email account allows more than one user to access a particular mail account. This can be useful 
 for sales or support email accounts for example. In addition, group accounts are also used for sending 
-email campaigns. See the link:../../../user/core-modules/campaigns[Campaigns] documentation for more 
+email campaigns. See the link:../../../user/core-modules/campaigns/[Campaigns] documentation for more 
 information.
 
 *SuiteCRM* can also be configured to automatically import emails and to automatically 
@@ -241,7 +241,7 @@ from where they can be edited or removed.
 === Bounce Handling Account
 
 A Bounce Handling Account is used to manage bounce notifications for an email 
-link:../../../user/core-modules/campaigns[campaign]. Bounced email addresses are recorded 
+link:../../../user/core-modules/campaigns/[campaign]. Bounced email addresses are recorded 
 in the campaign status.
 
 Once created, the bounce handling account can be selected by users when setting up a 
@@ -271,7 +271,7 @@ This section is to be completed.
 
 == Campaign Email Settings
 
-Configure the following additional settings for link:../../../user/core-modules/campaigns[Campaigns] here:
+Configure the following additional settings for link:../../../user/core-modules/campaigns/[Campaigns] here:
 
 * The batch size for sending campaign emails
 * Where campaign tracking files are located

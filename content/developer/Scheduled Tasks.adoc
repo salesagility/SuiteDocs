@@ -296,7 +296,7 @@ We can revisit our previous example and add two retries:
 
 
 
-See the section on link:../logic-hooks#logic-hooks-chapter[logic hooks]
+See the section on link:../logic-hooks/[logic hooks]
 for more information on how job failures can be handled.
 
 == Debugging

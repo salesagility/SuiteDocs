@@ -68,10 +68,12 @@ productividad así como ayudar a identificar problemas que puedan llegar a gener
 [discrete]
 ==== Developer Mode (Modo Desarrollador)
 
-SuiteCRM guardará en cache diversos archivos de los últimos requerimientos ya procesados o consultados a fin de mejorar la performance,
+SuiteCRM guardará en cache diversos archivos de los últimos requerimientos ya procesados 
+o consultados a fin de mejorar la performance,
 tales como las plantillas (templates) de Smarty. El modo desarrollador desactiva algunos de
 esos procesos de caching, de manera que los cambios en los archivos modificados
-se vean de forma inmediata (salvando algunas excepciones, tales como las del caso de link:../extension-framework#extensions-chapter[extensions]) ).
+se vean de forma inmediata (salvando algunas excepciones, tales como las del caso 
+de link:../extension-framework/[extensions]).
 Esta opción puede ser activada tanto desde la edición del archivo de configuración como desde la página
 General settings (ajustes generales) dentro del administrador.
 
@@ -81,7 +83,7 @@ General settings (ajustes generales) dentro del administrador.
 El nivel por defecto de log de errores de SuiteCRM es `fatal`. Éste es un buen nivel de log para instancias de producción,
 pero quizás en entorno de desarrollo usted desee mantener el nivel del log en `info` o `debug`, de manera que la salida del
 log sea más verboso en caso de que algo salga mal y se pueda capturar la referencia al error.
-Para más información, puede dirigirse a link:../logging#logging-chapter[chapter on logging]
+Para más información, puede dirigirse a link:../logging/[chapter on logging]
 
 [discrete]
 ==== Display errors (Muestra de mensajes de error)
