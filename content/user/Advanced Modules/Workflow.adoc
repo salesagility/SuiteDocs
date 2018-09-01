@@ -314,13 +314,13 @@ or modified. Set Up
 
 1.  Start by navigating to the Workflow module and clicking *'Create
 Workflow'* from the the action bar.
-2.  Give your workflow a Name such as 'Populate Target List.
-3.  Select Accounts as the Workflow Module.
+2.  Give your workflow a Name such as 'Populate Target List'.
+3.  Select *Accounts* as the Workflow Module.
 4.  Ensure *Repeated Runs* is NOT selected and the *Status* is *Active* (this
 should be done by default). Optionally you can change the *Assigned-To*
 and add a *Description*.
 
-===== Conditions
+==== Conditions
 
 1.  Create a new Condition Line by clicking btn:[Add Condition].
 2.  Select 'Type' from the Field drop down.
@@ -332,7 +332,7 @@ like this:
 
 image:134Conditions.png[title="Conditions"]
 
-===== Actions
+==== Actions
 
 Create a new Action by clicking btn:[Add Action].
 
@@ -370,7 +370,7 @@ this:
 
 image:136Case_Escalation.png[title="Case Reminder"]
 
-===== Conditions
+==== Conditions
 
 Create a new Condition Line by clicking btn:[Add Condition].
 
@@ -399,7 +399,7 @@ like this:
 
 image:138Conditions.png[138Conditions.png,title="138Conditions.png"]
 
-===== Actions
+==== Actions
 
 1.  Create a new Action by clicking btn:[Add Action] button.
 2.  Select 'Send Email' from the Select Action down down list.
@@ -434,7 +434,7 @@ You can change the Sales role to any role found in your own
 system.
 {{% /notice %}}
 
-===== Set Up
+==== Set Up
 
 1.  Start by navigating to the Workflow module and clicking *'Create
 Workflow'* from the the action bar.
@@ -450,7 +450,7 @@ this:
 
 image:141Set_up.png[title="Set Up"]
 
-===== Conditions
+==== Conditions
 
 1.  Create a new Condition Line by clicking btn:[Add Condition].
 2.  Select 'Lead Source' from the Field drop down.
@@ -462,7 +462,7 @@ like this:
 
 image:142Conditions.png[title="Conditions"]
 
-===== Actions
+==== Actions
 
 1.  Create a new Action by clicking btn:[Add Action].
 2.  Select 'Modify Record' from the Select Action down down list.
