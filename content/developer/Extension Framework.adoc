@@ -42,7 +42,7 @@ sections to the administration panel.
 
 |EntryPointRegistry |entry_point_registry.ext.php |application |Used to
 add new entry points to SuiteCRM. See the chapter on
-link:../entry-points#entry-point-chapter[Entry Points].
+link:../entry-points/[Entry Points].
 
 |Extensions |extensions.ext.php |application |Used to add new extension
 types.
@@ -50,9 +50,10 @@ types.
 |FileAccessControlMap |file_access_control_map.ext.php |  |Used to add,
 update or delete entries in the access control lists for files.
 
-|Language |N/A^link:../extension-framework#fn-langNote[1]^ |  |Used to add, update
+|Language |N/A (the language extensions are treated specially and, as such, 
+aren’t compiled to a single file)  |  |Used to add, update
 or delete language strings for both modules and app strings. See the
-chapter on link:../language-strings#language-chapter[Language Strings].
+chapter on link:../language-strings[Language Strings].
 
 |Layoutdefs |layoutdefs.ext.php |  |Used to add, update or delete
 subpanel definitions for a module.
@@ -62,7 +63,7 @@ global links (the list of links that appear in the top right of the
 SuiteCRM UI).
 
 |LogicHooks |logichooks.ext.php |  |Used to add, update or delete logic
-hooks. See the chapter on link:../logic-hooks#logic-hooks-chapter[Logic
+hooks. See the chapter on link:../logic-hooks/[Logic
 Hooks].
 
 |Include |modules.ext.php |application |Used to register new beans and
@@ -73,7 +74,7 @@ for each module.
 
 |ScheduledTasks |scheduledtasks.ext.php |Schedulers |Used to add new
 scheduled tasks. See the chapter on
-link:../scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
+link:../scheduled-tasks/[Scheduled Tasks].
 
 |UserPage |userpage.ext.php |Users |Unused
 
@@ -81,7 +82,7 @@ link:../scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
 methods.
 
 |Vardefs |vardefs.ext.php |  |Used to add, update or delete vardefs for
-a module. See the section on link:../vardefs#vardefs-chapter[Vardefs].
+a module. See the section on link:../vardefs/[Vardefs].
 
 |JSGroupings |jsgroups.ext.php |  |Used to add, update or delete
 JavaScript groupings.
@@ -95,7 +96,7 @@ actions.
 Interestingly the extension framework can be used to add new extensions.
 This allows you to create customisations that are easily customised by
 others (in a similar manner to, for example, how vardefs can be added -
-see the chapter on link:../vardefs#vardefs-chapter[Vardefs]).
+see the chapter on link:../vardefs/[Vardefs]).
 
 To create a custom extension you simply add a new file in +
 `custom/Extension/application/Ext/Extensions`. 
@@ -125,5 +126,3 @@ file will not do anything but you are now able to write custom code that
 checks the consolidated file rather than having to worry about searching
 for customisations.
 
-The language extensions are treated specially and, as such, aren’t
-compiled to a single file.link:../extension-framework#fnref-langNote[↩]
