@@ -50,6 +50,7 @@ _Released 00 000 2018_
 [discrete]
 ===== Enhancements
 * https://github.com/salesagility/SuiteCRM/pull/5577[#5577 ] Feature/collapsed subpanel row count
+* https://github.com/salesagility/SuiteCRM/pull/6017[#6017 ] Feature - allow users to send email as themselves w/ System outgoing
 
 [discrete]
 
@@ -152,7 +153,7 @@ _Released 00 000 2018_
 * https://github.com/salesagility/SuiteCRM/issues/3560[#3560 ] Fixed #3560 - Now we log queries in one, and only one, log line
 * https://github.com/salesagility/SuiteCRM/pull/6211[#6211 ] Prevent massive slowdown if someone accidently added many favorites
 * https://github.com/salesagility/SuiteCRM/pull/6212[#6212 ] Hotfix fixes
-* https://github.com/salesagility/SuiteCRM/pull/6215[#6215 Fixing AOW_Actions save
+* https://github.com/salesagility/SuiteCRM/pull/6215[#6215 ] Fixing AOW_Actions save
 * https://github.com/salesagility/SuiteCRM/issues/6217[#6217 ] Fixed #6217 - Copyright notice update to 7.10.x
 * https://github.com/salesagility/SuiteCRM/pull/6225[#6225 ] gcoop libre hotfix 6008 with no mem limit for composer install
 * https://github.com/salesagility/SuiteCRM/issues/6231[#6231 ] Fixed #6231 - Now the query executed in getNewMessageIds has no WHERE harcoded
