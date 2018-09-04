@@ -27,11 +27,11 @@ image:106Creating_a_workflow.png[title="Creating a Workflow"]
 
 This allows you to specify the following:
 
-* *Name* – The name of the process.
-* *Assigned To* - The assigned user of the workflow process.
+* *Name* – Any name you want to give to the Workflow.
+* *Assigned To* - The assigned user of the Workflow process.
 * *Workflow Module* – A drop down list of all the modules found within the
-SuiteCRM instance. This is the module the workflow is run against. For
-example, When an Account is created/edited.
+SuiteCRM instance. This is the module the Workflow is run against. For
+example, when an Account is created/edited.
 * *Status* – Active or Inactive. Only active processes will run, so you can use this field 
 to deactivate a Workflow without having to delete it.
 * *Run* – This controls the way the Workflow is triggered.
@@ -45,7 +45,7 @@ resticted by the *Run on* property and by the Workflow's conditions.
 |*Always* | The Workflow will run on both the situations described above.
 |================================================================
 +
-* *Run On* – All Records, Modified Records or New Records.
+* *Run On* – This specifies the seleciton of records for which the Workflow will be executed.
 +
 [cols="20,80"]
 |================================================================
@@ -86,8 +86,8 @@ and other notes to clarify what the current Workflow is all about.
 === Adding Conditions
 
 Once set up, you can add conditions to a workflow process using the
-conditions panel. This allows users to specify the criteria that should
-trigger the workflow actions.
+conditions panel. This allows you to specify restrictive criteria so that only the records matching 
+all these conditions will be affected by the Worklow's Acions.
 
 image:107Adding_conditions.png[title="Add Condition"]
 
@@ -143,8 +143,8 @@ from.
 
 image:113Multiple_condition.png[title="Multiple"]
 
-* *Date* – This allows you to specify the workflow to occur after/before an
-amount of time from either another date field or 'Now'. For example,
+* *Date* – This allows you to specify the record to be selected for the Workflow 
+after/before an amount of time from either another date field or 'Now'. For example,
 when the start date of a call is 'Now + 10 minutes'. This can only be
 used when the Field is a date field. The amount of time before or after
 the date can be specified in Minutes, Hours, Days, Weeks or Months.
@@ -153,10 +153,9 @@ image:114Date_condition.png[title="Date"]
 
 === Removing Conditions
 
-You can remove Condition Lines by clicking btn:[-] on the left
-hand side of the condition.
+You can remove Condition Lines by clicking btn:[-] on the left-hand side of the condition.
 
-image:115Removing_conditions.png[title="Removing COnditions"]
+image:115Removing_conditions.png[title="Removing Conditions"]
 
 == Actions
 
