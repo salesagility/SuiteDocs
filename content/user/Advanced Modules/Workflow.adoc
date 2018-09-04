@@ -51,8 +51,9 @@ resticted by the *Run on* property and by the Workflow's conditions.
 |================================================================
 |*New Records* | The Workflow will run only for new records being created.
 |*Modified Records* | The Workflow will run only for records that were already created and are being changed.
-|*All Records* | For *On Save* workflows, this means the Workflow will run for both new and modified records. +
-For *On Scheduler* Workflows, this means the Workflow will go through every record in the module, 
+|*All Records* | 
+- For *On Save* workflows, this means the Workflow will run for both new and modified records. +
+- For *On Scheduler* Workflows, this means the Workflow will go through every record in the module, 
 even old ones that weren't changed.
 {{% notice tip %}}
 When setting *On Scheduler*, *All Records* Workflows, consider that they might cause very long operations 
