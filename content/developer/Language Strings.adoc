@@ -94,6 +94,14 @@ However to promote modularity it is recommended that you add a new file in the l
 For example `custom/Extension/application/Ext/Language/es_es.MyAppLanguageFile.php`.
 `<Name>` should be used to give the file a descriptive name.
 
+An example of a redefinition in this directory would look like this:
+
+[source,php]
+-----
+<?php
+$app_strings['LBL_HELLO'] = 'Hello';
+-----
+
 See the link:../extension-framework/[extensions] section for more information on the Extensions folder.
 
 == Application List Strings
