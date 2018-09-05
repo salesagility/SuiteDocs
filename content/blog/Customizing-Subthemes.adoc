@@ -3,6 +3,7 @@ title: Creating a Custom SuiteP Sub-theme
 date: 2018-09-05T12:00:00+01:00
 author: pgorod
 tags: ["development"]
+hidden: true
 ---
 
 Since SuiteCRM 7.10, the SuiteP theme started to have 4 Sub-themes called 
