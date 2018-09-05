@@ -43,9 +43,7 @@ And a slightly different one for `$app_strings` here:
 [source,php]
 -----
 <?php
-$app_strings = array (
-  'LBL_SUBTHEME_OPTIONS_NOON' => 'Noon',
-);
+$app_strings['LBL_SUBTHEME_OPTIONS_NOON'] = 'Noon';
 -----
 
 Next, we copy the subdirectory of the sub-theme that looks closest to what we want, 
