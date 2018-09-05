@@ -8,22 +8,24 @@ tags: ["development"]
 Since SuiteCRM 7.10, the SuiteP theme started to have 4 Sub-themes called 
 **Dawn**, **Day**, **Dusk** and **Night**. This article teaches how to "fork" 
 one of these and start a new Sub-theme of your own. 
+
 I will create a new Sub-theme called **Noon**, based on **Day**, 
 and I will make some changes in order to increase the contrast in some parts of the app.
+
+<!--more-->
 
 {{% notice info %}}
 This article applies to SuiteCRM version 7.10.x only.
 {{% /notice %}}
 
-<!--more-->
-
 == Forking an existing Sub-theme
 
-I start by editing `custom/themes/SuiteP/themedef.php`, and near the end, next to the similar lines, I add this one:
+I start by editing `custom/themes/SuiteP/themedef.php`, and near the end, 
+next to the similar lines, I add this one:
 
-`   'Noon' => $app_strings['LBL_SUBTHEME_OPTIONS_NOON'],`
+`'Noon' => $app_strings['LBL_SUBTHEME_OPTIONS_NOON'],`
 
-Now we need add that new label in a couple of places:
+Now we need add that new label in a couple of places (create any missing sub-directories as needed):
 
 .`custom/modules/Users/language/en_us.lang.php`
 [source,php]
@@ -36,24 +38,27 @@ $mod_strings = array (
 
 And a slightly different one for `$app_strings` here:
 
-`custom/Extension/application/Ext/Language/en_us.NoonThemeLabel.php`:
-
-{% highlight php %}
+.`custom/Extension/application/Ext/Language/en_us.NoonThemeLabel.php`
+[source,php]
+-----
 <?php
 $app_strings = array (
   'LBL_SUBTHEME_OPTIONS_NOON' => 'Noon',
 );
-{% endhighlight %}
+-----
 
-Next, we copy the subdirectory of the sub-theme that looks closest to what we want, giving this command from the root of the SuiteCRM installation:
+Next, we copy the subdirectory of the sub-theme that looks closest to what we want, 
+giving this command from the root of the SuiteCRM installation:
 
 `cp -R themes/SuiteP/css/Day themes/SuiteP/css/Noon`
 
-At this point, just do a Quick Repair and Rebuild and the Sub-theme is operational and can be selected from the User's profile, `Advanced` tab.
+At this point, just do a *Quick Repair and Rebuild* and the Sub-theme is operational and can be selected 
+from the link:../../user/modules/themes/#_changing_theme_colours[User's profile], under *Layout options*.
 
 == Compiling the styles
 
-In order to be able to compile this CSS, you need to install a SASS compiler. On Ubuntu this can be done from your SuiteCRM directory with:
+In order to be able to compile this CSS, you need to install a SASS compiler. 
+On Ubuntu this can be done from your SuiteCRM directory with:
 
 `composer require leafo/scssphp`
 
@@ -61,31 +66,30 @@ You can then compile using the following command everytime you change any `.scss
 
 `./vendor/bin/pscss -f compressed themes/SuiteP/css/Noon/style.scss >  themes/SuiteP/css/Noon/style.css`
 
-Note that you always use this exact command even if you didn't change `style.scss`, but another `.scss` file, because this is the main file that includes all the others.
+Note that you always use this exact command even if you didn't change `style.scss`, 
+but another `.scss` file, because this is the main file that includes all the others.
 
 == Customizing the styles
 
 There are several `.scss` files that can be changed. 
 
-`themes/SuiteP/css/variables.scss`
-`themes/SuiteP/css/color-palette.scss`
-`themes/SuiteP/css/style.scss`
+`themes/SuiteP/css/variables.scss` +
+`themes/SuiteP/css/color-palette.scss` +
+`themes/SuiteP/css/style.scss` +
 
 Here are a few tweaks I tried in `color-palette.scss` to add more contrast:
 
-Top menus
+* Top menus +
 `C2C3C$ > 555555`
 
-Lettering
+* Lettering +
 `817C8D > 111`
 
-Sidebar
-`929798 > 626768`
+* Sidebar +
+`929798 > 626768` +
 `707d84 > 303d44`
 
-
-
-The full `color-palette.scss` looks like this after the changes (note that this 
+In my case, the full `color-palette.scss` looks like this after the changes (note that this 
 could be different for different versions of the product, 
 make sure you edit the one you have):
 
