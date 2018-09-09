@@ -79,7 +79,7 @@ There are several `.scss` files that can be changed.
 Here are a few tweaks I tried in `color-palette.scss` to add more contrast:
 
 * Top menus +
-`C2C3C$ > 555555`
+`C2C3C4 > 555555`
 
 * Lettering +
 `817C8D > 111`
