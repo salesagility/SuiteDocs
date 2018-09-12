@@ -38,7 +38,7 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 [[anchor-7.10.8]]
 == 7.10.8
 
-_Released 00 000 2018_
+_Released 12th Sep 2018_
 
 === Assets
 
@@ -811,7 +811,7 @@ We have also updated our Security Process asking the community to send their sec
 [[anchor-7.8.21]]
 == 7.8.21
 
-_Released 00th 000 2018_
+_Released 12th Sep 2018_
 
 === Assets
 
@@ -867,7 +867,7 @@ _Released 00th 000 2018_
 * https://github.com/salesagility/SuiteCRM/pull/6202[#6202 ] Fixed #6202 - Fixed pdf export fatal
 * https://github.com/salesagility/SuiteCRM/pull/6211[#6211 ] Prevent massive slowdown if someone accidently added many favorites
 * https://github.com/salesagility/SuiteCRM/pull/6035[#6035 ] Show only if user has rights to activity/history record
-* https://github.com/salesagility/SuiteCRM/pull/6215[#6215 Fixing AOW_Actions save
+* https://github.com/salesagility/SuiteCRM/pull/6215[#6215 ] Fixing AOW_Actions save
 * https://github.com/salesagility/SuiteCRM/issues/3864[#3864 ] Fixed #3864 - Deleted and recreated user can't login with system generated password
 * https://github.com/salesagility/SuiteCRM/issues/5921[#5921 ] Fixed #5921 - After Upgrade to 7.10.5 SAML users cannot login
 * https://github.com/salesagility/SuiteCRM/issues/5885[#5885 ] Fixed #5885 - SAML Authentication fails when SAML2Authenticate ticked
