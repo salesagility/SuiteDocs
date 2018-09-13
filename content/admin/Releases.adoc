@@ -178,7 +178,8 @@ Please https://suitecrm.com/download[visit the official website] to find the app
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
-
+_Special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
 '''
 
 [[anchor-7.10.7]]
@@ -882,6 +883,9 @@ _Released 13th Sep 2018_
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+_Special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
 
 '''
 
