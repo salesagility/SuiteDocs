@@ -181,6 +181,8 @@ To report any security issues please follow our Security Process and send them d
 _Special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
 raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
 
+_Please note that you will need to modify your php.ini Maximum upload size value if it is below 30MB_
+
 '''
 
 [[anchor-7.10.7]]
