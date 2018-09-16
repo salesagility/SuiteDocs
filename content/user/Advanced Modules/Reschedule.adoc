@@ -1,0 +1,52 @@
+---
+Title: Reschedule
+Weight: 270
+---
+
+:imagesdir: ./../../../images/en/user
+
+= Reschedule
+
+== Rescheduling a Call
+
+To reschedule a Call, you can click the 'Reschedule' button on the
+Detail View of a Call which has been defined as Outbound and Planned.
+
+image:164Reschedule_call.png[title="Reschedule Call"]
+
+== Defining the Details
+
+Clicking the Reschedule button will produce a pop up or dialogue box up.
+This enables users to set the date and time for the rescheduled Call.
+
+image:238Reschedule_call.png[title="Defining Details"]
+
+You can also select a reason for the incomplete/unsuccessful Call from
+the drop down list. Once the details have been defined, click the *'Save'*
+button to save the Call.
+
+image:239Reschedule_reason.png[title="Defining Details"]
+
+== Tracking History
+
+Once Saved, the Call is rescheduled for the new date and time. you can
+view all Call Reschedule history by clicking the *'Reschedule'* tab on the
+Calls Detail View.
+
+image:240Call_attempty_history.png[title="Tracking History"]
+
+== Altering Reasons Drop Down
+
+System Administrator users can edit the reasons available in the
+Reschedule pop-up using the drop down editor. The drop down list used is
+called 'call_reschedule_dom'.
+
+== Summary
+
+In this chapter we have covered the functionality of the advanced
+modules. These modules have a very specific purpose - enabling users to
+improve processes and efficiently report on and manage data.
+
+In the next chapter, we will cover some third party modules which are
+part of the SuiteCRM product. These third party modules provide
+additional functionality to you such as teams and location mapping.
