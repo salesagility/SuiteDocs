@@ -3,5 +3,8 @@ title: Панель администратора
 weight: 11
 ---
 
+:author: likhobory
+:email: likhobory@mail.ru
+
 === Оглавление
 {{% children depth="3" showhidden="false" %}}
