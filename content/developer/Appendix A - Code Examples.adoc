@@ -9,7 +9,7 @@ title: "Appendix A - Code Examples"
 == Metadata
 
 This is an example of setting up a function subpanel (see the
-link:../metadata#metadata-chapter[Metadata] chapter for more
+link:../metadata/[Metadata] chapter for more
 information).
 
 In this example the cases module has a custom field `incident_code_c`
@@ -64,7 +64,7 @@ function `custom/modules/Cases/IncidentUtils.php`.
 == Module Installer
 
 The following is a basic example manifest file. See the
-link:../module-installer#module-installer-chapter[Module Installer] chapter.
+link:../module-installer/[Module Installer] chapter.
 
 .Example A.3: Example manifest file
 [source,php]

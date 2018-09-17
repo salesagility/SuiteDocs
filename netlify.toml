@@ -5,7 +5,7 @@
 
 # The Production Context applies to the branch you have configured as main branch to deploy:
 [context.production.environment]
-  HUGO_VERSION = "0.37"
+  HUGO_VERSION = "0.47.1"
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://docs.suitecrm.com/"
   HUGO_ENABLEGITINFO = "true"
@@ -15,7 +15,7 @@
   command = "hugo -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.37"
+  HUGO_VERSION = "0.47.1"
   HUGO_ENABLEGITINFO = "true"
 
 [context.branch-deploy]
@@ -23,7 +23,7 @@
 
 # The Branch Deploy Context applies to all non-master branches deployed, whether they are in a Deploy Preview or not:
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.37"
+  HUGO_VERSION = "0.47.1"
   HUGO_ENABLEGITINFO = "true"
 
 # Besides these three predefined contexts, you can also use branch names as context names:

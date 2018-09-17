@@ -118,11 +118,11 @@
 <nav id="topmenu" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 	
 	<ul class="menu_desktop">
-		<li><a title="Documentation" href="/">{{ i18n "Documentation" }}</a></li><li class="guide guide_start">{{ i18n "Guides" }}:</li><li class="guide"><a title="User Guide" href="/user">{{ i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer">{{ i18n "Developer" }}</a></li><li class="guide"><a title="Administrator Guide" href="/admin">{{ i18n "Administrator" }}</a></li><li class="guide guide_end"><a href="/community">{{i18n "Community" }}</a></li><li><a title="Technical Blog" href="/blog">{{ i18n "TechnicalBlog" }}</a></li>
+		<li><a title="Documentation" href="/">{{ i18n "Documentation" }}</a></li><li class="guide guide_start">{{ i18n "Guides" }}:</li><li class="guide"><a title="User Guide" href="/user/">{{ i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer/">{{ i18n "Developer" }}</a></li><li class="guide"><a title="Administrator Guide" href="/admin/">{{ i18n "Administrator" }}</a></li><li class="guide guide_end"><a href="/community/">{{i18n "Community" }}</a></li><li><a title="Technical Blog" href="/blog/">{{ i18n "TechnicalBlog" }}</a></li>
 	</ul> 
 	
 	<ul class="menu_mobile">
-		<li><a title="Documentation" href="/">>{{i18n "Documentation" }}</a></li><li><a title="Technical Blog" href="/blog">>{{i18n "Technical Blog" }}</a></li><br><li class="guide guide_start">>{{i18n "Guides"}}:</li><li class="guide"><a title="User Guide" href="/user">>{{i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer">>{{i18n "Developer" }}</a></li><li class="guide guide_end"><a title="Administrator Guide" href="/admin">>{{i18n "Admin-SHORT" }}</a></li><li class="guide guide_end"><a href="/community">>{{i18n "Community" }}</a></li>
+		<li><a title="Documentation" href="/">>{{i18n "Documentation" }}</a></li><li><a title="Technical Blog" href="/blog/">>{{i18n "Technical Blog" }}</a></li><br><li class="guide guide_start">>{{i18n "Guides"}}:</li><li class="guide"><a title="User Guide" href="/user/">>{{i18n "User" }}</a></li><li class="guide"><a title="Developer Guide" href="/developer/">>{{i18n "Developer" }}</a></li><li class="guide guide_end"><a title="Administrator Guide" href="/admin/">>{{i18n "Admin-SHORT" }}</a></li><li class="guide guide_end"><a href="/community/">>{{i18n "Community" }}</a></li>
 	</ul>
 	
 	
@@ -141,11 +141,7 @@
         {{ partial "search.html" . }}
     {{end}}
   </div>
-	
-	<div class="sidebar-announcement masterclass"><a href="https://suitecrm.com/suitecrm-master-classes/">SUITECRM MASTER CLASSES
-		<br/>
-		SalesAgility's developers will show you how to customise and extend SuiteCRM. Reserve your seat today!
-		</a></div>
+	<div class="sidebar-announcement masterclass"><a href="https://suitecrm.com/enterprise/support-plans/">NEED DEDICATED SUPPORT?<br>Check out your options</a></div>
 
     {{ if .Site.IsMultiLingual }}
     <section id="lang-selector">
@@ -173,7 +169,7 @@
           {{ end }}
           <option id="translate-cta" value="/community/contributing-to-docs/translate/">--> Help Translate!</option>
         </select>
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
           width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
           <g>
             <g id="arrow-drop-down">
@@ -222,7 +218,7 @@
       <hr/>
       <ul>
       {{ if $showvisitedlinks}}
-        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
+        <li><a class="padding" href="#" data-proofer-ignore data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
       {{ end }}
       </ul>
     </section>
