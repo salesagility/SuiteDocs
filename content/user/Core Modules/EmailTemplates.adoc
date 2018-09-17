@@ -22,7 +22,9 @@ There are a number of default *System* templates which are created on install. T
 
 Click on a template name to view the template. 
 
-To edit an existing template, either open the template and select *Edit* from the *Actions* menu, or click the pencil icon to the left of the template name. Once in *Edit* mode, the template can be edited in the same way as <<Creating a template, creating a template>>, below.
+To edit an existing template, either open the template and select *Edit* from the *Actions* menu, 
+or click the pencil icon to the left of the template name. Once in *Edit* mode, 
+the template can be edited in the same way as creating a template.
 
 == Creating an Email Template
 

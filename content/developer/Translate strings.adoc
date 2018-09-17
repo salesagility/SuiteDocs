@@ -2,16 +2,18 @@
 Title: Translate strings
 ---
 
-== LangText class
+= LangText class
 
 Helper class to translate strings.
 
-{{%notice note %}}This documentation refers to *SuiteCRM* version 7.10.3 onwards{{% /notice %}}
+{{%notice note %}}
+This documentation refers to *SuiteCRM* version 7.10.3 onwards
+{{% /notice %}}
 
 == Usage
 
 [source,php]
---
+----
 // example string definition (only for understanding the next examples):
 $app_strings['LBL_EXAMPLE_APP_STR'] = 'Example Application String';
 $mod_strings['LBL_EXAMPLE_MOD_STR'] = 'Example string for a specified module';
@@ -33,4 +35,5 @@ echo $text;
 // Using translation only for Application Strings
 $text = new LangText('LBL_EXAMPLE_APP_STR', null, LangText::USING_APP_STRINGS);
 echo $text;
---
+----
+

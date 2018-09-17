@@ -1,4 +1,4 @@
-baseURL = "http://docs.suitecrm.com"
+baseURL = "https://docs.suitecrm.com"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
@@ -7,6 +7,7 @@ theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 enableGitInfo = true
+timeout = 18000
 
 [params]
   GitHubRepo = "https://github.com/salesagility/SuiteDocs/"

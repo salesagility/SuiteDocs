@@ -99,11 +99,11 @@ hooks these hooks must be defined in the top level logic hook (i.e.
 `job_failure`::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception and it will not be retried. See the section on
-  link:../scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
+  link:../scheduled-tasks/[Scheduled Tasks].
 `job_failure_retry`::
   Fired when a scheduled job either returns false to signify failure or
   throws an exception but it will be retried. See the section on
-  link:../scheduled-tasks#scheduled-tasks-chapter[Scheduled Tasks].
+  link:../scheduled-tasks/[Scheduled Tasks].
 
 == Implementing
 
