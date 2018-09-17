@@ -191,7 +191,7 @@ values. Values most commonly used are:
 `label`::
   The language key for this label. If the language key is not recognised
   then this value will be used instead (see the
-  link:../language-strings#language-chapter[chapter on language]).
+  link:../language-strings/[chapter on language]).
 `displayParams`::
   An array used to pass extra arguments for the field display. For the
   options and how they are used you can have a look into the appropriate
@@ -665,7 +665,7 @@ entry for each subpanel usually has the following defined:
   the form `function:theFunctionName`. Additionally you can specify the
   location of the function and any additional parameters that are needed
   by using the `function_parameters` key. An example of a subpanel which
-  uses a function can be found in link:../appendix-a---code-examples#appendix-a[Appendix
+  uses a function can be found in link:../appendix-a---code-examples/[Appendix
   A].
 `function_parameters`::
   Specifies the parameters for a subpanel which gets it’s information
