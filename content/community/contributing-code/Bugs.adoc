@@ -9,9 +9,8 @@ Weight: 60
 your own fork of the SuiteCRM repository, make your code changes, commit
 the changes and make a Pull Request to the appropriate branch on the
 SuiteCM repository. See our
-link:Contributing_to_SuiteCRM#Quick_Guide_to_Fork_SuiteCRM[Quick Guide
-to Fork SuiteCRM]. Once you have set up your forked repository you can
-begin making commits to the project.
+link:../forking/[Quick Guide to Fork SuiteCRM]. Once you have set up your forked repository you can
+begin making commits to the project. 
 
 * First, determine which base branch your bug fix should use. If your
 bug is present in both `hotfix` and `hotfix-7.8.x` then use the `hotfix-7.8.x`

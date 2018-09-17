@@ -111,7 +111,7 @@ image:SurveysDemo.png[title="Survey demo"]
 
 Responses can be submitted by clicking btn:[Submit] 
 
-Users will be redirected to a thank you page and the responses will be recorded. Responses can be viewed in the <<Survey Responses>> subpanel or the <<View Survey Reports, Survey Report>>.
+Users will be redirected to a thank you page and the responses will be recorded. Responses can be viewed in the <<Survey Responses>> subpanel or the <<#_survey_reports, Survey Report>>.
 
 {{% notice warning %}} 
 Once responses have been received, survey questions cannot be edited.
