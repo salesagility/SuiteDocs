@@ -19,8 +19,6 @@ timeout = 18000
   themeVariant = "suitecrm"
 
 [outputs]
-# home = [ "HTML", "AMP", "RSS", "JSON"]
-# section = [ "HTML", "AMP", "RSS", "JSON"]
 home = [ "HTML", "RSS", "JSON"]
 section = [ "HTML", "RSS", "JSON"]
 

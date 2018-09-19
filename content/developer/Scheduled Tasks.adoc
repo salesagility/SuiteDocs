@@ -3,7 +3,7 @@ weight: 13
 title: "Scheduled Tasks"
 ---
 
-:imagesdir: ./../../../images/en/developer
+:imagesdir: ./../images/en/developer
 
 = 13. Scheduled Tasks
 
@@ -104,7 +104,7 @@ page. Note that for any changes to the scheduler method you will need to
 perform another quick repair and rebuild - even in developer mode. We
 can now create a new scheduler to call our new method:
 
-image:CreateMeetingsScheduler.png[Creating a scheduler that uses our new method]
+image:CreateMeetingsScheduler.png[title ="Creating a scheduler that uses our new method"]
 
 This will now behave just like any other scheduler and we can have this
 run as often (or as rarely) as we would like. Take care here. The

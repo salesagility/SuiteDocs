@@ -71,7 +71,7 @@ Specify business working hours here.
 
 These settings will determine when workflows set to run 
 'Only In The Scheduler' will run and will be used when "Consider Working days" is set on 
-link:../../../user/core-modules/project[Project] records.
+link:../../../user/core-modules/projects[Project] records.
 
 image:AdminBusinessHours.png[Business Hours]
 
