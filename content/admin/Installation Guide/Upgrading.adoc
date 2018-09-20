@@ -77,7 +77,7 @@ RequestTimeout to 6000 seconds.
 ** Navigate to the php.ini file and increase the default value of
 max_execution_time to 6000 seconds.
 * Perform the following for the large size of the upgrade files:
-** Modify and save the value of Maximum upload size to 21000000 (20MB)
+** Modify and save the value of Maximum upload size to 30000000 (30MB)
 in the Advanced section of the System Settings page of your current
 SuiteCRM installation.
 ** Navigate to the php.ini file on your web server and configure the

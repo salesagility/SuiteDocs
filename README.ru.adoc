@@ -1,3 +1,6 @@
+:author: likhobory
+:email: likhobory@mail.ru
+
 = Russian RAPIRA application guide for SuiteCRM (7.10+)
 
 Русскоязычный вариант документации для https://docs.suitecrm.com[SuiteCRM] в формате AsciiDoc.
@@ -48,7 +51,7 @@
 **     link:/content/user/Advanced%20Modules/Cases%20with%20Portal.ru.adoc[Интеграция Обращений с внешним порталом]
 **     link:/content/user/Advanced%20Modules/Events.ru.adoc[Места и События]
 **     link:/content/user/Advanced%20Modules/Reports.ru.adoc[Отчёты]
-**     link:/content/user/Advanced%20Modules/Rescehdule.ru.adoc[Отложенные звонки]
+**     link:/content/user/Advanced%20Modules/Reschedule.ru.adoc[Отложенные звонки]
 
 //* [Email Settings]
 
@@ -76,10 +79,12 @@
 
 * Панель администратора
 **     link:/content/admin/Administration%20Panel/Users.ru.adoc[Пользователи]
+**     link:/content/admin/Administration%20Panel/Roles%20and%20Security%20Groups.ru.adoc[Роли и группы пользователей]
 **     link:/content/admin/Administration%20Panel/System.ru.adoc[Система]
 **     link:/content/admin/Administration%20Panel/Email.ru.adoc[Администрирование электронной почты]
 **     link:/content/admin/Administration%20Panel/Developer%20Tools.ru.adoc[Инструментарий разработчика]
 **     link:/content/admin/Administration%20Panel/Employee%20Records.ru.adoc[Управление перечнем сотрудников]
+**     link:/content/admin/Administration%20Panel/Studio.ru.adoc[Студия]
 **     link:/content/admin/Administration%20Panel/Google%20Maps.ru.adoc[Карты Google]
 **     link:/content/admin/Administration%20Panel/Advanced%20OpenAdmin.ru.adoc[Разное]
 **     link:/content/admin/Administration%20Panel/Bugs.ru.adoc[Управление версиями]
@@ -93,3 +98,18 @@
 * link:/content/admin/Releases.ru.adoc[Версии]
 
 * link:/content/admin/Compatibility%20Matrix.ru.adoc[Таблица совместимости] 
+
+[start=3]
+ . Развитие проекта
+ 
+* link:/content/community/contributing-code/_index.ru.adoc[Вклад в исходный код проекта]
+
+* Вклад в создание документации
+
+**     link:/content/community/contributing-to-docs/simple-edit.ru.adoc[Редактирование страницы]
+**     link:/content/community/contributing-to-docs/simple-issue.ru.adoc[Сообщение об ошибке]
+**     link:/content/community/contributing-to-docs/local-setup.ru.adoc[Локальное развёртывание сайта документации]
+**     link:/content/community/contributing-to-docs/translate.ru.adoc[Перевод документации]
+ 
+[start=4]
+ . link:/content/developer/_index.ru.adoc[Руководство разработчика]

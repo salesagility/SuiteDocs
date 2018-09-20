@@ -1,0 +1,12 @@
+DirectoryPath: "public"
+EnforceHTTPS: false
+IgnoreURLs:
+- "example.com"
+IgnoreDirs:
+- "dir2ignore"
+CacheExpires: "6h"
+
+IgnoreDirectoryMissingTrailingSlash: true
+
+CheckExternal: false
+LogLevel: 3
