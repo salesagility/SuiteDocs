@@ -49,7 +49,7 @@ Adding indexes on the fields of modules can improve database
 performance. The core modules usually have important fields indexed.
 However if you have created a new module or added new, often searched
 fields to a module then these fields may benefit from being indexed. See
-the link:../vardefs#vardefs-chapter[Vardef] chapter for adding
+the link:../vardefs/[Vardef] chapter for adding
 indexes.
 
 == Config Changes
@@ -58,7 +58,7 @@ The following are some config settings that can be used to improve
 performance. Please note that in most cases you will have better
 performance gains by first following the steps in previous sections.
 These settings should be set in the config_override.php file. See the
-chapter on the link:../config#config-chapter[Config] files for more
+chapter on the link:../config/[Config] files for more
 information.
 
 [source,php]

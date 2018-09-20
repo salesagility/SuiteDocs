@@ -6,17 +6,19 @@ title: "Introduction"
 
 = 1. Introduction
 
-== What is SuiteCRM
+== What is SuiteCRM?
 
 The story of https://www.suitecrm.com[SuiteCRM] starts with SugarCRM.
 SugarCRM was founded in 2004 and consisted of an open source version
-(called Community Edition) and various paid for versions. However
+(called Community Edition) and various paid versions. However
 trouble started brewing when it appeared that SugarCRM would not be
 releasing a Community Edition of SugarCRM 7 and would be providing
 limited, if any, updates to the Community Edition.
 
-Enter SuiteCRM. SalesAgility forked Community Edition to create SuiteCRM
-and also added various open source plugins to add improved
+Enter SuiteCRM. 
+
+https://salesagility.com/[SalesAgility] forked SugarCRM Community Edition to create SuiteCRM
+and added various open source plugins for improved
 functionality.
 
 == This guide
@@ -34,8 +36,8 @@ contacted at http://www.jsmackin.co.uk[JSMackin.co.uk].
 
 == Reading this guide
 
-Each chapter in this guide is intended to be self contained so the reader
-can jump to interesting chapters. Where there is some overlap this is
+Each chapter in this guide is intended to be self-contained so the reader
+can jump to interesting chapters. Overlapping content is
 usually indicated with links to the relevant chapters.
 
 Some parts of this guide may refer to file paths or other parts of code
@@ -81,7 +83,7 @@ SuiteCRM will cache various files that it processes, such as Smarty
 templates. Developer mode will turn off some of the caching so that
 changes to files will be seen immediately (though this isn’t always the
 case - as is the case with
-link:../extension-framework#extensions-chapter[extensions]). This can be enabled
+link:../extension-framework/[extensions]). This can be enabled
 either through the config file or via the General settings page inside
 admin.
 
@@ -92,7 +94,7 @@ The default log level of SuiteCRM is `fatal`. This is a good default for
 production instances but you may want to increase the log level to
 `info` or `debug`. This will make the log output more verbose so, should
 anything go wrong, you’ll have something to refer to. See the
-link:../logging#logging-chapter[chapter on logging] for more
+link:../logging/[chapter on logging] for more
 information.
 
 [discrete]
