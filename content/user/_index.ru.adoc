@@ -4,5 +4,8 @@ weight: 10
 pre: "<b>1. </b>"
 ---
 
+:author: likhobory
+:email: likhobory@mail.ru
+
 === Оглавление
 {{% children depth="3" showhidden="false" %}}
