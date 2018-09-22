@@ -1,5 +1,5 @@
 ---
-Title: Leads
+Title: Clientes Potenciales
 Weight: 100
 ---
 
@@ -7,33 +7,18 @@ Weight: 100
 
 :imagesdir: ./../../../images/en/user
 
-= Leads
+= Clientes Potenciales
 
-In SuiteCRM a Lead is an unqualified contact usually generated from some
-form of marketing related event, for example it could be a person that
-has filled out a form on your website or someone that you met at a trade
-show and you are not sure yet if they have buying authority. Once a Lead
-is qualified and converted then it can be split into three parts; a
-Contact once you have established 'Who' it is, an Account when you know
-'Where' they work and an Opportunity once it is known 'What' they might
-buy.
+En SuiteCRM, un cliente potencial es un contacto no calificado generalmente generado por alguna forma de evento relacionado con la comercialización, por ejemplo, podría ser una persona que haya rellenado un formulario en su sitio web o alguien que haya conocido en una feria y aún no está seguro de si tiene autoridad para comprar. Una vez que un plomo se califica y se convierte, se puede dividir en tres partes; un Contacto una vez que haya establecido 'Quién' es, una Cuenta cuando sepa 'Dónde' trabajan y una Oportunidad una vez que se sepa 'Qué' podrían comprar.
 
-== Leads Actions
+== Acciones Clientes Potenciales
 
-You can access the Leads actions from the Leads module menu drop down or
-via the Sidebar. The Leads actions are as follows:
+Puede acceder a las acciones Leads desde el menú desplegable del módulo Clientes potenciales a través de la barra lateral. Las acciones de Leads son las siguientes: * * Crear cliente potencial *: se abre un nuevo formulario en Editar vista para permitirle crear un nuevo registro de Cuenta. * * Ver Clientes potenciales *: lo redirecciona a la vista de lista para el módulo Clientes potenciales. Esto permite buscar y enumerar registros de clientes potenciales. * * Importar clientes potenciales *: lo redirecciona al asistente de importación para los clientes potenciales.módulo. Para obtener más información, consulte el enlace: / user / introduction / user-interface / # _ importing_records [Importación de registros].
 
-* *Create Lead* – A new form is opened in Edit View to allow you to create
-a new Account record.
-* *View Leads* – Redirects you to the List View for the Leads module. This
-allows you to search and list Lead records.
-* *Import Leads* – Redirects you to the Import Wizard for the Leads
-module. For more information, see link:/user/introduction/user-interface/#_importing_records[Importing Records].
+Para ver la lista completa de campos disponibles al crear un Plomo, consulte
+link: / user / appendix-a / # _ leads_field_list [Lista de campos de leads].
 
-To view the full list of fields available when creating a Lead, See
-link:/user/appendix-a/#_leads_field_list[Leads Field List].
-
-== Managing Leads
+== Gestión de clientes potenciales
 
 * To sort records on the Leads List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
