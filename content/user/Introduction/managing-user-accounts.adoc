@@ -1,5 +1,5 @@
 ---
-Title: Managing User Accounts
+Title: Administrar cuentas de usuario
 Weight: 40
 ---
 
@@ -9,165 +9,153 @@ Weight: 40
 
 :toc:
 
-= Managing User Accounts
+= Administrar cuentas de usuario
 
-There are many configuration options available to users once logged into
-the system. You can view/modify your preferences by clicking on your
-name in the top right section of the navigation menu.
+Hay muchas opciones de configuración disponibles para los usuarios una vez que inician sesión en el sistema. Puede ver / modificar sus preferencias haciendo clic en su nombre en la sección superior derecha del menú de navegación.
 
 image:11User_select.png[title="Manage Account"]
 
-== User Profile Tab
+== Pestaña de perfil de usuario
 
-Once you have clicked to access your preferences, you will be taken to
-the 'User Profile' tab which gives an overview of you credentials such
-as Username, First Name, Last Name, Title etc.
+Una vez que haya hecho clic para acceder a sus preferencias, será llevado a
+la pestaña 'Perfil de usuario' que brinda una descripción general de sus credenciales,
+como nombre de usuario, nombre, apellido, título, etc.
 
 image:12User_profile.png[title="User Profile"]
 
 
-=== Personal Email Account Settings
+=== Configuración de cuenta de correo electrónico personal
 
-Setting up a personal email account in *SuiteCRM* allows you to view personal mail accounts within 
-the link:../../core-modules/emails[Emails] module.  
+La configuración de una cuenta de correo electrónico personal en * SuiteCRM * le permite ver cuentas de correo personales dentro del enlace: ../../ core-modules / emails [emails] module.
 
-Emails from personal mailboxes are not stored in the *SuiteCRM* database unless 
-manually imported. See the link:../../core-modules/emails[Emails] module documentation for more information.
+Los correos electrónicos de buzones de correo personales no se almacenan en la base de datos * SuiteCRM * a menos que se importen manualmente. Vea el enlace: ../../ core-modules / emails [Emails] documentación del módulo para más información.
 
-{{% notice tip %}}
-Individual users can set up their own personal accounts. Administrators can set up personal accounts 
-for other users from the User Management section of the Admin panel.
-{{% /notice %}}
+{{% notice tip%}}
+Los usuarios individuales pueden configurar sus propias cuentas personales. Los administradores pueden configurar cuentas personales para otros usuarios desde la sección Administración de usuarios del panel de administración.
+{{% /aviso %}}
 
-==== User Profile Email Settings
-Open the user profile and scroll to the bottom of the main *User Profile tab* to view mail settings. 
-Note that if you are configuring mail settings for another user, you will need to select *Edit* 
-from the *Actions* menu to see these settings.
+==== Configuración de correo electrónico del perfil de usuario
+Abra el perfil de usuario y desplácese hasta la parte inferior de la pestaña principal * Perfil de usuario * para ver las configuraciones de correo. Tenga en cuenta que si está configurando configuraciones de correo para otro usuario, deberá seleccionar * Editar * en el menú * Acciones * para ver estas configuraciones.
 
 image:270Emailusersettings.png[User Email Settings]
 
-* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. 
-Where you have more than one email address, you can specify which is the main address for your account 
-using the *Primary* radio button. 
-You can also specify which account to use as the Reply-to account.
-* *Email Client* - This setting controls which editor is used to compose and send mail when you click on 
-an email link in SuiteCRM, for example an email address on a contact or account record.
-	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
-	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
+* * Dirección de correo electrónico * - Agregue las direcciones de correo electrónico para su cuenta * SuiteCRM *. Haga clic en btn: [+] para agregar más direcciones.
+Si tiene más de una dirección de correo electrónico, puede especificar cuál es la dirección principal de su cuenta con el botón de selección * Principal *.
+También puede especificar qué cuenta usar como cuenta de respuesta.
+* * Cliente de correo electrónico *: esta configuración controla qué editor se utiliza para redactar y enviar correo cuando hace clic en un enlace de correo electrónico en SuiteCRM, por ejemplo, una dirección de correo electrónico en un contacto o registro de cuenta.
+** * Editor de correo electrónico de SuiteCRM * - Se utilizará el editor de módulo * Email * de * SuiteCRM *
+** * External Email Editor *: con el editor de correo externo configurado, los enlaces de correo en * SuiteCRM * se abrirán en el cliente de correo electrónico que haya configurado para abrir los enlaces `mailto: //`, por ejemplo Outlook o Thunderbird
 
-* *Email Editor* - This allows you to set the editor used when creating and 
-editing link:../../core-modules/emails#_email_templates[email templates] and also within the 
-link:../../core-modules/campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect 
-the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
-Available options are *Mozaik*, *TinyMCE* and *Direct HTML*.
+* * Email Editor * - Esto le permite configurar el editor utilizado al crear y
+enlace de edición: ../../ core-modules / emails # _email_templates [plantillas de correo electrónico] y también dentro del
+link: ../../ core-modules / campaigns [Campaigns] módulo. Tenga en cuenta que la configuración * Email Editor * no afecta
+el módulo * Email de SuiteCRM * Componer * ver. Esta configuración no es actualmente definible por el usuario.
+Las opciones disponibles son * Mozaik *, * TinyMCE * y * HTML directo *.
 
-==== Adding A Personal Mail Account
-Click the btn:[SETTINGS] button at the bottom of the main User Profile tab to add a personal mail account.
+==== Agregar una cuenta de correo personal
+Haga clic en el botón btn: [AJUSTES] en la parte inferior de la pestaña principal Perfil de usuario para agregar una cuenta de correo personal.
 
-Select the Mail Accounts Tab and click btn:[ADD] under Mail Accounts to set up your incoming mail account.
+Seleccione la pestaña Cuentas de correo y haga clic en btn: [AGREGAR] en Cuentas de correo para configurar su cuenta de correo entrante.
+
 image:271EmailsAddPersonalAccount.png[Mail Accounts tab]
 
-Complete the required details for the account in the dialog which appears. You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. You may also need to set the Mail Server Port if this differs from the default IMAP setting. Your system administrator should be able to provide you with these settings. 
+Complete los detalles requeridos para la cuenta en el cuadro de diálogo que aparece. Necesitará el nombre de usuario y la contraseña para la cuenta que está agregando, además de la dirección del servidor de correo. El protocolo de correo admitido por * SuiteCRM * es IMAP. Es posible que también deba configurar el puerto del servidor de correo si difiere de la configuración IMAP predeterminada. El administrador del sistema debería poder proporcionarle esta configuración.
 
-Once entered, you can verify your mail settings by clicking btn:[TEST SETTINGS] to test the connection to the account. 
+Una vez ingresado, puede verificar su configuración de correo haciendo clic en btn: [AJUSTES DE PRUEBA] para probar la conexión a la cuenta.
 
 image:272EmailsPersonalAccountSettings.png[User Email Settings] 
 
-*Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Trash* folder here. Enter the folder names or click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
+* Carpetas supervisadas: * son las carpetas que se comprueban para el correo nuevo (no leído). Debe especificar una * Bandeja de entrada * y una carpeta * Papelera * aquí. Ingrese los nombres de la carpeta o haga clic en btn: [SELECCIONAR] para conectarse al servidor de correo y seleccione la (s) carpeta (s) relevante (s) del cuadro de diálogo emergente.
+
 image:273EmailsMonitoredFolders.png[Select monitored folders]
 
-*Signatures:* Select a signature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to create a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
+* Firmas: * Seleccione una firma para esta cuenta. Esto se agregará automáticamente al cuerpo del correo electrónico al redactar un correo electrónico utilizando el módulo de Correos electrónicos. Si desea crear una nueva firma, deberá hacer esto desde la << Configuración del correo de usuario - Pestaña General, pestaña General >> y luego seleccionarla aquí. Esto anulará la configuración predeterminada en la << Configuración del correo de usuario - Pestaña General, pestaña General >>.
 
-Complete the *Outgoing Email* settings for the user account. 
+Complete la configuración de * Email saliente * para la cuenta de usuario.
 
 image:276EmailsAddPersonalAccount2.png[User Outgoing Mail Settings]
 
-Click btn:[DONE] to save the account settings and return to the *Mail Accounts* tab. 
+Haga clic en btn: [HECHO] para guardar la configuración de la cuenta y regresar a la pestaña * Cuentas de correo *.
 
 image:275EmailsAccountList.png[Accounts List]
-If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
 
-Edit personal mail account settings by clicking the pencil icon in the Edit column.
+Si tiene más de una cuenta configurada, puede configurar la cuenta predeterminada para que aparezca cuando abra el módulo * Emails *. Las cuentas configuradas como activas estarán disponibles para seleccionar.
+
+Edite la configuración de la cuenta de correo personal haciendo clic en el ícono del lápiz en la columna Editar.
 
 
-==== User Mail Settings - General Tab
+==== Configuración del correo de usuario - Pestaña General
 
-There are further settings for mail on the *General Tab*:
+Hay más configuraciones para el correo en la * Pestaña General *:
 
 image:274EmailsGeneralTab.png[User Mail Settings General tab]
 
-* *Check for New Mail* - Here you can specify a time interval to automatically check for new mail in your account's monitored folders. The default setting is to check for mail manually, using the Check Mail button in Emails list view. 
+* * Buscar nuevo correo *: aquí puede especificar un intervalo de tiempo para verificar automáticamente si hay correo nuevo en las carpetas supervisadas de su cuenta. La configuración predeterminada es verificar el correo manualmente, usando el botón Comprobar correo en la vista de la lista de correos electrónicos.
 
-* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[CREATE] to add a new one or select one from the list. Existing signatures can be edited and deleted here. 
+* * Firma predeterminada *: opción para especificar la firma predeterminada que se agregará al cuerpo del correo electrónico cuando se redacte un nuevo correo electrónico. Haga clic en btn: [CREAR] para agregar uno nuevo o seleccionar uno de la lista. Las firmas existentes se pueden editar y eliminar aquí.
 
-* *Folder management* -Select the folder(s) which will be available to view from the *Emails* module. This list will show all the monitored folders from all the mail accounts to which you have access. Use ctrl+click to select more than one folder. 
+* * Administración de carpetas *: seleccione la (s) carpeta (s) que estarán disponibles para ver desde el módulo * Emails *. Esta lista mostrará todas las carpetas supervisadas de todas las cuentas de correo a las que tiene acceso. Use Ctrl + clic para seleccionar más de una carpeta.
 
-Click btn:[DONE] to save your settings. A confirmation dialog will appear. 
+Haga clic en btn: [HECHO] para guardar su configuración. Aparecerá un cuadro de diálogo de confirmación.
 
-You should now be able to view your emails in the link:../../core-modules/emails[*Emails* module].
+Ahora debería poder ver sus correos electrónicos en el enlace: ../../ core-modules / emails [* Emails * module].
 
 
+== Pestaña Contraseña
 
-== Password Tab
-
-Clicking on the '*Password*' tab will navigate you to allow you to change
-your user account password. To change your password, specify a new
-password and confirm the new password. It is recommended that passwords
-are secure. The recommended minimum requirement is one upper case
-character, one lower case character, one numerical character and a
-minimum password length of 8 characters.
+Al hacer clic en la pestaña '* Contraseña *' lo navegará para permitirle cambiar
+la contraseña de su cuenta de usuario. Para cambiar su contraseña, especifique un nuevo
+contraseña y confirme la nueva contraseña. Se recomienda que las contraseñas
+son seguros El requisito mínimo recomendado es una mayúscula
+carácter, un carácter en minúsculas, un carácter numérico y una
+longitud mínima de contraseña de 8 caracteres.
 
 image:13Password_tab.png[title="Password Tab"]
 
-If you have forgotten your password and cannot login, you can use the
-forgotten password functionality detailed in the
-link:/user/introduction/getting-started[Getting Started] section of this User Guide.
+Si ha olvidado su contraseña y no puede iniciar sesión, puede usar la
+la funcionalidad de contraseña olvidada se detalla en la sección de enlace: / usuario / introducción / inicio [Cómo comenzar] de esta Guía del usuario.
 
-== Advanced Tab
+== Pestaña avanzada
 
-The Advanced tab provides you with you preferences that you set during
-the User Wizard process. This gives you the ability to change any of
-your user preferences, if there were any mistakes or if you require to
-amend these at a later date.
+La pestaña Avanzado le proporciona las preferencias que estableció durante
+el proceso del asistente de usuario. Esto te da la posibilidad de cambiar cualquiera de sus preferencias de usuario, si hubo algún error o si necesita enmendar estos en una fecha posterior.
 
 image:14Advanced_tab.png[title="Advanced Tab"]
 
-== Resetting a Users Preferences
+== Restablecer las preferencias de los usuarios
 
-You can reset your user preferences to the system default by clicking
-the btn:[Reset User Preferences] button on your profile.
+Puede restablecer sus preferencias de usuario a la configuración predeterminada del sistema haciendo clic
+el botón btn: [Restablecer preferencias de usuario] en su perfil.
 
 image:15User_preference.png[title="Reset User Preferences"]
 
-Clicking the button will prompt you to ensure you wish to reset your
-user preferences, with the following message: _“Are you sure you want
-reset all of your user preferences?"_ 
+Al hacer clic en el botón, se le preguntará si desea restablecer su
+preferencias del usuario, con el siguiente mensaje: _ "¿Estás seguro de que quieres
+restablecer todas sus preferencias de usuario? "_
 
-{{% notice warning %}}
-This will also log you out
-of the application. You can then click 'OK' or 'Cancel' to action
-appropriately. If you select 'OK' you will be logged out and will need
-to re-login to SuiteCRM application.
-{{% /notice %}}
+{{% aviso advertencia%}}
+Esto también lo desconectará
+de la aplicación. A continuación, puede hacer clic en 'Aceptar' o 'Cancelar' en acción
+adecuadamente. Si selecciona 'Aceptar', se desconectará y necesitará
+para volver a iniciar sesión en la aplicación SuiteCRM.
+{{% /aviso %}}
 
-== Resetting a Users home page
-
-You can reset your home page to the system default by clicking the
-btn:[Reset home page] button on your profile. This will reset both dashlet
-and dashboard preferences/layouts to the system default.
+== Restablecer la página de inicio de un usuario
+Puede restablecer su página de inicio a la predeterminada del sistema haciendo clic en
+btn: botón [Restablecer página de inicio] en su perfil. Esto restablecerá las preferencias / diseños del dashlet y del panel de control al predeterminado del sistema.
 
 image:16Reset_homepage.png[title="Reset Homepage"]
 
-Clicking the button will prompt you to ensure you wish to reset your
-home page, with the following message: _“Are you sure you want reset your
-home page?”_. You can then click 'OK' or 'Cancel' to action
-appropriately.
+Al hacer clic en el botón, se le preguntará si desea restablecer su
+página de inicio, con el siguiente mensaje: _ "¿Estás seguro de que quieres restablecer tu
+página de inicio? "_. A continuación, puede hacer clic en 'Aceptar' o 'Cancelar' en acción
+adecuadamente.
 
-== Summary
+== Resumen
 
-In this chapter, we covered managing a user account. This allows you to
-manage your information, modify/reset user preferences and more.
+En este capítulo, cubrimos la administración de una cuenta de usuario. Esto te permite
+administre su información, modifique / restablezca las preferencias del usuario y más.
 
-In the next chapter, we will cover the Interface. The Interface is an
-integral part of SuiteCRM. With the knowledge of your Interface, you can
-progress to learning more about SuiteCRM functionality and processes.
+En el próximo capítulo, cubriremos la interfaz. La interfaz es una
+parte integral de SuiteCRM. Con el conocimiento de su interfaz, puede
+progresar para aprender más sobre la funcionalidad y los procesos de SuiteCRM.
