@@ -3,7 +3,7 @@ weight: 13
 title: "Scheduled Tasks"
 ---
 
-:imagesdir: ./../images/en/developer
+:imagesdir: ./../../images/en/developer
 
 = 13. Scheduled Tasks
 
