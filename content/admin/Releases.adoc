@@ -210,6 +210,8 @@ raising/reviewing security issues and to the many community memebers who helped 
 
 _Please note that you will need to modify your php.ini Maximum upload size value if it is below 30MB_
 
+_Users of ALL previous 7.10.x releases are advised to Upgrade to 7.10.8 as soon as possible._
+
 '''
 
 [[anchor-7.10.7]]
@@ -943,6 +945,8 @@ _Special thanks to https://github.com/rewanth1997[rewanth1997] and https://githu
 raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
 
 _Please note that you will need to modify your php.ini Maximum upload size value if it is below 30MB_
+
+_Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.21 as soon as possible._
 
 '''
 
