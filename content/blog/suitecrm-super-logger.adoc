@@ -8,7 +8,7 @@ hidden: true
 ---
 
 I’ve previously created a very simple module for SuiteCRM which adds coloured
-logging link:./../../../files/suitesuperlogger.zip[(SuiteCRM Super Logger)].
+logging link:/files/suitesuperlogger.zip[(SuiteCRM Super Logger)].
 I’ve now expanded it somewhat to add extra features.
 
 It’s now called *SuiteSuperLogger* and allows specifying the log format in the

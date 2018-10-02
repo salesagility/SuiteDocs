@@ -6,7 +6,7 @@ Weight: 280
 :author: likhobory
 :email: likhobory@mail.ru
 
-:imagesdir: ./../../../../images/ru/admin/Users
+:imagesdir: ./../../../images/ru/admin/Users
 
 ifdef::env-github[:imagesdir: ./../../../master/static/images/ru/admin/Users]
 
