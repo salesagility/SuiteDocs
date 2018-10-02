@@ -22,32 +22,32 @@ create a new Target List record.
 Lists module. This allows you to search and list Target List records.
 
 To view the full list of fields available when creating a Target List,
-See link:/user/appendix-a/#_targets_field_list[Target Lists Field List].
+See link:./../../appendix-a/#_targets_field_list[Target Lists Field List].
 
 === Managing Target Lists
 
 * To sort records on the Target List List View, click any column title
 which is sortable. This will sort the column either ascending or
 descending.
-* To search for a Target List, see the link:/user/introduction/user-interface/#_search[Search] section of
+* To search for a Target List, see the link:./../../introduction/user-interface/#_search[Search] section of
 this user guide.
 * To update some or all the Target Lists on the List View, use the Mass
-Update panel as described in the link:/user/introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
+Update panel as described in the link:./../../introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
 * To duplicate a Target List, you can click the Duplicate button on the
 Detail View and then save the duplicate record.
 * To delete one or multiple Target Lists, you can select multiple
 records from the List View and click delete. You can also delete a
 Target List from the Detail View by clicking the Delete button. For a
 more detailed guide on deleting records, see the
-link:/user/introduction/user-interface/#_deleting_records[Deleting Records] section of this user guide.
+link:./../../introduction/user-interface/#_deleting_records[Deleting Records] section of this user guide.
 * To view the details of a Target List, click the Target List Name in
 the List View. This will open the record in Detail View.
 * To edit the Target List details, click Edit icon within the List View
 or click the edit button on the Detail View, make the necessary changes,
 and click Save.
 * For a detailed guide on importing and exporting Target Lists, see the
-link:/user/introduction/user-interface/#_importing_records[Importing Records] and
-link:/user/introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+link:./../../introduction/user-interface/#_importing_records[Importing Records] and
+link:./../../introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Target List, you can
 click the View Change Log button on the Target List's Detail View or
 Edit View.
