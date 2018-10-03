@@ -45,7 +45,7 @@ restricted by the *Run on* property and by the Workflow's conditions.
 |*Always* | The Workflow will run on both the situations described above.
 |================================================================
 +
-* *Run On* – This specifies the seleciton of records for which the Workflow will be executed.
+* *Run On* – This specifies the selection of records for which the Workflow will be executed.
 +
 [cols="20,80"]
 |================================================================
