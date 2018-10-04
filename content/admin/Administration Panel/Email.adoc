@@ -15,7 +15,7 @@ weight: 40
 Configuring email for *SuiteCRM* provides a wide range of features, including sending personal emails to 
 contacts, automatic creation of cases, sending notifications for events using 
 link:../../../user/advanced-modules/workflow/[workflows] and sending email marketing 
-link:../../../usercampaigns/[campaigns]. 
+link:../../../user/core-modules/campaigns/[campaigns]. 
 
 This document explains the different types of mail accounts and how to set them up. For information 
 on reading and sending email in SuiteCRM using the Emails module, see the 
@@ -65,7 +65,7 @@ Set up a group account from the <<Inbound Email>> page.
 
 *Bounce Handling Accounts*
 
-A Bounce Handling account is used with link:../../core-modules/campaigns/[Campaigns] to handle bounced 
+A Bounce Handling account is used with link:../../../user/core-modules/campaigns/[Campaigns] to handle bounced 
 mail notifications when emails are undelivered. You will need to set up a Bounce Handling account in 
 order to send a Campaign.
 
@@ -186,7 +186,7 @@ all incoming emails. These associated emails can then be viewed via the History 
 This setting is selected by default in *SuiteCRM*.
 
 ==== Create Case From Email
-Check this box to set up *SuiteCRM* to create a link:../../core-modules/cases[Case] record from an incoming email. 
+Check this box to set up *SuiteCRM* to create a link:../../../user/core-modules/cases[Case] record from an incoming email. 
 
 image:EmailsCreateCase2.png[Create Case]
 
