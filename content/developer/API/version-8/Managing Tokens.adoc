@@ -3,7 +3,7 @@ title: Managing Tokens
 weight: 5
 ---
 
-:imagesdir: ./../../../../../images/en/developer
+:imagesdir: ./../../../../images/en/developer
 
 
 The OAuth 2 admin panel displays which session have been successfully

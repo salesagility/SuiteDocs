@@ -10,11 +10,11 @@ weight: 50
 [frame="none", grid="none"]
 |===
 
-s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>
+s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>, <<anchor-7.9.16, 7.9.16>>, <<anchor-7.9.17, 7.9.17>>
 
-s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>
+s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>
 
 s|7.7.x, <<anchor-7.7Beta, 7.7 Beta>>, <<anchor-7.7Beta2, 7.7 Beta 2>>, <<anchor-7.7RC, 7.7 RC>>, <<anchor-7.7RC2, 7.7 RC 2>>, <<anchor-7.7.0, 7.7.0>>, <<anchor-7.7.1, 7.7.1>>, <<anchor-7.7.2, 7.7.2>>, <<anchor-7.7.3, 7.7.3>>, <<anchor-7.7.4, 7.7.4>>, <<anchor-7.7.5, 7.7.5>>, <<anchor-7.7.6, 7.7.6>>, <<anchor-7.7.7, 7.7.7>>, <<anchor-7.7.8, 7.7.8>>, <<anchor-7.7.9, 7.7.9>> 
 
@@ -33,6 +33,33 @@ s|7.1.x, <<anchor-7.1Beta, 7.1 Beta>>, <<anchor-7.1Beta2, 7.1 Beta 2>>, <<anchor
 s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2>> 
 
 |===
+
+
+[[anchor-7.10.9]]
+== 7.10.9
+
+_Released 17th Sep 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.9.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.9.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/6312[#6312 ] Fixed #6312 - Charts in Dashlets cause php errors in 7.10.8
+* https://github.com/salesagility/SuiteCRM/issues/6309[#6309 ] Fixed #6309 - MySQL error 1054: Unknown column 'date_start' in 'order clause'
+* https://github.com/salesagility/SuiteCRM/issues/6310[#6310 ] Fixed #6310 - Can't use collapsed subpanel row count feature on older PHP versions
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
 
 
 [[anchor-7.10.8]]
@@ -152,7 +179,6 @@ _Released 13th Sep 2018_
 * https://github.com/salesagility/SuiteCRM/issues/5856[#5856 ] Fixed #5856 - Multiple pages PDF from reports when Total of field is selected
 * https://github.com/salesagility/SuiteCRM/issues/3560[#3560 ] Fixed #3560 - Now we log queries in one, and only one, log line
 * https://github.com/salesagility/SuiteCRM/pull/6211[#6211 ] Prevent massive slowdown if someone accidently added many favorites
-* https://github.com/salesagility/SuiteCRM/pull/6212[#6212 ] Hotfix fixes
 * https://github.com/salesagility/SuiteCRM/pull/6215[#6215 ] Fixing AOW_Actions save
 * https://github.com/salesagility/SuiteCRM/issues/6217[#6217 ] Fixed #6217 - Copyright notice update to 7.10.x
 * https://github.com/salesagility/SuiteCRM/pull/6225[#6225 ] gcoop libre hotfix 6008 with no mem limit for composer install
@@ -173,6 +199,7 @@ _Released 13th Sep 2018_
 * https://github.com/salesagility/SuiteCRM/issues/6244[#6244 ] Fixed #6244 - 7.8.20LTS AOR_Report fails using a date parameter
 * https://github.com/salesagility/SuiteCRM/issues/6131[#6131 ] Fixed #6131 - Issue with DetailView of Email module on 7.10.7 xampp
 * https://github.com/salesagility/SuiteCRM/pull/6243[#6243 ] Fix: Email body is the same on the detail view
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15606[CVE-2018-15606]: Vulnerability: Cross Site Scripting (XSS) Description: Utilising URL parameters to phish error message to obtain user data/access.
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
@@ -182,6 +209,8 @@ _Special thanks to https://github.com/rewanth1997[rewanth1997] and https://githu
 raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
 
 _Please note that you will need to modify your php.ini Maximum upload size value if it is below 30MB_
+
+_Users of ALL previous 7.10.x releases are advised to Upgrade to 7.10.8 as soon as possible._
 
 '''
 
@@ -812,6 +841,31 @@ We have also updated our Security Process asking the community to send their sec
 
 '''
 
+[[anchor-7.8.22]]
+== 7.8.22
+
+_Released 17th Sep 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.22.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.22.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/pull/6311[#6311 ] SuiteR and Suite7 Theme dont work anymore in 7.8.21
+* https://github.com/salesagility/SuiteCRM/issues/6312[#6312 ] Fixed #6312 - Charts in Dashlets cause php errors in 7.8.21
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 [[anchor-7.8.21]]
 == 7.8.21
 
@@ -875,13 +929,13 @@ _Released 13th Sep 2018_
 * https://github.com/salesagility/SuiteCRM/issues/3864[#3864 ] Fixed #3864 - Deleted and recreated user can't login with system generated password
 * https://github.com/salesagility/SuiteCRM/issues/5921[#5921 ] Fixed #5921 - After Upgrade to 7.10.5 SAML users cannot login
 * https://github.com/salesagility/SuiteCRM/issues/5885[#5885 ] Fixed #5885 - SAML Authentication fails when SAML2Authenticate ticked
-* https://github.com/salesagility/SuiteCRM/issues/6253[#6253 ] Fixed #6253 - Hotfix 7.8.x fixes
 * https://github.com/salesagility/SuiteCRM/pull/6251[#6251 ] Fix vcal name
 * https://github.com/salesagility/SuiteCRM/issues/5794[#5794 ] Fixed #5794 - Added Column gets removed from listview after removing filter
 * https://github.com/salesagility/SuiteCRM/pull/5892[#5892 ] Fix bug on AOW_Actions relate fields
 * https://github.com/salesagility/SuiteCRM/pull/6268[#6268 ] Do not show img tag with same src attribute if an image field is empty
 * https://github.com/salesagility/SuiteCRM/issues/6244[#6244 ] Fixed #6244 - 7.8.20LTS AOR_Report fails using a date parameter
 * https://github.com/salesagility/SuiteCRM/pull/6252[#6252 ] AOR Reports 7.8.x
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15606[CVE-2018-15606]: Vulnerability: Cross Site Scripting (XSS) Description: Utilising URL parameters to phish error message to obtain user data/access.
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
@@ -891,6 +945,8 @@ _Special thanks to https://github.com/rewanth1997[rewanth1997] and https://githu
 raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
 
 _Please note that you will need to modify your php.ini Maximum upload size value if it is below 30MB_
+
+_Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.21 as soon as possible._
 
 '''
 

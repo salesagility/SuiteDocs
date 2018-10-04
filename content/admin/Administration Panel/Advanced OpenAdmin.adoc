@@ -50,7 +50,7 @@ The search works very similar to the standard global search, but provides the en
 functionality of searching text in documents and other files, compared to the record-level 
 search provided by the standard global search.
 
-See the link:../../../user/introduction/user-interface#search[Search] documentation in the user
+See the link:../../../../user/introduction/user-interface/_#search[Search] documentation in the user
 guide for more information on searching in *SuiteCRM*.
 
 == AOP Settings
@@ -71,7 +71,7 @@ Specify business working hours here.
 
 These settings will determine when workflows set to run 
 'Only In The Scheduler' will run and will be used when "Consider Working days" is set on 
-link:../../../user/core-modules/project[Project] records.
+link:../../../user/core-modules/projects[Project] records.
 
 image:AdminBusinessHours.png[Business Hours]
 

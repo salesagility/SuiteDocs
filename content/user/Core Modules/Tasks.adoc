@@ -18,19 +18,19 @@ a new Task record.
 * *View Tasks* – Redirects you to the List View for the Tasks module. This
 allows you to search and list Task records.
 * *Import Tasks* – Redirects you to the Import Wizard for the Tasks
-module. For more information, see link:/user/introduction/user-interface/#_importing_records[Importing Records].
+module. For more information, see link:./../../introduction/user-interface/#_importing_records[Importing Records].
 
 To view the full list of fields available when creating a Task, See
-link:/user/appendix-a/#_tasks_field_list[Tasks Field List].
+link:./../../appendix-a/#_tasks_field_list[Tasks Field List].
 
 == Managing Tasks
 
 * To sort records on the Tasks List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
-* To search for a Task, see the link:/user/introduction/user-interface/#_search[Search] section of this
+* To search for a Task, see the link:./../../introduction/user-interface/#_search[Search] section of this
 user guide.
 * To update some or all of the Task on the List View, use the Mass
-Update panel as described in the link:/user/introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
+Update panel as described in the link:./../../introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
 * To duplicate a Task, you can click the Duplicate button on the Detail
 View and then save the duplicate record.
 * To close a Task, click on the 'x' icon on the Tasks List View. You can
@@ -41,7 +41,7 @@ create a new record.
 * To delete one or multiple Tasks, you can select multiple records from
 the List View and click delete. You can also delete a Task from the
 Detail View by clicking the Delete button. For a more detailed guide on
-deleting records, see the link:/user/introduction/user-interface/#_deleting_records[Deleting Records]
+deleting records, see the link:./../../introduction/user-interface/#_deleting_records[Deleting Records]
 section of this user guide.
 * To view the details of a Task, click the Meeting Subject in the List
 View. This will open the record in Detail View.
@@ -49,7 +49,7 @@ View. This will open the record in Detail View.
 click the edit button on the Detail View, make the necessary changes,
 and click Save.
 * For a detailed guide on importing and exporting Tasks, see the
-link:/user/introduction/user-interface/#_importing_records[Importing Records] and
-link:/user/introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+link:./../../introduction/user-interface/#_importing_records[Importing Records] and
+link:./../../introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Task record, you can
 click the View Change Log button on the Task's Detail View or Edit View.
