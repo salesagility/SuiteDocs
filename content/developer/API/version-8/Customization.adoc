@@ -37,7 +37,9 @@ return ['myCustomService' => function() {
 
 Extending BeanAliases in `custom/application/Ext/Api/V8/beanAliases.php` is a native php file should returns an array of custom bean aliases.
 custom/application/Ext/Api/V8/beanAliases.php
-(under construction..)
+[source,php]
+// example of custom service:
+return [MyCustom::class => 'MyCustoms'];
 
 
 Extending Controllers in `custom/application/Ext/Api/V8/controllers.php` is a native php file should returns an array of custom controllers.
@@ -94,7 +96,6 @@ custom/application/Ext/Api/V8/params.php
 return [MyCustomParam::class => function(Container $container) {
     return new MyCustomParam();
 }];
-
 
 
 
