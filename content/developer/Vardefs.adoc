@@ -107,6 +107,11 @@ module.
   required as the appropriate type is usually chosen.
 `default`::
   The default value of this field.
+  For `date`, `datetime` and `datetimecombo` type fields you should use `display_default` instead.
+`display_default`::
+  The default value for `date`, `datetime` and `datetimecombo` type fields.
+  Sample values: `today`, `+1 week`.
+  Check http://php.net/manual/en/datetime.formats.php for the valid formats.
 `massupdate`::
   Whether or not this field should be mass updatable. Note that some
   field types are always restricted from mass updates.
