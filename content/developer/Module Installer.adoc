@@ -121,7 +121,7 @@ $manifest = array(
   The type of the installer, one of `langpack`, `module`, `patch` or
   `theme`. See the types section.
 
-=== $install_defs
+=== $installdefs
 
 Provides information on how the package is to be installed, which files
 go where and any additional information such as logic hooks, custom
@@ -371,7 +371,7 @@ output will be displayed to the user in the uninstall log.
 === $upgrade_manifest
 
 Provides a means of upgrading an already installed package by providing
-different `install_defs`.
+different `installdefs`.
 
 == Types
 
