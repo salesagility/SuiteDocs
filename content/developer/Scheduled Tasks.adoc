@@ -289,7 +289,7 @@ We can revisit our previous example and add two retries:
  
        //Mark this job for 2 retries.
        $scheduledJob->requeue = true;
-       $scheduledJob->retry = 2;
+       $scheduledJob->retry_count = 2;
 ----
 
 
