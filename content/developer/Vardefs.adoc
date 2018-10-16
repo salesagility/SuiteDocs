@@ -107,6 +107,10 @@ module.
   required as the appropriate type is usually chosen.
 `default`::
   The default value of this field.
+  For `date`, `datetime` and `datetimecombo` type fields you should use `display_default` instead.
+`display_default`::
+  The default value for `date`, `datetime` and `datetimecombo` type fields.
+  Sample Values: `-1 day`, `today`, `+1 day`, `+1 week`, `next monday`, `first day of the next month`, `+1 month`, `+1 year` .
 `massupdate`::
   Whether or not this field should be mass updatable. Note that some
   field types are always restricted from mass updates.
