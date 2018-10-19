@@ -130,8 +130,6 @@ class SomeClass
          //Perform some setup of the email class
          require_once "include/SugarPHPMailer.php";
          $mailer=new SugarPHPMailer();
-         $admin = new Administration();
-         $admin->retrieveSettings();
          $mailer->prepForOutbound();
          $mailer->setMailerForSystem();
          $admin = new Administration();
@@ -291,7 +289,7 @@ We can revisit our previous example and add two retries:
  
        //Mark this job for 2 retries.
        $scheduledJob->requeue = true;
-       $scheduledJob->retry = 2;
+       $scheduledJob->retry_count = 2;
 ----
 
 
