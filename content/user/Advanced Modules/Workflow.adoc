@@ -41,11 +41,11 @@ to deactivate a Workflow without having to delete it.
 |*On Save* | The Workflow will run immediately for a given record when a save action occurs in the module specified.
 |*On Scheduler* | The Workflow will be started from the Scheduler Job *Process Workflow Tasks*, 
 the next time the job runs, and will apply to every record in the module, 
-resticted by the *Run on* property and by the Workflow's conditions.
+restricted by the *Run on* property and by the Workflow's conditions.
 |*Always* | The Workflow will run on both the situations described above.
 |================================================================
 +
-* *Run On* – This specifies the seleciton of records for which the Workflow will be executed.
+* *Run On* – This specifies the selection of records for which the Workflow will be executed.
 +
 [cols="20,80"]
 |================================================================
