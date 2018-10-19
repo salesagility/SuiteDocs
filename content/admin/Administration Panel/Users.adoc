@@ -83,7 +83,7 @@ to *SuiteCRM*.
 
 Check the Two Factor Authentication box to enable.
 
-image:TwoFactorAuth.png[title = "Two Factor Authentication - user settings]
+image:TwoFactorAuth.png["Two Factor Authentication - user settings]
 
 Click btn:[SAVE] to retain the settings.
 
@@ -182,7 +182,7 @@ image:UsersResetPassword.png[title = "User Password Reset settings"]
 === Email Templates
 
 The templates for password-related system-generated emails can be edited here. 
-Please see the link:../../../user/core-modules/emailtemplates[Email Templates] 
+Please see the link:../../../user/modules/emailtemplates[Email Templates] 
 documentation for further information regarding creating and editing email 
 templates.
 

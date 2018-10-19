@@ -2,7 +2,7 @@
 Title: Cases with Portal
 Weight: 250
 ---
- 
+
 :experimental:   ////this is here to allow btn:[]syntax used below
 
 :imagesdir: ./../../../images/en/user
@@ -33,9 +33,9 @@ threaded log of all updates
 Emails Advanced OpenPortal (AOP) uses the standard SuiteCRM
 functionality to send emails and create cases from inbound emails.
 Details on how to configure your outgoing email settings can be found
-link:../../../admin/administration-panel/email/#_outgoing_mail_configuration[here].
+link:/user/modules/email-settings/#_outgoing_mail_configuration_settings[here]. 
 Details on how to set up a group email account which will
-automatically generate cases can be found link:./../../modules/email-settings/#_group_accounts[here].
+automatically generate cases can be found link:/user/modules/email-settings/#_group_accounts[here].
 
 == Downloading
 

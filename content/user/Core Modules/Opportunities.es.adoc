@@ -16,8 +16,10 @@ o desde la barra lateral. Las acciones disponibles son las siguientes:
 
 * *Crear una Oportunidad* – Una vez cliqueada, un nuevo formulario se abre en la Vista de Edición para permitirte crear un nuevo registro de Oporunidad.
 * *Ver Oportunidades* - Una vez cliqueada, serás redireccionado a la Vista de Lista del módulo de Oportunidades. Esto te permite buscar y listar registros de Oportunidades.
-* *Importar Oportunidades* - Te redirige al Asistente de Importación para el módulo de oportunidades. Para más información, 
-ve a la sección de link:./../../introduction/user-interface/#_importando_registros[Importando Registros].
+* *Importar Oportunidades* - Te redirige al Asistente de Importación para el módulo de oportunidades. Para más información, ve a la sección de link:/user/introduction/user-interface/#_importing_records[Importando Registros].
+
+To view the full list of fields available when creating an Opportunity,
+See link:/user/appendix-a/#_opportunities_field_list[Opportunities Field List].
 
 == Gestionando Oportunidades
 
