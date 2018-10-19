@@ -212,15 +212,6 @@ Parent record if these options are set. This setting only overrides the
 Created By setting.
 {{% /notice %}}
 
-=== Shared Calendar - Hide Restricted
-
-By default users can see when other users are busy on the Shared
-Calendar. Even if you doesn't have rights to the meeting, call, etc. It
-will display on the calendar, but you cannot view more details unless
-you have rights to that specific calendar item. By setting this option
-you cannot see these items on the Shared Calendar; only items that you
-actually has rights to.
-
 === Inherit from Created By User
 
 The record will inherit all the groups assigned to you who created it.
