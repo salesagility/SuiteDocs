@@ -47,13 +47,11 @@ _Released 24th Oct 2018_
 
 === Release Notes
 
-[discrete]
-
-===== Enhancements
+==== Enhancements
 
 Introducing re factored API version 8. Please review the updated documentation [https://docs.suitecrm.com/developer/api/version-8/ here] to learn more
 
-===== Bug Fixes
+==== Bug Fixes
 
 *[https://github.com/salesagility/SuiteCRM/issues/5656 #5656 ] ListViewDisplay Incorrectly Checking for $this->email to be 'Set' Instead of True/False
 *[https://github.com/salesagility/SuiteCRM/issues/6315 #6315 ] [language] Duplicated language strings in ver. 7.10.8
@@ -900,9 +898,7 @@ _Released 24th Oct 2018_
 
 === Release Notes
 
-[discrete]
-
-===== Bug Fixes
+==== Bug Fixes
 
 *[https://github.com/salesagility/SuiteCRM/pull/6406 #6406 ] Add Prospects to Studio
 *[https://github.com/salesagility/SuiteCRM/issues/5526 #5526 ] Inline Edit doesn't show new value for date and relate fields
