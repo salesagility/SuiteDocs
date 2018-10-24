@@ -10,11 +10,11 @@ weight: 50
 [frame="none", grid="none"]
 |===
 
-s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>
+s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>, <<anchor-7.9.16, 7.9.16>>, <<anchor-7.9.17, 7.9.17>>
 
-s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>
+s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>
 
 s|7.7.x, <<anchor-7.7Beta, 7.7 Beta>>, <<anchor-7.7Beta2, 7.7 Beta 2>>, <<anchor-7.7RC, 7.7 RC>>, <<anchor-7.7RC2, 7.7 RC 2>>, <<anchor-7.7.0, 7.7.0>>, <<anchor-7.7.1, 7.7.1>>, <<anchor-7.7.2, 7.7.2>>, <<anchor-7.7.3, 7.7.3>>, <<anchor-7.7.4, 7.7.4>>, <<anchor-7.7.5, 7.7.5>>, <<anchor-7.7.6, 7.7.6>>, <<anchor-7.7.7, 7.7.7>>, <<anchor-7.7.8, 7.7.8>>, <<anchor-7.7.9, 7.7.9>> 
 
@@ -34,6 +34,51 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 
 |===
 
+
+[[anchor-7.10.10]]
+== 7.10.10
+
+_Released 24th Oct 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.10.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.10.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+==== Enhancements
+
+Introducing re factored API version 8. Please review the updated documentation [https://docs.suitecrm.com/developer/api/version-8/ here] to learn more
+
+==== Bug Fixes
+
+*[https://github.com/salesagility/SuiteCRM/issues/5656 #5656 ] ListViewDisplay Incorrectly Checking for $this->email to be 'Set' Instead of True/False
+*[https://github.com/salesagility/SuiteCRM/issues/6315 #6315 ] [language] Duplicated language strings in ver. 7.10.8
+*[https://github.com/salesagility/SuiteCRM/pull/6406 #6406 ] Add Prospects to Studio
+*[https://github.com/salesagility/SuiteCRM/issues/5726 #5726 ] Token expires/expiry [language]
+*[https://github.com/salesagility/SuiteCRM/issues/5526 #5526 ] Inline Edit doesn't show new value for date and relate fields
+*[https://github.com/salesagility/SuiteCRM/issues/6392 #6392 ] Changing Managing Folders Has No Effect
+*[https://github.com/salesagility/SuiteCRM/issues/6320 #6320 ] Empty collapsed activities/history subpanels is always shown as a subpanels with some records
+*[https://github.com/salesagility/SuiteCRM/issues/5286 #5286 ] Empty help message when creating user
+*[https://github.com/salesagility/SuiteCRM/issues/5265 #5265 ] Install fails without warning if the database specified lacks MyISAM support
+*[https://github.com/salesagility/SuiteCRM/issues/6341 #6341 ] Fixed #6341 - Users may send as themselves tick is never hide
+*[https://github.com/salesagility/SuiteCRM/issues/6363 #6363 ] Fixed #6363 - quote number should not has to be required
+*[https://github.com/salesagility/SuiteCRM/issues/6362 #6362 ] Fixed #6362 - mentioned fix to omit file data
+*[https://github.com/salesagility/SuiteCRM/issues/6364 #6364 ] Fixed #6364 - "Create Scheduler" broken - no Jobs to select
+*[https://github.com/salesagility/SuiteCRM/issues/6338 #6338 ] Fixed #6338 - ChangePassword.php - syntax error missing curly braces
+*[https://github.com/salesagility/SuiteCRM/issues/6326 #6326 ] Fixed #6326 - Quick radius map + Geocode test issue
+*[https://github.com/salesagility/SuiteCRM/issues/ # ] Fix MY_FRAME logging message
+*[https://github.com/salesagility/SuiteCRM/issues/5360 #5360 ] Language keys - Cut down on sugar in your diet - part II
+*[https://github.com/salesagility/SuiteCRM/issues/5961 #5961 ] Allow attachments in email templates when editor is not Mozaik
+*[https://github.com/salesagility/SuiteCRM/issues/6322 #6322 ] Fixed #6322 - creating parent-child relationship in clean install of 7.10.9 causes parent display to break
+*[https://github.com/salesagility/SuiteCRM/issues/6321 #6321 ] Fixed #6321 - using same form name as back-end does
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
 
 [[anchor-7.10.9]]
 == 7.10.9
@@ -838,6 +883,33 @@ _Released 16th Feb 2018_
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+
+'''
+
+[[anchor-7.8.23]]
+== 7.8.23
+
+_Released 24th Oct 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.23.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.23.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+==== Bug Fixes
+
+*[https://github.com/salesagility/SuiteCRM/pull/6406 #6406 ] Add Prospects to Studio
+*[https://github.com/salesagility/SuiteCRM/issues/5526 #5526 ] Inline Edit doesn't show new value for date and relate fields
+*[https://github.com/salesagility/SuiteCRM/issues/6204 #6204 ] Syntax error in _AddJobsHere.php causes scheduled report not to render properly
+*[https://github.com/salesagility/SuiteCRM/issues/6364 #6364 ] Fixed #6364 - "Create Scheduler" broken - no Jobs to select
+*[https://github.com/salesagility/SuiteCRM/issues/6291 #6291 ] undefined variable in _AddJobsHere.php
+*[https://github.com/salesagility/SuiteCRM/issues/6326 #6326 ] Fixed #6326 - Quick radius map + Geocode test issue
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
 

@@ -3,508 +3,358 @@ title: JSON API
 weight: 7
 ---
 
-:imagesdir: ./../../../../images/en/developer
-
 :toc:
 :toclevels: 4
 
-http://jsonapi.org/format/1.0/[JSON API] is a specification for how a
-client should request that resources be fetched or modified, and how a
-server should respond to those requests.
+== Before you start calling endpoints
 
-*JSON API* is designed to minimize both the number of requests and the
-amount of data transmitted between clients and servers. This efficiency
-is achieved without compromising readability, flexibility, or
-discoverability.
+Please check the following below:
 
-*JSON API* requires use of the JSON API media type
-http://www.iana.org/assignments/media-types/application/vnd.api+json[`application/vnd.api+json`]
-for exchanging data.
+=== Composer
 
-== Validating the messages
-
-To validate messages, you can retrieve the JSON Schema file:
+Install composer packages with
 
 [source,php]
-GET /api/v8/schema
+composer install
 
-== Content Negotiation
+=== Generate private and public.key for OAUTH2
 
-Clients *MUST* send all JSON API data in request documents with the
-header `Content-Type: application/vnd.api+json` without any
-media type parameters.
+SuiteCRM Api uses OAuth2 protocol, which needs public and private keys.
 
-Clients that include the JSON API media type in their
-`Accept` header *MUST* specify the media type there at least
-once without any media type parameters.
+First, open a terminal and go to `{{your-SuiteCRM-root}}/Api/V8/OAuth2`
 
-Clients *MUST* ignore any parameters for the
-`application/vnd.api+json` media type received in the
-`Content-Type` header of response documents.
-
-.Example
+Generate a private key:
 [source,php]
-$ch = curl_init();
-$header = array(
-   'Content-type: application/vnd.api+json',
-   'Accept: application/vnd.api+json',
-);
-$url = 'https://path-to-instance/api/v8/modules/meta/list';
-curl_setopt($ch, CURLOPT_URL, url);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');;
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-$output = curl_exec($ch);
+openssl genrsa -out private.key 2048
 
-== Handling Errors
-
-The JSON API specifies the errors object to send messages back to the
-user. SuiteCRM API errors are exceptions which have been thrown. Errors are logged in suitecrm.log and posted back to the client application.
-
-.SuiteCRM log
+Then a public key:
 [source,php]
-Tue Sep 26 13:51:17 2017 [697][1][FATAL] [ERROR] Code: [8006] Status: [409] Message: [SuiteCRM] [API] [Conflict] ["id" already exist] "11c48ede-e9c6-6c15-fa37-59b66a8dbeab" Detail: ["Unable create record, because it already exists."] Source: [/data/attributes/id]
+openssl rsa -in private.key -pubout -out public.key
 
-.Response
+If you need more information about generating, https://oauth2.thephpleague.com/installation/[please visit this page].
+
+The permission of the key files must be 600 or 660, so change it.
 [source,php]
-{
- "errors": [
-   {
-     "code": 8006,
-     "title": "[SuiteCRM] [API] [Conflict] [\"id\" already exist] \"11c48ede-e9c6-6c15-fa37-59b66a8dbeab\"",
-     "detail": "Unable create record, because it already exists.",
-     "source": {
-       "pointer": "/data/attributes/id"
-     },
-     "status": 409
-   }
- ]
-}
+sudo chmod 600 private.key public.key
 
-== Modules API
-
-SuiteCRM offers access to modules resources.
-
-=== Available Modules
-
-To get a list of modules you can use the following url: 
-
+Also, you have to be sure that the config files are owned by PHP.
 [source,php]
-GET https://path-to-instance/api/v8/modules/meta/list
+sudo chown www-data:www-data p*.key
 
-=== List available modules
+=== Update encryption key
 
-To get a list of records use the following url:
+OAuth2's AuthorizationServer needs to set an encryption key for security reasons. For doing this, please, go to `Api/V8/Config/services/middlewares.php` and find the row starts with `$server->setEncryptionKey('');`
 
-[source,php]
-https://path-to-instance/api/{module}
+Now update its value with generating a new one using `base64_encode(random_bytes(32))`
 
-.Example Request:
-[source,php]
-https://path-to-instance/api/v8/modules/Accounts
+If you need more information about this issue, https://oauth2.thephpleague.com/v5-security-improvements/[please visit this page].
 
-.Example Response: 
-[source,php]
-{
- "data": [{
-   "type": "Accounts",
-   "id": "1",
-   "attributes": {
-     "Name": "JSON API paints my bikeshed!"
-   }
- }, {
-   "type": "Accounts",
-   "id": "2",
-   "attributes": {
-     "Name": "Rails is Omakase"
-   }
- }]
- "links": {
-     "self": "https://path-to-instance/api/v8/modules/Accounts?page[limit]=20&page[offset]=0",
-     "first": "https://path-to-instance/api/v8/modules/Accounts?page[limit]=20&page[offset]=0",
-     "last": null,
-     "prev": null,
-     "next": null,
-  }`
-}
+=== If you are using Postman
 
-=== Pagination
+You can easily import postman collections of all endpoint, you can find it in `Api/docs/postman`
 
-SuiteCRM offers a offset-based strategy for pagination, a client MAY use
-the page[offset] and page[limit] parameter to request for pagination.
-The following keys MUST be used for pagination links:
+== Authentication
 
-[width="50", cols="5,40", frame="none",grid="none"]
+SuiteCRM Api allows two kind of grant types:
+
+* Client credential
+* Password
+
+.Token request parameters
 |===
-|*first* |the first page of data
-|*last* |the last page of data
-|*prev* |the previous page of data
-|*next* |the next page of data
+|Parameter |Description
+
+|*Access Token URL*
+|{{your-SuiteCRM-url}}/Api/access_token
+
+|*Username*
+|Only available for Password grants. Must be a valid SuiteCRM user name.
+
+|*Password*
+|Only available for Password grants. Password for the selected user.
+
+|*Client ID*
+|Client ID exists in OAuth2Clients module's ID. Must be a valid GUID.
+
+|*Client Secret*
+|Client secret is also in OAuth2Clients module as SHA256 generated value.
+
+|*Scopes*
+|Scopes haven't implemented yet
 |===
 
-Keys *MUST* either be omitted or have a null value to indicate that a
-particular link is unavailable.
+== Available parameters
 
-=== Sparse fieldset
+According to JsonApi specification, the available parameters are the following depending on the GET endpoint:
 
-A client *MAY* request that an endpoint return only specific fields in the
-response on a per-type basis by including a fields[TYPE] parameter. The
-value of the fields parameter MUST be a comma-separated (`U+002C COMMA,
-“,”`) list that refers to the name(s) of the fields to be returned.
+=== Fields
 
-[source,php]
-GET https://path-to-instance/api/v8/modules/Accounts?fields[Accounts]=name,date_created
+Fields can filter on attribute object. Allowed keys are valid bean properties.
 
-=== Sorting
-
-SuiteCRM offers sorting via the sort parameter.
-
-.Example
-[source,php]
-GET https://path-to-instance/api/v8/modules/Accounts?sort=name,-date_created
-
-The attribute is sorted in ascending order, however to sort in
-descending order you simply add MINUS (-) in front of the attribute
-name. The value of the sort parameter MUST be a comma-separated (`U+002C
-COMMA, “,”`) list.
-
-=== Filtering
-
-The JSON Api (v1.0.0) does not specify which strategy to use when
-filtering, instead the *filter* query parameter is reserved for
-filtering. So this section attempts to describe the filtering strategy
-implemented in SuiteCRM.
-
-=== Pre-made Filters
-
-You can specify a pre-made filter like so
+Example:
 
 [source,php]
-GET /api/v8/modules/\{module}?filter={name}
+{{your-SuiteCRM-url}}/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
 
-* *{name}* represents the name of the filter
+Result:
 
-Example use the roi filter and sort by total_revenue in descending order
-
-[source,php] 
-GET /api/v8/modules/Leads?filter=roi&sort=-total_revenue
-
-=== Filter by id
-
-If you need to retrieve a set of modules you can use the following call
-
-[source,php]
-GET /api/v8/modules/{module}?filter[id]=\{id},...
-
-* *{type}* represents represent the module type:
-* *{filter}* represents the id for the module type
-
-To get a list of accounts with the id of 1, 2, and 3:
-
-[source,php]
-GET /api/v8/modules/Accounts?filter[Accounts]=1,2,3
-
-=== Filter by attributes
-
-[source,php]
-GET /api/v8/modules/\{module}?filter[{type}.{attribute}]=[[{operator}]]{comparator},...
-
-* *{type}* represents represent the module type:
-* *{attribute}* represents an attribute name eg. date_modified
-* *{operator}* represents a &#91;&#91;API-8#Operators|filter
-operation&#93;&#93;
-* *{comparator}* represents the attribute value to compare against eg
-2017-11-17T11:40:00+00:00
-
-[source,php]
-GET /api/v8/modules/{module}?filter[Accounts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
-
-=== Filter relationships
-
-[source,php]
-GET /api/v8/modules/{module}?filter[{type}.{related type}.{attribute}]=[[{operator}]]{comparator},...
-
-[source,php]
-GET /api/v8/modules/Accounts?filter[Accounts.Contacts.date_modified]=[[gt]]2017-11-17T11:40:00+00:00
-
-=== Filter Middle Table fields
-
-[source,php]
-GET /api/v8/modules/{module}?filter[{type}.{related type}.meta.middle_table.{attribute}]=[[{operator}]]{comparator},...
-
-* *{related type}* represents the link for the related module type
-* *{attribute}* represents an attribute name eg. date_modified
-* *{operator}* represents a &#91;&#91;API-8#Operators|filter
-operation&#93;&#93;
-* *{comparator}* represents the attribute value to compare against eg
-2017-11-17T11:40:00+00:00
-
-[source,php]
-GET /api/v8/modules/Meetings?filter[Meetings.Users.meta.middle_table.accept_status]=[[eq]]Accept
-
-=== Operators
-
-The operators are represented by string values, so that they are not
-encoded, plus it will make it easier to extend operations in the future.
-
-*Comparators*
-
-[width="80",cols="10,20,50",options="header",]
-|=======================================================================
-|Operator |Name |Example
-
-|eq |Equal |filter[Accounts.deleted]=\[[eq]]1
-
-|ne |Not Equal |filter[Accounts.deleted]=\[[ne]]0
-
-|gt |Greater Than |filter[Accounts.date_modified]=[\[gt]]2017-11-17T11:40:00+00:00
-
-|lt |Less Than |filter[Accounts.date_modified]=\[[lt]]2017-11-17T11:40:00+00:00
-
-|gte |Greater Than or Equal |filter[Accounts.date_modified]=\[[gte]]2017-11-17T11:40:00+00:00
-
-|lte |Less Than or Equal |filter[Accounts.date_modified]=\[[lte]]2017-11-17T11:40:00+00:00
-
-|in |In List |filter[Accounts.name]=\[[in]]inc,\[[in]]ltd
-
-|nin |Not In List |filter[Accounts.name]=\[[nin]]inc,\[[nin]]ltd
-|=======================================================================
-
-*Strings*
-
-[width="50",cols="10,10,30",options="header",]
-|================================================================
-|Operator |Name |Example
-
-|li |Like |filter[Accounts.name]=\[[li]]sam%
-
-|nli |Not Like |filter[Accounts.name]=\[[nli]]bob%
-|================================================================
-
-This convention was taken from the
-https://docs.mongodb.com/manual/reference/operator/query/[MongoDb]
-syntax.
-
-=== Multiple Comparators vs Multiple Filters
-
-When you need to create multiple conditions on a field, Due the length
-limitation of a url, it is recommended that you use the multiple
-comparator notation.
-
-.Comparators separated by ","
-[source,php]
-GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00,[[lte]]2017-11-18T11:40:00+00:00
-
-When you need to filter by multiple fields, you should use the multiple
-filters notation.
-
-.Filters separated by "&"
-[source,php]
-GET /api/v8/modules/Accounts?filter[Contacts.date_modified]=[[gte]]2017-11-17T11:40:00+00:00&filter[Contacts.last_contacted]=[[lte]]2017-11-18T11:40:00+00:00
-
-=== List Recently Viewed Records
-
-List recently viewed records of the currently logged in user for all
-modules 
-
-[source,php]
-GET /api/v8/modules/\{module}/viewed
-
-=== List Favourite Records
-
-List favourite records of the currently logged in user for all modules
-
-[source,php]
-GET /api/v8/modules/\{module}/favorites
-
-=== Attribute Definitions
-
-To get the definitions of the attributes / fields. This is useful to get
-the constraints for each attribute
-
-[source,php]
-/api/v8/modules/\{module}/meta/attributes
-
-=== Get Language Strings
-
-* *Module Strings* 
-[source,php]
-GET /api/v8/modules/{module}/meta/language
-
-* *Application and Drop Down Strings* 
-[source,php]
-GET /api/v8/modules/meta/languages
-
-=== Module Record
-
-To consume a record from a module, you can do the standard
-http://jsonapi.org/format/1.0/#crud[CRUD] operations
-
-* *Create* 
-[source,php]
-POST /api/v8/modules/{module}/{id}
-
-* *Retrieve* 
-[source,php]
-GET /api/v8/modules/{module}/{id}
-
-* *Update* 
-[source,php]
-PATCH /api/v8/modules/{module}/{id}
-
-* *Delete* 
-[source,php]
-DELETE /api/v8/modules/{module}/{id}
-
-=== Related Module records
-
-To consume a related module records, you can do the standard
-relationship
-http://jsonapi.org/format/1.0/#fetching-relationships[fetching] and
-http://jsonapi.org/format/1.0/#crud-updating-relationships[updating]
-operations:
-
-* *Create* 
-[source,php]
-POST /api/v8/modules/{module}/{id}/relationships/{link}
-
-* *Read*
-[source,php]
-GET /api/v8/modules/{module}/{id}/relationships/{link}
-
-* *Update*
-[source,php] 
-PATCH /api/v8/modules/{module}/{id}/relationships/{link}
-
-* *Delete* 
-[source,php]
-DELETE /api/v8/modules/{module}/{id}/relationships/{link}
-
-=== Inclusion of fields
-
-The filter only controls how the data is filtered. How the data is
-presented is handled separately. You can use the
-http://jsonapi.org/format/1.0/#fetching-includes[fields] query parameter
-to select the fields, or use the
-http://jsonapi.org/format/1.0/#fetching-sparse-fieldsets[include] query
-parameter to select to include the related types you wish to be in the
-response.
-
-== Files
-
-To create notes and documents, you will need to be able to upload files. This uses fields which have the type set to "file". The SuiteCRM API expects the contents of the file to be assigned to the {fieldname}_file attribute. The contents must be a base64 encoded string. When requesting a note or a document, the API will decode the file in the same request.
-
-.Example payload for notes:
-[source,php]
+[source,json]
 {
-  "data": {
-    "id": "",
-    "type": "Notes",
-    "attributes": {
-      "name": "Test",
-      "portal_flag": true,
-      "filename": "testFile.txt",
-      "filename_file": "U3VpdGVDUk0gaXMgdGhlIGJlc3Q="
+    "data": {
+        "type": "Account",
+        "id": "11a71596-83e7-624d-c792-5ab9006dd493",
+        "attributes": {
+            "name": "White Cross Co",
+            "account_type": "Customer"
+        },
+        "relationships": {
+            "AOS_Contracts": {
+                "links": {
+                    "related": "/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493/relationships/aos_contracts"
+                }
+            }
+        }
     }
-  }
 }
 
-.Example payload for documents:
+=== Page
+
+Page can filter beans and set pagination. Allowed key are *number* and *size*.
+
+* *page[number*] : number of the wanted page
+* *page[size*] : size of the result
+
+Example:
+
 [source,php]
+{{suitecrm71.url}}/V8/module/Accounts?fields[Account]=name,account_type&page[number]=3&page[size]=1
+
+Result:
+
+[source,json]
 {
-  "data": {
-  "id": "",
-  "type": "Documents",
-  "attributes": {
-    "name": "testFile.png",
-    "document_name": "testFile.png",
-    "active_date": "2017-11-17T11:40:00+00:00",
-    "portal_flag": true,
-    "revision": "1",
-    "filename": "testFile.txt",
-    "filename_file": "U3VpdGVDUk0gaXMgdGhlIGJlc3Q="
-  }
-}
-
-== Relationship Fields
-
-To create a meeting, you need to provide the invitees and there accept status.
-
-[source,php]
-POST api/v8/modules/Meetings
-
-.Payload:
-[source,php]
-{
-  "data": {
-    "id": "",
-    "type": "Meetings",
-    "attributes": {
-      "name": "RelationshipsTest",
-      "date_start": "2017-11-07T10:55:43+00:00",
-      "date_end": "2017-11-07T11:10:43+00:00",
-      "duration_hours": "",
-      "duration_minutes": 15,
-      "assigned_user_id": "1",
-      "assigned_user_name": "Administrator"
+    "meta": {
+        "total-pages": 54
     },
-    "relationships": {
-      "users": {
-        "data": [
-          {
-            "id": "1",
-            "type": "User",
-            "meta": {
-              "middle_table": {
-                "data": {
-                  "id": "",
-                  "type": "Link",
-                  "attributes": {
-                    "accept_status": "accept",
-                    "user_id": "1"
-                  }
+    "data": [
+        {
+            "type": "Account",
+            "id": "e6e0af95-4772-5773-ae70-5ae70f931feb",
+            "attributes": {
+                "name": "",
+                "account_type": ""
+            },
+            "relationships": {
+                "AOS_Contracts": {
+                    "links": {
+                        "related": "/V8/module/Accounts/e6e0af95-4772-5773-ae70-5ae70f931feb/relationships/aos_contracts"
+                    }
                 }
-              }
             }
-          },
-          {
-            "id": "seed_max_id",
-            "type": "Users",
-            "meta": {
-              "middle_table": {
-                "data": {
-                  "id": "",
-                  "type": "Link",
-                  "attributes": {
-                    "accept_status": "none",
-                    "user_id": "seed_max_id"
-                  }
+        }
+    ],
+    "links": {
+        "first": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=1&page[size]=1",
+        "prev": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=2&page[size]=1",
+        "next": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=4&page[size]=1",
+        "last": "/V8/module/Accounts?fields[Account]=name,account_type&page[number]=54&page[size]=1"
+    }
+}
+
+=== Sort
+
+Sort is only available when collections wanted to be fetched.
+Sorting is set to ASC by default. If the property is prefixed with hyphen, the sort order changes to DESC.
+
+**Important notice:** we only support single sorting right now!
+
+Example:
+
+[source,php]
+{{suitecrm71.url}}/V8/module/Accounts?sort=-name
+
+Result:
+
+[source,json]
+{
+    "data": [
+        {
+            "type": "Account",
+            "id": "e6e0af95-4772-5773-ae70-5ae70f931feb",
+            "attributes": {
+                "name": "White Cross Co",
+                "account_type": "Customer"
+            },
+            "relationships": {
+                "AOS_Contracts": {
+                    "links": {
+                        "related": "/V8/module/Accounts/1d125d2a-ac5a-3666-f771-5ab9008b606c/relationships/aos_contracts"
+                    }
                 }
-              }
             }
-          },
-          {
-            "id": "seed_chris_id",
-            "type": "Users",
-            "meta": {
-              "middle_table": {
-                "data": {
-                  "id": "",
-                  "type": "Link",
-                  "attributes": {
-                    "accept_status": "none",
-                    "user_id": "seed_chris_id"
-                  }
+        },
+        {
+            "type": "Account",
+            "id": "7831d361-2f3c-dee4-d36c-5ab900860cfb",
+            "attributes": {
+                "name": "Union Bank",
+                "account_type": "Customer"
+            },
+            "relationships": {
+                "AOS_Contracts": {
+                    "links": {
+                         "related": "/V8/module/Accounts/7831d361-2f3c-dee4-d36c-5ab900860cfb/relationships/aos_contracts"
+                    }
                 }
-              }
             }
-          }
-        ]
-      }
+        }
+    ],
+}
+
+=== Filter
+
+Our filter strategy is the following:
+
+- filter[operator]=and
+- filter[account_type][eq]=Customer
+
+**Important notice:** we don't support multiple level sorting right now!
+
+==== Supported operators
+
+===== Comparison
+
+[source,php]
+EQ = '=';
+NEQ = '<>';
+GT = '>';
+GTE = '>=';
+LT = '<';
+LTE = '<=';
+
+===== Logical
+[source,php]
+'AND', 'OR'
+
+Example:
+
+[source,php]
+{{suitecrm71.url}}/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
+
+Result:
+
+[source,json]
+
+
+== Endpoints
+
+=== Logout
+
+[source,php]
+GET {{your-SuiteCRM-url}}/V8/logout
+
+=== Get a module by ID
+
+[source,php]
+GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
+
+Available parameters: fields
+
+Example:
+
+[source,php]
+V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
+
+=== Get collection of modules
+
+[source,php]
+GET {{your-SuiteCRM-url}}/V8/module/{moduleName}
+
+Available parameters: fields, page, sort, filter
+
+Example:
+
+[source,php]
+V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
+
+=== Create a module record
+
+[source,php]
+POST {{your-SuiteCRM-url}}/V8/module
+
+Example body:
+
+[source,json]
+{
+  "data": {
+    "type": "Accounts",
+    "id": "86ee02b3-96d2-47b3-bd6d-9e1035daff3a",
+    "attributes": {
+      "name": "Test account"
     }
   }
 }
 
-{{% notice note %}}
-Please ensure that you include the meta middle table in each link in the relationship otherwise it will set all the middle table fields to the first meta object.
-{{% /notice %}}
+=== Update a module record
+
+[source,php]
+PATCH {{your-SuiteCRM-url}}/V8/module
+
+Example body:
+
+[source,json]
+{
+  "data": {
+    "type": "Accounts",
+    "id": "11a71596-83e7-624d-c792-5ab9006dd493",
+    "attributes": {
+      "name": "Updated name"
+    }
+  }
+}
+
+=== Delete a module record
+
+[source,php]
+DELETE {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
+
+=== Get relationship
+
+[source,php]
+GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/relationships/{relation}
+
+Available parameters: fields, page, sort, filter
+
+Example:
+
+[source,php]
+V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
+
+=== Create relationship
+
+[source,php]
+POST {{your-SuiteCRM-url}}/V8/module/{moduleName}/relationships/{relation}
+
+Example body:
+
+[source,json]
+{
+  "data": {
+    "type": "contacts"
+  }
+}
+
+=== Delete relationship
+
+[source,php]
+POST {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}/relationships
+
+Example body:
+
+[source,json]
+{
+  "data": {
+    "type": "contacts",
+	"id": "67267a29-ef0d-a14d-e11a-5b02edd1b180"
+  }
+}
