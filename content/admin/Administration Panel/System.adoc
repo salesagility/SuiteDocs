@@ -60,7 +60,7 @@ for invitees when scheduling calls and meetings.
 
 === Logger Settings
 Specify log filename, extension and size as well as the log level here.
-See the link: ./../../../developer/logging/[chapter on logging] for more information.
+See the link:../../developer/logging/[chapter on logging] for more information.
 
 Click the View Log link to view the log file.
 
@@ -133,7 +133,7 @@ The Global Search functionality is used to search for records using the search b
 navigation menu.
 Add or remove modules from the Global Search here.
 
-See the User Interface guide to the link:../../../user/introduction/user-interface[global search] 
+See the User Interface guide to the link:../../user/introduction/user-interface[global search] 
 for more information.
 
 image:GlobalSearch.png[title = "Global Search"]
@@ -230,7 +230,7 @@ image:SystemActivityStreams.png[title = "Configure Activity Stream"]
 |*Activate User Feed:*|Allows users to enter messages in the status update field for broadcast to all users
 |===
 
-Please see the link:../../../user/introduction/user-interface/#_activity_streams[user interface guide] for further information on how to use the Activity Stream.
+Please see the link:../../../../user/introduction/user-interface#_activity_streams[user interface guide] for further information on how to use the Activity Stream.
 
 == OAuth Keys
 
