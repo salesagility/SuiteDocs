@@ -21,8 +21,12 @@ This article applies to SuiteCRM version 7.10.x only.
 
 == Forking an existing Sub-theme
 
-I start by editing `custom/themes/SuiteP/themedef.php`, and near the end, 
-next to the similar lines, I add this one:
+I start by creating a custom version of `themes/SuiteP/themedef.php`. To create this file, I apply 
+the usual way to customize files in SuiteCRM: first I create any necessary subdirectories to get to 
+`custom/themes/SuiteP/` and then copy the existing file (from `themes/SuiteP/themedef.php` 
+to `custom/themes/SuiteP/themedef.php`).
+
+Edit the new file in a text editor and near the end, next to the similar lines, I add this one:
 
 `'Noon' => $app_strings['LBL_SUBTHEME_OPTIONS_NOON'],`
 
