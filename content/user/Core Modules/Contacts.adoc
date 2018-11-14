@@ -59,3 +59,4 @@ link:./../../introduction/user-interface/#_exporting_records[Exporting Records] 
 * To track all changes to audited fields, in the Contact record, you can
 click the View Change Log button on the Contact's Detail View or Edit
 View.
+* Setting up the export of contacts in vCard format: by default, exporting contacts to vCard format is not available. The system administrator needs to replace the fields *First Name* and *Last Name* with the field *Name* using link: ../../../../admin/administration-panel/developer-tools/#_Studio], after which the {btn}[vCard] button will be available to the right of the *Name* field.
