@@ -3,5 +3,9 @@ title: Elasticsearch (beta)
 weight: 10
 ---
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 == Table of Contents
 {{% children depth="3" showhidden="true" %}}
