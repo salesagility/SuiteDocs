@@ -3,6 +3,10 @@ title: Search Syntax
 weight: 4
 ---
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 :toc:
 
 SuiteCRM Elasticsearch engine makes use of Elasticsearch's _Query String DSL_.
