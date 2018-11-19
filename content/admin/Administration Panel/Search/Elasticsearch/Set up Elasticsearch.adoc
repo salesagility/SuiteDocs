@@ -3,6 +3,10 @@ title: Set up Elasticsearch
 weight: 2
 ---
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 :toc:
 
 {{% notice note %}}
