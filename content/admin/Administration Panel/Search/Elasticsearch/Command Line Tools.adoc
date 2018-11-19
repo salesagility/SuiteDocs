@@ -5,6 +5,10 @@ weight: 5
 
 :imagesdir: ./../../../../../images/en/admin/ElasticSearch
 
+{{% notice info %}}
+This enhancement is in beta please help by providing us your feedback!
+{{% /notice %}}
+
 SuiteCRM's Elasticsearch integration ships with two useful command line tools powered by https://robo.li/[_Robo_].
 
 These two commands allow to perform indexing and searches from the command line, making debug and integration
