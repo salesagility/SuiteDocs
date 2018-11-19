@@ -5,6 +5,10 @@ title: Overview
 
 :imagesdir: ./../../../../../images/en/developer/SearchFramework
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 The Search Framework aims to make the creation of search engines for SuiteCRM as easy as possible,
 with a minimal impact on the user experience, allowing reuse of UI elements.
 
