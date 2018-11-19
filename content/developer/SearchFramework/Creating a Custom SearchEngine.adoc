@@ -5,6 +5,10 @@ title: Creating a Custom SearchEngine
 
 :imagesdir: ./../../../../../images/en/developer/SearchFramework
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 At the core of the SearchFramework there is the customisable nature of the SearchEngine class.
 In order to make a SearchEngine sub-class that will be detected by the `SearchWrapper`
 all you need to do is create a file in the `custom/Extension/SearchEngines` folder that
