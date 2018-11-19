@@ -3,6 +3,10 @@ title: Set up Elasticsearch integration
 weight: 3
 ---
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 :imagesdir: ./../../../../../images/en/admin/ElasticSearch
 :experimental:
 
