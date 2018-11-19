@@ -3,6 +3,10 @@ title: Introduction
 weight: 1
 ---
 
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
 https://www.elastic.co/[Elasticsearch] is an indexing engine that is built specifically to
 have almost real time search results, optimised for searching text strings.
 It is built in Java and runs as a separate server/process.
