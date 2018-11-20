@@ -1,0 +1,188 @@
+---
+weight: 2
+title: Creating a Custom SearchEngine
+---
+
+:imagesdir: ./../../../../../images/en/developer/SearchFramework
+
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
+At the core of the SearchFramework there is the customisable nature of the SearchEngine class.
+In order to make a SearchEngine sub-class that will be detected by the `SearchWrapper`
+all you need to do is create a file in the `custom/Extension/SearchEngines` folder that
+extends the SearchEngine class and implements the `search(SearchQuery $query)` method.
+
+== Mock search example
+
+The example below shows a search engine that, regardless of your search query, will return the Administrator.
+
+[source,php]
+----
+use SuiteCRM\Search\SearchEngine;
+use SuiteCRM\Search\SearchQuery;
+use SuiteCRM\Search\SearchResults;
+
+class FakeSearch extends SearchEngine
+{
+    public function search(SearchQuery $query)
+    {
+        return new SearchResults([
+            'Users' => [1]
+        ]);
+    }
+}
+----
+
+== City search example
+
+The example above is perfectly valid and would work, but it's rather useless. Let's try making a simple SearchEngine
+that searches for Accounts that have the address in a given town.
+
+[source,php]
+----
+use SuiteCRM\Search\SearchEngine;
+use SuiteCRM\Search\SearchQuery;
+use SuiteCRM\Search\SearchResults;
+
+class CitySearch extends SearchEngine
+{
+    public function search(SearchQuery $query)
+    {
+        $sql = "SELECT id FROM accounts WHERE billing_address_city = '%s' OR shipping_address_city = '%s' LIMIT %d OFFSET %d";
+
+        // Format the query with the values
+        $sql = sprintf(
+            $sql, // SQL Query above
+            $query->getSearchString(), // First equals
+            $query->getSearchString(), // Second equals
+            $query->getSize(), // LIMIT
+            $query->getFrom() // OFFSET
+        );
+
+        // Get an instance of the dabatabase manager
+        $db = DBManagerFactory::getInstance();
+        // Perform the query
+        $rows = $db->query($sql);
+        // Initialize an array with the results
+        $results = ['Accounts' => []];
+
+        // Fetch the row and push the id in the results array
+        while ($row = $db->fetchRow($rows)) {
+            $results['Accounts'][] = $row['id'];
+        }
+
+        // Make a new SearchResults object with the results array and return
+        return new SearchResults($results);
+    }
+}
+----
+
+== Customising view example
+
+It is possible to customise how the search engine builds the interface by overriding the
+`displayForm()` and `displayResults()` methods. If you need a higher degree of control,
+you can override the `searchAndDisplay()` method entirely.
+
+By default, `displayForm()` (displaying the search bar) and `displayResults()`
+(displaying results and errors) call `SearchFormController` and `SearchResultsController`
+respectively to create the views. These two classes are intended to be used and customised by custom search engines.
+
+In the example below we will override the `displayResults()` method for the class above, and tell
+the engine to load a different template file. The template file is a custom one placed in the same
+folder as the engine, and it will show a table view with three columns: bean name, shipping address and billing address.
+The said smarty template file can be found just after the code for the class.
+
+[source,php]
+----
+use SuiteCRM\Search\SearchEngine;
+use SuiteCRM\Search\SearchQuery;
+use SuiteCRM\Search\SearchResults;
+use SuiteCRM\Search\UI\SearchResultsController;
+
+class CitySearchWithView extends SearchEngine
+{
+    public function search(SearchQuery $query) { // Same as example above. }
+
+    public function displayResults(SearchQuery $query, SearchResults $results)
+    {
+        // Override the displayResults() method to change how the `SearchWrapper` will show the results.
+
+        // I have used an anonymous class just for simplicity in the example.
+        // The extended controller can be normally placed in a separate file.
+        $controller = new class($query, $results) extends SearchResultsController
+        {
+            public function __construct(SearchQuery $query, SearchResults $results)
+            {
+                parent::__construct($query, $results);
+                // Let us load a custom template file.
+                $this->view->setTemplateFile(__DIR__ . '/citysearch.tpl');
+            }
+        };
+
+        // Finally ask the Controller to render the view.
+        $controller->display();
+    }
+}
+----
+
+citysearch.tpl
+[source,html]
+----
+<h2 class="moduleTitle">Results</h2>
+
+<table class="col-sm-12 table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Billing City</th>
+        <th>Shipping City</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach from=$results->getHitsAsBeans() item=beans key=module}
+        {foreach from=$beans item=bean}
+            <tr>
+                <td>
+                    <a href="/index.php?action=DetailView&module={$module}&record={$bean->id}&offset=1">{$bean->name}</a>
+                </td>
+                <td>
+                    {$bean->shipping_address_city|default:'N/A'}
+                </td>
+                <td>
+                    {$bean->billing_address_city|default:'N/A'}
+                </td>
+            </tr>
+        {/foreach}
+
+        {* In case there are 0 results *}
+        {foreachelse}
+            <tr>
+                <td colspan="3" class="error">No results matching your search criteria. Try broadening your search.</td>
+            </tr>
+    {/foreach}
+    </tbody>
+</table>
+----
+
+== Throwing errors
+You can safely throw exceptions at any point while writing your own SearchEngine. Errors will be caught
+by the `SearchThrowableHandler` class and a friendly message will be shown to the user.
+
+If your SuiteCRM instance is in developer mode a detailed exception page will be shown, making it easier for you to
+debug.
+
+In the example below the same erroneous query is shown with `developer mode` on (left) and off (right). image:ErrorPage.png[asd]
+
+If you wish to directly show an error message to the user, you can throw a `SearchUserFriendlyException`. Remember to
+use the translation framework if you want the error to be localised, and never show details that are (too) technical.
+
+Example of throwing a user-friendly error message:
+[source, php]
+throw new SearchUserFriendlyException(translate('LBL_ERROR_MESSAGE_INVALID_QUERY'));
+
+== Conclusions
+
+To learn more about the Search Framework, do not be afraid to look at the code in `lib\Search`.
+It is intended to be simple, readable and well-documented.
