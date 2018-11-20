@@ -6,6 +6,9 @@ public/
 *.suo
 *.phpproj
 
+# IntelliJ
+.idea/
+
 # npm
 node_modules/
 
