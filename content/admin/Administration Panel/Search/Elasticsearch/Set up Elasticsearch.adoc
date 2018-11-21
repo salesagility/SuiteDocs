@@ -1,0 +1,138 @@
+---
+title: Set up Elasticsearch
+weight: 2
+---
+
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
+:toc:
+
+{{% notice note %}}
+SuiteCRM requires Elasticsearch 5.6.
+{{% /notice %}}
+
+Elasticsearch requires Java 8 to run, supporting only `Oracle Java` and `OpenJDK`.
+
+The quickest ways of having an Elasticsearch server up and running is by
+either using the the official Docker image, or the .deb package for Debian-based systems (like Ubuntu).
+
+In this guide we will assume that you are attempting to install
+Elasticsearch on an Ubuntu machine. Refer to the
+https://www.elastic.co/guide/en/elasticsearch/reference/5.6/install-elasticsearch.html[official documentation]
+to know how to install Elasticsearch in different ways.
+
+This guide will teach you how to have a development server up and running with very little configuration,
+either by installing via Docker or .deb package.
+Please keep in mind this guide is not suitable for setting up a production Elasticsearch server.
+
+== Install via Docker (recommended)
+
+{{% notice note %}}
+Be sure that the current user belongs to the `docker` group or you'll receive permission issues.
+{{% /notice %}}
+
+Download image:
+
+[source,bash]
+docker pull docker.elastic.co/elasticsearch/elasticsearch:5.6.10
+
+=== Start with `docker run`
+
+Start Elasticsearch. This is ideal for a test/development server.
+
+[source,bash]
+docker run -p 9200:9200 -p 9300:9300 \
+-e "discovery.type=single-node" -e "xpack.security.enabled=false" \
+docker.elastic.co/elasticsearch/elasticsearch:5.6.10
+
+=== Start with `docker-compose`
+
+Create a new `docker-compose.yml` file or add the elasticsearch configuration your pre-existing docker-compose.
+
+[source,yaml]
+----
+version: '3'
+services:
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:5.6.10
+        container_name: elasticsearch
+        restart: unless-stopped
+        ports:
+            - 9200:9200
+            - 9300:9300
+        environment:
+            - discovery.type=single-node
+            - xpack.security.enabled=false
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+----
+
+And start with:
+
+[source,bash]
+docker-compose up
+
+== Install via .deb (not recommended)
+
+Download and install the public signing key:
+
+[source,bash]
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+You may need to install the `apt-transport-https` package on Debian before proceeding:
+
+[source,bash]
+sudo apt-get install apt-transport-https
+
+Save the repository definition to `/etc/apt/sources.list.d/elastic-5.x.list`:
+
+[source,bash]
+echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+
+Update the repository and install OpenJDK 11 and Elasticsearch:
+
+[source,bash]
+sudo apt-get update && sudo apt-get install openjdk-11-jre elasticsearch
+
+{{% notice note %}}
+You might need to tweak the OpenJDK version to match the one available for your distribution.
+{{% /notice %}}
+
+Start Elasticsearch with:
+
+[source,bash]
+sudo systemctl start elasticsearch.service
+
+== Test Installation
+
+Check if the server is running with:
+
+[source,bash]
+curl -X GET "localhost:9200/"
+
+And you should receive something like this:
+
+[source,json]
+----
+{
+  "name" : "B5VzMdk",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "KGoWI84GQ8SZipmDaeA7pA",
+  "version" : {
+    "number" : "5.6.10",
+    "build_hash" : "b727a60",
+    "build_date" : "2018-06-06T15:48:34.860Z",
+    "build_snapshot" : false,
+    "lucene_version" : "6.6.1"
+  },
+  "tagline" : "You Know, for Search"
+}
+----
+
+{{% notice warning %}}
+Note that the current set up does not provide authentication.
+Remember to secure your Elasticsearch server before going to production,
+or your data will be vulnerable!
+{{% /notice %}}
+

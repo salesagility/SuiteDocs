@@ -1,0 +1,25 @@
+---
+title: Introduction
+weight: 1
+---
+
+{{% notice info %}}
+This enhancement is in **Beta** please help by providing us your feedback!
+{{% /notice %}}
+
+https://www.elastic.co/[Elasticsearch] is an indexing engine that is built specifically to
+have almost real time search results, optimised for searching text strings.
+It is built in Java and runs as a separate server/process.
+
+Elasticsearch can be integrated with SuiteCRM to widely improve search quality and time.
+To achieve this, search-enabled modules are indexed on the Elasticsearch server.
+When a search query is received by SuiteCRM it is redirected to the Elasticsearch server,
+which will perform an optimised search and return the results back to the CRM.
+
+SuiteCRM currently supports only `Elasticsearch 5.6`.
+
+Synchronisation between the database and the elasticsearch index happens in three main ways:
+
+Logic Hooks:: Every time a record is updated it gets re-indexed automatically.
+Scheduled task:: A scheduler job will run periodically to make sure that the database and the index are synchronised.
+Manual indexing:: A full or partial index can be requested by an administrator via the admin panel or from a Robo task.
