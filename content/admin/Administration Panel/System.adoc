@@ -48,6 +48,10 @@ image:SystemSettings2.png[title = "System Settings"]
 === Proxy Settings
 Configure Click-To-Call settings here.
 
+=== Google Authentication
+This is where you upload the JSON credential file. +
+See the link:/admin/google-sync[Google Credentials and Syncing] Section.
+
 === Advanced Settings
 
 [cols = "30, 70", frame = "none", grid = "none"]
