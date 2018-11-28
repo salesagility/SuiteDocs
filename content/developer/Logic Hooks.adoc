@@ -346,6 +346,6 @@ hooks.
 Most logic hooks will cause additional code which can degrade the users
 experience. If you have long running code in the after_save the user
 will need to wait for that code to run. This can be avoided by either
-ensuring the code runs quickly or by using the Job Queue (see the Job
-Queue chapter for more information). 
+ensuring the code runs quickly or by using the Job Queue (See the section on
+  link:../scheduled-tasks/[Scheduled Tasks] for more information). 
 {{% /notice %}}
