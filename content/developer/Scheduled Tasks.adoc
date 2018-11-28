@@ -136,7 +136,8 @@ class SomeClass
          $admin->retrieveSettings();
          $admin->settings['notify_fromname']
          $mailer->From     = $admin->settings['notify_fromaddress']
-         $mailer->FromName = $emailSettings['from_name'];
+         $mailer->FromName = $admin->settings['notify_fromname'];
+         
          $mailer->IsHTML(true);
  
          //Add message and recipient.
