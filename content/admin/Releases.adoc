@@ -61,9 +61,28 @@ _Released 5th Dec 2018_
 * https://github.com/salesagility/SuiteCRM/pull/6555[#6555 ] Fixed bracket issue
 * https://github.com/salesagility/SuiteCRM/pull/6556[#6556 ] Default navigation paradigm should be used
 
+*Users of ALL previous 7.9+ releases are advised to Upgrade to 7.10.11 as soon as possible.*
+
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
+[[anchor-7.10.10-community]]
+_Special thanks to the following members for their contributions!
+* https://github.com/gunnicom[gunnicom]
+* https://github.com/LEAP-nishit[LEAP-nishit]
+* https://github.com/lazka[lazka]
+* https://github.com/rediansoftware[rediansoftware]
+* https://github.com/QuickCRM[QuickCRM]
+* https://github.com/AussieGuy0[AussieGuy0]
+* https://github.com/apoonawa[apoonawa]
+
+That's a total of **12 community merges** across the releases! Well done everyone!
+
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+_Also special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issue.
+
+Lastly, thanks for the community for testing and confirming pull requests work and raising issues!
 
 '''
 
@@ -939,9 +958,17 @@ _Released 4th Dec 2018_
 * https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Edit View
 * https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 Import mapping publish button
 
+*Users of ALL previous 7.8+ releases are advised to Upgrade to 7.8.24 as soon as possible.*
+
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
+
+_Special thanks to the #anchor-7.10.10-community[following members] for their contributions
+
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+_Also special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issue.
 
 '''
 
