@@ -90,8 +90,7 @@ Emails can also be composed directly from a *SuiteCRM* record by clicking the em
 This will open compose view in the *Emails* module. For new emails opened in this way, the *To:* field 
 will be automatically populated and the email will related to the relevant record. 
 
-{{% notice note %}}If you have opted to use an external email client in your 
-link:../../modules/email-settings/#_user_profile_email_settings[user profile email settings], clicking an 
+{{% notice note %}}If you have opted to use an external email client in your link:../../introduction/managing-user-accounts#_personal_email_account_settings[user profile email settings], clicking an 
 email address on a record in *SuiteCRM* will open a new email in your chosen editor.
 {{% /notice %}}
 
