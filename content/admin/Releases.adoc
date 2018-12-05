@@ -66,7 +66,9 @@ _Released 5th Dec 2018_
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 [[anchor-7.10.10-community]]
-_Special thanks to the following members for their contributions!
+
+_Special thanks to the following members for their contributions!_
+
 * https://github.com/gunnicom[gunnicom]
 * https://github.com/LEAP-nishit[LEAP-nishit]
 * https://github.com/lazka[lazka]
@@ -80,9 +82,9 @@ That's a total of **12 community merges** across the releases! Well done everyon
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 _Also special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
-raising/reviewing security issue.
+raising/reviewing security issue._
 
-Lastly, thanks for the community for testing and confirming pull requests work and raising issues!
+Lastly a big thank you to the community for testing and confirming pull requests!
 
 '''
 
@@ -963,12 +965,12 @@ _Released 4th Dec 2018_
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 
-_Special thanks to the #anchor-7.10.10-community[following members] for their contributions
+_Special thanks to the #anchor-7.10.10-community[following members] for their contributions_
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 _Also special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
-raising/reviewing security issue.
+raising/reviewing security issue._
 
 '''
 
