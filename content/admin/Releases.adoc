@@ -10,11 +10,11 @@ weight: 50
 [frame="none", grid="none"]
 |===
 
-s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>
+s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>, <<anchor-7.10.11, 7.10.11>>
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>, <<anchor-7.9.16, 7.9.16>>, <<anchor-7.9.17, 7.9.17>>
 
-s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>
+s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>, <<anchor-7.8.24, 7.8.24 - LTS>>
 
 s|7.7.x, <<anchor-7.7Beta, 7.7 Beta>>, <<anchor-7.7Beta2, 7.7 Beta 2>>, <<anchor-7.7RC, 7.7 RC>>, <<anchor-7.7RC2, 7.7 RC 2>>, <<anchor-7.7.0, 7.7.0>>, <<anchor-7.7.1, 7.7.1>>, <<anchor-7.7.2, 7.7.2>>, <<anchor-7.7.3, 7.7.3>>, <<anchor-7.7.4, 7.7.4>>, <<anchor-7.7.5, 7.7.5>>, <<anchor-7.7.6, 7.7.6>>, <<anchor-7.7.7, 7.7.7>>, <<anchor-7.7.8, 7.7.8>>, <<anchor-7.7.9, 7.7.9>> 
 
@@ -34,6 +34,59 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 
 |===
 
+
+[[anchor-7.10.11]]
+== 7.10.11
+
+_Released 5th Dec 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.11.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.11.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 - Import mapping publish button
+* https://github.com/salesagility/SuiteCRM/issues/3440[#3440 ] Fixed #3440 - Make sure deleted users are not used when validating users
+* https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Panels showing wrong in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/6240[#6240 ] Fixed #6240 - PipelineBySalesStageDashlet not converting currency
+* https://github.com/salesagility/SuiteCRM/pull/6348[#6348 ] Change hard coded labels in Events invites
+* https://github.com/salesagility/SuiteCRM/pull/6381[#6381 ] Time issue fixed in email template for datetime fields
+* https://github.com/salesagility/SuiteCRM/issues/6432[#6432 ] Fixed #6432 - Studio: invisible "pencil" icon to edit panel labels
+* https://github.com/salesagility/SuiteCRM/issues/4123[#4123 ] Fixed #4123 - reports: fix adding parameterized reports to target lists
+* https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
+* https://github.com/salesagility/SuiteCRM/pull/6555[#6555 ] Fixed bracket issue
+* https://github.com/salesagility/SuiteCRM/pull/6556[#6556 ] Default navigation paradigm should be used
+
+*Users of ALL previous 7.9+ releases are advised to Upgrade to 7.10.11 as soon as possible.*
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+[[anchor-7.10.11-community]]
+
+_Special thanks to the following members for their contributions!_
+
+* https://github.com/gunnicom[gunnicom]
+* https://github.com/LEAP-nishit[LEAP-nishit]
+* https://github.com/lazka[lazka]
+* https://github.com/rediansoftware[rediansoftware]
+* https://github.com/QuickCRM[QuickCRM]
+* https://github.com/AussieGuy0[AussieGuy0]
+* https://github.com/apoonawa[apoonawa]
+
+That's a total of **12 community merges** across the releases! Well done everyone!
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+_Also special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issue._
+
+Lastly a big thank you to the community for testing and confirming pull requests!
+
+'''
 
 [[anchor-7.10.10]]
 == 7.10.10
@@ -881,6 +934,52 @@ _Released 16th Feb 2018_
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+
+'''
+
+[[anchor-7.8.24]]
+== 7.8.24
+
+_Released 4th Dec 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.24.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.24.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
+* https://github.com/salesagility/SuiteCRM/pull/6521[#6521 ] Brackets set wrong
+* https://github.com/salesagility/SuiteCRM/pull/6523[#6523 ] Default navigation paradigm should be used
+* https://github.com/salesagility/SuiteCRM/pull/6558[#6558 ] Time issue fixed in email template for datetime fields
+* https://github.com/salesagility/SuiteCRM/pull/6559[#6559 ] Change hard coded labels in Events invites
+* https://github.com/salesagility/SuiteCRM/issues/6240[#6240 ] Fixed #6240 - PipelineBySalesStageDashlet not converting currency
+* https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Edit View
+* https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 Import mapping publish button
+
+*Users of ALL previous 7.8+ releases are advised to Upgrade to 7.8.24 as soon as possible.*
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+Special thanks to the following members for their contributions
+
+* https://github.com/gunnicom[gunnicom]
+* https://github.com/LEAP-nishit[LEAP-nishit]
+* https://github.com/lazka[lazka]
+* https://github.com/rediansoftware[rediansoftware]
+* https://github.com/QuickCRM[QuickCRM]
+* https://github.com/AussieGuy0[AussieGuy0]
+* https://github.com/apoonawa[apoonawa]
+
+That's a total of **12 community merges** across the releases! Well done everyone!
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+_Also special thanks to https://github.com/rewanth1997[rewanth1997] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issue._
 
 '''
 
