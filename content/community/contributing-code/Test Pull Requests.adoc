@@ -5,7 +5,6 @@ Weight: 40
 
 :imagesdir: ./../../../../images/en/community
 
-== Testing Pull Requests
 
 Check out awaiting pull requests on our SuiteCRM repo https://github.com/salesagility/SuiteCRM/pulls[here].
 
@@ -28,7 +27,7 @@ Name the new branch uniquely if you want to test alot of PRs e.g. testing6611
 `cd /name/of/your/forked/instance` +
 `git checkout -b testing6614 hotfix`
 
-Lets pull down the author's branch into our new test branch using the author's repo
+Let's pull down the author's branch into our new test branch using the author's repo
 and branch name we obtained earlier.
 e.g. git pull {author's repo} {author's branch}
 
