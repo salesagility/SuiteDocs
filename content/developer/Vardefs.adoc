@@ -333,7 +333,7 @@ $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
 
 == Frontend
 
-When developing some complex JS functionality is very useful to have module vardefs definitions or custom data in the DOM so you can read it from JS.
+When developing some complex JavaScript functionality is very useful to have module vardefs definitions or custom data in the DOM so you can read it from JavaScript.
 
 Adding vardefs.php definitions to a specific view is very simple:
 
@@ -342,8 +342,8 @@ Adding vardefs.php definitions to a specific view is very simple:
 ----
 class AccountsViewEdit extends ViewEdit
 {
- 	public function __construct()
- 	{
+    public function __construct()
+    {
  		parent::__construct();
  		$this->useForSubpanel = true;
  		$this->useModuleQuickCreateTemplate = true;
@@ -353,7 +353,7 @@ class AccountsViewEdit extends ViewEdit
 }
 ----
 
-After that, you can access vardefs definitions from JS easily
+After that, you can access vardefs definitions from JavaScript easily
 
 image:vardefs.png[title="Accounts vardefs in SUGAR global"]
 
@@ -367,11 +367,11 @@ But we can also add other relevant information to the DOM, like for example deve
 ----
 class AccountsViewEdit extends ViewEdit
 {
- 	public function __construct()
- 	{
- 		parent::__construct();
- 		$this->useForSubpanel = true;
- 		$this->useModuleQuickCreateTemplate = true;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->useForSubpanel = true;
+        $this->useModuleQuickCreateTemplate = true;
         $data = $this->getVardefsData('Accounts');
         $this->addDomJS($data, 'vardefs');
 
