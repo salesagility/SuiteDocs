@@ -333,7 +333,7 @@ $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
 
 == Frontend
 
-When developing some complex JavaScript functionality is very useful to have module vardefs definitions or custom data in the DOM so you can read it from JavaScript.
+When developing some complex JavaScript functionality is very useful to have module vardefs definitions or custom data in the SUGAR global variable so you can read it from JavaScript.
 
 Adding vardefs.php definitions to a specific view is very simple:
 
@@ -358,7 +358,7 @@ After that, you can access vardefs definitions from JavaScript easily
 image:vardefs.png[title="Accounts vardefs in SUGAR global"]
 
 
-But we can also add other relevant information to the DOM, like for example developer's data ;-)
+But we can also add other relevant information to the SUGAR global variable, like for example developer's data ;-)
 
 
 
