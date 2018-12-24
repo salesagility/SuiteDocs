@@ -1305,6 +1305,82 @@ SuiteCRM config overrides:
 $sugar_config['state_checker']['php_configuration_option_keys']
 --
 
+=== How to: Testing Imap
+
+Developers able to write IMAP test (unit and acceptance tests).
+
+If developer mode set and logger level is `debug` the ImapHandler class logs each imap calls, then each imap method call logged with called parameter and return values so that the developers and testers can see exactly whats going on in the background.
+If imap_test set, the system use fake calls by pre defined method parameters and return values in ImapHandlerFakeCalls.php so that the developers able to add more tests for any email functionality even if it needs a valid imap resource.
+
+- ImapHandler: Wrapper class for functions of IMAP PHP built in extension.
+- ImapHandlerFacotry: Retrieves an ImapHandlerInterface. It could be ImapHandler or ImapHandlerFake. Use `$sugar_config['imap_test'] = true` in config_override.php to set test mode on.
+- ImapHandlerFake: Wrapper class for functions of IMAP PHP built in extension. (tests only)
+- ImapHandlerFakeCalls.php: describes the fake imap functions return values for each function calls with a specific parameters in every test screnario.
+- ImapHandlerFakeData: For tests only, it deals fake return values for fake calls on an IMAP wrapper.
+- ImapHandlerInterface: IMAP wrappers need to implements so that the system can use it as an IMAP handler.
+- ImapTestSettingsEntry.php: for an entry point to set the current test scennario in any acceptance test can call it. (entry point example: `index.php?entryPoint=setImapTestSettings&imap_test_settings=[index of array in ImapHandlerFakeCalls.php]`)
+
+Example usage in Unit Tests:
+
+first needs to include the following files:
+[source, php]
+--
+include_once __DIR__ . '/../../../../../include/Imap/ImapHandlerFakeData.php';
+include_once __DIR__ . '/../../../../../include/Imap/ImapHandlerFake.php';
+--
+Example unit test for imap connection (using fake imap data)
+[source, php]
+--
+     public function testConnectMailserverUseSsl()
+     {
+        // saving state
+         $state = new SuiteCRM\StateSaver();
+         $state->pushGlobals();
+         
+         // using fake imap handler behaviour in test
+         $fake = new ImapHandlerFakeData();
+         
+         // set up the fake handler behaviour
+         $fake->add('isAvailable', null, [true]);
+         $fake->add('setTimeout', [1, 60], [true]);
+         $fake->add('setTimeout', [2, 60], [true]);
+         $fake->add('setTimeout', [3, 60], [true]);
+         $fake->add('getErrors', null, [false]);
+         $fake->add('getConnection', null, [function () {
+             // the current crm code needs a valid resource to an imap server
+             // but also will accept a file resource
+             return fopen('fakeImapResource', 'w+');
+         }]);
+         $fake->add('getMailboxes', ['{:/service=/notls/novalidate-cert/secure}', '*'], [[]]);
+         $fake->add('ping', null, [true]);
+         $fake->add('reopen', ['{:/service=}', 32768, 0], [true]);
+         
+         // instanciate a fake imap handler
+         $imap = new ImapHandlerFake($fake);
+         
+         $_REQUEST['ssl'] = 1;
+         
+         // using fake imap in InboundEmail class (only for testing)
+         $ie = new InboundEmail($imap);
+         
+         // test connection, it should pass
+         $ret = $ie->connectMailserver();
+         $this->assertEquals('true', $ret);
+         
+         // restore state
+         $state->popGlobals();
+     }
+--
+
+usefull config variables:
+[source, php]
+--
+$sugar_config['imap_test'] = true;
+$sugar_config['logger']['level'] = 'debug';
+$sugar_config['stack_trace_errors'] = false; // set to true for more details
+$sugar_config['developerMode'] = true;
+$sugar_config['show_log_trace'] = false; // set to true for more details
+--
 
 == References
 
