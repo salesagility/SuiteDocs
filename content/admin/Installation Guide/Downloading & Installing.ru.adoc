@@ -1,6 +1,6 @@
 ---
-title: Установка и русификация
-weight: 20
+Title: Установка и русификация
+Weight: 20
 ---
 
 :author: likhobory
@@ -82,7 +82,7 @@ RedirectMatch 403 (?i)/+not_imported_.*\.txt
 RedirectMatch 403 (?i)/+(soap|cache|xtemplate|data|examples|include|log4php|metadata|modules)/+.*\.(php|tpl) 
 RedirectMatch 403 (?i)/+emailmandelivery\.php 
 RedirectMatch 403 (?i)/+cache/+upload 
-# END SUITECRM RESTRICTIONS `
+# END SUITECRM RESTRICTIONS 
 ----
 
 Для проверки действия этих ограничений попытайтесь просмотреть через браузер файл *_suitecrm.log_*, должна появиться ошибка *_#403_*. Если этого не произошло – проверьте файл *_.htaccess_*. За более подробной информацией обратитесь к документации Apache.
