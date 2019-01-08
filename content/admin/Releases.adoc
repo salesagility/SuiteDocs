@@ -5787,3 +5787,117 @@ Adding details to SuiteCRM readme.md
 == 7.0.0
 
 *SuiteCRM was released on 21st October 2013!*
+
+
+
+
+---
+
+---
+
+---
+
+---
+
+
+
+
+
+
+. https://github.com/Abuelodelanada[Abuelodelanada]
+. https://github.com/adriangibanelbtactic[adriangibanelbtactic]
+. https://github.com/ApatheticCosmos[ApatheticCosmos]
+. https://github.com/ChangezKhan[ChangezKhan]
+. https://github.com/hieuhoanghd[hieuhoanghd]
+. https://github.com/horus68[horus68]
+. https://github.com/JanSiero[JanSiero]
+. https://github.com/Jorilx[Jorilx]
+. https://github.com/jsamelko[jsamelko]
+. https://github.com/lazka[lazka]
+. https://github.com/LEAP-nishit[LEAP-nishit]
+. https://github.com/likhobory[likhobory]
+. https://github.com/LionelBino[LionelBino]
+. https://github.com/Mausino[Mausino]
+. https://github.com/pribeiro42[pribeiro42]
+. https://github.com/urdhvatech[urdhvatech]
+
+
+
+* [*] This is checked
+* [x] This is also checked
+* [ ] This is not checked 
+
+
+
+[cols="2", opotions="header"]
+|===
+|Application
+|Language
+
+|AsciiDoc
+|Python
+
+|Asciidoctor
+|Ruby
+|===
+
+
+
+.GitHub
+****
+GitHub Inc. is a web-based hosting service for version control using Git. It is mostly used for computer code. It offers all of the distributed version control and source code management functionality of Git as well as adding its own features.
+****
+
+
+
+++++
+<p>
+Content in a passthrough block is passed to the output unprocessed.
+That means you can include raw HTML, like this embedded Gist:
+</p>
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+<script src="https://gist.github.com/mojavelinux/5333524.js">
+</script>
+++++
+
+
+
+:jacksAnswer: My Name is Jack
+
+[source,xml,subs="verbatim,attributes"]
+----
+<dependency>
+  <groupId>org.asciidoctor</groupId>
+  <artifactId>asciidoctor-java-integration</artifactId>
+  <version>{jacksAnswer}</version>
+</dependency>
+----
+
+
+
+|===
+|Shortcut |Purpose
+|kbd:[F11]
+|Toggle fullscreen
+|kbd:[Ctrl+T]
+|Open a new tabkbd:[Ctrl+Shift+N]
+|New incognito window
+|kbd:[\ ]
+|Used to escape characters
+|kbd:[Ctrl+\]]
+|Jump to keyword
+|kbd:[Ctrl + +]
+|Increase zoom
+|===
+
+
+
+
+
+
+
+
+
+
+
+
