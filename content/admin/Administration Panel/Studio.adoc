@@ -104,7 +104,7 @@ The following data types are available when creating fields in Studio:
 
 [cols = "20, 80", frame = "none", grid = "none"]
 |===
-|*Data Types*|Description 
+|*Data Types*|*Description* 
 |*Address*|Creates fields for street, city, postal code, state, and country. + 
 Custom address fields cannot be grouped together like stock address fields (e.g. billing address) 
 |*Checkbox*|Creates a checkbox for data fields with a Yes/No action 
