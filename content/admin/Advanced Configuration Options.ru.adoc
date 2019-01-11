@@ -9,6 +9,9 @@ Weight: 52
 :toc:
 :toc-title: Оглавление
 
+:imagesdir: ./../../../images/ru/admin/AdvancedConfigurationOptions
+
+ifdef::env-github[:imagesdir: ./../../../master/static/images/ru/admin/AdvancedConfigurationOptions]
 
 = Настройка дополнительных параметров 
 
@@ -95,3 +98,23 @@ Weight: 52
 $sugar_config['enable_legacy_search'][] = 'Accounts';
 $sugar_config['enable_legacy_search'][] = 'Users';
 $sugar_config['enable_legacy_search'][] = 'Employees';
+
+
+== Субпанели: замена выпадающего меню на кнопки
+
+При необходимости можно отображать функции той или иной субпанели не в виде пунктов выпадающего меню, а в виде кнопок.
+На рисунке ниже показан пример изменённой субпанели *ИСТОРИЯ* в модуле *Предварительные контакты*:
+
+image:image1.png[Замена выпадающего меню на кнопки]
+
+Для изменения субпанели выполните следующее:
+
+ . Создайте файл `custom/Extension/modules/Leads/Ext/Layoutdefs/myCustomization.php`
+ . Добавьте в него строку: 
+ 
+[source,php]
+$layout_defs['Leads']['subpanel_setup']['history']['flat'] = 1
+ 
+[start=3]
+ . Выполните link:../administration-panel/system/#_Восстановление[Быстрое восстановление].
+ 
