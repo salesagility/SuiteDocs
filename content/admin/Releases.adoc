@@ -50,18 +50,16 @@ _Released 14th Jan 2019_
 
 === **Release Notes**
 
-[discrete]
+==== **Enhancements**
 
-=== **Enhancements**
-
-==== Google Calendar Synchronisation
+===== Google Calendar Synchronisation
 
 Users can authenticate using their Google login and synchronise their Meetings between a Google calendar – these include updates, reminders, and invitees.
 
 * https://github.com/salesagility/SuiteCRM/issues/6043[#6146] Synchronise SuiteCRM with Google Calendar
 
 
-==== Elasticsearch
+===== Elasticsearch
 
 Elasticsearch is an open-source, broadly-distributable, readily-scalable, enterprise-grade RESTful search engine. It provides a highly flexible solution to centrally store and index your data that can be accessed extremely quickly via its API. By including Elasticsearch as a core search engine integration SuiteCRM can now provide users a faster and better scalable way to perform full text searches via Global Search on larger data volumes than before.
 
@@ -73,7 +71,7 @@ Elasticsearch is an open-source, broadly-distributable, readily-scalable, enterp
 This allows the user to copy a record's email addresses using the workflow module actions to the newly created record if the option is checked.
 
 
-* https://github.com/salesagility/SuiteCRM/pull/6533[#6533 ] Adding the ability to set subapensl to display as flat buttons via layoutdefs
+* https://github.com/salesagility/SuiteCRM/pull/6533[#6533 ] Adding the ability to set subpanels to display as flat buttons via layoutdefs
 
 [source,php]
 ----
@@ -90,10 +88,10 @@ $data = $this->getVardefsData('Accounts');
 $this->addDomJS($data, 'vardefs');
 ----
 
-=== **Bug Fixes**
+==== **Bug Fixes**
 
 
-==== Emails
+===== Emails
 
 * https://github.com/salesagility/SuiteCRM/pull/6734[#6734] 	Resolved the bug where users were unable to navigate using the tab order
 * https://github.com/salesagility/SuiteCRM/pull/6590[#6590 ] 	Insert images in Email Templates with tinyMCE
@@ -111,7 +109,7 @@ $this->addDomJS($data, 'vardefs');
 
 ---
 
-==== Misc
+===== Miscellaneous
 
 * https://github.com/salesagility/SuiteCRM/issues/3763[#3763] 	Fixed #3763 - Resolved the bug that stopped users to navigate using tab order
 * https://github.com/salesagility/SuiteCRM/issues/717[#717] 	Fixed #717 - Corrects Field Indention on Detailview when by itself on panel
@@ -149,7 +147,7 @@ $this->addDomJS($data, 'vardefs');
 
 
 
-==== Developer
+===== Developer
 
 * https://github.com/salesagility/SuiteCRM/pull/6260[#6260 ] 	New Tests for Inbound Email functionality
 * https://github.com/salesagility/SuiteCRM/issues/2400[#2400 ] 	Fixed #2400 - Language manifest is duplicated and overwritten on each install
@@ -176,7 +174,7 @@ $this->addDomJS($data, 'vardefs');
 
 ==== Change in file location:
 
-[cols="1,2,2", options="header"]
+[cols="1h,2,2", options="header"]
 |===
 |Library
 |Old Location
@@ -195,7 +193,6 @@ $this->addDomJS($data, 'vardefs');
 |vendor/phpmailer/phpmailer
 |===
 
-[%hardbreaks]
 
 '''
 
@@ -207,7 +204,8 @@ In total, we have merged a **MASSIVE 69 PULL REQUESTS** with **24** of these fro
 {{% /notice %}}
 
 
-Special thanks to the following members for their contributions and participation in this release (in order of most Pull Requests contributed). +
+Special thanks to the following members for their contributions and participation in this release 
+(in order of most Pull Requests contributed). +
 
 . https://github.com/lazka[lazka]
 . https://github.com/Abuelodelanada[Abuelodelanada]
@@ -226,7 +224,8 @@ Special thanks to the following members for their contributions and participatio
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -284,7 +283,7 @@ _Released 14th Jan 2019_
 * https://github.com/salesagility/SuiteCRM/issues/6487[#6487 ] Fixed #6487 - Resolves the DB time shown for related email addresses in reports module
 * https://github.com/salesagility/SuiteCRM/issues/6472[#6472 ] Fixed #6472 - Resolved wrong sized image for email templates in the campaign wizard
 * https://github.com/salesagility/SuiteCRM/pull/6530[#6530 ] Fixed #6530 - unsubscribed users no longer showing up as subscribed
-* https://github.com/salesagility/SuiteCRM/pull/6533[#6533 ] Adding the ability to set subapensl to display as flat buttons via layoutdefs
+* https://github.com/salesagility/SuiteCRM/pull/6533[#6533 ] Adding the ability to set subpanels to display as flat buttons via layoutdefs
 * https://github.com/salesagility/SuiteCRM/issues/6549[#6549 ] Fixed #6549 - No longer a missing surveys_campaigns relationship
 * https://github.com/salesagility/SuiteCRM/pull/6566[#6566 ] Update composer.json + composer.lock
 * https://github.com/salesagility/SuiteCRM/issues/6568[#6568 ] Fixed #6568 - Change minimun and recommended PHP
@@ -316,7 +315,8 @@ _Released 14th Jan 2019_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 
 
@@ -339,7 +339,6 @@ _Released 14th Jan 2019_
 
 === **Release Notes**
 
-[discrete]
 
 
 ==== **Bug Fixes**
@@ -374,7 +373,8 @@ _Released 14th Jan 2019_
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 
 
@@ -463,9 +463,12 @@ _Special thanks to the following members for their contributions and participati
 * https://github.com/pribeiro42[pribeiro42]
 * https://github.com/urdhvatech[urdhvatech]
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com
 
-Lastly a big thank you to the community for testing and confirming pull requests in our 17-18th Decemeber 2018 Pull Request Party. This release is the result of the hard work and effort everyone put into the project!
+Lastly a big thank you to the community for testing and confirming pull requests in 
+our 17-18th December 2018 Pull Request Party. This release is the result of the hard work and 
+effort everyone put into the project!
 
 
 
@@ -519,7 +522,8 @@ _Special thanks to the following members for their contributions!_
 
 That's a total of **12 community merges** across the releases! Well done everyone!
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 _Also special thanks to https://www.linkedin.com/in/rewanthcool/[Rewanth Cool] and https://github.com/hrushikeshk[hrushikeshk] for
 raising/reviewing security issue._
@@ -569,7 +573,8 @@ Introducing re factored API version 8. Please review the updated documentation [
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -593,7 +598,8 @@ _Released 17th Sep 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -739,7 +745,8 @@ _Released 13th Sep 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 _Special thanks to https://www.linkedin.com/in/rewanthcool/[Rewanth Cool] and https://github.com/hrushikeshk[hrushikeshk] for
 raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
@@ -778,7 +785,8 @@ _Released 18th Jun 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -842,7 +850,8 @@ _Released 6th Jun 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -911,7 +920,8 @@ _Released 21st May 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -958,7 +968,8 @@ _Released 9th Apr 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1038,7 +1049,8 @@ _Released 3rd Apr 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1098,7 +1110,8 @@ _Released 15th Mar 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1164,7 +1177,8 @@ _Released 5th Mar 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.10.1[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1242,7 +1256,8 @@ _Released 19th Feb 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1287,7 +1302,8 @@ _Released 3rd Apr 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1314,7 +1330,8 @@ _Released 15th Mar 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1348,7 +1365,8 @@ _Released 5th Mar 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.15[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1372,7 +1390,8 @@ _Released 16th Feb 2018_
 * https://github.com/salesagility/SuiteCRM/issues/2406[#2406 ] Fixed #2406 - SuiteP - 2 small css issues
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+We have also updated our Security Process asking the community to send their security issues directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1415,7 +1434,8 @@ Special thanks to the following members for their contributions
 
 That's a total of **12 community merges** across the releases! Well done everyone!
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 _Also special thanks to https://www.linkedin.com/in/rewanthcool/[Rewanth Cool] and https://github.com/hrushikeshk[hrushikeshk] for
 raising/reviewing security issue._
@@ -1445,7 +1465,8 @@ _Released 24th Oct 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1470,7 +1491,8 @@ _Released 17th Sep 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1547,7 +1569,8 @@ _Released 13th Sep 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 _Special thanks to https://www.linkedin.com/in/rewanthcool/[Rewanth Cool] and https://github.com/hrushikeshk[hrushikeshk] for
 raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
@@ -1583,7 +1606,8 @@ _Released 6th Jun 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com
 
 '''
 
@@ -1625,7 +1649,8 @@ _Released 21st May 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1674,7 +1699,8 @@ _Released 3rd Apr 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1703,7 +1729,8 @@ _Released 15th Mar 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1740,7 +1767,8 @@ _Released 5th Mar 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.16[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1767,7 +1795,8 @@ _Released 16th Feb 2018_
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+We have also updated our Security Process asking the community to send their security issues directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1819,7 +1848,8 @@ _Released 16 Feb 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.14[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+We have also updated our Security Process asking the community to send their security issues directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1881,7 +1911,8 @@ _Released 16 Feb 2018_
 
 Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.10-RC-2[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+We have also updated our Security Process asking the community to send their security issues directly to us 
+via email security@suitecrm.com.
 
 '''
 
@@ -1902,13 +1933,17 @@ Opt-In and Confirmed-Opt-In.
 
 1. Opt In is used to indicate that a Contact, Lead or Target has opted in to receive marketing communications.
 
-2. Confirmed Opt In further requires users to confirm their opt-in status by clicking a link sent to them via email. This email can be configured to send automa cally (e.g. on submission of a Web-To-Person form) or manually, and the template used to send this email can be customised.
+2. Confirmed Opt In further requires users to confirm their opt-in status by clicking a link sent to them 
+via email. This email can be configured to send automa cally (e.g. on submission of a Web-To-Person form) or manually, 
+and the template used to send this email can be customised.
 
 *You can read more about this new feature link:/user/modules/confirmed-opt-in-settings/[here].*
 
-Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.13[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.13[here] from the SuiteCRM GitHub Repository 
+or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com
+We have also updated our Security Process asking the community to send their security issues directly to us 
+via email security@suitecrm.com.
 
 '''
 
