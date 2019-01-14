@@ -4,7 +4,7 @@ weight: 5
 ---
 
 {{% notice info %}}
-This enhancement is in **Beta** please help by providing us your feedback!
+This enhancement is only available in SuiteCRM from version 7.11 onwards.
 {{% /notice %}}
 
 In order to make the troubleshooting process easier for the Elasticsearch extension, a separate file is used to offer
@@ -16,9 +16,9 @@ In addition to checking the logs, you could try running the search or the indexi
 link:../command-line-tools[command line tools]. Given the verbosity of the console output, this should surely help
 narrowing down the issue.
 
-Finally, enabling the `developer mode` in the admin settings, will provide a clear exception page if the error happens
+Finally, enabling the *developer mode* in the admin settings, will provide a clear exception page if the error happens
 at some point during the search process.
 
-:imagesdir: ./../../../../../images/en/admin/ElasticSearch
+:imagesdir: /images/en/admin/ElasticSearch
 
 image:ErrorPage.png[An example of detailed error page]
