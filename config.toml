@@ -20,7 +20,7 @@ timeout = 38000
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-section = [ "HTML", "RSS", "JSON"]
+section = [ "HTML", "RSS"]
 
 [Languages]
 [Languages.en]
