@@ -7,47 +7,45 @@ weight: 17
 
 == Robo
 
-SuiteCRM utilises https://robo.li[robo tasks] to provide automation for common tasks.
+SuiteCRM utilises https://robo.li[Robo tasks] to provide automation for common tasks.
 
 === Listing the available automated tasks in Robo
 
-==== bash:
+==== Linux:
 
-Open terminal and run robo
+Open `bash` terminal and run robo
 
 `./vendor/bin/robo list`
 
-==== Command Prompt:
-
-Open Command Prompt and run robo
-
-`.\vendor\bin\robo list`
-
-=== Getting help for automated tasks in Robo
-
-==== bash:
-
-Open terminal and run robo
+You get help for each task using:
 
 `./vendor/bin/robo [taskname] -h`
 
-==== Command Prompt:
+==== Windows:
 
-Open Command Prompt and run robo
+Open `Command Prompt` and run robo
+
+`.\vendor\bin\robo list`
+
+You can get help for each task using:
 
 `.\vendor\bin\robo [taskname] -h`
 
 === Making your own custom Robo tasks
 
-You can create custom commands for SuiteCRM in the `custom/lib/Robo/Plugin/Commands/` directory. For example, you can have a file called `custom/lib/Robo/Plugin/Commands/DeployCommands.php` with some custom tasks for deploying SuiteCRM.
+You can create custom commands for SuiteCRM in the `custom/lib/Robo/Plugin/Commands/` directory. 
+For example, you can have a file called `custom/lib/Robo/Plugin/Commands/DeployCommands.php` with 
+some custom tasks for deploying SuiteCRM.
 
-You can use any Robo functions from within the task, see https://robo.li/getting-started/[the documentation] for more info on what Robo provides.
+You can use any Robo functions from within the task, see https://robo.li/getting-started/[the Robo documentation] 
+for more info on what Robo provides.
 
 You can also use PHP's various scripting functions, like https://php.net/manual/en/function.exec.php[`exec`].
 
 Here's an example Robo task:
 
-```php
+[source,php]
+----------
 <?php
 namespace SuiteCRM\Custom\Robo\Plugin\Commands;
 
@@ -94,6 +92,9 @@ class DeployCommands extends \Robo\Tasks
         // https://symfony.com/doc/current/console/style.html
     }
 }
-```
+----------
 
-As mentioned above, you can use `./vendor/bin/robo list` to list all available Robo commands, including your custom tasks. You may need to run `composer install` to make sure Composer has installed Robo, and you'll also need to run `composer dump-autoload` when you add a new Robo task to make sure that Composer picks up the new files.
+As mentioned above, you can use `./vendor/bin/robo list` to list all available Robo commands, including your 
+custom tasks. You may need to run `composer install` to make sure Composer has installed Robo, and you'll 
+also need to run `composer dump-autoload` when you add a new Robo task to make sure that Composer picks up 
+the new files.
