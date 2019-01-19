@@ -5,7 +5,7 @@ weight: 70
 
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/admin
+:imagesdir: /images/en/admin
 
 :toc:
 
@@ -50,7 +50,7 @@ The search works very similar to the standard global search, but provides the en
 functionality of searching text in documents and other files, compared to the record-level 
 search provided by the standard global search.
 
-See the link:../../../../user/introduction/user-interface/_#search[Search] documentation in the user
+See the link:../../../user/introduction/user-interface/search[Search] documentation in the user
 guide for more information on searching in *SuiteCRM*.
 
 == AOP Settings

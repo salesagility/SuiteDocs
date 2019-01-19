@@ -20,7 +20,7 @@ to install the package.
 
 The `manifest.php` file contains the definition of three arrays. Let’s
 look at each of these arrays in turn. See
-link:../appendix-a---code-examples/[Appendix A] for the full sample
+link:../appendix-a-code-examples/[Appendix A] for the full sample
 `manifest.php` file.
 
 {{% notice info %}}

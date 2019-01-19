@@ -94,7 +94,7 @@ Click btn:[CREATE]
 
 The template is the message that will be sent out to your target list. You can select or edit an existing email template or create a new one here. See the Email Templates section of the user guide for more information.
 
-{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../modules/email-settings/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
+{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../introduction/managing-user-accounts/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
 
 image:81Campaign_template.png[title="Campaign Wizard Template"]
 

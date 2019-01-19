@@ -32,7 +32,7 @@ e.g of a commit command
 `git commit -m "Fixed #1436 - Reports with nested Parentheses are removing parameters"` + 
 +
 This commit message format allows us to easily include all bug
-fixes within major and minor link:Release_notes_7.6[release notes].
+fixes within major and minor *Release notes*.
 +
 If you are new to Writing Commit Messages in git follow the guide
 http://chris.beams.io/posts/git-commit/#seven-rules[here].

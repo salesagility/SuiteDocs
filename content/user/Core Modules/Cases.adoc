@@ -24,33 +24,33 @@ a new Account record.
 allows you to search and list Case records.
 * *Import Cases* – Redirects you will be taken to the Import Wizard for
 the Cases module. For more information, see
-link:./../../introduction/user-interface/#_importing_records[Importing Records].
+link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records].
 
 To view the full list of fields available when creating a Case, See
 link:./../../appendix-a/#_cases_field_list[Cases Field List].
 
 Advanced functionality for Cases can be found in the
-link:./../../advanced-modules/cases/[Cases] section of this
+link:./../../advanced-modules/cases-with-portal/[Cases with Portal] section of this
 User Guide.
 
 == Managing Cases
 
 * To sort records on the Cases List View, click any column title which
 is sortable. This will sort the column either ascending or descending.
-* To search for a Case, see the link:./../../introduction/user-interface/#_search[Search] section of this
+* To search for a Case, see the link:./../../introduction/user-interface/search[Search] section of this
 user guide.
 * To update some or all the Cases on the List View, use the Mass Update
-panel as described in the link:./../../introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
+panel as described in the link:./../../introduction/user-interface/record-management/#_mass_updating_records[Mass Updating Records] section of this user guide.
 * To duplicate a Case, you can click the Duplicate button on the Detail
 View and then save the duplicate record.
 * To merge duplicate Cases, select the records from the Cases List View,
 click the Merge link in the Actions drop-down list, and progress through
 the merge process. For more information on Merging Duplicates, see the
-link:./../../introduction/user-interface/#_merging_records[Merging Records] section of this user guide.
+link:./../../introduction/user-interface/record-management/#_merging_records[Merging Records] section of this user guide.
 * To delete one or multiple Cases, you can select multiple records from
 the List View and click delete. You can also delete a Case from the
 Detail View by clicking the Delete button. For a more detailed guide on
-deleting records, see the link:./../../introduction/user-interface/#_deleting_records[Deleting Records]
+deleting records, see the link:./../../introduction/user-interface/record-management/#_deleting_records[Deleting Records]
 section of this user guide.
 * To view the details of a Cases, click the Case Subject in the List
 View. This will open the record in Detail View.
@@ -58,7 +58,7 @@ View. This will open the record in Detail View.
 click the edit button on the Detail View, make the necessary changes,
 and click Save.
 * For a detailed guide on importing and exporting Cases, see the
-link:./../../introduction/user-interface/#_importing_records[Importing Records] and
-link:./../../introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records] and
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Case record, you can
 click the View Change Log button on the Case's Detail View or Edit View.
