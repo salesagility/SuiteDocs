@@ -23,7 +23,7 @@ create a new Meeting record.
 * *View Meetings* – Redirects you to the List View for the Meetings
 module. This allows you to search and list Meeting records.
 * *Import Meetings* – Redirects you to the Import Wizard for the Meetings
-module. For more information, see link:./../../introduction/user-interface/#_importing_records[Importing Records].
+module. For more information, see link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records].
 
 To view the full list of fields available when creating scheduling a
 Meeting, See link:./../../appendix-a/#_meetings_field_list[Meetings Field List].
@@ -33,10 +33,10 @@ Meeting, See link:./../../appendix-a/#_meetings_field_list[Meetings Field List].
 * To sort records on the Meetings List View, click any column title
 which is sortable. This will sort the column either ascending or
 descending.
-* To search for a Meeting, see the link:./../../introduction/user-interface/#_search[Search] section of this
+* To search for a Meeting, see the link:./../../introduction/user-interface/search[Search] section of this
 user guide.
 * To update some or all of the Meetings on the List View, use the Mass
-Update panel as described in the link:./../../introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user guide.
+Update panel as described in the link:./../../introduction/user-interface/record-management/#_mass_updating_records[Mass Updating Records] section of this user guide.
 * To duplicate a Meeting, you can click the Duplicate button on the
 Detail View and then save the duplicate record.
 * To close a Meeting, click on the 'x' icon on the Meetings List View.
@@ -50,7 +50,7 @@ see the link:./../../advanced-modules/reschedule/[Reschedule] section of this us
 * To delete one or multiple Meetings, you can select multiple records
 from the List View and click delete. You can also delete a Meeting from
 the Detail View by clicking the Delete button. For a more detailed guide
-on deleting records, see the link:./../../introduction/user-interface/#_deleting_records[Deleting Records]
+on deleting records, see the link:./../../introduction/user-interface/record-management/#_deleting_records[Deleting Records]
 section of this user guide.
 * To view the details of a Meeting, click the Meeting Subject in the
 List View. This will open the record in Detail View.
@@ -58,8 +58,8 @@ List View. This will open the record in Detail View.
 or click the edit button on the Detail View, make the necessary changes,
 and click Save.
 * For a detailed guide on importing and exporting Meeting, see the
-Import and Export link:./../../introduction/user-interface/#_importing_records[Importing Records] and
-link:./../../introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+Import and Export link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records] and
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Meeting record, you can
 click the View Change Log button on the Meeting's Detail View or Edit
 View.

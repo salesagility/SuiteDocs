@@ -23,7 +23,7 @@ This allows you to search and list Project records.
 * *View Project Tasks* – Allows you to list Project Tasks, which are
 related to a parent Project.
 * *Import Project* – Redirects you to the Import Wizard for the Projects
-module. For more information, see link:./../../introduction/user-interface/#_importing_records[Importing Records].
+module. For more information, see link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records].
 
 To view the full list of fields available when creating a Project, See
 link:./../../appendix-a/#_projects_field_list[Projects Field List].
@@ -89,18 +89,18 @@ detail page without creating the task.
 * To sort the List View on the Projects and Project Tasks list view,
 click any column title which is sortable. This will sort the column
 either ascending or descending.
-* To search for a Project or Project task, see the link:./../../introduction/user-interface/#_search[Search]
+* To search for a Project or Project task, see the link:./../../introduction/user-interface/search[Search]
 section of this user guide.
 * To update some or all the Projects or Project Tasks on the List View,
 use the Mass Update panel as described in the
-link:./../../introduction/user-interface/#_mass_updating_records[Mass Updating Records] section of this user
+link:./../../introduction/user-interface/record-management/#_mass_updating_records[Mass Updating Records] section of this user
 guide.
 * To duplicate a Project, you can click the Duplicate button on the
 Detail View and then save the duplicate record.
 * To delete one or multiple Projects, you can select multiple records
 from the List View and click delete. You can also delete a Project from
 the Detail View by clicking the Delete button. For a more detailed guide
-on deleting records, see the link:./../../introduction/user-interface/#_deleting_records[Deleting Records]
+on deleting records, see the link:./../../introduction/user-interface/record-management/#_deleting_records[Deleting Records]
 section of this user guide.
 * To view the details of a Project or Project Task, click the Project or
 Project Task Name in the List View. This will open the record in Detail
@@ -109,8 +109,8 @@ View.
 the List View or click the edit button on the Detail View, make the
 necessary changes, and click Save.
 * For a detailed guide on importing and exporting Projects and Project
-Tasks, see the link:./../../introduction/user-interface/#_importing_records[Importing Records] and
-link:./../../introduction/user-interface/#_exporting_records[Exporting Records] sections of this user guide.
+Tasks, see the link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records] and
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exporting Records] sections of this user guide.
 * To track all changes to audited fields, in the Project or Project Task
 record, you can click the View Change Log button on the Project's or
 Project Task's Detail View or Edit View.

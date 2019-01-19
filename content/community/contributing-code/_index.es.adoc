@@ -1,0 +1,17 @@
+---
+title: "Contributing Code"
+weight: 10
+---
+
+== SuiteCRM is an open-source, Community project
+
+We want everyone to be able to contribute to SuiteCRM regardless of what 
+technical knowledge they may possess. Whether your a non-tech savvy consumer, 
+a graduate seeking a new project to dabble in, or a veteran developer 
+– all are welcome to maintain our title of the world’s best open source CRM!
+
+=== Table of Contents
+{{% children depth="3" showhidden="true" %}}
+
+
+

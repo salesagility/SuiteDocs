@@ -312,8 +312,6 @@ los nombres de los registros.
 
 image:basic_module_search.png[title="Basic Module Search"]
 
-image:basic_module_search_window.png[title="Basic Module Search Window"]
-
 La búsqueda básica además permite a los usuarios marcar la opción ''Mis
 elementos''. Marcar esta opción hará que en la búsqueda solo se retornen
 los registros que estén asignados a tí.
@@ -350,7 +348,7 @@ CRM. La misma provee una funcionalidad de búsqueda de módulo con mayor
 nivel de detalle. De forma estándar, hay más campos disponibles para el
 usuario a través de la búsqueda avanzada.
 
-image:advanced_module_search.png[title="Buscar mis elementos"]
+// image:advanced_module_search.png[title="Buscar mis elementos"]
 
 Las búsquedas avanzadas pueden tener varios campos y criterios
 específicos. Por esta razon, puedes guardar tus criterios de búsqueda
