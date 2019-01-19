@@ -4,7 +4,7 @@ Weight: 140
 ---
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/user
+:imagesdir: /images/en/user
 
 :toc:
 
@@ -14,11 +14,15 @@ Email templates are used to send standardised responses and notifications via em
 
 From *SuiteCRM* 7.9.x onwards, email templates can be viewed, edited and created from the *Email Templates* module which can be found on the *ALL* menu. Alternatively, templates can be created by the user directly from the workflow and campaigns modules.
 
-{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../modules/email-settings/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
+{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../introduction/managing-user-accounts/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
 
 image:300EmailsTemplates.png[Email Templates] 
 
-There are a number of default *System* templates which are created on install. These are used to send out system notifications such as new passwords or case updates. These can be viewed and edited here alongside user-generated templates. Templates created here can also be used in link:../../advanced-modules/advanced-open-workflow[Workflows] and link:../campaigns[Campaigns] for example, as well as for system notifications.
+There are a number of default *System* templates which are created on install. 
+These are used to send out system notifications such as new passwords or case updates. 
+These can be viewed and edited here alongside user-generated templates. Templates created 
+here can also be used in link:../../advanced-modules/workflow[Workflows] and 
+link:../campaigns[Campaigns] for example, as well as for system notifications.
 
 Click on a template name to view the template. 
 
@@ -28,7 +32,7 @@ the template can be edited in the same way as creating a template.
 
 == Creating an Email Template
 
-Select *Create Email Template* from the sidebar. This *Create* view will also appear if you choose to create a template from within another module such as link:../advanced-open-workflow[Workflows], for example. 
+Select *Create Email Template* from the sidebar. This *Create* view will also appear if you choose to create a template from within another module such as link:../../advanced-modules/workflow[Workflows], for example. 
 
 Select *Email*, *Campaign* or *System* depending on the use for the template. *System* templates are used to send system generated notifications such as case updates.
 

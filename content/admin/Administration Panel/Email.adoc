@@ -194,7 +194,7 @@ Select a *Distribution Method* to specify how cases created from incoming email 
 
 [cols="20,80"]
 |===
-|*Use AOP default*|This will use the link:../../../user/advanced-modules/advanced-open-cases-with-portal[AOP default settings], 
+|*Use AOP default*|This will use the link:../../../user/advanced-modules/cases-with-portal[AOP default settings], 
 configurable via the Admin panel. 
 |*Single User*| Enter a username or click the select arrow to search for a user. 
 Every automatically created case will be assigned to the specified user. image:EmailsCreateCaseSingleUser.png[Single User]

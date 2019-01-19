@@ -52,7 +52,8 @@ image:GDPREmailOptionsConfirmed.png[title ="Confirmed Opt In Settings"]
 With this setting, users are required to further confirm their opt in by clicking a link sent to them via email. 
 
 Select *Automatic Opt In Email* to have this email sent automatically (e.g. on submission on a Web-To-Lead form).
-The default template for these emails is the Confirmed Opt In template. You can edit this template from the link:../../core-modules/emails#_email_templates[Email Templates] module, but note that it must contain the Opt In link.
+The default template for these emails is the Confirmed Opt In template. You can edit this template from 
+the link:../../core-modules/emailtemplates[Email Templates] module, but note that it must contain the Opt In link.
 
 Click btn:[SAVE]
 

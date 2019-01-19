@@ -5,7 +5,7 @@ Weight: 40
 
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/user
+:imagesdir: /images/en/user
 
 :toc:
 
@@ -56,7 +56,7 @@ an email link in SuiteCRM, for example an email address on a contact or account 
 	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
 
 * *Email Editor* - This allows you to set the editor used when creating and 
-editing link:../../core-modules/emails#_email_templates[email templates] and also within the 
+editing link:../../core-modules/emailtemplates[email templates] and also within the 
 link:../../core-modules/campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect 
 the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
 Available options are *Mozaik*, *TinyMCE* and *Direct HTML*.
