@@ -1,0 +1,54 @@
+---
+Title: "Opening an Issue about a page"
+Weight: 20
+---
+:experimental: ////this is here to allow btn:[]syntax used below 
+
+:imagesdir: /images/es/community
+
+== Contribute with comments, corrections or questions
+
+In order to contribute to the Documentation efforts, you can open issues regarding pages directly on GitHub 
+which is the repository of our content.
+
+{{% notice info %}}
+You need a https://github.com/join[Github user account^] to open issues on the SuiteCRM Documentation Site. 
+If you don't have one yet, you will be given the opportunity to create one during this process.
+{{% /notice %}}
+
+=== 1. Navigate to the place you want to comment on 
+
+Simply use your browser to go to the relevant page. You can use the menus 
+and search feature to facilitate this.
+
+=== 2. Click "Issue"
+
+Every page on the site has an "Issue" link near the top.
+
+image:27PageIssue.png[title="Issue link"]
+
+=== 3. Make your comments
+
+You are taken to GitHub where a text editor will allow you to edit the Issue. 
+
+image:28EditIssue.png[title="Edit Issue"]
+
+It's important to realize that these Issues are about the Documentation page, not about SuiteCRM itself. 
+So please direct any technical questions or feature requests to the http://suitecrm.com/forum[Forums^].
+
+Here, you can ask about something that needs to be clarified in the Documentation, 
+suggest an additional aspect to cover in this page, or tell us about anything that 
+you found wrong about the page.
+
+When you're done, click the green button 
+at the bottom that is labeled btn:[Submit new issue].
+
+=== That's it, you're done!
+
+Your proposed Issue is now up handed over to the members of the Community in charge of the 
+SuiteCRM Documentation site. They will receive an e-mail notification as soon as you finish your Issue.
+
+You can check the status of every Issue, and participate in any discussion 
+about them by visiting https://github.com/salesagility/SuiteDocs/issues[this list^].
+
+Every small contribution matters! Thanks for helping out. 

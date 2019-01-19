@@ -3,7 +3,7 @@ Title: Testing Pull Requests
 Weight: 40
 ---
 
-:imagesdir: ./../../../../images/en/community
+:imagesdir: /images/en/community
 
 
 Check out awaiting pull requests on our SuiteCRM repo https://github.com/salesagility/SuiteCRM/pulls[here].

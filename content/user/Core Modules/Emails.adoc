@@ -4,7 +4,7 @@ Weight: 140
 ---
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/user
+:imagesdir: /images/en/user
 
 :toc:
 
@@ -28,8 +28,9 @@ These related emails can then be viewed on the history subpanel of the related r
 {{% notice note %}}
 You will need to set up and have access to at least one *personal* or *group* email account in order to use 
 the *Emails* module. See link:../../introduction/managing-user-accounts#_personal_email_account_settings[Personal Email Settings] 
-for information on setting up a personal email account. For information on configuring group, bounce handling and the system outbound mail accounts, please see 
-the link:../../../admin/emails[Emails] section of the Administrator Guide.
+for information on setting up a personal email account. For information on configuring group, 
+bounce handling and the system outbound mail accounts, please see 
+the link:../../../admin/administration-panel/email[Emails] section of the Administrator Guide.
 {{% /notice %}}
 
 The *Emails* Module can be found on the *ALL* menu on the top navigation bar. 
@@ -64,8 +65,8 @@ emails can be selected in list view using the checkboxes.
 |image:252EmailsComposebutton.png[title="Compose Mail button"]|*Compose Mail* |Opens the <<Compose Mail, Compose>> window to 
 create a new message.
 |image:254EmailsSettingsButton.png[title="Mail Settings button"]|*Settings*|Shortcut to your user profile where 
-you can edit your link:../email-settings/#_user_profile_email_settings[user profile email settings].  Add and 
-remove accounts and select folders to view here.
+you can edit your link:../../introduction/managing-user-accounts#_personal_email_account_settings[user profile email settings].  
+Add and remove accounts and select folders to view here.
 |image:255EmailsCheckForMailButton.png[title="Check for Mail button"]|*Check For Mail*| For personal email 
 accounts, you can check for new mail with this button . Note that for Group email accounts, checking for email 
 is done automatically via the *Check Inbound Mailboxes* Scheduler. You will need to ensure that your cron 
@@ -116,7 +117,7 @@ Alternatively, the *To:*, *Cc:* and *Bcc:* fields can be populated manually or v
 when you click inside the fields.
 
 * *Body:*  If you have configured a signature for this account in your 
-link:../../modules/email-settings/#_user_profile_email_settings[user profile email settings], this will appear 
+link:../../introduction/managing-user-accounts/#_user_profile_email_settings[user profile email settings], this will appear 
 automatically in the body of the email.
 
 The toolbar at the bottom of the *Compose* view has the following buttons:
@@ -167,7 +168,7 @@ Note that if you are bulk importing mail, all emails will be related to the reco
 to different records you will need to import these individually.
 
 *SuiteCRM* can also be configured to automatically import emails for group mail accounts. 
-See link:../../modules/email-settings/#_group_accounts[Group Email Accounts] for more information.
+See link:../../../admin/administration-panel/email/#_group_email_account[Group Email Accounts] for more information.
 
 === Delete Mail
 As only imported emails are stored in *SuiteCRM*, only imported email records can be deleted from the *Emails* module. 
