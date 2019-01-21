@@ -1,0 +1,73 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.10.5
+
+_Released 21st May 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.5.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.5.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Enhancements
+
+* https://github.com/salesagility/SuiteCRM/pull/5733[#5733 ] Feature - Lawful Basis for GDPR
+* https://github.com/salesagility/SuiteCRM/pull/5750[#5750 ] Feature - Mocking
+* https://github.com/salesagility/SuiteCRM/pull/5735[#5735 ] Feature - Robo
+* https://github.com/salesagility/SuiteCRM/pull/5773[#5773 ] Feature - Codeception code coverage
+* https://github.com/salesagility/SuiteCRM/pull/5735[#5735 ] Feature - Codecov support
+* https://github.com/salesagility/SuiteCRM/pull/5735[#5735 ] Feature - Robo task for chrome web driver
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/5663[#5663 ] Fixed #5663 - AOR_Reports Date issues
+* https://github.com/salesagility/SuiteCRM/pull/5877[#5563 ] Report tests
+* https://github.com/salesagility/SuiteCRM/issues/2971[#2971 ] Fixed #2971 - A blank screen is displayed instead of an message
+* https://github.com/salesagility/SuiteCRM/issues/5803[#5803 ] Fixed #5803 - Workflow bug - One field - any change - triggered by any field
+* https://github.com/salesagility/SuiteCRM/issues/4803[#4803 ] Fixed #4803 - Now $aos_products_product_image is responsible in emails and PDFs
+* https://github.com/salesagility/SuiteCRM/issues/5702[#5702 ] Fixed #5702 - Can't create new Target List in 7.10.4
+* https://github.com/salesagility/SuiteCRM/issues/4611[#4611 ] Fixed #4611 - Manage Subscription on Contacts/Leads result in FATAL Error
+* https://github.com/salesagility/SuiteCRM/pull/5563[#5563 ] Alert performance
+* https://github.com/salesagility/SuiteCRM/pull/5823[#5823 ] Fixed oauth2 clients custom views
+* https://github.com/salesagility/SuiteCRM/pull/5845[#5845 ] Allow merging AOS_Products
+* https://github.com/salesagility/SuiteCRM/pull/5810[#5810 ] Remove default backgrounds from qtip
+* https://github.com/salesagility/SuiteCRM/pull/2323[#2323 ] Installer copies (unused) sample image on each run in picture and sets non existing email field
+* https://github.com/salesagility/SuiteCRM/issues/3275[#3275 ] Remove extra delimiter at the end of the exported line
+* https://github.com/salesagility/SuiteCRM/pull/4474[#4474 ] Improvement in parameters for dashlet reports
+* https://github.com/salesagility/SuiteCRM/issues/5639[#5639 ] Fixed #3742 - Report Module - HTML contains invalid UTF-8 character(s)
+* https://github.com/salesagility/SuiteCRM/issues/5639[#5639 ] Fixed #4504 - AOR sends wrong value when a radio button field is set as condition
+* https://github.com/salesagility/SuiteCRM/issues/5639[#5639 ] Fixed #5639 - Activities - Compose Email - Broken in 7.10.x
+* https://github.com/salesagility/SuiteCRM/issues/5657[#5657 ] Fixed #5657 - Multiple empty records are created in email_addresses table when access Users listview
+* https://github.com/salesagility/SuiteCRM/issues/5661[#5661 ] Fixed #5661 - Drop parenthesis does not work in 7.10.x
+* https://github.com/salesagility/SuiteCRM/issues/5683[#5683 ] Fixed #5683 - Can't assign user in Target list
+* https://github.com/salesagility/SuiteCRM/issues/5607[#5607 ] Fixed #5607 - Undefined variable $new_confirmed_opt_in
+* https://github.com/salesagility/SuiteCRM/issues/5692[#5692 ] Fixed #5692 - 'Reply to' email cause error on Send and invalidates session - issue in 7.10.4 and 7.10.3
+* https://github.com/salesagility/SuiteCRM/pull/5713[#5713 ] Fix API error handling
+* https://github.com/salesagility/SuiteCRM/pull/5718[#5718 ] Fixing tests
+* https://github.com/salesagility/SuiteCRM/pull/5760[#5760 ] Turning off autocomplete in the login.tpl
+* https://github.com/salesagility/SuiteCRM/pull/4728[#4728 ] allow also time format in report for datetimecombo field
+* https://github.com/salesagility/SuiteCRM/issues/4194[#4194 ] Fixed #4194 - Scheduled Reports: Detail and Edit views are not populating fields correctly
+* https://github.com/salesagility/SuiteCRM/issues/3558[#3558 ] Fixed #3558 - Module Builder Fields
+* https://github.com/salesagility/SuiteCRM/issues/792[#792 ] Fixed #792 - AOS Settings: Initial Invoice Number - add validation
+* https://github.com/salesagility/SuiteCRM/issues/5586[#5586 ] Fixed #5586 - PHP error: Non-static method SecurityGroup::getGroupWhere() should not be called statically
+* https://github.com/salesagility/SuiteCRM/issues/716[#716 ] Fixed #716 - The quick create labels at top are not responsive to change
+* https://github.com/salesagility/SuiteCRM/issues/3737[#3737 ] Fixed #3737 - Popup search for documents in mail compose not working
+* https://github.com/salesagility/SuiteCRM/issues/4069[#4069 ] Fixed #4069 - Issue with Reports when using range filters (above and bellow) breaks pagination
+* https://github.com/salesagility/SuiteCRM/issues/4021[#4021 ] Fixed #4021 - PDF Paper Format only working with Invoice Module
+* https://github.com/salesagility/SuiteCRM/issues/3737[#3737 ] Fixed #3737 - Popup search for documents in mail compose not working on 7.8.x LTS
+* https://github.com/salesagility/SuiteCRM/issues/5587[#5587 ] Fixed #5587 - PHP Error: [] operator not supported for strings
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

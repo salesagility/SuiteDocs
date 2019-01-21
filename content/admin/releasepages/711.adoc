@@ -1,0 +1,32 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.1.1
+
+_Released Apr 7, 2014_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.1.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* Fixed bug where 'on save workflow' fails on access rights
+* Removed invalid file causing opportunities save to fail
+*Removed invalid file causing contacts save to fail and PDF generation to fail
+* Fixed missing drop-downs from Workflow
+* Fixed Products URL Field limit input to 25 characters
+* Fixed sending email to related field in workflow fails
+* Fixed issue on windows fields of type 'int' don't appear on the PDF
+* Fixed issue in opportunities dashlet shows amount_us field instead of amount
+* A temporary fix was added to allow workflow with new line in a textarea field to load in the create/modify record action
+* Fixed SugarOAuthServer doesn't actually allow requestTokens to be created

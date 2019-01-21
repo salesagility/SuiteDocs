@@ -1,0 +1,54 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== **7.8.25**
+
+_Released 14th Jan 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.24.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.24.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+
+
+==== **Bug Fixes**
+* https://github.com/salesagility/SuiteCRM/issues/164[#164 ] Fixed #164 - Change AOS Product Images to use an entry point
+* https://github.com/salesagility/SuiteCRM/issues/163[#163 ] Fixed #163 - Pagination bar in Emails
+* https://github.com/salesagility/SuiteCRM/issues/2474[#2474 ] Fixed #2474 - person form style in Suite7
+* https://github.com/salesagility/SuiteCRM/issues/4107[#4107 ] Fixed #4107 - Sorting of fields in condition list
+* https://github.com/salesagility/SuiteCRM/issues/717[#717 ] Fixed #717 - Corrects Field Indention on Detailview when by itself on panel
+* https://github.com/salesagility/SuiteCRM/issues/583[#583 ] Fixed #583 - Adds the visual cue that a module is highlighted on main navigation
+* https://github.com/salesagility/SuiteCRM/issues/3083[#3083 ] Fixed #3083 - Calendar pop up windows are incorrectly displayed under MENU bar index
+* https://github.com/salesagility/SuiteCRM/issues/3319[#3319 ] Fixed #3319 - CSS issue in Role Management module fixed
+* https://github.com/salesagility/SuiteCRM/issues/994[#994 ] Fixed #994 - Address Translation
+* https://github.com/salesagility/SuiteCRM/issues/1866[#1866 ] Fixed #1866 - Display module by alphabetical order
+* https://github.com/salesagility/SuiteCRM/issues/2400[#2400 ] Fixed #2400 - Language manifest is duplicated and overwritten on each install
+* https://github.com/salesagility/SuiteCRM/pull/5894[#5894 ] Feature/massupdate extendable custom
+* https://github.com/salesagility/SuiteCRM/pull/6266[#6266 ] php_zip_utils.php
+* https://github.com/salesagility/SuiteCRM/issues/6285[#6285 ] Fixed #6285 - LBL_DBCONFIG_B_MSG1_LABEL empty string
+* https://github.com/salesagility/SuiteCRM/issues/6402[#6402 ] Fixed #6402 - Unable to Change user preferences with mass update
+* https://github.com/salesagility/SuiteCRM/issues/6414[#6414 ] Fixed #6414 - Bug in modules/Schedulers/_AddJobsHere.php
+* https://github.com/salesagility/SuiteCRM/issues/6516[#6516 ] Fixed #6516 - (filler) elements in layouts are removed by gridlayout parser
+* https://github.com/salesagility/SuiteCRM/issues/2928[#2928 ] Fixed #2928 Fixed #341 - clear Zend OPcache when writing files
+* https://github.com/salesagility/SuiteCRM/issues/6568[#6568 ] Fixed #6568 - Change minimun and recommended PHP
+* https://github.com/salesagility/SuiteCRM/issues/6579[#6579 ] Fixed #6579 -Resolved Calendar creating an extra meeting after Repeat End by
+* https://github.com/salesagility/SuiteCRM/issues/6570[#6570 ] Fixed #6570 -Case description not saving when AJAX is disabled
+* https://github.com/salesagility/SuiteCRM/issues/5509[#5509 ] Fixed #5509 - [language] Now has the correct label for 'FOR_AMOUNT' in activity stream
+* https://github.com/salesagility/SuiteCRM/pull/6644[#6644 ] Updating Product Test and remove unnecessary parameters
+* https://github.com/salesagility/SuiteCRM/pull/6647[#6647 ] Generate chart colors based on labels
+* https://github.com/salesagility/SuiteCRM/pull/6662[#6662 ] Fixed installWizard styling - check writable module
+* https://github.com/salesagility/SuiteCRM/pull/6629[#6629 ] Resolved link now gets deleted in documents
+* https://github.com/salesagility/SuiteCRM/pull/6654[#6654 ] escaping strings to hotfix 7.8.x
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

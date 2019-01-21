@@ -1,0 +1,23 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.3 Beta
+
+_Released Jun 5, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3-beta.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+Including Inline Editing, Desktop Notifications and More.

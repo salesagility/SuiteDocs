@@ -1,0 +1,45 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.9.2
+
+_Released Jun 30, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/3790[#3790 ] Fixed #3790 - Disregard draft sends emails
+* https://github.com/salesagility/SuiteCRM/issues/3766[#3766 ] Fixed #3766 - Bound email handling broken
+* https://github.com/salesagility/SuiteCRM/issues/3655[#3655 ] Fixed #3655 - fix for popup compose view return message popup
+* https://github.com/salesagility/SuiteCRM/issues/3730[#3730 ] Fixed #3730 - Email: No way to send plain-text emails
+* https://github.com/salesagility/SuiteCRM/pull/3752[#3752 ] Fixed - Attach Doc submits form on firefox
+* https://github.com/salesagility/SuiteCRM/issues/3646[#3646 ] Fixed #3646 - Opening email from GMAIL sent folder opens corresponding IMAP uid from INBOX
+* https://github.com/salesagility/SuiteCRM/issues/3654[#3654 ] Fixed #3654 - Leftover call to Emails/index.php in v7.9, breaks "Email Quotation" feature
+* https://github.com/salesagility/SuiteCRM/pull/3743[#3743 ] Fixed - Cannot select emails with no subject (list view)
+* https://github.com/salesagility/SuiteCRM/issues/3725[#3725 ] Fixed #3725 - Default Signature and Email Account Signature
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.2 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Checkout our
+https://suitecrm.com/forum/announcements/14874-suitecrm-7-9-2-maintenance-patch-now-available[SuiteCRM]
+forum announcement.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security@suitecrm.com[security@suitecrm.com]

@@ -1,0 +1,57 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.3.1
+
+_Released Aug 25, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3.1.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* Fixed #368 - Progress message added until Studio Field saving and show results.
+* Re-implementing another bootstrap fix that was overwritten updating to v3.3.5.
+* Fixed small issues with top right user menu link moving when screen resizes. Fixing small conflict in Bootstrap CSS.
+* Make cookies httponly by default in SugarApplication::setCookie
+* Mark the subpanel cookies as httponly
+* Mark cookies httponly in the users module.
+* Mark the user theme cookie as httponly.
+* Use httponly cookies in the facebook social connector.
+* Remove the deprecated linkedin code.
+* Fixed #392 - Issues with Action Menu CSS.
+* Fixed #374 - AOR Chart Label - show readable labels on all charts
+* Fixing link to wiki/documentation in README.md, updating links to https.
+* Implement desired menu icon for mobile navigation.
+* Small fixes to menu CSS, adding missing files which were causing errors in console.
+* Fixed #69, Fixed #197 - Addressing issues around the print page functionality.
+* Fixed #365 - Responsive template bugs related to css layers. This also addresses issues with the popup when navigating to Settings -> Mail Accounts -> Add.
+* Ensuring desktop notifications icon/section has its own div ID. It is bad practice to use the same ID twice or more as an ID should be unique.
+* Updated Bootstrap to version 3.3.5, removed redundant bootstrap.js file from the theme, moved images out of js directory for colour picker and placed in their own directory(so as to not conflict with theme images).
+* Removing non-required input closing tags as this is incorrect syntax.
+* Fixed #210 - Workflows firing date and 'Run On' select fixed.
+* Remove display errors
+* Fixed #181 - Error with AOR email link fixed
+* Added variable which was missing from campaign log - date_modified. (clashes with import wizard)
+* Remove references to the unknown expenses module from the events subpanel. Related to the 500 error in #353.
+* Check database name validation in different database types
+* Changes to make inline edit work with flexi relationships such as parent on task module
+* Fixed #249 - sugarcrm_login.png needs to be changed to suitecrm_login.png
+* Fixed #351 - Removed duplicate language entry for LBL_DELETE_USER_CONFIRM.
+* Fixed #359, Fixed #358. Issues which cause Calls to crash in Spanish language pack due to trailing comma.
+* Fixed #354 - Inline editing breaking module builder Vardefs.
+* Fixed #279, Fixed #300 - Addresses issues with scrolling on toolbox and panels sections of Studio.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.3.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.

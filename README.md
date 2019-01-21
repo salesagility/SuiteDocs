@@ -25,3 +25,7 @@ If you are doing extensive work on the site (for example, translating a lot of c
 We know many members of the Community are eager to have Documentation in their own language. This will eventually be possible, but since this site is in its initial stages, for now we will only be working on a single second language - Spanish. This way we can work out several technical challenges of making the site multilingual. Later we will add more languages. 
 
 You can open an Issue if you have any questions or comments. Thank you.
+
+
+
+

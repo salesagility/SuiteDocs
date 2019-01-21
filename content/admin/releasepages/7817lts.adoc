@@ -1,0 +1,32 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.8.17
+
+_Released 15th Mar 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.17.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.17.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/5424[#5424 ] Fixed #5424 - Missing add product menu while using PL language - 7.10.1
+* https://github.com/salesagility/SuiteCRM/issues/5163[#5163 ] Fixed #5163 - Send notification from assigning user [text improvements required]
+* https://github.com/salesagility/SuiteCRM/issues/4747[#4747 ] Fixed #4747 - Allow Call Time Pass Reference is to be On or Off?
+* https://github.com/salesagility/SuiteCRM/pull/3465[#3465 ] fix: validation of the Email action on Workflows
+* https://github.com/salesagility/SuiteCRM/pull/5439[#5439 ] Typo in html tag
+* https://github.com/salesagility/SuiteCRM/pull/5388[#5388 ] Fixed - Warning: Use of undefined constant is_admin_for_user
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

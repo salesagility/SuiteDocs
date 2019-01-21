@@ -1,0 +1,21 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.1.8
+
+_Released Aug 7, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.8.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.8.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+_Don't do a final move for invalid/malicious files. See #333._
