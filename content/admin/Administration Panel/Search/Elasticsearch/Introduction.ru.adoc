@@ -6,6 +6,10 @@ Weight: 1
 :author: likhobory
 :email: likhobory@mail.ru
 
+{{% notice info %}}
+Поисковый движок Elasticsearch доступен в версии 7.11 и выше.
+{{% /notice %}}
+
 link:https://www.elastic.co/[Elasticsearch] - это  поисковая система, выполняющая поиск в реальном времени и оптимизированная для поиска текстовых строк.
 Система написана на Java и работает как отдельный сервер/процесс.
 
