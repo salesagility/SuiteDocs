@@ -1,0 +1,49 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.10.10
+
+_Released 24th Oct 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.10.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.10.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+==== Enhancements
+
+Introducing re factored API version 8. Please review the updated documentation [https://docs.suitecrm.com/developer/api/version-8/ here] to learn more
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/5656[#5656 ] ListViewDisplay Incorrectly Checking for $this->email to be 'Set' Instead of True/False
+* https://github.com/salesagility/SuiteCRM/issues/6315[#6315 ] [language] Duplicated language strings in ver. 7.10.8
+* https://github.com/salesagility/SuiteCRM/pull/6406[#6406 ] Add Prospects to Studio
+* https://github.com/salesagility/SuiteCRM/issues/5726[#5726 ] Token expires/expiry [language]
+* https://github.com/salesagility/SuiteCRM/issues/5526[#5526 ] Inline Edit doesn't show new value for date and relate fields
+* https://github.com/salesagility/SuiteCRM/issues/6392[#6392 ] Changing Managing Folders Has No Effect
+* https://github.com/salesagility/SuiteCRM/issues/6320[#6320 ] Empty collapsed activities/history subpanels is always shown as a subpanels with some records
+* https://github.com/salesagility/SuiteCRM/issues/5286[#5286 ] Empty help message when creating user
+* https://github.com/salesagility/SuiteCRM/issues/5265[#5265 ] Install fails without warning if the database specified lacks MyISAM support
+* https://github.com/salesagility/SuiteCRM/issues/6341[#6341 ] Fixed #6341 - Users may send as themselves tick is never hide
+* https://github.com/salesagility/SuiteCRM/issues/6363[#6363 ] Fixed #6363 - quote number should not has to be required
+* https://github.com/salesagility/SuiteCRM/issues/6362[#6362 ] Fixed #6362 - mentioned fix to omit file data
+* https://github.com/salesagility/SuiteCRM/issues/6364[#6364 ] Fixed #6364 - "Create Scheduler" broken - no Jobs to select
+* https://github.com/salesagility/SuiteCRM/issues/6338[#6338 ] Fixed #6338 - ChangePassword.php - syntax error missing curly braces
+* https://github.com/salesagility/SuiteCRM/issues/6326[#6326 ] Fixed #6326 - Quick radius map + Geocode test issue
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fix MY_FRAME logging message
+* https://github.com/salesagility/SuiteCRM/issues/5360[#5360 ] Language keys - Cut down on sugar in your diet - part II
+* https://github.com/salesagility/SuiteCRM/issues/5961[#5961 ] Allow attachments in email templates when editor is not Mozaik
+* https://github.com/salesagility/SuiteCRM/issues/6322[#6322 ] Fixed #6322 - creating parent-child relationship in clean install of 7.10.9 causes parent display to break
+* https://github.com/salesagility/SuiteCRM/issues/6321[#6321 ] Fixed #6321 - using same form name as back-end does
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

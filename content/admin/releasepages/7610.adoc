@@ -1,0 +1,27 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.6.10
+
+_Released Nov 16, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.10.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.10.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/2581[#2581 ] Fixed #2581 Module filter on select field shows no results
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.10[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.

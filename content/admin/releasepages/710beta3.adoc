@@ -1,0 +1,28 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.10 Beta 3
+
+_Released Dec 18, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-beta-3.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a Beta release and should not be used in a production environment*
+
+Changes since Beta 2:
+
+* 4 SuiteP colour schemes (Day, Dawn, Dusk, Night)
+* Email Performance Improvements
+* Bug Fixing
+* API swagger documentation added

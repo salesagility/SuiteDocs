@@ -1,0 +1,84 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.10.3
+
+_Released 3rd Apr 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.3.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.3.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Enhancements
+
+* https://github.com/salesagility/SuiteCRM/pull/4808[#4808 ] Feature - Sort modules by name
+* https://github.com/salesagility/SuiteCRM/pull/5517[#5517 ] Feature - Replace icons in studio and module builder
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/5548[#5548 ] Fixed #5548 - GDPR: confirmed opt-in
+* https://github.com/salesagility/SuiteCRM/issues/5461[#5461 ] Fixed #5461 - Edit labels
+* https://github.com/salesagility/SuiteCRM/issues/5459[#5459 ] Fixed #5459 - Campaign Emails Don't Send (test or otherwise)
+* https://github.com/salesagility/SuiteCRM/issues/5550[#5550 ] Fixed #5550 - Can't display email when Opt-in on email settings
+* https://github.com/salesagility/SuiteCRM/issues/5432[#5432 ] Fixed #5432 - Studio not showing requested labels
+* https://github.com/salesagility/SuiteCRM/issues/4958[#4958 ] Fixed #5406 - ability to change sort order in dashlet
+* https://github.com/salesagility/SuiteCRM/issues/4657[#4657 ] Fixed #4657 - Change 2 dots to full stop
+* https://github.com/salesagility/SuiteCRM/issues/5376[#5376 ] Fixed #5376 - User's Outbound Email Settings Redesign
+* https://github.com/salesagility/SuiteCRM/issues/5344[#5344 ] Fixed #5344 - Escaped apostrophe on array creating parsing error
+* https://github.com/salesagility/SuiteCRM/issues/5582[#5582 ] Fixed #5582 - Creation of new tasks fails in AM_ProjectTemplates when user's date format is not d/m/Y
+* https://github.com/salesagility/SuiteCRM/pull/5594[#5594 ] Fixed - Extra salt on email address
+* https://github.com/salesagility/SuiteCRM/issues/5589[#5589 ] Fixed #5589 - Copy account address
+* https://github.com/salesagility/SuiteCRM/issues/5602[#5602 ] Fixed #5602 - Icons not shown in add dashlet search
+* https://github.com/salesagility/SuiteCRM/issues/5603[#5603 ] Fixed #5603 - Eye icon leading to a white screen in from contacts dashlet
+* https://github.com/salesagility/SuiteCRM/issues/5539[#5539 ] Fixed #5539 - Date picker mass update
+* https://github.com/salesagility/SuiteCRM/issues/5239[#5239 ] Fixed #5239 Make SugarBean logging more informative
+* https://github.com/salesagility/SuiteCRM/pull/4815[#4815 ] Fixed - Undefined notice "LBL_SEARCH" during Module Builder Deploy
+* https://github.com/salesagility/SuiteCRM/pull/4738[#4738 ] Fixed - Disable php timeout while report export
+* https://github.com/salesagility/SuiteCRM/issues/5418[#5418 ] Fixed #5418, #5724: PDF export missing grouped data
+* https://github.com/salesagility/SuiteCRM/pull/5543[#5543 ] Fixed - Mcrypt and SAML
+* https://github.com/salesagility/SuiteCRM/pull/5567[#5567 ] Fixed - Set password expiry to zero when upgrading
+* https://github.com/salesagility/SuiteCRM/pull/4779[#4779 ] Fixed - Add support for 'Any Change' condition on related field
+* https://github.com/salesagility/SuiteCRM/pull/3186[#3186 ] Fixed - Example display in importer
+* https://github.com/salesagility/SuiteCRM/pull/5503[#5503 ] Fixed - Preview documents
+* https://github.com/salesagility/SuiteCRM/pull/5528[#5528 ] Develop: api, errors, exceptions, translations
+* https://github.com/salesagility/SuiteCRM/issues/5618[#5618 ] Fixed #5618 - API v8 filtering custom field
+* https://github.com/salesagility/SuiteCRM/issues/4657[#4657 ] Fixed #4657 - Change 2 dots to full stop
+* https://github.com/salesagility/SuiteCRM/issues/5356[#5356 ] Fixed #5356 - No marker images in maps
+* https://github.com/salesagility/SuiteCRM/issues/719[#719 ] Fixed #719 - Blocked loading mixed active content
+* https://github.com/salesagility/SuiteCRM/issues/3826[#3826 ] Fixed #3826 - Values "OR" & "AND" in report condition are not translatable
+* https://github.com/salesagility/SuiteCRM/issues/4717[#4717 ] Fixed #4717 - XTemplate doesn't support output escaping
+* https://github.com/salesagility/SuiteCRM/issues/5150[#5150 ] Fixed #5150 - Schedulers configured to run every few minutes run every minute
+* https://github.com/salesagility/SuiteCRM/issues/5574[#5574 ] Fixed #5574 - Epty email addresses are replaced by previous email in csv file
+* https://github.com/salesagility/SuiteCRM/issues/5585[#5585 ] Fixed #5585 - Cannot enable ajax on module after disabling
+* https://github.com/salesagility/SuiteCRM/pull/5601[#5601 ] Update jj maps
+* https://github.com/salesagility/SuiteCRM/issues/5280[#5280 ] Fixed #5280 - Set cookie to remember subpanel collapse status
+* https://github.com/salesagility/SuiteCRM/issues/5557[#5557 ] Fixed #5557 - Make dashlet drilldown use the correct key
+* https://github.com/salesagility/SuiteCRM/issues/5244[#5244 ] Fixed #5244 - Pass parameter with script tags to sugar evalScript
+* https://github.com/salesagility/SuiteCRM/issues/5268[#5268 ] Fixed - php notices
+* https://github.com/salesagility/SuiteCRM/issues/5111[#5111 ] Fixed #5111 - Date parameters in AOR Reports are not updated
+* https://github.com/salesagility/SuiteCRM/issues/4351[#4351 ] Fixed #4351 - notes contacts relation
+* https://github.com/salesagility/SuiteCRM/pull/5518[#5518 ] Fixed - Change misleading message in install_utils.php
+* https://github.com/salesagility/SuiteCRM/issues/5441[#5441 ] Fixed #5441 - PDF report not showing image in the image field instead it shows a small red x
+* https://github.com/salesagility/SuiteCRM/issues/5093[#5093 ] Fixed #5093 - Emails sent from within SuiteCRM have mis-matched boundary ids on copy in sent folder.
+* https://github.com/salesagility/SuiteCRM/pull/5472[#5472 ] Fixed - Updated documentation links
+* https://github.com/salesagility/SuiteCRM/issues/5613[#5613 ] Fixed #5613 - contact detailview js
+* https://github.com/salesagility/SuiteCRM/pull/5465[#5465 ] Fix Windows cron instructions for cases where a Drive change is required
+* https://github.com/salesagility/SuiteCRM/issues/5389[#5389 ] Fixed #5389 - Only admins can see users availability for meetings in the meeting scheduler
+* https://github.com/salesagility/SuiteCRM/pull/5597[#5597 ] Fixed - namespace
+* https://github.com/salesagility/SuiteCRM/issues/2927[#2927 ] Fixed #2927 - Emails View Relationship popup collapses on second use
+* https://github.com/salesagility/SuiteCRM/issues/592[#592 ] Fixed #592 - Return: true/false instead of 1/0
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

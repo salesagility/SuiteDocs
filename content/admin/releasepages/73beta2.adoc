@@ -1,0 +1,21 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.3 Beta 2
+
+_Released Aug 7, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.3beta3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.3beta3.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+_Don't do a final move for invalid/malicious files. See #333._

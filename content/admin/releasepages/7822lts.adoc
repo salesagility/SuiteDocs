@@ -1,0 +1,29 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.8.22
+
+_Released 17th Sep 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.22.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.22.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/pull/6311[#6311 ] SuiteR and Suite7 Theme dont work anymore in 7.8.21
+* https://github.com/salesagility/SuiteCRM/issues/6312[#6312 ] Fixed #6312 - Charts in Dashlets cause php errors in 7.8.21
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

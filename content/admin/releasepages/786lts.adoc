@@ -1,0 +1,48 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.8.6 - LTS
+
+_Released Sep 6, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.6.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/3688[#3688 ] Adding escaping to EmailUIAjax.php
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4202[#4202 ] Adding blocking module fields in AOW
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4203[#4203 ] Add ajaxUILoc XSS protection
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4132[#4132 ] System email template access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4131[#4131 ] Relationship removal access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4130[#4130 ] Improved clean html for sugar fields
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4129[#4129 ] Send correct password reset email
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4128[#4128 ] Remove delete button in bulk action
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4127[#4127 ] Prevents users from editing other employees data
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4209[#4209 ] Prevents users from inline editing without access
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4102[#4102 ] Only an admin user can set admin access for users
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset
+* https://github.com/salesagility/SuiteCRM/pull/4074[#4074 ] Fixed installer checkbox html
+
+*Users of ALL previous LTS 7.8.x releases are advised to Upgrade to 7.8.6 LTS as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security@suitecrm.com[security@suitecrm.com]

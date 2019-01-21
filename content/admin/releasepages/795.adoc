@@ -1,0 +1,69 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.9.5
+
+_Released Sep 6, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.5.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/3688[#3688 ] Adding escaping to EmailUIAjax.php
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4202[#4202 ] Adding blocking module fields in AOW
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4203[#4203 ] Add ajaxUILoc XSS protection
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4096[#4096 ] System email template access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4094[#4094 ] Relationship removal access issue
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/3851[#3851 ] Improved clean html for sugar fields
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/3088[#3088 ] Send correct password reset email
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/3651[#3651 ] Remove delete button in bulk action
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/3875[#3875 ] Prevents users from editing other employees data
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4209[#4209 ] Prevents users from inline editing without access
+* *Security Issue* - https://github.com/salesagility/SuiteCRM/pull/4102[#4102 ] Only an admin user can set admin access for users
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/pull/4140[#4140 ] Fix non-matching delaration of relationship methods in ModuleBuilder
+* https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset
+* https://github.com/salesagility/SuiteCRM/issues/4104[#4104 ] Incorrect reference to Suite R+
+* https://github.com/salesagility/SuiteCRM/issues/4107[#4107 ] Fix for issue Sorting of fields in condition list
+* https://github.com/salesagility/SuiteCRM/issues/4181[#4181 ] Fixes missing labels
+* https://github.com/salesagility/SuiteCRM/issues/3898[#3898 ] Duplicated language strings
+* https://github.com/salesagility/SuiteCRM/pull/4034[#4034 ] Unused language string removal
+* https://github.com/salesagility/SuiteCRM/pull/3931[#3931 ] Case Typo in html entity
+* https://github.com/salesagility/SuiteCRM/pull/3623[#3623 ] Fullcalendar - Fixing typo on pt-PT weekdays long format
+* https://github.com/salesagility/SuiteCRM/issues/3723[#3723 ] Fixed #3723 History summary not sorted SuiteCRM
+* https://github.com/salesagility/SuiteCRM/issues/3704[#3704 ] Fixed #3704 - Cannot sort by "Account Name" in "Target Lists => Details => Contacts"
+* https://github.com/salesagility/SuiteCRM/issues/3919[#3919 ] Fixed #3919 - All archived mails show the same body
+* https://github.com/salesagility/SuiteCRM/issues/4084[#4084 ] Fixed #4084 - Option "contains" not available in MultiSelect Field
+* https://github.com/salesagility/SuiteCRM/pull/4074[#4074 ] Fixed installer checkbox html
+* https://github.com/salesagility/SuiteCRM/issues/4033[#4033 ] Fixed #4033 - Email DetailView does not show recipient/sender-data
+* https://github.com/salesagility/SuiteCRM/issues/4053[#4053 ] Fixed #4053 - 'send Quote by Email' may send to wrong address
+* https://github.com/salesagility/SuiteCRM/issues/4101[#4101 ] Fixed #4101 - Forwarding/Replying to emails sends to your own email address
+* https://github.com/salesagility/SuiteCRM/issues/4048[#4048 ] Fixed #4048 - 7.9.4 - doesn't close window if you reply to, reply to all, forward to imported email
+* https://github.com/salesagility/SuiteCRM/issues/3735[#3735 ] Fixed #3735 - Undefined values using templates from account module in 7.9.1
+* https://github.com/salesagility/SuiteCRM/issues/3791[#3791 ] Fixed #3791 - Problems with Umlauts in E-Mail-Client
+* https://github.com/salesagility/SuiteCRM/issues/3863[#3863 ] Fixed #3863 - Umlauts in signature lose encoding in compose-view
+* https://github.com/salesagility/SuiteCRM/issues/3420[#3420 ] Fixed #3420 - Regular user does not reach email address field in Reports module
+* https://github.com/salesagility/SuiteCRM/pull/4062[#4062 ] AOR Reports: Combined PR for AOR fixes
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.5 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security@suitecrm.com[security@suitecrm.com]

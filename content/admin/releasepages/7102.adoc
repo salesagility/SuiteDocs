@@ -1,0 +1,64 @@
+---
+Title: Releases
+weight: 50
+---
+
+:experimental:
+
+== 7.10.2
+
+_Released 15th Mar 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.2.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.2.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Enhancements
+
+* https://github.com/salesagility/SuiteCRM/pull/5431[#5431 ] Feature - admin icons
+* https://github.com/salesagility/SuiteCRM/pull/5457[#5457 ] Feature - studio icons
+* https://github.com/salesagility/SuiteCRM/pull/5413[#5413 ] Feature - audit email addresses
+* https://github.com/salesagility/SuiteCRM/pull/5421[#5421 ] Feature - api upgrade safe
+* https://github.com/salesagility/SuiteCRM/pull/5421[#5421 ] Feature - api acl access
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/5424[#5424 ] Fixed #5424 - Missing add product menu while using PL language - 7.10.1
+* https://github.com/salesagility/SuiteCRM/issues/3510[#3510 ] Fixed #3510 - function getRelatedFields() missing from data/Link2.php on 7.8.3
+* https://github.com/salesagility/SuiteCRM/issues/5163[#5163 ] Fixed #5163 - Send notification from assigning user [text improvements required]
+* https://github.com/salesagility/SuiteCRM/issues/4747[#4747 ] Fixed #4747 - Allow Call Time Pass Reference is to be On or Off?
+* https://github.com/salesagility/SuiteCRM/pull/3465[#3465 ] fix: validation of the Email action on Workflows
+* https://github.com/salesagility/SuiteCRM/pull/5439[#5439 ] Typo in html tag
+* https://github.com/salesagility/SuiteCRM/pull/5388[#5388 ] Fixed - Warning: Use of undefined constant is_admin_for_user
+* https://github.com/salesagility/SuiteCRM/pull/5408[#5408 ] Fix out of line expand icon
+* https://github.com/salesagility/SuiteCRM/pull/5408[#5408 ] Fixed: Google Map GeoCoding is not working with proxy server
+* https://github.com/salesagility/SuiteCRM/issues/5307[#5307 ] Fixed #5307 - SuiteP Downloaded PDF report get theme background (Grey)
+* https://github.com/salesagility/SuiteCRM/issues/3859[#3859 ] Fixed #3859 - Address fields (auto generated) not displaying help
+* https://github.com/salesagility/SuiteCRM/pull/4452[#4452 ] AOW Conditions operator failing due to extra space on ID
+* https://github.com/salesagility/SuiteCRM/issues/5403[#5403 ] Fixed #5403 - 7.10.1 – "Base Impleme..." email address links in the Recently Viewed sidebar
+* https://github.com/salesagility/SuiteCRM/pull/5443[#5443 ] Refactor map function to avoid declaring a function twice
+* https://github.com/salesagility/SuiteCRM/issues/5177[#5177 ] Fixed #5177 - Can't send Confirm Opt In Email from the custom module
+* https://github.com/salesagility/SuiteCRM/issues/5003[#5003 ] Fixed #5003 - [language] Hard coded messages in SugarAuthenticate (ver. 7.10RC)
+* https://github.com/salesagility/SuiteCRM/pull/5443[#5443 ] Refactor map function to avoid declaring a function twice
+* https://github.com/salesagility/SuiteCRM/issues/5218[#5218 ] Fixed #5218 - Duplicated language strings
+* https://github.com/salesagility/SuiteCRM/issues/5258[#5258 ] Fixed #5258 - SuiteCRM not compatible with this flavor - Language string
+* https://github.com/salesagility/SuiteCRM/issues/5311[#5311 ] Fixed #5311 - Unused language strings in ver. 7.10 ?
+* https://github.com/salesagility/SuiteCRM/issues/5359[#5359 ] Fixed #5359 - Unused string LBL_SUGARCRM_HELP - Hotfix branch
+* https://github.com/salesagility/SuiteCRM/pull/5428[#5428 ] using marketing 'from name/email' first
+* https://github.com/salesagility/SuiteCRM/pull/5488[#5488 ] fix email addresses in listivew in case of external email client
+* https://github.com/salesagility/SuiteCRM/issues/5241[#5241 ] Fixed #5241 - The opt in status strange behavior (develop branch)
+* https://github.com/salesagility/SuiteCRM/issues/3693[#3693 ] Fixed #3693 - reinstate edit links in sidebar
+* https://github.com/salesagility/SuiteCRM/pull/5489[#5489 ] Fix/close decoration
+* https://github.com/salesagility/SuiteCRM/pull/5493[#5493 ] Variableparser - quickfix for exceptions
+* https://github.com/salesagility/SuiteCRM/pull/5433[#5433 ] Fixed #5433 - admin encryption key for LDAP config
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
