@@ -82,7 +82,7 @@ user hovers over the field.
 description for administrator use.
 |*Default Value:*|The field will have the value set here unless the user enters a new value.
 |*Max Size:*|The maximum number of characters that can be entered into the field.
-|*Mass Update:*| Enable to mass Update feature for this field.
+|*Mass Update:*|Enable to mass Update feature for this field.
 |*Required Field:*|Whether or not a value must be entered for the field before a record 
 containing the field can be saved.
 |*Audit:*|If this is selected, changes made to the field value can be tracked from the 
@@ -95,7 +95,41 @@ the field to be imported when using the Import Wizard.
 and Find Duplicates features.
 |===
 
-[discrete]
+
+==== Field Types
+
+Studio comes out-of-the-box with many different types of fields which can be created in SuiteCRM. 
+
+The following data types are available when creating fields in Studio:
+
+[cols = "20, 80", frame = "none", grid = "none"]
+|===
+|*Data Types*|*Description* 
+|*Address*|Creates fields for street, city, postal code, state, and country. + 
+Custom address fields cannot be grouped together like stock address fields (e.g. billing address) 
+|*Checkbox*|Creates a checkbox for data fields with a Yes/No action 
+|*Currency*|Creates a field to enter a currency value. The system automatically creates a dropdown of the currency type if the field does not already exist in that module 
+|*Date*|Creates a field to enter a date. Includes a button for a calendar popup 
+|*DateTime*|Creates a field to enter the date and time. Includes a Calendar icon button to choose a date via the popup calendar, as well as a dropdown list to select the time 
+|*Decimal*|Creates a field to hold a number rounded to a specified decimal precision. SuiteCRM stores the exact representation of the number in the database (e.g. For a precision of 2: 2.539 is stored as 2.60) 
+|*DropDown*|Creates a field where you can associate a dropdown list of values 
+|*DynamicDropdown*|Creates a dropdown list from which you can relate a single record from a variety of modules. + 
+Only one Flex Relate-type field is allowed per module. Out of the box, the Flex Relate option is not available for the Accounts, Calls, Contracts, Meetings, Notes, and Tasks modules. 
+|*Float*|Creates a field to hold a number rounded to a specified decimal precision. SuiteCRM stores the value differently based on the database platform SuiteCRM is running on 
+|*HTML*|Creates static HTML-formatted text to display in record views 
+|*IFrame*|Creates a field to store or generate a URL to display an iFrame in record views 
+|*Image*|Creates an image field to upload an image to display on a record 
+|*Integrer*|Creates a field to specify positive or negative numbers with no decimal places 
+|*Multiselect*|Creates a dropdown list of values where multiple values can be selected at once 
+|*Phone*|Creates a field to enter a phone number 
+|*Radio*|Creates a radio button for a user to select one value from a dropdown list 
+|*Relate*|Creates a field to associate a record with another module's record as a one-way relationship. You can add multiple Relate fields to a module. + 
+Relate fields and custom relationships are independent of each other. Changes made to either one are not reflected in the other. Relate fields can be added to a report, but any data on the related record cannot be accessed in the report. To access related record data in a report you will need to create a custom relationship 
+|*TextArea*|Creates an open text area field for multiple lines of text 
+|*URL*|Creates a field to store or generate a URL and display as a link 
+|*TextField*|Creates a field for a single line of text 
+|===
+
 ==== Adding A Dropdown Field
 
 When adding a field of type DropDown, you need to additionally specify the

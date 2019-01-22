@@ -2,6 +2,8 @@
 
 This is the Project for the SuiteCRM Documentation Site which you can browse at [https://docs.suitecrm.com](https://docs.suitecrm.com).
 
+## Contributing
+
 You can find instructions about contributing at [http://docs.suitecrm.com/community/contributing-to-docs/](http://docs.suitecrm.com/community/contributing-to-docs/).
 
 ## Architectural Overview
@@ -16,12 +18,19 @@ You can find instructions about contributing at [http://docs.suitecrm.com/commun
 
 The official site is generated from the `master` branch.
 
-Currently, we'll be using a very simple workflow: you can direct your Pull Request directly to the `master` branch. Eventually we may decide to use other levels of staging on different branches before pulling content into `master`.
+Currently, we'll be using a very simple workflow: you can direct your Pull Request directly to the `master` branch. 
+Eventually we may decide to use other levels of staging on different branches before pulling content into `master`.
 
-If you are doing extensive work on the site (for example, translating a lot of content into a different language, or working on a new complex site feature in Go) we can consider providing a separate branch for you. This will allow you to run Preview Deploys on Netlify so you (and the rest of the Community) can browse your version before deployong to `master`.
+If you are doing extensive work on the site (for example, translating a lot of content into a different language, 
+or working on a new complex site feature in Go) we can consider providing a separate branch for you. 
+This will allow you to run Preview Deploys on Netlify so you (and the rest of the Community) can browse your version 
+before deploying to `master`.
 
 ## Additional languages
 
-We know many members of the Community are eager to have Documentation in their own language. This will eventually be possible, but since this site is in its initial stages, for now we will only be working on a single second language - Spanish. This way we can work out several technical challenges of making the site multilingual. Later we will add more languages. 
+We know many members of the Community are eager to have Documentation in their own language. This will eventually 
+be possible, but since this site is in its initial stages, for now we will only be working on two additional
+languages - Spanish and Russian. This way we can work out several technical challenges of making the site multilingual. 
+Later we will add more languages. 
 
 You can open an Issue if you have any questions or comments. Thank you.
