@@ -1,13 +1,8 @@
 ---
-Title: Releases
+title: "Releases"
 weight: 30
+pre: "<b>3. </b>"
 ---
-
-:experimental:
-
-= SuiteCRM Releases
-
-
 
 * link:/admin/releasepages/7.11.x[7.11.x]
 * link:/admin/releasepages/7.10.x[7.10.x]
