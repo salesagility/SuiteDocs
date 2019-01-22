@@ -31,11 +31,20 @@ Weight: 40
 sudo apt-get update
 
 sudo apt-get install git
-
-wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.deb
-
-sudo dpkg -i hugo_0.41_Linux-64bit.deb
 ----
+
+Для загрузки последней версии Hugo может быть использована следующая команда:
+
+[source, shell]
+wget https://github.com`wget -qO- https://github.com/gohugoio/hugo/releases/latest | grep -oE -m 1 '\/gohugoio\/hugo\/releases\/download\/v[0-9]+.[0-9]+.[0-9]*\/hugo_[0-9]+.[0-9]+.[0-9]*_Linux-64bit.deb'`
+
+При необходимости можно загрузить пакет другой версии с link:https://github.com/gohugoio/hugo/releases[этой^] страницы репозитория.
+
+Установите скачанный пакет. Если в папке находится только один  пакет Hugo, можно воспользоваться командой
+
+[source, shell]
+sudo dpkg -i hugo*.deb
+
 
 Проверить установку Hugo можно командой
 
@@ -65,11 +74,12 @@ asciidoctor --version
 [source,shell]
 hugo
 
-Но гораздо удобнее выполнить эту же команду с дополнительными параметрами:
+В этом случае статическая версия сайта по умолчанию будет создана в папке *public*. +
+При разработке или отладке сайта гораздо удобнее выполнить эту же команду с дополнительными параметрами:
 
 [source,shell]
 ----
-hugo server --bind=0.0.0.0 --baseUrl=http://ip-address --navigateToChanged
+hugo server --bind=0.0.0.0 --baseUrl=http://ip-address --navigateToChanged --enableGitInfo
 ----
 
 где ip-address - ваш локальный ip-адрес; по умолчанию используется порт 1313, 

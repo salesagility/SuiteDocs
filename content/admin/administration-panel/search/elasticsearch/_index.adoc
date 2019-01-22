@@ -1,0 +1,11 @@
+---
+title: Elasticsearch
+weight: 10
+---
+
+{{% notice info %}}
+This enhancement is only available in SuiteCRM from version 7.11 onwards.
+{{% /notice %}}
+
+== Table of Contents
+{{% children depth="3" showhidden="true" %}}

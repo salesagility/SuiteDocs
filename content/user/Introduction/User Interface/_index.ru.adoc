@@ -1,0 +1,11 @@
+---
+Title: "Описание пользовательского интерфейса"
+Weight: 50
+chapter: true
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+== Оглавление
+{{% children depth="4" showhidden="false" %}}

@@ -19,6 +19,9 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Google
 
 ifdef::env-github[:btn:]
 
+{{% notice info %}}
+Синхронизация с календарём Google доступна в версии 7.11 и выше.
+{{% /notice %}}
 
 SuiteCRM может синхронизировать link:../../../user/core-modules/meetings[Встречи] с https://ru.wikipedia.org/wiki/Google_Календарь[календарём Google^]. 
 Синхронизация работает в обе стороны, таким образом обновление данных с одной стороны приведёт к обновлению данных и с другой стороны.
