@@ -38,7 +38,7 @@ sudo apt-get install git
 [source, shell]
 wget https://github.com`wget -qO- https://github.com/gohugoio/hugo/releases/latest | grep -oE -m 1 '\/gohugoio\/hugo\/releases\/download\/v[0-9]+.[0-9]+.[0-9]*\/hugo_[0-9]+.[0-9]+.[0-9]*_Linux-64bit.deb'`
 
-При необходимости можно загрузить пакет другой версии на link:https://github.com/gohugoio/hugo/releases[этой^] странице репозитория.
+При необходимости можно загрузить пакет другой версии с link:https://github.com/gohugoio/hugo/releases[этой^] страницы репозитория.
 
 Установите скачанный пакет. Если в папке находится только один  пакет Hugo, можно воспользоваться командой
 
@@ -74,7 +74,8 @@ asciidoctor --version
 [source,shell]
 hugo
 
-Но гораздо удобнее выполнить эту же команду с дополнительными параметрами:
+В этом случае статическая версия сайта по умолчанию будет создана в папке *public*. +
+При разработке или отладке сайта гораздо удобнее выполнить эту же команду с дополнительными параметрами:
 
 [source,shell]
 ----
