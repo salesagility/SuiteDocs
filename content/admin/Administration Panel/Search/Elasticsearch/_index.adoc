@@ -1,10 +1,10 @@
 ---
-title: Elasticsearch (beta)
+title: Elasticsearch
 weight: 10
 ---
 
 {{% notice info %}}
-This enhancement is in **Beta** please help by providing us your feedback!
+This enhancement is only available in SuiteCRM from version 7.11 onwards.
 {{% /notice %}}
 
 == Table of Contents

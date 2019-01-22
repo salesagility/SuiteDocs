@@ -17,7 +17,7 @@ available grant types.
 
 == Configure Grant Types
 Before you can consume the API, you must first configure SuiteCRM to
-grant access to a client. SuiteCRM 7.10 does provide an administrative
+grant access to a client. SuiteCRM 7.10 provides an administrative
 panel, through which you can add clients and revoke tokens. To configure the grant types, select the admin panel, and then select OAuth2 Clients and Tokens:
 
 image:Admin-OAuth2Clients-3.png[Configure SuiteCRM API]
