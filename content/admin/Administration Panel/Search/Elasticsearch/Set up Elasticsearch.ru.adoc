@@ -7,7 +7,11 @@ Weight: 2
 :email: likhobory@mail.ru
 
 :toc:
-:toc-title: Оглавление 
+:toc-title: Оглавление
+
+{{% notice info %}}
+Поисковый движок Elasticsearch доступен в версии 7.11 и выше.
+{{% /notice %}}
 
 {{% notice note %}}
 В данный момент SuiteCRM поддерживает Elasticsearch версии 5.6.

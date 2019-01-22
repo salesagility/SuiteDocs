@@ -16,7 +16,15 @@
 
 * link:/content/user/Introduction/managing-user-accounts.ru.adoc[Настройка параметров пользователя]
 
-* link:/content/user/Introduction/User%20Interface.ru.adoc[Описание пользовательского интерфейса]
+* Описание пользовательского интерфейса
+**	   link:/content/user/Introduction/User%20Interface/Navigation%20Elements.ru.adoc[Навигация в системе]
+**	   link:/content/user/Introduction/User%20Interface/Home%20Page.ru.adoc[Основная закладка SuiteCRM]
+**	   link:/content/user/Introduction/User%20Interface/Search.ru.adoc[Поиск информации в системе]
+**	   link:/content/user/Introduction/User%20Interface/Views.ru.adoc[Формы представления данных]
+**	   link:/content/user/Introduction/User%20Interface/Record%20Management.ru.adoc[Управление данными]
+**	   link:/content/user/Introduction/User%20Interface/In-line%20Editing.ru.adoc[Быстрая правка]
+**	   link:/content/user/Introduction/User%20Interface/Desktop%20Notifications.ru.adoc[Уведомления]
+**	   link:/content/user/Introduction/User%20Interface/Summary.ru.adoc[Краткое описание модулей системы]
 
 * Основные модули
 **     link:/content/user/Core%20Modules/Accounts.ru.adoc[Контрагенты]

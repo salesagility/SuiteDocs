@@ -9,6 +9,10 @@ Weight: 4
 :toc:
 :toc-title: Оглавление 
 
+{{% notice info %}}
+Поисковый движок Elasticsearch доступен в версии 7.11 и выше.
+{{% /notice %}}
+
 Движок Elasticsearch использует встроенный язык запросов, позволяющий выполнять гибкий поиск как по простым, так и по достаточно сложным критериям.
 
 Полное описания языка запросов содержится на странице https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html#query-string-syntax[официальной документации^]. Ниже представлены наиболее популярные примеры.

@@ -1,0 +1,18 @@
+---
+Title: Summary
+Weight: 58
+---
+
+:imagesdir: /images/en/user
+
+= Summary
+
+In this chapter, we covered all elements of the SuiteCRM user interface.
+There are many elements which you can use to optimise your navigation
+and data management, to increase productivity.
+
+In the next chapter, we will look at modules. Modules are the data
+entities within SuiteCRM which can be standalone, or related to one or
+many other modules. Each module has a different function but many
+modules work together to structure and automate day to day business
+processes.
