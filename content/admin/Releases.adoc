@@ -1,39 +1,26 @@
 ---
 Title: Releases
-weight: 50
+weight: 30
 ---
 
 :experimental:
 
 = SuiteCRM Releases
 
-[frame="none", grid="none"]
-|===
-
-s|7.11.x - link:/admin/releasepages/7.11.x/7.11rc2[7.11 RC 2], link:/admin/releasepages/7.11.x/7.11.0[7.11.0]
 
 
-s|7.10.x - link:/admin/releasepages/7.10.x/7.10beta[7.10 Beta], link:/admin/releasepages/7.10.x/7.10beta2[7.10 Beta 2], link:/admin/releasepages/7.10.x/7.10beta3[7.10 Beta 3], link:/admin/releasepages/7.10.x/7.10rc[7.10 RC], link:/admin/releasepages/7.10.x/7.10rc2[7.10 RC 2], link:/admin/releasepages/7.10.x/7.10[7.10], link:/admin/releasepages/7.10.x/7.10.1[7.10.1], link:/admin/releasepages/7.10.x/7.10.2[7.10.2], link:/admin/releasepages/7.10.x/7.10.3[7.10.3], link:/admin/releasepages/7.10.x/7.10.4[7.10.4], link:/admin/releasepages/7.10.x/7.10.5[7.10.5], link:/admin/releasepages/7.10.x/7.10.6[7.10.6], link:/admin/releasepages/7.10.x/7.10.7[7.10.7], link:/admin/releasepages/7.10.x/7.10.8[7.10.8], link:/admin/releasepages/7.10.x/7.10.9[7.10.9], link:/admin/releasepages/7.10.x/7.10.10[7.10.10], link:/admin/releasepages/7.10.x/7.10.11[7.10.11], link:/admin/releasepages/7.10.x/7.10.12[7.10.12]
+* link:/admin/releasepages/7.11.x[7.11.x]
+* link:/admin/releasepages/7.10.x[7.10.x]
+* link:/admin/releasepages/7.9.x[7.9.x]
+* link:/admin/releasepages/7.8.x[7.8.x]
+* link:/admin/releasepages/7.7.x[7.7.x]
+* link:/admin/releasepages/7.6.x[7.6.x]
+* link:/admin/releasepages/7.5.x[7.5.x]
+* link:/admin/releasepages/7.4.x[7.4.x]
+* link:/admin/releasepages/7.3.x[7.3.x]
+* link:/admin/releasepages/7.2.x[7.2.x]
+* link:/admin/releasepages/7.1.x[7.1.x]
+* link:/admin/releasepages/7.0.x[7.0.x]
 
-s|7.9.x - link:/admin/releasepages/7.9.x/7.9beta[7.9 Beta], link:/admin/releasepages/7.9.x/7.9rc[7.9 RC], link:/admin/releasepages/7.9.x/7.9.0[7.9.0], link:/admin/releasepages/7.9.x/7.9.1[7.9.1], link:/admin/releasepages/7.9.x/7.9.2[7.9.2], link:/admin/releasepages/7.9.x/7.9.3[7.9.3], link:/admin/releasepages/7.9.x/7.9.4[7.9.4], link:/admin/releasepages/7.9.x/7.9.5[7.9.5], link:/admin/releasepages/7.9.x/7.9.6[7.9.6], link:/admin/releasepages/7.9.x/7.9.7[7.9.7], link:/admin/releasepages/7.9.x/7.9.8[7.9.8], link:/admin/releasepages/7.9.x/7.9.9[7.9.9], link:/admin/releasepages/7.9.x/7.9.10[7.9.10], link:/admin/releasepages/7.9.x/7.9.11[7.9.11], link:/admin/releasepages/7.9.x/7.9.12[7.9.12], link:/admin/releasepages/7.9.x/7.9.13[7.9.13], link:/admin/releasepages/7.9.x/7.9.14[7.9.14], link:/admin/releasepages/7.9.x/7.9.15[7.9.15], link:/admin/releasepages/7.9.x/7.9.16[7.9.16], link:/admin/releasepages/7.9.x/7.9.17[7.9.17]
 
-s|7.8.x - link:/admin/releasepages/7.8.x/7.8beta[7.8 Beta], link:/admin/releasepages/7.8.x/7.8beta2[7.8 Beta 2], link:/admin/releasepages/7.8.x/7.8rc[7.8 RC], link:/admin/releasepages/7.8.x/7.8.0[7.8.0], link:/admin/releasepages/7.8.x/7.8.1[7.8.1], link:/admin/releasepages/7.8.x/7.8.2[7.8.2], link:/admin/releasepages/7.8.x/7.8.3[7.8.3], link:/admin/releasepages/7.8.x/7.8.4[7.8.4], link:/admin/releasepages/7.8.x/7.8.5[7.8.5], link:/admin/releasepages/7.8.x/7.8.6lts[7.8.6-LTS], link:/admin/releasepages/7.8.x/7.8.7lts[7.8.7-LTS], link:/admin/releasepages/7.8.x/7.8.8lts[7.8.8-LTS], link:/admin/releasepages/7.8.x/7.8.9lts[7.8.9-LTS], link:/admin/releasepages/7.8.x/7.8.10lts[7.8.10-LTS], link:/admin/releasepages/7.8.x/7.8.11lts[7.8.11-LTS], link:/admin/releasepages/7.8.x/7.8.12lts[7.8.12-LTS], link:/admin/releasepages/7.8.x/7.8.13lts[7.8.13-LTS], link:/admin/releasepages/7.8.x/7.8.14lts[7.8.14-LTS], link:/admin/releasepages/7.8.x/7.8.15lts[7.8.15-LTS] link:/admin/releasepages/7.8.x/7.8.16lts[7.8.16-LTS], link:/admin/releasepages/7.8.x/7.8.17lts[7.8.17-LTS], link:/admin/releasepages/7.8.x/7.8.18lts[7.8.18-LTS], link:/admin/releasepages/7.8.x/7.8.19lts[7.8.19-LTS], link:/admin/releasepages/7.8.x/7.8.20lts[7.8.20-LTS], link:/admin/releasepages/7.8.x/7.8.21lts[7.8.21-LTS], link:/admin/releasepages/7.8.x/7.8.22lts[7.8.22-LTS], link:/admin/releasepages/7.8.x/7.8.23lts[7.8.23-LTS], link:/admin/releasepages/7.8.x/7.8.24lts[7.8.24-LTS], link:/admin/releasepages/7.8.x/7.8.25lts[7.8.25-LTS]
-
-s|7.7.x - link:/admin/releasepages/7.7.x/7.7beta[7.7 Beta], link:/admin/releasepages/7.7.x/7.7beta2[7.7 Beta 2], link:/admin/releasepages/7.7.x/7.7rc[7.7 RC], link:/admin/releasepages/7.7.x/7.7rc2[7.7 RC 2], link:/admin/releasepages/7.7.x/7.7.0[7.7.0], link:/admin/releasepages/7.7.x/7.7.1[7.7.1], link:/admin/releasepages/7.7.x/7.7.2[7.7.2], link:/admin/releasepages/7.7.x/7.7.3[7.7.3], link:/admin/releasepages/7.7.x/7.7.4[7.7.4], link:/admin/releasepages/7.7.x/7.7.5[7.7.5], link:/admin/releasepages/7.7.x/7.7.6[7.7.6], link:/admin/releasepages/7.7.x/7.7.7[7.7.7], link:/admin/releasepages/7.7.x/7.7.8[7.7.8], link:/admin/releasepages/7.7.x/7.7.9[7.7.9]
-
-s|7.6.x - link:/admin/releasepages/7.6.x/7.6beta[7.6 Beta], link:/admin/releasepages/7.6.x/7.6beta2[7.6 Beta 2], link:/admin/releasepages/7.6.x/7.6rc[7.6 RC], link:/admin/releasepages/7.6.x/7.6.0[7.6.0], link:/admin/releasepages/7.6.x/7.6.1[7.6.1], link:/admin/releasepages/7.6.x/7.6.2[7.6.2], link:/admin/releasepages/7.6.x/7.6.3[7.6.3], link:/admin/releasepages/7.6.x/7.6.4[7.6.4], link:/admin/releasepages/7.6.x/7.6.5[7.6.5], link:/admin/releasepages/7.6.x/7.6.6[7.6.6], link:/admin/releasepages/7.6.x/7.6.7[7.6.7], link:/admin/releasepages/7.6.x/7.6.8[7.6.8], link:/admin/releasepages/7.6.x/7.6.9[7.6.9], link:/admin/releasepages/7.6.x/7.6.10[7.6.10]
-
-s|7.5.x - link:/admin/releasepages/7.5.x/7.5beta[7.5 Beta], link:/admin/releasepages/7.5.x/7.5beta2[7.5 Beta 2], link:/admin/releasepages/7.5.x/7.5rc[7.5 RC], link:/admin/releasepages/7.5.x/7.5.0[7.5.0], link:/admin/releasepages/7.5.x/7.5.1[7.5.1], link:/admin/releasepages/7.5.x/7.5.2[7.5.2], link:/admin/releasepages/7.5.x/7.5.3[7.5.3], link:/admin/releasepages/7.5.x/7.5.4[7.5.4], link:/admin/releasepages/7.5.x/7.5.5[7.5.5]
-
-s|7.4.x - link:/admin/releasepages/7.4.x/7.4beta[7.4 Beta], link:/admin/releasepages/7.4.x/7.4beta2[7.4 Beta 2], link:/admin/releasepages/7.4.x/7.4rc[7.4 RC], link:/admin/releasepages/7.4.x/7.4.0[7.4.0], link:/admin/releasepages/7.4.x/7.4.1[7.4.1], link:/admin/releasepages/7.4.x/7.4.2[7.4.2], link:/admin/releasepages/7.4.x/7.4.3[7.4.3]
-
-s|7.3.x - link:/admin/releasepages/7.3.x/7.3beta[7.3 Beta], link:/admin/releasepages/7.3.x/7.3beta2[7.3 Beta 2], link:/admin/releasepages/7.3.x/7.3.0[7.3.0], link:/admin/releasepages/7.3.x/7.3.1[7.3.1], link:/admin/releasepages/7.3.x/7.3.2[7.3.2]
-
-s|7.2.x - link:/admin/releasepages/7.2.x/7.2beta[7.2 Beta], link:/admin/releasepages/7.2.x/7.2beta2[7.2 Beta 2], link:/admin/releasepages/7.2.x/72beta3[7.2 Beta 3], link:/admin/releasepages/7.2.x/7.2.0[7.2.0], link:/admin/releasepages/7.2.x/7.2.1[7.2.1], link:/admin/releasepages/7.2.x/7.2.2[7.2.2], link:/admin/releasepages/7.2.x/7.2.3[7.2.3], link:/admin/releasepages/7.2.x/7.2.4[7.2.4]
-
-s|7.1.x - link:/admin/releasepages/7.1.x/7.1beta[7.1 Beta], link:/admin/releasepages/7.1.x/7.1beta2[7.1 Beta 2] , link:/admin/releasepages/7.1.x/7.1rc[7.1 RC], link:/admin/releasepages/7.1.x/7.1rc2[7.1 RC 2], link:/admin/releasepages/7.1.x/7.1.0[7.1.0], link:/admin/releasepages/7.1.x/7.1.1[7.1.1], link:/admin/releasepages/7.1.x/7.1.2[7.1.2], link:/admin/releasepages/7.1.x/7.1.3[7.1.3], link:/admin/releasepages/7.1.x/7.1.4[7.1.4], link:/admin/releasepages/7.1.x/7.1.5[7.1.5], link:/admin/releasepages/7.1.x/7.1.6[7.1.6], link:/admin/releasepages/7.1.x/7.1.7[7.1.7], link:/admin/releasepages/7.1.x/7.1.8[7.1.8]
-
-s|7.0.x - link:/admin/releasepages/7.0.x/7.0.0[7.0.0], link:/admin/releasepages/7.0.x/7.0.1[7.0.1], link:/admin/releasepages/7.0.x/7.0.2[7.0.2]
-
-|===
 
