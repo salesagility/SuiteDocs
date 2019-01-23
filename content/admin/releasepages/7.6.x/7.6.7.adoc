@@ -1,0 +1,35 @@
+---
+Title: 7.6.7
+weight: 50
+---
+
+:experimental:
+
+_Released Sep 28, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.7.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.7.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+Updates a Security vulnerability with Serialized Input, to prevent
+possible object,file, beans and SQL injection attacks.
+
+Includes btn:[http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.24/[SugarCRM 6.5.24]]
+
+*Users of ALL previous releases are advised to Upgrade to 7.6.7 as soon
+as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.7[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+Special thanks for http://karmainsecurity.com[Egidio Romano] and
+https://github.com/salesagility/SuiteCRM/issues/1843[adminibt] for
+notifying us of this security update.

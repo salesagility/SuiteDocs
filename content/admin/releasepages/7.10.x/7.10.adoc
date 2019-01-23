@@ -1,0 +1,79 @@
+---
+Title: 7.10.0
+weight: 50
+---
+
+:experimental:
+
+_Released 19th Feb 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.0.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.0.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Enhancements
+
+* *Refined SuiteP theme* - New Slimmed down SuiteP Design.
+* *4 SuiteP colour schemes* - Pick a range of different colour schemes to suit your workspace.
+* *New REST API* - A new Rest API (v8) using the popular JSONAPI specifications.
+* *Survey Management* - A new module that will provide you the ability to create, design and send surveys to your customers.
+* *Confirmed Opt-In* - A new feature that has been introduced to assist CRM users with the European GDPR legislation.
+* 2 Factor Authentication
+* Improved Alerts Functionality
+* Improved Password Management
+* Additional password restrictions, logging to identify login attempts and enforce password requirements.
+* Fail2Ban Logging Integration
+* New Suite of Unit Tests
+* Improved Email Performance
+* Email Fixes
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/5267[#5267 ] Fixed #5267 - "Failed to retrieve data" error in studio
+* https://github.com/salesagility/SuiteCRM/pull/5323[#5323 ] Remove word "error" from a debug message
+* https://github.com/salesagility/SuiteCRM/issues/5317[#5317 ] Fixed #5317 - Reports sort by formatted date rather than actual date
+* https://github.com/salesagility/SuiteCRM/issues/2307[#2307 ] Fixed #2307 - Active module won't display further than nth list options down
+* https://github.com/salesagility/SuiteCRM/issues/57[#576 ] Fixed #576 - AOP emails empty messages when cases are updated and no templates are selected
+* https://github.com/salesagility/SuiteCRM/issues/5275[#5275 ] Fixed #5275 - Missing Add Dashlet
+* https://github.com/salesagility/SuiteCRM/issues/5160[#5160 ] Fixed #5160 - Remove SugarCRM reference
+* https://github.com/salesagility/SuiteCRM/pull/5345[#5345 ] Updated documentation links
+* https://github.com/salesagility/SuiteCRM/issues/5315[#5315 ] Fixed #5315 - No CASE number when receiving inbound emails for new Cases
+* https://github.com/salesagility/SuiteCRM/issues/3784[#3784 ] Fixed #3784 - own saved filters under calls is missing - only Suite P
+* https://github.com/salesagility/SuiteCRM/pull/5365[#5365 ] htaccess generate after upgrade
+* https://github.com/salesagility/SuiteCRM/pull/5366[#5366 ] Update upgradeaccess.php
+* https://github.com/salesagility/SuiteCRM/pull/5370[#5370 ] performance: reminders alerts
+* https://github.com/salesagility/SuiteCRM/pull/5259[#5259 ] Surveys module copyright year
+* https://github.com/salesagility/SuiteCRM/pull/5263[#5263 ] Removing indentation from HTML strings
+* https://github.com/salesagility/SuiteCRM/pull/5264[#5264 ] Updating URL to Wiki
+* https://github.com/salesagility/SuiteCRM/issues/5173[#5173 ] Fixed #5173 - Email inline editing does not work properly
+* https://github.com/salesagility/SuiteCRM/pull/5277[#5277 ] Fixed inbound email
+* https://github.com/salesagility/SuiteCRM/pull/5288[#5288 ] Change charts color
+* https://github.com/salesagility/SuiteCRM/issues/5281[#5281 ] Fixed #5281 - Can't change theme style
+* https://github.com/salesagility/SuiteCRM/pull/5293[#5293 ] Fix opt in label in contacts filtering
+* https://github.com/salesagility/SuiteCRM/pull/5295[#5295 ] Fix emails addresses showing in the side bar
+* https://github.com/salesagility/SuiteCRM/pull/5309[#5309 ] Fix duplication of email address fields
+* https://github.com/salesagility/SuiteCRM/pull/5300[#5300 ] change survey toggle
+* https://github.com/salesagility/SuiteCRM/pull/5314[#5314 ] convert html entities
+* https://github.com/salesagility/SuiteCRM/issues/5223[#5223 ] Fixed #5223 - Menu ACTIONS its not translatable - SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/5327[#5327 ] Fixed #5327 - SuiteCRM 7.10 - Subject broken in Notes detail view
+* https://github.com/salesagility/SuiteCRM/issues/5276[#5276 ] Fixed #5276 - Missing parameter field in reports module
+* https://github.com/salesagility/SuiteCRM/pull/5337[#5337 ] fix survey variables with new parser
+* https://github.com/salesagility/SuiteCRM/pull/5341[#5341 ] Fix PHP Error in ListViewPackages.php
+* https://github.com/salesagility/SuiteCRM/pull/5365[#5365 ] htaccess generate after upgrade
+* https://github.com/salesagility/SuiteCRM/pull/5366[#5366 ] Update upgradeaccess.php
+* https://github.com/salesagility/SuiteCRM/pull/5369[#5369 ] Fix missing lato font face for Microsoft Edge
+* https://github.com/salesagility/SuiteCRM/issues/5214[#5214 ] Fixed #5214 - 7.10 RC2 Studio ProjectTaskTemplate Module Layout Error
+* https://github.com/salesagility/SuiteCRM/issues/5167[#5167 ] Fixed #5167 - avoid duplicate encoding
+* https://github.com/salesagility/SuiteCRM/issues/5370[#5370 ] performance: reminders alerts
+* https://github.com/salesagility/SuiteCRM/issues/5174[#5174 ] Fixed #5174 - Confirmed Opt in tick - Microsoft edge
+* https://github.com/salesagility/SuiteCRM/pull/5378[#5378 ] fixing calendar picker in the campaign marketing scree
+* https://github.com/salesagility/SuiteCRM/issues/18[#18 ] Fixed #18 - Bad CSV export on Reports module
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

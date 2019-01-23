@@ -1,0 +1,66 @@
+---
+Title: 7.8.3
+weight: 50
+---
+
+:experimental:
+
+_Released Apr 11, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.3.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Additional Features
+New mechanism to check which user cron runs under, to avoid permissions degradation issues.
+
+{{% notice warning %}}
+After upgrade, check your logs and confirm that your Schedulers are running.
+{{% /notice %}}
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/1489[#1489 ] Fixed #1489 - Duplicating report with a chart removes the chart from the original report
+* https://github.com/salesagility/SuiteCRM/issues/2075[#2075 ] Suggestion - Email templates chooser: sort by name!
+* https://github.com/salesagility/SuiteCRM/issues/628[#628 ] Suggestion - PDF-templates: Allow selection of page format and orientation per template
+* https://github.com/salesagility/SuiteCRM/issues/712[#712 ] Suggestion - Sort PDF Templates when generating Letter
+* https://github.com/salesagility/SuiteCRM/issues/3299[#3299 ] Fixed #3299 - Module builder and adding relationship fails in PHP 7.1
+* https://github.com/salesagility/SuiteCRM/issues/3238[#3238 ] Fix #3238 - Remove Save and Continue Button
+* https://github.com/salesagility/SuiteCRM/issues/2753[#2753 ] Fixed #2753 - Table header background issue (Suite 7)
+* https://github.com/salesagility/SuiteCRM/issues/2795[#2795 ] Fixed #2795 - Checkbox Internal on Cases Detail View is without label
+* https://github.com/salesagility/SuiteCRM/issues/2796[#2796 ] Fixed #2796 - SugarFeed content cut for UTF-8
+* https://github.com/salesagility/SuiteCRM/issues/2898[#2898 ] Fixed #2898 - PDF Template Not Placing Header on First Page
+* https://github.com/salesagility/SuiteCRM/issues/2917[#2917 ] Fixed #2917 - Products, created but not shown in the "Products" subpanel of "Product Categories"
+* https://github.com/salesagility/SuiteCRM/issues/2970[#2970 ] Fixed #2970 - Saturday (marker_image_list) - typo
+* https://github.com/salesagility/SuiteCRM/issues/3028[#3028 ] Fixed #3028 - Image missing from SuiteP theme image directory
+* https://github.com/salesagility/SuiteCRM/issues/3136[#3136 ] Fixed #3136 - TextAreas - it shows multirow text edited by inline edit as a text in one row in detaiview
+* https://github.com/salesagility/SuiteCRM/issues/3147[#3147 ] Fixed #3147 - Can not change tabs in DetailView after added an entity in a subpanel in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1719[#1719 ] Fixed #1719 - Cannot create email campaigns on SuiteCRM using MySQL 5.7
+* https://github.com/salesagility/SuiteCRM/issues/2695[#2695 ] Fixed #2695 - Other user's profiles accessable by non-admin users
+* https://github.com/salesagility/SuiteCRM/issues/3261[#3261 ] Issue #3261 - Customer Portal Welcome Email Blank
+* https://github.com/salesagility/SuiteCRM/issues/3108[#3108 ]  Fixed #3108 - Campaign summary dropdown next items creates error
+* https://github.com/salesagility/SuiteCRM/pull/3204[#3204 ] Improvements to Project module
+* https://github.com/salesagility/SuiteCRM/issues/2787[#2787 ] Fixes #2787 by checking allowed cron users
+* https://github.com/salesagility/SuiteCRM/issues/3247[#3247 ] Fix #3247 - Suite7 inline editing does not work
+* https://github.com/salesagility/SuiteCRM/issues/3201[#3201 ] Fixed #3201 - Products_Quotes as a word in language files
+* https://github.com/salesagility/SuiteCRM/issues/3250[#3250 ] Fixed #3250 - Telephone Numbers in Inline Editing not parsed correctly.
+* https://github.com/salesagility/SuiteCRM/issues/1521[#1521 ] Fixed #1521 - Embedded images in email templates are sent as attachments
+* https://github.com/salesagility/SuiteCRM/issues/2277[#2277 ] Fix #2277 - Mass Update with Dynamic Dropdowns
+* https://github.com/salesagility/SuiteCRM/issues/2806[#2806 ] Fix #2806 - Dashlets wrong data on auto refresh
+* https://github.com/salesagility/SuiteCRM/issues/3217[#3217 ] Fixed #3217 - Security Group Subpanel
+* https://github.com/salesagility/SuiteCRM/issues/3225[#3225 ] Fixed #3225 - Calendar body is not shown after PHP 7.x update
+* https://github.com/salesagility/SuiteCRM/issues/3241[#3241 ] Fixed #3241 - AOS_Contracts subpanel on Documents is empty
+* https://github.com/salesagility/SuiteCRM/issues/3222[#3222 ] Fixed #3222 - Location field doesn't show in Meetings email notifications
+* https://github.com/salesagility/SuiteCRM/issues/3212[#3212 ] Fixed #3212 - AOD_Index permissions check on upgrade can fail on deleted files
+* https://github.com/salesagility/SuiteCRM/issues/905[#905 ] Fixed #905 - Calling custom folder facebook/twitter mapping</li>
+* https://github.com/salesagility/SuiteCRM/issues/3334[#3334 ] Fixed #3334 - Hover variables in Suite P theme variables.scss
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.

@@ -1,0 +1,38 @@
+---
+Title: 7.6.0
+weight: 50
+---
+
+:experimental:
+
+_Released Apr 27, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+SuiteCRM 7.6, the latest cutting edge release, focuses on enhancing the
+functionality of the native Campaign module as well as including the
+latest bug fixes.
+
+The release includes the latest enhancements to the following:
+
+* *Campaign Wizard* - A simplified Campaign Wizard that is easily
+understood. Includes an enhanced UI and progress bar.
+* *Email Templates* - The ability to add Tracker Links to Email Templates
+while creating the template so that they do not need to be created
+beforehand.
+* *Web To Lead Form* - Web-To-Lead Forms are now HTML 5 compliant for
+easier integration with modern Websites.
+* *Target List* - Create Target Lists of Contacts based on associated
+Accounts. This allows for contact lists to be segmented by Account
+properties without the need to use a report.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.

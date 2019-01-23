@@ -1,0 +1,90 @@
+---
+Title: 7.10.12
+weight: 50
+---
+
+:experimental:
+
+_Released 14th Jan 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.12.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.12.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+[discrete]
+
+
+==== **Enhancements**
+
+* https://github.com/salesagility/SuiteCRM/pull/6417[#6417 ] Hotfix inboundemail tests
+* https://github.com/salesagility/SuiteCRM/pull/6454[#6454 ] Hotfix phpunit
+* https://github.com/salesagility/SuiteCRM/pull/6493[#6493 ] Developers have the ability to extend the Favourites and Tracker functionality in SugarView
+* https://github.com/salesagility/SuiteCRM/pull/6734[#6734 ] Resolved the bug where users were unable to navigate using the tab order
+
+
+==== **Bug Fixes**
+
+* https://github.com/salesagility/SuiteCRM/issues/707[#707 ] Fixed #707 - added conditional statement to check if action is not clone
+* https://github.com/salesagility/SuiteCRM/issues/2219[#2219 ] Fixed #2219 - Description field not wrapping with SuiteP theme after inline editing
+* https://github.com/salesagility/SuiteCRM/issues/3763[#3763 ] Fixed #3763 - Resolved the bug that stopped users to navigate using tab order
+* https://github.com/salesagility/SuiteCRM/issues/4046[#4046 ] Fixed #4046 - 7.9.4 - imported emails are not auto related to related records when you reply to/reply to all/ forward them
+* https://github.com/salesagility/SuiteCRM/issues/717[#717 ] Fixed #717 - Corrects Field Indention on Detailview when by itself on panel
+* https://github.com/salesagility/SuiteCRM/issues/583[#583 ] Fixed #583 - Adds the visual cue that a module is highlighted on main navigation
+* https://github.com/salesagility/SuiteCRM/issues/3083[#3083 ] Fixed #3083 - Calendar pop up windows are incorrectly displayed under MENU bar index
+* https://github.com/salesagility/SuiteCRM/issues/2400[#2400 ] Fixed #2400 - Language manifest is duplicated and overwritten on each install
+* https://github.com/salesagility/SuiteCRM/pull/6004[#6004 ] Fixed #6004 - Fix round up for quotes/invoices where there is an increase in integral part
+* https://github.com/salesagility/SuiteCRM/issues/6190[#6190 ] Fixed #6190 - You can now access Change Log from Document Detail View
+* https://github.com/salesagility/SuiteCRM/pull/6260[#6260 ] New Tests for Inbound Email functionality
+* https://github.com/salesagility/SuiteCRM/issues/6302[#6302 ] Fixed #6302 - installWizard styling
+* https://github.com/salesagility/SuiteCRM/issues/6303[#6303 ] Fixed #6303 - Administration / System Settings / ERROR in log: argument cache/themes/SuiteP/modules is not a file or a dir
+* https://github.com/salesagility/SuiteCRM/issues/6150[#6150 ] Fixed #6150 - This shows all the records of Parent Type in listview
+* https://github.com/salesagility/SuiteCRM/issues/5477[#5477 ] Fixed #5477 - Resolves issue of Fillers Cause Spacing Issues on the DetailView when they are left of a Field
+* https://github.com/salesagility/SuiteCRM/issues/6340[#6340 ] Fixed #6340 - Email Compose Dropdown now recognises specialised characters
+* https://github.com/salesagility/SuiteCRM/issues/5948[#5948 ] Fixed #5948 - Resolved inline editing on the "content" field on the Campaign Module
+* https://github.com/salesagility/SuiteCRM/issues/6402[#6402 ] Fixed #6402 - Resolved mass update of Users for Email Client.
+* https://github.com/salesagility/SuiteCRM/issues/5783[#5783 ] Fixed #5783 - Resolved so that the geocoded table header is now visible
+* https://github.com/salesagility/SuiteCRM/issues/2741[#2741 ] Fixed #2741 - Custom search field subquery now checks all values
+* https://github.com/salesagility/SuiteCRM/pull/6464[#6464 ] Codecov exclude
+* https://github.com/salesagility/SuiteCRM/issues/5771[#5771 ] Fixed #5771 - Resolves the Salutation variable missing in campaigns when used.
+* https://github.com/salesagility/SuiteCRM/issues/6351[#6351 ] Fixed #6351 - Now only sends one email when using activities subpanel as intended
+* https://github.com/salesagility/SuiteCRM/issues/6485[#6485 ] Fixed #6485 - Resolves opt-in tick for external email clients
+* https://github.com/salesagility/SuiteCRM/issues/6487[#6487 ] Fixed #6487 - Resolves the DB time shown for related email addresses in reports module
+* https://github.com/salesagility/SuiteCRM/issues/6472[#6472 ] Fixed #6472 - Resolved wrong sized image for email templates in the campaign wizard
+* https://github.com/salesagility/SuiteCRM/pull/6530[#6530 ] Fixed #6530 - unsubscribed users no longer showing up as subscribed
+* https://github.com/salesagility/SuiteCRM/pull/6533[#6533 ] Adding the ability to set subpanels to display as flat buttons via layoutdefs
+* https://github.com/salesagility/SuiteCRM/issues/6549[#6549 ] Fixed #6549 - No longer a missing surveys_campaigns relationship
+* https://github.com/salesagility/SuiteCRM/pull/6566[#6566 ] Update composer.json + composer.lock
+* https://github.com/salesagility/SuiteCRM/issues/6568[#6568 ] Fixed #6568 - Change minimun and recommended PHP
+* https://github.com/salesagility/SuiteCRM/issues/6579[#6579 ] Fixed #6579 - Resolved Calendar creating an extra meeting after Repeat End by
+* https://github.com/salesagility/SuiteCRM/pull/6585[#6585 ] php_zip_utils.php
+* https://github.com/salesagility/SuiteCRM/pull/6586[#6586 ] Fix an erroneously-commented return statement
+* https://github.com/salesagility/SuiteCRM/pull/6590[#6590 ] Insert images in Email Templates with tinyMCE
+* https://github.com/salesagility/SuiteCRM/pull/6592[#6592 ] Updated contributing.md
+* https://github.com/salesagility/SuiteCRM/issues/6552[#6552 ] Fixed #6552 - Resolved AOR_Report exporting apostrophies to CSV.
+* https://github.com/salesagility/SuiteCRM/issues/6511[#6511 ] Fixed #6511 - Resolved the Document Attachment Subpanel is now correct
+* https://github.com/salesagility/SuiteCRM/issues/4999[#4999 ] Fixed #4999 - Resolved sent emails now appear in the sent folder.
+* https://github.com/salesagility/SuiteCRM/issues/6603[#6603 ] Added/Refactor: Clean MySql Queries in SugarFolders
+* https://github.com/salesagility/SuiteCRM/issues/6594[#6594 ] Fixed #6594 - Resolved Calendar now updates visually when not using "Shared Calendar Separate"
+* https://github.com/salesagility/SuiteCRM/issues/707[#707 ] Fixed #6611 - Resolves the issue of users unable to clone a field in studio
+* https://github.com/salesagility/SuiteCRM/issues/6050[#6050 ] Fixed #6050 - No submit button while editing imported email
+* https://github.com/salesagility/SuiteCRM/pull/6629[#6629 ] Fixed #6629 - Resolved link now gets deleted in documents
+* https://github.com/salesagility/SuiteCRM/pull/6653[#6653 ] Fixed #6653 - Resolved campaing wizard no longer shows the template editor in all steps
+* https://github.com/salesagility/SuiteCRM/issues/5509[#5509 ] Fixed #5509 - [language] Now has the correct label for 'FOR_AMOUNT' in activity stream
+* https://github.com/salesagility/SuiteCRM/issues/6651[#6651 ] Fixed #6651 - Added LBL_CHECKMARK to SecurityGruop language
+* https://github.com/salesagility/SuiteCRM/issues/4872[#4872 ] Fixed #4872 - Fixed so subpanel actions are no longer failing if refresh_page=1
+* https://github.com/salesagility/SuiteCRM/pull/6678[#6678 ] Resolved blank screen on PasswordManager
+* https://github.com/salesagility/SuiteCRM/pull/6698[#6698 ] Copyright revision
+* https://github.com/salesagility/SuiteCRM/pull/6726[#6726 ] outgoing emails: From field incorectly filled
+* https://github.com/salesagility/SuiteCRM/pull/6727[#6727 ] Emails Module: Inbound Settings Layout, Date Sent and Draft Sending
+* https://github.com/salesagility/SuiteCRM/pull/6738[#6738 ] Fixed #6738 - Resolves the issue of when creating a row the delete collumn will now display correctly.
+
+
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

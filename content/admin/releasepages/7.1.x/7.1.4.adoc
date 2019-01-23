@@ -1,0 +1,34 @@
+---
+Title: 7.1.4
+weight: 50
+---
+
+:experimental:
+
+_Released this Sep 25, 2014_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1.4.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+btn:[http://support.sugarcrm.com/02_Documentation/01_Sugar_Editions/05_Sugar_Community_Edition/Sugar_Community_Edition_6.5/Sugar_Community_Edition_Release_Notes_6.5.18[Upgraded Sugar to 6.5.18]]
+
+*Upgraded QuickCRM* - This update addresses an important security issue.
+
+[discrete]
+===== Bug Fixes
+* FIXED Number separators causing incorrect tax calculations
+* FIXED Line items not automatically calculating on list price change
+* FIXED Function name conflict between AOS and Opportunities
+* FIXED Permission issues in AOS Quotes Actions e.g convert to invoice
+* FIXED Various import issue in AOS
+* FIXED Missing AOS Language entries
+* FIXED Filtering on Multi-select fields in dashlets not working correctly with blank values
+* FIXED Missing silent upgrade files

@@ -1,0 +1,46 @@
+---
+Title: 7.7.1
+weight: 50
+---
+
+:experimental:
+
+_Released Aug 11, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.1.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+SuiteCRM 7.7.1 features bug fixes, improves Theme SuiteP UI and
+functionality
+
+[discrete]
+===== Bug Fixes
+* Fixed notices - undefined value $loc
+* Fixed notices - incorrect label values in menu def
+* https://github.com/salesagility/SuiteCRM/issues/1826[#1826 ] Fixed #1826 7.7RC2 Case Updates not displayed
+* Fixed User Edit Button fixed
+* Fixed - Create Person form css for SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1662[#1662 ] Fixed #1662 - remove aor_sql_operator_list values from language files
+* https://github.com/salesagility/SuiteCRM/issues/1817[#1817 ] Fixed #1817 Subpanel Tabs.
+* Tidy up User Wizard for new users
+* https://github.com/salesagility/SuiteCRM/issues/1862[#1862 ] fix for task 196 - SuiteP Theme – User Profile, All options on one screen (Regardless of Current Tab)
+* Adding missing calendar icon for the dashlet
+* Fixed Regular Users viewing Calendar and Activities
+* Fix for Role Edit Button
+* Fixed  Screen freezes add a Project Task via Projects (css issue)
+* Remove Colour selector/picker for SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1861[#1861 ] Fixed #1861 Upgrading from 7.3.x can cause crm to run slow
+* Fixed hide_subpanels config option with SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/1874[#1874 ] Fixed #1874 - Missing view icon in view events menu item
+* https://github.com/salesagility/SuiteCRM/issues/1867[#1867 ] Fixed #1867 - Making the quick create menu translatable.
+* https://github.com/salesagility/SuiteCRM/issues/1850[#1850 ] Fixed #1850 - Adding the missing icon for the activites dashlet
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
