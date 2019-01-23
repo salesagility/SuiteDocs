@@ -104,6 +104,11 @@ Start Elasticsearch with:
 [source,bash]
 sudo systemctl start elasticsearch.service
 
+or on older Ubuntus:
+
+[source,bash]
+/etc/init.d/elasticsearch start
+
 == Test Installation
 
 Check if the server is running with:
