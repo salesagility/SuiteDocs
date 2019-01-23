@@ -1,7 +1,0 @@
----
-title: Search
-weight: 50
----
-
-=== Table of Contents
-{{% children depth="3" showhidden="true" %}}
