@@ -1,0 +1,49 @@
+---
+Title: 7.8.4
+weight: 50
+---
+
+:experimental:
+
+_Released May 29, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.4.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/3515[#3515 ] Fixed #3515 Id. Decision Makers abbreviation
+* https://github.com/salesagility/SuiteCRM/issues/3499[#3499 ] Fixed #3499 - SugarBean - array_seach function doesn't use strict parameter
+* https://github.com/salesagility/SuiteCRM/issues/3470[#3470 ] Fixed #3470 - Export fails when trying to export all records (DB error)
+* https://github.com/salesagility/SuiteCRM/issues/3477[#3477 ] Fixed #3477 - Subtotal Tax
+* https://github.com/salesagility/SuiteCRM/issues/3478[#3478 ] Fixed #3478 - Project Templates: Project from Project Title - language
+* https://github.com/salesagility/SuiteCRM/issues/636[#636 ] Fixed #636 - Reports module: items in the Treeview display lang. label
+* https://github.com/salesagility/SuiteCRM/issues/3427[#3427 ] Fixed #3427 - Double spaces in a sentence
+* https://github.com/salesagility/SuiteCRM/issues/3271[#3271 ] Fixed #3271 - in File Cal.js in function eventResize "debugger" statement left in code
+* https://github.com/salesagility/SuiteCRM/issues/3375[#3375 ] Fixed #3375 Report. The errors caused by the conditions of type "field = ''"
+* https://github.com/salesagility/SuiteCRM/issues/2483[#2483 ] Fixed #2483 - User profile image not visible on Employee detail page
+* https://github.com/salesagility/SuiteCRM/issues/3404[#3404 ] Fixed #3404 - WizardMarketing.php can't be moved to custom dir
+* https://github.com/salesagility/SuiteCRM/issues/3304[#3304 ] Fixed #3304 - Spots needs UNION ALL when selecting data
+* https://github.com/salesagility/SuiteCRM/issues/3295[#3295 ] Fixed #3295 - SugarEmailAddress->addAddress does not set other addresses to non-primary if $primary parameter is true
+* https://github.com/salesagility/SuiteCRM/issues/3070[#3070 ] Fixed #3295 - Google Maps do not work - possibly due to Google API Change
+* https://github.com/salesagility/SuiteCRM/issues/2153[#2153 ] Fixed #3295 - Images in PDFs not showing
+* https://github.com/salesagility/SuiteCRM/issues/2145[#2145 ] Fixed #3295 - URGENT !!! - Calls - RELATE TO field record (relationship) is missig after inline edit of Start date&time
+* https://github.com/salesagility/SuiteCRM/issues/2058[#2058 ] Fixed #2058 - Gantt View Page Reload failure
+* https://github.com/salesagility/SuiteCRM/issues/2053[#2053 ] Fixed #2053 - Can't add Spots to Favorites
+* https://github.com/salesagility/SuiteCRM/issues/2012[#2012 ] Fixed #2012 - Studio - Layouts - Panel name cannot be edited
+* https://github.com/salesagility/SuiteCRM/issues/1338[#1338 ] Fixed #1338 - Print page - link issue
+* https://github.com/salesagility/SuiteCRM/issues/1306[#1306 ] Fixed #1306 - Image fields from ImageListView.tpl - module not fetched correctly
+* https://github.com/salesagility/SuiteCRM/pull/3387[#3387 ] Fixed issue on PHP5.3 with syntax error for getRunningUser
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.8.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to https://github.com/haris-raheem[haris-raheem] for
+providing further enhancements for the Projects Module.

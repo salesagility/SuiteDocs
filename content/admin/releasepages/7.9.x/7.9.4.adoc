@@ -1,0 +1,35 @@
+---
+Title:  7.9.4
+weight: 50
+---
+
+:experimental:
+
+_Released Jul 20, 2017_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.4.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/3901[#3901 ] No outbound account in "From" dropdown MSSQL
+* https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset
+* https://github.com/salesagility/SuiteCRM/issues/3908[#3908 ] fixed: Edit action not working after selecting a user on Administrator User Management module (missing single quotes)
+* https://github.com/salesagility/SuiteCRM/pull/3905[#3905 ] Removed duplicated space
+* https://github.com/salesagility/SuiteCRM/pull/3900[#3900 ] CalendarDashlet - Removing translations from core
+
+*This Release contains all the Security Patches from the previous 7.9.3 Release. Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.4 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+We have also updated our Security Process asking the community to send
+their security issues directly to us via email
+mailto:security@suitecrm.com[security@suitecrm.com]

@@ -1,0 +1,41 @@
+---
+Title: 7.6.2
+weight: 50
+---
+
+:experimental:
+
+_Released May 10, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This is a bug fix release for SuiteCRM 7.6.2 and includes updated
+Campaign Wizard UI.
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/1289[#1289 ] Fixed #1289 Unable to send email campaign SuiteCRM7.6RC & SuiteCRM7.6.1 - test for real affected rows on update emailman table
+* https://github.com/salesagility/SuiteCRM/issues/1244[#1244 ] Fixed #1244: Removed hard coded message and moved it into mod strings.
+* https://github.com/salesagility/SuiteCRM/issues/1342[#1342 ] Fixed #1342 URL type field link not working after inline editing
+* https://github.com/salesagility/SuiteCRM/issues/1339[#1339 ] Fixed #1339 Dynamic dropdown shows database value instead of label
+* https://github.com/salesagility/SuiteCRM/issues/1336[#1336 ] Fixed #1336 Meetings reminder invitee icon image is broken
+* https://github.com/salesagility/SuiteCRM/issues/1274[#1274 ] Fixed #1274 Project Template and date format
+* https://github.com/salesagility/SuiteCRM/issues/1320[#1320 ] Fixed #1320 "One of" condition for multi select does not working
+* https://github.com/salesagility/SuiteCRM/issues/1184[#1184 ] Fixed #1184 use correct db user on install
+* https://github.com/salesagility/SuiteCRM/issues/1239[#1239 ] Fixed #1239 History Subpanel - Filter - Clear Button not working properly
+* https://github.com/salesagility/SuiteCRM/issues/1302[#1302 ] Fixed #1302 JotPad dashlet doesn't save text when line break is added
+* https://github.com/salesagility/SuiteCRM/issues/1272[#1272 ] AOR_Report module cannot update Date type parameter.
+* https://github.com/salesagility/SuiteCRM/issues/1253[#1253 ] Fixed #1253 - added back if(!whwere_set) clause
+* https://github.com/salesagility/SuiteCRM/issues/1178[#1178 ] Cannot save Meeting in Firefox if invitee is removed
+* https://github.com/salesagility/SuiteCRM/issues/1161[#1161 ] Calendar -> Create Activity -> default Reminder has duplicate users
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.

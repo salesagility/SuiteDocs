@@ -1,0 +1,55 @@
+---
+Title: 7.10.11
+weight: 50
+---
+
+:experimental:
+
+_Released 5th Dec 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.11.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.11.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 - Import mapping publish button
+* https://github.com/salesagility/SuiteCRM/issues/3440[#3440 ] Fixed #3440 - Make sure deleted users are not used when validating users
+* https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Panels showing wrong in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/6240[#6240 ] Fixed #6240 - PipelineBySalesStageDashlet not converting currency
+* https://github.com/salesagility/SuiteCRM/pull/6348[#6348 ] Change hard coded labels in Events invites
+* https://github.com/salesagility/SuiteCRM/pull/6381[#6381 ] Time issue fixed in email template for datetime fields
+* https://github.com/salesagility/SuiteCRM/issues/6432[#6432 ] Fixed #6432 - Studio: invisible "pencil" icon to edit panel labels
+* https://github.com/salesagility/SuiteCRM/issues/4123[#4123 ] Fixed #4123 - reports: fix adding parameterized reports to target lists
+* https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
+* https://github.com/salesagility/SuiteCRM/pull/6555[#6555 ] Fixed bracket issue
+* https://github.com/salesagility/SuiteCRM/pull/6556[#6556 ] Default navigation paradigm should be used
+
+*Users of ALL previous 7.9+ releases are advised to Upgrade to 7.10.11 as soon as possible.*
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+[[anchor-7.10.11-community]]
+
+_Special thanks to the following members for their contributions!_
+
+* https://github.com/gunnicom[gunnicom]
+* https://github.com/LEAP-nishit[LEAP-nishit]
+* https://github.com/lazka[lazka]
+* https://github.com/rediansoftware[rediansoftware]
+* https://github.com/QuickCRM[QuickCRM]
+* https://github.com/AussieGuy0[AussieGuy0]
+* https://github.com/apoonawa[apoonawa]
+
+That's a total of **12 community merges** across the releases! Well done everyone!
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
+
+_Also special thanks to https://www.linkedin.com/in/rewanthcool/[Rewanth Cool] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issue._
+
+Lastly a big thank you to the community for testing and confirming pull requests!

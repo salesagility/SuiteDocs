@@ -1,0 +1,86 @@
+---
+Title: 7.8.21
+weight: 50
+---
+
+:experimental:
+
+_Released 13th Sep 2018_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.21.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.21.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+
+===== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/4265[#4265 ] Fixed #4265 - PHP strict error
+* https://github.com/salesagility/SuiteCRM/issues/2783[#2783 ] Fixed #2783 - In the calendar dashlet, right / left week icons are not visible
+* https://github.com/salesagility/SuiteCRM/pull/4320[#4320 ] Log level "Warn" cleanup
+* https://github.com/salesagility/SuiteCRM/issues/3662[#3662 ] Fixed #3662 - Calendar date selector popup
+* https://github.com/salesagility/SuiteCRM/issues/3535[#3535 ] Fixed #3535 - Variable clash ($request vs $_REQUEST) in modules/Emails/Email.php email2Send()
+* https://github.com/salesagility/SuiteCRM/pull/4368[#4368 ] Make Business Hours less mysterious
+* https://github.com/salesagility/SuiteCRM/issues/4367[#4367 ] Fixed #4367 - files.md5 sets $md5_string_calculated but here $md5_string used
+* https://github.com/salesagility/SuiteCRM/pull/4406[#4406 ] Fixed php notice
+* https://github.com/salesagility/SuiteCRM/pull/5021[#5021 ] Fixed maps LBL
+* https://github.com/salesagility/SuiteCRM/issues/2890[#2890 ] Fixed #2890 - Workflow Condition on custom field error
+* https://github.com/salesagility/SuiteCRM/issues/4488[#4488 ] Fixed #4488 - line items reports
+* https://github.com/salesagility/SuiteCRM/issues/5144[#5144 ] Fixed PHP notice
+* https://github.com/salesagility/SuiteCRM/issues/1716[#1716 ] Fixed #1716 - Rem word as a Remove abbreviation? [Language]
+* https://github.com/salesagility/SuiteCRM/issues/2176[#2176 ] Fixed #2176 - Days Dim - requesting context for translation
+* https://github.com/salesagility/SuiteCRM/issues/5446[#5446 ] Fixed #5446 - make UserViewHelper.php code-customizable
+* https://github.com/salesagility/SuiteCRM/issues/4920[#4920 ] Fixed #4920 - SugarFields Address language files for View.tpl
+* https://github.com/salesagility/SuiteCRM/issues/5690[#5690 ] Fixed #5690 - [language] Unused language strings in ver. 7.10.4
+* https://github.com/salesagility/SuiteCRM/issues/5343[#5343 ] Fixed #5343 - Mismatch between Security Groups and Security Suite names in Administration
+* https://github.com/salesagility/SuiteCRM/issues/5814[#5814 ] Fixed #5814 - BUG in workflow emails - date and time showing in UTC format - on save only
+* https://github.com/salesagility/SuiteCRM/issues/3468[#3468 ] Fixed #3468 - Email Template - Note Date Entered - Format remains yyyy-mm-dd
+* https://github.com/salesagility/SuiteCRM/issues/5719[#5719 ] Fixed #5719 - 7.10.4 new case number still doesn't show up in the email notification
+* https://github.com/salesagility/SuiteCRM/pull/5881[#5881 ] Hotfix 7.8.x tests
+* https://github.com/salesagility/SuiteCRM/issues/5303[#5303 ] Fixed #5303 - PHP Warnings on SugarWidgetFieldName and SugarWidgetFieldId
+* https://github.com/salesagility/SuiteCRM/issues/6052[#6052 ] Fixed #6052 - AOR_Reports are showing date+hour on date fields
+* https://github.com/salesagility/SuiteCRM/issues/609[#609 ] Fixed #609 - Currency issue in Listview
+* https://github.com/salesagility/SuiteCRM/issues/6255[#6255 ] Fixed #6255 - Seemingly redundant code logs: [FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+* https://github.com/salesagility/SuiteCRM/pull/6100[#6100 ] disabling group relationship for regular users (into 7.8.x)
+* https://github.com/salesagility/SuiteCRM/issues/6108[#6108 ] Fixed #6108 - Google Maps Geocoding API Key NOT added to the call when Geocoding Addresses
+* https://github.com/salesagility/SuiteCRM/issues/6133[#6133 ] Fixed #6133 - Contact popup of AOS_Contracts doesn't filter by account
+* https://github.com/salesagility/SuiteCRM/issues/6061[#6061 ] Fixed #6061 - Why phpinfo as a language string?
+* https://github.com/salesagility/SuiteCRM/pull/6145[#6145 ] Fixed typo
+* https://github.com/salesagility/SuiteCRM/pull/6158[#6158 ] Add composer.lock 7.8.x
+* https://github.com/salesagility/SuiteCRM/issues/2172[#2172 ] Fixed #2172 - changed an inlline edit click to dbl click, plus changes to handle date / datetime clicked awayclose errors (js) and formatDisplayValue (php). InlineEditing.php
+* https://github.com/salesagility/SuiteCRM/pull/6164[#6164 ] phpcs.xml
+* https://github.com/salesagility/SuiteCRM/issues/6081[#6081 ] Fixed #6081 - SuiteCRM 7.10.6 - The Description will not save when editing in the Case Edit View.
+* https://github.com/salesagility/SuiteCRM/issues/6162[#6162 ] Fixed #6162 - PDF Template Discount Percentage is not formatted nicely
+* https://github.com/salesagility/SuiteCRM/issues/6161[#6161 ] Fixed #6161 - AOR_Reports: Special Character are not exported correctly
+* https://github.com/salesagility/SuiteCRM/pull/6176[#6176 ] Hotfix 7.8.x fix code typo
+* https://github.com/salesagility/SuiteCRM/issues/6172[#6172 ] Fixed #6172 - In Wizard editing existing campaing moving from "Templates" to "Marketing" to "Send Email ..." creates new entry under marketing
+* https://github.com/salesagility/SuiteCRM/pull/6180[#6180 ] Adjust the emails module width taking into account the sidebar
+* https://github.com/salesagility/SuiteCRM/pull/6202[#6202 ] Fixed #6202 - Fixed pdf export fatal
+* https://github.com/salesagility/SuiteCRM/pull/6211[#6211 ] Prevent massive slowdown if someone accidently added many favorites
+* https://github.com/salesagility/SuiteCRM/pull/6035[#6035 ] Show only if user has rights to activity/history record
+* https://github.com/salesagility/SuiteCRM/pull/6215[#6215 ] Fixing AOW_Actions save
+* https://github.com/salesagility/SuiteCRM/issues/3864[#3864 ] Fixed #3864 - Deleted and recreated user can't login with system generated password
+* https://github.com/salesagility/SuiteCRM/issues/5921[#5921 ] Fixed #5921 - After Upgrade to 7.10.5 SAML users cannot login
+* https://github.com/salesagility/SuiteCRM/issues/5885[#5885 ] Fixed #5885 - SAML Authentication fails when SAML2Authenticate ticked
+* https://github.com/salesagility/SuiteCRM/pull/6251[#6251 ] Fix vcal name
+* https://github.com/salesagility/SuiteCRM/issues/5794[#5794 ] Fixed #5794 - Added Column gets removed from listview after removing filter
+* https://github.com/salesagility/SuiteCRM/pull/5892[#5892 ] Fix bug on AOW_Actions relate fields
+* https://github.com/salesagility/SuiteCRM/pull/6268[#6268 ] Do not show img tag with same src attribute if an image field is empty
+* https://github.com/salesagility/SuiteCRM/issues/6244[#6244 ] Fixed #6244 - 7.8.20LTS AOR_Report fails using a date parameter
+* https://github.com/salesagility/SuiteCRM/pull/6252[#6252 ] AOR Reports 7.8.x
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15606[CVE-2018-15606]: Vulnerability: Cross Site Scripting (XSS) Description: Utilising URL parameters to phish error message to obtain user data/access.
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
+
+_Special thanks to https://www.linkedin.com/in/rewanthcool/[Rewanth Cool] and https://github.com/hrushikeshk[hrushikeshk] for
+raising/reviewing security issues and to the many community memebers who helped provide tests for this release, https://github.com/ApatheticCosmos[ApatheticCosmos], https://github.com/Abuelodelanada[Abuelodelanada], https://github.com/ChangezKhan[ChangezKhan], https://github.com/sanchezfauste[sanchezfauste]._
+
+_Please note that you will need to modify your php.ini Maximum upload size value if it is below 30MB_
+
+_Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.21 as soon as possible._
