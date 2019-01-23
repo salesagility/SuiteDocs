@@ -1,0 +1,171 @@
+---
+Title: Cases with Portal
+Weight: 250
+---
+ 
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Advanced Open Cases with Portal
+
+== Introduction
+
+Advanced OpenPortal (AOP) is an enhancement to the case management
+module in SuiteCRM. There is also a Joomla component. AOP extends the
+core cases functionality and enhances mechanisms for contacts to update
+cases.
+
+This module allows contacts held within SuiteCRM to:
+
+* *Retrieve emails regarding updates to your Cases*
+* *Create Cases by emailing a defined support address*
+* *Update Cases by replying to Case emails*
+
+The module allows SuiteCRM users to: Add updates to Cases View a
+threaded log of all updates Retrieve email notifications when a contact
+adds an update to a Case Create Joomla users from a Contact The AOP
+Joomla component connects a Joomla site to the SuiteCRM instance. This
+allows SuiteCRM Contacts to: View a list of your Cases online Create new
+Cases online Reply to existing cases View your case details including a
+threaded log of all updates
+
+Emails Advanced OpenPortal (AOP) uses the standard SuiteCRM
+functionality to send emails and create cases from inbound emails.
+Details on how to configure your outgoing email settings can be found
+link:../../../admin/administration-panel/email/#_outgoing_mail_configuration[here].
+Details on how to set up a group email account which will
+automatically generate cases can be found link:../../../admin/administration-panel/email/#_group_email_account[here].
+
+== Downloading
+
+The plug-in can be downloaded for free from the SuiteCRM site at 
+the https://suitecrm.com/resources/suitecrm-joomla-portal-plug-in/[Joomla Portal Plug-in page^].
+
+== Installation & Configuration
+
+System Administrator users can configure the settings by accessing the
+AOP settings through the admin panel.
+
+image:145AOP_settings.png[title="AOP Settings"]
+
+Here you can enable or disable the AOP functionality, configure the
+Joomla URL, set the case distribution method, “email from” details and
+the different email templates.
+
+To install the Joomla AOP component, use the "Extension Manager" inside Joomla.
+Once installed you must configure the SuiteCRM URL and a valid SuiteCRM
+username and password. This can be done by navigating to Components →
+advancedopen-portal.
+
+image:image146.png[title="Joomla AOP"]
+
+Once you have configured the Joomla component you can add two new Main
+Menu items to your Joomla portal. These are:
+
+* *List Cases* - This shows a list of all Cases that the Contact has
+logged. This page also provides a search mechanism to filter cases.
+* *New Case* – This page will allow Contacts to create Cases in SuiteCRM
+from the Joomla portal.
+
+image:image147.png[title="Joomla AOP"]
+
+== Using Advanced OpenPortal
+
+[discrete]
+==== Creating a Portal User
+
+To create a Portal User a SuiteCRM User must first create a Contact for
+the Portal User using the standard SuiteCRM functionality. Once created
+you must click btn:[Create Portal User]. This can be found at the
+top left hand side of the Contact record Detail View.
+
+{{% notice note %}}
+If you have action menus enabled the button will be within the
+action menu.
+{{% /notice %}}
+
+image:image148.png[title="Joomla AOP"]
+
+Once clicked, a new user will be created in Joomla and the Contact will
+be sent your portal credentials via email.
+
+[discrete]
+==== Creating a Case via the Portal
+
+Portal Users can create a new Case by going to the New Case page on the
+portal website.
+
+image:image149.png[title="Creating a Case"]
+
+From here Portal Users can enter the details of your issue and attach
+any supporting documents. The dropdown values are dynamically pulled
+from the SuiteCRM instance and thus can be edited using the drop down
+editor tool within SuiteCRM.
+
+{{% notice note %}}
+This feature does use the Joomla cache so please clear cache
+after an update has been made. When the case is ready to be logged,
+click the button. This will create the Case within SuiteCRM.
+{{% /notice %}}
+
+[discrete]
+==== Viewing Cases via the Portal
+
+Portal Users can view a list of all your Cases using the List Cases
+page. This will also allow you to filter your search by State (All, Open
+or Closed) or by keyword. When searching by keyword it will search the
+'Number', 'Subject', 'Status', 'Created' and 'Last Update' fields to
+find your result.
+
+image:image150.png[title="Viewing Cases"]
+
+To view more information on the case and to add updates then Portal
+Users can click the *'Subject'* of case.
+
+image:image151.png[title="Viewing Cases"]
+
+From the case view Portal Users can view all the external updates added
+to the case from both Joomla and SuiteCRM. This is displayed in a
+threaded format showing who updated the case Any attached files to
+updates will also be accessible from this view. When a Portal User
+updates a case the assigned SuiteCRM user of the case will be notified
+by email.
+
+[discrete]
+==== Creating and Updating Cases from SuiteCRM
+
+You can create and update Cases from SuiteCRM. To add an update to an
+existing record Users will add text to the 'Update' field within the
+case Detail View and click 'Save'. This will publish the update to the
+portal and send an email to any Contacts related to the Case.
+
+image:image152.png[title="Creating and Updating Cases"]
+
+If Users check the 'Internal Update' field then the update will appear
+in SuiteCRM only. It will not appear in Joomla and the Contact will not
+be emailed.
+
+image:image153.png[title="Creating and Updating Cases"]
+
+The Case Detail View will show the full threaded update log.
+
+image:image154.png[title="Creating and Updating Cases"]
+
+Additional Contacts can be added to the Case using the Contacts sub
+panel. All emails exchanged between the system, the contact and you will
+be attached to the History sub-panel. Any documents attached to the case
+using the Portal are held as Notes within this sub-panel.
+
+[discrete]
+==== Status Drop Down
+
+Within Cases, you can specify both a State and a Status value. The State
+determines if the Case is Open or Closed. Depending on the State you
+will be offered different statuses. You can amend these statuses using
+the Dropdown Editor Tool within the Admin Developer Tools. When adding a
+new Status you must define the Item Name as “`<parent dropdown item
+name>_ItemName`” For example “`Open_New`” or “`Closed_Rejected`”. All values
+with an Item Name prefixed with “`Open_`” will show when the state is
+Open, similarly all with the prefix “`Closed_`” will show when the state
+is closed.

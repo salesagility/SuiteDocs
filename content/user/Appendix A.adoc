@@ -4,7 +4,7 @@ Weight: 300
 hidden: true
 ---
 
-:imagesdir: ./../../images/en/user
+:imagesdir: /images/en/user
 
 = Appendix A
 
@@ -494,6 +494,3 @@ image:Locations.png[Locations.png,title="Locations.png"]
 
 image:Users.png[Users.png,title="Users.png"]
 
-== Security Groups Field List
-
-image:Security_Groups.png[Security_Groups.png,title="Security_Groups.png"]

@@ -1,0 +1,24 @@
+---
+title: Troubleshooting
+weight: 5
+---
+
+{{% notice info %}}
+This enhancement is only available in SuiteCRM from version 7.11 onwards.
+{{% /notice %}}
+
+In order to make the troubleshooting process easier for the Elasticsearch extension, a separate file is used to offer
+very verbose and dedicated logging: `search_index.log`. This is mostly because the indexing procedures are run in the
+background, where they are hard to debug. Logging calls get redirected to the standard logging, filtered with the
+configured logging level.
+
+In addition to checking the logs, you could try running the search or the indexing from the command line using the
+link:../command-line-tools[command line tools]. Given the verbosity of the console output, this should surely help
+narrowing down the issue.
+
+Finally, enabling the *developer mode* in the admin settings, will provide a clear exception page if the error happens
+at some point during the search process.
+
+:imagesdir: /images/en/admin/ElasticSearch
+
+image:ErrorPage.png[An example of detailed error page]

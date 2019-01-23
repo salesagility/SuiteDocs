@@ -1,0 +1,46 @@
+---
+Title: Empezando
+Weight: 20
+---
+
+:imagesdir: /images/es/user
+
+= Empezando
+
+== Ingresando a SuiteCRM
+
+SuiteCRM permite a los usuarios iniciar sesión con su nombre de usuario
+y contraseña, proporcionados por el administrador del sistema.
+
+image:login.png[title="Login"]
+
+image:login_lang.png[title="Seleccione el idioma"]
+
+Antes de iniciar sesión en SuiteCRM, puede seleccionar el idioma que
+desee utilizar. Existen muchos idiomas predeterminados para SuiteCRM y
+también hay paquetes de idiomas adicionales disponibles.
+
+Una vez que haya elegido su idioma y haya introducido sus credenciales
+de usuario, podrá hacer clic en el botón Iniciar sesión para acceder al
+CRM.
+
+image:login_user.png[title="Introduzca su usuario y contraseña"]
+
+== Recuperar contraseña
+
+Si olvidó su contraseña de ingreso a SuiteCRM y no puede acceder a su
+cuenta, puede utilizar la función de recuperación de contraseña para que
+el sistema le envíe la misma a la dirección de correo electrónico
+asociada a su cuenta de usuario. Haciendo clic en `¿Ha olvidado su
+contraseña?'.
+
+image:login_recuperar_pass.png[title="Recuperar contraseña"]
+
+== Resumen
+
+En este capítulo hemos visto cómo acceder a SuiteCRM utilizando el
+formulario de inicio de sesión. También hemos explicado cómo recuperar
+una contraseña de usuario en caso de que se pierda u olvide la misma.
+
+En el siguiente capítulo cubriremos el Asistente para usuarios, que le
+permite establecer sus preferencias cuando utilice SuiteCRM.

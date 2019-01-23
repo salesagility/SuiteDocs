@@ -1,0 +1,66 @@
+---
+Title: Accounts
+Weight: 70
+---
+
+= Accounts
+
+The Accounts module is the centralised base from which you can create an
+association with most records in SuiteCRM. It is possible to create a
+relationship with Contacts, Converted Leads, Opportunities, any Activity
+such as Emails or Meetings and Cases. Accounts in SuiteCRM will
+typically hold all information specific to a company that your
+organisation will have a relationship with. In real world terms an
+Account may be a business entity that is a qualified Sales Prospect,
+Customer, Supplier or Re-seller and can be used to track all
+interactions that take place between these entities and your
+organisation.
+
+== Accounts Actions
+
+You can access the accounts actions from the Accounts module menu drop
+down or via the Sidebar. The Accounts actions are as follows:
+
+* *Create Account* – Once clicked, a new form is opened in Edit View to
+allow you to create a new Account record.
+* *View Accounts* – Once clicked, you will be redirected to the List View
+for the Accounts module. This allows you to search and list Accounts
+records.
+* *Import Accounts* – Redirects you to the Import Wizard for the Accounts
+module. For more information, see link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records].
+
+To view the full list of fields available when creating an Account, See
+link:./../../appendix-a/#_accounts_field_list[Accounts Field List].
+
+== Managing Accounts
+
+* To sort records on the Accounts List View, click any column title
+which is sortable. This will sort the column either ascending or
+descending.
+* To search for a Account, see the link:./../../introduction/user-interface/search[Search] section of this
+user guide.
+* To update some or all the Accounts on the List View, use the Mass
+Update panel as described in the link:./../../introduction/user-interface/record-management/#_mass_updating_records[Mass Updating Records] section of this user guide.
+* To duplicate a Account, you can click the Duplicate button on the
+Detail View and then save the duplicate record.
+* To merge duplicate Accounts, select the records from the Accounts List
+View, click the Merge link in the Actions drop-down list, and progress
+through the merge process. For more information on Merging Duplicates,
+see the link:./../../introduction/user-interface/record-management/#_merging_records[Merging Records] section of this user
+guide.
+* To delete one or multiple Accounts, you can select multiple records
+from the List View and click delete. you can also delete a Account from
+the Detail View by clicking the Delete button. For a more detailed guide
+on deleting records, see the link:./../../introduction/user-interface/record-management/#_deleting_records[Deleting Records]
+section of this user guide.
+* To view the details of a Account, click the Account Name in the List
+View. This will open the record in Detail View.
+* To edit the Account details, click Edit icon within the List View or
+click the edit button on the Detail View, make the necessary changes,
+and click Save.
+* For a detailed guide on importing and exporting Accounts, see the
+link:./../../introduction/user-interface/record-management/#_importing_records[Importing Records] and
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exporting Records] sections of this user guide.
+* To track all changes to audited fields, in the Account record, you can
+click the View Change Log button on the Account's Detail View or Edit
+View.
