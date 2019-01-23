@@ -1,0 +1,22 @@
+---
+Title: "Configure Testing Environment"
+---
+
+== Testing Environment
+
+SuiteCRM provides an automated to task to assist with the configuration of the testing environment.
+
+=== Configure Testing Environment (bash):
+
+Open terminal and run robo
+
+`./vendor/bin/robo configure:tests`
+
+=== Configure Testing Environment(Command Prompt):
+
+Open Command Prompt and run robo
+
+`.\vendor\bin\robo configure:tests`
+
+
+
