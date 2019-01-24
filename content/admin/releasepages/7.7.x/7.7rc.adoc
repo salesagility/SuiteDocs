@@ -1,0 +1,22 @@
+---
+Title: 7.7 Release Candidate
+weight: 50
+---
+
+:experimental:
+
+= 7.7 Release Candidate
+
+_Released Jul 18, 2016_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.tar.gz[*Source
+code* (tar.gz)]
+
+*This is a release candidate release and should not be used in a production environment.*
+
+The focus of SuiteCRM 7.7 Release Candidate is to introduce our new
+theme SuiteP (SuitePea).

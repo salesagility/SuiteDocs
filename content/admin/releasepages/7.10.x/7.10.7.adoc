@@ -1,0 +1,36 @@
+---
+Title: 7.10.7
+weight: 50
+---
+
+:experimental:
+
+= 7.10.7
+
+_Released 18th Jun 2018_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.7.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.7.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+==== Enhancements
+
+[discrete]
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/4035[#4035 ] Fixed #4035 - Upgrade on 7.9.4 Content in emails are same in body for all emails
+* https://github.com/salesagility/SuiteCRM/issues/6025[#6025 ] Fixed #6025 - Newsletter campaign target list selection broken
+* https://github.com/salesagility/SuiteCRM/issues/6006[#6006 ] Fixed #6006 - In-Line Edit in list view not working in 7.10.6
+* https://github.com/salesagility/SuiteCRM/issues/5998[#5998 ] Fixed #5998 - Can't select document on email compose using search
+* https://github.com/salesagility/SuiteCRM/issues/5303[#5303 ] Fixed #5303 - PHP Warnings on SugarWidgetFieldName and SugarWidgetFieldId
+* https://github.com/salesagility/SuiteCRM/issues/6025[#6025 ] Fixed #6025 - Fix invalid survey Campaign link
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

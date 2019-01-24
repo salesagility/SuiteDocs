@@ -1,0 +1,68 @@
+---
+Title: 7.9.10
+weight: 50
+---
+
+:experimental:
+
+= 7.9.10
+
+_Released Jan 25, 2018_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.10.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.10.tar.gz[*Source code* (tar.gz)]
+
+
+=== Release Notes
+
+[discrete]
+==== Security
+Resolved security issues
+
+[discrete]
+==== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/4981[#4981] Fixed #4981 - Add a button to import campaigns
+* https://github.com/salesagility/SuiteCRM/issues/3626[#3626 ] Fixed #3626 Decode from address names with special characters
+* https://github.com/salesagility/SuiteCRM/issues/4884[#4884 ] Fixed #4884 7.9.8 Edit email draft not showing attachments
+* https://github.com/salesagility/SuiteCRM/issues/4036[#4036 ] Fixed #4036 - Email popup swaps account and contact data
+* https://github.com/salesagility/SuiteCRM/issues/4826[#4826 ] Fixed #4826 - Invalid html with compose email widgets
+* https://github.com/salesagility/SuiteCRM/issues/4984[#4984 ] Fixed #4984 - Make my pipeline dashlet not use labels for drilling down URL
+* https://github.com/salesagility/SuiteCRM/issues/4498[#4498 ] Fixed #4498 - RSSDashlet empty string LBL_DBLCLICK_HELP'
+* https://github.com/salesagility/SuiteCRM/issues/3252[#3252 ] Fixed #3252 - rest interface problem, works in 7.6.10 with PHP 5.6.30 but not with PHP 7.1.2
+* https://github.com/salesagility/SuiteCRM/pull/4935[#4935 ] Fixed php notice without google maps API key
+* https://github.com/salesagility/SuiteCRM/issues/4926[#4926 ] Fixed #4926 - Typo(?) in Scheduler.php
+* https://github.com/salesagility/SuiteCRM/issues/4936[#4936 ] Fixed missing LBL
+* https://github.com/salesagility/SuiteCRM/issues/4942[#4942 ] Fixed #4942 - Name and address fields labels switched?
+* https://github.com/salesagility/SuiteCRM/issues/4875[#4875 ] Fixed #4875 - Unable to Edit/Delete Group User after Creation
+* https://github.com/salesagility/SuiteCRM/issues/1399[#1399 ] Fixed #1399 Quick Map Radius - Printing to PDF displays odd results
+* https://github.com/salesagility/SuiteCRM/pull/4778[#4778 ] Fixed small grammar error in english language template
+* https://github.com/salesagility/SuiteCRM/issues/4985[#4985 ] Fixed #4985 - Unable to display relationships in Studio
+* https://github.com/salesagility/SuiteCRM/issues/4961[#4961 ] Fixed #4961 - V. 7.6.3+ Dashlet Chart: "All Opportunities by Lead Source" shows values instead of labels
+* https://github.com/salesagility/SuiteCRM/issues/4975[#4975 ] Fixed #4975 - project task due date
+* https://github.com/salesagility/SuiteCRM/issues/391[#391 ] Fixed #391 - Can save all Employees fields
+* https://github.com/salesagility/SuiteCRM/issues/4751[#4751 ] Fixed #4751 date with empty related fields does not get converted
+* https://github.com/salesagility/SuiteCRM/issues/4973[#4973 ] Fixed #4973 Pass query array instead of string to function expecting it
+* https://github.com/salesagility/SuiteCRM/issues/4962[#4962 ] Fixed #4962 getFileName function in AbstractMetaDataImplementation in 7.9.9
+* https://github.com/salesagility/SuiteCRM/pull/4965[#4965 ] Fixed studio popup.
+* https://github.com/salesagility/SuiteCRM/issues/448[#448 ] Fixed #448 - Prevent exporting results of Reports if the user doesn't have "Export" rights.
+* https://github.com/salesagility/SuiteCRM/issues/1723[#1723 ] Fixed #1723 - All Opportunities by Lead Source Labels
+* https://github.com/salesagility/SuiteCRM/issues/206[#206 ] Fixed #206 - New Record Workflow fails on Campaign Log modules
+* https://github.com/salesagility/SuiteCRM/issues/4947[#4947 ] Fixed #4947 - Make datetime fields editable in workflow
+* https://github.com/salesagility/SuiteCRM/issues/4636[#4636 ] Fixed #4636 - Add template parsing to 7.8.x email
+* https://github.com/salesagility/SuiteCRM/issues/1671[#1671 ] Fixed #1671 - Leads created bar
+* https://github.com/salesagility/SuiteCRM/issues/533[#533 ] Fixed #533 - Workflow - Setting Date field based on Another Date field. Always 1 Save behind
+* https://github.com/salesagility/SuiteCRM/issues/4921[#4921 ] Fix #4921 alert navigation
+* https://github.com/salesagility/SuiteCRM/issues/3068[#3068 ] Fixed #3068 - Cannot select with filter in prospect list Inspired on #3280 by @imtg-suitecrm
+* https://github.com/salesagility/SuiteCRM/issues/4467[#4467 ] Fixed #4467 - Value for LBL_EMAIL_ERROR_IMAP_MESSAGE_DELETED missing some word
+* https://github.com/salesagility/SuiteCRM/pull/3276[#3276 ] Fixed Optimistic Locking not working in some cases
+* https://github.com/salesagility/SuiteCRM/pull/4934[#4934 ] Update OutboundEmailAccounts.php
+* https://github.com/salesagility/SuiteCRM/issues/4905[#4905 ] Fixed #4905 - modal dropdown
+* https://github.com/salesagility/SuiteCRM/issues/4854[#4854 ] Fixed #4854 - workflow dropdown
+
+*Users of ALL previous 7.9.x releases are advised to Upgrade to 7.9.10 as soon as possible.*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.10[here] from the SuiteCRM GitHub Repository or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+We have also updated our Security Process asking the community to send their security issues directly to us via email security@suitecrm.com

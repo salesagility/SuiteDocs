@@ -1,0 +1,23 @@
+---
+Title: 7.1 Release Candidate 2
+weight: 50
+---
+
+:experimental:
+
+= 7.1 Release Candidate 2
+
+_Released this Mar 28, 2014_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.1RC2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.1RC2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a release candidate and should not be used in a production environment.*
+
+Help to find the remaining bugs!

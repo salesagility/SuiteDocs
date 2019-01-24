@@ -1,0 +1,67 @@
+---
+Title: 7.10.6
+weight: 50
+---
+
+:experimental:
+
+= 7.10.6
+
+_Released 6th Jun 2018_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.6.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.6.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+==== Enhancements
+
+* https://github.com/salesagility/SuiteCRM/pull/5957[#5957 ] Email performance
+* https://github.com/salesagility/SuiteCRM/pull/5911[#5911 ] Acceptance testing
+* https://github.com/salesagility/SuiteCRM/pull/5864[#5864 ] Adding CodeCov Badge To README.md
+* https://github.com/salesagility/SuiteCRM/pull/5959[#5959 ] Composer html purifier
+
+[discrete]
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/pull/5984[#5984 ] Small css fix
+* https://github.com/salesagility/SuiteCRM/issues/5955[#5955 ] Fixed #5955 - Allow emailing from address links in SubPanels
+* https://github.com/salesagility/SuiteCRM/pull/5763[#5763 ] Fix red-cross error for empty image fields
+* https://github.com/salesagility/SuiteCRM/issues/5717[#5717 ] Fixed #5717 - Apostrophe and modules name
+* https://github.com/salesagility/SuiteCRM/issues/5728[#5728 ] Fixed #5728 - [language] Workflow module: Related module name is not translated (Send Email action)
+* https://github.com/salesagility/SuiteCRM/issues/5815[#5815 ] Fixed #5815 - CASES Module - Description Field (with wysiwig editor) Not Visible When Save and Continue or Navigate to Next/Previous
+* https://github.com/salesagility/SuiteCRM/issues/5829[#5829 ] Fixed #5829 - templateParser.php generating incorrect values for Quote Discounts
+* https://github.com/salesagility/SuiteCRM/issues/4599[#4599 ] Fixed #4599 - utils->get_module_info is not working for custom Beans
+* https://github.com/salesagility/SuiteCRM/issues/5764[#5764 ] Fixed #5764 - Hard coded messages in alerts.js
+* https://github.com/salesagility/SuiteCRM/issues/5872[#5872 ] Fixed #5872 - Filename of Notes do not change when uploading a new file
+* https://github.com/salesagility/SuiteCRM/issues/5873[#5873 ] Fixed #5873 - Removing a Note attachment keeps filename and throws an error when clicking on the file
+* https://github.com/salesagility/SuiteCRM/issues/5913[#5913 ] Fixed #5913 - Fix a bug for product image overwritten by the other product image
+* https://github.com/salesagility/SuiteCRM/issues/3778[#3778 ] Fixed #3778 - Compose email pop up window should be closed only by "X icon" in 7.9.1
+* https://github.com/salesagility/SuiteCRM/issues/5934[#5934 ] Fixed #5934 - Account primary email address override the contact email address in contacts subpanel
+* https://github.com/salesagility/SuiteCRM/issues/5918[#5918 ] Fixed #5918 - After upgrade from 7.9.9 to 7.10.5 all activity stream items say "0 seconds ago"
+* https://github.com/salesagility/SuiteCRM/issues/5949[#5949 ] Fixed #5949 - Incorrect data at field "status" in "Cases" module after use "mass update" -> close/open
+* https://github.com/salesagility/SuiteCRM/issues/4957[#4957 ] Fixed #4957 - Html fields showing the string value of the html, not the html itself
+* https://github.com/salesagility/SuiteCRM/issues/3400[#3400 ] Fixed #3400 - HTML field can't be edited
+* https://github.com/salesagility/SuiteCRM/issues/5931[#5931 ] Fixed #5931 - 7.10.5 - OAuth2Tokens Subpanel in Module OAuth2Clients results in DB failure using MSSQL
+* https://github.com/salesagility/SuiteCRM/pull/5963[#5963 ] Fix missing parameter
+* https://github.com/salesagility/SuiteCRM/pull/5962[#5962 ] Fixing styles in form to remove double spacing of multiline text fields
+* https://github.com/salesagility/SuiteCRM/issues/5965[#5965 ] Fixed #5965 - Fix ical request
+* https://github.com/salesagility/SuiteCRM/issues/5753[#5753 ] Fixed #5753 - Single Opt In status not being saved
+* https://github.com/salesagility/SuiteCRM/issues/5927[#5927 ] Fixed #5927 - Workflow date condition
+* https://github.com/salesagility/SuiteCRM/issues/5902[#5902 ] Fixed #5902 - Not audited if the user was not update for the value of the field type 'text', 'varchar'
+* https://github.com/salesagility/SuiteCRM/issues/5908[#5908 ] Fixed #5908 - SMTP Server not configured after upgrading to 7.10.5
+* https://github.com/salesagility/SuiteCRM/issues/5901[#5901 ] Fixed #5901 - Converting Lead to Contact doesn't preserve Confimrer-Opt-In status
+* https://github.com/salesagility/SuiteCRM/issues/5920[#5920 ] Fixed #5920 - After upgrade from 7.10.4 to 7.10.5 database failure
+* https://github.com/salesagility/SuiteCRM/issues/3733[#3733 ] Fixed #3733 - Removing messageBox and adding callback
+* https://github.com/salesagility/SuiteCRM/pull/5917[#5917 ] Making codecov run conditional
+* https://github.com/salesagility/SuiteCRM/pull/3881[#3881 ] Remove unnecessary code
+* https://github.com/salesagility/SuiteCRM/pull/5937[#5937 ] Fix image fields in Case module
+* https://github.com/salesagility/SuiteCRM/pull/5946[#5946 ] Fix typo so view icon appears in custom modules
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

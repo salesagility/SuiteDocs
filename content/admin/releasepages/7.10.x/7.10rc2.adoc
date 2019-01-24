@@ -1,0 +1,34 @@
+---
+Title: 7.10 Release Candidate 2
+weight: 50
+---
+
+:experimental:
+
+= 7.10 Release Candidate 2
+
+_Released 09 Feb 2018_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-RC-2.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10-RC-2.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+In order to facilitate European GDPR compliance, SuiteCRM 7.10 introduces two Opt-In settings,
+Opt-In and Confirmed-Opt-In.
+
+1. Opt In is used to indicate that a Contact, Lead or Target has opted in to receive marketing communications.
+
+2. Confirmed Opt In further requires users to confirm their opt-in status by clicking a link sent to them
+via email. This email can be configured to send automa cally (e.g. on submission of a Web-To-Person form) or manually,
+and the template used to send this email can be customised.
+
+*You can read more about this new feature link:/user/modules/confirmed-opt-in-settings/[here].*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.9.13[here] from the SuiteCRM GitHub Repository
+or https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+We have also updated our Security Process asking the community to send their security issues directly to us
+via email security@suitecrm.com.

@@ -1,0 +1,24 @@
+---
+Title: 7.9.0 Beta
+weight: 50
+---
+
+:experimental:
+
+= 7.9 Beta
+
+_Released Apr 25, 2017_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.9.0-beta.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a Beta release and should not be used in a production environment.*
+
+The focus of SuiteCRM 7.9 is to introduce a new and responsive Email
+Client and enhancements for Campaigns Email Template editor.

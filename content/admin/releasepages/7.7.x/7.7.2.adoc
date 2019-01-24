@@ -1,0 +1,52 @@
+---
+Title: 7.7.2
+weight: 50
+---
+
+:experimental:
+
+= 7.7.2
+
+_Released Aug 23, 2016_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.7.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+SuiteCRM 7.7.2 features bug fixes for calendar, php7, MSSQL upgrades and
+improves Theme SuiteP UI and functionality
+
+[discrete]
+==== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/1944[#1944 ] Fixed 1944 Studio - Add relationship - Allows to create unwanted relationship duplicates
+* https://github.com/salesagility/SuiteCRM/issues/1960[#1960 ] Fixed 1960 Calendar Settings are not working as desired
+* https://github.com/salesagility/SuiteCRM/issues/1923[#1923 ] Fixed 1923 7.7.1 SuiteP missing icons
+* https://github.com/salesagility/SuiteCRM/issues/1938[#1938 ] Fixed 1938 Calendar issues with Day, Week & Month views on 7.7.1
+* https://github.com/salesagility/SuiteCRM/issues/1943[#1943 ] Fixed 1943 Theme Suite P - Configure Module Menu Filters not working
+* https://github.com/salesagility/SuiteCRM/issues/1558[#1558 ] Fixed 1558 7.6.4 - AOR - If row has "Link" checked, the ID is missing from the link
+* https://github.com/salesagility/SuiteCRM/issues/1878[#1878 ] Fixed 1878 Suite P theme Tab/Panel (Edit/Detail View) Major Issues
+* https://github.com/salesagility/SuiteCRM/issues/1922[#1922 ] Fixed 1922 mssql column escape/Quote MSSQL column names when creating tables
+* https://github.com/salesagility/SuiteCRM/issues/1931[#1931 ] Fixed SuiteP Edit/Detail view issue with one field per row (task 229 issue #1931)
+* https://github.com/salesagility/SuiteCRM/issues/1903[#1903 ] Fixed #1903 - Unable to load Calendar in PHP5.3
+* https://github.com/salesagility/SuiteCRM/issues/1749[#1749 ] Fixed #1749 Inline editing does't work correct with dropdowns and currency fields
+* https://github.com/salesagility/SuiteCRM/pull/1883[#1883 ] Fixed typo resulting in incorrect executing time delta
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Download notes bug
+* https://github.com/salesagility/SuiteCRM/issues/1945[#1945 ] Fixed #1945, fix for task 240 'Drop Down Editor is not functioning'
+* https://github.com/salesagility/SuiteCRM/issues/1928[#1928 ] Fixed #1928 - restyling the email settings dialog box.
+* https://github.com/salesagility/SuiteCRM/issues/1854[#1854 ] Fixed #1854 - Fixed events -> delegates subpanel
+* https://github.com/salesagility/SuiteCRM/issues/[# ] spots ui bug on php7 fixed (tast 221 / forum 10494)
+* https://github.com/salesagility/SuiteCRM/issues/[# ] SuiteP footer position fixed (Fix for task 212)
+* https://github.com/salesagility/SuiteCRM/issues/1949[#1949 ] Fixed style of * for required fields.
+* https://github.com/salesagility/SuiteCRM/issues/1939[#1939 ] Fixed #1939 Calendar Fatal error on tasks without Due date
+* https://github.com/salesagility/SuiteCRM/issues/1029[#1029 ] Fixed #1029 - prevent user from adding or editing field if the fields name already exists. This fix also works for custom fields.
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Fixed - user names in the calendar titles
+* https://github.com/salesagility/SuiteCRM/issues/1911[#1911 ] Fixed #1911 - Removing title case in the style.css
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.7.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.

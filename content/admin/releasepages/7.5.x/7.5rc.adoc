@@ -1,0 +1,32 @@
+---
+Title: 7.5 Release Candidate
+weight: 50
+---
+
+:experimental:
+
+= 7.5 Release Candidate
+
+_Released this Jan 11, 2016_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module and introduce new charting functionality/designs.
+
+This release candidate release includes the following new features, as
+well as bug-fixes to the 7.5 Beta 2 release:
+
+* Enhancements to the User Interface.
+* Grouped Report View.
+* AND/OR reporting operators.
+* New RGraph charting engine.

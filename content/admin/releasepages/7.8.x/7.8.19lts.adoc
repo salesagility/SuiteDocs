@@ -1,0 +1,46 @@
+---
+Title: 7.8.19
+weight: 50
+---
+
+:experimental:
+
+= 7.8.19 - LTS
+
+_Released 21st May 2018_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.19.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.19.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/pull/5895[#5895 ] Fixed #5663 - aor date conditions
+* https://github.com/salesagility/SuiteCRM/issues/2971[#2971 ] Fixed #2971 - A blank screen is displayed instead of an message
+* https://github.com/salesagility/SuiteCRM/issues/5834[#5834 ] Fixed #5834 - When creating a new Case description field is not displayed on 7.8.18
+* https://github.com/salesagility/SuiteCRM/issues/4611[#4611 ] Fixed #4611 - Manage Subscription on Contacts/Leads result in FATAL Error
+* https://github.com/salesagility/SuiteCRM/pull/5563[#5563 ] Alert performance
+* https://github.com/salesagility/SuiteCRM/pull/5845[#5845 ] Allow merging AOS_Products
+* https://github.com/salesagility/SuiteCRM/pull/2323[#2323 ] Installer copies (unused) sample image on each run in picture and sets non existing email field
+* https://github.com/salesagility/SuiteCRM/issues/3275[#3275 ] Remove extra delimiter at the end of the exported line
+* https://github.com/salesagility/SuiteCRM/pull/4474[#4474 ] Improvement in parameters for dashlet reports
+* https://github.com/salesagility/SuiteCRM/issues/4287[#4287 ] Fixed #4287 - Module Name Incorrect in Assigned Emails
+* https://github.com/salesagility/SuiteCRM/issues/4194[#4194 ] Fixed #4194 - Scheduled Reports: Detail and Edit views are not populating fields correctly
+* https://github.com/salesagility/SuiteCRM/issues/3558[#3558 ] Fixed #3558 - Module Builder Fields
+* https://github.com/salesagility/SuiteCRM/issues/792[#792 ] Fixed #792 - AOS Settings: Initial Invoice Number - add validation
+* https://github.com/salesagility/SuiteCRM/issues/5586[#5586 ] Fixed #5586 - PHP error: Non-static method SecurityGroup::getGroupWhere() should not be called statically
+* https://github.com/salesagility/SuiteCRM/issues/716[#716 ] Fixed #716 - The quick create labels at top are not responsive to change
+* https://github.com/salesagility/SuiteCRM/issues/3737[#3737 ] Fixed #3737 - Popup search for documents in mail compose not working
+* https://github.com/salesagility/SuiteCRM/issues/4069[#4069 ] Fixed #4069 - Issue with Reports when using range filters (above and bellow) breaks pagination
+* https://github.com/salesagility/SuiteCRM/issues/4021[#4021 ] Fixed #4021 - PDF Paper Format only working with Invoice Module
+* https://github.com/salesagility/SuiteCRM/issues/5587[#5587 ] Fixed #5587 - PHP Error: [] operator not supported for strings
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.

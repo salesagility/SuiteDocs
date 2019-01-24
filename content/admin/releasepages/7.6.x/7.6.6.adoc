@@ -1,0 +1,41 @@
+---
+Title: 7.6.6
+weight: 50
+---
+
+:experimental:
+
+= 7.6.6
+
+_Released Jul 18, 2016_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.6.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.6.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
+component & YUI IO Utility
+
+Removes the use of uploader.swf file (and references) within
+self-hosted YUI library that can be vulnerable to XSS attacks
+
+[discrete]
+==== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/1462[#1462 ] Fixed #1462 - Sub-panels are not displayed on Event Detail's Panel
+* https://github.com/salesagility/SuiteCRM/pull/1696[#1696 ] Language typos and small fixes - Combined PR
+
+*Users of ALL previous releases are advised to Upgrade to 7.5.5 or 7.6.6
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.6[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to
+https://github.com/salesagility/SuiteCRM/issues/1724[chadbennett] for
+alerting and helping us resolve this vulnerability._

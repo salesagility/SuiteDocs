@@ -1,0 +1,40 @@
+---
+Title: 7.6.4
+weight: 50
+---
+
+:experimental:
+
+= 7.6.4
+
+_Released May 30, 2016_
+
+== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.6.4.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+SuiteCRM 7.6.4 features bug fixes, improves Campaign Wizard UI and
+improves Reporting functionality on MSSQL servers
+
+[discrete]
+==== Bug Fixes
+* Add the budget fields into Campaign Header screen
+* Test emails send out immediately (rather than queued)
+* Improved UI for creating Email Marketing Records and Templates via the
+Wizard
+* Update the Campaign Wizard Summary's interface
+* https://github.com/salesagility/SuiteCRM/issues/1436[#1436 ] Fixed #1436 - Reports with nested Parentheses are removing parameters
+* https://github.com/salesagility/SuiteCRM/issues/1485[#1485 ] File includes itself in a loop then exits.leads to apache memory overflow (#1485)
+* https://github.com/salesagility/SuiteCRM/issues/1478[#1478 ] fixed: #1478 making labels translatable
+* https://github.com/salesagility/SuiteCRM/issues/1435[#1435 ] Merge pull request #1435 from vladbar/issue_1120_2
+* https://github.com/salesagility/SuiteCRM/issues/1431[#1431] Fixed #1431 - Person form not passing dropdown custom field
+* https://github.com/salesagility/SuiteCRM/issues/1120[#1120 ] Fixed #1120 - fixed email validation for: Accounts -> Contacts subpanel -> Select -> Create Contact -> Save. If email is required it should highlight this field and show an error message.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.6.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
