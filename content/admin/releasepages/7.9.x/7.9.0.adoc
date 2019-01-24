@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.0
+
 _Released May 29, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * *Email Client*
 	- New Design for SuiteP
 	- Moved Email Settings into User Profile
@@ -53,7 +55,7 @@ code* (tar.gz)]
 
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/3515[#3515 ] Fixed #3515 Id. Decision Makers abbreviation
 * https://github.com/salesagility/SuiteCRM/issues/3499[#3499 ] Fixed #3499 - SugarBean - array_seach function doesn't use strict parameter
 * https://github.com/salesagility/SuiteCRM/issues/3470[#3470 ] Fixed #3470 - Export fails when trying to export all records (DB error)

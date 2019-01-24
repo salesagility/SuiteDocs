@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.13 - LTS
+
 _Released 07 Feb 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.13.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.13.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 07 Feb 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/5118[#5118 ] Fix conflict SugarWidgetSubPanelEmailLink and populateComposeViewFieldsfix_seed_data_account_email1_78x
 * https://github.com/salesagility/SuiteCRM/issues/3279[#3279 ] Fixed #3279 - PHP Warning logged for Calendar Dashlet

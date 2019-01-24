@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.16 - LTS
+
 _Released 5th Mar 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.16.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.16.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 5th Mar 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5267[#5267 ] Fixed #5267 - "Failed to retrieve data" error in studio
 * https://github.com/salesagility/SuiteCRM/pull/5323[#5323 ] Remove word "error" from a debug message

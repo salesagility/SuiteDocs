@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.6.1
+
 _Released May 2, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.6.1.zip[*Source
 code* (zip)]
@@ -21,7 +23,7 @@ customisations https://github.com/salesagility/SuiteCRM/issues/1300[code
 issue] when upgrading to 7.6.
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1300[#1300 ] Fixed #1300 - 7.6 upgrade __construct incompatible with legacy custom modules and customisations - write back the old styled constructors to changed files in 7.6 automatically, constructor arguments and deprecated phpdoc and log message added
 * https://github.com/salesagility/SuiteCRM/issues/993[#993 ] Fixed #993 - SQL Error : Incorrect syntax near 'LIMIT' when using MS SQL Server
 * https://github.com/salesagility/SuiteCRM/issues/1279[#1279 ] Fixed #1279 Reminder emails still going out later than it should dependant on timezone

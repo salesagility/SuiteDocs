@@ -5,7 +5,9 @@ weight: 50
 
 :experimental:
 
-=== Assets
+= 7.9.12
+
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.12.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.12.tar.gz[*Source code* (tar.gz)]
@@ -13,7 +15,7 @@ weight: 50
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/pull/4861[#4861 ] Fixed string quotes
 * https://github.com/salesagility/SuiteCRM/pull/5117[#5117 ] Fix email address seed data for accounts
 * https://github.com/salesagility/SuiteCRM/pull/5101[#5101 ] Remove linebreak from html string

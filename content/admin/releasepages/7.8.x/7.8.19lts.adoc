@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.19 - LTS
+
 _Released 21st May 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.19.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.19.tar.gz[*Source code* (tar.gz)]
@@ -16,7 +18,7 @@ _Released 21st May 2018_
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/5895[#5895 ] Fixed #5663 - aor date conditions
 * https://github.com/salesagility/SuiteCRM/issues/2971[#2971 ] Fixed #2971 - A blank screen is displayed instead of an message

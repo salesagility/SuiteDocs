@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.14 - LTS
+
 _Released 16 Feb 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.14.zip[*Source code*(zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.14.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 16 Feb 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/pull/5128[#5128 ] Updating copyright date on language files for 7.8.x
 * https://github.com/salesagility/SuiteCRM/issues/5131[#5131 ] Fixed #5131 - Can't assign Case number in notification emails
 * https://github.com/salesagility/SuiteCRM/issues/4482[#4482 ] Fixed #4482 - Quick Create opens to single line after first successful use

@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.6
+
 _Released Oct 3, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/7.9.6.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Security Issue* - Fixed SQL injection
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1563[#1563 ] Scaling on barcharts incorrect
 * https://github.com/salesagility/SuiteCRM/issues/2247[#2247 ] MultiSelect field issue in PDF
 * https://github.com/salesagility/SuiteCRM/issues/3081[#3081 ] Export Customisation shows only "undefined" labels

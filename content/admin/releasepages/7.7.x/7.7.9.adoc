@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.9
+
 _Released Dec 31, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.9.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Security Issue* https://github.com/salesagility/SuiteCRM/issues/2831[#2831 ] - PHPMailer Security Issue https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10045-Vuln-Patch-Bypass.html[CVE-2016-10045 ]
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/2846[#2846 ]  User Access sub-panel - missing module name labels on table fixed
 * https://github.com/salesagility/SuiteCRM/issues/2842[#2842 ]  Access tab does not work in USERS module(detailView)
 * https://github.com/salesagility/SuiteCRM/issues/2438[#2438 ]  Disable Inline Edit for Line Items

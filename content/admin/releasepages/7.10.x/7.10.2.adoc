@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.2
+
 _Released 15th Mar 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.2.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.2.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 15th Mar 2018_
 === Release Notes
 
 [discrete]
-===== Enhancements
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5431[#5431 ] Feature - admin icons
 * https://github.com/salesagility/SuiteCRM/pull/5457[#5457 ] Feature - studio icons
@@ -25,7 +27,7 @@ _Released 15th Mar 2018_
 
 [discrete]
 
-===== Bug Fixes
+====s Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5424[#5424 ] Fixed #5424 - Missing add product menu while using PL language - 7.10.1
 * https://github.com/salesagility/SuiteCRM/issues/3510[#3510 ] Fixed #3510 - function getRelatedFields() missing from data/Link2.php on 7.8.3

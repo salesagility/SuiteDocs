@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.5.3
+
 _Released Mar 15, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.3.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 btn:[http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.23/[SugarCRM version updated to 6.5.23]]
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1080[#1080] Activity Stream Setup Undefined index: Facebook/Twitter
 * https://github.com/salesagility/SuiteCRM/issues/1076[#1076] Clicking through to Opportunities from Outcome By Month Dashlet doesn't filter correctly
 * https://github.com/salesagility/SuiteCRM/issues/1074[#1074] Error Clicking Cancel on Show Duplicates page in Leads

@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.13
+
 _Released 16 Feb 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.13.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.13.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 16 Feb 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/3442[#3442 ] Fixed #3442 - LDAPAuthenticateUser not compatible with SugarAuthenticateUser::loadUserOnLogin
 * https://github.com/salesagility/SuiteCRM/pull/4857[#4857 ] fix(AOW_Workflow) - added support for condition with unchecked checkbox

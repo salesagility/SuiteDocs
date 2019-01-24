@@ -5,10 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.6
 
 _Released 6th Jun 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.6.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.6.tar.gz[*Source code* (tar.gz)]
@@ -16,7 +17,7 @@ _Released 6th Jun 2018_
 === Release Notes
 
 [discrete]
-===== Enhancements
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5957[#5957 ] Email performance
 * https://github.com/salesagility/SuiteCRM/pull/5911[#5911 ] Acceptance testing
@@ -24,7 +25,7 @@ _Released 6th Jun 2018_
 * https://github.com/salesagility/SuiteCRM/pull/5959[#5959 ] Composer html purifier
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/5984[#5984 ] Small css fix
 * https://github.com/salesagility/SuiteCRM/issues/5955[#5955 ] Fixed #5955 - Allow emailing from address links in SubPanels

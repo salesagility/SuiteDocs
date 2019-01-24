@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.5
+
 _Released Sep 28, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.5.zip[*Source
 code* (zip)]
@@ -17,12 +19,12 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * Updates a Security vulnerability with Serialized Input, to prevent
 possible object,file, beans and SQL injection attacks
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/2261[#2261 ] Fixed #2261 Campaign subpanels not paginating
 * https://github.com/salesagility/SuiteCRM/issues/[# ] Fix Group Reports by Date
 * https://github.com/salesagility/SuiteCRM/issues/2204[#2204 ] Fixed #2204 - Duplicate error code in SOUP / REST response (#2206)

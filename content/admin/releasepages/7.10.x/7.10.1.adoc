@@ -5,23 +5,25 @@ weight: 50
 
 :experimental:
 
+= 7.10.1
+
 _Released 5th Mar 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.1.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.1.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+== Release Notes
 
 [discrete]
-===== Enhancements
+=== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5273[#5273 ] Convert SuiteP Icons to font icons
 * https://github.com/salesagility/SuiteCRM/pull/5321[#5321 ] API client admin panel
 
 [discrete]
-===== Bug Fixes
+=== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5267[#5267 ] Fixed #5267 - "Failed to retrieve data" error in studio
 * https://github.com/salesagility/SuiteCRM/pull/5323[#5323 ] Remove word "error" from a debug message

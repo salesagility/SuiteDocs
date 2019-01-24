@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.6.7
+
 _Released Sep 28, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.6.7.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 Updates a Security vulnerability with Serialized Input, to prevent
 possible object,file, beans and SQL injection attacks.
 

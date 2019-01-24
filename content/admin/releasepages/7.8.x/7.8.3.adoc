@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.3
+
 _Released Apr 11, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.3.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Additional Features
+==== Additional Features
 New mechanism to check which user cron runs under, to avoid permissions degradation issues.
 
 {{% notice warning %}}
@@ -25,7 +27,7 @@ After upgrade, check your logs and confirm that your Schedulers are running.
 {{% /notice %}}
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1489[#1489 ] Fixed #1489 - Duplicating report with a chart removes the chart from the original report
 * https://github.com/salesagility/SuiteCRM/issues/2075[#2075 ] Suggestion - Email templates chooser: sort by name!
 * https://github.com/salesagility/SuiteCRM/issues/628[#628 ] Suggestion - PDF-templates: Allow selection of page format and orientation per template

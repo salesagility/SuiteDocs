@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.0.2
+
 _Released Jan 20, 2014_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.2.zip[*Source
 code* (zip)]
@@ -20,13 +22,13 @@ This is a bug fix release which also adds in two new language translations for
 Spanish and Russian.
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * Added Spanish Translation
 * Added Russian Translation
 * Added Upgrade safe way to extend line_items.js
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Updated jjw_maps to v2.1.18
 * Fixed bug where scheduler extensions would not be picked up
 * Fixed incorrect query in Events response entrypoint

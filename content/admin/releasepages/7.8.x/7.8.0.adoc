@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.0
+
 Released Jan 30, 2017
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * *New* Filter functionality which replaces the legacy Basic/Advanced Search layouts.  If you still prefer the old search view on any modules you can add a setting within the config_overwrite.php file - see notes.
 * *New* Workflow Calculated fields - a new action that allows you to enter formulas to execute complex actions.  Contributed by http://www.dtbc.eu/[diligent technology & business consulting GmbH]
 * *Updated* - https://suitecrm.com/wiki/index.php/Userguide[User Guide] for new Workflow Calculated fields!
@@ -25,7 +27,7 @@ code* (tar.gz)]
 
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/2110[#2110 ] Fix #2110 - Issue with Date fields and Inline Edit
 * https://github.com/salesagility/SuiteCRM/issues/2545[#2545 ] Fix #2545 - Warning about loss of changes appears multiple times
 * https://github.com/salesagility/SuiteCRM/issues/2499[#2499 ] Fix #2344/#2499 - Quicksearch not populating after first inline edit.

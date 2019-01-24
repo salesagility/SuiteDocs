@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.8
+
 _Released Nov 16, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.8.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/826[#826 ] Fixed 826 - Deleted favorite records still appear in menu
 * https://github.com/salesagility/SuiteCRM/issues/2153[#2153 ] Images in PDFs not showing
 * https://github.com/salesagility/SuiteCRM/issues/1700[#1700 ] AOR Report Dashlet date parameters wont work

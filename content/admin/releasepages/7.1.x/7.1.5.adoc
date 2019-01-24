@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.1.5
+
 _Released Jan 19, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.1.5.zip[*Source
 code* (zip)]
@@ -18,11 +20,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 btn:[http://support.sugarcrm.com/02_Documentation/01_Sugar_Editions/05_Sugar_Community_Edition/Sugar_Community_Edition_6.5/Sugar_Community_Edition_Release_Notes_6.5.20/[SugarCRM version updated to 6.5.20]]
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Dynamic Dropdown doesn't load correctly when using Ajax
 * Blank password issue when sending test outbound email
 * JotPad issue with & symbol

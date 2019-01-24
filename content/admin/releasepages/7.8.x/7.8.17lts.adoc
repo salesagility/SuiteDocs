@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.17 - LTS
+
 _Released 15th Mar 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 15th Mar 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5424[#5424 ] Fixed #5424 - Missing add product menu while using PL language - 7.10.1
 * https://github.com/salesagility/SuiteCRM/issues/5163[#5163 ] Fixed #5163 - Send notification from assigning user [text improvements required]

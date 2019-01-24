@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.5
+
 _Released 21st May 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.5.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.5.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 21st May 2018_
 === Release Notes
 
 [discrete]
-===== Enhancements
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5733[#5733 ] Feature - Lawful Basis for GDPR
 * https://github.com/salesagility/SuiteCRM/pull/5750[#5750 ] Feature - Mocking
@@ -26,7 +28,7 @@ _Released 21st May 2018_
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5663[#5663 ] Fixed #5663 - AOR_Reports Date issues
 * https://github.com/salesagility/SuiteCRM/pull/5877[#5563 ] Report tests

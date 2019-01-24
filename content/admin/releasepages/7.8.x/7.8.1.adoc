@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.1
+
 _Released Feb 6, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.1.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/pull/3044[#3044 ] Fixed mail merge js error on Subpanels
 * https://github.com/salesagility/SuiteCRM/issues/3000[#3000 ] Fixed #3000: Warnings reported when cron.php is executed
 * https://github.com/salesagility/SuiteCRM/issues/3032[#3032 ] Fixed #3032 - Calendar is displaying Closed (HELD|NOT HELD) Meetings when $show_completed is false - supplied by adamjakab

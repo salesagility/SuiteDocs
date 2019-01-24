@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.9
+
 _Released Jan 11, 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.9.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 Improved HTML cleaning
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/4664[#4664] Fixed #4664 - Custom imap folders
 * https://github.com/salesagility/SuiteCRM/issues/4849[#4849 ] Fixed mssql bug at saving user
 * https://github.com/salesagility/SuiteCRM/issues/4825[#4825 ] Fixed #4825 - Remove duplicate function declaration

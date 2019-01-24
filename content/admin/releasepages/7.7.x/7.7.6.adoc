@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.6
+
 _Released Oct 19, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.6.zip[*Source
 code* (zip)]
@@ -17,12 +19,12 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Fixed Security Issues* - Stored PHP Object Injection Within User Preferences
 * *Fixed Security Issues* - Blind SQL Injection vulnerability in InboundEmail
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/2430[#2430 ] Fixed #2430 - global search autofilled background colour
 * https://github.com/salesagility/SuiteCRM/issues/2215[#2215 ] Fixed Case insensitive duplicate images
 * https://github.com/salesagility/SuiteCRM/issues/2166[#2166 ] Fixed Links don't work in grouped Reports

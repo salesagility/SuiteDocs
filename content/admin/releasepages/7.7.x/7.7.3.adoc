@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.3
+
 _Released Aug 26, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.3.zip[*Source
 code* (zip)]
@@ -22,7 +24,7 @@ ability to drag Dashlets to multi column Dashboards and have collapsible
 subpanels system setting.
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/[# ] Add 'collapsed subpanels' checkbox to system settings
 * https://github.com/salesagility/SuiteCRM/issues/[# ] Fixed Fatal PHP 5.3 code syntax for Spots module
 * https://github.com/salesagility/SuiteCRM/issues/2000[#2000 ] Fixed #2000 - admin panel for mobile, tablet, laptop, and destkop

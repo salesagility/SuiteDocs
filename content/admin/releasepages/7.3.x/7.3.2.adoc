@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.3.2
+
 _Released Oct 22, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.3.2.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Fixed  #416 Studio: New Drop Down List Issue
 * Fixed Email user issue in workflow
 * Fixed report join issues

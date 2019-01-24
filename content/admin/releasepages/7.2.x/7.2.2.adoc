@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.2.2
+
 _Released May 20, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.2.zip[*Source
 code* (zip)]
@@ -18,25 +20,3 @@ code* (tar.gz)]
 
 This is a bug fix release which addresses bugs in the SuiteCRM 7.2.1
 release and also Post-Auth RCE vulnerabilities in SuiteCRM.
-
-'''
-
-
-[[anchor-7.1.7]]
-== 7.1.7
-
-_Released May 20, 2015_
-
-=== Assets
-
-* https://github.com/salesagility/SuiteCRM/archive/v7.1.7.zip[*Source
-code* (zip)]
-* https://github.com/salesagility/SuiteCRM/archive/v7.1.7.tar.gz[*Source
-code* (tar.gz)]
-
-=== Release Notes
-
-This is a bug fix release which addresses Post-Auth RCE vulnerabilities
-in SuiteCRM.
-
-Fix Post-Auth RCE Vulnerability

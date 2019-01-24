@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.3
+
 _Released 3rd Apr 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.3.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.3.tar.gz[*Source code* (tar.gz)]
@@ -15,14 +17,14 @@ _Released 3rd Apr 2018_
 === Release Notes
 
 [discrete]
-===== Enhancements
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/4808[#4808 ] Feature - Sort modules by name
 * https://github.com/salesagility/SuiteCRM/pull/5517[#5517 ] Feature - Replace icons in studio and module builder
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5548[#5548 ] Fixed #5548 - GDPR: confirmed opt-in
 * https://github.com/salesagility/SuiteCRM/issues/5461[#5461 ] Fixed #5461 - Edit labels

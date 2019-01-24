@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.8
+
 _Released 13th Sep 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.8.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.8.tar.gz[*Source code* (tar.gz)]
@@ -15,13 +17,13 @@ _Released 13th Sep 2018_
 === Release Notes
 
 [discrete]
-===== Enhancements
+==== Enhancements
 * https://github.com/salesagility/SuiteCRM/pull/5577[#5577 ] Feature/collapsed subpanel row count
 * https://github.com/salesagility/SuiteCRM/pull/6017[#6017 ] Feature - allow users to send email as themselves w/ System outgoing
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/2172[#2172 ] Fixed #2172 - Inline edit issue if you click on pencil icon - revised
 * https://github.com/salesagility/SuiteCRM/issues/4265[#4265 ] Fixed #4265 - PHP strict error

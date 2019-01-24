@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.4
+
 _Released Aug 31, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.4.zip[*Source
 code* (zip)]
@@ -19,7 +21,7 @@ code* (tar.gz)]
 SuiteCRM 7.7.4 features bug fixes for dropdown editor (browser specific), dashlets, calendar, studio layout updates and improve styling on top bar for non module filter settings.
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/[# ] Adding Favourites styling - Removing yellow background for recent edit
 * https://github.com/salesagility/SuiteCRM/issues/2052[#2052 ] Problem with "Repair JS Files" and Calendar
 * https://github.com/salesagility/SuiteCRM/issues/442[#442 ] Dashboard inside Dashboard - Double clicking Column Heading on Dashlet
