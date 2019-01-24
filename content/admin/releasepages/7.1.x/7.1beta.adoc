@@ -5,9 +5,10 @@ weight: 50
 
 :experimental:
 
+= 7.1 Beta
+
 _Released Feb 4, 2014_
 
-= 7.1 Beta
 
 == Assets
 
@@ -16,7 +17,7 @@ code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.1beta.tar.gz[*Source
 code* (tar.gz)]
 
-===Release Notes
+=== Release Notes
 
 *This is a beta release and should not be used in a production environment.*
 
