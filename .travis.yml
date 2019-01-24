@@ -1,0 +1,12 @@
+os:
+- linux
+
+script:
+- ./bin/htmltest
+
+branches:
+  only:
+    - releases
+    - tests
+
+
