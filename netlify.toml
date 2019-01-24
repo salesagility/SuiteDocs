@@ -19,7 +19,8 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.branch-deploy]
-  command = "hugo -b $DEPLOY_PRIME_URL"
+  HUGO_VERSION = "0.53"
+  command = "hugo -b $DEPLOY_PRIME_URL && ./bin/htmltest"
 
 # The Branch Deploy Context applies to all non-master branches deployed, whether they are in a Deploy Preview or not:
 [context.branch-deploy.environment]
