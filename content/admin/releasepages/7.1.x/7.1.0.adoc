@@ -5,10 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.1.0
 
 _Released Apr 1, 2014_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.1.zip[*Source
 code* (zip)]
@@ -23,7 +24,7 @@ AOD in the admin panel), the multi tabbed homepage, the ability to
 filter the history sub-panel and more.
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * Advanced OpenWorkflow 2.0
 * Advanced OpenDiscovery 1.0
 * Dashboard tabs
@@ -34,7 +35,7 @@ filter the history sub-panel and more.
 * Case update thread improvements
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Updated Russian language pack
 * Currency conversion added to Advanced OpenReports
 * Ability to drag dashlet to right when no dashlets in right column of homepage
@@ -51,3 +52,5 @@ filter the history sub-panel and more.
 * Updated TinyMCE updated to 3.5.10
 * Fixed issue with Generate PDF service lines
 * Numerous warnings and notices removed
+
+'''
