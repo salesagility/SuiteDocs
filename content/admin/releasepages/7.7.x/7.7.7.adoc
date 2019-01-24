@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.7
+
 _Released Nov 7, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.7.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Fixed Security Issues* - Additional Blind SQL Injection vulnerability in InboundEmail
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1918[#1918 ] Fixed #1918 - Translation issues. Duplicated lang. strings in ver. 7.7
 * https://github.com/salesagility/SuiteCRM/issues/2479[#2479 ] Fixed #2479 - Dashlet pagination issue (Suite7 & SuiteR)
 * https://github.com/salesagility/SuiteCRM/issues/2510[#2510 ] Fixed #2510 - fix default reminder invitees for meetings

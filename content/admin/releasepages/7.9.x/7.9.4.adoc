@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.4
+
 _Released Jul 20, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.4.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/3901[#3901 ] No outbound account in "From" dropdown MSSQL
 * https://github.com/salesagility/SuiteCRM/issues/3903[#3903 ] Fixed #3903 - use correct charset
 * https://github.com/salesagility/SuiteCRM/issues/3908[#3908 ] fixed: Edit action not working after selecting a user on Administrator User Management module (missing single quotes)

@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.6.4
+
 _Released May 30, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.6.4.zip[*Source
 code* (zip)]
@@ -20,7 +22,7 @@ SuiteCRM 7.6.4 features bug fixes, improves Campaign Wizard UI and
 improves Reporting functionality on MSSQL servers
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Add the budget fields into Campaign Header screen
 * Test emails send out immediately (rather than queued)
 * Improved UI for creating Email Marketing Records and Templates via the

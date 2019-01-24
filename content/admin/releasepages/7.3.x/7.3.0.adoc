@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.3.0
+
 _Released Aug 14, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.3.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * Inline Editing
 	- Edit fields directly on the List and Detail View by double clicking the field.
 	- To turn inline editing off for a particular field view the field in studio and uncheck "Inline Editing"
@@ -27,7 +29,7 @@ code* (tar.gz)]
 	- View missed Notifications in the top bar
 
 [discrete]
-===== Enhancements
+==== Enhancements
 * Improved Mobile Navigation
 	- New improved mobile menu layout, designed to give you full control, using less screen space.
 * Update cases from detail view.

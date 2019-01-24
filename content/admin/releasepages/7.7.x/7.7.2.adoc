@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.2
+
 _Released Aug 23, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.2.zip[*Source
 code* (zip)]
@@ -20,7 +22,7 @@ SuiteCRM 7.7.2 features bug fixes for calendar, php7, MSSQL upgrades and
 improves Theme SuiteP UI and functionality
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1944[#1944 ] Fixed 1944 Studio - Add relationship - Allows to create unwanted relationship duplicates
 * https://github.com/salesagility/SuiteCRM/issues/1960[#1960 ] Fixed 1960 Calendar Settings are not working as desired
 * https://github.com/salesagility/SuiteCRM/issues/1923[#1923 ] Fixed 1923 7.7.1 SuiteP missing icons

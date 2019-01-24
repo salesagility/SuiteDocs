@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.2.1
+
 _Released this Mar 11, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.1.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Fixed - GitHub issue #159 workflow number formatting issues
 * Fixed - GitHub issue #158 - Currency Formatting Issue when Creating Opportunities from Quotes
 * Fixed - GitHub issue #157 MsSQL compatibility issues

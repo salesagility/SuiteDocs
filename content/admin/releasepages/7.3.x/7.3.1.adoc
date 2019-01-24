@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.3.1
+
 _Released Aug 25, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.3.1.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Fixed #368 - Progress message added until Studio Field saving and show results.
 * Re-implementing another bootstrap fix that was overwritten updating to v3.3.5.
 * Fixed small issues with top right user menu link moving when screen resizes. Fixing small conflict in Bootstrap CSS.

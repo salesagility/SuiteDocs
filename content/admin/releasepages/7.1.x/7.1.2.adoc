@@ -7,7 +7,7 @@ weight: 50
 
 _Released Jul 7, 2014_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.1.2.zip[*Source
 code* (zip)]
@@ -32,7 +32,7 @@ SugarCRM have not released an official list of fixes, but thanks to Matthew Poer
 {{% /notice %}}
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Fixed IE11 detected as Mozilla browser
 * Fixed MSSQL vardef compatibility issues
 * Fixed history filters search conflicts with meetings search

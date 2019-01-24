@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.5
+
 _Released Jun 15, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.5.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Security Issue* https://github.com/salesagility/SuiteCRM/issues/3698[#3698 ] - Run testinstall.php only via cli
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/3676[#3676 ] Fixed #3676 - Module builder export and file template.
 * https://github.com/salesagility/SuiteCRM/issues/1855[#1855 ] Fixed #1855 - RSS dashlet formatting
 * https://github.com/salesagility/SuiteCRM/pull/3541[#3541 ] Fixed missing label

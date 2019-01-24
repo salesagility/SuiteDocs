@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.10 - LTS
+
 _Released Jan 11, 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.10.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 Improved HTML cleaning
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/4874[#4874 ] Fixed #4874 - Dashlet column chart width
 * https://github.com/salesagility/SuiteCRM/issues/3825[#3825 ] Fixed #3825 - Activity Stream
 * https://github.com/salesagility/SuiteCRM/issues/3738[#3738 ] Fixed #3738 - Export to PDF Missing lines of code

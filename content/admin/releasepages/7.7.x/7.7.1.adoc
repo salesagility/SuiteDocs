@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.1
+
 _Released Aug 11, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.1.zip[*Source
 code* (zip)]
@@ -20,7 +22,7 @@ SuiteCRM 7.7.1 features bug fixes, improves Theme SuiteP UI and
 functionality
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Fixed notices - undefined value $loc
 * Fixed notices - incorrect label values in menu def
 * https://github.com/salesagility/SuiteCRM/issues/1826[#1826 ] Fixed #1826 7.7RC2 Case Updates not displayed

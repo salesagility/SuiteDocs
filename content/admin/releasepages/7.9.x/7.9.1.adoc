@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.1
+
 _Released Jun 15, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.1.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Additional Features
+==== Additional Features
 
 * *Check PHP Version* - Minimum and Recommended PHP Versions upon installation and upgrade
 * *Reply To, Reply All, Forward To and Delete* - https://github.com/salesagility/SuiteCRM/issues/3616[#3616 ] +
@@ -48,11 +50,11 @@ We currently at the time do not Delete Emails from the imap server.
 This functionality we felt required again to replicate what we have already in the application – the use of the quick create subpanels.  As the subpanels already provide this functionality the user will only be able to create new Records via Emails if the Email itself has been imported thus providing access to the subpanels.
 
 [discrete]
-===== Security
+==== Security
 * *Security Issue* https://github.com/salesagility/SuiteCRM/issues/3698[#3698 ] - Run testinstall.php only via cli
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/3676[#3676 ] Fixed #3676 - Module builder export and file template.
 * https://github.com/salesagility/SuiteCRM/issues/1855[#1855 ] Fixed #1855 - RSS dashlet formatting
 * https://github.com/salesagility/SuiteCRM/pull/3541[#3541 ] Fixed missing label

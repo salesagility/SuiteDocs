@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.6.5
+
 _Released Jul 4, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.6.5.zip[*Source
 code* (zip)]
@@ -17,13 +19,13 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * Resolves a Security vulnerability with Serialized Input, to prevent possible object injection attacks
 	- Removes the option to allow serialized user input to the SuiteCRM Rest Client.
 	- Changed serialized User input to use JSON
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/pull/1642[#1642 ] Modify EmailsUI.php to escape strings containing single quote (#1642)
 * https://github.com/salesagility/SuiteCRM/issues/1623[#1623 ] Fixed #1623 Remove Reminders and Reminders_Invites from Module Selector and Roles Matrix
 * https://github.com/salesagility/SuiteCRM/issues/1501[#1501 ] Fixed #1501 Campaign ROI Chart Dashlet doesn't display

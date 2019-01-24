@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.1.3
+
 _Released Aug 13, 2014_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.1.3.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * Fixed "main menu (Tab All) not with 2 column layout" (Courtesy of pcaesar)
 * Fixed Russian language file in Security Suite
 * Fix bug in AOD which could cause errors when trying to load certain modules.

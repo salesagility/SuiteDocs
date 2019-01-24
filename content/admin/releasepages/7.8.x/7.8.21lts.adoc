@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.21 - LTS
+
 _Released 13th Sep 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.21.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.21.tar.gz[*Source code* (tar.gz)]
@@ -16,7 +18,7 @@ _Released 13th Sep 2018_
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/4265[#4265 ] Fixed #4265 - PHP strict error
 * https://github.com/salesagility/SuiteCRM/issues/2783[#2783 ] Fixed #2783 - In the calendar dashlet, right / left week icons are not visible

@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.18 - LTS
+
 _Released 3rd Apr 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 3rd Apr 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5356[#5356 ] Fixed #5356 - No marker images in maps
 * https://github.com/salesagility/SuiteCRM/issues/719[#719 ] Fixed #719 - Blocked loading mixed active content

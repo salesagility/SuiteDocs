@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.7
+
 _Released Oct 18, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.7.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 Resolved security issues
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/4375[#4375 ] Fixed 4375 - Html Field in edit view
 * https://github.com/salesagility/SuiteCRM/issues/4133[#4133 ] Fixed #4133 - 7.9.4 Email Display Name Doesn't Appear for Recipient
 * https://github.com/salesagility/SuiteCRM/issues/4183[#4183 ] Fixed #4183 - SuiteP - Tabs not behaving correctly on small screens

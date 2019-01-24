@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.20 - LTS
+
 _Released 6th Jun 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.20.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.20.tar.gz[*Source code* (tar.gz)]
@@ -15,7 +17,7 @@ _Released 6th Jun 2018_
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5829[#5829 ] Fixed #5829 - templateParser.php generating incorrect values for Quote Discounts
 * https://github.com/salesagility/SuiteCRM/issues/4599[#4599 ] Fixed #4599 - utils->get_module_info is not working for custom Beans

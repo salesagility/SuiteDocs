@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.2
+
 _Released Jun 30, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.2.zip[*Source
 code* (zip)]
@@ -17,7 +19,7 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/3790[#3790 ] Fixed #3790 - Disregard draft sends emails
 * https://github.com/salesagility/SuiteCRM/issues/3766[#3766 ] Fixed #3766 - Bound email handling broken
 * https://github.com/salesagility/SuiteCRM/issues/3655[#3655 ] Fixed #3655 - fix for popup compose view return message popup

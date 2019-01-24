@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.2.0
+
 _Released Mar 2, 2015_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.zip[*Source
 code* (zip)]
@@ -17,12 +19,12 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * Responsive theme
 * Image Field - New image field type, allowing adding of image fields via Studio.
 
 [discrete]
-===== Enhancements
+==== Enhancements
 * *AOP 2.0*
 	- Add attachments to the case update thread within SuiteCRM.
 	- Better HTML Support.

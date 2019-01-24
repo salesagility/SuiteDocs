@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.7
+
 _Released 18th Jun 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.7.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.7.tar.gz[*Source code* (tar.gz)]
@@ -15,11 +17,11 @@ _Released 18th Jun 2018_
 === Release Notes
 
 [discrete]
-===== Enhancements
+==== Enhancements
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/4035[#4035 ] Fixed #4035 - Upgrade on 7.9.4 Content in emails are same in body for all emails
 * https://github.com/salesagility/SuiteCRM/issues/6025[#6025 ] Fixed #6025 - Newsletter campaign target list selection broken

@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.10.4
+
 _Released 9th Apr 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.4.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.4.tar.gz[*Source code* (tar.gz)]
@@ -16,7 +18,7 @@ _Released 9th Apr 2018_
 
 [discrete]
 
-===== Bug Fixes
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5677[#5677 ] Fixed #5677 - Building new modules in builder do not work
 * https://github.com/salesagility/SuiteCRM/pull/5674[#5674 ] Fix - Correcting From Name/Address in stored options to show in compose from dropdown

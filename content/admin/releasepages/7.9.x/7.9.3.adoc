@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.3
+
 _Released Jul 17, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.3.zip[*Source
 code* (zip)]
@@ -17,13 +19,13 @@ code* (tar.gz)]
 ===Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Security Issue https://github.com/salesagility/SuiteCRM/issues/3875[#3875 ] Fixed* - disable user to edit other employees data
 * *Security Issue https://github.com/salesagility/SuiteCRM/issues/3812[#3812 ] Fixed* - Ensures that a user can only send an email via their own inbound email account
 * *Security Issue https://github.com/salesagility/SuiteCRM/issues/3851[#3851 ] Fixed* - Improved clean html for sugar fields
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1633[#1633 ] Fixed #1633 - accessibility issues on account creation page. Unlabled Checkboxes and radio button
 * https://github.com/salesagility/SuiteCRM/issues/3753[#3753 ] Fixed #3753 - no available themes
 * https://github.com/salesagility/SuiteCRM/issues/3809[#3809 ] Fixed - Text wrapping issue on detailview/editview

@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.7.0
+
 _Released Aug 2, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 Includes btn:[http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.24/[SugarCRM 6.5.24]]
 
 [discrete]
-===== Additional Features
+==== Additional Features
 * *SuiteP Theme* - We want SuiteCRM 7.7 to be something special this
 Summer. Packed with new and improved features and an amazing new UI, it
 will transform the way you view SuiteCRM.

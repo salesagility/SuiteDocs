@@ -6,9 +6,9 @@ weight: 50
 :experimental:
 
 
-=== Release Notes
+== Release Notes
 
-==== Enhancements
+=== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/1348[#1348 ] Added new 'Copy emails from WorkFlow Module' option to Workflow's 'Cr…
 * https://github.com/salesagility/SuiteCRM/pull/3008[#3008 ] Module vardefs definitions or custom data in the DOM
@@ -19,7 +19,7 @@ weight: 50
 * https://github.com/salesagility/SuiteCRM/pull/6584[#6584 ] Adding inboundemail tests using FakeImapHandler
 * https://github.com/salesagility/SuiteCRM/pull/6260[#6260 ] New testing email related functions
 
-==== Bug Fixes
+=== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/6618[#6618 ] Push acceptance test output to new file host
 * https://github.com/salesagility/SuiteCRM/pull/6585[#6585 ] Remove php_zip_utils error

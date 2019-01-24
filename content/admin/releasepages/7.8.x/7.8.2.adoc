@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.8.2
+
 _Released Feb 27, 2017_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.2.zip[*Source
 code* (zip)]
@@ -17,11 +19,11 @@ code* (tar.gz)]
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 * *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/2819[#2819 ]   Updated SAML with SAML2 v2.10.3 https://github.com/distributedweaknessfiling/DWF-Database-Artifacts/blob/ab8ae6e845eb506fbeb10a7e4ccb379f0b4222ca/DWF/2016/1000253/CVE-2016-1000253.json[CVE-2016-1000253 ]
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/pull/1877[#1877 ] Translations acknowledge on About page
 * https://github.com/salesagility/SuiteCRM/pull/2945[#2945 ] Making AOW Workflow more responsive
 * https://github.com/salesagility/SuiteCRM/issues/3119[#3119 ] Fixed #3119 Log slow queries for MySQL

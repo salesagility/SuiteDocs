@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.6.2
+
 _Released May 10, 2016_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.6.2.zip[*Source
 code* (zip)]
@@ -20,7 +22,7 @@ This is a bug fix release for SuiteCRM 7.6.2 and includes updated
 Campaign Wizard UI.
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/1289[#1289 ] Fixed #1289 Unable to send email campaign SuiteCRM7.6RC & SuiteCRM7.6.1 - test for real affected rows on update emailman table
 * https://github.com/salesagility/SuiteCRM/issues/1244[#1244 ] Fixed #1244: Removed hard coded message and moved it into mod strings.
 * https://github.com/salesagility/SuiteCRM/issues/1342[#1342 ] Fixed #1342 URL type field link not working after inline editing

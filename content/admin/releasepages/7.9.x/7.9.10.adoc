@@ -5,9 +5,11 @@ weight: 50
 
 :experimental:
 
+= 7.9.10
+
 _Released Jan 25, 2018_
 
-=== Assets
+== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.10.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.10.tar.gz[*Source code* (tar.gz)]
@@ -16,11 +18,11 @@ _Released Jan 25, 2018_
 === Release Notes
 
 [discrete]
-===== Security
+==== Security
 Resolved security issues
 
 [discrete]
-===== Bug Fixes
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/4981[#4981] Fixed #4981 - Add a button to import campaigns
 * https://github.com/salesagility/SuiteCRM/issues/3626[#3626 ] Fixed #3626 Decode from address names with special characters
 * https://github.com/salesagility/SuiteCRM/issues/4884[#4884 ] Fixed #4884 7.9.8 Edit email draft not showing attachments

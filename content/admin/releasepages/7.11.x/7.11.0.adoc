@@ -7,7 +7,7 @@ weight: 50
 
 _Released 14th Jan 2019_
 
-=== **Assets**
+== **Assets**
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.0.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.0.tar.gz[*Source code* (tar.gz)]
@@ -16,14 +16,14 @@ _Released 14th Jan 2019_
 
 ==== **Enhancements**
 
-===== Google Calendar Synchronisation
+==== Google Calendar Synchronisation
 
 Users can authenticate using their Google login and synchronise their Meetings between a Google calendar – these include updates, reminders, and invitees.
 
 * https://github.com/salesagility/SuiteCRM/issues/6043[#6146] Synchronise SuiteCRM with Google Calendar
 
 
-===== Elasticsearch
+==== Elasticsearch
 
 Elasticsearch is an open-source, broadly-distributable, readily-scalable, enterprise-grade RESTful search engine. It provides a highly flexible solution to centrally store and index your data that can be accessed extremely quickly via its API. By including Elasticsearch as a core search engine integration SuiteCRM can now provide users a faster and better scalable way to perform full text searches via Global Search on larger data volumes than before.
 
