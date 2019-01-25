@@ -112,5 +112,5 @@ image:GDPRCreatePersonForm.png[title="Web To Person form"]
 
 If the user checks this box, the email address will be set as *Opted In* (or *Pending Confirmation* if you have *Confirmed Opt In* configured) when the record is created in *SuiteCRM*.
 
-Note that if you have *Confirmed Opt In* configured and *Automatic Opt In Email* selected, the Opt In email will be sent automatically following submission of the form. If *Automatic Opt In Email* is not selected, these emails will need to be sent <<#_sending_resending_opt_in_emails_manually, manually>>.
+Note that if you have *Confirmed Opt In* configured and *Automatic Opt In Email* selected, the Opt In email will be sent automatically following submission of the form. If *Automatic Opt In Email* is not selected, these emails will need to be sent <<#_sendingresending_opt_in_emails_manually, manually>>.
 
