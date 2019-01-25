@@ -144,6 +144,6 @@ $extensions["sports_list"] =  array(
 Now when a *Quick Repair and Rebuild* is run any files in `custom/Extension/application/Ext/SportsList/` will be consolidated
 into `custom/application/Ext/SportsList/sportslist.ext.php`. 
 
-On it’s own this file will not do anything but you are now able to write custom code that
+On its own this file will not do anything but you are now able to write custom code that
 checks the consolidated file rather than having to worry about searching for customisations.
 
