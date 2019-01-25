@@ -108,6 +108,11 @@ sudo apt-get update && sudo apt-get install openjdk-11-jre elasticsearch
 [source,bash]
 sudo systemctl start elasticsearch.service
 
+или следующей командой (на устаревших версиях ОС):
+
+[source,bash]
+/etc/init.d/elasticsearch start
+
 == Тестирование установленного Elasticsearch
 
 Проверить запущенный сервер можно следующей командой:
