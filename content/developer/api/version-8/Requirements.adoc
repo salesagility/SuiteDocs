@@ -22,8 +22,8 @@ Please ensure that you have the following:
 * The SuiteCRM instance must be configured to use HTTPS/SSL
 * You need to have PHP version 5.5.9, or 7.0 and above
 
-To be able to successfully connect to the endpoints, you need to complete the steps under 
+To be able to successfully connect to the endpoints, you need to complete the steps under section
 
-section link:../json-api/#_before_you_start_calling_endpoints[Before you start calling endpoints]
+link:JSON-API/#_before_you_start_calling_endpoints[Before you start calling endpoints]
 
 in addition to what is mentioned here.
