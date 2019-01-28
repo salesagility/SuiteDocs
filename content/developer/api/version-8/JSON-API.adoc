@@ -42,8 +42,7 @@ Also, you have to be sure that the config files are owned by PHP.
 sudo chown www-data:www-data p*.key
 
 === Update encryption key
-
-OAuth2's AuthorizationServer needs to set an encryption key for security reasons. For doing this, please, go to `Api/V8/Config/services/middlewares.php` and find the row starts with `$server->setEncryptionKey('');`
+OAuth2’s AuthorizationServer needs to set an encryption key for security reasons. For doing this, please, go to Api/Core/Config/ApiConfig.php and find "const OAUTH2_ENCRYPTION_KEY".
 
 Now update its value with generating a new one using `base64_encode(random_bytes(32))`
 
