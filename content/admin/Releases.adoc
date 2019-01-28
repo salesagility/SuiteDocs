@@ -10,9 +10,9 @@ weight: 50
 [frame="none", grid="none"]
 |===
 
-s|7.11.x, <<anchor-7.11RC2, 7.11 RC2>>, <<anchor-7.11.0, 7.11.0>>
+s|7.11.x, <<anchor-7.11RC2, 7.11 RC2>>, <<anchor-7.11.0, 7.11.0>>, <<anchor-7.11.1, 7.11.1>>
 
-s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>, <<anchor-7.10.11, 7.10.11>>, <<anchor-7.10.12, 7.10.12>>
+s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>, <<anchor-7.10.11, 7.10.11>>, <<anchor-7.10.12, 7.10.12>>,<<anchor-7.10.13, 7.10.13>>
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>, <<anchor-7.9.16, 7.9.16>>, <<anchor-7.9.17, 7.9.17>>
 
@@ -37,6 +37,94 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 |===
 
 '''
+
+[[anchor-7.11.1]]
+== **7.11.1**
+_Released 29th Jan 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.1.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.1.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+
+==== **Bug Fixes**
+
+===== Emails
+
+* https://github.com/salesagility/SuiteCRM/issues/6810[#6810 ]
+* https://github.com/salesagility/SuiteCRM/issues/6785[#6785 ]
+* https://github.com/salesagility/SuiteCRM/issues/6767[#6767 ]
+* https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ]
+* https://github.com/salesagility/SuiteCRM/issues/6484[#6484 ]
+
+'''
+
+===== Miscellaneous
+
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ]
+* https://github.com/salesagility/SuiteCRM/issues/6786[#6786 ]
+* https://github.com/salesagility/SuiteCRM/issues/6468[#6468 ]
+* https://github.com/salesagility/SuiteCRM/issues/532[#532 ]
+* https://github.com/salesagility/SuiteCRM/issues/6758[#6758 ]
+
+'''
+
+===== Developer
+
+* https://github.com/salesagility/SuiteCRM/issues/6759[#6759 ]
+* https://github.com/salesagility/SuiteCRM/issues/6583[#6583 ]
+
+'''
+
+
+=== **Release Stats**
+
+{{% notice note %}}
+In total, we have merged  *12 Pull Requests* with *3* of these from Community contributions!
+{{% /notice %}}
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
+
+'''
+
+
+[[anchor-7.10.13]]
+== **7.10.13
+
+_Released 29th Jan 2019_
+
+== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.13.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.13.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+
+==== **Bug Fixes**
+
+===== Emails
+
+* https://github.com/salesagility/SuiteCRM/issues/6102[#6012 ]
+* https://github.com/salesagility/SuiteCRM/issues/5851[#5851 ]
+* https://github.com/salesagility/SuiteCRM/issues/5757[#5757 ]
+
+'''
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us 
+via email security@suitecrm.com.
+
+'''
+
 
 [[anchor-7.11.0]]
 == **7.11.0**
