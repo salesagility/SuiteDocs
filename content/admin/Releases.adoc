@@ -16,7 +16,7 @@ s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<a
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>, <<anchor-7.9.16, 7.9.16>>, <<anchor-7.9.17, 7.9.17>>
 
-s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>, <<anchor-7.8.24, 7.8.24 - LTS>>, <<anchor-7.8.25, 7.8.25 - LTS>>
+s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>, <<anchor-7.8.24, 7.8.24 - LTS>>, <<anchor-7.8.25, 7.8.25 - LTS>>, <<anchor-7.8.26, 7.8.26 - LTS>>
 
 s|7.7.x, <<anchor-7.7Beta, 7.7 Beta>>, <<anchor-7.7Beta2, 7.7 Beta 2>>, <<anchor-7.7RC, 7.7 RC>>, <<anchor-7.7RC2, 7.7 RC 2>>, <<anchor-7.7.0, 7.7.0>>, <<anchor-7.7.1, 7.7.1>>, <<anchor-7.7.2, 7.7.2>>, <<anchor-7.7.3, 7.7.3>>, <<anchor-7.7.4, 7.7.4>>, <<anchor-7.7.5, 7.7.5>>, <<anchor-7.7.6, 7.7.6>>, <<anchor-7.7.7, 7.7.7>>, <<anchor-7.7.8, 7.7.8>>, <<anchor-7.7.9, 7.7.9>>
 
@@ -38,11 +38,11 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 
 '''
 
-[[anchor-7.11.1]]
-== **7.11.1**
+= 7.11.1
+
 _Released 29th Jan 2019_
 
-=== **Assets**
+== **Assets**
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.1.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.1.tar.gz[*Source code* (tar.gz)]
@@ -54,28 +54,43 @@ _Released 29th Jan 2019_
 
 ===== Emails
 
-* https://github.com/salesagility/SuiteCRM/issues/6810[#6810 ]
-* https://github.com/salesagility/SuiteCRM/issues/6785[#6785 ]
-* https://github.com/salesagility/SuiteCRM/issues/6767[#6767 ]
-* https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ]
-* https://github.com/salesagility/SuiteCRM/issues/6484[#6484 ]
+* https://github.com/salesagility/SuiteCRM/issues/6810[#6810 ] You can now setup Emails in Campaigns.
+* https://github.com/salesagility/SuiteCRM/issues/6785[#6785 ] Attahcments now send with emails.
+* https://github.com/salesagility/SuiteCRM/issues/6767[#6767 ] Email view working after upgrade.
+* https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ] The SMTP Port now views the value as a string.
+* https://github.com/salesagility/SuiteCRM/issues/6484[#6484 ] Inseting images from local disk now displays in Email templates.
+* https://github.com/salesagility/SuiteCRM/issues/5961[#5961] You can now save attachments in the Email template.
+
 
 '''
 
 ===== Miscellaneous
 
-* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ]
-* https://github.com/salesagility/SuiteCRM/issues/6786[#6786 ]
-* https://github.com/salesagility/SuiteCRM/issues/6468[#6468 ]
-* https://github.com/salesagility/SuiteCRM/issues/532[#532 ]
-* https://github.com/salesagility/SuiteCRM/issues/6758[#6758 ]
-
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ] User password now saves.
+* https://github.com/salesagility/SuiteCRM/issues/6786[#6786 ] No longer display "%20" instead of a space when in dropdown editor
+* https://github.com/salesagility/SuiteCRM/issues/6468[#6468 ] Fixed possibility of NULL value breaking module builder templates 
+* https://github.com/salesagility/SuiteCRM/issues/6758[#6758 ] Removed duplication language strings. 
+* https://github.com/salesagility/SuiteCRM/issues/6140[#6140 ] Replaced league/url league/uri
+* https://github.com/salesagility/SuiteCRM/issues/6516[#6516 ] Fillers now stay as saved in Gridlayout
+* https://github.com/salesagility/SuiteCRM/issues/532[#532 ] here is now an edit/remove in the projects subpanel
+* https://github.com/salesagility/SuiteCRM/pull/6453[#6453 ] LDAP fix.
+* https://github.com/salesagility/SuiteCRM/pull/6743[#6743 ] Add email account name to the inbox button 
 '''
 
 ===== Developer
 
-* https://github.com/salesagility/SuiteCRM/issues/6759[#6759 ]
-* https://github.com/salesagility/SuiteCRM/issues/6583[#6583 ]
+* https://github.com/salesagility/SuiteCRM/issues/6759[#6759 ] No longer deletes composer.lock on travis.
+* https://github.com/salesagility/SuiteCRM/pull/6764[#6764 ] Travis Fix.
+
+
+'''
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
+
 
 '''
 
@@ -95,8 +110,7 @@ via email security@suitecrm.com.
 '''
 
 
-[[anchor-7.10.13]]
-== **7.10.13**
+= 7.10.13
 
 _Released 29th Jan 2019_
 
@@ -107,21 +121,89 @@ _Released 29th Jan 2019_
 
 === **Release Notes**
 
+==== **Enhancements**
+
+* https://github.com/salesagility/SuiteCRM/pull/6774[#6774] Shows HTML version of email templates when "Show Plain Text" is selected.
+
 
 ==== **Bug Fixes**
 
 ===== Emails
 
-* https://github.com/salesagility/SuiteCRM/issues/6102[#6012 ]
-* https://github.com/salesagility/SuiteCRM/issues/5851[#5851 ]
-* https://github.com/salesagility/SuiteCRM/issues/5757[#5757 ]
+* https://github.com/salesagility/SuiteCRM/issues/6766[#6766] The SMTP Port now views the value as a string.
+* https://github.com/salesagility/SuiteCRM/issues/6810[#6810] You can now setup Emails in Campaigns.
+* https://github.com/salesagility/SuiteCRM/issues/5961[#5961] You can now save attachments in the Email template.
+* https://github.com/salesagility/SuiteCRM/issues/6484[#6484] Inseting images from local disk now displays in Email templates.
 
 '''
 
+===== Miscellaneous 
+
+* https://github.com/salesagility/SuiteCRM/issues/532[#532] There is now an edit/remove in the projects subpanel
+* https://github.com/salesagility/SuiteCRM/issues/6786[#6786] No longer display "%20" instead of a space when in dropdown editor
+* https://github.com/salesagility/SuiteCRM/issues/6468[#6468] Fixed possibility of NULL value breaking module builder templates 
+* https://github.com/salesagility/SuiteCRM/pull/6835[#6835] LDAP fix.
+* https://github.com/salesagility/SuiteCRM/issues/6516[#6516] Fillers now stay as saved in Gridlayout
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787] User password now saves.
+
+
+
+'''
+
+
+===== developer 
+* https://github.com/salesagility/SuiteCRM/pull/6825[#6825] Travis Fix
+
+'''
+
+
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
-To report any security issues please follow our Security Process and send them directly to us 
+To report any security issues please follow our Security Process and send them directly to us
 via email security@suitecrm.com.
+
+
+'''
+
+= 7.8.26 - LTS
+
+_Released 29th Jan 2019_
+
+== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.26lts.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.26lts.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+
+==== **Bug Fixes**
+
+===== Emails
+* https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ] The SMTP Port now views the value as a string.
+
+'''
+
+===== Miscellaneous
+* https://github.com/salesagility/SuiteCRM/issues/6786[#6786 ] No longer display "%20" instead of a space when in dropdown editor
+* https://github.com/salesagility/SuiteCRM/issues/6468[#6468 ] Fixed possibility of NULL value breaking module builder templates
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ] User password now saves
+* https://github.com/salesagility/SuiteCRM/issues/4361[#4361 ] Can now use dropdown menu
+* https://github.com/salesagility/SuiteCRM/pull/6859[#6468 ] Fixed possibility of NULL value breaking module builder templates
+
+'''
+
+===== Developer
+* https://github.com/salesagility/SuiteCRM/pull/6443[#6443 ] replacing mbcryp_cbc with openssl_encrypt for SOAP key over LDAP
+
+'''
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
+
 
 '''
 
