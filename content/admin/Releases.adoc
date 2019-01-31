@@ -41,7 +41,7 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 [[anchor-7.11.1]]
 == **7.11.1**
 
-_Released 29th Jan 2019_
+_Released 31st Jan 2019_
 
 === **Assets**
 
@@ -55,19 +55,19 @@ _Released 29th Jan 2019_
 
 ===== Emails
 
-* https://github.com/salesagility/SuiteCRM/issues/6810[#6810 ] You can now setup Emails in Campaigns.
-* https://github.com/salesagility/SuiteCRM/issues/6785[#6785 ] Attahcments now send with emails.
-* https://github.com/salesagility/SuiteCRM/issues/6767[#6767 ] Email view working after upgrade.
-* https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ] The SMTP Port now views the value as a string.
-* https://github.com/salesagility/SuiteCRM/issues/6484[#6484 ] Inseting images from local disk now displays in Email templates.
-* https://github.com/salesagility/SuiteCRM/issues/5961[#5961] You can now save attachments in the Email template.
+* https://github.com/salesagility/SuiteCRM/issues/6810[#6810 ] Resolved issue with email config within campaign wizard.
+* https://github.com/salesagility/SuiteCRM/issues/6785[#6785 ] Resolved issue with system not sending attahcments.
+* https://github.com/salesagility/SuiteCRM/issues/6767[#6767 ] Resolved Email view when using non default folders.
+* https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ] The SMTP Port saved as a string instead of int.
+* https://github.com/salesagility/SuiteCRM/issues/6484[#6484 ] Inseting images from local disk rendered and saved within email templates.
+* https://github.com/salesagility/SuiteCRM/issues/5961[#5961] Resolved saving attachments in the Email template editor.
 
 
 '''
 
 ===== Miscellaneous
 
-* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ] User password now saves.
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ] Resolves critial issue when a new user being created the password wasn't being saved.
 * https://github.com/salesagility/SuiteCRM/issues/6786[#6786 ] No longer display "%20" instead of a space when in dropdown editor
 * https://github.com/salesagility/SuiteCRM/issues/6468[#6468 ] Fixed possibility of NULL value breaking module builder templates 
 * https://github.com/salesagility/SuiteCRM/issues/6758[#6758 ] Removed duplication language strings. 
@@ -113,7 +113,7 @@ via email security@suitecrm.com.
 [[anchor-7.10.13]]
 == **7.10.13**
 
-_Released 29th Jan 2019_
+_Released 31st Jan 2019_
 
 == **Assets**
 
@@ -131,10 +131,10 @@ _Released 29th Jan 2019_
 
 ===== Emails
 
-* https://github.com/salesagility/SuiteCRM/issues/6766[#6766] The SMTP Port now views the value as a string.
-* https://github.com/salesagility/SuiteCRM/issues/6810[#6810] You can now setup Emails in Campaigns.
-* https://github.com/salesagility/SuiteCRM/issues/5961[#5961] You can now save attachments in the Email template.
-* https://github.com/salesagility/SuiteCRM/issues/6484[#6484] Inseting images from local disk now displays in Email templates.
+* https://github.com/salesagility/SuiteCRM/issues/6766[#6766] The SMTP Port saved as a string instead of int.
+* https://github.com/salesagility/SuiteCRM/issues/6810[#6810] Resolved issue with email config within campaign wizard.
+* https://github.com/salesagility/SuiteCRM/issues/5961[#5961] Resolved saving attachments in the Email template editor.
+* https://github.com/salesagility/SuiteCRM/issues/6484[#6484] Inseting images from local disk rendered and saved within email templates.
 
 '''
 
@@ -145,7 +145,7 @@ _Released 29th Jan 2019_
 * https://github.com/salesagility/SuiteCRM/issues/6468[#6468] Fixed possibility of NULL value breaking module builder templates 
 * https://github.com/salesagility/SuiteCRM/pull/6835[#6835] LDAP fix.
 * https://github.com/salesagility/SuiteCRM/issues/6516[#6516] Fillers now stay as saved in Gridlayout
-* https://github.com/salesagility/SuiteCRM/issues/6787[#6787] User password now saves.
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787] Resolves critial issue when a new user being created the password wasn't being saved.
 
 
 
@@ -169,7 +169,7 @@ via email security@suitecrm.com.
 [[anchor-7.8.26]]
 == **7.8.26**
 
-_Released 29th Jan 2019_
+_Released 31st Jan 2019_
 
 == **Assets**
 
@@ -189,9 +189,8 @@ _Released 29th Jan 2019_
 ===== Miscellaneous
 * https://github.com/salesagility/SuiteCRM/issues/6786[#6786 ] No longer display "%20" instead of a space when in dropdown editor
 * https://github.com/salesagility/SuiteCRM/issues/6468[#6468 ] Fixed possibility of NULL value breaking module builder templates
-* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ] User password now saves
+* https://github.com/salesagility/SuiteCRM/issues/6787[#6787 ] Resolves critial issue when a new user being created the password wasn't being saved.
 * https://github.com/salesagility/SuiteCRM/issues/4361[#4361 ] Can now use dropdown menu
-* https://github.com/salesagility/SuiteCRM/pull/6859[#6468 ] Fixed possibility of NULL value breaking module builder templates
 
 '''
 
