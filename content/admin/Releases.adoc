@@ -38,11 +38,12 @@ s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2
 
 '''
 
-= 7.11.1
+[[anchor-7.11.1]]
+== **7.11.1**
 
 _Released 29th Jan 2019_
 
-== **Assets**
+=== **Assets**
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.1.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.1.tar.gz[*Source code* (tar.gz)]
@@ -109,8 +110,8 @@ via email security@suitecrm.com.
 
 '''
 
-
-= 7.10.13
+[[anchor-7.10.13]]
+== **7.10.13**
 
 _Released 29th Jan 2019_
 
@@ -165,7 +166,8 @@ via email security@suitecrm.com.
 
 '''
 
-= 7.8.26 - LTS
+[[anchor-7.8.26]]
+== **7.8.26**
 
 _Released 29th Jan 2019_
 
