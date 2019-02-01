@@ -9,17 +9,27 @@ title: "Extension Framework"
 
 The extension framework provides a means to modify various application
 data inside SuiteCRM. For example it provides a way to add or modify
-vardefs, scheduled tasks, language strings and more. In general a folder
-is provided in `custom/Extension` (the exact path depends on the
+vardefs, scheduled tasks, language strings and more. 
+
+The mechanism is slightly more complicated than merely copying a file to custom 
+directory to override all its contents, but has advantages:
+
+- you can override just a part of what you're modifying
+- different people can override different parts, without conflicts. For example, 
+you can add-on can add a field to a layout, and then an add-on adds another, and a second add-on changes
+something else in the same layout. SuiteCRM will make sure all changes will be consolidated.
+
+In general a folder is provided in `custom/Extension` (the exact path depends on the
 extension). This folder is then scanned for files which will be
-consolidated into a single ext file which SuiteCRM will then read and
+consolidated into a single `ext` file which SuiteCRM will then read and
 use. In this way it is possible for developers to add a new file to
 affect the behaviour of SuiteCRM rather than altering existing files.
 This makes the changes more modular and allows the easy addition or
-removal of changes. Additionally, because these files are all
-consolidated it means that there is no affect on performance of checking
-a (possibly large) number of files. This is only done when performing a
-repair and rebuild in the admin menu.
+removal of changes. 
+
+Additionally, because these files are all consolidated it means that there is 
+no effect on performance of checking a (possibly large) number of files. 
+This is only done when performing a repair and rebuild in the admin menu.
 
 == Standard Extensions
 
@@ -91,6 +101,21 @@ JavaScript groupings.
 actions.
 |=======================================================================
 
+== Forcing overrides
+
+To make sure certain customizatins take precendence, there is an additional mechanism using files starting with `_override`, 
+for example:
+
+`custom\Extension\modules\Accounts\Ext\Vardefs\_override_my_field_change.php`
+
+When *Quick Repair & Rebuild* is run, all the extension files are consolidated in two groups:
+
+- the 1st run gathers files not starting with `_override` 
+- the 2nd run gathers files which start with `_override`
+
+Since these files are loaded with a PHP *require*, the PHP in them is executed, and the overrides will be the last to run, 
+so they will take effect regardless of what is done in the files read before.
+
 == Custom Extensions
 
 Interestingly the extension framework can be used to add new extensions.
@@ -116,13 +141,9 @@ $extensions["sports_list"] =  array(
                 "module" => "");
 ----
 
-
-
-Now when a Quick Repair and rebuild is run any files in `custom/Extension/application/Ext/SportsList/` will be consolidated
+Now when a *Quick Repair and Rebuild* is run any files in `custom/Extension/application/Ext/SportsList/` will be consolidated
 into `custom/application/Ext/SportsList/sportslist.ext.php`. 
 
-On it’s own this
-file will not do anything but you are now able to write custom code that
-checks the consolidated file rather than having to worry about searching
-for customisations.
+On its own this file will not do anything but you are now able to write custom code that
+checks the consolidated file rather than having to worry about searching for customisations.
 
