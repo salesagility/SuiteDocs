@@ -1,0 +1,122 @@
+---
+title: Documentation Guidelines 
+weight: 50
+---
+
+:toc:
+
+For a full explanation of how to work in our Documentation files, you need to get acquainted 
+with Hugo (our rendering engine), Learn (our Hugo Theme), and Asciidoc (the mark up style we use).
+
+The explanations below are simply a short list of some frequently used syntax, and a few recommendations
+regarding naming conventions and other rules we adhere to, for consistency and other practical reasons.
+
+== Placing files
+
+Most often the files you will want to edit will be under `content` directory. That's where you find the 
+main sections of the guide, *User*, *Developer*, *Admin*, *Community* and *Technical Blog*.
+
+You may create new directories inside these, as appropriate for sub-sections; and you can create new files. 
+You should understand the way link:https://gohugo.io/content-management/organization/[Hugo uses 
+the directories and file placements] to generate content. We are currently not using Hugo's *Page Bundles*, 
+though we plan to use them in the future.
+
+== Naming Files
+
+Both for directory names and file names, we use the page titles as they appear in the front-matter, 
+but use only lowercase, and no spaces or special characters. 
+
+Basically we are trying to emulate the way Hugo produces the final content under `public` directory, so that there
+isn't much difference between the source and the rendered content. We've found this tends to facilitate 
+managing the content.
+
+So a page in directory `Installation Guide` titled `Downloading & Installing` can get a filename 
+of `installation-guide/downloading-installing.adoc`.
+
+=== Naming Translated Files  
+
+For translations, we keep the english file name (that's how Hugo gets the fact that these are 
+translated versions of the same thing), but add a language code before the `.adoc` extension.
+
+So these are all translations of the same file (English, Spanish, Russian):
+
+```
+requirements.adoc
+requirements.es.adoc
+requirements.ru.adoc
+```
+Note that we could have used `requirements.en.adoc` for the English version, but we don't do that. 
+We keep the default language (English) without any language code at all.
+
+== Front-matter and Special Codes
+
+Each Asciidoc content file will start with a section called *Front-matter*:
+
+```
+---
+title: Documentation Guidelines 
+weight: 50
+---
+```
+Although there are link:https://gohugo.io/content-management/front-matter/[many things] that can 
+be defined here, we require only the `title` and `weight` properties. 
+
+The `weight` defines the position in the table of contents, that is, the order within the section where 
+the page belongs. We use increments of 10 for `weight`, so that if we want to insert a new page inbetween 
+two other pre-existing pages, it's easier to find an available number. So we number them 10, 20, 30, etc.,
+instead of just 1, 2, 3, etc.
+
+Some of the *Special Codes* that can be used at the beginning of the file, after the front-matter:
+
+- Drawing buttons with a special graphic look:
+```
+:experimental:   ////this is here to allow btn:[]syntax used below 
+
+Example sentence indicating you can press a btn:[Save] on the user interface.
+```
+
+- Setting the images base directory that will be used throughout the file:
+```
+:imagesdir: /images/en/admin
+```
+This directory should be specified as an absolute path (starting with a `/`), not relative (like `../../images`).
+
+- Including an automatically generated *Table of Contents* of the sections inside this file:
+```
+:toc:
+```
+- Including an automatically generated *Table of Contents* of the pages in directory levels below the current page 
+(used in pages that have a sub-directory).
+
+```
+{{%/* children depth="3" showhidden="true" */%}}
+```
+
+== Content
+
+In the normal text content, we follow these rules
+
+- Break lines approximately at the 80th column. Asciidoc ignores these line-breaks. We use them to facilitate 
+editing the source code on a typical 80 character wide console.
+
+- surround paths, file names, variable names and other expressions that might be useful to copy-paste 
+with backticks:
+ 
+```text
+Source mark-up to allow easy copy of a path `/some/path` into your editor.
+```
+
+== References
+
+- Use normal Asciidoc links to navigate between files. 
+
+- For pages, always use relative links where possible. This is essential for translated pages to be able to use
+the same navigation as English pages. So your links will look like this:
+
+```text
+Here is a link:../../admin/my-page.adoc[link for you to click!].
+```
+Use the minimum amount of `..` necessary, and when backtracking through directories with `..`, 
+never go above the `content` directory, this is never necessary.
+
+- For images, use the `:imagesdir:` as explained above, and then use a link without a path.
