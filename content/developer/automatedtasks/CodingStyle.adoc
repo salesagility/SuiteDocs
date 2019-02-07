@@ -32,10 +32,10 @@ Open Command Prompt and run robo
 
 Open terminal and run robo
 
-`./vendor/bin/robo style:phpcsfixer-modified `
+`./vendor/bin/robo style:configure-phpcsfixer`
 
-=== Build a specific SuiteP Color (Command Prompt):
+=== Fix code style issues in modified files(Command Prompt):
 
 Open Command Prompt and run robo
 
-`.\vendor\bin\robo style:phpcsfixer-modified `
+`.\vendor\bin\robo style:configure-phpcsfixer`
