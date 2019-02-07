@@ -1,0 +1,41 @@
+---
+Title: "Coding Style"
+---
+
+=== Configure Environment (bash):
+
+Open terminal and run robo
+
+`./vendor/bin/robo style:configure-phpcsfixer`
+
+=== Configure Testing Environment(Command Prompt):
+
+Open Command Prompt and run robo
+
+`.\vendor\bin\robo style:configure-phpcsfixer`
+
+
+=== Fix all code style issues (bash):
+
+Open terminal and run robo
+
+`./vendor/bin/robo style:phpcsfixer`
+
+=== Build a specific SuiteP Color (Command Prompt):
+
+Open Command Prompt and run robo
+
+`.\vendor\bin\robo style:phpcsfixer`
+
+
+=== Fix code style issues in modified files (bash):
+
+Open terminal and run robo
+
+`./vendor/bin/robo style:phpcsfixer-modified `
+
+=== Build a specific SuiteP Color (Command Prompt):
+
+Open Command Prompt and run robo
+
+`.\vendor\bin\robo style:phpcsfixer-modified `
