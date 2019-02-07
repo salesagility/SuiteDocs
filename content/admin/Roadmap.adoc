@@ -1,0 +1,30 @@
+---
+title: SuiteCRM Roadmap
+weight: 10
+---
+
+Ok so let's try a nice-looking graph!
+
+axisFormat  %m/%d/%Y
+
+{{<mermaid>}}
+gantt
+        dateFormat  YYYY-MM-DD
+        title SuiteCRM Roadmap
+
+        section 7.8
+        Develop/Release            :    des1, 2019-01-06, 280d
+        Security Fixes only        :    des2, after des1, 120d
+        Criticals                  :    des3, after des2, 280d
+
+        section 7.9
+        Create tests for renderer           : 160d
+        Add to mermaid                      : 30d
+
+        section 7.10
+        Active task               :active,  des2, 2019-01-09, 90d
+
+        section 7.11
+        Active task               :active,  des2, 2019-01-09, 90d
+{{< /mermaid >}}
+

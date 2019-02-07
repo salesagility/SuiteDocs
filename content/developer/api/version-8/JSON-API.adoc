@@ -243,7 +243,8 @@ Example:
 Result:
 
 [source,json]
-
+----
+----
 
 == Endpoints
 
@@ -337,11 +338,13 @@ POST {{your-SuiteCRM-url}}/V8/module/{moduleName}/relationships/{relation}
 Example body:
 
 [source,json]
+----
 {
   "data": {
     "type": "contacts"
   }
 }
+----
 
 === Delete relationship
 
