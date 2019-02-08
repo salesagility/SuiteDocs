@@ -6,7 +6,7 @@ Weight: 5
 :author: likhobory
 :email: likhobory@mail.ru
 
-:imagesdir: ./../../../../../../images/en/admin/ElasticSearch
+:imagesdir: /images/en/admin/ElasticSearch
 
 ifdef::env-github[:imagesdir: ./../../../../../../master/static/images/en/admin/ElasticSearch]
 

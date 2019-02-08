@@ -12,7 +12,7 @@ Weight: 70
 
 :experimental:
 
-:imagesdir: ./../../../../images/ru/admin/AdvancedOpenAdmin
+:imagesdir: /images/ru/admin/AdvancedOpenAdmin
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/AdvancedOpenAdmin]
 

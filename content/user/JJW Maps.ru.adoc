@@ -12,7 +12,7 @@ Weight: 290
 
 :experimental:   
 
-:imagesdir: ./../../../images/ru/user/JJWMaps   
+:imagesdir: /images/ru/user/JJWMaps   
 
 ifdef::env-github[:imagesdir: ./../../../master/static/images/ru/user/JJWMaps]
 

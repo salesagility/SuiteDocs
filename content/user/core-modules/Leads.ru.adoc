@@ -12,7 +12,7 @@ Weight: 100
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/core-modules/Leads
+:imagesdir: /images/ru/user/core-modules/Leads
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Leads]
 

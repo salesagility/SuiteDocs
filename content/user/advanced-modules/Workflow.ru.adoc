@@ -12,7 +12,7 @@ Weight: 240
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/advanced-modules/Workflow
+:imagesdir: /images/ru/user/advanced-modules/Workflow
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/Workflow]
 
