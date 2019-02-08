@@ -11,7 +11,7 @@ Weight: 110
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/core-modules/Calendar
+:imagesdir: /images/ru/user/core-modules/Calendar
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Calendar]
 

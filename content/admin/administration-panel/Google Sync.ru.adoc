@@ -11,7 +11,7 @@ Weight: 65
 
 :experimental:  
 
-:imagesdir: ./../../../../images/ru/admin/GoogleAPI
+:imagesdir: /images/ru/admin/GoogleAPI
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/GoogleAPI]
 

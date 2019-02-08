@@ -8,7 +8,7 @@ Weight: 57
 
 :experimental:   
 
-:imagesdir: ./../../../../../images/ru/user/UserInterface
+:imagesdir: /images/ru/user/UserInterface
 
 ifdef::env-github[:imagesdir: ./../../../../../master/static/images/ru/user/UserInterface]
 

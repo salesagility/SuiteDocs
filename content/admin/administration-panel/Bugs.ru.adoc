@@ -9,7 +9,7 @@ Weight: 80
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/admin/ReleasesSettings
+:imagesdir: /images/ru/admin/ReleasesSettings
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/ReleasesSettings]
 

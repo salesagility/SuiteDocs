@@ -6,9 +6,9 @@ Weight: 5
 :author: likhobory
 :email: likhobory@mail.ru
 
-:imagesdir: ./../../../../../../images/en/admin/ElasticSearch
+:imagesdir: /images/en/admin/ElasticSearch
 
-ifdef::env-github[:imagesdir: ./../../../../../../images/en/admin/ElasticSearch]
+ifdef::env-github[:imagesdir: ./../../../../../../master/static/images/en/admin/ElasticSearch]
 
 {{% notice info %}}
 Поисковый движок Elasticsearch доступен в версии 7.11 и выше.

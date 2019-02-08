@@ -9,7 +9,7 @@ Weight: 52
 :toc:
 :toc-title: Оглавление
 
-:imagesdir: ./../../../images/ru/admin/AdvancedConfigurationOptions
+:imagesdir: /images/ru/admin/AdvancedConfigurationOptions
 
 ifdef::env-github[:imagesdir: ./../../../master/static/images/ru/admin/AdvancedConfigurationOptions]
 

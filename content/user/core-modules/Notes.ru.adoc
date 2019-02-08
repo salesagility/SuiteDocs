@@ -8,7 +8,7 @@ Weight: 160
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/core-modules/Notes
+:imagesdir: /images/ru/user/core-modules/Notes
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Notes]
 
