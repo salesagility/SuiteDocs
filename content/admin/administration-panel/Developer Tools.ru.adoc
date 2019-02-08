@@ -13,7 +13,7 @@ Weight: 50
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/admin/DeveloperTools
+:imagesdir: /images/ru/admin/DeveloperTools
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/DeveloperTools]
 

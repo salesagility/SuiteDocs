@@ -11,7 +11,7 @@ Weight: 20
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/GettingStarted
+:imagesdir: /images/ru/user/GettingStarted
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/GettingStarted]
 
