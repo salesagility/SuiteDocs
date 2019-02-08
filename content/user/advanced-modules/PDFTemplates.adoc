@@ -110,5 +110,5 @@ In the module you can perform the following actions: ::
 *	Data editing, for the purpose or in the Form of viewing click on the button btn:[Edit], or directly in the List Form, click the button to the left of the record being edited. You can also perform link:../../introduction/user-interface/in-line-editing/[Quick Edit].
 *	To duplicate a template, in the action menu select btn:[Duplicate]. Duplication is a convenient way to quickly create similar records, you can change the duplicated information to create a new template.
 *	To delete a template, click on the button btn:[Delete].
-*	You can track changes to the entered information, to do this select the button btn:[View Change Log] in the form of viewing. If the journal needs to change the list of controlled fields - do it in Studio by setting the parameter link:../../../admin/administration-panel/developer-tools/#Audit[*Audit*] corresponding field.
+*	You can track changes to the entered information, to do this select the button btn:[View Change Log] in the form of viewing. If the journal needs to change the list of controlled fields - do it in Studio by setting the parameter link:../../../admin/administration-panel/developer-tools/[*Audit*] corresponding field.
 
