@@ -9,7 +9,7 @@ Weight: 120
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/core-modules/Calls
+:imagesdir: /images/ru/user/core-modules/Calls
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Calls]
 

@@ -12,7 +12,7 @@ Weight: 265
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/advanced-modules/Reports
+:imagesdir: /images/ru/user/advanced-modules/Reports
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/Reports]
 

@@ -12,7 +12,7 @@ Weight: 40
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/admin/Email
+:imagesdir: /images/ru/admin/Email
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Email]
 

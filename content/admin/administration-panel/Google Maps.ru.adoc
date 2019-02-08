@@ -9,7 +9,7 @@ Weight: 60
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/admin/GoogleMaps
+:imagesdir: /images/ru/admin/GoogleMaps
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/GoogleMaps]
 

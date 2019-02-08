@@ -9,7 +9,7 @@ Weight: 230
 
 :experimental:   
 
-:imagesdir: ./../../../../images/ru/user/core-modules/Employees
+:imagesdir: /images/ru/user/core-modules/Employees
 
 ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Employees]
 
