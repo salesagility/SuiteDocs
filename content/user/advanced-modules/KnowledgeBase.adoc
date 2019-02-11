@@ -54,11 +54,11 @@ You can perform the following actions :
 
 *	Sorting the list of records. To do this, click on the icon in the header of the column to be sorted. To reverse sort, click on the icon again.
 *	Adding an entry to link:../../introduction/user-interface/navigation-elements/[favourites] –  after which the user can quickly access the most important information for him.
-*	Editing or deleting information in several records at once,  for this use link:../../introduction/user-interface/record-management/[Bulk update panel].
+*	Editing or deleting information in several records at once,  for this use link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].
 *	View detailed information on the entry, to do this, click on the name of the article or category in the general list.
 *	Data editing, for this purpose or in the Form of viewing, click on the button btn:[Correct],or directly in the List Form, click the button to the left of the record being edited. You can also perform link:../../introduction/user-interface/in-line-editing/[Quick Edit].
 *	Duplication of information, for this in the action menu, select btn:[Duplicate]. Duplication is a convenient way to quickly create similar records, you can change the duplicated information to create a new record.
-*	link:../../introduction/user-interface/record-management/[Merge duplicates], To do ths, select the necessary entries in the List Form and in the action menu select the *Combine* item.
+*	link:../../introduction/user-interface/record-management/#_merging_records[Merge duplicates], To do ths, select the necessary entries in the List Form and in the action menu select the *Combine* item.
 *	Delete a record, to do this, click on the button btn:[Delete].
 *	Tracking changes to the entered information, to do this, click on the button btn:[View Change Log] in the form of viewing. If the journal needs to change the list of controlled fields - do it in the Studio by setting the parameter link:../../../admin/administration-panel/developer-tools/[*Audit*] corresponding fields.
 *	Search for information - use link:../../introduction/user-interface/search[Filters or Advanced Filters] in the module list form.

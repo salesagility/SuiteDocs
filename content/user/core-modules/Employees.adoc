@@ -41,9 +41,9 @@ Employee Search :: Use
 link:../../introduction/user-interface/search[Filters or Advanced Filters] in the module list form.
 Viewing employee details: To do this, click on the employee’s name in the general list.
 
-link:../../introduction/user-interface/record-management/[Export] records :: To do this, select the necessary entries in the list form and select the item *Export* in the menu above the selected entries.
+link:../../introduction/user-interface/record-management/#_exporting_records[Export] records :: To do this, select the necessary entries in the list form and select the item *Export* in the menu above the selected entries.
 Delete employee records :: To do this, click on the button btn:[Delete] in the form view.
 Updating information about several employees at once: To do this, use
-link:../../introduction/user-interface/record-management/[bulk update panel].
+link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].
 
 

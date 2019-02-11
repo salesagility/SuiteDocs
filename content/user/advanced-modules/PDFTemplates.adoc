@@ -38,7 +38,7 @@ Developer Tools page.
 |image:Additiontocombobox.png[Adding a new item to the combo box]
 |===
 
-Sample From:: The system offers several options for ready-made templates, if necessary.
+Load Sample:: The system offers several options for ready-made templates, if necessary.
 Active :: An option that determines whether the current template will be offered in the list of templates when creating a document (see the section below, Creating PDF Documents Based on a Template),
 Page Size/ Orientation:: If necessary, select the size and orientation of the template page. Then default is A4 size and portrait page orientation.
 Inserting into a Field::  This option allows you to add the necessary variable to the template, which later (in the process of creating a document based template) will be replaced with the necessary data from the SuiteCRM+
@@ -103,8 +103,8 @@ In the module you can perform the following actions: ::
 
 *	Search Templates - utilise link:../../introduction/user-interface/search[Filters or advanced filters] in the module list form.
 *	Adding an entry to link:../../introduction/user-interface/navigation-elements/[Favourites] –  after which the user can quickly access the most important information for them.
-*	link:../../introduction/user-interface/record-management/[Export] templates, for this, select the necessary records in the form.
-*	Editing or deleting information about several templates at once, use this link:../../introduction/user-interface/record-management/[Mass update].
+*	link:../../introduction/user-interface/record-management/#_exporting_records[Export] templates, for this, select the necessary records in the form.
+*	Editing or deleting information about several templates at once, use this link:../../introduction/user-interface/record-management/#_mass_updating_records[Mass update].
 *	View detailed information about the template, to do this, click on the name of the template in the general list.
 *	Data editing, for the purpose or in the Form of viewing click on the button btn:[Edit], or directly in the List Form, click the button to the left of the record being edited. You can also perform link:../../introduction/user-interface/in-line-editing/[Quick Edit].
 *	To duplicate a template, in the action menu select btn:[Duplicate]. Duplication is a convenient way to quickly create similar records, you can change the duplicated information to create a new template.
