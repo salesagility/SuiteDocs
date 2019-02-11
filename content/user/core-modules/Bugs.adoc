@@ -23,13 +23,13 @@ image:Bugs(Errors).png[Bugs]
 The described Bugs can be absolutely anything:
 they can be tied to both the version (model) of a tangible product,
 and the release of the next version of the software.
-The system administrator has the ability to change the list of available versions.
+A user with administrative access has the ability to change the list of available versions.
 After describing the Bug, you can associate it with the request
 (in the form of viewing using the subpanel *of the Application*),
 and with the available version of the product (directly in the Bug editing form).
 
 {{% notice note %}}
-By default, this module is hidden, to display it you need to contact your system administrator.
+By default, this module is hidden, to display it you need to contact your a user with administrative access.
 {{% /notice %}}
 
 You can create a description of the Bug either directly in the system
@@ -62,7 +62,7 @@ image:Bugs Description.png[Bug Description]
 
 Resolution:: From the drop-down list, select the resolution.
 Fixed in version:: From the drop-down list select the version of the product in which this Bug was corrected..
-Note:: The list of available versions can be configured by the System Administrator. For detailed information, see the section
+Note:: The list of available versions can be configured by users with administration access. For detailed information, see the section
 link:../../../developer/best-practices/[Version control].
 Description :: Enter a full description of the problem.
 Log :: Enter the measures taken to solve the problem.
