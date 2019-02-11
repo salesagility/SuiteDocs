@@ -50,8 +50,8 @@ image:Bugs Description.png[Bug Description]
 
 Resolution:: From the drop-down list, select the resolution.
 Fixed in version:: From the drop-down list select the version of the product in which this Bug was corrected..
-Note:: The list of available versions can be configured by the System Administrator. For detailed information, see the section.
-link:../../../admin/administration-panel/bugs[Version control].
+Note:: The list of available versions can be configured by the System Administrator. For detailed information, see the section
+link:../../../developer/best-practices/[Version control].
 Description :: Enter a full description of the problem.
 Log :: Enter the measures taken to solve the problem.
 
