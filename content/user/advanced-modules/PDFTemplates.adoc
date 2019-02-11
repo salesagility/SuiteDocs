@@ -3,7 +3,6 @@ Title: PDF Templates
 Weight: 85
 ---
 
-
 :toc:
 
 :experimental:
@@ -76,7 +75,7 @@ image:margins.png[Setting page parameters]
 
 == Creating PDF Documents Based on a Template
 
- .	When creating a PDF document for modules *Counterparties*, *Contacts* and *Preliminary Contacts* use the menu item *Print as PDF* from the action menu of the View module of the corresponding module:
+ .	When creating a PDF document for modules *Accounts*, *Contacts* and *Preliminary Contacts* use the menu item *Print as PDF* from the action menu of the View module of the corresponding module:
 
 image:PDF-Contact.png[Creating PDF documents based on a template]
 
