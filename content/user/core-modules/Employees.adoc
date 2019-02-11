@@ -14,7 +14,8 @@ Weight: 230
 = Employees
 
 
-This module is used to manage information about employees in your organization. Access to the module is through the user menu, which is displayed at the top right of each page:
+This module is used to manage information about employees in your organization.
+Access to the module is through the user menu, which is displayed at the top right of each page:
 
 image:AdminPanelOpenEmployee.png[Employees in the user menu]
 
@@ -23,15 +24,19 @@ All users added to the system through the Administrator panel are automatically 
 image:Employees.png[Employees]
 
 
-Employees originally added to the system through the module *Employees*: they will be displayed in the list of employees, but they cannot register in the system until the necessary login and password are assigned to them.
-Thus, in this module the entire list of employees of your organization can be presented, including employees who are not employed in SuiteCRM.
+Employees originally added to the system through the module *Employees*:
+they will be displayed in the list of employees, but they cannot register
+in the system until the necessary login and password are assigned to them.
+Thus, in this module the entire list of employees of your organization can be presented,
+including employees who are not employed in SuiteCRM.
 
 == Enter Employee information
 
  .	In the user menu, select *Employees*
  .	In the module menu, select *Create employee*.
  .	Enter the necessary information about the employee.
- .	Press the button btn:[Save] to save employee information or button btn:[Cancel] to return to the list of employees without saving the entered information.
+ .	Press the button btn:[Save] to save employee information or button btn:[Cancel]
+ to return to the list of employees without saving the entered information.
 
 
 You can do the following with employee records:
@@ -41,7 +46,8 @@ Employee Search :: Use
 link:../../introduction/user-interface/search[Filters or Advanced Filters] in the module list form.
 Viewing employee details: To do this, click on the employee’s name in the general list.
 
-link:../../introduction/user-interface/record-management/#_exporting_records[Export] records :: To do this, select the necessary entries in the list form and select the item *Export* in the menu above the selected entries.
+link:../../introduction/user-interface/record-management/#_exporting_records[Export] records ::
+To do this, select the necessary entries in the list form and select the item *Export* in the menu above the selected entries.
 Delete employee records :: To do this, click on the button btn:[Delete] in the form view.
 Updating information about several employees at once: To do this, use
 link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].

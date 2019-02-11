@@ -12,19 +12,29 @@ Weight: 195
 
 = Bugs
 
-Use this module to describe and track Bugs. When creating an Bug record, you can describe in more detail the problem that caused
+Use this module to describe and track Bugs.
+When creating an Bug record, you can describe
+in more detail the problem that caused
 link:../cases[appeals], and describe possible ways to fix it in
 link:../../advanced-modules/knowledgebase[Knowledge Base].
 
 image:Bugs(Errors).png[Bugs]
 
-The described Bugs can be absolutely anything: they can be tied to both the version (model) of a tangible product, and the release of the next version of the software. The system administrator has the ability to change the list of available versions. After describing the Bug, you can associate it with the request (in the form of viewing using the subpanel * of the Application *), and with the available version of the product (directly in the Bug editing form).
+The described Bugs can be absolutely anything:
+they can be tied to both the version (model) of a tangible product,
+and the release of the next version of the software.
+The system administrator has the ability to change the list of available versions.
+After describing the Bug, you can associate it with the request
+(in the form of viewing using the subpanel *of the Application*),
+and with the available version of the product (directly in the Bug editing form).
 
 {{% notice note %}}
 By default, this module is hidden, to display it you need to contact your system administrator.
 {{% /notice %}}
 
-You can create a description of the Bug either directly in the system or import the description from a text file, more detailed information on this topic is described in the section.
+You can create a description of the Bug either directly in the system
+or import the description from a text file, more detailed information
+on this topic is described in the section.
 link:../../introduction/user-interface/record-management/#_importing_records[Data import].
 
 == Bug Description
@@ -39,11 +49,14 @@ Source:: From the drop-down list, select the source of Bug detection.
 Category:: From the drop-down list, select the category to which this Bug may be related.
 
 {{% notice tip %}}
-All values ​​of the fields with lists can be edited if necessary. So if there is no necessary value in the drop-down list, it can be added in Studio. For more information about modifying list boxes, see
+All values ​​of the fields with lists can be edited if necessary.
+So if there is no necessary value in the drop-down list, it can
+be added in Studio. For more information about modifying list boxes, see
 link:../../../admin/administration-panel/developer-tools/[Combo box editor].
 {{% /notice %}}
 
-Detected in version :: From the drop-down list, select the version of the product in which this Bug was detected.
+Detected in version :: From the drop-down list,
+select the version of the product in which this Bug was detected.
 
 image:Bugs Description.png[Bug Description]
 
@@ -57,14 +70,16 @@ Log :: Enter the measures taken to solve the problem.
 Responsible :: Indicate the person responsible for the system user Bug. By default, you are responsible.
 
 [start=3]
- .	Click the button btn:[Save]  to save the entered information; press the button btn:[Cancel] to return to the list of calls or meetings without saving the entered information.  After saving the description of the Bug, you can associate it with new or existing Appeals, Contacts or Accounts.
+ .	Click the button btn:[Save] to save the entered information;
+ press the button btn:[Cancel] to return to the list of calls or meetings
+ without saving the entered information.  After saving the description
+ of the Bug, you can associate it with new or existing Appeals, Contacts or Accounts.
 
 == Bug Management
 
 In the module you can perform the following actions :
 
 *	Sorting the list of records. To do this, click on the icon in the header of the column to be sorted. To reverse sort, click on the icon again.
-*	Adding an entry to link:../../introduction/user-interface/navigation-elements/[favourites] – after which the user can quickly access the most important information for him.
 *	Editing or deleting information about several Bugs at once, for this use link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].
 *	link:../../introduction/user-interface/record-management/#_importing_records[Import] Bug information , to do this, click on the button btn:[Import], located in the module menu.
 *	link:../../introduction/user-interface/record-management/#_merging_records[Merge Duplicates],To do this, select the necessary entries in the List Form and in the action menu select the *Combine* item.

@@ -13,7 +13,11 @@ Weight: 205
 
 The knowledge base can be used as a structured repository of solutions coming
 link:../../core-modules/cases[Appeals].
-When a new treatment is entered into the system, the system compares the topic of the new treatment with the topics and contents of the existing Knowledge Base articles and automatically suggests options for suitable articles, which makes it possible to speed up the search for an answer to the received treatment.
+When a new treatment is entered into the system,
+the system compares the topic of the new treatment with the
+topics and contents of the existing Knowledge Base articles and
+automatically suggests options for suitable articles, which makes it
+possible to speed up the search for an answer to the received treatment.
 
 == Adding an article to the knowledge base
 
@@ -27,17 +31,22 @@ image:ArticleKB.png[Adding an article to the knowledge base]
 
 Status:: From the drop-down list, select the article status option: *Draft*, *Expired*, *Pending*, *Not Published*, *Published*.
 
-Article text:: Enter a detailed description of the solution. If further when entering the topic of a new appeal, matches are found with the topic or text of the Knowledge Base article, then this article will be automatically offered as a possible solution.
+Article text:: Enter a detailed description of the solution.
+If further when entering the topic of a new appeal,
+matches are found with the topic or text of the Knowledge Base article,
+then this article will be automatically offered as a possible solution.
 
 Version of the article:: Specify the version of the article.
-Resolution:: Indicate a brief solution to the question under discussion. In the future, the text of the resolution can be specified as
+Resolution:: Indicate a brief solution to the question under discussion.
+In the future, the text of the resolution can be specified as
 link:../../core-modules/cases/[decision] incoming treatment.
 Author of the Article :: Specify the author of the text.
 Approved by:: Select a user of the system that approved the text of the article.
 
 == Categories of Knowledge Base Articles
 
-With a large number of articles, they can be grouped into different categories. Categories are created in a separate module *Knowledge Base Categories*.
+With a large number of articles, they can be grouped into different categories.
+Categories are created in a separate module *Knowledge Base Categories*.
 
 When creating a category, fill in the following fields.:
 
@@ -46,14 +55,14 @@ Description:: Enter a description of the category.
 Created::  If necessary, change the user who created the category description category.
 image:CategoriesKB.png[Categories of Knowledge Base Articles]
 
-After creating a category, a list of articles can be added to it. To do this, use the sub-panel *Knowledge Base Article* in the Category View Form.
+After creating a category, a list of articles can be added to it. To do this, use the sub-panel
+*Knowledge Base Article* in the Category View Form.
 
 == Managing articles and knowledge base article categories
 
 You can perform the following actions :
 
 *	Sorting the list of records. To do this, click on the icon in the header of the column to be sorted. To reverse sort, click on the icon again.
-*	Adding an entry to link:../../introduction/user-interface/navigation-elements/[favourites] –  after which the user can quickly access the most important information for him.
 *	Editing or deleting information in several records at once,  for this use link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].
 *	View detailed information on the entry, to do this, click on the name of the article or category in the general list.
 *	Data editing, for this purpose or in the Form of viewing, click on the button btn:[Correct],or directly in the List Form, click the button to the left of the record being edited. You can also perform link:../../introduction/user-interface/in-line-editing/[Quick Edit].
