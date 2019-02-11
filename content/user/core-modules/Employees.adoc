@@ -28,10 +28,6 @@ Thus, in this module the entire list of employees of your organization can be pr
 
 == Enter Employee information
 
-Only a system administrator can
-link:../../../admin/administration-panel/employee-records[add new employee records].
-Regular users can only view available data.
-
  .	In the user menu, select *Employees*
  .	In the module menu, select *Create employee*.
  .	Enter the necessary information about the employee.
