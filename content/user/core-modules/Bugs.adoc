@@ -58,7 +58,7 @@ Log :: Enter the measures taken to solve the problem.
 Responsible :: Indicate the person responsible for the system user Bug. By default, you are responsible.
 
 [start=3]
- .	Click the button btn:[Save]  to save the entered information; press the button btn:[Cancel] to return to the list of calls or meetings without saving the entered information.  After saving the description of the Bug, you can associate it with new or existing Appeals, Contacts or Counterparties.
+ .	Click the button btn:[Save]  to save the entered information; press the button btn:[Cancel] to return to the list of calls or meetings without saving the entered information.  After saving the description of the Bug, you can associate it with new or existing Appeals, Contacts or Accounts.
 
 == Bug Management
 
