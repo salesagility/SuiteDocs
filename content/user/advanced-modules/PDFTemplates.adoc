@@ -26,10 +26,10 @@ in which the necessary data from SuiteCRM will automatically be added during the
  .	In the module menu, select the option "Create PDF Template".
  .	In the Edit Form fill in the following fields:
 PDF Template. :: Specify the name of the template being created.
-Creator. :: Please enter/ select the name of the creator of this template.
-Purpose. :: Here you should select the type of document to be created based on this template.
+Assigned to. :: Please enter/ select the name of the Assigned to user of this template.
+Type. :: Here you should select the type of document to be created based on this template.
 By default, the system suggests creating templates for the following documents:
-Offers, Invoices, Contracts, Contacts or a Preliminary Contact.
+Quotes, Invoices, Contracts, Contacts or a Lead.
 
 [cols="3,3",grid="none", frame="none"]
 |===
@@ -43,7 +43,7 @@ Developer Tools page.
 |image:Additiontocombobox.png[Adding a new item to the combo box]
 |===
 
-Load Sample:: The system offers several options for ready-made templates, if necessary.
+Load Sample:: The system Quotes several options for ready-made templates, if necessary.
 Active :: An option that determines whether the current template will be offered in the
 list of templates when creating a document (see the section below, Creating PDF Documents Based on a Template),
 Page Size/ Orientation:: If necessary, select the size and orientation of the template page.
@@ -55,7 +55,7 @@ To insert a variable: :::
 *	In the left combo box, select the module from which you want to get information.
 *	In the middle combo box, select the name of the field of the selected module,
 then the name of the necessary variable corresponding to the selected field so it appears in the right field.
-*	In the test of the template, specify the place where the selected variable should be added and click the button btn:[Insert]
+*	In the text of the template, specify the place where the selected variable should be added and click the button btn:[Insert]
 
 The following picture shows an example of adding the variable *$aos_invoices_number*,
 which, when creating the document based on the current template,
@@ -92,7 +92,7 @@ image:margins.png[Setting page parameters]
 == Creating PDF Documents Based on a Template
 
  .	When creating a PDF document for modules *Accounts*,
- *Contacts* and *Preliminary Contacts* use the menu item
+ *Contacts* and *Leads* use the menu item
  *Print as PDF* from the action menu of the View module of the corresponding module:
 
 image:PDF-Contact.png[Creating PDF documents based on a template]
@@ -112,7 +112,7 @@ select the necessary entries in the List Form and then use the *Create Letter (P
 image:Multiple selection-ContactsPDF.png[Create multiple PDF documents based on a template]
 
 [start=2]
- .	When creating a PDF document for Offers, Invoices or Contracts, use the items
+ .	When creating a PDF document for Quotes, Invoices or Contracts, use the items
  *Print as PDF*, *Email PDF* and *Email Invoice* from the action menu of the View module of the corresponding.
 
 image:Print as PDF.png[Email as PDF]

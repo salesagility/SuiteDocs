@@ -40,7 +40,7 @@ link:../../introduction/user-interface/record-management/#_importing_records[Dat
  .  In the module menu, select *Report Bug*	.
  .	On the Bug description page, complete the following fields.:
 
-Mistake:: Enter the name (short description) of the Bug.
+Subject:: Enter the name (short description) of the Bug.
 Priority:: From the drop-down list, select a priority that reflects the urgency of solving the problem.
 Status:: From the drop-down list, select the status option.
 Type:: From the drop-down list, select the type: Bug or feature.
@@ -66,7 +66,7 @@ link:../../../developer/best-practices/[Version control].
 Description :: Enter a full description of the problem.
 Log :: Enter the measures taken to solve the problem.
 
-Responsible :: Indicate the person responsible for the system user Bug. By default, you are responsible.
+Assigned to :: Indicate the person Assigned to the bug for the system user Bug. By default, you are Assigned to it.
 
 [start=3]
  .	Click the button btn:[Save] to save the entered information;
