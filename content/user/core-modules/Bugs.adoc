@@ -4,11 +4,10 @@ Weight: 195
 ---
 
 
-:experimental:
+:experimental: //// this is here to allow btn:[] syntax used below
 
 :imagesdir: /images/en/user
 
-:btn: btn:
 
 = Bugs
 
