@@ -4,12 +4,10 @@ Weight: 220
 ---
 
 
-:experimental:
+:experimental: //// this is here to allow btn:[] syntax used below
 
 :imagesdir: /images/en/user
 
-
-:btn: btn:
 
 = Spots
 
@@ -57,8 +55,7 @@ image:Bar chart.png[Create a histogram summary]
 
 == Displaying dashboard Spots
 
-As well as Spots, Spots can be displayed on the main page in the corresponding dashlet (see section
-link:../../advanced-modules/Spots/#_Displays_Spots_in_dashlets[Displays Spots in dashboards]).
+As well as Spots, Spots can be displayed on the main page in the corresponding dashlet.
 
 The following options are available when configuring the Summary dashlet:
 
@@ -71,9 +68,9 @@ Custom Summary :: Specify this option if you want to modify the Summary paramete
 In the module you can perform the following actions:
 
 *   To sort the list of records, to do this, click on the icon in the header of the column to be sorted, to click on the icon again, to return the list.
-*   Editing or deleting information about several bulletins at once; for this, use the link:../../introduction/user-interface/#_mass_updating_records[mass update panel].
-*	link:../../introduction/user-interface/#_exporting_records[Export] records, for this in the menu above the selected records, select *Export*.
+*   Editing or deleting information about several bulletins at once; for this, use the link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].
+*	link:../../introduction/user-interface/record-management/#_exporting_records[Export] records, for this in the menu above the selected records, select *Export*.
 *   View detailed information about the summary, to do this, click on the name of the Spot in the general list.
 *   Editing data, for this, either in the View Form, click on the btn:[Edit] button, or directly in the List Form, click on the button to the left of the record being edited. You can also follow the link:../../introduction/user-interface/[quick edit].
 *   Delete the bulletin, to do this, click on the btn:[Delete] button.
-*   Tracking changes to the entered information, to do this, click on the btn:[View change log] button in the view form. If it is necessary to change the list of controlled fields in the journal, do it in Studio by setting the link:../../../admin/administration-panel/developer-tools/[*Audit*] of the corresponding field.
+*   Tracking changes to the entered information, to do this, click on the btn:[View change log] button in the view form. If it is necessary to change the list of controlled fields in the journal, do it in Studio by setting the link:../../../admin/administration-panel/studio/#_fields[*Audit*] of the corresponding field.
