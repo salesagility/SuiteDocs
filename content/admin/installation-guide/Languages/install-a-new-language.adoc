@@ -1,0 +1,69 @@
+---
+Title: "Install New Languages"
+Weight: 50
+---
+
+:experimental: ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../../images/en/admin/install-guide/
+
+'''
+
+{{% notice note %}}
+This only applies to new languages.
+{{% /notice %}}
+
+To update an already install language, please see this FAQ: link:/admin/installation-guide/languages/update-a-language-pack/[Updating an installed language]
+
+'''
+
+=== A - Download a Language pack
+
+1. Enter here - https://www.google.com/url?q=https%3A%2F%2Fcrowdin.com%2Fproject%2Fsuitecrmtranslations&sa=D&sntz=1&usg=AFQjCNGmfgF8Feg6rjAREzcDaP1x5rOOIg[https://crowdin.com/project/suitecrmtranslations]
+
+2. Choose your language
+
+3. Download ZIP file
+
+'''
+
+=== B - Install a new language
+
+[%hardbreaks]
+*1 - Login as English*
+
+image:1.png[1.png] +
+
+'''
+
+*2 - Go to 'Admin / Module Loader'*
+
+image:2.png[2.png] image:3.png[3.png]
+
+'''
+
+*3 - Upload and install the new Language pack (zip file)*
+
+image:4.png[4.png] image:5.png[5.png] image:6.png[6.png] image:7.png[7.png] image:8.png[8.png] image:9.png[9.png]
+
+'''
+
+*4 - Go to 'Admin / Repair / Quick Repair and Rebuild*
+
+image:10.png[10.png] image:11.png[11.png] image:12.png[12.png] image:13.png[13.png]
+
+'''
+
+*5 - Logout*
+
+image:14.png[14.png]
+
+'''
+
+*6 - Login for your new language*
+
+image:15.png[15.png]
+
+'''
+
+=== ENJOY!
