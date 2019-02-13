@@ -9,7 +9,7 @@ Weight: 50
 '''
 == Crowdin and SuiteCRM
 
-==== Crowdin it's an online platform to translate applications and web pages.
+=== Crowdin it's an online platform to translate applications and web pages.
 
 The SuiteCRM translation project uses Crowdin to setup a collaborative translation environment. Here you can translate your language and download any language pack ready to install in SuiteCRM. All you need is a browser, no install, no setup.
 

@@ -13,7 +13,7 @@ Weight: 50
 If you have an older translation version already installed you need to remove previous pack and upload a new one.
 {{% /notice %}}
 
-==== After finishing you need to perform an "Admin / Quick rebuild" to your SuiteCRM instance!
+*After finishing you need to perform an "Admin / Quick rebuild" to your SuiteCRM instance!*
 
 {{% notice note %}}
 Permission issue may prevent your new language to be installed.
