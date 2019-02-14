@@ -99,7 +99,7 @@ templates. You must select a Type. This is the module you are building
 the PDF Template for. By default the modules you can select are: Quotes
 Invoices Accounts Contacts Leads
 
-System Administrator users can extend this list by editing the
+A user with administration access can extend this list by editing the
 'pdf_template_type_dom' using the drop down editor functionality. Please
 note that the drop down 'Item Name' must be the name of the module
 directory.
