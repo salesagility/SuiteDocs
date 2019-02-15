@@ -6,14 +6,14 @@ Weight: 52
 
 :toc:
 
-:imagesdir: ./../../images/en/user
+:imagesdir: /images/en/user
 
 
 = Advanced Configuration Options
 
 A system administrator who has access to the files installed by SuiteCRM has additional system configuration options described in this section.
 
-== Blocking Update Wizard and Module Builder, as well as blocking the creation of backup files of the system.
+== Blocking Update Wizard, Module Builder and Backing files
 
 If you, as a system administrator, manage multiple copies of SuiteCRM,
 then you can retain full control over the systems by prohibiting all users
@@ -59,7 +59,7 @@ desired by specifying values ​​for variables
 == Setting file system permissions in Linux
 
 If the system is running on a computer running Linux,
-you can change the owner of the system files, as well as
+in the ```config.php``` you can change the owner of the system files, as well as
 control access to all files and folders on the system, by setting user and group rights.
 
 The following example shows the read, write and execute permissions for the user and group Apache:
@@ -71,9 +71,9 @@ The following example shows the read, write and execute permissions for the user
 'chown' => 'apache',
 'chgrp' => 'apache',),
 
-For the parameter `dirpass:[_]mode` you can set the value to 1528,
-which is the decimal equivalent of the octal value 02770. For the parameter
-`filepass:[_]mode` you can set the value to 432, which is the decimal equivalent of the octal value 0660.
+For the parameter `dirpass:[_]mode` you can set the value to ```1528```,
+which is the decimal equivalent of the octal value ```02770```. For the parameter
+`filepass:[_]mode` you can set the value to ```432```, which is the decimal equivalent of the octal value ```0660```.
 
 == Changing the location of the download folder
 
@@ -142,15 +142,15 @@ To change the subpanel *history* do the following :
 $layout_defs['Leads']['subpanel_setup']['history']['flat'] = 1
 
 [start=3]
- . Execute link:../administration-panel/system/[Fast recovery].
+ . Execute link:../administration-panel/system/#_repair[Quick Repair and Rebuild].
 
-== Quickly edit custom combo box
+== Quickly edit custom Dropdowns
 
-If you need to edit the combo box created in
-link:../administration-panel/developer-tools/[combo box editor],
+If you need to edit the dropdowns created in
+link:../administration-panel/developer-tools/#_dropdown_editor[dropdown editor],
 then this can be done both with the help of the editor,
 and direct editing of the php file, which may be relevant when editing large amounts of data.
-For example, for dynamic link boxes created in link:../administration-panel/developer-tools/[this example] containing English-language values, you need to edit the file `/custom/include/language/en_us.lang.php`
+For example, shown is a file containing English-language values, you need to edit the file `/custom/include/language/en_us.lang.php`
 
 [source, php]
 ----
