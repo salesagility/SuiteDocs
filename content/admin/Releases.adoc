@@ -10,13 +10,13 @@ weight: 50
 [frame="none", grid="none"]
 |===
 
-s|7.11.x, <<anchor-7.11RC2, 7.11 RC2>>, <<anchor-7.11.0, 7.11.0>>, <<anchor-7.11.1, 7.11.1>>
+s|7.11.x, <<anchor-7.11RC2, 7.11 RC2>>, <<anchor-7.11.0, 7.11.0>>, <<anchor-7.11.1, 7.11.1>>, <<anchor-7.11.2, 7.11.2>>
 
-s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>, <<anchor-7.10.11, 7.10.11>>, <<anchor-7.10.12, 7.10.12>>,<<anchor-7.10.13, 7.10.13>>
+s|7.10.x, <<anchor-7.10Beta, 7.10 Beta>>, <<anchor-7.10Beta2, 7.10 Beta 2>>, <<anchor-7.10Beta3, 7.10 Beta 3>>, <<anchor-7.10RC, 7.10 RC>>, <<anchor-7.10, 7.10>>, <<anchor-7.10.1, 7.10.1>>, <<anchor-7.10.2, 7.10.2>>, <<anchor-7.10.3, 7.10.3>>, <<anchor-7.10.4, 7.10.4>>, <<anchor-7.10.5, 7.10.5>>, <<anchor-7.10.6, 7.10.6>>, <<anchor-7.10.7, 7.10.7>>, <<anchor-7.10.8, 7.10.8>>, <<anchor-7.10.9, 7.10.9>>, <<anchor-7.10.10, 7.10.10>>, <<anchor-7.10.11, 7.10.11>>, <<anchor-7.10.12, 7.10.12>>,<<anchor-7.10.13, 7.10.13>>,<<anchor-7.10.14, 7.10.14>>
 
 s|7.9.x, <<anchor-7.9Beta, 7.9 Beta>>, <<anchor-7.9RC, 7.9 RC>>, <<anchor-7.9.0, 7.9.0>>, <<anchor-7.9.1, 7.9.1>>, <<anchor-7.9.2, 7.9.2>>, <<anchor-7.9.3, 7.9.3>>, <<anchor-7.9.4, 7.9.4>> 	,<<anchor-7.9.5, 7.9.5>>, <<anchor-7.9.6, 7.9.6>>, <<anchor-7.9.7, 7.9.7>>, <<anchor-7.9.8, 7.9.8>>, <<anchor-7.9.9, 7.9.9>>, <<anchor-7.9.10, 7.9.10>>, <<anchor-7.9.11, 7.9.11>>, <<anchor-7.9.12, 7.9.12>>, <<anchor-7.9.13, 7.9.13>>, <<anchor-7.9.14, 7.9.14>>, <<anchor-7.9.15, 7.9.15>>, <<anchor-7.9.16, 7.9.16>>, <<anchor-7.9.17, 7.9.17>>
 
-s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>, <<anchor-7.8.24, 7.8.24 - LTS>>, <<anchor-7.8.25, 7.8.25 - LTS>>, <<anchor-7.8.26, 7.8.26 - LTS>>
+s|7.8.x, <<anchor-7.8Beta, 7.8 Beta>>, <<anchor-7.8Beta2, 7.8 Beta 2>>, <<anchor-7.8RC, 7.8 RC>>, <<anchor-7.8.0, 7.8.0>>, <<anchor-7.8.1, 7.8.1>>, <<anchor-7.8.2, 7.8.2>>, <<anchor-7.8.3, 7.8.3>>, <<anchor-7.8.4, 7.8.4>>, <<anchor-7.8.5, 7.8.5>>, <<anchor-7.8.6, 7.8.6 - LTS>>, <<anchor-7.8.7, 7.8.7 - LTS>>, <<anchor-7.8.8, 7.8.8 - LTS>>, <<anchor-7.8.9, 7.8.9 - LTS>>, <<anchor-7.8.10, 7.8.10 - LTS>>, <<anchor-7.8.11, 7.8.11 - LTS>>, <<anchor-7.8.12, 7.8.12 - LTS>>, <<anchor-7.8.13, 7.8.13 - LTS>>, <<anchor-7.8.14, 7.8.14 - LTS>>, <<anchor-7.8.15, 7.8.15 - LTS>>, <<anchor-7.8.16, 7.8.16 - LTS>>, <<anchor-7.8.17, 7.8.17 - LTS>>, <<anchor-7.8.18, 7.8.18 - LTS>>, <<anchor-7.8.19, 7.8.19 - LTS>>, <<anchor-7.8.20, 7.8.20 - LTS>>, <<anchor-7.8.21, 7.8.21 - LTS>>, <<anchor-7.8.22, 7.8.22 - LTS>>, <<anchor-7.8.23, 7.8.23 - LTS>>, <<anchor-7.8.24, 7.8.24 - LTS>>, <<anchor-7.8.25, 7.8.25 - LTS>>, <<anchor-7.8.26, 7.8.26 - LTS>>, <<anchor-7.8.27, 7.8.27 - LTS>>
 
 s|7.7.x, <<anchor-7.7Beta, 7.7 Beta>>, <<anchor-7.7Beta2, 7.7 Beta 2>>, <<anchor-7.7RC, 7.7 RC>>, <<anchor-7.7RC2, 7.7 RC 2>>, <<anchor-7.7.0, 7.7.0>>, <<anchor-7.7.1, 7.7.1>>, <<anchor-7.7.2, 7.7.2>>, <<anchor-7.7.3, 7.7.3>>, <<anchor-7.7.4, 7.7.4>>, <<anchor-7.7.5, 7.7.5>>, <<anchor-7.7.6, 7.7.6>>, <<anchor-7.7.7, 7.7.7>>, <<anchor-7.7.8, 7.7.8>>, <<anchor-7.7.9, 7.7.9>>
 
@@ -35,6 +35,122 @@ s|7.1.x, <<anchor-7.1Beta, 7.1 Beta>>, <<anchor-7.1Beta2, 7.1 Beta 2>>, <<anchor
 s|7.0.x, <<anchor-7.0.0, 7.0.0>>, <<anchor-7.0.1, 7.0.1>>, <<anchor-7.0.2, 7.0.2>>
 
 |===
+
+'''
+
+
+
+[[anchor-7.11.2]]
+== **7.11.2**
+
+_Released 19th Feb 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.2.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.2.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+[discrete]
+
+===== **Enhancements**
+
+* https://github.com/salesagility/SuiteCRM/pull/6186 [#6186] Feature/robo coding standards
+
+===== **Bug Fixes**
+
+* https://github.com/salesagility/SuiteCRM/issues/4361[#4361 ] Fixed #4361 Use Parameter $imageJSONEncode if returning sprites
+* https://github.com/salesagility/SuiteCRM/issues/6832[#6832 ] Fixed #6832 - Project Coding Standards being ignored
+* https://github.com/salesagility/SuiteCRM/pull/6867[#6867 ] Confirm opt-in fix
+* https://github.com/salesagility/SuiteCRM/issues/6870[#6870 ] Fixed #6870 - Composer deprecation warning
+* https://github.com/salesagility/SuiteCRM/issues/6796[#6796 ] Fixed #6796 duplicated code and broken braces introduced in a previous merge
+* https://github.com/salesagility/SuiteCRM/pull/6886[#6886 ] Fix/php lint
+* https://github.com/salesagility/SuiteCRM/pull/6894[#6894 ] Duplicate: Reports: Fix "One of" operator for multi select fields
+* https://github.com/salesagility/SuiteCRM/issues/6904[#6904 ] Fixed #6904 - In Campaign view status page, row is out of box
+* https://github.com/salesagility/SuiteCRM/issues/6916[#6916 ] Fixed #6916 - 7.11.1 Fatal: Object of class EmailAddress could not be converted to string
+* https://github.com/salesagility/SuiteCRM/issues/6036[#6036 ] Fixed #6036 - Reports entering a date parameter with Period operator
+* https://github.com/salesagility/SuiteCRM/issues/6298[#6298 ] Fixed #6298 - Pagination not working on list views
+* https://github.com/salesagility/SuiteCRM/issues/6932[#6932 ] Fixed #6932 - 7.11.1: Newer version of PHPMailer is not compatible with Email:email2Send method
+* https://github.com/salesagility/SuiteCRM/issues/6778[#6778 ] Fixed #6778 - Role Management - Header change doesn't update entire colum
+* https://github.com/salesagility/SuiteCRM/issues/2117[#2117 ] Fixed #2117 - Redundant More Button in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/6865[#6865 ] Fixed #6865 - Move consolidation/robo to "require" in composer
+* https://github.com/salesagility/SuiteCRM/issues/6865[#6865 ] Fixed #6419 - Reserved mssql keyword in query, crash business hours module
+* https://github.com/salesagility/SuiteCRM/issues/6966[#6966 ] Fixed #6966 - Email to field wrong UFT-8 encoding
+* https://github.com/salesagility/SuiteCRM/pull/6955[#6955 ] Fix missing quotes typo
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+
+[[anchor-7.10.14]]
+== **7.10.14**
+
+_Released 19th Feb 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.14.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.14.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+[discrete]
+
+===== **Bug Fixes**
+
+* https://github.com/salesagility/SuiteCRM/pull/6794[#6794 ] Reports: fix "Illegal string offset 'record_id'" errors
+* https://github.com/salesagility/SuiteCRM/pull/6894[#6894 ] Reports: Fix "One of" operator for multi select fields
+* https://github.com/salesagility/SuiteCRM/pull/6868[#6868 ] Confirm opt-in fix
+* https://github.com/salesagility/SuiteCRM/issues/6036[#6036 ] Fixed #6036 - Reports entering a date parameter with Period operator
+* https://github.com/salesagility/SuiteCRM/pull/6873[#6873 ] PSR-2
+* https://github.com/salesagility/SuiteCRM/issues/6870[#6870 ] Fixed #6870 - Composer deprecation warning
+* https://github.com/salesagility/SuiteCRM/pull/6887[#6887 ] Fix/php lint
+* https://github.com/salesagility/SuiteCRM/issues/6916[#6916 ] Fixed #6916 - 7.11.1 Fatal: Object of class EmailAddress could not be converted to string
+* https://github.com/salesagility/SuiteCRM/issues/6904[#6904 ] Fixed #6904 - In Campaign view status page, row is out of box
+* https://github.com/salesagility/SuiteCRM/issues/6778[#6778 ] Fixed #6778 - Role Management - Header change doesn't update entire column
+* https://github.com/salesagility/SuiteCRM/issues/2117[#2117 ] Fixed #2117 - Redundant More Button in SuiteP
+* https://github.com/salesagility/SuiteCRM/issues/6865[#6865 ] Fixed #6865 - Move consolidation/robo to "require" in composer
+* https://github.com/salesagility/SuiteCRM/issues/6865[#6865 ] Fixed #6419 - Reserved mssql keyword in query, crash business hours module
+* https://github.com/salesagility/SuiteCRM/issues/6966[#6966 ] Fixed #6966 - Email to field wrong UFT-8 encoding
+* https://github.com/salesagility/SuiteCRM/pull/6955[#6955 ] Fix missing quotes typo
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+[[anchor-7.8.27]]
+== **7.8.27**
+
+_Released 19th Feb 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.27.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.27.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+[discrete]
+
+===== **Bug Fixes**
+
+* https://github.com/salesagility/SuiteCRM/pull/6888[#6888 ] Fix/php lint
+* https://github.com/salesagility/SuiteCRM/issues/6423[#6423 ] Fixed #6423 - after upgrading 7.8.13 to 7.8.22 getting Invalid File Reference from attachments in inbound
+* https://github.com/salesagility/SuiteCRM/issues/6423[#6423 ] Fixed #551 - add functionality to save new labels for relationships
+* https://github.com/salesagility/SuiteCRM/issues/6423[#6423 ] Fixed #914 - Still lots of references to "custom/include"
+* https://github.com/salesagility/SuiteCRM/issues/6865[#6865 ] Fixed #6419 - Reserved mssql keyword in query, crash business hours module
+* https://github.com/salesagility/SuiteCRM/issues/6865[#6865 ] Fixed #2117 - Redundant More Button in SuiteP
+* https://github.com/salesagility/SuiteCRM/pull/6955[#6955 ] Fix missing quotes typo
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
 
