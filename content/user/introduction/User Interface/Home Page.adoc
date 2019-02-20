@@ -1,0 +1,131 @@
+---
+Title: Home Page
+Weight: 52
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Home Page
+
+The home page is the first page that is displayed to you
+post-authentication. The home page has various elements that can be used
+and configured such as Dashlets, Dashboards and the Sidebar.
+
+== Dashlets
+
+Dashlets are user-configurable sections displayed on the home page that
+give you a quick overview of your records and activity immediately after
+login. This is particularly useful for sales and support led teams as
+this reduces the number of clicks required to view/modify data.
+
+Dashlets can be dragged/dropped within the home page. You can add
+dashlets by clicking the 'Add Dashlets' link on the home page.
+
+image:24Add_dashlets.png[title="Add Dashlets"]
+
+Clicking on the 'Add Dashlets' link on the home page will open up the
+Add Dashlets popup which allows users to select from a multitude of out
+of the box dashlets.
+
+image:25Add_dashlets.png[title="Dashlet Selection"]
+
+To add one of the dashlets, simply click on the dashlet link. This will
+add the dashlet to the user home page. The popup will remain if you add
+a dashlet, to allow users to add multiple dashlets. Once you have added
+your required dashlets, you can close the popup.
+
+image:26Dashlet.png[title="Dashlet"]
+
+You can modify dashlets by clicking the pencil icon on the desired
+dashlet.
+
+image:27Modify_dashlet.png[title="Modify dashlet"]
+
+Clicking the pencil icon will display a popup. This popup will contain
+all of the options that are configurable for the dashlet.
+
+image:28Configure_dashlet.png[title="Configure dashlet"]
+
+Once you have made the required changes in the dashlet configuration
+popup, you can click btn:[Save] to apply the changes, or btn:[Cancel] if you wish
+to revert to the current configuration.
+
+{{% notice note %}}
+Some dashlets require the home page to be reloaded. For dashlets
+that require this, you will be notified.
+{{% /notice %}}
+
+== Dashboards
+
+Dashboards are new in SuiteCRM. These are configurable per user and can
+be added/removed similar to dashlets. To add a dashboard tab, you can
+click the 'Add Tab' link on the homepage.
+
+image:29Add_tab.png[title="Add tab"]
+
+Clicking on the 'Add Tab' link on the home page will open up the Add Tab
+popup which allows users to specify a name for the tab and also how many
+dashlet columns are required. You can opt for one, two or three columns.
+
+image:192Add_tab.png[title="Add tab"]
+
+Once you have specified the details for the dashboard tab, you can click
+btn:[Save]. You can also click btn:[Cancel] to undo any changes. Once you have
+saved your changes, the Dashboard Tab will be added and will display on
+the tab list on user Homepage. You can then add Dashlets to your new
+dashboard tab.
+
+image:31New_tab.png[title="New tab"]
+
+If you wish to delete the dashboard tab, you can click the 'x' icon.
+This will prompt you to confirm the deletion and then subsequently
+remove the dashboard tab from your profile only. 
+
+{{% notice note %}}
+*Suite Dashboard*
+is the standard dashboard tab which cannot be removed. You can however
+configure the dashlets that display on that dashboard tab.
+{{% /notice %}}
+
+== Activity Stream
+
+The Activity Stream is an excellent way of keeping track of your
+colleague's interactions with SuiteCRM. By default the Activity Stream
+displays recent updates for the Opportunities, Contacts, Leads and Cases
+modules. Your organisation's Facebook and Twitter feeds can also be
+included in your Activity Steam dashlets if desired and this can be
+configurable by an Admin user.
+
+image:32Activity_stream.png[title="Activity stream"]
+
+You can also comment about an update within the Activity Stream by
+clicking on the Reply button on the right side of the post.
+
+image:33Reply.png[title="Reply to post"]
+
+Your posts can also be deleted from the Activity Stream by clicking on
+the Delete button.
+
+image:34Delet3.png[title="Delete post"]
+
+Your comment will appear under the original post and will also be
+timestamped.
+
+The Activity Stream is also a useful tool for internal messaging within
+your organisation, it is possible to send a message that will be
+broadcast to all users in your network. To do this type your message in
+the text field and click btn:[Post]
+
+image:35Activity_post.png[title="Activity Stream post"]
+
+Your colleagues will see this message and will be able to respond by
+clicking on the Reply button on the right side of the post.
+
+image:36Reply.png[title="Activity Stream reply"]
+
+Their response will appear under your post, again with a timestamp.
+
+image:37Reply_view.png[title="Post reply"]
+

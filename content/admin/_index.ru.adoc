@@ -1,8 +1,11 @@
 ---
-title: "Руководство администратора"
-weight: 20
+Title: "Руководство администратора"
+Weight: 20
 pre: "<b>2. </b>"
 ---
+
+:author: likhobory
+:email: likhobory@mail.ru
 
 === Оглавление
 {{% children depth="3" showhidden="false" %}}

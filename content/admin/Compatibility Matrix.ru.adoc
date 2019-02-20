@@ -1,6 +1,6 @@
 ---
 Title: Таблица совместимости
-weight: 60
+Weight: 60
 ---
 
 :author: likhobory
@@ -8,6 +8,47 @@ weight: 60
 
 
 == Версии SuiteCRM
+
+=== SuiteCRM 7.11.x
+
+[[smaller-table-spacing-8]]
+[cols="1s,2" ]
+|========
+
+2+^h| Платформа 
+
+| Linux, Unix, Mac OS | Любая версия с поддержкой PHP 
+
+| Windows | Windows Server 2008+
+
+| PHP | 5.6, 7.0, 7.1, 7.2 
+
+2+^h| Веб-сервер 
+
+| Apache |2.2, 2.4 
+
+| IIS |8, 8.5
+
+2+^h| Базы данных 
+
+| MariaDB |5.5, 10, 10.1, 10.2 
+
+| MySQL |5.5, 5.6, 5.7 
+
+| SQL Server |SQL Server 2008+
+
+2+^h| Браузеры 
+
+| Chrome |55+
+
+| Firefox |52+
+
+| IE | 11 (режим совместимости не поддерживается) 
+
+| Edge |26 
+
+| Safari |6+
+|========
 
 === SuiteCRM 7.10.x
 

@@ -18,7 +18,7 @@ In this post we’ll be adding a simple coloured border to the
 ''Industry'' field in the Accounts list view. We’ll end up with
 something similar to this:
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: ./../../images/en/community
 
 image:02IndustryColours.png[Coloured fields on the list view]
 
@@ -58,5 +58,3 @@ class HighlightIndustryLogicHook{
 This simply generates colour based on the Accounts industry and sets it
 as a border for the field.
 
-Any issues? Let me know via the
-link:%7Bfilename%7D/pages/contact.md[Contact Form].

@@ -1,0 +1,123 @@
+
+---
+Title: Upgrading
+weight: 30
+---
+
+:imagesdir: ./../../images/en/user
+
+== Upgrading SuiteCRM
+
+Log into your SuiteCRM instance to use the Upgrade Wizard.
+CAUTION: It is strongly recommended that you run the upgrade process on a copy of your
+production system.
+
+=== Compatibility matrix for upgrade
+
+SuiteCRM runs on a variety of Operating Systems, Web servers, databases
+and PHP versions. It supports many browsers.
+
+Check the link:/admin/compatibility-matrix[Compatibility Matrix] for complete
+information on compatible versions.
+
+[discrete]
+===== Operating systems
+
+* Windows: SuiteCRM runs on any OS that runs PHP
+* Linux: SuiteCRM runs on any OS that runs PHP
+* Mac: SuiteCRM runs on any OS that runs PHP
+
+[discrete]
+===== Databases
+
+* MySQL
+* Microsoft SQL Server
+* MariaDB
+
+[discrete]
+===== Web Servers
+
+* Apache
+* Microsoft IIS
+
+[discrete]
+===== Browsers
+
+On the client side, you can access SuiteCRM using any of these browsers:
+
+* Chrome
+* Firefox
+* Internet Explorer
+* Edge
+* Safari
+
+It is likely that many other browsers will work correctly even if they
+are not officially supported.
+
+=== Upgrading to SuiteCRM from SugarCRM Community Edition
+
+Upgrade paths are available for SugarCRM to SuiteCRM from the SuiteCRM
+downloads section of the SuiteCRM website. To validate what versions of
+SugarCRM are compatible with the respective SuiteCRM versions, please
+check the table below: SuiteCRM Version SugarCRM Version SuiteCRM 7.0.1
+SugarCRM 6.5.x SuiteCRM 7.0.0 SugarCRM 6.5.x
+
+=== Upgrade prerequisites
+
+* Backup your current SuiteCRM directory and database before beginning
+the upgrade process.
+* Disable op-code caching before upgrading your SuiteCRM installation if
+op-code caching is enabled in the PHP configuration file. You can enable
+it after the upgrade process is complete.
+* Increase the default value of the parameters listed below before you
+begin the upgrade process if you are using Zend Core 2.0:
+** Navigate to C:\Program Files\Zend\Core\etc\fastcgi.conf and increase
+the default value for ConnectionTimeout to 3000 seconds and
+RequestTimeout to 6000 seconds.
+** Navigate to the php.ini file and increase the default value of
+max_execution_time to 6000 seconds.
+* Perform the following for the large size of the upgrade files:
+** Modify and save the value of Maximum upload size to 30000000 (30MB)
+in the Advanced section of the System Settings page of your current
+SuiteCRM installation.
+** Navigate to the php.ini file on your web server and configure the
+parameters listed below in the Advanced section of the System Settings
+page of your current SuiteCRM installation:
+*** Set post_max_size to at least 60MB
+*** Set upload_max_filesize settings to at least 60MB
+*** Set max_input_time to a large number
+*** Set memory_limit to 256MB
+
+Restart the web server and begin the upgrade process.
+
+* Ensure that LimitRequestBody is set to a large number or use the
+default value of 2GB if you are using an Apache web server and
+LimitRequestBody is set in the httpd.conffile. Restart Apache and begin
+the upgrade process.
+* Ensure that the webserver user has write permissions to the SuiteCRM
+database. The upgrade to SuiteCRM 7.0.x will add and replace files in
+several locations including the SuiteCRM root directory. The webserver
+user must have write permissions for the root folder and all
+sub-directories during the upgrade process.
+* The process of upgrading can take up to 30 minutes. Set the CGI script
+timeout to more than the default 300 seconds to ensure that the CGI
+application does not time out if you are using the IIS web server.
+* Save PHP files for customized modules (for example, accounts.php) in
+the Customs directory and not within the main module. Existing
+customizations may be overridden by changes in SuiteCRM 7.0.x during
+upgrade.
+
+=== Upgrade considerations
+
+The Dynamic Teams feature requires some database schema changes across
+all modules as part of the upgrade process. For larger databases, this
+operation can take some time to complete. Follow the steps listed below
+to ensure a smooth upgrade process:
+
+1.  Test your upgrade on a development instance instead of the
+production instance.
+2.  Use the Silent Upgrade method through the command line interface to
+conduct the upgrade instead of the Upgrade Wizard inside the application
+if your database contains more than 10000 records per table.
+3.  Log into the application as an Administrator and use the Repair
+option to repair and rebuild the database after the upgrade is complete.

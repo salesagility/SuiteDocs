@@ -3,6 +3,8 @@ weight: 4
 title: "Vardefs"
 ---
 
+:imagesdir: ./../../../images/es/developer
+
 = 4. Vardefs
 
 == Qué son los Vardefs
@@ -313,3 +315,68 @@ para personalizar uno existente, por ejemplo, cambiar el tipo de un campo:
 .Ejemplo 4.6: Ejemplo de override sobre un vardef existente
 [source,php]
 $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
+
+
+== Frontend
+
+Cuando desarrollamos funcionalidades complejas en JavaScript es muy útil tener las definiciones del vardefs del módulo, u otro tipo de datos en la variable global SUGAR, de tal manera que podamos acceder a ellos desde JavaScript.
+
+Agregar las definiciones presentes en el archivo vardefs.php a una vista específica es muy simple:
+
+
+[source,php]
+----
+class AccountsViewEdit extends ViewEdit
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->useForSubpanel = true;
+        $this->useModuleQuickCreateTemplate = true;
+        $data = $this->getVardefsData('Accounts');
+        $this->addDomJS($data, 'vardefs');
+    }
+}
+----
+
+Después de eso, se puede acceder sencillamente a dichas deficiniciones desde JavaScript.
+
+image:vardefs.png[title="Vardefs del módulo Cuentas en la variable global SUGAR."]
+
+
+Pero también podemos agregar otro tipo de información relevante, como por ejemplo información del desarrollador ;-)
+
+
+
+[source,php]
+----
+class AccountsViewEdit extends ViewEdit
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->useForSubpanel = true;
+        $this->useModuleQuickCreateTemplate = true;
+        $data = $this->getVardefsData('Accounts');
+        $this->addDomJS($data, 'vardefs');
+
+        $jose = array(
+            'name' => 'Jose',
+            'country' => 'Argentina',
+            'footballTeam' => 'River Plate',
+            'footballTeamLastTitles' => array(
+                'Copa Sudamericana 2014',
+                'Copa Libertadores de América 2015',
+                'Copa Suruga Bank 2015',
+                'Recopa Sudamericana 2015',
+                'Recopa Sudamericana 2016',
+                'Copa Libertadores de América 2018',
+            ),
+        );
+        $this->addDomJS(array($jose), 'developerData');
+    }
+}
+----
+
+
+image:developerData.png[title="Custom data in SUGAR global"]

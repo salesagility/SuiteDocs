@@ -3,7 +3,7 @@ weight: 13
 title: "Scheduled Tasks"
 ---
 
-:imagesdir: ./../../../images/en/developer
+:imagesdir: ./../../images/en/developer
 
 = 13. Scheduled Tasks
 
@@ -104,7 +104,7 @@ page. Note that for any changes to the scheduler method you will need to
 perform another quick repair and rebuild - even in developer mode. We
 can now create a new scheduler to call our new method:
 
-image:CreateMeetingsScheduler.png[Creating a scheduler that uses our new method]
+image:CreateMeetingsScheduler.png[title ="Creating a scheduler that uses our new method"]
 
 This will now behave just like any other scheduler and we can have this
 run as often (or as rarely) as we would like. Take care here. The
@@ -130,15 +130,14 @@ class SomeClass
          //Perform some setup of the email class
          require_once "include/SugarPHPMailer.php";
          $mailer=new SugarPHPMailer();
-         $admin = new Administration();
-         $admin->retrieveSettings();
          $mailer->prepForOutbound();
          $mailer->setMailerForSystem();
          $admin = new Administration();
          $admin->retrieveSettings();
          $admin->settings['notify_fromname']
          $mailer->From     = $admin->settings['notify_fromaddress']
-         $mailer->FromName = $emailSettings['from_name'];
+         $mailer->FromName = $admin->settings['notify_fromname'];
+         
          $mailer->IsHTML(true);
  
          //Add message and recipient.
@@ -291,12 +290,12 @@ We can revisit our previous example and add two retries:
  
        //Mark this job for 2 retries.
        $scheduledJob->requeue = true;
-       $scheduledJob->retry = 2;
+       $scheduledJob->retry_count = 2;
 ----
 
 
 
-See the section on link:../logic-hooks#logic-hooks-chapter[logic hooks]
+See the section on link:../logic-hooks/[logic hooks]
 for more information on how job failures can be handled.
 
 == Debugging
