@@ -1,5 +1,5 @@
 ---
-Title: Version Control(Release)
+Title: Release
 Weight: 80
 ---
 
@@ -10,7 +10,7 @@ Weight: 80
 = Version Control
 
 In this section you can manage the list of versions of your products. The list of versions is displayed in the drop-down list when describing a new
-link:../../../user/core-modules/bugs[bugs].
+link:../../../user/core-modules/bugs[bug].
 
 To add a version to the list:
 
@@ -20,14 +20,14 @@ To add a version to the list:
 
 image:Release.png[Version control]
 
-Version:: Enter the required version number.
-Status:: From the drop-down list, select the status *Active* so that the version is displayed in the module
+Version:: 1. Enter the required version number.
+Status:: 2. From the drop-down list, select the status *Active* so that the version is displayed in the module
 link:../../../user/core-modules/bugs[bugs].
-Order:: Specify the position of the version being created in the version list.
+Order:: 3.Specify the position of the version being created in the version list.
 
 [start=4]
- .	To save the version, click on the *Save* button.
- .	To save the current and create a new version, click on the button *Save and create a new*.
+ .	To save the version, click on the btn:[*Save*] button.
+ .	To save the current and create a new version, click on the button btn:[*Save and Continue*].
 
 
 
