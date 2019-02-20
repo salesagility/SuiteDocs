@@ -1,0 +1,64 @@
+---
+Title: Email Templates
+Weight: 140
+---
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+:toc:
+
+== Overview
+
+Email templates are used to send standardised responses and notifications via email. Adding variables allows you to personalise these communications and include additional relevant information such as order details.
+
+From *SuiteCRM* 7.9.x onwards, email templates can be viewed, edited and created from the *Email Templates* module which can be found on the *ALL* menu. Alternatively, templates can be created by the user directly from the workflow and campaigns modules.
+
+{{% notice tip %}}The template editor used for creating and editing email templates can be selected in the link:../../introduction/managing-user-accounts/#_user_profile_email_settings[user profile email settings]. The default setting (Mozaik) is shown in the following screen shots. {{% /notice %}}
+
+image:300EmailsTemplates.png[Email Templates] 
+
+There are a number of default *System* templates which are created on install. 
+These are used to send out system notifications such as new passwords or case updates. 
+These can be viewed and edited here alongside user-generated templates. Templates created 
+here can also be used in link:../../advanced-modules/workflow[Workflows] and 
+link:../campaigns[Campaigns] for example, as well as for system notifications.
+
+Click on a template name to view the template. 
+
+To edit an existing template, either open the template and select *Edit* from the *Actions* menu, 
+or click the pencil icon to the left of the template name. Once in *Edit* mode, 
+the template can be edited in the same way as creating a template.
+
+== Creating an Email Template
+
+Select *Create Email Template* from the sidebar. This *Create* view will also appear if you choose to create a template from within another module such as link:../../advanced-modules/workflow[Workflows], for example. 
+
+Select *Email*, *Campaign* or *System* depending on the use for the template. *System* templates are used to send system generated notifications such as case updates.
+
+image:301EmailsNewTemplate.png[New email template]
+
+=== Body
+
+To add text to the body of the template, click, drag and drop one of the layouts from the selection in the left-hand pane into the onto the body. You can add as many layout sections as required. Overwrite the demo text by first highlighting it.
+
+=== Adding Variables
+To add a variable, select the appropriate module and field name from the drop-down lists. The corresponding variable name will be displayed in the last field.
+
+image:302EmailsInsertVariable.png[Insert template variable]
+
+You can either enter this variable manually, or click btn:[INSERT] to insert the variable at the cursor point. Variables can be added to the subject line as well as the body of the email template.
+
+image:303EmailsInsertVariable2.png[Template variable in subject and body]
+
+
+=== Attachments
+
+[cols="20,80",frame="none", grid="none"]
+|===
+|image:304EmailsTemplateAttachment.png[Template attachments]|Click btn:[BROWSE] to attach an external file or btn:[DOCUMENT] to attach a *SuiteCRM* document to the template. Further items can be attached in the same way. The attached file(s) will be sent to all recipients of the template.
+|===
+
+=== Security Groups
+
+Restrict access to a template by selecting a Security Group. 

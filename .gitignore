@@ -6,6 +6,9 @@ public/
 *.suo
 *.phpproj
 
+# IntelliJ
+.idea/
+
 # npm
 node_modules/
 
@@ -14,3 +17,5 @@ node_modules/
 
 
 /nbproject/
+
+/tmp/

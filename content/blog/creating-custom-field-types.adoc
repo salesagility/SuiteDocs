@@ -35,7 +35,7 @@ class TemplateColourPicker extends TemplateField{
 }
 
 Next we create the language file
-`custom/Extensionmodules/ModuleBuilder/Ext/Language/en_us.ColourPicker.php`
+`custom/Extension/modules/ModuleBuilder/Ext/Language/en_us.ColourPicker.php`
 and define the label for our new field type:
 
 .Example
@@ -46,7 +46,7 @@ $mod_strings['fieldTypes']['ColourPicker'] = 'Colour Picker';
 After a quick repair and rebuild this gives us the option to create a
 field with type ``Colour Picker'':
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: ./../../images/en/community
 
 image:03ColourPickerStudio.png[ColourPickerStudio]
 

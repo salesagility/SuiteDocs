@@ -462,7 +462,7 @@ contact to the relationship in our example we can do the following:
 $accountBean->load_relationship('contacts');
  
 //Create a new demo contact
-$contactBean = BeanFactory::newBean();
+$contactBean = BeanFactory::newBean('Contacts');
 $contactBean->first_name = 'Jim';
 $contactBean->last_name = 'Mackin';
 $contactBean->save();

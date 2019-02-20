@@ -1,0 +1,28 @@
+---
+Title: Emails - LTS
+Weight: 140
+---
+
+= Emails
+
+The Emails module in SuiteCRM allows Users to view, store, compose, send
+and receive email from their own personal Email account or a shared
+inbox, for example a Support or Sales inbox. Emails can be related to
+Accounts, Cases, Contacts and many more records in the CRM.
+
+== Emails Actions
+
+You can access the Emails actions from the Emails module menu drop down
+or via the Sidebar. The Emails actions are as follows:
+
+* *View My Email* – Redirects you to your mailbox so that you can view and
+manage emails displayed/imported to the CRM.
+* *Create Email Template* - A WYSIWYG editor where you can create Emails
+by dragging and dropping components, inserting variables and amending
+the plain text.
+* *View Email Templates* - Takes you to the List View page of your
+existing Email Templates. This allows you to search and list Email
+Template records.
+
+To view the full list of fields available for the Emails module, See
+link:./../../appendix-a/#_emails_field_list[Emails Field List].

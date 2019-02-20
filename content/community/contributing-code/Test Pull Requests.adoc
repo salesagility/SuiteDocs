@@ -1,0 +1,57 @@
+---
+Title: Testing Pull Requests
+Weight: 40
+---
+
+:imagesdir: /images/en/community
+
+
+Check out awaiting pull requests on our SuiteCRM repo https://github.com/salesagility/SuiteCRM/pulls[here].
+
+Select a pull request that is ready to test e.g.https://github.com/salesagility/SuiteCRM/pull/6612
+
+Obtain the author's repo. e.g. https://github.com/jack7anderson7/SuiteCRM
+and the branch specific to the PR e.g. issue-6611
+
+{{% notice tip %}}
+You can find the user's repo by clicking on their username on the PR or you
+could usually use the URL https://github.com/{username}/SuiteCRM replacing
+{username} with the author's username.
+{{% /notice %}}
+
+Now we have these essential pieces of information we can pull down the code to test.
+Create a new branch using the base of the PR e.g. hotfix, hotfix-7.8.x or develop
+within your SuiteCRM fork directory.
+Name the new branch uniquely if you want to test alot of PRs e.g. testing6611
+
+`cd /name/of/your/forked/instance` +
+`git checkout -b testing6614 hotfix`
+
+Let's pull down the author's branch into our new test branch using the author's repo
+and branch name we obtained earlier.
+e.g. git pull {author's repo} {author's branch}
+
+`git pull https://github.com/jack7anderson7/SuiteCRM.git issue-6611`
+
+From the above command you will see the files that have been pulled down.
+
+image:testingprs1.png[terminal command to pull]
+
+{{% notice info %}}
+If you get asked to make a "merge msg" you can usually ignore this and press CTL + X
+to save the automatically created msg.
+{{% /notice %}}
+
+image:testingprs2.png[merge msg]
+
+That's it! You are ready to test a pull request.
+Remember to follow the PR's "How to Test This" section or use the related Bug on how to confirm
+the PR resolves the issue.
+
+If the PR resolves the issue and there are no outstanding tasks then leave
+a comment with the text "Assessed :+1:"
+
+image:testingprs3.png[assessed comment]
+
+The "Assessed" comment allows us and others to easily identify what has been tested.
+

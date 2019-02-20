@@ -9,18 +9,20 @@ Weight: 60
 your own fork of the SuiteCRM repository, make your code changes, commit
 the changes and make a Pull Request to the appropriate branch on the
 SuiteCM repository. See our
-link:Contributing_to_SuiteCRM#Quick_Guide_to_Fork_SuiteCRM[Quick Guide
-to Fork SuiteCRM]. Once you have set up your forked repository you can
-begin making commits to the project.
+link:../forking/[Quick Guide to Fork SuiteCRM]. Once you have set up your forked repository you can
+begin making commits to the project. 
 
-* First, determine which base branch your bug fix should use. If your
-bug is present in both `hotfix` and `hotfix-7.8.x` then use the `hotfix-7.8.x`
-branch. If however, your bug is specific to hotfix, then you can use the
-hotfix branch.
+* First, determine which base branch your bug fix should use. 
+
+{{%notice info%}}If the bug you're fixing is present in more than one version, then you will need to make a separate pull request for each branch: `hotfix`, `hotfix-7.8.x`, and `hotfix-7.10.x`.{{%/notice%}}
 
 * Separate each issue fix into a new branch in your repository (Either
 from the `hotfix-7.8.x` or `hotfix` branch) and name it with the issue
 ID e.g. _bugfix_3062_ or _issue-1234_.
++
+e.g. to create the branch from `hotfix-7.8.x` with the following git command:
++
+`git checkout -b _bugfix_3062_ upstream/hotfix-7.8.x`
 
 * When committing to your individual bugfix branch, it helps to follow
 the message format below:
@@ -32,10 +34,15 @@ e.g of a commit command
 `git commit -m "Fixed #1436 - Reports with nested Parentheses are removing parameters"` + 
 +
 This commit message format allows us to easily include all bug
-fixes within major and minor link:Release_notes_7.6[release notes].
+fixes within major and minor *Release notes*.
 +
 If you are new to Writing Commit Messages in git follow the guide
 http://chris.beams.io/posts/git-commit/#seven-rules[here].
+
+* When pushing a branch that has bean created from an upstream branch 
+to your remote fork, you will need to specify "origin", e.g.
++
+`git push origin _bugfix_3062_`
 
 === Make a Bug Fix Pull Request
 
@@ -48,7 +55,7 @@ one Pull Request.
 
 * Ensure that in your Pull Request that the base fork is
 *salesagility/SuiteCRM* and base branch is either `hotfix` or
-`hotfix-7.8.x` with the head fork being *your repository* and a base
+`hotfix-7.8.x` or `hotfix-7.10.x` with the head fork being *your repository* and a base
 branch of your unique bugfix branch e.g. _bugfix_1234_
 
 * We will automatically reject any Pull Requests made to the wrong

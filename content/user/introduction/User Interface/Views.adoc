@@ -1,0 +1,99 @@
+---
+Title: Views
+Weight: 54
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+:toc:
+
+= Views
+
+Within the CRM you will be presented with various views. These views are
+structured to present you with key information through the record
+management process. There are three main views, described in the
+sub-sections below.
+
+== List View
+
+This is the view that you are presented with when you navigate to your
+desired module.
+
+image:40List_view.png[title="List View"]
+
+The List View gives you access to many actions that you can carry out to
+manage records. These are:
+
+* *Search Records* – provides you with the ability to perform basic and
+advanced searches, as covered previously in the link:../search/[Search]
+section of this chapter.
+* *Sort Records* – clicking on the column name will sort the record list
+by that column either ascending or descending, if sorting is enabled.
+* *View Records* – clicking on any hyperlinked data will take you to the
+Detail View of the record.
+* *Edit Records* – clicking the pencil icon will navigate you to the Edit
+View for that record.
+* *Delete Records* – you can select records and then select the delete
+option to delete records from the module.
+* *Mass Update Records* – you can select records and then select the mass
+update option to update data on all selected records.
+* *Merge Records* – you can select records and select the merge option.
+This will begin the merge records processes. You can select a primary
+record and then can merge the data from the duplicate records into the
+primary record. Once saved, the duplicate records will be deleted and
+all data/history merged to the primary record.
+
+== Detail View
+
+This is the view that you are presented with when you view a record.
+
+image:41Detail_view.png[title="Detail View"]
+
+The Detail View compromises of many actions that you can use to
+view/manage your data. These are specific to the Detail View of the
+module that you are viewing. There are standard actions on the Detail
+View for most modules. These are:
+
+* *Edit* – allows you to edit the record you are viewing.
+* *Duplicate* – allows you to duplicate the record the are viewing.
+* *Delete* – allows you to delete the record you are viewing. If a record
+is deleted, you will be redirected to the List View.
+* *Find Duplicates* – allows you to begin the find duplicates process
+where you can use system functionality to find duplicate records.
+* *View Change Log* – allows you to view changes to audited fields.
+
+{{% notice note %}}
+Note: To set fields as audited and for any changes to find duplicates,
+contact your System Administrator.
+{{% /notice %}}
+
+Hyperlinked fields can be clicked on. This will navigate you to that
+record.
+
+The Detail View is tabbed in SuiteCRM. This means there is minimal
+scrolling and data is categorised for each module in the appropriate
+tab.
+
+{{% notice note %}}
+System Administrators can select to display data in either tabs
+or panels. You can contact your system administrator for more
+information on managing layouts and views.
+{{% /notice %}}
+
+== Edit View
+
+This is the view that you are presented with when you edit a record.
+
+image:42Edit_view.png[title="Edit View"]
+
+The Edit View allows you to modify record information that is displayed
+on the view. This allows users to update existing data and also
+add/remove data. Once you have made changes on the Edit View, you can
+click 'Save' to apply to changes or click btn:[Cancel]. Clicking either
+options will redirect you to the Detail View of the record you are
+editing. You can click the btn:[View Change Log] button. This allows users
+to view changes to audited fields which can be useful before making your
+intended changes.
+

@@ -3,6 +3,8 @@ weight: 4
 title: "Vardefs"
 ---
 
+:imagesdir: /images/en/developer
+
 = 4. Vardefs
 
 == What are Vardefs
@@ -107,6 +109,10 @@ module.
   required as the appropriate type is usually chosen.
 `default`::
   The default value of this field.
+  For `date`, `datetime` and `datetimecombo` type fields you should use `display_default` instead.
+`display_default`::
+  The default value for `date`, `datetime` and `datetimecombo` type fields.
+  Sample Values: `-1 day`, `today`, `+1 day`, `+1 week`, `next monday`, `first day of the next month`, `+1 month`, `+1 year` .
 `massupdate`::
   Whether or not this field should be mass updatable. Note that some
   field types are always restricted from mass updates.
@@ -323,3 +329,69 @@ existing one e.g changing a field type:
 .Example 4.6: Example overriding an existing vardef
 [source,php]
 $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
+
+
+== Frontend
+
+When developing some complex JavaScript functionality is very useful to have module vardefs definitions or custom data in the SUGAR global variable so you can read it from JavaScript.
+
+Adding vardefs.php definitions to a specific view is very simple:
+
+
+[source,php]
+----
+class AccountsViewEdit extends ViewEdit
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->useForSubpanel = true;
+        $this->useModuleQuickCreateTemplate = true;
+        $data = $this->getVardefsData('Accounts');
+        $this->addDomJS($data, 'vardefs');
+    }
+}
+----
+
+After that, you can access vardefs definitions from JavaScript easily
+
+image:vardefs.png[title="Accounts vardefs in SUGAR global"]
+
+
+But we can also add other relevant information to the SUGAR global variable, like for example developer's data ;-)
+
+
+
+
+[source,php]
+----
+class AccountsViewEdit extends ViewEdit
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->useForSubpanel = true;
+        $this->useModuleQuickCreateTemplate = true;
+        $data = $this->getVardefsData('Accounts');
+        $this->addDomJS($data, 'vardefs');
+
+        $jose = array(
+            'name' => 'Jose',
+            'country' => 'Argentina',
+            'footballTeam' => 'River Plate',
+            'footballTeamLastTitles' => array(
+                'Copa Sudamericana 2014',
+                'Copa Libertadores de América 2015',
+                'Copa Suruga Bank 2015',
+                'Recopa Sudamericana 2015',
+                'Recopa Sudamericana 2016',
+                'Copa Libertadores de América 2018',
+            ),
+        );
+        $this->addDomJS(array($jose), 'developerData');
+    }
+}
+----
+
+
+image:developerData.png[title="Custom data in SUGAR global"]

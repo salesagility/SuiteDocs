@@ -28,11 +28,19 @@ See the links at the bottom of this article for specific instructions for other 
 
 `sudo apt-get install git`
 
-`wget https://github.com/gohugoio/hugo/releases/download/v0.36/hugo_0.36_Linux-64bit.deb`
+Here's a handy command to download the latest Hugo release automatically:
 
-`sudo dpkg -i hugo_0.36_Linux-64bit.deb`
+[source, bash]
+wget https://github.com`wget -qO- https://github.com/gohugoio/hugo/releases/latest | grep -oE -m 1 '\/gohugoio\/hugo\/releases\/download\/v[0-9]+.[0-9]+.[0-9]*\/hugo_[0-9]+.[0-9]+.[0-9]*_Linux-64bit.deb'`
 
-Check Hugo is operational with 
+In case that doesn't work, the point is to get a command similar to this, replace the `0.53` with the latest version:
+`wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.deb`
+
+Now install the newly downloaded package, if it's the only one in the current directory you can do it with:
+
+`sudo dpkg -i hugo*.deb`
+
+Now check Hugo is operational with 
 
 `hugo version`
 
@@ -57,7 +65,7 @@ You're ready to go! To build the site you can simply type
 But you won't be using that very often because it's enough to launch the local web server, 
 and any outstanding changes will get rebuilt:
 
-`hugo server --bind=0.0.0.0 --baseUrl=http://10.0.0.200 --navigateToChanged`
+`hugo server --bind=0.0.0.0 --baseUrl=http://10.0.0.200 --navigateToChanged --enableGitInfo`
 
 Change that `10.0.0.200` into whatever is your local IP address. 
 
