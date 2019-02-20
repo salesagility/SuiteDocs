@@ -90,7 +90,7 @@ Click on the 'Google Calendar Settings' item. +
 
 |===
 
-Note how it says 'Unconfigured'. This means there is no JSON file currently installed. +
+|Note how it says 'Unconfigured'. This means there is no JSON file currently installed. +
 Click on the 'Choose File' button here, and select the JSON file you downloaded from the Developer's Console. +
 Click the ‘Save’ button at the bottom of the screen.|image:cred_14.png[float=left]
 
