@@ -66,7 +66,11 @@ Go to https://console.developers.google.com/apis/dashboard[Google Developers Con
 |For Section 2, give it a descriptive name. Leave ‘JavaScript origins’ blank. +
  +
 Under ‘Authorized redirect URIs’, you need to fill in the full URI to the ‘saveGoogleApiKey’ Entry Point. +
- +
+For example, if you reach your SuiteCRM install at the URI 'http://crm.yourdomain.com/' then you would append 'index.php?entryPoint=saveGoogleApiKey' to the end of that. The full URI would be +
+`http://crm.yourdomain.com/index.php?entryPoint=saveGoogleApiKey` +
+If your SuiteCRM install is under a subdirectory, you'll need to include that. For instance +
+`http://crm.yourdomain.com/SuiteCRM/index.php?entryPoint=saveGoogleApiKey` +
+ 
 Note that this does not need to be a public URL. It only needs to be accessible to the user who is enabling the calendar sync. It is strongly recommend having an https enabled site for production on a publicly accessible site. +
  +
 Then click on ‘Create OAuth client ID’.|image:cred_11.png[float=left]
@@ -80,16 +84,17 @@ Then click on ‘Create OAuth client ID’.|image:cred_11.png[float=left]
 === Installing Credentials
 Log into SuiteCRM as the administrative user.
 
-Go to ‘Administration’, then ‘System Settings’.
+Go to ‘Administration’. +
+Then scroll down to the 'Google Suite' section. +
+Click on the 'Google Calendar Settings' item. +
 
 |===
 
-|Find the 'Google Authentication' section in the middle of the page. +
-Note how it says 'Unconfigured'. This means there is no JSON file currently installed. +
+|Note how it says 'Unconfigured'. This means there is no JSON file currently installed. +
 Click on the 'Choose File' button here, and select the JSON file you downloaded from the Developer's Console. +
 Click the ‘Save’ button at the bottom of the screen.|image:cred_14.png[float=left]
 
-|This will return you to the 'Administration' menu. Go back into 'System Settings'. +
+|This will return you to the 'Administration' menu. Go back into 'Google Calendar Settings'. +
 Now it says 'Configured' in green to show that the JSON file has been successfuly saved.|image:cred_15.png[float=left]
 
 |===
