@@ -5,4 +5,6 @@ pre: "<b>3. </b>"
 ---
 
 === Table of Contents
-{{% children depth="3" showhidden="false" %}}
+{{% children depth="2" showhidden="false" showhidden="true" %}}
+
+

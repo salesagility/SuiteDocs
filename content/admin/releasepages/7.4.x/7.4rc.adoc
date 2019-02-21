@@ -1,0 +1,24 @@
+---
+Title: 7.4 Release Candidate
+weight: 50
+---
+
+:experimental:
+
+== 7.4 Release Candidate
+
+_Released Oct 19, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.4-rc.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+Including Favourites, Knowledge Base, Improved PHP Compatibility and
+More.
