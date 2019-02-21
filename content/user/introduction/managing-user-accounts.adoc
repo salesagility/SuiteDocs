@@ -1,0 +1,173 @@
+---
+Title: Managing User Accounts
+Weight: 40
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+:toc:
+
+= Managing User Accounts
+
+There are many configuration options available to users once logged into
+the system. You can view/modify your preferences by clicking on your
+name in the top right section of the navigation menu.
+
+image:11User_select.png[title="Manage Account"]
+
+== User Profile Tab
+
+Once you have clicked to access your preferences, you will be taken to
+the 'User Profile' tab which gives an overview of you credentials such
+as Username, First Name, Last Name, Title etc.
+
+image:12User_profile.png[title="User Profile"]
+
+
+=== Personal Email Account Settings
+
+Setting up a personal email account in *SuiteCRM* allows you to view personal mail accounts within 
+the link:../../core-modules/emails[Emails] module.  
+
+Emails from personal mailboxes are not stored in the *SuiteCRM* database unless 
+manually imported. See the link:../../core-modules/emails[Emails] module documentation for more information.
+
+{{% notice tip %}}
+Individual users can set up their own personal accounts. Administrators can set up personal accounts 
+for other users from the User Management section of the Admin panel.
+{{% /notice %}}
+
+==== User Profile Email Settings
+Open the user profile and scroll to the bottom of the main *User Profile tab* to view mail settings. 
+Note that if you are configuring mail settings for another user, you will need to select *Edit* 
+from the *Actions* menu to see these settings.
+
+image:270Emailusersettings.png[User Email Settings]
+
+* *Email Address* - Add the email address(es) for your *SuiteCRM* account. Click btn:[+] to add more addresses. 
+Where you have more than one email address, you can specify which is the main address for your account 
+using the *Primary* radio button. 
+You can also specify which account to use as the Reply-to account.
+* *Email Client* - This setting controls which editor is used to compose and send mail when you click on 
+an email link in SuiteCRM, for example an email address on a contact or account record.
+	** *SuiteCRM Email Editor* - The *SuiteCRM* *Emails* module editor will be used
+	** *External Email Editor* - With External email editor set, mail links in *SuiteCRM* will open in whichever email client you have set to open `mailto://` links, for example Outlook or Thunderbird
+
+* *Email Editor* - This allows you to set the editor used when creating and 
+editing link:../../core-modules/emailtemplates[email templates] and also within the 
+link:../../core-modules/campaigns[Campaigns] module. Note that the *Email Editor* setting does not affect 
+the *SuiteCRM Emails* module *Compose* view. This setting is not currently user-definable. 
+Available options are *Mozaik*, *TinyMCE* and *Direct HTML*.
+
+==== Adding A Personal Mail Account
+Click the btn:[SETTINGS] button at the bottom of the main User Profile tab to add a personal mail account.
+
+Select the Mail Accounts Tab and click btn:[ADD] under Mail Accounts to set up your incoming mail account.
+image:271EmailsAddPersonalAccount.png[Mail Accounts tab]
+
+Complete the required details for the account in the dialog which appears. You will need the username and password for the account you are adding, plus the mail server address. The mail protocol supported by *SuiteCRM* is IMAP. You may also need to set the Mail Server Port if this differs from the default IMAP setting. Your system administrator should be able to provide you with these settings. 
+
+Once entered, you can verify your mail settings by clicking btn:[TEST SETTINGS] to test the connection to the account. 
+
+image:272EmailsPersonalAccountSettings.png[User Email Settings] 
+
+*Monitored Folders:* are the folders which are checked for new (unread) mail. You must specify an *Inbox* and a *Trash* folder here. Enter the folder names or click btn:[SELECT] to connect to the mail server and select the relevant folder(s) from the popup dialog.
+image:273EmailsMonitoredFolders.png[Select monitored folders]
+
+*Signatures:* Select a signature for this account. This will be automatically added to the email body when composing an email using the Emails module. If you wish to create a new signature, you will need to do this from the <<User Mail Settings - General Tab, General tab>> and then select it here. This will override the default setting on the <<User Mail Settings - General Tab, General tab>>.
+
+Complete the *Outgoing Email* settings for the user account. 
+
+image:276EmailsAddPersonalAccount2.png[User Outgoing Mail Settings]
+
+Click btn:[DONE] to save the account settings and return to the *Mail Accounts* tab. 
+
+image:275EmailsAccountList.png[Accounts List]
+If you have more than one account configured you can set the default account to appear when you open the *Emails* module. Accounts set as active will be available to select. 
+
+Edit personal mail account settings by clicking the pencil icon in the Edit column.
+
+
+==== User Mail Settings - General Tab
+
+There are further settings for mail on the *General Tab*:
+
+image:274EmailsGeneralTab.png[User Mail Settings General tab]
+
+* *Check for New Mail* - Here you can specify a time interval to automatically check for new mail in your account's monitored folders. The default setting is to check for mail manually, using the Check Mail button in Emails list view. 
+
+* *Default Signature* - Option to specify the default signature that will be added to the email body when a new email is composed. Click btn:[CREATE] to add a new one or select one from the list. Existing signatures can be edited and deleted here. 
+
+* *Folder management* -Select the folder(s) which will be available to view from the *Emails* module. This list will show all the monitored folders from all the mail accounts to which you have access. Use ctrl+click to select more than one folder. 
+
+Click btn:[DONE] to save your settings. A confirmation dialog will appear. 
+
+You should now be able to view your emails in the link:../../core-modules/emails[*Emails* module].
+
+
+
+== Password Tab
+
+Clicking on the '*Password*' tab will navigate you to allow you to change
+your user account password. To change your password, specify a new
+password and confirm the new password. It is recommended that passwords
+are secure. The recommended minimum requirement is one upper case
+character, one lower case character, one numerical character and a
+minimum password length of 8 characters.
+
+image:13Password_tab.png[title="Password Tab"]
+
+If you have forgotten your password and cannot login, you can use the
+forgotten password functionality detailed in the
+link:/user/introduction/getting-started[Getting Started] section of this User Guide.
+
+== Advanced Tab
+
+The Advanced tab provides you with you preferences that you set during
+the User Wizard process. This gives you the ability to change any of
+your user preferences, if there were any mistakes or if you require to
+amend these at a later date.
+
+image:14Advanced_tab.png[title="Advanced Tab"]
+
+== Resetting a Users Preferences
+
+You can reset your user preferences to the system default by clicking
+the btn:[Reset User Preferences] button on your profile.
+
+image:15User_preference.png[title="Reset User Preferences"]
+
+Clicking the button will prompt you to ensure you wish to reset your
+user preferences, with the following message: _“Are you sure you want
+reset all of your user preferences?"_ 
+
+{{% notice warning %}}
+This will also log you out
+of the application. You can then click 'OK' or 'Cancel' to action
+appropriately. If you select 'OK' you will be logged out and will need
+to re-login to SuiteCRM application.
+{{% /notice %}}
+
+== Resetting a Users home page
+
+You can reset your home page to the system default by clicking the
+btn:[Reset home page] button on your profile. This will reset both dashlet
+and dashboard preferences/layouts to the system default.
+
+image:16Reset_homepage.png[title="Reset Homepage"]
+
+Clicking the button will prompt you to ensure you wish to reset your
+home page, with the following message: _“Are you sure you want reset your
+home page?”_. You can then click 'OK' or 'Cancel' to action
+appropriately.
+
+== Summary
+
+In this chapter, we covered managing a user account. This allows you to
+manage your information, modify/reset user preferences and more.
+
+In the next chapter, we will cover the Interface. The Interface is an
+integral part of SuiteCRM. With the knowledge of your Interface, you can
+progress to learning more about SuiteCRM functionality and processes.

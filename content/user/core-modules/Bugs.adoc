@@ -1,0 +1,96 @@
+---
+Title: Bugs
+Weight: 195
+---
+
+
+:experimental: //// this is here to allow btn:[] syntax used below
+
+:imagesdir: /images/en/user
+
+
+= Bugs
+
+Use this module to describe and track Bugs.
+When creating an Bug record, you can describe
+in more detail the problem that caused
+link:../cases[cases], and describe possible ways to fix it in
+link:../../advanced-modules/knowledgebase[Knowledge Base].
+
+image:Bugs(Errors).png[Bugs]
+
+The described Bugs can be absolutely anything:
+they can be tied to both the version (model) of a tangible product,
+and the release of the next version of the software.
+A user with administrative access has the ability to change the list of available versions.
+After describing the Bug, you can associate it with the request
+(in the form of viewing using the subpanel *of the Application*),
+and with the available version of the product (directly in the Bug editing form).
+
+{{% notice note %}}
+By default, this module is hidden, to display it you need to contact your a user with administrative access.
+{{% /notice %}}
+
+You can create a description of the Bug either directly in the system
+or import the description from a text file, more detailed information
+on this topic is described in the section.
+link:../../introduction/user-interface/record-management/#_importing_records[Data import].
+
+== Bug Description
+ .  In the module menu, select *Report Bug*	.
+ .	On the Bug description page, complete the following fields.:
+
+Subject:: Enter the name (short description) of the Bug.
+Priority:: From the drop-down list, select a priority that reflects the urgency of solving the problem.
+Status:: From the drop-down list, select the status option.
+Type:: From the drop-down list, select the type: Bug or feature.
+Source:: From the drop-down list, select the source of Bug detection.
+Category:: From the drop-down list, select the category to which this Bug may be related.
+
+{{% notice tip %}}
+All values ​​of the fields with lists can be edited if necessary.
+So if there is no necessary value in the drop-down list, it can
+be added in Studio. For more information about modifying list boxes, see
+link:../../../admin/administration-panel/developer-tools/[Combo box editor].
+{{% /notice %}}
+
+Detected in version :: From the drop-down list,
+select the version of the product in which this Bug was detected.
+
+image:Bugs Description.png[Bug Description]
+
+Resolution:: From the drop-down list, select the resolution.
+Fixed in version:: From the drop-down list select the version of the product in which this Bug was corrected..
+Note:: The list of available versions can be configured by users with administration access. For detailed information, see the section
+link:../../../developer/best-practices/[Version control].
+Description :: Enter a full description of the problem.
+Log :: Enter the measures taken to solve the problem.
+
+Assigned to :: Indicate the person Assigned to the bug for the system user Bug. By default, you are Assigned to it.
+
+[start=3]
+ .	Click the button btn:[Save] to save the entered information;
+ press the button btn:[Cancel] to return to the list of calls or meetings
+ without saving the entered information.  After saving the description
+ of the Bug, you can associate it with new or existing cases, Contacts or Accounts.
+
+== Bug Management
+
+In the module you can perform the following actions :
+
+*	Sorting the list of records. To do this, click on the icon in the header of the column to be sorted. To reverse sort, click on the icon again.
+*	Editing or deleting information about several Bugs at once, for this use link:../../introduction/user-interface/record-management/#_mass_updating_records[mass update panel].
+*	link:../../introduction/user-interface/record-management/#_importing_records[Import] Bug information , to do this, click on the button btn:[Import], located in the module menu.
+*	link:../../introduction/user-interface/record-management/#_merging_records[Merge Duplicates],To do this, select the necessary entries in the List Form and in the action menu select the *Combine* item.
+*	View detailed information about the Bug, to do this, click on the name of the Bug in the List Form
+*	Data editing, for this purpose or in the Form of viewing click on the button btn:[Correct], either directly in the List Form click the button to the left of the edited record. You can also perform link:../../introduction/user-interface/in-line-editing/[Quick edit].
+*	Duplication of Bug information, for this, in the action menu, select btn:[Duplicate]. Duplication is a convenient way to quickly create similar records, you can change the duplicated information to create a description of a new Bug.
+*	To delete the Bug description, click on the button btn:[Delete].
+*	Tracking changes to the entered information, to do this, click on the button btn:[View Change Log] in the form of viewing. If the journal needs to change the list of controlled fields - do it in the Studio by setting the parameter link:../../../admin/administration-panel/developer-tools/[*Аudit*] corresponding field.
+*	link:../../introduction/user-interface/record-management/#_exporting_records[Export] error information, to do this, select the necessary records in the list form and select the item *Export* in the menu above the selected records.
+*	Viewing and editing Bug-related information, use for this link:../../introduction/user-interface/views/[Subpanels].
+*	Archiving of emails related to the current Bug. To do this, use the button in the Bug form on the subpanel *History* btn:[Send to Email archive].
+*	Search for information about Bugs - use link:../../introduction/user-interface/search[Filters or Advanced Filters] in the module list form.   To search only your records, check the option *My records*, to search for actual Bugs (new, assigned, waiting for a decision) check the option *Actual*.
+
+
+

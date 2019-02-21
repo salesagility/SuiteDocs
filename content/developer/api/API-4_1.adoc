@@ -1,0 +1,340 @@
+---
+weight: 16
+title: "API v4.1"
+---
+
+// :source-highlighter: coderay
+// :coderay-linenums-mode: table
+
+{{% notice warning %}}
+This documentation pertains to SuiteCRM versions up to v.7.9.x. 
+Since SuiteCRM version 7.10, a link:../version-8[brand new v8 REST API] is available.
+{{% /notice %}}
+
+The SuiteCRM API allows third party code to access and edit SuiteCRM
+data and functionality. 
+// {source-highlighter}
+
+== Using the API
+
+SuiteCRM has both a REST and a SOAP API. Which API you want to use will
+largely come down to personal preference and the support for SOAP/REST
+libraries in whichever language you will be using.
+
+Both APIs will require a username and password. It is usual to create a
+user specifically for the API.
+
+=== SOAP
+
+The WSDL for the SOAP API can be found at:
+
+.Example 16.1: SOAP API WSDL Location
+[source, php]
+example.com/suitecrm/service/v4_1/soap.php?wsdl
+
+
+Where `example.com/suitecrm` is the address of your SuiteCRM instance.
+`v4_1` is the version of the API and can be changed.
+
+==== SOAP Example
+
+The following PHP example uses the built in SoapClient class.
+
+.Example 16.2: Accessing the SOAP API
+[source, PHP, numbered]
+----
+<?php
+//Create a new SoapClient
+$wsdlURL = "http://example.com/suitecrm/service/v4_1/soap.php?wsdl";
+$client = new SoapClient($wsdlURL);
+
+//Login to the API and get the session id
+$userAuth = array(
+        'user_name' => '<suitecrmuser>',
+        'password' => md5('<suitecrmpassword>'),
+);
+$appName = 'My SuiteCRM SOAP Client';
+$nameValueList = array();
+$loginResults = $client->login($userAuth, $appName, $nameValueList);
+
+//Get a list of at most 10 accounts with a billing address in Ohio. Along with
+//The first and last names of any contacts in that Account.
+$results = $client->get_entry_list(
+        //Session id - retrieved from login call
+        $loginResults->id,
+        //Module to get_entry_list for
+        'Accounts',
+        //Filter query - Added to the SQL where clause
+        "accounts.billing_address_city = 'Ohio'",
+        //Order by - unused
+        '',
+        //Start with the first record
+
+        //Return the id and name fields
+        array('id','name'),
+        //Link to the "contacts" relationship and retrieve the
+        //First and last names.
+        array(
+                array(
+                        'name' => 'contacts',
+                        'value' => array(
+                                'first_name',
+                                'last_name',
+                        ),
+                ),
+        ),
+        //Show 10 max results
+
+        //Do not show deleted
+
+);
+print_r($results);
+----
+
+
+=== REST
+
+The SuiteCRM REST API can be found at:
+
+.Example 16.3: REST API Endpoint Location
+[source,php]
+example.com/suitecrm/service/v4_1/rest.php
+
+
+
+Where example.com/suitecrm is the address of your SuiteCRM instance.
+v4_1 is the version of the API and can be changed.
+
+The SuiteCRM REST API is not a true REST API - all calls are performed
+as POSTs and all calls are to the base URL with the method passed in as
+a post argument.
+
+The arguments to the REST API calls are:
+
+`method`::
+  The method which will be called, i.e. `login` or `get_entry_list`. See
+  link:../../appendix-b-api-methods/[Appendix B] for a list of API methods.
+`input_type`::
+  The input type of the rest_data. This is usually `JSON` but can also
+  be `Serialize`.
+`response_type`::
+  How the response will be encoded. This is usually `JSON` but can also
+  be `Serialize`.
+`rest_data`::
+  Any other arguments that are required by this method. This is passed
+  as an encoded array. The encoding is determined by input_type.
+
+{{% notice warning %}}
+Note that, for REST
+requests it is the order of the arguments that matter in `rest_data` and
+not the name.
+{{% /notice %}}
+
+.Example 16.4: Accessing the REST API
+[source,php]
+----
+<?php
+ 
+$url = "http://example.com/suitecrm/service/v4_1/rest.php";
+ 
+function restRequest($method, $arguments){
+ global $url;
+ $curl = curl_init($url);
+ curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+ $post = array(
+         "method" => $method,
+         "input_type" => "JSON",
+         "response_type" => "JSON",
+         "rest_data" => json_encode($arguments),
+ );
+ 
+ curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
+ 
+ $result = curl_exec($curl);
+ curl_close($curl);
+ return json_decode($result,1);
+}
+ 
+ 
+$userAuth = array(
+        'user_name' => 'suitecrmuser',
+        'password' => md5('suitecrmpassword'),
+);
+$appName = 'My SuiteCRM REST Client';
+$nameValueList = array();
+ 
+$args = array(
+            'user_auth' => $userAuth,
+            'application_name' => $appName,
+            'name_value_list' => $nameValueList);
+ 
+$result = restRequest('login',$args);
+$sessId = $result['id'];
+ 
+$entryArgs = array(
+ //Session id - retrieved from login call
+	'session' => $sessId,
+ //Module to get_entry_list for
+	'module_name' => 'Accounts',
+ //Filter query - Added to the SQL where clause,
+	'query' => "accounts.billing_address_city = 'Ohio'",
+ //Order by - unused
+	'order_by' => '',
+ //Start with the first record
+	'offset' => 0,
+ //Return the id and name fields
+	'select_fields' => array('id','name',),
+ //Link to the "contacts" relationship and retrieve the
+ //First and last names.
+	'link_name_to_fields_array' => array(
+        array(
+                'name' => 'contacts',
+                        'value' => array(
+                        'first_name',
+                        'last_name',
+                ),
+        ),
+),
+   //Show 10 max results
+  		'max_results' => 10,
+   //Do not show deleted
+  		'deleted' => 0,
+ );
+ $result = restRequest('get_entry_list',$entryArgs);
+ 
+print_r($result);
+----
+
+
+For a full list of API methods and their arguments see
+link:../../appendix-b-api-methods/[Appendix B].
+
+== Adding custom API methods
+
+Sometimes the existing API methods are not sufficient or using them for
+a task would be overly complex. SuiteCRM allows the web services to be
+extended with additional methods or overriding existing methods.
+
+The recommended path for custom entry points is the following `custom/service/<version>_custom/`. 
+For web service version `v4_1` this would be `custom/service/v4_1_custom/`.
+
+Next we create the implementing class. This will create our new method.
+In our example we will simply create a new method which writes to the
+SuiteCRM log We will call this method `write_log_message`.
+
+[discrete]
+==== Examples
+
+.Example 16.5: Custom v4_1 Web Service Implementation
+[source,php]
+----
+<?php
+if(!defined('sugarEntry')){
+  define('sugarEntry', true);
+}
+require_once 'service/v4_1/SugarWebServiceImplv4_1.php';
+class SugarWebServiceImplv4_1_custom extends SugarWebServiceImplv4_1
+{
+ 
+  function write_log_message($session, $message)
+  {
+    $GLOBALS['log']->info('Begin: write_log_message');
+
+    //Here we check that $session represents a valid session
+    if (!self::$helperObject->checkSessionAndModuleAccess(
+                                                    $session, 
+                                                    'invalid_session', 
+                                                    '', 
+                                                    '', 
+                                                    '',  
+                                                    new SoapError()))
+    {
+      $GLOBALS['log']->info('End: write_log_message.');
+      return false;
+    }
+    $GLOBALS['log']->info($message);
+    return true;
+  }
+}
+----
+
+
+Next we create the registry file which will register our new method.
+
+.Example 16.6: Custom v4_1 web service registry
+[source,php]
+----
+<?php
+    require_once 'service/v4_1/registry.php';
+    class registry_v4_1_custom extends registry_v4_1
+    {
+        protected function registerFunction()
+        {
+            parent::registerFunction();
+            $this->serviceClass->registerFunction('write_log_message', 
+                                                  array(
+                                                    'session'=>'xsd:string',
+                                                    'message'=>'xsd:string'), 
+                                                  array(
+                                                    'return'=>'xsd:boolean')
+                                                  );
+        }
+    }
+----
+
+
+Finally we create the entry point. This is the actual file that will be
+called by our API clients. This will reference the two files which we
+have created and will call the webservice implementation with our files.
+
+.Example 16.7: Custom v4_1 REST Entry point
+[source,php]
+----
+<?php
+chdir('../../..');
+ 
+require_once 'SugarWebServiceImplv4_1_custom.php';
+ 
+$webservice_path = 'service/core/SugarRestService.php';
+$webservice_class = 'SugarRestService';
+$webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
+$registry_path = 'custom/service/v4_1_custom/registry.php';
+$registry_class = 'registry_v4_1_custom';
+$location = 'custom/service/v4_1_custom/rest.php';
+ 
+require_once 'service/core/webservice.php';
+----
+
+
+.Example 16.8: Custom v4_1 SOAP Entry point
+[source,php]
+----
+<?php
+chdir('../../..');
+require_once('SugarWebServiceImplv4_1_custom.php');
+$webservice_class = 'SugarSoapService2';
+$webservice_path = 'service/v2/SugarSoapService2.php';
+$webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
+$registry_class = 'registry_v4_1_custom';
+$registry_path = 'custom/service/v4_1_custom/registry.php';
+$location = 'custom/service/v4_1_custom/soap.php';
+require_once('service/core/webservice.php');
+----
+
+
+=== Usage
+
+We can now use our custom endpoint. This is identical to using the API
+as detailed above, except that we use our custom entry point for either
+the SOAP WSDL or REST URL. For example using the same SuiteCRM location
+(`example.com/suitecrm`) as the above examples and using `v4_1`, we
+would use the following
+
+.Example 16.9: Custom v4_1 URLS
+[source,php]
+----
+ //SOAP WSDL
+ example.com/suitecrm/custom/service/v4_1_custom/soap.php?wsdl
+ //REST URL
+ example.com/suitecrm/custom/service/v4_1_custom/rest.php
+----
