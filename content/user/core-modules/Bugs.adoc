@@ -14,7 +14,7 @@ Weight: 195
 Use this module to describe and track Bugs.
 When creating an Bug record, you can describe
 in more detail the problem that caused
-link:../cases[appeals], and describe possible ways to fix it in
+link:../cases[cases], and describe possible ways to fix it in
 link:../../advanced-modules/knowledgebase[Knowledge Base].
 
 image:Bugs(Errors).png[Bugs]
@@ -72,7 +72,7 @@ Assigned to :: Indicate the person Assigned to the bug for the system user Bug. 
  .	Click the button btn:[Save] to save the entered information;
  press the button btn:[Cancel] to return to the list of calls or meetings
  without saving the entered information.  After saving the description
- of the Bug, you can associate it with new or existing Appeals, Contacts or Accounts.
+ of the Bug, you can associate it with new or existing cases, Contacts or Accounts.
 
 == Bug Management
 
