@@ -1,0 +1,83 @@
+---
+Title: Google Maps
+Weight: 60
+---
+
+
+:experimental: ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+
+= Google maps
+
+This section allows you to configure the settings for integrating SuiteCRM with Google Maps.
+
+== Google Map Setup
+
+Before you start working with maps, you must obtain an API key and save it in the system.
+To do this, in the Administration panel in the subsection *Google services*
+-> *Setting up Google maps* click on the  *Get API key* link, follow the requested steps
+to get the key and save it in the map configuration settings.
+
+The description of the main settings of the maps is presented in detail in
+the system interface, therefore, these parameters will not be described here.
+
+image:Googleconfig.png[Google map settings]
+
+A detailed description of the Google Maps API is available at https://developers.google.com/maps/[Google Maps].
+
+
+== Geocoding addresses
+
+When this section is selected,
+The automatic assignment of geographical coordinates to the system addresses immediately begins.
+
+{{%notice tip%}}
+If you only need to *view* the results of geocoding performed earlier,
+use the module *Geocoding results*.
+{{%/notice%}}
+
+Depending on the size of the database and the speed of data processing,
+the process can take a long time.
+At the end of geocoding, the results will be shown, for example:
+
+image:GoogleMaps(2).png[Geocoding addresses]
+
+{{%notice note%}}
+If Google doesn’t use a Premium *account*, then Google Maps imposes a
+limit on determining the number of coordinates equal to 2500 requests per day
+for one ip-address - detailed information can be found at
+link:https://developers.google.com/maps/documentation/geocoding/usage-limits[Google Maps Geocoding API Usage Limits^].
+To avoid repeated queries, all geocoding results are cached in the system, as described in the section below.
+{{%/notice%}}
+
+To perform automatic geocoding of system addresses, it is recommended
+to configure the appropriate task for CRON by adding the URL `./index.php?module=jjwg_Maps&entry==jjwg_Maps&cron=1`
+to the task of the scheduler, and perform it at an appropriate time.
+
+image:SetupGeocode.png[Automatic geocoding setup in the Scheduler]
+
+
+For more information about setting up a job, see the
+link:../system/#_scheduler[Scheduler].
+
+If it is necessary to geocode addresses with third-party utilities,
+you can export addresses from the corresponding modules. At the end of geocoding,
+import the updated addresses through the module *Address cache*.
+
+If you need to clear the cache of individual modules, use the *Reset* link in
+the right part of the table. If you need to clear the entire cache, use the appropriate
+link at the bottom of the page.
+
+== Geocoding results
+
+This option displays previous results of the option *Geocoding addresses*.
+
+== Geocoding Testing
+
+The module is designed to quickly obtain the geographical coordinates of the entered address.
+
+== Address Cache
+
+The module is intended for viewing, changing and importing data into the cache of geocoded addresses.

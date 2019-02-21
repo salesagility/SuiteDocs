@@ -1,0 +1,136 @@
+---
+Title: PDF Templates
+Weight: 85
+---
+
+:toc:
+
+:experimental: //// this is here to allow btn:[] syntax used below
+
+:imagesdir: /images/en/user
+
+
+
+
+= PDF Template
+
+This module allows you to create document templates.
+In the future, based on these templates, PDF documents or emails can be created,
+in which the necessary data from SuiteCRM will automatically be added during the merge process.
+
+//image:image1.png[PDF Template]
+
+
+== Creating the PDF Template
+
+ .	In the module menu, select the option "Create PDF Template".
+ .	In the Edit Form fill in the following fields:
+PDF Template. :: Specify the name of the template being created.
+Assigned to. :: Please enter/ select the name of the Assigned to user of this template.
+Type. :: Here you should select the type of document to be created based on this template.
+By default, the system suggests creating templates for the following documents:
+Quotes, Invoices, Contracts, Contacts or a Lead.
+
+[cols="3,3",grid="none", frame="none"]
+|===
+a|{{% notice note %}}
+When adding a new item to the combo box list *_pdf_template_type_dom_*, the name of the
+key to be added must match the module name. In the following example,
+the item *Addresses* is added to the list. +
+Detailed information on adding a new element to the combo box is described in the
+Developer Tools page.
+{{% /notice %}}
+|image:Additiontocombobox.png[Adding a new item to the combo box]
+|===
+
+Load Sample:: The system Quotes several options for ready-made templates, if necessary.
+Active :: An option that determines whether the current template will be offered in the
+list of templates when creating a document (see the section below, Creating PDF Documents Based on a Template),
+Page Size/ Orientation:: If necessary, select the size and orientation of the template page.
+Then default is A4 size and portrait page orientation.
+Inserting into a Field::  This option allows you to add the necessary variable to the template,
+which later (in the process of creating a document based template)
+will be replaced with the necessary data from the SuiteCRM+
+To insert a variable: :::
+*	In the left combo box, select the module from which you want to get information.
+*	In the middle combo box, select the name of the field of the selected module,
+then the name of the necessary variable corresponding to the selected field so it appears in the right field.
+*	In the text of the template, specify the place where the selected variable should be added and click the button btn:[Insert]
+
+The following picture shows an example of adding the variable *$aos_invoices_number*,
+which, when creating the document based on the current template,
+will be automatically replaced with the account number.
+
+image:PDFinvoicenumber.png[Insert field in template]
+
+If it is necessary to add data in the template, for example,
+listing positions in the Offer or Invoice,
+then such data should be arranged in a table:
+
+image:QPD.png[Insert Table into Template]
+
+
+== Creating Headers and Footers
+
+At the bottom of the Template Editing Form are two fields that allow you to customize the header and footer for the current template:
+
+image:Pagenoanddate.png[Creating headers and footers]
+
+Footers are able to use special variables:
+
+*	*{PAGENO}*,  Showing the current page number.
+*	*{DATE D.m.Y}*,  Showing the current date in the required format
+
+== Setting Page Parameters
+
+Under the header and footer there are several fields that allow you to
+customise different page parameters, such as the size of the
+indents from the page edges of the header and footer fields:
+
+image:margins.png[Setting page parameters]
+
+== Creating PDF Documents Based on a Template
+
+ .	When creating a PDF document for modules *Accounts*,
+ *Contacts* and *Leads* use the menu item
+ *Print as PDF* from the action menu of the View module of the corresponding module:
+
+image:PDF-Contact.png[Creating PDF documents based on a template]
+
+If several templates were created for the current module,
+they will be presented in the form of a list,
+from which you need to select the desired position :
+
+image:PDF selection.png[Select a template from the list]
+
+If only one template was created for the current module,
+then the necessary document will be immediately created on its basis.
+
+If you need to create several similar documents for several module entries at once,
+select the necessary entries in the List Form and then use the *Create Letter (PDF)* from the action menu:
+
+image:Multiple selection-ContactsPDF.png[Create multiple PDF documents based on a template]
+
+[start=2]
+ .	When creating a PDF document for Quotes, Invoices or Contracts, use the items
+ *Print as PDF*, *Email PDF* and *Email Invoice* from the action menu of the View module of the corresponding.
+
+image:Print as PDF.png[Email as PDF]
+
+For a detailed description of this functionality,
+see the relevant sections of the link:../sales/[Sales modules].
+
+== Manage PDF Templates
+
+
+In the module you can perform the following actions: ::
+
+*	Search Templates - utilise link:../../introduction/user-interface/search[Filters or advanced filters] in the module list form.
+*	link:../../introduction/user-interface/record-management/#_exporting_records[Export] templates, for this, select the necessary records in the form.
+*	Editing or deleting information about several templates at once, use this link:../../introduction/user-interface/record-management/#_mass_updating_records[Mass update].
+*	View detailed information about the template, to do this, click on the name of the template in the general list.
+*	Data editing, for the purpose or in the Form of viewing click on the button btn:[Edit], or directly in the List Form, click the button to the left of the record being edited. You can also perform link:../../introduction/user-interface/in-line-editing/[Quick Edit].
+*	To duplicate a template, in the action menu select btn:[Duplicate]. Duplication is a convenient way to quickly create similar records, you can change the duplicated information to create a new template.
+*	To delete a template, click on the button btn:[Delete].
+*	You can track changes to the entered information, to do this select the button btn:[View Change Log] in the form of viewing. If the journal needs to change the list of controlled fields - do it in Studio by setting the parameter link:../../../admin/administration-panel/studio/#_fields[*Audit*] corresponding field.
+

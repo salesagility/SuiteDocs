@@ -1,0 +1,14 @@
+---
+Title: Elasticsearch
+Weight: 10
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+{{% notice info %}}
+Поисковый движок Elasticsearch доступен в версии 7.11 и выше.
+{{% /notice %}}
+
+== Содержание
+{{% children depth="3" showhidden="true" %}}

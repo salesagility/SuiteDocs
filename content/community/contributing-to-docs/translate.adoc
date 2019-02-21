@@ -1,6 +1,6 @@
 ---
-Title: "Translate"
-Weight: 50
+Title: "Translating Documentation"
+Weight: 60
 ---
 :experimental: ////this is here to allow btn:[]syntax used below 
 
@@ -15,3 +15,4 @@ but add your language code before the extension.
 
 So a file named `upgrade.adoc` would become `upgrade.es.adoc` in the Spanish translation.
 
+There is more information about this in the link:../guidelines/[Documentation Guidelines].
