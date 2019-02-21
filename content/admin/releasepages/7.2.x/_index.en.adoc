@@ -4,15 +4,217 @@ weight: 30
 pre: "<b>3. </b>"
 ---
 
+:experimental:
+
+== 7.2.4
+
+_Released Aug 20, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.4.tar.gz[*Source
+code* (tar.gz)]
 
 === Release Notes
 
+This is a bug-fix release.
 
-* link:/admin/releasepages/7.2.x/7.2.4[7.2.4]
-* link:/admin/releasepages/7.2.x/7.2.3[7.2.3]
-* link:/admin/releasepages/7.2.x/7.2.2[7.2.2]
-* link:/admin/releasepages/7.2.x/7.2.1[7.2.1]
-* link:/admin/releasepages/7.2.x/7.2.0[7.2.0]
-* link:/admin/releasepages/7.2.x/7.2beta3[7.2 Beta 3]
-* link:/admin/releasepages/7.2.x/7.2beta2[7.2 Beta 2]
-* link:/admin/releasepages/7.2.x/7.2beta[7.2 Beta]
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.4[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+
+'''
+
+
+== 7.2.3
+
+_Released Aug 7, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.3.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+Update version number to the latest release version.
+
+
+'''
+== 7.2.2
+
+_Released May 20, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This is a bug fix release which addresses bugs in the SuiteCRM 7.2.1
+release and also Post-Auth RCE vulnerabilities in SuiteCRM.
+
+'''
+
+
+== 7.2.1
+
+_Released this Mar 11, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.1.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Bug Fixes
+* Fixed - GitHub issue #159 workflow number formatting issues
+* Fixed - GitHub issue #158 - Currency Formatting Issue when Creating Opportunities from Quotes
+* Fixed - GitHub issue #157 MsSQL compatibility issues
+* Fixed - GitHub issue #156 invalid 'email' column when searching
+* Fixed - GitHub issue #155 missing Project Task dropdown definition
+* Fixed - GitHub issue #154 Product Category - Parent Category on list view
+* Fixed - GitHub issue #153 - Forgotten Password Link
+* Fixed - GitHub issue #149 - Collapsing Studio sidepanels
+* Fixed - GitHub issue #147 Fatal Error when AOP function redeclared
+* Fixed - GitHub issue #142 -  Issues with colour picker
+* Fixed - GitHub issue #141 Next/Previous navigation on Calendar Broken
+* Fixed - GitHub issue #140 Issue with custom currency field in reports
+* Fixed - GitHub issue #138 Theme colour changes only save pressing 'Enter'
+* Fixed - GitHub issue #135 disabled themes can still be used if users current theme
+* Fixed - GitHub issue #133 Calendar Shared view Items not showing correctly
+* Merged currency fix
+* Updated PHP version check to check for php 5.3+
+* Fix for search placeholder language and value default.
+* Removed old colour selector from install
+* Fix for detail view on mobile to make it more optimal.*Fix for colour picker default values in SuiteR theme, as some values were incorrect.
+* Removing un-required bootstrap-theme.css, bootstrap-theme.css.map, bootstrap-theme.min.css, bootstrap.css, bootstrap.css.map and Cal.css files from themes/Su$
+* Reverting Calendar change as is it causes a bug when navigating to calendar from another module.
+* Icons now output directly to the page so they can pickup on the page styles and do not need to load the css for each icon.
+* Moved calendar screensize check to cal.js so it only loads on the calendar module.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.2.1[here] or https://suitecrm.com/download[click here] to find the
+appropriate upgrade.
+
+'''
+
+== 7.2.0
+
+_Released Mar 2, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Additional Features
+* Responsive theme
+* Image Field - New image field type, allowing adding of image fields via Studio.
+
+[discrete]
+===== Enhancements
+* *AOP 2.0*
+	- Add attachments to the case update thread within SuiteCRM.
+	- Better HTML Support.
+	- More Configuration Options.
+	- Re-open Cases from client email update (Configurable).
+	- Multiple inbound email box set up, allowing assignment of created cases to multiple users.
+	- Further enhancements to cases.
+	- Bug fixes.
+
+* *AOR*
+	- Multiple module relationships.
+	- In-module and dashlet charts.
+	- Page/column totals.
+	- UI improvements.
+	- Bug fixes
+
+* *Projects*
+	- Gantt Charts added to Projects.
+	- Resource Management added to Projects.
+	- Project Templates added to Projects.
+
+Download here or https://suitecrm.com/download[click here] to find the
+appropriate upgrade.
+
+
+'''
+
+== 7.2 Beta 3
+
+_Released Feb 9, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta3.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+Including reports, cases and project enhancements
+
+'''
+
+== 7.2 Beta 2
+
+_Released Dec 9, 2014_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+New features including reports, cases and project enhancements
+
+'''
+
+== 7.2 Beta
+
+_Released Oct 31, 2014_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.2beta.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+The main new feature of this release is the new Project Management with
+Gantt charts
+
+In addition the SuiteCRM install process has been given a new look and
+feel as well as many bug fixes and other little additions, and there is
+still more to come.
+
+'''
