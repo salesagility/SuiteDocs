@@ -127,7 +127,7 @@ chgrp ApacheUser.ApacheGroup <SuiteCRMInstallRoot> -R
 
 Пользователи, имеющие полный доступ к файлам системы, могут различаться в зависимости от используемой конфигурации системы, например: 
 
-*   www-data (Linux/Apache)
+* www-data (Linux/Apache)
 *	apache   (Linux/Apache)
 *	nobody   (Linux/Apache)
 *	IUSR_computerName (Windows/IIS)
