@@ -47,19 +47,19 @@ image:GoogleMaps(2).png[Geocoding addresses]
 {{%notice note%}}
 If Google doesn’t use a Premium *account*, then Google Maps imposes a
 limit on determining the number of coordinates equal to 2500 requests per day
-for one ip-address - detailed information is described on the link
-page:https://developers.google.com/maps/documentation/geocoding/usage-limits?hl=ru[Google Maps Geocoding API Usage Limits ^].
+for one ip-address - detailed information can be found at
+link:https://developers.google.com/maps/documentation/geocoding/usage-limits[Google Maps Geocoding API Usage Limits^].
 To avoid repeated queries, all geocoding results are cached in the system, as described in the section below.
 {{%/notice%}}
 
 To perform automatic geocoding of system addresses, it is recommended
-to configure the appropriate task for CRON by adding the URL ./index.php?module=jjwg_Maps&entry==jjwg_Maps&cron=1
+to configure the appropriate task for CRON by adding the URL `./index.php?module=jjwg_Maps&entry==jjwg_Maps&cron=1`
 to the task of the scheduler, and perform it at an appropriate time.
 
 image:SetupGeocode.png[Automatic geocoding setup in the Scheduler]
 
 
-For more information about setting up a job, see the section.
+For more information about setting up a job, see the
 link:../system/#_scheduler[Scheduler].
 
 If it is necessary to geocode addresses with third-party utilities,
@@ -72,7 +72,7 @@ link at the bottom of the page.
 
 == Geocoding results
 
-This module displays previous results of the module *Geocoding addresses*.
+This option displays previous results of the option *Geocoding addresses*.
 
 == Geocoding Testing
 
