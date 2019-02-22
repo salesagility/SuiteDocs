@@ -1,0 +1,177 @@
+---
+title: "7.11.x Releases"
+weight: 9880
+---
+
+
+
+===== Developer
+
+* https://github.com/salesagility/SuiteCRM/pull/6260[#6260 ] 	New Tests for Inbound Email functionality
+* https://github.com/salesagility/SuiteCRM/issues/2400[#2400 ] 	Fixed #2400 - Language manifest is duplicated and overwritten on each install
+* https://github.com/salesagility/SuiteCRM/pull/6464[#6464 ] 	Codecov exclude
+* https://github.com/salesagility/SuiteCRM/pull/6548[#6548 ] 	code cleanup
+* https://github.com/salesagility/SuiteCRM/pull/6585[#6585 ] 	php_zip_utils.php
+* https://github.com/salesagility/SuiteCRM/pull/6586[#6586 ] 	Fixed #6586 - Fix an erroneously-commented return statement.
+* https://github.com/salesagility/SuiteCRM/pull/6592[#6592 ] 	Updated contributing.md
+* https://github.com/salesagility/SuiteCRM/issues/6568[#6568 ] 	Fixed #6568 - Change minimun and recommended PHP
+* https://github.com/salesagility/SuiteCRM/issues/5508[#5508 ] 	Fixed #5508 - Upgrade phpMailer to 6.x
+* https://github.com/salesagility/SuiteCRM/pull/6566[#6566 ] 	Update composer.json + composer.lock
+* https://github.com/salesagility/SuiteCRM/issues/6603[#6603 ] 	Added/Refactor: Clean MySql Queries in SugarFolders
+* https://github.com/salesagility/SuiteCRM/issues/5509[#5509 ] 	Fixed #5509 - [language] Now has the correct label for 'FOR_AMOUNT' in activity stream
+* https://github.com/salesagility/SuiteCRM/pull/6637[#6637 ] 	Vardefs definition in dom
+* https://github.com/salesagility/SuiteCRM/issues/6648[#6648 ] 	Fixed #6648 - We add a task in RoboFile.php for cleaning cache directory
+* https://github.com/salesagility/SuiteCRM/pull/6678[#6678 ] 	Resolved blank screen on PasswordManager
+* https://github.com/salesagility/SuiteCRM/pull/6698[#6698 ] 	Copyright revision
+* https://github.com/salesagility/SuiteCRM/issues/6539[#6539 ] 	Cleanup, Refactoring and bugfix for Google Sync
+* https://github.com/salesagility/SuiteCRM/issues/6303[#6303 ] 	Fixed #6303 - Administration / System Settings / ERROR in log: argument cache/themes/SuiteP/modules is not a file or a dir
+
+'''
+
+=== **Developer Note**
+
+==== Change in file location:
+
+[cols="1h,2,2", options="header"]
+|===
+|Library
+|Old Location
+|New Location
+
+|Recaptcha
+|include/reCaptcha/
+|vendor/google/recaptcha
+
+|TinyMCE
+|include/javascript/mozaik/vendor/tinymce
+|vendor/tinymce/tinymce/
+
+|PhpMailer
+|include/phpmailer/
+|vendor/phpmailer/phpmailer
+|===
+
+
+'''
+
+=== **Release Stats**
+
+
+{{% notice note %}}
+In total, we have merged a **MASSIVE 69 PULL REQUESTS** with **24** of these from Community contributions!
+{{% /notice %}}
+
+
+Special thanks to the following members for their contributions and participation in this release
+(in order of most Pull Requests contributed). +
+
+. https://github.com/lazka[lazka]
+. https://github.com/Abuelodelanada[Abuelodelanada]
+. https://github.com/urdhvatech[urdhvatech]
+. https://github.com/gmblake[gmblake]
+. https://github.com/machinecha[machinecha]
+. https://github.com/GFanta[GFanta]
+. https://github.com/Jorilx[Jorilx]
+. https://github.com/QuickCRM[QuickCRM]
+. https://github.com/connorshea[connorshea]
+. https://github.com/LionelBino[LionelBino]
+. https://github.com/hieuhoanghd[hieuhoanghd]
+. https://github.com/jsamelko[jsamelko]
+. https://github.com/LEAP-nishit[LEAP-nishit] +
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com.
+
+
+'''
+
+
+== 7.11 RC 2
+
+=== Release Notes
+
+==== Enhancements
+
+* https://github.com/salesagility/SuiteCRM/pull/1348[#1348 ] Added new 'Copy emails from WorkFlow Module' option to Workflow's 'Cr…
+* https://github.com/salesagility/SuiteCRM/pull/3008[#3008 ] Module vardefs definitions or custom data in the DOM
+* https://github.com/salesagility/SuiteCRM/pull/6533[#6533 ] Fix/Individual Flat Subpanels
+* https://github.com/salesagility/SuiteCRM/pull/6632[#6632 ] Set collapsed_subpanels preference
+* https://github.com/salesagility/SuiteCRM/pull/6493[#6493 ] Definition of Favorites and Trackers Beans in Sugar View
+* https://github.com/salesagility/SuiteCRM/pull/6590[#6590 ] Insert images links in Email Templates with tinyMCE
+* https://github.com/salesagility/SuiteCRM/pull/6584[#6584 ] Adding inboundemail tests using FakeImapHandler
+* https://github.com/salesagility/SuiteCRM/pull/6260[#6260 ] New testing email related functions
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/pull/6618[#6618 ] Push acceptance test output to new file host
+* https://github.com/salesagility/SuiteCRM/pull/6585[#6585 ] Remove php_zip_utils error
+* https://github.com/salesagility/SuiteCRM/pull/6454[#6454 ] Reverting back to PHPunit and only using codeception for API & acceptance tests
+* https://github.com/salesagility/SuiteCRM/pull/6548[#6548 ] Elastic Search Code Clean Up
+* https://github.com/salesagility/SuiteCRM/pull/6566[#6566 ] Update composer.json + composer.lock
+* https://github.com/salesagility/SuiteCRM/pull/6588[#6588 ] Resolve merge conflict for Cases EditView - hide non new case fields
+* https://github.com/salesagility/SuiteCRM/pull/6637[#6637 ] Vardefs definition in dom - Adding Tests
+* https://github.com/salesagility/SuiteCRM/pull/6603[#6603 ] Added/Refactor: Clean MySql Queries in SugarFolders
+* https://github.com/salesagility/SuiteCRM/pull/6592[#6592 ] Updated contributing.md
+* https://github.com/salesagility/SuiteCRM/pull/6464[#6464 ] Codecov exclude - faster time hopefully.
+* https://github.com/salesagility/SuiteCRM/pull/6368[#6368 ] Fix for issue #5477
+* https://github.com/salesagility/SuiteCRM/pull/6609[#6609 ] Fixed #6594 - Calendar doesn't update visually when NOT using "Shared Calendar Separate"
+* https://github.com/salesagility/SuiteCRM/pull/2930[#2930 ] Fixed #707 - added conditional statement to check if action is not clone
+* https://github.com/salesagility/SuiteCRM/pull/6304[#6304 ] Fixed #6303 - Administration / System Settings / ERROR in log: argument cache/themes/SuiteP/modules is not a file or a dir.
+* https://github.com/salesagility/SuiteCRM/pull/6488[#6488 ] Fixed #6487 - opt-in: use the DB time for writing confirm_opt_in_*date
+* https://github.com/salesagility/SuiteCRM/pull/2956[#2956 ] Fix #2219 - Description field not wrapping with SuiteP theme after in…
+* https://github.com/salesagility/SuiteCRM/pull/6004[#6004 ] Fixed #6003 - round up for cases where there is an increase in integral part.
+* https://github.com/salesagility/SuiteCRM/pull/6629[#6629 ] Fix issue where link is not deleted for documents
+* https://github.com/salesagility/SuiteCRM/pull/6634[#6634 ] Fixed #5509 - [language] New label 'FOR_AMOUNT' in activity stream for opportunity
+* https://github.com/salesagility/SuiteCRM/pull/6327[#6327 ] Fixed #6150 - SuiteCRM v7.10.7, bug Returns parent record data.
+* https://github.com/salesagility/SuiteCRM/pull/6192[#6192 ] Fix #6190 - Change Log access from Document Detail View
+* https://github.com/salesagility/SuiteCRM/pull/6378[#6378 ] Fixed #5948 - 7.8.18 Content Field on Campaign module can't be edited…
+* https://github.com/salesagility/SuiteCRM/pull/6600[#6600 ] Hotfix 4999 sent folder issue
+* https://github.com/salesagility/SuiteCRM/pull/6612[#6612 ] Fixed #6611 - Email Template doesn't display in List View correctly
+* https://github.com/salesagility/SuiteCRM/pull/6460[#6460 ] Fixed #2741
+* https://github.com/salesagility/SuiteCRM/pull/6302[#6302 ] Fixed installWizard styling - check writable module
+* https://github.com/salesagility/SuiteCRM/pull/6411[#6411 ] Fixed #5783 - The table header with geocoded objects is not visible
+* https://github.com/salesagility/SuiteCRM/pull/6530[#6530 ] Manage subscriptions: Fix unsubscribed users showing up as subscribed sometimes
+* https://github.com/salesagility/SuiteCRM/pull/3846[#3846 ] partial fix for issue of logic for default value
+* https://github.com/salesagility/SuiteCRM/pull/6597[#6597 ] Fixed: #6552 AOR Report Export CSV was giving incorrect data when using apostrophe (') into any field
+* https://github.com/salesagility/SuiteCRM/pull/6550[#6550 ] FIX #6549 - Add missing surveys_campaigns relationship
+* https://github.com/salesagility/SuiteCRM/pull/6497[#6497 ] Fixed #6472 - Fix wrong image sizes for email templates in the campaign wizard
+* https://github.com/salesagility/SuiteCRM/pull/6599[#6599 ] Fixed #6511 - Document Attachment Subpanel link incorrect
+* https://github.com/salesagility/SuiteCRM/pull/6466[#6466 ] Fixed #5771 - Salutation variable in campaigns displays item name instead of value 7.10.4
+* https://github.com/salesagility/SuiteCRM/pull/4072[#4072 ] Fixed #4046 - 7.9.4 - imported emails are not auto related to related records when you reply to/reply to all/ forward them
+* https://github.com/salesagility/SuiteCRM/pull/6474[#6474 ] Fixed #6351 - Triple email sending when i use activities subpanel in Contact Module
+* https://github.com/salesagility/SuiteCRM/pull/6573[#6573 ] FIX #6568 - Change minimun and recommended PHP
+* https://github.com/salesagility/SuiteCRM/pull/6565[#6565 ] Fixes google calender language formatting
+* https://github.com/salesagility/SuiteCRM/pull/6571[#6571 ] FIX #6568 - Adjust SUITECRM_PHP_REC_VERSION to 7.1.0
+
+Please https://suitecrm.com/download-latest-pre-release-suitecrm/[visit the official website] to find the pre-production appropriate upgrade.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+* https://github.com/Abuelodelanada[Abuelodelanada]
+* https://github.com/adriangibanelbtactic[adriangibanelbtactic]
+* https://github.com/ApatheticCosmos[ApatheticCosmos]
+* https://github.com/ChangezKhan[ChangezKhan]
+* https://github.com/hieuhoanghd[hieuhoanghd]
+* https://github.com/horus68[horus68]
+* https://github.com/JanSiero[JanSiero]
+* https://github.com/Jorilx[Jorilx]
+* https://github.com/jsamelko[jsamelko]
+* https://github.com/lazka[lazka]
+* https://github.com/LEAP-nishit[LEAP-nishit]
+* https://github.com/likhobory[likhobory]
+* https://github.com/LionelBino[LionelBino]
+* https://github.com/Mausino[Mausino]
+* https://github.com/pribeiro42[pribeiro42]
+* https://github.com/urdhvatech[urdhvatech]
+
+To report any security issues please follow our Security Process and send them directly to us
+via email security@suitecrm.com
+
+Lastly a big thank you to the community for testing and confirming pull requests in
+our 17-18th December 2018 Pull Request Party. This release is the result of the hard work and
+effort everyone put into the project!
+
+'''
