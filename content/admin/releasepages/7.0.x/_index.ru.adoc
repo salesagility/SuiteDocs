@@ -1,11 +1,18 @@
 ---
-title: "7.0.x Releases"
+title: "7.0.x"
 weight: 9990
 ---
 
+:author: likhobory
+:email: likhobory@mail.ru
+
+:toc:
+:toc-title:
+:toclevels: 1
+
 :experimental:
 
-== 7.0.2
+== *7.0.2*
 
 _Released Jan 20, 2014_
 
@@ -50,7 +57,7 @@ Spanish and Russian.
 
 '''
 
-== 7.0.1
+== *7.0.1*
 
 _Released Nov 25, 2013_
 
@@ -68,7 +75,7 @@ Adding details to SuiteCRM readme.md
 
 '''
 
-== 7.0.0
+== *7.0.0*
 
 *SuiteCRM was released on 21st October 2013!*
 
