@@ -1,11 +1,18 @@
 ---
-title: "7.6.x Releases"
+title: "7.6.x"
 weight: 9930
 ---
 
+:author: likhobory
+:email: likhobory@mail.ru
+
+:toc:
+:toc-title:
+:toclevels: 1
+
 :experimental:
 
-== 7.6.10
+== *7.6.10*
 
 _Released Nov 16, 2016_
 
@@ -28,7 +35,7 @@ appropriate upgrade.
 
 '''
 
-== 7.6.9
+== *7.6.9*
 
 _Released Nov 7, 2016_
 
@@ -66,7 +73,7 @@ notifying us of these security issues._
 
 '''
 
-== 7.6.8
+== *7.6.8*
 
 _Released Oct 19, 2016_
 
@@ -101,7 +108,7 @@ notifying us of these security issues._
 
 '''
 
-== 7.6.7
+== *7.6.7*
 
 _Released Sep 28, 2016_
 
@@ -237,7 +244,7 @@ and helping us resolve this vulnerability._
 
 '''
 
-== 7.6.4
+== *7.6.4*
 
 _Released May 30, 2016_
 
@@ -273,7 +280,7 @@ appropriate upgrade.
 
 '''
 
-== 7.6.3
+== *7.6.3*
 
 _Released May 17, 2016_
 
@@ -296,7 +303,7 @@ appropriate upgrade.
 
 '''
 
-== 7.6.2
+== *7.6.2*
 
 _Released May 10, 2016_
 
@@ -335,7 +342,7 @@ appropriate upgrade.
 
 '''
 
-== 7.6.1
+== *7.6.1*
 
 _Released May 2, 2016_
 
@@ -364,7 +371,7 @@ appropriate upgrade.
 
 '''
 
-== 7.6.0
+== *7.6.0*
 
 _Released Apr 27, 2016_
 
@@ -401,7 +408,7 @@ appropriate upgrade.
 '''
 
 
-== 7.6 Release Candidate
+== *7.6 Release Candidate*
 
 _Released Apr 20, 2016_
 
@@ -435,7 +442,7 @@ properties without the need to use a report.
 
 '''
 
-== 7.6 Beta 2
+== *7.6 Beta 2*
 
 _Released Apr 13, 2016_
 
@@ -473,7 +480,7 @@ properties without the need to use a report.
 
 '''
 
-== 7.6 Beta
+== *7.6 Beta*
 
 _Released Mar 30, 2016_
 
