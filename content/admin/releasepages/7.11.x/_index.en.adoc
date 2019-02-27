@@ -1,30 +1,33 @@
 ---
 title: "7.11.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9880
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
+== *7.11.2*
 
-== **7.11.2**
 
 _Released 19th Feb 2019_
 
-=== **Assets**
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.2.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.2.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== *Release Notes*
 
 [discrete]
 
-==== **Enhancements**
+==== *Enhancements*
 
-* https://github.com/salesagility/SuiteCRM/pull/6186 [#6186] Feature/robo coding standards
+* https://github.com/salesagility/SuiteCRM/pull/6186[#6186] Feature/robo coding standards
 
-==== **Bug Fixes**
+==== *Bug Fixes*
 
 * https://github.com/salesagility/SuiteCRM/issues/4361[#4361 ] Fixed #4361 Use Parameter $imageJSONEncode if returning sprites
 * https://github.com/salesagility/SuiteCRM/issues/6832[#6832 ] Fixed #6832 - Project Coding Standards being ignored
@@ -49,25 +52,21 @@ Please https://suitecrm.com/download[visit the official website] to find the app
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
-
-
-
 '''
 
-
-== **7.11.1**
+== *7.11.1*
 
 _Released 31st Jan 2019_
 
-=== **Assets**
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.1.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.1.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== *Release Notes*
 
 
-==== **Bug Fixes**
+==== *Bug Fixes*
 
 ===== Emails
 
@@ -112,7 +111,7 @@ via email security@suitecrm.com.
 '''
 
 
-=== **Release Stats**
+=== *Release Stats*
 
 {{% notice note %}}
 In total, we have merged  *12 Pull Requests* with *3* of these from Community contributions!
@@ -124,24 +123,20 @@ Please https://suitecrm.com/download[visit the official website] to find the app
 To report any security issues please follow our Security Process and send them directly to us
 via email security@suitecrm.com.
 
-
-
-
 '''
 
-
-== 7.11.0
+== *7.11.0*
 
 _Released 14th Jan 2019_
 
-=== **Assets**
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.0.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.0.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== *Release Notes*
 
-==== **Enhancements**
+==== *Enhancements*
 
 ===== Google Calendar Synchronisation
 
@@ -179,7 +174,7 @@ $data = $this->getVardefsData('Accounts');
 $this->addDomJS($data, 'vardefs');
 ----
 
-==== **Bug Fixes**
+==== *Bug Fixes*
 
 
 ===== Emails
@@ -261,7 +256,7 @@ $this->addDomJS($data, 'vardefs');
 
 '''
 
-=== **Developer Note**
+=== *Developer Note*
 
 ==== Change in file location:
 
@@ -287,7 +282,7 @@ $this->addDomJS($data, 'vardefs');
 
 '''
 
-=== **Release Stats**
+=== *Release Stats*
 
 
 {{% notice note %}}
@@ -322,7 +317,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.11 RC 2
+== *7.11 RC 2*
 
 === Release Notes
 

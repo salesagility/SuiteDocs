@@ -1,12 +1,15 @@
 ---
 title: "7.3.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9960
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
-== 7.3.2
+== *7.3.2*
 
 _Released Oct 22, 2015_
 
@@ -72,7 +75,7 @@ appropriate upgrade.
 
 '''
 
-== 7.3.1
+== *7.3.1*
 
 _Released Aug 25, 2015_
 
@@ -125,7 +128,7 @@ appropriate upgrade.
 
 '''
 
-== 7.3.0
+== *7.3.0*
 
 _Released Aug 14, 2015_
 
@@ -162,7 +165,7 @@ appropriate upgrade.
 
 '''
 
-== 7.3 Beta 2
+== *7.3 Beta 2*
 
 _Released Aug 7, 2015_
 
@@ -179,7 +182,7 @@ _Don't do a final move for invalid/malicious files. See #333._
 
 '''
 
-== 7.3 Beta
+== *7.3 Beta*
 
 _Released Jun 5, 2015_
 

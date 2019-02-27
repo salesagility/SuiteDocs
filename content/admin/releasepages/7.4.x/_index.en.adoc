@@ -1,12 +1,15 @@
 ---
 title: "7.4.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9950
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
-== 7.4.3
+== *7.4.3*
 
 _Released Nov 23, 2015_
 
@@ -42,13 +45,13 @@ https://suitecrm.com/download[visit the official website] to find the
 appropriate upgrade.
 
 '''
-== 7.4.2
+== *7.4.2*
 
 _Merged branch 'reminders' into 7.4.2_
 
 '''
 
-== 7.4.1
+== *7.4.1*
 
 _Released Nov 10, 2015_
 
@@ -69,7 +72,7 @@ appropriate upgrade.
 
 '''
 
-== 7.4.0
+== *7.4.0*
 
 _Released Oct 30, 2015_
 
@@ -91,7 +94,7 @@ appropriate upgrade.
 
 '''
 
-== 7.4 Release Candidate
+== *7.4 Release Candidate*
 
 _Released Oct 19, 2015_
 
@@ -111,7 +114,7 @@ More.
 
 '''
 
-== 7.4 Beta 2
+== *7.4 Beta 2*
 
 _Released Oct 12, 2015_
 
@@ -130,7 +133,7 @@ Including Favourites, Knowledge Base, Improved Installer and More.
 
 '''
 
-== 7.4 Beta
+== *7.4 Beta*
 
 _Released Oct 5, 2015_
 

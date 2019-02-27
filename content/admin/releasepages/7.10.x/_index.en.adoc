@@ -1,26 +1,29 @@
 ---
 title: "7.10.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9890
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
 
-== **7.10.14**
+== *7.10.14*
 
 _Released 19th Feb 2019_
 
-=== **Assets**
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.14.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.14.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== *Release Notes*
 
 [discrete]
 
-==== **Bug Fixes**
+==== *Bug Fixes*
 
 * https://github.com/salesagility/SuiteCRM/pull/6794[#6794 ] Reports: fix "Illegal string offset 'record_id'" errors
 * https://github.com/salesagility/SuiteCRM/pull/6894[#6894 ] Reports: Fix "One of" operator for multi select fields
@@ -48,23 +51,23 @@ To report any security issues please follow our Security Process and send them d
 
 
 
-== **7.10.13**
+== *7.10.13*
 
 _Released 31st Jan 2019_
 
-== **Assets**
+== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.13.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.13.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== *Release Notes*
 
-==== **Enhancements**
+==== *Enhancements*
 
 * https://github.com/salesagility/SuiteCRM/pull/6774[#6774] Shows HTML version of email templates when "Show Plain Text" is selected.
 
 
-==== **Bug Fixes**
+==== *Bug Fixes*
 
 ===== Emails
 
@@ -105,21 +108,21 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.12
+== *7.10.12*
 
 _Released 14th Jan 2019_
 
-=== **Assets**
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.12.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.12.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== *Release Notes*
 
 [discrete]
 
 
-==== **Enhancements**
+==== *Enhancements*
 
 * https://github.com/salesagility/SuiteCRM/pull/6417[#6417 ] Hotfix inboundemail tests
 * https://github.com/salesagility/SuiteCRM/pull/6454[#6454 ] Hotfix phpunit
@@ -127,7 +130,7 @@ _Released 14th Jan 2019_
 * https://github.com/salesagility/SuiteCRM/pull/6734[#6734 ] Resolved the bug where users were unable to navigate using the tab order
 
 
-==== **Bug Fixes**
+==== *Bug Fixes*
 
 * https://github.com/salesagility/SuiteCRM/issues/707[#707 ] Fixed #707 - added conditional statement to check if action is not clone
 * https://github.com/salesagility/SuiteCRM/issues/2219[#2219 ] Fixed #2219 - Description field not wrapping with SuiteP theme after inline editing
@@ -195,7 +198,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.11
+== *7.10.11*
 
 _Released 5th Dec 2018_
 
@@ -250,7 +253,7 @@ Lastly a big thank you to the community for testing and confirming pull requests
 '''
 
 
-== 7.10.10
+== *7.10.10*
 
 _Released 24th Oct 2018_
 
@@ -297,7 +300,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.9
+== *7.10.9*
 
 _Released 17th Sep 2018_
 
@@ -324,7 +327,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.8
+== *7.10.8*
 
 _Released 13th Sep 2018_
 
@@ -478,7 +481,7 @@ _Users of ALL previous 7.10.x releases are advised to Upgrade to 7.10.8 as soon 
 '''
 
 
-== 7.10.7
+== *7.10.7*
 
 _Released 18th Jun 2018_
 
@@ -512,7 +515,7 @@ via email security@suitecrm.com.
 
 '''
 
-== 7.10.6
+== *7.10.6*
 
 _Released 6th Jun 2018_
 
@@ -577,7 +580,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.5
+== *7.10.5*
 
 _Released 21st May 2018_
 
@@ -648,7 +651,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.4
+== *7.10.4*
 
 _Released 9th Apr 2018_
 
@@ -698,7 +701,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.3
+== *7.10.3*
 
 _Released 3rd Apr 2018_
 
@@ -780,7 +783,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.2
+== *7.10.2*
 
 _Released 15th Mar 2018_
 
@@ -842,7 +845,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10.1
+== *7.10.1*
 
 _Released 5th Mar 2018_
 
@@ -910,7 +913,7 @@ via email security@suitecrm.com
 '''
 
 
-== 7.10.0
+== *7.10.0*
 
 _Released 19th Feb 2018_
 
@@ -989,7 +992,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10 Release Candidate 2
+== *7.10 Release Candidate 2*
 
 === Assets
 
@@ -1020,7 +1023,7 @@ via email security@suitecrm.com.
 '''
 
 
-== 7.10 Release Candidate
+== *7.10 Release Candidate*
 
 _Released Jan 23, 2018_
 
@@ -1045,7 +1048,7 @@ Changes since Beta 2:
 '''
 
 
-== 7.10 Beta 3
+== *7.10 Beta 3*
 
 _Released Dec 18, 2017_
 
@@ -1072,7 +1075,7 @@ Changes since Beta 2:
 '''
 
 
-== 7.10 Beta 2
+== *7.10 Beta 2*
 
 _Released Dec 1, 2017_
 
@@ -1092,7 +1095,7 @@ code* (tar.gz)]
 '''
 
 
-== 7.10 Beta
+== *7.10 Beta*
 
 _Released Nov 17, 2017_
 
