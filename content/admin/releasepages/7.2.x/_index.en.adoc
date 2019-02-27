@@ -1,12 +1,15 @@
 ---
 title: "7.2.xReleases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9970
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
-== 7.2.4
+== *7.2.4*
 
 _Released Aug 20, 2015_
 
@@ -29,7 +32,7 @@ appropriate upgrade.
 '''
 
 
-== 7.2.3
+== *7.2.3*
 
 _Released Aug 7, 2015_
 
@@ -46,7 +49,7 @@ Update version number to the latest release version.
 
 
 '''
-== 7.2.2
+== *7.2.2*
 
 _Released May 20, 2015_
 
@@ -65,7 +68,7 @@ release and also Post-Auth RCE vulnerabilities in SuiteCRM.
 '''
 
 
-== 7.2.1
+== *7.2.1*
 
 _Released this Mar 11, 2015_
 
@@ -110,7 +113,7 @@ appropriate upgrade.
 
 '''
 
-== 7.2.0
+== *7.2.0*
 
 _Released Mar 2, 2015_
 
@@ -157,7 +160,7 @@ appropriate upgrade.
 
 '''
 
-== 7.2 Beta 3
+== *7.2 Beta 3*
 
 _Released Feb 9, 2015_
 
@@ -176,7 +179,7 @@ Including reports, cases and project enhancements
 
 '''
 
-== 7.2 Beta 2
+== *7.2 Beta 2*
 
 _Released Dec 9, 2014_
 
@@ -195,7 +198,7 @@ New features including reports, cases and project enhancements
 
 '''
 
-== 7.2 Beta
+== *7.2 Beta*
 
 _Released Oct 31, 2014_
 

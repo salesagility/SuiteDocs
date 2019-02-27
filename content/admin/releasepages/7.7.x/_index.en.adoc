@@ -1,13 +1,16 @@
 ---
 title: "7.7.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9920
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
 
-== 7.7.9
+== *7.7.9*
 
 _Released Dec 31, 2016_
 
@@ -62,7 +65,7 @@ https://github.com/salesagility/SuiteCRM/issues/2831[security issue]._
 
 '''
 
-== 7.7.8
+== *7.7.8*
 
 _Released Nov 16, 2016_
 
@@ -98,7 +101,7 @@ appropriate upgrade.
 
 '''
 
-== 7.7.7
+== *7.7.7*
 
 _Released Nov 7, 2016_
 
@@ -144,7 +147,7 @@ notifying us of these security issues._
 
 '''
 
-== 7.7.6
+== *7.7.6*
 
 _Released Oct 19, 2016_
 
@@ -194,7 +197,7 @@ notifying us of these security issues._
 
 '''
 
-== 7.7.5
+== *7.7.5*
 
 _Released Sep 28, 2016_
 
@@ -254,7 +257,7 @@ notifying us of this security update._
 
 '''
 
-== 7.7.4
+== *7.7.4*
 
 _Released Aug 31, 2016_
 
@@ -291,7 +294,7 @@ appropriate upgrade.
 
 '''
 
-== 7.7.3
+== *7.7.3*
 
 _Released Aug 26, 2016_
 
@@ -324,7 +327,7 @@ appropriate upgrade.
 '''
 
 
-== 7.7.2
+== *7.7.2*
 
 _Released Aug 23, 2016_
 
@@ -372,7 +375,7 @@ appropriate upgrade.
 
 '''
 
-== 7.7.1
+== *7.7.1*
 
 _Released Aug 11, 2016_
 
@@ -416,7 +419,7 @@ appropriate upgrade.
 
 '''
 
-== 7.7.0
+== *7.7.0*
 
 _Released Aug 2, 2016_
 
@@ -460,7 +463,7 @@ notifying us of this security update._
 
 '''
 
-== 7.7 Release Candidate 2
+== *7.7 Release Candidate 2*
 
 _Released Jul 26, 2016_
 
@@ -487,7 +490,7 @@ Dashlet, and more.
 
 '''
 
-== 7.7 Release Candidate
+== *7.7 Release Candidate*
 
 _Released Jul 18, 2016_
 
@@ -505,7 +508,7 @@ theme SuiteP (SuitePea).
 
 '''
 
-== 7.7 Beta 2
+== *7.7 Beta 2*
 
 _Released Jun 27, 2016_
 
@@ -528,7 +531,7 @@ Fixes for Campaigns, Sending Emails and other bugs.
 '''
 
 
-== 7.7 Beta
+== *7.7 Beta*
 
 _Released Jun 15, 2016_
 

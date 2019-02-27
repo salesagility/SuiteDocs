@@ -1,12 +1,15 @@
 ---
 title: "7.5.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9940
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
-== 7.5.5
+== *7.5.5*
 
 _Released Jul 20, 2016_
 
@@ -38,7 +41,7 @@ alerting and helping us resolve this vulnerability._
 
 '''
 
-== 7.5.4
+== *7.5.4*
 
 _Released Jul 4, 2016_
 
@@ -69,7 +72,7 @@ and helping us resolve this vulnerability._
 
 '''
 
-== 7.5.3
+== *7.5.3*
 
 _Released Mar 15, 2016_
 
@@ -111,7 +114,7 @@ appropriate upgrade.
 
 '''
 
-== 7.5.2
+== *7.5.2*
 
 _Released this Mar 7, 2016_
 
@@ -132,7 +135,7 @@ appropriate upgrade.
 
 '''
 
-== 7.5.1
+== *7.5.1*
 
 _Released Jan 26, 2016_
 
@@ -153,7 +156,7 @@ appropriate upgrade.
 
 '''
 
-== 7.5.0
+== *7.5.0*
 
 _Released Jan 18, 2016_
 
@@ -188,7 +191,7 @@ appropriate upgrade.
 
 '''
 
-== 7.5 Release Candidate
+== *7.5 Release Candidate*
 
 _Released this Jan 11, 2016_
 
@@ -216,7 +219,7 @@ well as bug-fixes to the 7.5 Beta 2 release:
 
 '''
 
-== 7.5 Beta 2
+== *7.5 Beta 2*
 
 _Released Dec 21, 2015_
 
@@ -240,7 +243,7 @@ fixes to the 7.5 Beta 1 release.
 
 '''
 
-== 7.5 Beta
+== *7.5 Beta*
 
 _Released Dec 14, 2015_
 

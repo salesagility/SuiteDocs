@@ -1,12 +1,15 @@
 ---
 title: "7.9.x Releases"
-weight: 30
-pre: "<b>3. </b>"
+weight: 9900
 ---
+
+:toc:
+:toc-title:
+:toclevels: 1
 
 :experimental:
 
-== 7.9.17
+== *7.9.17*
 
 _Released 3rd Apr 2018_
 
@@ -50,7 +53,7 @@ via email security@suitecrm.com.
 
 '''
 
-== 7.9.16
+== *7.9.16*
 
 _Released 15th Mar 2018_
 
@@ -77,7 +80,7 @@ via email security@suitecrm.com.
 
 '''
 
-== 7.9.15
+== *7.9.15*
 
 _Released 5th Mar 2018_
 
@@ -110,7 +113,7 @@ via email security@suitecrm.com.
 
 '''
 
-== 7.9.14
+== *7.9.14*
 
 _Released 16th Feb 2018_
 
@@ -133,7 +136,7 @@ via email security@suitecrm.com.
 
 '''
 
-== 7.9.13
+== *7.9.13*
 
 _Released 16 Feb 2018_
 
@@ -194,7 +197,7 @@ via email security@suitecrm.com.
 
 '''
 
-== 7.9.12
+== *7.9.12*
 
 
 === Assets
@@ -230,7 +233,7 @@ We have also updated our Security Process asking the community to send their sec
 
 '''
 
-== 7.9.11
+== *7.9.11*
 
 _Released 27/01/18_
 
@@ -254,7 +257,7 @@ We have also updated our Security Process asking the community to send their sec
 
 '''
 
-== 7.9.10
+== *7.9.10*
 
 _Released Jan 25, 2018_
 
@@ -318,7 +321,7 @@ We have also updated our Security Process asking the community to send their sec
 
 '''
 
-== 7.9.9
+== *7.9.9*
 
 _Released Jan 11, 2018_
 
@@ -413,7 +416,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== 7.9.8
+== *7.9.8*
 
 _Released Dec 14, 2017_
 
@@ -509,7 +512,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== 7.9.7
+== *7.9.7*
 
 _Released Oct 18, 2017_
 
@@ -564,7 +567,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 '''
 
 
-== 7.9.6
+== *7.9.6*
 
 _Released Oct 3, 2017_
 
@@ -615,7 +618,7 @@ mailto:security@suitecrm.com[security@suitecrm.com
 
 '''
 
-== 7.9.5
+== *7.9.5*
 
 _Released Sep 6, 2017_
 
@@ -680,7 +683,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== 7.9.4
+== *7.9.4*
 
 _Released Jul 20, 2017_
 
@@ -711,7 +714,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== 7.9.3
+== *7.9.3*
 
 _Released Jul 17, 2017_
 
@@ -774,7 +777,7 @@ raising/reviewing security issues.
 
 '''
 
-== 7.9.2
+== *7.9.2*
 
 _Released Jun 30, 2017_
 
@@ -815,7 +818,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== 7.9.1
+== *7.9.1*
 
 _Released Jun 15, 2017_
 
@@ -900,7 +903,7 @@ the security issue.
 
 '''
 
-== 7.9.0
+== *7.9.0*
 
 _Released May 29, 2017_
 
@@ -981,7 +984,7 @@ appropriate upgrade.
 '''
 
 
-== 7.9.0 Release Candidate
+== *7.9.0 Release Candidate*
 
 _Released May 8, 2017_
 
@@ -1003,7 +1006,7 @@ Client and enhancements for Campaigns Email Template editor.
 '''
 
 
-== 7.9.0 Beta
+== *7.9.0 Beta*
 
 _Released Apr 25, 2017_
 
