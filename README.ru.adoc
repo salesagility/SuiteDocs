@@ -102,12 +102,12 @@
 **     link:/content/admin/administration-panel/Releases.ru.adoc[Управление версиями]
 
 * Elasticsearch
-**     link:/content/admin/administration-panel/search/elasticsearch/Command%20Line%20Tools.ru.adoc
-**     link:/content/admin/administration-panel/search/elasticsearch/Introduction.ru.adoc
-**     link:/content/admin/administration-panel/search/elasticsearch/Set%20up%20Elasticsearch.ru.adoc
-**     link:/content/admin/administration-panel/search/elasticsearch/Set%20up%20SuiteCRM.ru.adoc
-**     link:/content/admin/administration-panel/search/elasticsearch/Syntax.ru.adoc
-**     link:/content/admin/administration-panel/search/elasticsearch/Troubleshooting.ru.adoc
+**     link:/content/admin/administration-panel/search/elasticsearch/Introduction.ru.adoc[Введение]
+**     link:/content/admin/administration-panel/search/elasticsearch/Set%20up%20Elasticsearch.ru.adoc[Настройка Elasticsearch]
+**     link:/content/admin/administration-panel/search/elasticsearch/Set%20up%20SuiteCRM.ru.adoc[Интеграция Elasticsearch с SuiteCRM]
+**     link:/content/admin/administration-panel/search/elasticsearch/Syntax.ru.adoc[Синтаксис поисковых запросов]
+**     link:/content/admin/administration-panel/search/elasticsearch/Command%20Line%20Tools.ru.adoc[Консольные утилиты]
+**     link:/content/admin/administration-panel/search/elasticsearch/Troubleshooting.ru.adoc[Решение проблем]
 
 * link:/content/admin/Troubleshooting%20and%20Support.ru.adoc[Техническая поддержка]
 
@@ -119,8 +119,7 @@
 
 * link:/content/admin/Compatibility%20Matrix.ru.adoc[Таблица совместимости] 
 
-* История релизов
-**     link:/content/admin/releasepages/_index.ru.adoc
+* link:/content/admin/releasepages/_index.ru.adoc[История релизов]
 
 [start=3]
  . Развитие проекта
