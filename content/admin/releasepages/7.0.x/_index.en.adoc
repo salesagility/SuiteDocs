@@ -9,18 +9,18 @@ weight: 9990
 
 :experimental:
 
-== *7.0.2*
+== 7.0.2
 
 _Released Jan 20, 2014_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 This is a bug fix release which also adds in two new language translations for
 Spanish and Russian.
@@ -54,25 +54,25 @@ Spanish and Russian.
 
 '''
 
-== *7.0.1*
+== 7.0.1
 
 _Released Nov 25, 2013_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 Adding details to SuiteCRM readme.md
 
 
 '''
 
-== *7.0.0*
+== 7.0.0
 
 *SuiteCRM was released on 21st October 2013!*
 

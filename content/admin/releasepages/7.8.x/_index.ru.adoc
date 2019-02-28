@@ -17,20 +17,20 @@ weight: 9910
 Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
 {{% /notice %}}
 
-== *7.8.27*
+== 7.8.27
 
 _Released 19th Feb 2019_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.27.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.27.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 
-==== *Bug Fixes*
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/6888[#6888 ] Fix/php lint
 * https://github.com/salesagility/SuiteCRM/issues/6423[#6423 ] Fixed #6423 - after upgrading 7.8.13 to 7.8.22 getting Invalid File Reference from attachments in inbound
@@ -46,19 +46,19 @@ To report any security issues please follow our Security Process and send them d
 
 '''
 
-== *7.8.26*
+== 7.8.26
 
 _Released 31st Jan 2019_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.26lts.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.26lts.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 
-==== *Bug Fixes*
+==== Bug Fixes
 
 ===== Emails
 * https://github.com/salesagility/SuiteCRM/issues/6766[#6766 ] The SMTP Port now views the value as a string.
@@ -86,20 +86,20 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.25*
+== 7.8.25
 
 _Released 14th Jan 2019_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.24.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.24.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 
 
-==== *Bug Fixes*
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/164[#164 ] Fixed #164 - Change AOS Product Images to use an entry point
 * https://github.com/salesagility/SuiteCRM/issues/163[#163 ] Fixed #163 - Pagination bar in Emails
 * https://github.com/salesagility/SuiteCRM/issues/2474[#2474 ] Fixed #2474 - person form style in Suite7
@@ -136,18 +136,18 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.24*
+== 7.8.24
 
 _Released 4th Dec 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.24.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.24.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
-==== *Bug Fixes*
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
 * https://github.com/salesagility/SuiteCRM/pull/6521[#6521 ] Brackets set wrong
@@ -182,18 +182,18 @@ raising/reviewing security issue._
 
 '''
 
-== *7.8.23*
+== 7.8.23
 
 _Released 24th Oct 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.23.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.23.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
-==== *Bug Fixes*
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/6406[#6406 ] Add Prospects to Studio
 * https://github.com/salesagility/SuiteCRM/issues/5526[#5526 ] Inline Edit doesn't show new value for date and relate fields
@@ -210,16 +210,16 @@ via email security@suitecrm.com.
 '''
 
 
-== *7.8.22*
+== 7.8.22
 
 _Released 17th Sep 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.22.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.22.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 
@@ -236,16 +236,16 @@ via email security@suitecrm.com.
 '''
 
 
-== *7.8.21*
+== 7.8.21
 
 _Released 13th Sep 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.21.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.21.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 
@@ -321,16 +321,16 @@ _Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.21 as soon a
 
 '''
 
-== *7.8.20*
+== 7.8.20
 
 _Released 6th Jun 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.20.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.20.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -351,16 +351,16 @@ via email security@suitecrm.com
 
 '''
 
-== *7.8.19*
+== 7.8.19
 
 _Released 21st May 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.19.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.19.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 
@@ -394,16 +394,16 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.18*
+== 7.8.18
 
 _Released 3rd Apr 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -443,16 +443,16 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.17*
+== 7.8.17
 
 _Released 15th Mar 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.17.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -472,16 +472,16 @@ via email security@suitecrm.com.
 '''
 
 
-== *7.8.16*
+== 7.8.16
 
 _Released 5th Mar 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.16.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.16.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -508,16 +508,16 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.15*
+== 7.8.15
 
 _Released 16th Feb 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.15.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.15.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -535,16 +535,16 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.14*
+== 7.8.14
 
 _Released 16 Feb 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.14.zip[*Source code*(zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.14.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -586,16 +586,16 @@ via email security@suitecrm.com.
 
 '''
 
-== *7.8.13*
+== 7.8.13
 
 _Released 07 Feb 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.13.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.13.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -621,16 +621,16 @@ We have also updated our Security Process asking the community to send their sec
 
 '''
 
-== *7.8.12*
+== 7.8.12
 
 _Released 27/01/18_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.12.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.12.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -644,16 +644,16 @@ We have also updated our Security Process asking the community to send their sec
 
 '''
 
-== *7.8.11 - LTS*
+== 7.8.11 - LTS
 
 _Released Jan 25, 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.11.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.11.tar.gz[*Source code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -706,18 +706,18 @@ We have also updated our Security Process asking the community to send their sec
 '''
 
 
-== *7.8.10 - LTS*
+== 7.8.10 - LTS
 
 _Released Jan 11, 2018_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.10.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.10.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -778,18 +778,18 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== *7.8.9 - LTS*
+== 7.8.9 - LTS
 
 _Released Dec 14, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.9.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.9.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 * https://github.com/salesagility/SuiteCRM/pull/4697[#4697 ] Removed htmlentities from clean html
 * https://github.com/salesagility/SuiteCRM/issues/4694[#4694 ] Fixed #4694 Campaign emails use global smtp security settings
@@ -861,24 +861,24 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 '''
 
 
-== *7.8.8 - LTS*
+== 7.8.8 - LTS
 
 _Released Oct 18, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.8.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.8.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
-=== *Security*
+=== Security
 Resolved security issues
 
-==== *Bug Fixes*
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/4375[#4375 ] Fixed 4375 - Html Field in edit view
 * https://github.com/salesagility/SuiteCRM/issues/4183[#4183 ] Fixed #4183 - SuiteP - Tabs not behaving correctly on small screens
 * https://github.com/salesagility/SuiteCRM/issues/4328[#4328 ] Fixed #4328 - TinyMCE brand name
@@ -912,18 +912,18 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== *7.8.7 - LTS*
+== 7.8.7 - LTS
 
 _Released Oct 3, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.7.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.7.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -962,18 +962,18 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== *7.8.6 - LTS*
+== 7.8.6 - LTS
 
 _Released Sep 6, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.6.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.6.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -1007,18 +1007,18 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 '''
 
-== *7.8.5*
+== 7.8.5
 
 _Released Jun 15, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.5.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.5.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -1053,18 +1053,18 @@ _Special thanks to https://github.com/krzyc[krzyc] for notifying us of the secur
 
 '''
 
-== *7.8.4*
+== 7.8.4
 
 _Released May 29, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.4.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.4.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -1102,18 +1102,18 @@ providing further enhancements for the Projects Module.
 '''
 
 
-== *7.8.3*
+== 7.8.3
 
 _Released Apr 11, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.3.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.3.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Additional Features
@@ -1166,18 +1166,18 @@ appropriate upgrade.
 
 '''
 
-== *7.8.2*
+== 7.8.2
 
 _Released Feb 27, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -1217,18 +1217,18 @@ appropriate upgrade.
 
 '''
 
-== *7.8.1*
+== 7.8.1
 
 _Released Feb 6, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Bug Fixes
@@ -1250,18 +1250,18 @@ appropriate upgrade.
 
 '''
 
-== *7.8.0*
+== 7.8.0
 
 Released Jan 30, 2017
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Additional Features
@@ -1306,18 +1306,18 @@ appropriate upgrade.
 '''
 
 
-== *7.8.0 Release Candidate*
+== 7.8.0 Release Candidate
 
 _Released Jan 23, 2017_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0-rc.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0-rc.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 *This is a Pre release and should not be used in a production environment.*
 
@@ -1330,18 +1330,18 @@ Calculated Fields from http://www.dtbc.eu/[diligent technology & business consul
 
 '''
 
-== *7.8.0 Beta 2*
+== 7.8.0 Beta 2
 
 Released Jan 16, 2017
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 *This is a Beta release and should not be used in a production environment.*
 
@@ -1355,18 +1355,18 @@ for PHP 7.1
 '''
 
 
-== *7.8.0 Beta*
+== 7.8.0 Beta
 
 _Released Dec 30, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.0-beta.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 *This is a Beta release and should not be used in a production environment.*
 
