@@ -17,18 +17,18 @@ weight: 9940
 Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
 {{% /notice %}}
 
-== *7.5.5*
+== 7.5.5
 
 _Released Jul 20, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.5.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.5.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
 component & YUI IO Utility
@@ -49,18 +49,18 @@ alerting and helping us resolve this vulnerability._
 
 '''
 
-== *7.5.4*
+== 7.5.4
 
 _Released Jul 4, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.4.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.4.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 This release resolves a Security vulnerability with Serialized Input, to
 prevent possible object injection attacks
@@ -80,18 +80,18 @@ and helping us resolve this vulnerability._
 
 '''
 
-== *7.5.3*
+== 7.5.3
 
 _Released Mar 15, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.3.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.3.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 [discrete]
 ===== Security
@@ -122,18 +122,18 @@ appropriate upgrade.
 
 '''
 
-== *7.5.2*
+== 7.5.2
 
 _Released this Mar 7, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 This is a bug fix release for SuiteCRM 7.5 release.
 
@@ -143,18 +143,18 @@ appropriate upgrade.
 
 '''
 
-== *7.5.1*
+== 7.5.1
 
 _Released Jan 26, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 This is a bug fix release for SuiteCRM 7.5 release.
 
@@ -164,18 +164,18 @@ appropriate upgrade.
 
 '''
 
-== *7.5.0*
+== 7.5.0
 
 _Released Jan 18, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 SuiteCRM 7.5, the latest cutting edge release, focuses on enhancing the
 Reports module. A full list of new functionality is detailed below:
@@ -199,18 +199,18 @@ appropriate upgrade.
 
 '''
 
-== *7.5 Release Candidate*
+== 7.5 Release Candidate
 
 _Released this Jan 11, 2016_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 *This is a beta release and should not be used in a production environment.*
 
@@ -227,18 +227,18 @@ well as bug-fixes to the 7.5 Beta 2 release:
 
 '''
 
-== *7.5 Beta 2*
+== 7.5 Beta 2
 
 _Released Dec 21, 2015_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 *This is a beta release and should not be used in a production environment.*
 
@@ -251,18 +251,18 @@ fixes to the 7.5 Beta 1 release.
 
 '''
 
-== *7.5 Beta*
+== 7.5 Beta
 
 _Released Dec 14, 2015_
 
-=== *Assets*
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.tar.gz[*Source
 code* (tar.gz)]
 
-=== *Release Notes*
+=== Release Notes
 
 *Try 7.5 to preview the new features coming in SuiteCRM 7.5.*
 
