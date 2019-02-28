@@ -44,7 +44,7 @@
 **     link:/content/user/core-modules/Target%20Lists.ru.adoc[Списки адресатов]
 **     link:/content/user/core-modules/Campaigns.ru.adoc[Маркетинг]
 **     link:/content/user/core-modules/Surveys.ru.adoc[Опросы]
-**     link:/content/user/core-modules/Errors.ru.adoc[Ошибки]
+**     link:/content/user/core-modules/Bugs.ru.adoc[Ошибки]
 **     link:/content/user/core-modules/Cases.ru.adoc[Обращения]
 **     link:/content/user/core-modules/Projects.ru.adoc[Проекты]
 **     link:/content/user/core-modules/Spots.ru.adoc[Сводки]
@@ -56,19 +56,22 @@
 **     link:/content/user/advanced-modules/KnowledgeBase.ru.adoc[База знаний]
 **     link:/content/user/advanced-modules/Sales.ru.adoc[Продажи]
 **     link:/content/user/advanced-modules/Workflow.ru.adoc[Процессы]
+**     link:/content/user/advanced-modules/Workflow.ru.adoc[Вычисления в полях процессов]
 **     link:/content/user/advanced-modules/Cases%20with%20Portal.ru.adoc[Интеграция Обращений с внешним порталом]
 **     link:/content/user/advanced-modules/Events.ru.adoc[Места и События]
 **     link:/content/user/advanced-modules/Reports.ru.adoc[Отчёты]
 **     link:/content/user/advanced-modules/Reschedule.ru.adoc[Отложенные звонки]
 
 
-* link:/content/user/modules/lawfulbasis[Правовые основания для обработки персональных данных]
+* link:/content/user/modules/LawfulBasis.ru.adoc[Правовые основания для обработки персональных данных]
 
-* link:/content/user/modules/passwordmanagement[Управление паролями]
+* link:/content/user/modules/PasswordManagement.ru.adoc[Управление паролями]
 
 * link:/content/user/modules/Themes.ru.adoc[Темы]
 
 * link:/content/user/modules/Confirmed-Opt-In-Settings.ru.adoc[Подтверждение подписки]
+
+
 
 * link:/content/user/Security%20Suite%20(Groups).ru.adoc[Группы пользователей]
 
@@ -96,7 +99,15 @@
 **     link:/content/admin/administration-panel/Studio.ru.adoc[Студия]
 **     link:/content/admin/administration-panel/Google%20Maps.ru.adoc[Карты Google]
 **     link:/content/admin/administration-panel/Advanced%20OpenAdmin.ru.adoc[Разное]
-**     link:/content/admin/administration-panel/Bugs.ru.adoc[Управление версиями]
+**     link:/content/admin/administration-panel/Releases.ru.adoc[Управление версиями]
+
+* Elasticsearch
+**     link:/content/admin/administration-panel/search/elasticsearch/Introduction.ru.adoc[Введение]
+**     link:/content/admin/administration-panel/search/elasticsearch/Set%20up%20Elasticsearch.ru.adoc[Настройка Elasticsearch]
+**     link:/content/admin/administration-panel/search/elasticsearch/Set%20up%20SuiteCRM.ru.adoc[Интеграция Elasticsearch с SuiteCRM]
+**     link:/content/admin/administration-panel/search/elasticsearch/Syntax.ru.adoc[Синтаксис поисковых запросов]
+**     link:/content/admin/administration-panel/search/elasticsearch/Command%20Line%20Tools.ru.adoc[Консольные утилиты]
+**     link:/content/admin/administration-panel/search/elasticsearch/Troubleshooting.ru.adoc[Решение проблем]
 
 * link:/content/admin/Troubleshooting%20and%20Support.ru.adoc[Техническая поддержка]
 
@@ -108,6 +119,8 @@
 
 * link:/content/admin/Compatibility%20Matrix.ru.adoc[Таблица совместимости] 
 
+* link:/content/admin/releasepages/_index.ru.adoc[История релизов]
+
 [start=3]
  . Развитие проекта
  
@@ -118,6 +131,7 @@
 **     link:/content/community/contributing-to-docs/simple-edit.ru.adoc[Редактирование страницы]
 **     link:/content/community/contributing-to-docs/simple-issue.ru.adoc[Сообщение об ошибке]
 **     link:/content/community/contributing-to-docs/local-setup.ru.adoc[Локальное развёртывание сайта документации]
+**     link:/content/community/contributing-to-docs/guidelines.ru.adoc[Руководство по созданию документации]
 **     link:/content/community/contributing-to-docs/translate.ru.adoc[Перевод документации]
  
 [start=4]
