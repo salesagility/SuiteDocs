@@ -12,18 +12,23 @@ weight: 9970
 
 :experimental:
 
+{{% notice note %}}
+В этом разделе представлена полная история изменений системы. +
+Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
+{{% /notice %}}
+
 == *7.2.4*
 
 _Released Aug 20, 2015_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.4.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.4.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 This is a bug-fix release.
 
@@ -39,14 +44,14 @@ appropriate upgrade.
 
 _Released Aug 7, 2015_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.3.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.3.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 Update version number to the latest release version.
 
@@ -56,14 +61,14 @@ Update version number to the latest release version.
 
 _Released May 20, 2015_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 This is a bug fix release which addresses bugs in the SuiteCRM 7.2.1
 release and also Post-Auth RCE vulnerabilities in SuiteCRM.
@@ -75,14 +80,14 @@ release and also Post-Auth RCE vulnerabilities in SuiteCRM.
 
 _Released this Mar 11, 2015_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -120,14 +125,14 @@ appropriate upgrade.
 
 _Released Mar 2, 2015_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Additional Features
@@ -167,14 +172,14 @@ appropriate upgrade.
 
 _Released Feb 9, 2015_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2beta3.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2beta3.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a beta release and should not be used in a production environment.*
 
@@ -186,14 +191,14 @@ Including reports, cases and project enhancements
 
 _Released Dec 9, 2014_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2beta2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2beta2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a beta release and should not be used in a production environment.*
 
@@ -205,14 +210,14 @@ New features including reports, cases and project enhancements
 
 _Released Oct 31, 2014_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.2beta.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.2beta.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a beta release and should not be used in a production environment.*
 

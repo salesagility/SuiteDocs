@@ -12,18 +12,23 @@ weight: 9990
 
 :experimental:
 
+{{% notice note %}}
+В этом разделе представлена полная история изменений системы. +
+Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
+{{% /notice %}}
+
 == *7.0.2*
 
 _Released Jan 20, 2014_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 This is a bug fix release which also adds in two new language translations for
 Spanish and Russian.
@@ -61,14 +66,14 @@ Spanish and Russian.
 
 _Released Nov 25, 2013_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.0.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 Adding details to SuiteCRM readme.md
 

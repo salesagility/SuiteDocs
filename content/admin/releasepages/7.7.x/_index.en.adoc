@@ -14,14 +14,14 @@ weight: 9920
 
 _Released Dec 31, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.9.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.9.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -69,14 +69,14 @@ https://github.com/salesagility/SuiteCRM/issues/2831[security issue]._
 
 _Released Nov 16, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.8.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.8.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -105,14 +105,14 @@ appropriate upgrade.
 
 _Released Nov 7, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.7.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.7.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -151,14 +151,14 @@ notifying us of these security issues._
 
 _Released Oct 19, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.6.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.6.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -201,14 +201,14 @@ notifying us of these security issues._
 
 _Released Sep 28, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.5.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.5.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -261,14 +261,14 @@ notifying us of this security update._
 
 _Released Aug 31, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.4.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.4.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 SuiteCRM 7.7.4 features bug fixes for dropdown editor (browser specific), dashlets, calendar, studio layout updates and improve styling on top bar for non module filter settings.
 
@@ -298,14 +298,14 @@ appropriate upgrade.
 
 _Released Aug 26, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.3.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.3.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 SuiteCRM 7.7.3 includes a fix due to a regression issue with basic
 search, this release also includes PHP 5.3 for Spots modules, fix the
@@ -331,14 +331,14 @@ appropriate upgrade.
 
 _Released Aug 23, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 SuiteCRM 7.7.2 features bug fixes for calendar, php7, MSSQL upgrades and
 improves Theme SuiteP UI and functionality
@@ -379,14 +379,14 @@ appropriate upgrade.
 
 _Released Aug 11, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 SuiteCRM 7.7.1 features bug fixes, improves Theme SuiteP UI and
 functionality
@@ -423,14 +423,14 @@ appropriate upgrade.
 
 _Released Aug 2, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -467,14 +467,14 @@ notifying us of this security update._
 
 _Released Jul 26, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-rc2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-rc2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a release candidate release and should not be used in a production environment.*
 
@@ -494,7 +494,7 @@ Dashlet, and more.
 
 _Released Jul 18, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-rc.zip[*Source
 code* (zip)]
@@ -512,14 +512,14 @@ theme SuiteP (SuitePea).
 
 _Released Jun 27, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-beta2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-beta2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a beta release and should not be used in a production environment.*
 
@@ -535,14 +535,14 @@ Fixes for Campaigns, Sending Emails and other bugs.
 
 _Released Jun 15, 2016_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-beta1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.7-beta1.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a beta release and should not be used in a production environment.*
 

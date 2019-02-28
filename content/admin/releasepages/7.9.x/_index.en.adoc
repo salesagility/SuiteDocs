@@ -13,12 +13,12 @@ weight: 9900
 
 _Released 3rd Apr 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.17.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.17.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 * https://github.com/salesagility/SuiteCRM/issues/5356[#5356 ] Fixed #5356 - No marker images in maps
 * https://github.com/salesagility/SuiteCRM/issues/3826[#3826 ] Fixed #3826 - Values "OR" & "AND" in report condition are not translatable
@@ -57,12 +57,12 @@ via email security@suitecrm.com.
 
 _Released 15th Mar 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.16.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.16.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 * https://github.com/salesagility/SuiteCRM/issues/5424[#5424 ] Fixed #5424 - Missing add product menu while using PL language - 7.10.1
 * https://github.com/salesagility/SuiteCRM/issues/3510[#3510 ] Fixed #3510 - function getRelatedFields() missing from data/Link2.php on 7.8.3
@@ -84,12 +84,12 @@ via email security@suitecrm.com.
 
 _Released 5th Mar 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.15.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.15.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 * https://github.com/salesagility/SuiteCRM/issues/5267[#5267 ] Fixed #5267 - "Failed to retrieve data" error in studio
 * https://github.com/salesagility/SuiteCRM/pull/5323[#5323 ] Remove word "error" from a debug message
@@ -117,12 +117,12 @@ via email security@suitecrm.com.
 
 _Released 16th Feb 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.14.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.14.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 * https://github.com/salesagility/SuiteCRM/pull/5237[#5237 ] Fixed dashlet fatal
 * https://github.com/salesagility/SuiteCRM/pull/5216[#5216 ] Removing commented language string
@@ -140,12 +140,12 @@ via email security@suitecrm.com.
 
 _Released 16 Feb 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.13.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.13.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -200,12 +200,12 @@ via email security@suitecrm.com.
 == *7.9.12*
 
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.12.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.12.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -237,12 +237,12 @@ We have also updated our Security Process asking the community to send their sec
 
 _Released 27/01/18_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.11.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.11.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -261,13 +261,13 @@ We have also updated our Security Process asking the community to send their sec
 
 _Released Jan 25, 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.10.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.10.tar.gz[*Source code* (tar.gz)]
 
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -325,14 +325,14 @@ We have also updated our Security Process asking the community to send their sec
 
 _Released Jan 11, 2018_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.9.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.9.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -420,14 +420,14 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 _Released Dec 14, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.8.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.8.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 * https://github.com/salesagility/SuiteCRM/pull/4701[#4701 ] Improved non filtered email performance
 * https://github.com/salesagility/SuiteCRM/pull/4697[#4697 ] Removed htmlentities from clean html
@@ -516,14 +516,14 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 _Released Oct 18, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.7.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.7.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -571,14 +571,14 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 _Released Oct 3, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/7.9.6.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/7.9.6.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -622,14 +622,14 @@ mailto:security@suitecrm.com[security@suitecrm.com
 
 _Released Sep 6, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.5.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.5.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Security
@@ -687,12 +687,12 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 _Released Jul 20, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.4.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.4.tar.gz[*Source code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -718,7 +718,7 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 _Released Jul 17, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.3.zip[*Source
 code* (zip)]
@@ -781,14 +781,14 @@ raising/reviewing security issues.
 
 _Released Jun 30, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.2.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.2.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Bug Fixes
@@ -822,14 +822,14 @@ mailto:security@suitecrm.com[security@suitecrm.com]
 
 _Released Jun 15, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.1.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.1.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Additional Features
@@ -907,14 +907,14 @@ the security issue.
 
 _Released May 29, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 [discrete]
 ===== Additional Features
@@ -988,14 +988,14 @@ appropriate upgrade.
 
 _Released May 8, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0-rc.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0-rc.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a Release Candidate release and should not be used in a production environment.*
 
@@ -1010,14 +1010,14 @@ Client and enhancements for Campaigns Email Template editor.
 
 _Released Apr 25, 2017_
 
-=== Assets
+=== *Assets*
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0-beta.zip[*Source
 code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.9.0-beta.tar.gz[*Source
 code* (tar.gz)]
 
-=== Release Notes
+=== *Release Notes*
 
 *This is a Beta release and should not be used in a production environment.*
 
