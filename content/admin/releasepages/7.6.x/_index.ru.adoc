@@ -1,13 +1,21 @@
 ---
-title: "7.6.x Releases"
+title: "7.6.x"
 weight: 9930
 ---
+
+:author: likhobory
+:email: likhobory@mail.ru
 
 :toc:
 :toc-title:
 :toclevels: 1
 
 :experimental:
+
+{{% notice note %}}
+В этом разделе представлена полная история изменений системы. +
+Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
+{{% /notice %}}
 
 == 7.6.10
 
