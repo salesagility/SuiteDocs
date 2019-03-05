@@ -61,7 +61,7 @@ image:63DetailView_editing.png[title="Detail View edit field"]
 
 Once you have made the required change to the field value, you can
 either press Return or click on the 'tick'. This will save user changes.
-If you navigate away without making any changes, you will see a prompt
+If you navigate away without saving any changes, you will see a prompt
 warning you that you have made unsaved changes to the field being
 edited.
 
