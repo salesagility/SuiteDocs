@@ -51,13 +51,13 @@ This is the view that you are presented with when you view a record.
 
 image:41Detail_view.png[title="Detail View"]
 
-The Detail View compromises of many actions that you can use to
+The Detail View comprises of many actions that you can use to
 view/manage your data. These are specific to the Detail View of the
 module that you are viewing. There are standard actions on the Detail
 View for most modules. These are:
 
 * *Edit* – allows you to edit the record you are viewing.
-* *Duplicate* – allows you to duplicate the record the are viewing.
+* *Duplicate* – allows you to duplicate the record you are viewing.
 * *Delete* – allows you to delete the record you are viewing. If a record
 is deleted, you will be redirected to the List View.
 * *Find Duplicates* – allows you to begin the find duplicates process
@@ -91,7 +91,7 @@ image:42Edit_view.png[title="Edit View"]
 The Edit View allows you to modify record information that is displayed
 on the view. This allows users to update existing data and also
 add/remove data. Once you have made changes on the Edit View, you can
-click 'Save' to apply to changes or click btn:[Cancel]. Clicking either
+click 'Save' to apply the changes or click btn:[Cancel]. Clicking either
 options will redirect you to the Detail View of the record you are
 editing. You can click the btn:[View Change Log] button. This allows users
 to view changes to audited fields which can be useful before making your
