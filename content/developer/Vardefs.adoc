@@ -170,6 +170,8 @@ The following are common field types used:
   A date and time field.
 `enum`::
   A dropdown field.
+`multienum`::
+  A dropdown field that allows selecting multiple values.
 `phone`::
   A phone number field.
 `link`::
