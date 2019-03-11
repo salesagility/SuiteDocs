@@ -59,7 +59,7 @@ image:image2.png[Описание ошибки]
 
 {{% notice note %}}
 Список доступных версий может быть настроен администратором SuiteCRM. За детальной информацией обратитесь к разделу  
-link:../../../admin/administration-panel/versions[Управление версиями].
+link:../../../admin/administration-panel/release[Управление версиями].
 {{% /notice %}}
 
 Описание:: Введите полное описание проблемы.
