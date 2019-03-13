@@ -82,6 +82,6 @@ Sun, 15 Mar 2015 13:03:03 +0000
 
 
 Obviously this is a contrived example but any logic that can be
-performed elsewhere in SuiteCRM can be performed in an entry poiny (for
+performed elsewhere in SuiteCRM can be performed in an entry point (for
 example creating or editing
 link:../working-with-beans/[SugarBeans]). link:../entry-points[↩]
