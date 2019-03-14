@@ -76,7 +76,7 @@ Roles determine what a user can do with a record once they have access to it.
 == A Typical Hierarchy Setup
 
 Although SecuritySuite can handle any organizational structure, the most
-common scenario it is used for is one where the owner can sell
+common scenario it is used for is one where the owner can see
 everything, managers can see both their own records and those of their
 team, and team members can only see their own records.
 
@@ -180,7 +180,7 @@ the group assigned to the current record are used.
 
 === New User Group Popup
 
-When creating a new user show the SecurityGroups popup to assign you to
+When creating a new user show the SecurityGroups popup to assign them to
 a group(s).
 
 === User Role Precedence
@@ -214,11 +214,11 @@ Created By setting.
 
 === Inherit from Created By User
 
-The record will inherit all the groups assigned to you who created it.
+The record will inherit all the groups assigned to the user who created it.
 
 === Inherit from Assigned To User
 
-The record will inherit all the groups of you assigned to the record.
+The record will inherit all the groups of the user assigned to the record.
 Other groups assigned to the record will NOT be removed.
 
 === Inherit from Parent Record
