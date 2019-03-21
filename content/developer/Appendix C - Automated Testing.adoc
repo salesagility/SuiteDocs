@@ -1092,59 +1092,6 @@ $sugar_config['state_checker']['auto_run']
 ---
 
 
-*saveTraces*
-
-Saves trace info on state-hash mismatch +
-(Slow running but gives more information about the error location, use in development only)
-
-Usage:
-[source, php]
---
-$value = SuiteCRM\StateCheckerConfig::get('saveTraces')
---
-
-Default value:
-[source, php]
---
-false
---
-
-SuiteCRM config overrides:
-[source, php]
---
-$sugar_config['state_checker']['save_traces']
---
-
----
-
-
-*redefineMemoryLimit*     
-
-Redefine memory limit +
-(For more memory expensive tasks, for e.g collection stack trace information when `$saveTraces` is ON, + 
-use in development only)
-
-Usage:
-[source, php]
---
-$value = SuiteCRM\StateCheckerConfig::get('redefineMemoryLimit')
---
-
-Default value:
-[source, php]
---
-false
---
-
-SuiteCRM config overrides:
-[source, php]
---
-$sugar_config['state_checker']['redefine_memory_limit']
---
-
----
-
-
 *storeDetails*
 
 Stores more information about hash-mismatch, which part has state of globals/filesys/database. +
