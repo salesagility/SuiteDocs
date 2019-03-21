@@ -85,9 +85,8 @@ Request for each issue you fix – *do not* combine multiple bugfixes into
 one Pull Request.
 
 * Ensure that in your Pull Request that the base fork is
-*salesagility/SuiteCRM* and base branch is either `hotfix` or
-`hotfix-7.8.x` or `hotfix-7.10.x` with the head fork being *your repository* and a base
-branch of your unique bugfix branch e.g. _bugfix_1234_
+*salesagility/SuiteCRM* and base branch is either `hotfix-7.8.x` or `hotfix-7.10.x`
+with the head fork being *your repository* and a base branch of your unique bugfix branch e.g. _bugfix_1234_
 
 * We will automatically reject any Pull Requests made to the wrong
 branch!
