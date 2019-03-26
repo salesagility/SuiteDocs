@@ -16,35 +16,15 @@ begin making commits to the project.
 
 {{%notice info%}}If the bug you're fixing is present in `hotfix-7.8.x` then you will need to make two separate pull requests, one to `hotfix-7.8.x` and one to `hotfix-7.10.x`. The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so no more duplicates are necessary.`.{{%/notice%}}
 
-Graph 1:
 {{<mermaid align="left">}}
 graph TD;
-  Bugfix{Bugfix}-->Hotfix-7.8.x;
+  Bugfix{Bugfix}-->|Your PR|Hotfix-7.8.x;
   Hotfix-7.8.x-->|Merged Into|LTS[7.8.x Master]
   Hotfix-->|Merged Into|Master;
-  Bugfix-->Hotfix-7.10x;
+  Bugfix-->|Your PR|Hotfix-7.10x;
   Hotfix-7.10x-->|Merged Into|710LTS[7.10.x Master]
   Hotfix-7.10x-->|Merged Into|Hotfix;
   Hotfix-->|Merged Into|Develop;
-{{< /mermaid >}}
-
-Graph 2:
-{{<mermaid align="left">}}
-graph TD;
-  Bugfix{Bugfix}-->Hotfix-7.8.x;
-  Hotfix-->Master;
-  Bugfix-->Hotfix-7.10x;
-  Hotfix-7.10x-->Hotfix;
-  Hotfix-->Develop;
-{{< /mermaid >}}
-
-Graph 3:
-{{<mermaid align="left">}}
-graph TD;
-  Bugfix{Bugfix}-->Hotfix-7.8.x;
-  Bugfix-->Hotfix-7.10x;
-  Hotfix-7.10x-->Hotfix;
-  Hotfix-->Develop;
 {{< /mermaid >}}
 
 * Separate each issue fix into a new branch in your repository (Either
