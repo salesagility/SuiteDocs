@@ -9,6 +9,55 @@ weight: 9910
 
 :experimental:
 
+== 7.8.28
+
+_Released 28th Mar 2019_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.28.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.28.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+* *Security Issue* - Fixed SQL injection
+
+[discrete]
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/5971[#5971 ] Fixed #5971 - Sending emails with Workflows using Meetings module now does not breaks the parent_id.
+* https://github.com/salesagility/SuiteCRM/issues/5967[#5967 ] Fixed #5967 - The correct calculation are displayed for date quarter periods.
+* https://github.com/salesagility/SuiteCRM/issues/5968[#5968 ] Fixed #5968 - Incorrect start date is no longer calculated for LastQuarter period when in the 4th quarter.
+* https://github.com/salesagility/SuiteCRM/issues/3592[#3592 ] Fixed #3592 - Date  does now work with any value of type 'Period'.
+* https://github.com/salesagility/SuiteCRM/issues/675[#675 ] Fixed #675 - Suitecrm 7.3.2 Calendar entries are now displayed.
+* https://github.com/salesagility/SuiteCRM/issues/5918[#5918 ] Fixed #5918 - Activity Stream does not elapse time in calculation.
+* https://github.com/salesagility/SuiteCRM/pull/7036[#7036 ] Fixed - Minimum recommended memory to 64Mb (for 7.8.x).
+* https://github.com/salesagility/SuiteCRM/issues/7067[#7067 ] Fixed #7067 - InLine Date Edit bug - Call to a member function format() on boolean
+* https://github.com/salesagility/SuiteCRM/issues/7051[#7051 ] Fixed #7051 - Fixing a limit of 2.147.483 seconds for autoRefresh
+* https://github.com/salesagility/SuiteCRM/issues/6185[#6185 ] Fixed #6185 - Top menu mouse out does not close sub
+* https://github.com/salesagility/SuiteCRM/issues/7032[#7032 ] Fixed #7032 - Add setLevelMapping method
+* https://github.com/salesagility/SuiteCRM/pull/7002[#7002] Fixed - PDF templates from setting no value when 0.00 is entered
+* https://github.com/salesagility/SuiteCRM/issues/6185[#6185 ] Fixed #6185 - Top menu mouse out does not close sub
+* https://github.com/salesagility/SuiteCRM/issues/6971[#6971 ] Fixed #6971 - Function removed instead of being Deprecated
+* https://github.com/salesagility/SuiteCRM/issues/2531[#2531 ] Fixed #2531 - 7.10.4 - Report Writer - Boolean Field will not export to CSV
+* https://github.com/salesagility/SuiteCRM/issues/5706[#5706 ] Fixed #5706 - Checkboxes in PDF.
+* https://github.com/salesagility/SuiteCRM/issues/6936[#6936 ] Fixed #6936 - Global link Employees always reset list query
+* https://github.com/salesagility/SuiteCRM/issues/6971[#6971 ] Fixed #6971 - Function removed instead of being Deprecated
+
+
+'''
+
+Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.28 as soon as possible.
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+
+'''
+
 == 7.8.27
 
 _Released 19th Feb 2019_
