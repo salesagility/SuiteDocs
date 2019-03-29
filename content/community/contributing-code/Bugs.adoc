@@ -16,6 +16,17 @@ begin making commits to the project.
 
 {{%notice info%}}If the bug you're fixing is present in `hotfix-7.8.x` then you will need to make two separate pull requests, one to `hotfix-7.8.x` and one to `hotfix-7.10.x`. The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so no more duplicates are necessary.`.{{%/notice%}}
 
+{{<mermaid align="left">}}
+graph TD;
+  Bugfix{Bugfix}-->|Your PR|Hotfix-7.8.x;
+  Hotfix-7.8.x-->|Merged Into|LTS[7.8.x Master]
+  Hotfix-->|Merged Into|Master;
+  Bugfix-->|Your PR|Hotfix-7.10x;
+  Hotfix-7.10x-->|Merged Into|710LTS[7.10.x Master]
+  Hotfix-7.10x-->|Merged Into|Hotfix;
+  Hotfix-->|Merged Into|Develop;
+{{< /mermaid >}}
+
 * Separate each issue fix into a new branch in your repository (Either
 from the `hotfix-7.8.x` or `hotfix-7.10.x` branch) and name it with the issue
 ID e.g. _bugfix_3062_ or _issue-1234_.
@@ -54,9 +65,8 @@ Request for each issue you fix – *do not* combine multiple bugfixes into
 one Pull Request.
 
 * Ensure that in your Pull Request that the base fork is
-*salesagility/SuiteCRM* and base branch is either `hotfix` or
-`hotfix-7.8.x` or `hotfix-7.10.x` with the head fork being *your repository* and a base
-branch of your unique bugfix branch e.g. _bugfix_1234_
+*salesagility/SuiteCRM* and base branch is either `hotfix-7.8.x` or `hotfix-7.10.x`
+with the head fork being *your repository* and a base branch of your unique bugfix branch e.g. _bugfix_1234_
 
 * We will automatically reject any Pull Requests made to the wrong
 branch!
