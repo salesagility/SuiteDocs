@@ -535,7 +535,7 @@ _Released 13th Sep 2018_
 * https://github.com/salesagility/SuiteCRM/issues/6244[#6244 ] Fixed #6244 - 7.8.20LTS AOR_Report fails using a date parameter
 * https://github.com/salesagility/SuiteCRM/issues/6131[#6131 ] Fixed #6131 - Issue with DetailView of Email module on 7.10.7 xampp
 * https://github.com/salesagility/SuiteCRM/pull/6243[#6243 ] Fix: Email body is the same on the detail view
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15606[CVE-2018-15606] Resolved  XSS vulnerability in “Add dashboard pages”
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15606[CVE-2018-15606] Resolved  XSS vulnerability in error message
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
