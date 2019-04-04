@@ -133,8 +133,8 @@ _Released 14th Jan 2019_
 
 === Assets
 
-* https://github.com/salesagility/SuiteCRM/archive/v7.8.24.zip[*Source code* (zip)]
-* https://github.com/salesagility/SuiteCRM/archive/v7.8.24.tar.gz[*Source code* (tar.gz)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.25.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.25.tar.gz[*Source code* (tar.gz)]
 
 === Release Notes
 
@@ -198,6 +198,7 @@ _Released 4th Dec 2018_
 * https://github.com/salesagility/SuiteCRM/issues/6240[#6240 ] Fixed #6240 - PipelineBySalesStageDashlet not converting currency
 * https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Edit View
 * https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 Import mapping publish button
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[CVE-2019-6506] Resolved  XSS vulnerability in “Add dashboard pages”
 
 *Users of ALL previous 7.8+ releases are advised to Upgrade to 7.8.24 as soon as possible.*
 

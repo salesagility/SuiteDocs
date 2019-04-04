@@ -293,6 +293,7 @@ _Released 5th Dec 2018_
 * https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
 * https://github.com/salesagility/SuiteCRM/pull/6555[#6555 ] Fixed bracket issue
 * https://github.com/salesagility/SuiteCRM/pull/6556[#6556 ] Default navigation paradigm should be used
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[CVE-2019-6506] Resolved  XSS vulnerability in “Add dashboard pages”
 
 *Users of ALL previous 7.9+ releases are advised to Upgrade to 7.10.11 as soon as possible.*
 
