@@ -765,8 +765,6 @@ $subpanel_layout = array(
 );
 ----
 
-
-
 There are three keys in the `$subpanel_layout` variable for this
 subpanel. These are:
 
@@ -782,6 +780,12 @@ subpanel. These are:
 `list_fields`::
   Defines the list of fields to be displayed in this subpanel. See the
   section on `listviewdefs.php` for more information.
+
+{{% notice info %}}
+You can find additional technical information on Subpanels' implementation in a file
+on your SuiteCRM installation: 
+link:https://github.com/salesagility/SuiteCRM/blob/master/include/SubPanel/subpanels.txt[include/SubPanel/subpanels.txt]
+{{% /notice %}}
 
 === studio.php
 

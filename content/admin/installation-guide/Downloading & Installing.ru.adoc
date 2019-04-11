@@ -127,7 +127,7 @@ chgrp ApacheUser.ApacheGroup <SuiteCRMInstallRoot> -R
 
 Пользователи, имеющие полный доступ к файлам системы, могут различаться в зависимости от используемой конфигурации системы, например: 
 
-*   www-data (Linux/Apache)
+* www-data (Linux/Apache)
 *	apache   (Linux/Apache)
 *	nobody   (Linux/Apache)
 *	IUSR_computerName (Windows/IIS)
@@ -179,7 +179,7 @@ image:image3.png[Настройки конфигурации системы]
 *	Имя сервера, на котором расположена БД (localhost – если БД расположена на этом же сервере)
 *	Имя пользователя БД
 *	Пароль к БД
-*	Имя администратора системы 
+*	Имя администратора SuiteCRM 
 *	Пароль администратора 
 *	URL дистрибутива SuiteCRM
 *	Адрес E-mail текущего пользователя

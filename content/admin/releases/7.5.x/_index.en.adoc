@@ -1,0 +1,267 @@
+---
+title: "7.5.x Releases"
+weight: 9940
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+
+:experimental:
+
+== 7.5.5
+
+_Released Jul 20, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.5.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This release resolves Multiple XSS Vulnerabilities in Yahoo YUI
+component & YUI IO Utility
+
+Removes the use of uploader.swf file (and references) within
+self-hosted YUI library that can be vulnerable to XSS attacks
+
+*Users of ALL previous releases are advised to Upgrade to 7.5.5 or 7.6.6
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+_Special thanks to
+https://github.com/salesagility/SuiteCRM/issues/1724[chadbennett] for
+alerting and helping us resolve this vulnerability._
+
+'''
+
+== 7.5.4
+
+_Released Jul 4, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.4.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.4.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This release resolves a Security vulnerability with Serialized Input, to
+prevent possible object injection attacks
+
+* Removes the option to allow serialized user input to the SuiteCRM Rest
+Client.
+* Changed serialized User input to use JSON
+
+*Users of ALL previous releases are advised to Upgrade to 7.5.4 or 7.6.5
+as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.4[here] from the SuiteCRM GitHub Repository or visit the official
+website to find the appropriate upgrade.
+
+_Special thanks to http://karmainsecurity.com[Egidio Romano] for alerting
+and helping us resolve this vulnerability._
+
+'''
+
+== 7.5.3
+
+_Released Mar 15, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.3.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.3.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+btn:[http://support.sugarcrm.com/Documentation/Sugar_Versions/6.5/CE/Sugar_Release_Notes_6.5.23/[SugarCRM version updated to 6.5.23]]
+
+[discrete]
+===== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/1080[#1080] Activity Stream Setup Undefined index: Facebook/Twitter
+* https://github.com/salesagility/SuiteCRM/issues/1076[#1076] Clicking through to Opportunities from Outcome By Month Dashlet doesn't filter correctly
+* https://github.com/salesagility/SuiteCRM/issues/1074[#1074] Error Clicking Cancel on Show Duplicates page in Leads
+* https://github.com/salesagility/SuiteCRM/issues/1073[#1073] Issue with clicking through to data on Opportunities By Lead Source By Outcome Dashlet
+* https://github.com/salesagility/SuiteCRM/issues/1068[#1068] JavaScript setModuleFieldsPendingFinishedCallback is not defined in Reports
+* https://github.com/salesagility/SuiteCRM/issues/1050[#1050] Difficulty searching on Text Area Fields when using carriage return
+* https://github.com/salesagility/SuiteCRM/issues/1066[#1066] Reports "Last Month" date period is the same as "This Month" date period
+* https://github.com/salesagility/SuiteCRM/issues/1057[#1057] Selecting Create Account and cancelling from Home screen goes to error page
+* https://github.com/salesagility/SuiteCRM/issues/1010[#1010] Calender on Mobile view shows no items
+* https://github.com/salesagility/SuiteCRM/issues/1053[#1053] Action menu background cleared after save
+* https://github.com/salesagility/SuiteCRM/issues/724[#724] Responsive theme glitch at width 981px - 991px
+* https://github.com/salesagility/SuiteCRM/issues/1040[#1040] Documentation link 404 error on user wizard
+* https://github.com/salesagility/SuiteCRM/issues/766[#766] Timezone issue for Meeting reminders
+* https://github.com/salesagility/SuiteCRM/issues/929[#929] Studio Dynamic DropDown not working
+
+*Its is recommended to update to 7.5.3 as soon as possible*
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.3[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+'''
+
+== 7.5.2
+
+_Released this Mar 7, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This is a bug fix release for SuiteCRM 7.5 release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.2[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+'''
+
+== 7.5.1
+
+_Released Jan 26, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.1.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.1.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+This is a bug fix release for SuiteCRM 7.5 release.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5.1[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+'''
+
+== 7.5.0
+
+_Released Jan 18, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+SuiteCRM 7.5, the latest cutting edge release, focuses on enhancing the
+Reports module. A full list of new functionality is detailed below:
+
+* *Cleaner Reports Interface* - Making the report writer and results view
+more user friendly and less cluttered.
+* *AND/OR Conditions* - Improving your ability to refine results using a
+mixture of OR as well as AND logical operators.
+* *New Charting Engine* - Present your report results using eye catching
+configurable charts to clearly communicate your intended metrics.
+* *Grouped Reports View* - Grouped Reports view, including dashlets, which
+can be expanded/collapsed and grouped on multiple fields.
+* *Custom file removal* - Removing a large volume of files from the custom
+directory ensuring only required custom files remain.
+* *Formatting Options* - Display dates and other key fields in a format
+effective for your audience.
+
+Download https://github.com/salesagility/SuiteCRM/releases/tag/v7.5[here] from the SuiteCRM GitHub Repository or
+https://suitecrm.com/download[visit the official website] to find the
+appropriate upgrade.
+
+'''
+
+== 7.5 Release Candidate
+
+_Released this Jan 11, 2016_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-rc.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module and introduce new charting functionality/designs.
+
+This release candidate release includes the following new features, as
+well as bug-fixes to the 7.5 Beta 2 release:
+
+* Enhancements to the User Interface.
+* Grouped Report View.
+* AND/OR reporting operators.
+* New RGraph charting engine.
+
+'''
+
+== 7.5 Beta 2
+
+_Released Dec 21, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.2.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.2.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*This is a beta release and should not be used in a production environment.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module and introduce new charting functionality/designs.
+
+This second Beta release includes enhancements to the User Interface,
+AND/OR reporting operators, new RGraph charting functionality and bug
+fixes to the 7.5 Beta 1 release.
+
+'''
+
+== 7.5 Beta
+
+_Released Dec 14, 2015_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.zip[*Source
+code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.5-beta.tar.gz[*Source
+code* (tar.gz)]
+
+=== Release Notes
+
+*Try 7.5 to preview the new features coming in SuiteCRM 7.5.*
+
+The focus of SuiteCRM 7.5 is to enhance the functionality of the native
+Reports module.
+
+The first Beta release includes enhancements to the User Interface and
+the introduction of AND/OR operators.
+
+'''
