@@ -11,9 +11,9 @@ Weight: 85
 
 :experimental:   
 
-:imagesdir: /images/ru/user/core-modules/PDFTemplates
+:imagesdir: /images/ru/user/advanced-modules/PDFTemplates
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/PDFTemplates]
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/PDFTemplates]
 
 :btn: btn:
 
@@ -85,7 +85,7 @@ image:image6.png[Настройка параметров страниц]
 
 image:image7.png[Создание PDF-документов на основе шаблона]
  
-Если для текущего модуля было создано несколько шаблонов, то они будут представлены в виде перечня, их которого необходимо выбрать нужную позицию:
+Если для текущего модуля было создано несколько шаблонов, то они будут представлены в виде перечня, из которого необходимо выбрать нужную позицию:
 
 image:image8.png[Выбор шаблона из перечня]
  
