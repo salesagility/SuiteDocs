@@ -9,9 +9,9 @@ Weight: 205
 
 :experimental:   
 
-:imagesdir: /images/ru/user/core-modules/KnowledgeBase
+:imagesdir: /images/ru/user/advanced-modules/KnowledgeBase
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/KnowledgeBase]
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/KnowledgeBase]
 
 :btn: btn:
 
