@@ -22,7 +22,7 @@ _Released 28th Mar 2019_
 
 [discrete]
 ===== Security
-* *Security Issue* - Fixed SQL injection
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[#CVE-2019-6506 ]*Security Issue* - Fixed SQL injection
 
 [discrete]
 ==== Bug Fixes
@@ -188,6 +188,11 @@ _Released 4th Dec 2018_
 
 === Release Notes
 
+[discrete]
+===== Security
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20816[CVE-2018-20816 ]*Security Issue* - Resolved  XSS vulnerability in “Add dashboard pages”
+
+[discrete]
 ==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
@@ -198,7 +203,6 @@ _Released 4th Dec 2018_
 * https://github.com/salesagility/SuiteCRM/issues/6240[#6240 ] Fixed #6240 - PipelineBySalesStageDashlet not converting currency
 * https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Edit View
 * https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 Import mapping publish button
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[CVE-2019-6506] Resolved  XSS vulnerability in “Add dashboard pages”
 
 *Users of ALL previous 7.8+ releases are advised to Upgrade to 7.8.24 as soon as possible.*
 
