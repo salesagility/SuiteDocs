@@ -9,6 +9,43 @@ weight: 9890
 
 :experimental:
 
+[[anchor-7.10.16]]
+== **7.10.16**
+
+_Released 30th April 2019_
+
+=== **Assets**
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.16.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.16.tar.gz[*Source code* (tar.gz)]
+
+=== **Release Notes**
+
+[discrete]
+
+==== **Bug Fixes**
+* https://github.com/salesagility/SuiteCRM/issues/7121[#7121 ] Fixed #7121 - API module relationship link on custom module points to module name not field name in vardefs.php.
+* https://github.com/salesagility/SuiteCRM/issues/6862[#6862 ] Fixed #6862 - API - Custom Routes file is stored separately from other custom files.
+* https://github.com/salesagility/SuiteCRM/issues/6452[#6452 ] Fixed #6452 - Api/V8 create record does not support unicode and space in attributes.
+* https://github.com/salesagility/SuiteCRM/issues/6608[#6608 ] Fixed #6608 - Pagination not working in SuiteCRM REST API v8.
+* https://github.com/salesagility/SuiteCRM/issues/6761[#6761 ] Fixed #6761 - Api/V8 - Unable to Delete (unlink) relationships.
+* https://github.com/salesagility/SuiteCRM/issues/6844[#6844 ] Fixed #6844 - Reduce test suite noise.
+* https://github.com/salesagility/SuiteCRM/issues/6689[#6689 ] Fixed #6689 - Task Due Date not showing in Opporunities subpanel .
+* https://github.com/salesagility/SuiteCRM/issues/4297[#4297 ] Fixed #4297 - Error in Listview with previously selected rows and changing to next page (pagination).
+* https://github.com/salesagility/SuiteCRM/issues/3598[#3598 ] Fixed #3598 - Web to lead multiselect fields not working.
+* https://github.com/salesagility/SuiteCRM/pull/7127[#7127 ] Fixed #7127 - Add href mailto for email links even when using internal email client.
+* https://github.com/salesagility/SuiteCRM/pull/6742[#6742 ] Fixed #6742 - Also set opt-in send/fail dates when sending emails through the action menu.
+* https://github.com/salesagility/SuiteCRM/pull/7139[#7139 ] Fixed #7139 - Fix EmailManTest::testget_list_view_data.
+* https://github.com/salesagility/SuiteCRM/pull/7102[#7102 ] Fixed #7102 - Don't delete the composer.lock when running tests on travis.
+* https://github.com/salesagility/SuiteCRM/pull/7113[#7113 ] Fixed #7113 - phpunit: Various fixes for running with StateCheckerConfig::RUN_PER_TESTS.
+* https://github.com/salesagility/SuiteCRM/pull/7126[#7126 ] Fixed #7126 - Campaigns: escape subscribe()/unsubscribe() IDs and add tests.
+* https://github.com/salesagility/SuiteCRM/pull/7129[#7129 ] Fixed #7129 - Update composer.json.
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+
 == 7.10.15
 
 _Released 28th Mar 2019_
