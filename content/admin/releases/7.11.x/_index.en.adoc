@@ -9,22 +9,26 @@ weight: 9880
 
 :experimental:
 
-[[anchor-7.11.4]]
-== **7.11.4**
+== 7.11.4
 
 _Released 30th April 2019_
 
-=== **Assets**
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.4.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.4.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== Release Notes
 
 [discrete]
+===== Security
+* *Security Issue* - Fixed SQL injection
+* *Security Issue* - Fixed XSS vulnerability
+* *Security Issue* - Fixed Oauth2 access control issue
 
-==== **Bug Fixes**
-* https://github.com/salesagility/SuiteCRM/issues/6862[#6862 ] Fixed #6862 - API - Custom Routes file is stored separately from other custom files.
+[discrete]
+==== Bug Fixes
+
 * https://github.com/salesagility/SuiteCRM/issues/7188[#7188 ] Fixed #7188 -  ACL doesn't work on JSON API V8.
 * https://github.com/salesagility/SuiteCRM/issues/6829[#6829 ] Fixed #6829 - Cache composer packages on Travis CI.
 * https://github.com/salesagility/SuiteCRM/issues/6540[#6540 ] Fixed #6540 - [language] Hard coded messages in Elasticsearch.
@@ -63,10 +67,9 @@ _Released 30th April 2019_
 * https://github.com/salesagility/SuiteCRM/pull/7176[#7176 ] - Remove codecov patch status.
 * https://github.com/salesagility/SuiteCRM/pull/7217[#7217 ] - Fix AOS_Product_Categories test name.
 
+Users of ALL previous 7.11.x releases are advised to Upgrade to 7.11.4 as soon as possible.
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
-
-
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 == 7.11.3

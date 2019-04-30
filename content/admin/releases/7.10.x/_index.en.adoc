@@ -9,23 +9,26 @@ weight: 9890
 
 :experimental:
 
-[[anchor-7.10.16]]
-== **7.10.16**
+== 7.10.16
 
 _Released 30th April 2019_
 
-=== **Assets**
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.16.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.16.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== Release Notes
 
 [discrete]
+===== Security
+* *Security Issue* - Fixed SQL injection
+* *Security Issue* - Fixed XSS vulnerability
 
-==== **Bug Fixes**
+[discrete]
+==== Bug Fixes
+
 * https://github.com/salesagility/SuiteCRM/issues/7121[#7121 ] Fixed #7121 - API module relationship link on custom module points to module name not field name in vardefs.php.
-* https://github.com/salesagility/SuiteCRM/issues/6862[#6862 ] Fixed #6862 - API - Custom Routes file is stored separately from other custom files.
 * https://github.com/salesagility/SuiteCRM/issues/6452[#6452 ] Fixed #6452 - Api/V8 create record does not support unicode and space in attributes.
 * https://github.com/salesagility/SuiteCRM/issues/6608[#6608 ] Fixed #6608 - Pagination not working in SuiteCRM REST API v8.
 * https://github.com/salesagility/SuiteCRM/issues/6761[#6761 ] Fixed #6761 - Api/V8 - Unable to Delete (unlink) relationships.
@@ -40,6 +43,8 @@ _Released 30th April 2019_
 * https://github.com/salesagility/SuiteCRM/pull/7113[#7113 ] Fixed #7113 - phpunit: Various fixes for running with StateCheckerConfig::RUN_PER_TESTS.
 * https://github.com/salesagility/SuiteCRM/pull/7126[#7126 ] Fixed #7126 - Campaigns: escape subscribe()/unsubscribe() IDs and add tests.
 * https://github.com/salesagility/SuiteCRM/pull/7129[#7129 ] Fixed #7129 - Update composer.json.
+
+Users of ALL previous 7.10.x releases are advised to Upgrade to 7.10.16 as soon as possible.
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
