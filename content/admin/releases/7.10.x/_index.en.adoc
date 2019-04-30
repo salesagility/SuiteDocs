@@ -44,6 +44,8 @@ _Released 30th April 2019_
 * https://github.com/salesagility/SuiteCRM/pull/7126[#7126 ] Fixed #7126 - Campaigns: escape subscribe()/unsubscribe() IDs and add tests.
 * https://github.com/salesagility/SuiteCRM/pull/7129[#7129 ] Fixed #7129 - Update composer.json.
 
+Users of ALL previous 7.10.x releases are advised to Upgrade to 7.10.16 as soon as possible.
+
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com

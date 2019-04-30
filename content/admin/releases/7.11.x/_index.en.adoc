@@ -67,10 +67,9 @@ _Released 30th April 2019_
 * https://github.com/salesagility/SuiteCRM/pull/7176[#7176 ] - Remove codecov patch status.
 * https://github.com/salesagility/SuiteCRM/pull/7217[#7217 ] - Fix AOS_Product_Categories test name.
 
+Users of ALL previous 7.11.x releases are advised to Upgrade to 7.11.4 as soon as possible.
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
-
-
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 == 7.11.3

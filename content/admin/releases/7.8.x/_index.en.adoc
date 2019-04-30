@@ -42,6 +42,8 @@ _Released 30th April 2019_
 * https://github.com/salesagility/SuiteCRM/pull/6048[#6048 ] - Improve where clause when removing securitygroups relationships.
 * https://github.com/salesagility/SuiteCRM/pull/7233[#7233 ] - Hotfix/Hotfix-7.10.x -> Hotfix-7.8.x.
 
+Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.29 as soon as possible.
+
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
