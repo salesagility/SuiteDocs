@@ -29,7 +29,6 @@ _Released 30th April 2019_
 ==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/7121[#7121 ] Fixed #7121 - API module relationship link on custom module points to module name not field name in vardefs.php.
-* https://github.com/salesagility/SuiteCRM/issues/6862[#6862 ] Fixed #6862 - API - Custom Routes file is stored separately from other custom files.
 * https://github.com/salesagility/SuiteCRM/issues/6452[#6452 ] Fixed #6452 - Api/V8 create record does not support unicode and space in attributes.
 * https://github.com/salesagility/SuiteCRM/issues/6608[#6608 ] Fixed #6608 - Pagination not working in SuiteCRM REST API v8.
 * https://github.com/salesagility/SuiteCRM/issues/6761[#6761 ] Fixed #6761 - Api/V8 - Unable to Delete (unlink) relationships.

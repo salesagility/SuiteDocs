@@ -29,7 +29,6 @@ _Released 30th April 2019_
 [discrete]
 ==== Bug Fixes
 
-* https://github.com/salesagility/SuiteCRM/issues/6862[#6862 ] Fixed #6862 - API - Custom Routes file is stored separately from other custom files.
 * https://github.com/salesagility/SuiteCRM/issues/7188[#7188 ] Fixed #7188 -  ACL doesn't work on JSON API V8.
 * https://github.com/salesagility/SuiteCRM/issues/6829[#6829 ] Fixed #6829 - Cache composer packages on Travis CI.
 * https://github.com/salesagility/SuiteCRM/issues/6540[#6540 ] Fixed #6540 - [language] Hard coded messages in Elasticsearch.
