@@ -9,21 +9,25 @@ weight: 9910
 
 :experimental:
 
-[[anchor-7.8.29]]
-== **7.8.29**
+== 7.8.29
 
 _Released 30th April 2019_
 
-=== **Assets**
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.29.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.8.29.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== Release Notes
 
 [discrete]
+===== Security
+* *Security Issue* - Fixed SQL injection
+* *Security Issue* - Fixed XSS vulnerability
 
-==== **Bug Fixes**
+[discrete]
+==== Bug Fixes
+
 * https://github.com/salesagility/SuiteCRM/issues/6498[#6498 ] Fixed #6498 - Inconsistencies in Leads-Accounts relationship.
 * https://github.com/salesagility/SuiteCRM/issues/7162[#7162 ] Fixed #7162 - Popup select All records btn hidden in SuiteCRM 7.11.x.
 * https://github.com/salesagility/SuiteCRM/issues/6037[#6037 ] Fixed #6037 - AOR Reports - Issue with related records in reports.

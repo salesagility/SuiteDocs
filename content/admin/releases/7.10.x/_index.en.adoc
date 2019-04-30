@@ -9,21 +9,25 @@ weight: 9890
 
 :experimental:
 
-[[anchor-7.10.16]]
-== **7.10.16**
+== 7.10.16
 
 _Released 30th April 2019_
 
-=== **Assets**
+=== Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.16.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.16.tar.gz[*Source code* (tar.gz)]
 
-=== **Release Notes**
+=== Release Notes
 
 [discrete]
+===== Security
+* *Security Issue* - Fixed SQL injection
+* *Security Issue* - Fixed XSS vulnerability
 
-==== **Bug Fixes**
+[discrete]
+==== Bug Fixes
+
 * https://github.com/salesagility/SuiteCRM/issues/7121[#7121 ] Fixed #7121 - API module relationship link on custom module points to module name not field name in vardefs.php.
 * https://github.com/salesagility/SuiteCRM/issues/6862[#6862 ] Fixed #6862 - API - Custom Routes file is stored separately from other custom files.
 * https://github.com/salesagility/SuiteCRM/issues/6452[#6452 ] Fixed #6452 - Api/V8 create record does not support unicode and space in attributes.
