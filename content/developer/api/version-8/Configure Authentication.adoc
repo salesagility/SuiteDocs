@@ -31,6 +31,8 @@ image:Admin-OAuth2Clients-3.png[Configure SuiteCRM API]
 |7.10.2 | Password Grant, Client credentials Grant
 |=======================================
 
+*Note: As of 7.11.4, "Client credentials Grant" is the grant type that should be used.*
+
 image:Admin-OAuth2Clients-4.png[Create a new grant]
 
 == Client Credentials Grant
