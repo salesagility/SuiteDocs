@@ -17,7 +17,7 @@ weight: 60
 
 | Windows | Windows Server 2008+
 
-| PHP | 5.6, 7.0, 7.1, 7.2 
+| PHP | 5.6, 7.0, 7.1, 7.2, 7.3
 
 2+^h| Web Server 
 
@@ -58,7 +58,7 @@ weight: 60
 
 | Windows | Windows Server 2008+
 
-| PHP | 5.5.9, 5.6, 7.0, 7.1, 7.2 
+| PHP | 5.5.9, 5.6, 7.0, 7.1, 7.2, 7.3
 
 2+^h| Web Server 
 
