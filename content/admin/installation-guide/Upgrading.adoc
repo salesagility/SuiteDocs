@@ -121,3 +121,31 @@ conduct the upgrade instead of the Upgrade Wizard inside the application
 if your database contains more than 10000 records per table.
 3.  Log into the application as an Administrator and use the Repair
 option to repair and rebuild the database after the upgrade is complete.
+
+== Perform update
+
+The update can be done in the following ways:
+
+ . Using the link:../using-the-upgrade-wizard[Upgrade Wizard^] directly from the SuiteCRM interface
+ . From the command line (so-called _silent upgrade_)
+
+=== Update from command line
+
+{{% notice info %}}
+Command line update is only available in version 7.11.3 and newer
+{{% /notice %}}
+
+ . Download the required link:https://suitecrm.com/upgrade-suitecrm[upgrade pack^] and 
+place it in the folder with the installed system
+ . From the folder with the installed system, run the command
+ `./vendor/bin/robo upgrade:suite [upgradeZipFile] [logFile] [pathToSuiteCRMInstance] [adminUser]`, where
+
+ * *upgradeZipFile* - downloaded upgrade package
+ * *logFile* - log file name
+ * *pathToSuiteCRMInstance* - the path to the installed SuiteCRM instance
+ * *adminUser* - name of user with administrative rights
+
+Example:
+
+[source, shell]
+ ./vendor/bin/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
