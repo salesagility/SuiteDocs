@@ -9,6 +9,45 @@ weight: 9910
 
 :experimental:
 
+== 7.8.29
+
+_Released 30th April 2019_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.29.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.29.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+* *Security Issue* - Fixed SQL injection
+* *Security Issue* - Fixed XSS vulnerability
+
+[discrete]
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/6498[#6498 ] Fixed #6498 - Inconsistencies in Leads-Accounts relationship.
+* https://github.com/salesagility/SuiteCRM/issues/7162[#7162 ] Fixed #7162 - Popup select All records btn hidden in SuiteCRM 7.11.x.
+* https://github.com/salesagility/SuiteCRM/issues/6037[#6037 ] Fixed #6037 - AOR Reports - Issue with related records in reports.
+* https://github.com/salesagility/SuiteCRM/issues/6126[#6126 ] Fixed #6126 - If field value contains single quote, on each save CRM will treat this field as a changed.
+* https://github.com/salesagility/SuiteCRM/issues/5724[#5724 ] Fixed #5724 - Map Area - Import Option Fails : An Error has occurred.
+* https://github.com/salesagility/SuiteCRM/issues/7220[#7220 ] Fixed #7220 - Description/note fields in the contract line items formats the numeric values as currency.
+* https://github.com/salesagility/SuiteCRM/issues/49[#49 ] Fixed #49 -  Support pthreads.
+* https://github.com/salesagility/SuiteCRM/issues/4297[#4297 ] Fixed #4297 - Error in Listview with previously selected rows and changing to next page (pagination). 
+* https://github.com/salesagility/SuiteCRM/pull/48[#48 ] - Browser title not correct for custom modules.
+* https://github.com/salesagility/SuiteCRM/pull/46[#46 ] - Spanish reminders added to notify template.
+* https://github.com/salesagility/SuiteCRM/pull/5745[#5745 ] - Fix #5746 - Unable to order results descending on get_relationships API method.
+* https://github.com/salesagility/SuiteCRM/pull/6048[#6048 ] - Improve where clause when removing securitygroups relationships.
+* https://github.com/salesagility/SuiteCRM/pull/7233[#7233 ] - Hotfix/Hotfix-7.10.x -> Hotfix-7.8.x.
+
+Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.29 as soon as possible.
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
 == 7.8.28
 
 _Released 28th Mar 2019_
@@ -22,7 +61,7 @@ _Released 28th Mar 2019_
 
 [discrete]
 ===== Security
-* *Security Issue* - Fixed SQL injection
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[#CVE-2019-6506 ]*Security Issue* - Fixed SQL injection
 
 [discrete]
 ==== Bug Fixes
@@ -188,6 +227,11 @@ _Released 4th Dec 2018_
 
 === Release Notes
 
+[discrete]
+===== Security
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20816[CVE-2018-20816 ]*Security Issue* - Resolved  XSS vulnerability in “Add dashboard pages”
+
+[discrete]
 ==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/6328[#6328 ] Fixed #6328 - Workflow Date - Remove incorrect branch when unserialize fails
@@ -198,7 +242,6 @@ _Released 4th Dec 2018_
 * https://github.com/salesagility/SuiteCRM/issues/6240[#6240 ] Fixed #6240 - PipelineBySalesStageDashlet not converting currency
 * https://github.com/salesagility/SuiteCRM/issues/2786[#2786 ] Fixed #2786 - Edit View
 * https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 Import mapping publish button
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[CVE-2019-6506] Resolved  XSS vulnerability in “Add dashboard pages”
 
 *Users of ALL previous 7.8+ releases are advised to Upgrade to 7.8.24 as soon as possible.*
 
