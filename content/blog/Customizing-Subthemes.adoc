@@ -16,7 +16,7 @@ and I will make some changes in order to increase the contrast in some parts of 
 <!--more-->
 
 {{% notice info %}}
-This article applies to SuiteCRM version 7.10.x only.
+This article applies only to SuiteCRM versions 7.10 or newer.
 {{% /notice %}}
 
 == Forking an existing Sub-theme
