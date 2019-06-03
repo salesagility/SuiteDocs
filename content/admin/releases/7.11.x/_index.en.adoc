@@ -9,6 +9,62 @@ weight: 9880
 
 :experimental:
 
+== 7.11.5
+
+_Released 3rd June 2019_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.5.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.5.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+[discrete]
+===== Security
+* *Security Issue* - Fixed SQL Injection: InboundEmail.php
+* *Security Issue* - Fixed SQL Injection: reassignUserRecords.php
+* *Security Issue* - Survey module: Inputs are not sanitized (security issue)
+* *Security Issue* - Fix possible SQL injection
+
+[discrete]
+
+==== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/6882[#6882 ] Fixed #6882 - Email Address Removed if email is forwarded using outlook.
+* https://github.com/salesagility/SuiteCRM/issues/6869[#6869 ] Fixed #6869 - Saving user resets preferences.
+* https://github.com/salesagility/SuiteCRM/issues/6851[#6851 ] Fixed #6851 - The query fails while managing event delegates in MSSQL.
+* https://github.com/salesagility/SuiteCRM/issues/7133[#7133 ] Fixed #7133 - Changes in Studio do not make an override file.
+* https://github.com/salesagility/SuiteCRM/issues/6445[#6445 ] Fixed #6445 - Campaigns Wizard - EMail Template "Assigned to" issue.
+* https://github.com/salesagility/SuiteCRM/issues/7241[#7241 ] Fixed #7241 - Some files still use the DB global variable.
+* https://github.com/salesagility/SuiteCRM/issues/7310[#7310 ] Fixed #7310 - 7.10.x-hotfix CI is failing.
+* https://github.com/salesagility/SuiteCRM/issues/7174[#7174 ] Fixed #7174 - /Api/V8 needs the ability to return a list of modules.
+* https://github.com/salesagility/SuiteCRM/issues/7175[#7175 ] Fixed #7175 - /Api/V8 needs the ability to a list of module's fields.
+* https://github.com/salesagility/SuiteCRM/issues/6420[#6420 ] Fixed #6420 - Campaigns: Test-Emails sent out twice.
+* https://github.com/salesagility/SuiteCRM/issues/5652[#5652 ] Fixed #5652 - Ending spaces in language strings.
+* https://github.com/salesagility/SuiteCRM/issues/6915[#6915 ] Fixed #6915 - File OAuth2Tokens/metadata/editviewdefs.php is Missing.
+* https://github.com/salesagility/SuiteCRM/issues/7250[#7250 ] Fixed #7250 - Notices in ListViews.
+* https://github.com/salesagility/SuiteCRM/issues/7183[#7183 ] Fixed #7183 - My Cases dashlet searchFields status default values are incorrect.
+* https://github.com/salesagility/SuiteCRM/issues/7288[#7288 ] Fixed #7288 - Field name in Campaigns is too short.
+* https://github.com/salesagility/SuiteCRM/issues/7271[#7271 ] Fixed #7271 - Email Template selection in email module is not working for 7.10.16.
+* https://github.com/salesagility/SuiteCRM/issues/7291[#7291 ] Fixed #7291 - Field name in ProspectLists is too short.
+* https://github.com/salesagility/SuiteCRM/issues/7268[#7268 ] Fixed #7268 - Fatal Error with PHP7.3 with LoggerManager.php.
+* https://github.com/salesagility/SuiteCRM/issues/6504[#6504 ] Fixed #6504 - Multiple bounce handling problems.
+* https://github.com/salesagility/SuiteCRM/issues/7107[#7107 ] Fixed #7107 - SQL errors with sql_mode=STRICT_TRANS_TABLES.
+* https://github.com/salesagility/SuiteCRM/pull/7173[#7173 ] - Fix V8 API authorization header passing with apache+php-fpm.
+* https://github.com/salesagility/SuiteCRM/pull/7263[#7263 ] - Travis due date fix.
+* https://github.com/salesagility/SuiteCRM/pull/7273[#7273 ] - install.php: Syntax error upload logo.
+* https://github.com/salesagility/SuiteCRM/pull/7290[#7290 ] - RFC: travis-ci: add a job for PHP 7.3.
+* https://github.com/salesagility/SuiteCRM/pull/7297[#7297 ] - Fix support forum link.
+* https://github.com/salesagility/SuiteCRM/pull/7240[#7240 ] - EmailTemplates: Improve image url replacement.
+* https://github.com/salesagility/SuiteCRM/pull/4198[#4198 ] - fixing a recursion issue on reminders.
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.11.4
 
 _Released 30th April 2019_
