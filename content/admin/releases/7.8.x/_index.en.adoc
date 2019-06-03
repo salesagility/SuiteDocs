@@ -9,39 +9,6 @@ weight: 9910
 
 :experimental:
 
-== 7.8.30
-
-_Released 3rd June 2019_
-
-=== Assets
-
-* https://github.com/salesagility/SuiteCRM/archive/v7.8.30.zip[*Source code* (zip)]
-* https://github.com/salesagility/SuiteCRM/archive/v7.8.30.tar.gz[*Source code* (tar.gz)]
-
-=== Release Notes
-
-[discrete]
-===== Security
-* *Security Issue* - Fixed SQL Injection: InboundEmail.php
-* *Security Issue* - Fixed SQL Injection: reassignUserRecords.php
-* *Security Issue* - Fix possible SQL injection
-
-[discrete]
-
-==== Bug Fixes
-* https://github.com/salesagility/SuiteCRM/issues/7133[#7133 ] Fixed #7133 - Changes in Studio do not make an override file.
-* https://github.com/salesagility/SuiteCRM/pull/7274[#7274 ] Fixed #7274 - Fixed install syntax error.
-* https://github.com/salesagility/SuiteCRM/pull/6387[#6387 ] Fixed #6387 - Bug fix create language cache in multilanguage system.
-* https://github.com/salesagility/SuiteCRM/pull/7274[#7274 ] Fixed #7274 - Fixed install syntax error.
-* https://github.com/salesagility/SuiteCRM/pull/7246[#7246 ] Fixed #7246 - Add return to function.
-
-
-Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
-
-To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
-
-'''
-
 == 7.8.29
 
 _Released 30th April 2019_
@@ -80,8 +47,6 @@ Users of ALL previous 7.8.x releases are advised to Upgrade to 7.8.29 as soon as
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
-
-'''
 
 == 7.8.28
 
