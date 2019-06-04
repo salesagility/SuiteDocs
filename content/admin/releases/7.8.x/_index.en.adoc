@@ -28,7 +28,6 @@ _Released 3rd June 2019_
 
 
 
-
 ==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/7133[#7133 ] Fixed #7133 - Changes in Studio do not make an override file.
 * https://github.com/salesagility/SuiteCRM/pull/7274[#7274 ] Fixed #7274 - Fixed install syntax error.

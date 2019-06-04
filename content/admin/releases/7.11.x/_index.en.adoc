@@ -27,8 +27,6 @@ _Released 3rd June 2019_
 * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12598[#CVE-2019-12598 ]*Security Issue* - Fix possible SQL injection
 * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12599[#CVE-2019-12599 ]*Security Issue* - Survey module: Inputs are not sanitized (security issue)
 
-
-
 ==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/6882[#6882 ] Fixed #6882 - Email Address Removed if email is forwarded using outlook.
 * https://github.com/salesagility/SuiteCRM/issues/6869[#6869 ] Fixed #6869 - Saving user resets preferences.
