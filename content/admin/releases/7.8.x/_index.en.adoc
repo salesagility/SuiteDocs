@@ -22,9 +22,9 @@ _Released 3rd June 2019_
 
 
 ==== Security
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12601[#CVE-2019-12601 ]*Security Issue* - Fix possible SQL Injection: InboundEmail.php
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12600[#CVE-2019-12600 ]*Security Issue* - Fix possible SQL Injection: reassignUserRecords.php
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12598[#CVE-2019-12598 ]*Security Issue* - Fix possible SQL injection
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12601[#CVE-2019-12601 ] - *Security Issue* - Fix possible SQL Injection: InboundEmail.php
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12600[#CVE-2019-12600 ] - *Security Issue* - Fix possible SQL Injection: reassignUserRecords.php
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12598[#CVE-2019-12598 ] - *Security Issue* - Fix possible SQL injection
 
 
 

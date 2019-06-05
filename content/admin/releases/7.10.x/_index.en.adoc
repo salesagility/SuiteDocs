@@ -22,10 +22,10 @@ _Released 3rd June 2019_
 
 
 ==== Security
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12601[#CVE-2019-12601 ]*Security Issue* - Fix possible SQL Injection: InboundEmail.php
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12600[#CVE-2019-12600 ]*Security Issue* - Fix possible SQL Injection: reassignUserRecords.php
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12598[#CVE-2019-12598 ]*Security Issue* - Fix possible SQL injection
-* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12599[#CVE-2019-12599 ]*Security Issue* - Survey module: Inputs are not sanitized (security issue)
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12601[#CVE-2019-12601 ] - *Security Issue* - Fix possible SQL Injection: InboundEmail.php
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12600[#CVE-2019-12600 ] - *Security Issue* - Fix possible SQL Injection: reassignUserRecords.php
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12598[#CVE-2019-12598 ] - *Security Issue* - Fix possible SQL injection
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12599[#CVE-2019-12599 ] - *Security Issue* - Survey module: Inputs are not sanitized (security issue)
 
 
 
@@ -46,7 +46,6 @@ _Released 3rd June 2019_
 * https://github.com/salesagility/SuiteCRM/issues/7291[#7291 ] Fixed #7291 - Field name in ProspectLists is too short.
 * https://github.com/salesagility/SuiteCRM/issues/7268[#7268 ] Fixed #7268 - Fatal Error with PHP7.3 with LoggerManager.php.
 * https://github.com/salesagility/SuiteCRM/issues/6504[#6504 ] Fixed #6504 - Multiple bounce handling problems.
-* https://github.com/salesagility/SuiteCRM/issues/7107[#7107 ] Fixed #7107 - SQL errors with sql_mode=STRICT_TRANS_TABLES.
 * https://github.com/salesagility/SuiteCRM/pull/7173[#7173 ] - Fix V8 API authorization header passing with apache+php-fpm.
 * https://github.com/salesagility/SuiteCRM/pull/7263[#7263 ] - Travis due date fix.
 * https://github.com/salesagility/SuiteCRM/pull/7273[#7273 ] - install.php: Syntax error upload logo.
