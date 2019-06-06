@@ -9,6 +9,56 @@ weight: 9890
 
 :experimental:
 
+== 7.10.17
+
+_Released 3rd June 2019_
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.17.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.17.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes
+
+
+==== Security
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12601[#CVE-2019-12601 ] - *Security Issue* - Fix possible SQL Injection: InboundEmail.php
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12600[#CVE-2019-12600 ] - *Security Issue* - Fix possible SQL Injection: reassignUserRecords.php
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12598[#CVE-2019-12598 ] - *Security Issue* - Fix possible SQL injection
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12599[#CVE-2019-12599 ] - *Security Issue* - Survey module: Inputs are not sanitized (security issue)
+
+
+
+==== Bug Fixes
+* https://github.com/salesagility/SuiteCRM/issues/7133[#7133 ] Fixed #7133 - Changes in Studio do not make an override file.
+* https://github.com/salesagility/SuiteCRM/issues/6445[#6445 ] Fixed #6445 - Campaigns Wizard - EMail Template "Assigned to" issue.
+* https://github.com/salesagility/SuiteCRM/issues/7241[#7241 ] Fixed #7241 - Some files still use the DB global variable.
+* https://github.com/salesagility/SuiteCRM/issues/7310[#7310 ] Fixed #7310 - 7.10.x-hotfix CI is failing.
+* https://github.com/salesagility/SuiteCRM/issues/7174[#7174 ] Fixed #7174 - /Api/V8 needs the ability to return a list of modules.
+* https://github.com/salesagility/SuiteCRM/issues/7175[#7175 ] Fixed #7175 - /Api/V8 needs the ability to a list of module's fields.
+* https://github.com/salesagility/SuiteCRM/issues/6420[#6420 ] Fixed #6420 - Campaigns: Test-Emails sent out twice.
+* https://github.com/salesagility/SuiteCRM/issues/5652[#5652 ] Fixed #5652 - Ending spaces in language strings.
+* https://github.com/salesagility/SuiteCRM/issues/6915[#6915 ] Fixed #6915 - File OAuth2Tokens/metadata/editviewdefs.php is Missing.
+* https://github.com/salesagility/SuiteCRM/issues/7250[#7250 ] Fixed #7250 - Notices in ListViews.
+* https://github.com/salesagility/SuiteCRM/issues/7183[#7183 ] Fixed #7183 - My Cases dashlet searchFields status default values are incorrect.
+* https://github.com/salesagility/SuiteCRM/issues/7288[#7288 ] Fixed #7288 - Field name in Campaigns is too short.
+* https://github.com/salesagility/SuiteCRM/issues/7271[#7271 ] Fixed #7271 - Email Template selection in email module is not working for 7.10.16.
+* https://github.com/salesagility/SuiteCRM/issues/7291[#7291 ] Fixed #7291 - Field name in ProspectLists is too short.
+* https://github.com/salesagility/SuiteCRM/issues/7268[#7268 ] Fixed #7268 - Fatal Error with PHP7.3 with LoggerManager.php.
+* https://github.com/salesagility/SuiteCRM/issues/6504[#6504 ] Fixed #6504 - Multiple bounce handling problems.
+* https://github.com/salesagility/SuiteCRM/pull/7173[#7173 ] - Fix V8 API authorization header passing with apache+php-fpm.
+* https://github.com/salesagility/SuiteCRM/pull/7263[#7263 ] - Travis due date fix.
+* https://github.com/salesagility/SuiteCRM/pull/7273[#7273 ] - install.php: Syntax error upload logo.
+* https://github.com/salesagility/SuiteCRM/pull/7290[#7290 ] - RFC: travis-ci: add a job for PHP 7.3.
+* https://github.com/salesagility/SuiteCRM/pull/7297[#7297 ] - Fix support forum link.
+* https://github.com/salesagility/SuiteCRM/pull/7240[#7240 ] - EmailTemplates: Improve image url replacement.
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.10.16
 
 _Released 30th April 2019_
@@ -20,12 +70,12 @@ _Released 30th April 2019_
 
 === Release Notes
 
-[discrete]
-===== Security
+
+==== Security
 * *Security Issue* - Fixed SQL injection
 * *Security Issue* - Fixed XSS vulnerability
 
-[discrete]
+
 ==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/7121[#7121 ] Fixed #7121 - API module relationship link on custom module points to module name not field name in vardefs.php.
@@ -62,11 +112,11 @@ _Released 28th Mar 2019_
 
 === Release Notes
 
-[discrete]
-===== Security
+
+==== Security
 * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6506[#CVE-2019-6506 ]*Security Issue* - Fixed SQL injection
 
-[discrete]
+
 ==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/7101[#7101 ] Fix (little) v8 API for v7.10.10+
@@ -134,7 +184,7 @@ _Released 19th Feb 2019_
 
 === Release Notes
 
-[discrete]
+
 
 ==== Bug Fixes
 
@@ -232,7 +282,7 @@ _Released 14th Jan 2019_
 
 === Release Notes
 
-[discrete]
+
 
 
 ==== Enhancements
@@ -322,11 +372,11 @@ _Released 5th Dec 2018_
 
 === Release Notes
 
-[discrete]
-===== Security
+
+==== Security
 * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20816[CVE-2018-20816 ]*Security Issue* - Resolved  XSS vulnerability in “Add dashboard pages”
 
-[discrete]
+
 ==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/2635[#2635 ] Fixed #2635 - Import mapping publish button
@@ -456,14 +506,14 @@ _Released 13th Sep 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 * https://github.com/salesagility/SuiteCRM/pull/5577[#5577 ] Feature/collapsed subpanel row count
 * https://github.com/salesagility/SuiteCRM/pull/6017[#6017 ] Feature - allow users to send email as themselves w/ System outgoing
 
-[discrete]
 
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/2172[#2172 ] Fixed #2172 - Inline edit issue if you click on pencil icon - revised
 * https://github.com/salesagility/SuiteCRM/issues/4265[#4265 ] Fixed #4265 - PHP strict error
@@ -610,12 +660,12 @@ _Released 18th Jun 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
 
-[discrete]
+==== Enhancements
 
-===== Bug Fixes
+
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/4035[#4035 ] Fixed #4035 - Upgrade on 7.9.4 Content in emails are same in body for all emails
 * https://github.com/salesagility/SuiteCRM/issues/6025[#6025 ] Fixed #6025 - Newsletter campaign target list selection broken
@@ -644,16 +694,16 @@ _Released 6th Jun 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5957[#5957 ] Email performance
 * https://github.com/salesagility/SuiteCRM/pull/5911[#5911 ] Acceptance testing
 * https://github.com/salesagility/SuiteCRM/pull/5864[#5864 ] Adding CodeCov Badge To README.md
 * https://github.com/salesagility/SuiteCRM/pull/5959[#5959 ] Composer html purifier
 
-[discrete]
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/pull/5984[#5984 ] Small css fix
 * https://github.com/salesagility/SuiteCRM/issues/5955[#5955 ] Fixed #5955 - Allow emailing from address links in SubPanels
@@ -709,8 +759,8 @@ _Released 21st May 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5733[#5733 ] Feature - Lawful Basis for GDPR
 * https://github.com/salesagility/SuiteCRM/pull/5750[#5750 ] Feature - Mocking
@@ -719,9 +769,9 @@ _Released 21st May 2018_
 * https://github.com/salesagility/SuiteCRM/pull/5735[#5735 ] Feature - Codecov support
 * https://github.com/salesagility/SuiteCRM/pull/5735[#5735 ] Feature - Robo task for chrome web driver
 
-[discrete]
 
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5663[#5663 ] Fixed #5663 - AOR_Reports Date issues
 * https://github.com/salesagility/SuiteCRM/pull/5877[#5563 ] Report tests
@@ -780,9 +830,9 @@ _Released 9th Apr 2018_
 
 === Release Notes
 
-[discrete]
 
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5677[#5677 ] Fixed #5677 - Building new modules in builder do not work
 * https://github.com/salesagility/SuiteCRM/pull/5674[#5674 ] Fix - Correcting From Name/Address in stored options to show in compose from dropdown
@@ -830,15 +880,15 @@ _Released 3rd Apr 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/4808[#4808 ] Feature - Sort modules by name
 * https://github.com/salesagility/SuiteCRM/pull/5517[#5517 ] Feature - Replace icons in studio and module builder
 
-[discrete]
 
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5548[#5548 ] Fixed #5548 - GDPR: confirmed opt-in
 * https://github.com/salesagility/SuiteCRM/issues/5461[#5461 ] Fixed #5461 - Edit labels
@@ -912,8 +962,8 @@ _Released 15th Mar 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5431[#5431 ] Feature - admin icons
 * https://github.com/salesagility/SuiteCRM/pull/5457[#5457 ] Feature - studio icons
@@ -921,9 +971,9 @@ _Released 15th Mar 2018_
 * https://github.com/salesagility/SuiteCRM/pull/5421[#5421 ] Feature - api upgrade safe
 * https://github.com/salesagility/SuiteCRM/pull/5421[#5421 ] Feature - api acl access
 
-[discrete]
 
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5424[#5424 ] Fixed #5424 - Missing add product menu while using PL language - 7.10.1
 * https://github.com/salesagility/SuiteCRM/issues/3510[#3510 ] Fixed #3510 - function getRelatedFields() missing from data/Link2.php on 7.8.3
@@ -974,14 +1024,14 @@ _Released 5th Mar 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/5273[#5273 ] Convert SuiteP Icons to font icons
 * https://github.com/salesagility/SuiteCRM/pull/5321[#5321 ] API client admin panel
 
-[discrete]
-===== Bug Fixes
+
+==== Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/5267[#5267 ] Fixed #5267 - "Failed to retrieve data" error in studio
 * https://github.com/salesagility/SuiteCRM/pull/5323[#5323 ] Remove word "error" from a debug message
@@ -1042,8 +1092,8 @@ _Released 19th Feb 2018_
 
 === Release Notes
 
-[discrete]
-===== Enhancements
+
+==== Enhancements
 
 * *Refined SuiteP theme* - New Slimmed down SuiteP Design.
 * *4 SuiteP colour schemes* - Pick a range of different colour schemes to suit your workspace.
@@ -1059,8 +1109,8 @@ _Released 19th Feb 2018_
 * Improved Email Performance
 * Email Fixes
 
-[discrete]
-===== Bug Fixes
+
+==== Bug Fixes
 * https://github.com/salesagility/SuiteCRM/issues/5267[#5267 ] Fixed #5267 - "Failed to retrieve data" error in studio
 * https://github.com/salesagility/SuiteCRM/pull/5323[#5323 ] Remove word "error" from a debug message
 * https://github.com/salesagility/SuiteCRM/issues/5317[#5317 ] Fixed #5317 - Reports sort by formatted date rather than actual date
