@@ -12,7 +12,7 @@ title: "Appendix C - Automated Testing"
 
 == Introduction
 
-Automated testing provides a means to ensure that the high quality of SuiteCRM is maintained. SuiteCRM has an automated test framework which is powered by the http://codeception.com[codeception] testing framework.
+Automated testing provides a means to ensure that the high quality of SuiteCRM is maintained. SuiteCRM has an automated test suite which is powered by the http://codeception.com[codeception] testing framework.
 
 === Installing the testing framework
 
@@ -30,19 +30,18 @@ SuiteCRM offers many different test suites.
 
 [width="80",cols="30,50",options="header",]
 |=======================================================================
-| Suite | Description
+| Suite      | Description
 
-| acceptance | ensure that the software meets requirements of a user story
-| functional | ensure that the subsystems of the code base interact correctly
-| unit | Unit tests reflect that a single unit of code eg a method
-| api | functional test which test the api version 8 responses
-| install | acceptance test to test that the install wizard is working correctly
-| demo | used to test the suitecrm demo site
+| acceptance | Automated browser testing, also known as 'feature tests'
+| unit       | Unit tests reflect that a single unit of code, e.g. a method, is working
+| api        | Functional tests which test the API version 8 responses
+| install    | Acceptance test to test that the install wizard is working correctly
+| demo       | Used to test the SuiteCRM demo site
 |=======================================================================
 
 
 === Running Codeception for the first time
-Codeception and the other commands live inside the vendor/bin/ directory of your SuiteCRM instance. To test that your configuration is working you need to first install your copy of suitecrm. After installing SuiteCRM you can run the unit tests:
+Codeception and the other commands live inside the `vendor/bin/`` directory of your SuiteCRM instance. To test that your configuration is working you need to first install your copy of SuiteCRM. After installing SuiteCRM you can run the acceptance tests:
 
 `./vendor/bin/codecept run unit`
 
@@ -57,23 +56,19 @@ To run the unit test, you just need to the install the testing framework.
 
 You can continue to run the unit test suite using the command:
 
-`./vendor/bin/codecept run unit`
+`./vendor/bin/phpunit --colors --configuration ./tests/phpunit.xml.dist ./tests/unit/phpunit`
 
-=== Functional and API tests
+=== API tests
 
-The functional and api tests require that you import the database (or .sql) files which exist the tests/_data folder. You also need to configure the test environment variables.
-
-You can run the functional test suite using the command:
-
-`./vendor/bin/codecept run functional`
+The API tests require that you import the database (or `.sql`) files which exist the `tests/_data` folder. You also need to configure the test environment variables.
 
 You can run the api test suite using the command:
 
 `./vendor/bin/codecept run api`
 
-=== Acceptance, Demo and Install tests
+=== Acceptance, Demo, and Install tests
 
-The acceptance, demo and install tests require the test environment to be configured. You will also need to have en external testing browser service such as https://docs.seleniumhq.org/[Selenium] or https://www.browserstack.com/[Browser Stack].
+The acceptance, demo, and install tests require the test environment to be configured.
 
 You can run the acceptance test suite using the command:
 
@@ -100,14 +95,14 @@ This allows you to call the codecept command without having to prefix the comman
 
 `cd /path/to/suitecrm/instance/`
 
-`codecept run unit`
+`codecept run acceptance`
 
 == Configuring the test environment
 
 SuiteCRM requires you to configure the automated test with your development environment. There are a number of ways to configure your environment.
 
-* You can configure the automated test by adding an yml file to the tests/_envs folder
-* You can edit the yml files for each test suite
+* You can configure the automated tests by adding a `.yml` file to the `tests/_envs` folder
+* You can edit the `.yml` files for each test suite
 * You can set up environment variables in the terminal or command prompt (recommended)
 
 
@@ -122,47 +117,46 @@ You can automate different development environments using environment variables.
 
 [width="80",cols="30,50",options="header",]
 |=======================================================================
-| Variable | Description
+| Variable          | Description
 
-| DATABASE_DRIVER | MYSQL or MSSQL
-| DATABASE_HOST |path to database server
-| DATABASE_NAME |name of the database
-| DATABASE_USER |database user
-| DATABASE_PASSWORD |database password
+| DATABASE_DRIVER   | MYSQL or MSSQL
+| DATABASE_HOST     | path to database server
+| DATABASE_NAME     | name of the database
+| DATABASE_USER     | database user
+| DATABASE_PASSWORD | database password
 |=======================================================================
 
 *Acceptance, API, and Install Test Suites:*
 |=======================================================================
-| Variable | Description
+| Variable                | Description
 
-| INSTANCE_URL |URL of the SuiteCRM instance which the tester need to access
-| INSTANCE_ADMIN_USER |admin user for logging in
-| INSTANCE_ADMIN_PASSWORD |admin password for logging in
+| INSTANCE_URL            | URL of the SuiteCRM instance which the tester need to access
+| INSTANCE_ADMIN_USER     | admin user for logging in
+| INSTANCE_ADMIN_PASSWORD | admin password for logging in
 |=======================================================================
 
 
 *API Test Suites:*
 |=======================================================================
-| Variable | Description
-
-| INSTANCE_CLIENT_ID |id of the client
-| INSTANCE_CLIENT_SECRET |secret of the client
+| Variable               | Description
+| INSTANCE_CLIENT_ID     | ID of the client
+| INSTANCE_CLIENT_SECRET | Secret of the client
 |=======================================================================
 
 ==== Setup environment variables (bash):
-Open terminal and run robo
+Open terminal and run Robo
 
 `./vendor/bin/robo configure:tests`
 
 ==== Setup environment variables (Command Prompt):
 
-Open terminal and run robo
+Open terminal and run Robo
 
 `.\vendor\bin\robo configure:tests`
 
 ==== Setup environment variables (Docker Compose):
 
-You can add a .env file into your docker compose setup:
+You can add a `.env` file into your Docker Compose setup:
 
 [source,bash]
 DATABASE_DRIVER=MYSQL
@@ -176,7 +170,7 @@ INSTANCE_ADMIN_PASSWORD=admin
 INSTANCE_CLIENT_ID=suitecrm_client
 INSTANCE_CLIENT_SECRET=secret
 
-then reference it in your php container (docker-compose.yml):
+then reference it in your php container (`docker-compose.yml`):
 
 [source,docker]
 version: '3'
@@ -200,22 +194,20 @@ services:
 
 == Running the test environment
 
-The SuiteCRM automated testing framework can support different environments. You can see the different configurations for test environments in tests/_env folder. There are different prefixes fore each testing environment you choose to deploy.
+The SuiteCRM automated testing framework can support different environments. You can see the different configurations for test environments in `tests/_env` folder. There are different prefixes fore each testing environment you choose to deploy.
 
-* selenium- Configures the features for selenium web driver environment
-* browser-stack- Configures features for browser stack environment
-* travis-ci- Configures features for travis-ci environment
+* selenium - Configures the features for selenium web driver environment
+* travis-ci - Configures features for travis-ci environment
 
-
-To run the tests in a single environment, add a --env flag to the codecept command; separating each configuration by a comma:
+To run the tests in a single environment, add a `--env` flag to the codecept command; separating each configuration by a comma:
 
 `codecept run acceptance --env selenium-hub,selenium-iphone-6`
 
 It is also possible to run multi environments at the same time by adding multiple --env flags:
 
-`codecept run acceptance --env selenium-hub,selenium-iphone-6  --env selenium-hub,selenium-hd --env browser-stack,browser-stack-ipad-2`
+`codecept run acceptance --env selenium-hub,selenium-iphone-6  --env selenium-hub,selenium-hd`
 
-The tests will be executed 3 times, once for each environment
+The tests will be executed 2 times, once for each environment
 
 
 === Selenium
@@ -224,7 +216,7 @@ The SuiteCRM testing framework can be configured to use selenium as the browser 
 
 ==== Using Selenium with a local PHP environment
 
-You may prefer to run in a local PHP environment instead of using docker compose. This requires you to have selenium running locally on your computer. When running in a local environment you do not need to include the selenium-hub environment variable. Instead, you must choose whichever browser you have set up locally:
+You may prefer to run in a local PHP environment instead of using Docker Compose. This requires you to have Selenium running locally on your computer. When running in a local environment you do not need to include the selenium-hub environment variable. Instead, you must choose whichever browser you have set up locally:
 
 `codecept run demo --env selenium-chrome`
 
@@ -273,13 +265,13 @@ Here are the different configurations for each target device we test for:
 
 [width="80",cols="60,20",options="header",]
 |=======================================================================
-| Device | Resolution
+| Device            | Resolution
 
 | selenium-iphone-6 | 375x667
-| selenium-ipad-2 | 768x1024
-| selenium-xga | 1024x768
-| selenium-hd | 1280x720
-| selenium-fhd | 1920x1080
+| selenium-ipad-2   | 768x1024
+| selenium-xga      | 1024x768
+| selenium-hd       | 1280x720
+| selenium-fhd      | 1920x1080
 |=======================================================================
 
 ==== Run Selenium Hub
@@ -298,55 +290,6 @@ You can select the browser you wish to test by adding it to the --env.
 or
 
 `codecept run demo --env selenium-hub,selenium-firefox`
-
-=== Browser Stack
-The SuiteCRM testing framework can be configured to use browser stack service. It requires an account with Browser Stack that enables automated testing. You also need to configure the testing framework with your username and access key. You can get your details from the https://www.browserstack.com/automate[automate] menu item.
-
-==== Environment Variables
-
-Browser Stack requires some extra environment variables to be configured:
-
-*Browser Stack:*
-|=======================================================================
-| Variable | Description
-
-| BROWSERSTACK_USERNAME |browser stack user name
-| BROWSERSTACK_ACCESS_KEY |access to to use browser stack
-|=======================================================================
-
-==== Browser stack local
-
-When you need to test a application that resides on a private server you will need to run the browser-stack-local env option:
-
-`codecept run demo --env browser-stack-hub,browser-stack-local`
-
-==== Devices
-
-Here are the different configurations for each target device we test for:
-
-[width="80",cols="60,20",options="header",]
-|=======================================================================
-| Device | Resolution
-
-| browser-stack-chrome-fhd | 1920x1080
-| browser-stack-edge-fhd | 1920x1080
-| browser-stack-firefox-fhd | 1920x1080
-| browser-stack-safari-fhd | 11920x1080
-| browser-stack-iphone-6 | 375x667
-| browser-stack-ipad-2 | 768x1024
-|=======================================================================
-
-using the following command:
-
-`codecept run demo --env browser-stack-hub,browser-stack-local,browser-stack-chrome-fhd`
-
-== Code Coverage Infos
-
-terminal command:
-`./vendor/bin/codecept run unit --coverage --coverage-html`
-
-output in:
-`path/to/SuiteCRM/tests/_output/coverage/index.html`
 
 == Writing and Running Tests
 
@@ -373,7 +316,7 @@ class ExampleTest extends StateCheckerPHPUnitTestCaseAbstract {
     
     public function testDoingSomething() {
         $example = new Example();
-        $results = $example->goSomthing();
+        $results = $example->doSomething();
         $this->assertSame('expected value', $results);
     }
     
@@ -382,39 +325,12 @@ class ExampleTest extends StateCheckerPHPUnitTestCaseAbstract {
 --
 
 See more about PHPUnit tests at https://phpunit.readthedocs.io
-  
-=== Codeception Unit Tests
 
-Codeception also supports unit tests based on the PHPUnit framework.
-See more about Codeception unit tests at https://codeception.com/docs/05-UnitTests
+=== Codeception Acceptance Tests
 
-*Example for a Codeception Unit Test*
+Implementation of state-safe acceptance tests.
 
-[source,php]
---
-
-use SuiteCRM;
-
-// note: SuiteCRM\StateCheckerUnitAbstract extends \Codeception\Test\Unit;
-
-
-class ExampleTest extends StateCheckerUnitAbstract
-{
-    public function testDoingSomething()
-    {
-        $example = new Example();
-        $results = $example->goSomthing();
-        $this->assertSame('expected value', $results);
-    }
-}
-
---
-
-=== Codeception Functional and Acceptance Tests
-
-Implementation of state safe functional and acceptance tests.
-
-*Example for Functional and/or Acceptance tests*
+*Example for Acceptance tests*
 
 [source,php]
 --
@@ -441,12 +357,6 @@ Implementation of state checker Codeception tests, class StateCheckerPHPUnitTest
 
 ---
 
- - abstract class `SuiteCRM\StateCheckerUnitAbstract`
-
-Implementation of state checker Codeception tests, class StateCheckerUnitAbstract extends Codeception\Test\Unit and override _before() and _after() methods so if you want to call these methods in the inheritance test classes you should call parent::_before() and parent::_after() in it.
-
----
-
  - abstract class `SuiteCRM\StateCheckerCestAbstract`
 
 Implementation of state checker Codeception tests, it uses _before() and _after() methods so if you want to call these methods in the heritance test classes you should call parent::_before() and parent::_after() in it.
@@ -464,37 +374,9 @@ Used in state checker Codeception tests.
 Used in state checker tests.
 
 
----
+ - Configuration of state checker tests - see `SuiteCRM\StateCheckerConfig` class.
 
- - Running all unit tests class:
-
-`$ vendor/bin/codecept run unit -f --steps -vvv --debug`
-
-
- - Running only one unit tests class:
-
-`$ vendor/bin/codecept run unit -f --steps -vvv --debug /path/to/YourTest.php`
-
-
- - Running unit tests state check per classes
-
-By default the state checker tests store and check the system state only before and after the test classes. + 
-You can manipulate this behavior in your `config_override.php` with + 
-`$sugar_config['state_checker']['test_state_check_mode']` value OR + 
-just simply switch on/off the developer mode in administration panel. + 
-See more at `class SuiteCRM\StateCheckerConfig`
-
- - Running unit tests state check per methods
-
-Slow working but give a detailed information about which test method change the state in the class. + 
-You can manipulate this behavior in your `config_override.php` with + 
-`$sugar_config['state_checker']['test_state_check_mode']` value OR + 
-just simply switch on/off the developer mode in administration panel. + 
-See more at `class SuiteCRM\StateCheckerConfig`
-
- - Configuration of state checker tests -see `SuiteCRM\StateCheckerConfig` class.
-
-=== State Safe Tests
+=== State-Safe Tests
 `StateSaver` and `StateChecker`
 
 - State check library for SuperGlobals, FileSystem and DataBase etc.
@@ -572,74 +454,6 @@ $stateSaver->popTable('stufftable');
 
 // restore your database table 'stufftable' here.
 
---
-
- - Examples for Check System State in Tests:
-
-
-Example output when the test redefines superglobals:
-
-for e.g:
-
-       `$_POST['foo'] = 'bar';`
-
-output:
-[source,shell]
---
-"/usr/bin/php" "/var/www/html/SuiteCRM/vendor/bin/codecept" "run" "unit" "-f" "--steps" "-vvv" "--debug"
-Cannot load Xdebug - extension already loaded
-Codeception PHP Testing Framework v2.4.0
-Powered by PHPUnit 4.8.36 by Sebastian Bergmann and contributors.
-
-Unit Tests (1583) --------------------------------------------------------------
-Modules: Asserts, \Helper\Unit
---------------------------------------------------------------------------------
-- configTest: Test_config
-✖ configTest: Test_config (16.57s)
---------------------------------------------------------------------------------
-
-
-Time: 29.52 seconds, Memory: 2288.50MB
-
-There was 1 failure:
-
----------
-1) configTest: Test_config
- Test  tests/unit/configTest.php:test_config
-Incorrect state hash: Hash doesn't match at key "globals::_POST"
-...
---
-
-Example 2: file changed:
-
-
-        `file_put_contents('foo.txt', rand(0, 1234));`
-
-output:
-[source,shell]
---
-"/usr/bin/php" "/var/www/html/SuiteCRM/vendor/bin/codecept" "run" "unit" "-f" "--steps" "-vvv" "--debug"
-Cannot load Xdebug - extension already loaded
-Codeception PHP Testing Framework v2.4.0
-Powered by PHPUnit 4.8.36 by Sebastian Bergmann and contributors.
-
-Unit Tests (1583) --------------------------------------------------------------
-Modules: Asserts, \Helper\Unit
---------------------------------------------------------------------------------
-- configTest: Test_config
-✖ configTest: Test_config (10.79s)
---------------------------------------------------------------------------------
-
-
-Time: 23.12 seconds, Memory: 1875.00MB
-
-There was 1 failure:
-
----------
-1) configTest: Test_config
- Test  tests/unit/configTest.php:test_config
-Incorrect state hash: Hash doesn't match at key "filesys::/var/www/html/SuiteCRM/foo.txt".
-...
 --
 
  - Example usage for System State Saver in test scripts:
@@ -1386,5 +1200,4 @@ $sugar_config['show_log_trace'] = false; // set to true for more details
 
 * http://codeception.com[codeception]
 * https://docs.seleniumhq.org/[Selenium]
-* https://www.browserstack.com/[Browser Stack]
 
