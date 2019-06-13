@@ -18,9 +18,9 @@ Automated testing provides a means to ensure that the high quality of SuiteCRM i
 
 In your terminal emulator or command prompt:
 
-`cd /path/to/suitecrm/instance`
+`cd path/to/suitecrm/instance`
 
-Run the command:
+Install dependencies from Composer:
 
 `composer install`
 
@@ -32,17 +32,17 @@ SuiteCRM offers many different test suites.
 |=======================================================================
 | Suite      | Description
 
+| install    | Acceptance test to test that the install wizard is working correctly
 | acceptance | Automated browser testing, also known as 'feature tests'
 | unit       | Unit tests reflect that a single unit of code, e.g. a method, is working
 | api        | Functional tests which test the API version 8 responses
-| install    | Acceptance test to test that the install wizard is working correctly
 |=======================================================================
 
 
 === Running Codeception for the first time
-Codeception and the other commands live inside the `vendor/bin/`` directory of your SuiteCRM instance. To test that your configuration is working you need to first install your copy of SuiteCRM. After installing SuiteCRM you can run the acceptance tests:
+Codeception and the other commands live inside the `vendor/bin/` directory of your SuiteCRM instance. To test that your configuration is working you need to first install your copy of SuiteCRM. After installing SuiteCRM and downloading ChromeDriver you can run the acceptance tests:
 
-`./vendor/bin/codecept run unit`
+`./vendor/bin/codecept run acceptance`
 
 
 == Requirements
@@ -51,11 +51,11 @@ Each tests suite has its own set of requirements.
 
 === Unit tests
 
-To run the unit test, you just need to the install the testing framework.
+To run the unit test, you just need to install the testing framework.
 
-You can continue to run the unit test suite using the command:
+You can run the unit tests with the following:
 
-`./vendor/bin/phpunit --colors --configuration ./tests/phpunit.xml.dist ./tests/unit/phpunit`
+- `./vendor/bin/phpunit --colors --configuration ./tests/phpunit.xml.dist ./tests/unit/phpunit`
 
 === API tests
 
@@ -69,16 +69,18 @@ You can run the api test suite using the command:
 
 The acceptance and install tests require the test environment to be configured.
 
+They also require ChromeDriver to be running so the tests can connect to Chrome.
+
 You can run the acceptance test suite using the command:
 
 `./vendor/bin/codecept run acceptance`
 
-You can run the api test suite using the command:
+You can run the install test suite using the command:
 
-`./vendor/bin/codecept run api`
+`./vendor/bin/codecept run install`
 
 
-== Add vendor bin to your PATH
+== Add `vendor/bin` to your PATH
 
 This will make it easier to run codeception and the other commands which live in vendor/bin/ directory. You can add the vendor/bin location to your PATH environment variable.
 
@@ -90,7 +92,7 @@ This will make it easier to run codeception and the other commands which live in
 
 `set PATH=%PATH%;C:\path\to\instance\vendor\bin`
 
-This allows you to call the codecept command without having to prefix the command with its location. When running codecept you should ensure that your current working directory is the same as your suitecrm instance.
+This allows you to call the codecept command without having to prefix the command with its location. When running codecept you should ensure that your current working directory is the same as your SuiteCRM instance.
 
 `cd /path/to/suitecrm/instance/`
 
@@ -143,13 +145,14 @@ You can automate different development environments using environment variables.
 |=======================================================================
 
 ==== Setup environment variables (bash):
-Open terminal and run Robo
+
+Open terminal and run Robo:
 
 `./vendor/bin/robo configure:tests`
 
 ==== Setup environment variables (Command Prompt):
 
-Open terminal and run Robo
+Open terminal and run Robo:
 
 `.\vendor\bin\robo configure:tests`
 
@@ -206,7 +209,7 @@ It is also possible to run multi environments at the same time by adding multipl
 
 `codecept run acceptance --env selenium-hub,selenium-iphone-6  --env selenium-hub,selenium-hd`
 
-The tests will be executed 2 times, once for each environment
+The tests will be executed 2 times, once for each environment.
 
 
 === Selenium
