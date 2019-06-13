@@ -36,7 +36,6 @@ SuiteCRM offers many different test suites.
 | unit       | Unit tests reflect that a single unit of code, e.g. a method, is working
 | api        | Functional tests which test the API version 8 responses
 | install    | Acceptance test to test that the install wizard is working correctly
-| demo       | Used to test the SuiteCRM demo site
 |=======================================================================
 
 
@@ -66,9 +65,9 @@ You can run the api test suite using the command:
 
 `./vendor/bin/codecept run api`
 
-=== Acceptance, Demo, and Install tests
+=== Acceptance and Install tests
 
-The acceptance, demo, and install tests require the test environment to be configured.
+The acceptance and install tests require the test environment to be configured.
 
 You can run the acceptance test suite using the command:
 
@@ -218,7 +217,7 @@ The SuiteCRM testing framework can be configured to use selenium as the browser 
 
 You may prefer to run in a local PHP environment instead of using Docker Compose. This requires you to have Selenium running locally on your computer. When running in a local environment you do not need to include the selenium-hub environment variable. Instead, you must choose whichever browser you have set up locally:
 
-`codecept run demo --env selenium-chrome`
+`codecept run acceptance --env selenium-chrome`
 
 
 ==== Using Docker Compose with the Selenium Hub
@@ -285,11 +284,11 @@ Here are the different configurations for each target device we test for:
 
 You can select the browser you wish to test by adding it to the --env.
 
-`codecept run demo --env selenium-hub,selenium-chrome`
+`codecept run acceptance --env selenium-hub,selenium-chrome`
 
 or
 
-`codecept run demo --env selenium-hub,selenium-firefox`
+`codecept run acceptance --env selenium-hub,selenium-firefox`
 
 == Writing and Running Tests
 
