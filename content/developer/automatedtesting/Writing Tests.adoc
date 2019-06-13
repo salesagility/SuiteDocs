@@ -1,11 +1,9 @@
 
 ---
-weight: 23
-title: "Automated Testing"
+title: "Writing Tests"
 ---
 
 :toc:
-:toclevels: 4
 
 
 == PHPUnit tests
