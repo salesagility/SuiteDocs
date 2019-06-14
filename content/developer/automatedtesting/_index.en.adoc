@@ -100,7 +100,7 @@ Note that these variables will apply for the entire device, so if you have more 
 
 == Running the test suites
 
-Once they're set up, you can run the different test suites with the following commands:
+Once they're set up, you can run the test suites with the following commands:
 
 |=======================================================================
 | Suite      | Command
@@ -132,7 +132,7 @@ To run the tests in a single environment, add a `--env` flag to the codecept com
 
 `codecept run acceptance --env selenium-hub,selenium-iphone-6`
 
-It is also possible to run multi environments at the same time by adding multiple --env flags:
+It's also possible to run multiple environments at the same time by adding multiple `--env` flags:
 
 `codecept run acceptance --env selenium-hub,selenium-iphone-6  --env selenium-hub,selenium-hd`
 
