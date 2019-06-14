@@ -98,6 +98,21 @@ This will interactively add the necessary environment variables to your `~/.bash
 
 Note that these variables will apply for the entire device, so if you have more than one CRM set up locally they'll all use the same configuration.
 
+== Running the test suites
+
+Once they're set up, you can run the different test suites with the following commands:
+
+|=======================================================================
+| Suite      | Command
+
+| install    | `./vendor/bin/codecept run install`
+| acceptance | `./vendor/bin/codecept run acceptance`
+| unit       | `./vendor/bin/phpunit --colors --configuration ./tests/phpunit.xml.dist ./tests/unit/phpunit`
+| api        | `./vendor/bin/codecept run api`
+|=======================================================================
+
+Note that the install test suite can only be run once currently, and all other test suites depend on the CRM being installed. The install and acceptance test suites use automated browser testing with Chrome and require that the user runs a separate ChromeDriver process simultaneously with the test suite.
+
 == Configuring the test environment
 
 SuiteCRM requires you to configure the automated test with your development environment. There are a number of ways to configure your environment.
