@@ -8,13 +8,13 @@ SuiteCRM provides an automated to task to assist with the configuration of the t
 
 === Configure Testing Environment (bash):
 
-Open terminal and run robo
+Open terminal and run Robo:
 
 `./vendor/bin/robo configure:tests`
 
-=== Configure Testing Environment(Command Prompt):
+=== Configure Testing Environment (Command Prompt):
 
-Open Command Prompt and run robo
+Open Command Prompt and run Robo:
 
 `.\vendor\bin\robo configure:tests`
 
