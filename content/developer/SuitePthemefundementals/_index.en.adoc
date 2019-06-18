@@ -1,8 +1,14 @@
 ---
-title: "SuiteP Theme Fundementals"
+title: "Theme"
 weight: 20
 pre: "<b>2. </b>"
 ---
 
 === Table of Contents
-{{% children depth="4" showhidden="false" %}}
+{{% children depth="2" showhidden="false" %}}
+
+· List of fonts & Colours used
+· Fonts & Icons
+· File path to icons
+· Sass compiler
+· Adding ew Sass file
