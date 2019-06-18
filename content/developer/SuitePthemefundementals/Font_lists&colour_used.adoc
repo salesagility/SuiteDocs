@@ -13,7 +13,11 @@ title: Fonts and Colours
 == Colours
 '''
 
-image:colours.png[123]
+image:colours.png[alt=HELLO,width=100,height=100]
+
+''''
+
+image:colours.png[alt_text, role="left"]
 
 ''''
 
