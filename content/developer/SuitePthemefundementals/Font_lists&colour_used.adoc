@@ -13,11 +13,9 @@ title: Fonts and Colours
 == Colours
 '''
 
-image:colours.png[alt=HELLO,width=100,height=100]
+image:#534D64.png[role=left,alt=HELLO,width=50,height=100] - #534D64 - standard body text colour.
 
-''''
-
-image:colours.png[alt_text, role="left"]
+image:#F5F5F5.png[role=left,alt=HELLO,width=50,height=100] - #F5F5F5 - main background colour.
 
 ''''
 
