@@ -118,12 +118,12 @@ table caption {
 
 /* these styles are built especially for the Compatibility Matrix page tables: */
 [id*="smaller-table-spacing"] {
-        line-height: 0;
+        line-height: 1.0;
         max-width: 600px;
 }
 [id*="smaller-table-spacing"] p {
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 0px;
+        margin-bottom: 0px;
 }
 
 thead {
