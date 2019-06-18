@@ -5,10 +5,11 @@ pre: "<b>2. </b>"
 ---
 
 === Table of Contents
-{{% children depth="2" showhidden="false" %}}
+//{{% children depth="2" showhidden="false" %}}
 
-· List of fonts & Colours used
-· Fonts & Icons
-· File path to icons
-· Sass compiler
-· Adding ew Sass file
+* link:/developer/SuitePthemefundementals/Font_lists&colour_used.adoc[List of fonts & Colours used]
+* link:/developer/SuitePthemefundementals/Fonts&icons.adoc[Fonts & Icons]
+* link:/developer/SuitePthemefundementals/File_path_to_icon.adoc[File path to icons]
+* link:/developer/SuitePthemefundementals/Sass_compiler.adoc[Sass compiler]
+* link:/developer/SuitePthemefundementals/Adding_new_sass_file.adoc[Adding ew Sass file]
+
