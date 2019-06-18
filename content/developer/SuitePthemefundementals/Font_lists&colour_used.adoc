@@ -8,14 +8,30 @@ title: Fonts and Colours
 == Fonts
 '''
 * There is just one font used within the design, this uses Google fonts.
-* The font used is Lato.
+* The font used is Lato, click https://fonts.google.com/specimen/Lato[here] to view.
 
 == Colours
 '''
 
-image:534D64.png[float=left] - #534D64 - standard body text colour. +
+image:colour2.png[float=left]  #534D64 - standard body text colour +
+                               #F5F5F5 - main background colour +
+                               #534D64 - navbar +
+                               #778591 - sidebar +
+                               #E6E6E6 - footer/panels within page +
+                               #94A6B5 - sidebar buttons +
+                               #8499AB - sidebar buttons hover +
+                               #F08377 - red button +
+                               #D66C60 - red button hover +
+                               #AA9DCC - purple button +
+                               #9589b3 - purple button hover +
+                               #778591 - table headers +
+                               #BFCAD3 - table navigation bar +
+                               #D8F5EE - input colour when in edit screen +
+                               #FAF7CF - rollover colour of table rows +
+                               #5D5670 - main menu dropdown background colour +
+                               #B29Eb5 - create menu dropdown background colour +
+                               #FFFFFF - alternate rows in list view +
 
-image:F5F5F5.png[float=left] - #F5F5F5 - main background colour. +
 
 
 '''
