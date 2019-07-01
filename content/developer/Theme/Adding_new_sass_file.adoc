@@ -3,3 +3,14 @@ title: "Adding New Sass File"
 weight: 20
 pre: "<b>2. </b>"
 ---
+
+=== When you need to add a new Sass file.
+
+* Create the <name>.css in the _themes/SuiteP/css/_ directory.
+* Add the <name>.css and <name>.css.map to the .gitignore.
+* Add the following to the top of <name>.scss
+
+....
+/**** <Feature name>*** /
+@import 'variables';
+....
