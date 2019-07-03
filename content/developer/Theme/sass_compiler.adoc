@@ -4,16 +4,10 @@ weight: 4
 pre: "<b>2. </b>"
 ---
 
----
-title: "Sass"
-weight: 4
-pre: "<b>2. </b>"
----
-
 
 *From SuiteCRM version 7.8, the SuiteP theme is written in Sass. Which enables developers and system admins to easily configure the SuiteP theme; thanks to the variables.scss file. To ensure that your changes are not overidden by the compile/build process; In order to change the style of the SuiteP theme you MUST edit the sass files instead of the css files.*
 
-'''
+
 
 == About Sass
 
@@ -38,8 +32,6 @@ There are many Sass compilers available. So you can pick the one you prefer. How
 * Commit just the .scss file to git
 * Compile style.scss with the php compiler
 * Commit style.css +
- +
- +
 
 === Typical Workflow for the Product
 '''
@@ -48,7 +40,7 @@ There are many Sass compilers available. So you can pick the one you prefer. How
 * Change a .scss file
 * Commit just the .scss file to git
 * Make a pull request. Under the "How To Test" section" add "Rebuild sass". +
- +
+
 
 _Don't commit style.css as we do not want any more bloat added to the product. Style.css will be built during the release process._ +
  +
