@@ -1,0 +1,26 @@
+---
+title: "SuiteP Icons Font"
+weight: 20
+pre: "<b>2. </b>"
+---
+
+Since 7.9, SuiteCRM has a new font called suitepicon which takes all the icons of SuiteP and turns them into a font. Then means that you can easily change the colors and styling of the icons while keeping them in an optimised format.
+
+To use the icons you need to specify the css classes which are defined in the font:
+
+....
+<span class="suitepicon action-first"></span>
+....
+
+*Locations:*
+
+* themes/SuiteP/css/suitepicon.eot
+* themes/SuiteP/css/suitepicon.html
+* themes/SuiteP/css/suitepicon.json
+* themes/SuiteP/css/suitepicon.scss
+* themes/SuiteP/css/suitepicon.svg
+* themes/SuiteP/css/suitepicon.ttf
+* themes/SuiteP/css/suitepicon.woff
+* themes/SuiteP/css/suitepicon-glyphs.scss
+
+'''
