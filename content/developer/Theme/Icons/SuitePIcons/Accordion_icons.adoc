@@ -4,8 +4,10 @@ weight: 20
 pre: "<b>2. </b>"
 ---
 
+:experimental:
+
 :imagesdir: ./../../../../../static/images/en/developer/theme-icons/
 
 '''
 
-image:Accordion_image.png[Accordion image]
+image:Accordion_image.png[title="Accordion image"]
