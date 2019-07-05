@@ -1,11 +1,13 @@
 ---
-title: "How to Create Font"
+title: "How to Create a Font"
 weight: 6
 pre: "<b> </b>"
 ---
 
 == Requirements
 '''
+
+Pull down the Suite-P-Icon-Font repository from github - https://github.com/salesagility/SuiteP-Icon-Font[click here to take you to the repository] - Then continue on to the steps provided below.
 
 ....
 sudo npm install -g svgo
