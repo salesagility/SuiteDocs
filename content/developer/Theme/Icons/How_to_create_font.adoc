@@ -1,0 +1,43 @@
+---
+title: "How to Create Font"
+weight: 6
+pre: "<b> </b>"
+---
+
+== Requirements
+'''
+
+....
+sudo npm install -g svgo
+sudo npm install -g icon-font-generator
+....
+
+== Icon Creation Process
+'''
+
+Create a build folder
+
+....
+mkdir /tmp/suitepicon/
+....
+
+Add new uncleaned icons to build folder
+
+Use inkscape
+
+* remove any masks and clipping
+* resize the icons to 1024x1024
+* use svgo to compress svgo
+
+Use svgo to clean / compress the svgs:
+
+....
+svgo -f /tmp/suitepicon/ -o src
+....
+
+== Build Icon Set
+'''
+
+....
+icon-font-generator src/*svg -o suitepicon --mono --center -p suitepicon --csspath suitepicon/suitepicon-glyphs.scss --name suitepicon
+....
