@@ -40,9 +40,12 @@ You can set up the CRM for testing with these steps:
   - `mysql -u root -p -e "GRANT ALL PRIVILEGES ON automated_tests.* TO 'automated_tests'@'localhost';"`
 - Configure environment variables, see environment variables section below for more information.
 - Configure your Apache server so the SuiteCRM server is available at http://localhost (or whatever instance URL you've set up in the previous step).
-- Install http://chromedriver.chromium.org[ChromeDriver] so you can use it to automate the Chrome browser (you'll also need Chrome or Chromium installed): `./vendor/bin/robo driver:run-chrome` 
-  - You'll also need an instance of ChromeDriver running in the background for the test suite to use, you can use `./vendor/bin/robo driver:run-chrome` to run a ChromeDriver instance. This is necessary for the install and acceptance suites.
+- Install http://chromedriver.chromium.org[ChromeDriver] so you can use it to automate the Chrome browser (you'll also need Chrome or Chromium installed): `./vendor/bin/robo chromedriver:install` 
+  - You'll also need an instance of ChromeDriver running in the background for the test suite to use, you can use `./vendor/bin/robo chromedriver:run` to run a ChromeDriver instance. This is necessary for the install and acceptance suites.
+  - You can update your ChromeDriver version if necessary with `./vendor/bin/robo chromedriver:install --reinstall`.
 - Build test dependencies with `./vendor/bin/codecept build`.
+- Set up the custom codeception environment to enable running the install and acceptance tests locally.
+  - See "Configuring the test environment" below.
 - Install SuiteCRM.
   - This can be done either by running the install suite or by going through the install process in your browser. It should be available at http://localhost/install.php.
 - Populate the database with test data for the API test suite. Replace `DATABASE_NAME` with your configured MySQL database's name, probably `automated_tests` if you followed the instructions above.
@@ -79,7 +82,6 @@ This is the preferred method to store sensitive information, as it prevents secu
 | INSTANCE_ADMIN_PASSWORD | admin password for logging in
 |=======================================================================
 
-
 *API Test Suites:*
 |=======================================================================
 | Variable               | Description
@@ -98,6 +100,16 @@ This will interactively add the necessary environment variables to your `~/.bash
 
 Note that these variables will apply for the entire device, so if you have more than one CRM set up locally they'll all use the same configuration.
 
+== Configuring the test environment
+
+It's recommended that you run the test suite with a custom environment set up, to make sure the test suite knows where the CRM instance is, and to allow you to customize the environment to support debugging if necessary. Copy `tests/_envs/custom.dist.yml` to `tests/_envs/custom.yml` and read through the file's comments to configure your environment. `custom.yml` won't be tracked by git, so it can be customized to work with your local environment without being reset or accidentally committed.
+
+You can run codeception tests in a given environment like so: `./vendor/bin/codecept run acceptance --env custom`
+
+Note that the `custom` environment is only meant for use with the acceptance and install test suites. There's also the `travis-ci-hub.yml` environment, which is meant for running the tests in Travis CI.
+
+See the [Codeception documentation](https://codeception.com/docs/reference/Configuration) for more information on configuring the environment.
+
 == Running the test suites
 
 Once they're set up, you can run the test suites with the following commands:
@@ -113,72 +125,7 @@ Once they're set up, you can run the test suites with the following commands:
 
 Note that the install test suite can only be run once currently, and all other test suites depend on the CRM being installed. The install and acceptance test suites use automated browser testing with Chrome and require that the user runs a separate ChromeDriver process simultaneously with the test suite.
 
-== Configuring the test environment
-
-SuiteCRM requires you to configure the automated test with your development environment. There are a number of ways to configure your environment.
-
-* You can configure the automated tests by adding a `.yml` file to the `tests/_envs` folder
-* You can edit the `.yml` files for each test suite - this isn't recommended because these files are tracked in Git.
-* You can set up environment variables in the terminal or command prompt (recommended)
-
-== Running the test environment
-
-The SuiteCRM automated testing framework can support different environments. You can see the different configurations for test environments in `tests/_env` folder. There are different prefixes fore each testing environment you choose to deploy.
-
-* selenium - Configures the features for selenium web driver environment
-* travis-ci - Configures features for travis-ci environment
-
-To run the tests in a single environment, add a `--env` flag to the codecept command; separating each configuration by a comma:
-
-`codecept run acceptance --env selenium-hub,selenium-iphone-6`
-
-It's also possible to run multiple environments at the same time by adding multiple `--env` flags:
-
-`codecept run acceptance --env selenium-hub,selenium-iphone-6  --env selenium-hub,selenium-hd`
-
-The tests will be executed 2 times, once for each environment.
-
-=== Selenium
-
-The SuiteCRM testing framework can be configured to use Selenium as the browser service.
-
-==== Using Selenium with a local PHP environment
-
-You may prefer to run in a local PHP environment instead of using Docker Compose. This requires you to have Selenium running locally on your computer. When running in a local environment you do not need to include the selenium-hub environment variable. Instead, you must choose whichever browser you have set up locally:
-
-`codecept run acceptance --env selenium-chrome`
-
-==== Screen Resolutions / Fake Devices
-
-Here are the different configurations for each target device we test for:
-
-[width="80",cols="60,20",options="header",]
-|=======================================================================
-| Device            | Resolution
-
-| selenium-iphone-6 | 375x667
-| selenium-ipad-2   | 768x1024
-| selenium-xga      | 1024x768
-| selenium-hd       | 1280x720
-| selenium-fhd      | 1920x1080
-|=======================================================================
-
-==== Run Selenium Hub
-
-`codecept run acceptance --env selenium-hub,selenium-xga`
-
-*Please note:* that the SuiteCRM automated test framework uses *height* and *width* values to define the window size instead of the window_size. window_size is ignored by the automated test framework.
-
-
-==== Selecting Browser
-
-You can select the browser you wish to test by adding it to the --env.
-
-`codecept run acceptance --env selenium-hub,selenium-chrome`
-
-or
-
-`codecept run acceptance --env selenium-hub,selenium-firefox`
+== Other configuration options
 
 === Docker
 
@@ -226,7 +173,7 @@ services:
 
 In your selenium development environment it is recommended that you employ docker compose to set up a selenium hub with a selenium node. This will ensure your version of Chrome or Firefox is kept up-to-date with the latest version. In addition, you can also run multiple versions of PHP on the same host machine.
 
-You can configure selenium using docker compose. Please ensure you have the following in your docker-compose.yml file.
+You can configure selenium using docker compose. Please ensure you have the following in your `docker-compose.yml` file.
 
 [source,docker]
 version: '3'
