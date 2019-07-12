@@ -1,66 +1,40 @@
 ---
 Title: "Update a Language Pack"
-Weight: 50
+Weight: 60
 ---
 
 :experimental: ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../../images/en/admin/install-guide/
-
-'''
+:imagesdir: /images/en/admin/install-guide/
 
 {{% notice warning %}}
 If you have an older translation version already installed you need to remove previous pack and upload a new one.
 {{% /notice %}}
 
-*After finishing you need to perform an "Admin / Quick rebuild" to your SuiteCRM instance!*
+In overview, the process for updating a Language Pack is
 
-{{% notice note %}}
-Permission issue may prevent your new language to be installed.
-{{% /notice %}}
+. Uninstall the old language pack
+. Run a Quick Repair and Rebuild
+. Install the new language pack
+. Run a Quick Repair and Rebuild
 
-'''
+== Steps to remove old pack
 
-== Steps
+. Login as English
+image:17.png[17.png] +
+. Go to Admin / Module Loader
+image:18.png[18.png] +
+image:19.png[19.png] +
+. Uninstall previous language pack by clicking btn:[Uninstall] followed by btn:[Commit]
+image:20.png[20.png] +
+image:21.png[21.png] +
+. Go to Admin / Repair / Quick Repair and Rebuild
+image:22.png[22.png] +
+image:23.png[23.png] +
+image:24.png[24.png] +
+image:25.png[25.png] +
+. Logout
 
-1 - Login as English
+== Steps to install the updated language pack
 
-image:17.png[17.png]
-
-'''
-
-2 - Go to Admin / Module Loader
-
-image:18.png[18.png] image:19.png[19.png]
-
-'''
-
-3 - Uninstall previous language pack
-
-a)image:20.png[20.png]
-
-'''
-
-b)image:21.png[21.png]
-
-'''
-
-4 - Go to 'Admin / Repair / Quick Repair and Rebuild'
-
-image:22.png[22.png]
-
-image:23.png[23.png]
-
-image:24.png[24.png]
-
-image:25.png[25.png]
-
-'''
-
-5 - Logout
-
-'''
-
-=== Now you can install the updated language pack!
-
-See link:/admin/installation-guide/languages/download-languages/[tutorial here]
+Just follow the normal link:/admin/installation-guide/languages/install-a-new-language/[installation steps].
