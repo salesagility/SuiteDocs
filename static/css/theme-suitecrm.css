@@ -1278,6 +1278,9 @@ h1.home-title {
       background: rgba(255, 255, 255, 0.5);
       cursor: pointer;
    }
+   .sey-show {
+      z-index: 10000;
+   }
 }
 
 @media only all and (max-width: 610px) {
