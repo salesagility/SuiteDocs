@@ -5,24 +5,24 @@ pre: "<b> </b>"
 ---
 
 
-*From SuiteCRM version 7.8, the SuiteP theme is written in Sass. Which enables developers and system admins to easily configure the SuiteP theme; thanks to the variables.scss file. To ensure that your changes are not overidden by the compile/build process; In order to change the style of the SuiteP theme you MUST edit the sass files instead of the css files.*
-
+{{% notice info %}}
+From SuiteCRM version 7.8, the SuiteP theme is written in Sass. Which enables developers and system admins to easily configure the SuiteP theme; thanks to the `variables.scss` file. To ensure that your changes are not overidden by the compile/build process; In order to change the style of the SuiteP theme you must edit the sass files instead of the css files.
+{{% /notice %}}
 
 
 == About Sass
 
 '''
-Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized, and get small stylesheets up and running quickly, particularly with the help of the Compass style library. +
+Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized, and get small stylesheets up and running quickly, particularly with the help of the Compass style library.
 
-Please see the https://sass-lang.com/documentation[Sass Documentation] for more information about Sass. +
- +
- +
+Please see the https://sass-lang.com/documentation[Sass Documentation] for more information about Sass.
+
 
 === About Sass Compliers and Git
 '''
-There are many Sass compilers available. So you can pick the one you prefer. However, you should not run multiple compilers at the same time as this can cause problems. Each compiler will generate the style.css file with different color and measurement formats. This can create unnecessary bloat in your git repository. So in order to reduce the file size of your git repository, before you commit style.css to git, you *should* use the Scss PHP Compiler. Please also only include the style.css in your last commit, this also helps to reduce the repository file size. The Scss PHP Compiler can be a little slow. You may wish to use an other compiler while you are working on the css. You may have to turn off the auto compilation / file watcher of your compiler before compiling with Sccs PHP. +
- +
- +
+There are many Sass compilers available. So you can pick the one you prefer. However, you should not run multiple compilers at the same time as this can cause problems. Each compiler will generate the style.css file with different color and measurement formats. This can create unnecessary bloat in your git repository. So in order to reduce the file size of your git repository, before you commit style.css to git, you *should* use the Scss PHP Compiler. Please also only include the style.css in your last commit, this also helps to reduce the repository file size. The Scss PHP Compiler can be a little slow. You may wish to use an other compiler while you are working on the css. You may have to turn off the auto compilation / file watcher of your compiler before compiling with Sccs PHP.
+
+
 
 === Typical Workflow for Projects
 '''
@@ -31,7 +31,7 @@ There are many Sass compilers available. So you can pick the one you prefer. How
 * Change a .scss file
 * Commit just the .scss file to git
 * Compile style.scss with the php compiler
-* Commit style.css +
+* Commit style.css
 
 === Typical Workflow for the Product
 '''
@@ -39,21 +39,19 @@ There are many Sass compilers available. So you can pick the one you prefer. How
 * Commit just the .scss file to git
 * Change a .scss file
 * Commit just the .scss file to git
-* Make a pull request. Under the "How To Test" section" add "Rebuild sass". +
+* Make a pull request. Under the "How To Test" section" add "Rebuild sass".
 
-
-_Don't commit style.css as we do not want any more bloat added to the product. Style.css will be built during the release process._ +
- +
- +
+{{% notice info %}}
+Don't commit style.css as we do not want any more bloat added to the product. Style.css will be built during the release process.
+{{% /notice %}}
 
 === Setting Up A Compiler
 '''
-Here are a few guides on how to set up a compiler for Sass. +
- +
+Here are a few guides on how to set up a compiler for Sass.
 
 === Scss PHP Compiler
 '''
-The http://leafo.net/scssphp/[Scss PHP] which used in SuiteP 7.8 or above, ensures that SuiteCRM can compile the Sass code. It also ensures that the style.css uses the same color and measurement formats. +
+The http://leafo.net/scssphp/[Scss PHP] which used in SuiteP 7.8 or above, ensures that SuiteCRM can compile the Sass code. It also ensures that the style.css uses the same color and measurement formats.
 
 ==== Install Composer
 ....
@@ -74,7 +72,7 @@ composer install
 
 * Open a terminal
 * cd /path/to/your/instance
-* Run +
+* Run
 
 *Pre 7.10*
 ....
@@ -93,43 +91,43 @@ composer install
 
 === Styling SuiteP
 '''
-The style of each feature of SuiteCRM is broken down into seperate css files. This helps to make the compiler slightly faster and it also helps to make the CSS more organised. The style.scss file is the main stylesheet file. Meaning that it imports all of the other stylesheets into style.css. The variables.scss is the stylesheet that contains all of the colors and measurements which can be easily configured. +
- +
+The style of each feature of SuiteCRM is broken down into separate css files. This helps to make the compiler slightly faster and it also helps to make the CSS more organised. The style.scss file is the main stylesheet file. Meaning that it imports all of the other stylesheets into style.css. The variables.scss is the stylesheet that contains all of the colors and measurements which can be easily configured.
 
-*https://docs.suitecrm.com/community/contributing-code/coding-standards/[Please ensure that your css complies with our style guide] and http://csslint.net/[please check your code in css lint for issue before committing.]* +
+
+https://docs.suitecrm.com/community/contributing-code/coding-standards/[Please ensure that your css complies with our style guide] and http://csslint.net/[please check your code in css lint for issue before committing.]
 
 ==== File Structure
 
-Here is a list of each section currently used. +
+Here is a list of each section currently used.
 
-* variables.scss
-* studio.scss
-* style.scss
-** tabs.scss
-** sidebar.scss
-** projects.scss
-** panels.scss
-** navbar.scss
-** main.scss
-** login.scss
-** listview.scss
-** forms.scss
-** editview.scss
-** detailview.scss
-** dashboard.scss
-** cases.scss
-** campaigns.scss
-** calendar.scss
-** admin.scss
-* yui.scss
+* `variables.scss`
+* `studio.scss`
+* `style.scss`
+** `tabs.scss`
+** `sidebar.scss`
+** `projects.scss
+** `panels.scss`
+** `navbar.scss`
+** `main.scss`
+** `login.scss`
+** `listview.scss`
+** `forms.scss`
+** `editview.scss`
+** `detailview.scss`
+** `dashboard.scss`
+** `cases.scss`
+** `campaigns.scss`
+** `calendar.scss`
+** `admin.scss`
+* `yui.scss`
 
 ==== Adding New Sass Files
 
 When you need to add a new Sass file.
 
-* Create the <name>.scss in the themes/SuiteP/css/ directory.
-* Add the <name>.css and <name>.css.map to the .gitignore
-* Add the following to the top of <name>.scss
+* Create the `<name>.scss` in the themes/SuiteP/css/ directory.
+* Add the `<name>.css` and `<name>.css.map` to the .gitignore
+* Add the following to the top of `<name>.scss`
 ....
 /**** <Feature name> ***/
 @import 'variables';
@@ -148,7 +146,7 @@ Let's say you wanted to style the background color a feature element in the Suit
 </div>
 ....
 
-* Add the your variable to the variables.scss
+* Add the your variable to the `variables.scss`
 
 ....
 // Feature
@@ -380,6 +378,7 @@ Please keep in mind that selectors and properties are applied in the order they 
 ....
 
 '''
+
 
 
 
