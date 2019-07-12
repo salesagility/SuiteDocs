@@ -17,6 +17,43 @@ weight: 9910
 Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
 {{% /notice %}}
 
+== 7.8.31 LTS
+
+_Released 1st July 2019_
+
+=== **This is our last supported release of 7.8.x, if you still require security updates please upgrade to 7.10.x/7.11.x**
+=== Thank you to all community members who were involved with 7.8.x.
+
+=== Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.31.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.8.31.tar.gz[*Source code* (tar.gz)]
+
+=== Release Notes*
+
+[discrete]
+
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/1840[#1840 ] Fixed #1840 - Meetings in scheduler shifted by one hour.
+* https://github.com/salesagility/SuiteCRM/issues/715[#715 ] Fixed #715 - Custom Required Field not flagging.
+* https://github.com/salesagility/SuiteCRM/issues/7357[#7357 ] Fixed #7357 - Home module index page loading bad MySugar file location.
+* https://github.com/salesagility/SuiteCRM/issues/6872[#6872 ] Fixed #6872 - Installation and upgrades files checksums not provided.
+* https://github.com/salesagility/SuiteCRM/pull/6878[#6878 ] - language cache in multilanguage system.
+* https://github.com/salesagility/SuiteCRM/pull/7274[#7274 ] - Fixed install syntax error.
+* https://github.com/salesagility/SuiteCRM/pull/7246[#7246 ] - Add return to function.
+* https://github.com/salesagility/SuiteCRM/pull/7257[#7257 ] - Favorite link in active Module does not get generated.
+* https://github.com/salesagility/SuiteCRM/pull/7462[#7462 ] - Update password hash to use php password_hash by default.
+
+'''
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+
+'''
+
 == 7.8.30
 
 _Released 3rd June 2019_
