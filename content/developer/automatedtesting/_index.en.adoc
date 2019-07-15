@@ -108,22 +108,30 @@ You can run codeception tests in a given environment like so: `./vendor/bin/code
 
 Note that the `custom` environment is only meant for use with the acceptance and install test suites. There's also the `travis-ci-hub.yml` environment, which is meant for running the tests in Travis CI.
 
-See the [Codeception documentation](https://codeception.com/docs/reference/Configuration) for more information on configuring the environment.
+See the https://codeception.com/docs/reference/Configuration[Codeception documentation] for more information on configuring the environment.
 
 == Running the test suites
 
-Once they're set up, you can run the test suites with the following commands:
+Once they're set up, you can run the test suites with the following Robo commands:
 
 |=======================================================================
 | Suite      | Command
 
-| install    | `./vendor/bin/codecept run install`
-| acceptance | `./vendor/bin/codecept run acceptance`
-| unit       | `./vendor/bin/phpunit --colors --configuration ./tests/phpunit.xml.dist ./tests/unit/phpunit`
-| api        | `./vendor/bin/codecept run api`
+| install    | `./vendor/bin/robo tests:install`
+| acceptance | `./vendor/bin/robo tests:acceptance`
+| unit       | `./vendor/bin/robo tests:unit`
+| api        | `./vendor/bin/robo tests:api`
 |=======================================================================
 
-Note that the install test suite can only be run once currently, and all other test suites depend on the CRM being installed. The install and acceptance test suites use automated browser testing with Chrome and require that the user runs a separate ChromeDriver process simultaneously with the test suite.
+A few things to note:
+
+* These commands will automatically use the environment defined in `tests/_envs/custom.yml` for the install and acceptance test suites.
+* Each of these commands take these flags:
+  * `--debug`: Print more info during test runs, good for debugging.
+  * `--fail-fast`: Stop running the test suite after the first failure.
+* Each of these can also be passed a specific directory or folder if you only want to run a few specific tests, e.g. `./vendor/bin/robo tests:unit ./tests/unit/phpunit/modules/`.
+* The install test suite can only be run once currently, and all other test suites depend on the CRM being installed.
+* The install and acceptance test suites use automated browser testing with Chrome and require that the user runs a separate ChromeDriver process simultaneously with the test suite. Alternatively, you enable the ChromeDriver RunProcess extension provided in `custom.dist.yml` to have ChromeDriver boot automatically whenever the tests need it.
 
 == Other configuration options
 
@@ -220,8 +228,8 @@ This will make it easier to run codeception and the other commands which live in
 
 `set PATH=%PATH%;C:\path\to\instance\vendor\bin`
 
-This allows you to call the codecept command without having to prefix the command with its location. When running codecept you should ensure that your current working directory is the same as your SuiteCRM instance.
+This allows you to call the `codecept` and `robo` commands without having to prefix the command with its location. When running either of these, you should ensure that your current working directory is the same as your SuiteCRM instance.
 
 `cd /path/to/suitecrm/instance/`
 
-`codecept run acceptance`
+`codecept run acceptance` or `robo tests:acceptance`
