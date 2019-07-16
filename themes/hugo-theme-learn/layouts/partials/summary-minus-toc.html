@@ -1,21 +1,22 @@
+{{/* taken from https://ox-hugo.scripter.co/test/posts/no-toc-in-summary-with-more/ */}}
 {{- with .Description -}}
-    {{- . | markdownify | printf "<p>%s</p>" | safeHTML -}}
+    {{- . | markdownify | printf "<p>%s</p>" | safeHTML -}}XXX
 {{- else -}}
-    {{- $summary_has_org_toc := substr .Content 0 30 | findRE "[\".]ox-hugo-toc" -}}
-    {{- if $summary_has_org_toc -}}
+    {{- $summary_has_org_toc := true -}}
+    {{- if $summary_has_org_toc -}}ZZZ
         {{- $content_splits := split .RawContent "<!--endtoc-->" -}} <!-- Need to use .RawContent as we will be parsing for 'more' comment later. -->
         <!-- If Org TOC is present, the special comment endtoc would also be present.
              In that case, output only the part *after* that comment as Summary. -->
         {{- $summary_raw := index $content_splits 1 -}}
         {{- $summary_splits := split $summary_raw "<!--more-->" -}}
-        {{- if eq (len $summary_splits) 2 -}}
+        {{- if eq (len $summary_splits) 2 -}}HHH
             {{- index $summary_splits 0 | markdownify -}}
-        {{- else -}}
+        {{- else -}}JJJ
             {{- $summary_raw | markdownify | truncate 300 -}}
         {{- end -}}
     {{- else -}}
         <!-- Print the whole Summary if endtoc special comment is not found. -->
-        {{- .Summary |  printf "<p>%s</p>" | safeHTML -}}
+        {{- .Summary |  printf "<p>%s</p>" | safeHTML -}}YYY
     {{- end -}}
 {{- end -}}
 

@@ -8,6 +8,7 @@ hidden: true
 
 :imagesdir: /images/en/blog/
 :sectnums:
+:toc:
 
 Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible. 
 But we know that dealing with a large instance full of customisations, or having inherited the instance 
@@ -23,8 +24,6 @@ This article is written in the context of our effort to facilitate the EOL proce
 Although most things will apply generically to other upgrades, some of the issues described here will be specific 
 to that scenario.
 {{% /notice %}}
-
-{{.TableOfContents}}
 
 == Planning
 
