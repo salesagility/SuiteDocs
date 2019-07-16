@@ -1,0 +1,24 @@
+---
+title: Preparing for a Larger Upgrade
+date: 2019-07-15T12:00:00+01:00
+author: pgorod
+tags: ["admin"]
+hidden: true
+---
+
+Usually upgrades are done in small iterations, and we recommend that you upgrade up as often as possible. 
+But we know that dealing with a large instance full of customisations, or having inherited the instance 
+from a predecessor, perhaps with little documentation, can make the prospect of upgrading a bit more daunting.
+<!--more-->
+
+This guide is aimed at providing system administrators or CRM managers a checklist of considerations 
+and tasks that will help ensure existing functionality and data integration are maintained between 
+major version upgrades. It would be beneficial to have a developer resource to carry out the more technical jobs.
+
+{{% notice info %}}
+This article is written in the context of our effort to facilitate the EOL process for SuiteCRM version 7.8. 
+Although many things will apply generically to other upgrades, some of the issues described here will be specific 
+to that scenario.
+{{% /notice %}}
+
+== 
