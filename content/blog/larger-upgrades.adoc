@@ -11,8 +11,9 @@ hidden: true
 :toc:
 
 Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible. 
-But we know that dealing with a large instance full of customisations, or having inherited the instance 
-from a predecessor, perhaps with little documentation, can make the prospect of upgrading a bit more daunting.
+But we know that if you're many versions behind the latest, and dealing with a large instance full 
+of customisations, or having inherited the instance from a predecessor, perhaps with little 
+documentation, can make the prospect of upgrading a bit more daunting.
 <!--more-->
 
 This guide is aimed at providing system administrators or CRM managers a checklist of considerations 
