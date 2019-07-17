@@ -1339,29 +1339,28 @@ code* (tar.gz)]
 * *Security Issue* - https://github.com/salesagility/SuiteCRM/issues/2819[#2819 ]   Updated SAML with SAML2 v2.10.3 https://github.com/distributedweaknessfiling/DWF-Database-Artifacts/blob/ab8ae6e845eb506fbeb10a7e4ccb379f0b4222ca/DWF/2016/1000253/CVE-2016-1000253.json[CVE-2016-1000253 ]
 
 
-==== Bug Fixes * https://github.com/salesagility/SuiteCRM/pull/1877[#1877 ] Translations acknowledge on About 
-page * https://github.com/salesagility/SuiteCRM/pull/2945[#2945 ] Making AOW Workflow more responsive * 
-https://github.com/salesagility/SuiteCRM/issues/3119[#3119 ] Fixed #3119 Log slow queries for MySQL * 
-https://github.com/salesagility/SuiteCRM/issues/2187[#2187 ] Fix #2187 Update click-to-call to work from current 
-browsers. * https://github.com/salesagility/SuiteCRM/issues/3148[#3148 ] Fix #3148 - Hyperlinks not followed 
-after entering QS field * https://github.com/salesagility/SuiteCRM/pull/3187[#3187 ] Fix double "the" - language 
-fix * https://github.com/salesagility/SuiteCRM/issues/[# ] SuiteP - Styling issues resolved - Checkbox Position, 
-Icon replacment, Email Module, Importing from VCard * https://github.com/salesagility/SuiteCRM/issues/[# ] 
-Suite7 - Styling issues resolved - Filter buttons * https://github.com/salesagility/SuiteCRM/pull/3155[#3155 ] 
-Reports fail for non-admins with related fields * https://github.com/salesagility/SuiteCRM/pull/3172[#3172 ] Fix 
-Email Settings test with differents admin user * https://github.com/salesagility/SuiteCRM/pull/3025[#3025 ]Fixed 
-Desktop Toolbar visual overflow issue * https://github.com/salesagility/SuiteCRM/issues/3055[#3055 ] Fixed #3055 
-Need to add space below language drop down on login page * 
-https://github.com/salesagility/SuiteCRM/pull/3173[#3173 ] Fixing pagination in reports * 
-https://github.com/salesagility/SuiteCRM/issues/3104[#3104 ] Fixed #3104 - side bar action icons for 
-AOW_Processed * https://github.com/salesagility/SuiteCRM/issues/3151[#3151 ] Fix #3151 typo in sql query * 
-https://github.com/salesagility/SuiteCRM/issues/3054[#3054 ] Fixed #3054 - problem with roles when configured 
-for "owner" attribute * https://github.com/salesagility/SuiteCRM/issues/3012[#3012 ] Fixed #3012 - SuiteR: 
-Advanced filter displaying issue with non-english langpacks * 
-https://github.com/salesagility/SuiteCRM/issues/905[#905 ] Fixed #905 - Calling custom folder facebook/twitter 
-mapping * https://github.com/salesagility/SuiteCRM/issues/3079[#3079 ] Fix #3079 History View Summary blank 
-screen * https://github.com/salesagility/SuiteCRM/issues/3072[#3072 ] Fixed #3072 - show search form for save 
-query if popuplate only
+==== Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/pull/1877[#1877 ] Translations acknowledge on About.
+* https://github.com/salesagility/SuiteCRM/pull/2945[#2945 ] Making AOW Workflow more responsive.
+* https://github.com/salesagility/SuiteCRM/issues/3119[#3119 ] Fixed #3119 Log slow queries for MySQL.
+* https://github.com/salesagility/SuiteCRM/issues/2187[#2187 ] Fix #2187 Update click-to-call to work from current browsers.
+* https://github.com/salesagility/SuiteCRM/issues/3148[#3148 ] Fix #3148 - Hyperlinks not followed after entering QS field.
+* https://github.com/salesagility/SuiteCRM/pull/3187[#3187 ] Fix double "the" - language fix.
+* https://github.com/salesagility/SuiteCRM/issues/[# ] SuiteP - Styling issues resolved - Checkbox Position, Icon replacment, Email Module, Importing from VCard.
+* https://github.com/salesagility/SuiteCRM/issues/[# ] Suite7 - Styling issues resolved - Filter buttons.
+* https://github.com/salesagility/SuiteCRM/pull/3155[#3155 ] Reports fail for non-admins with related fields.
+* https://github.com/salesagility/SuiteCRM/pull/3172[#3172 ] Fix Email Settings test with differents admin user.
+* https://github.com/salesagility/SuiteCRM/pull/3025[#3025 ]Fixed Desktop Toolbar visual overflow issue.
+* https://github.com/salesagility/SuiteCRM/issues/3055[#3055 ] Fixed #3055 Need to add space below language drop down on login page.
+* https://github.com/salesagility/SuiteCRM/pull/3173[#3173 ] Fixing pagination in reports.
+* https://github.com/salesagility/SuiteCRM/issues/3104[#3104 ] Fixed #3104 - side bar action icons for AOW_Processed.
+* https://github.com/salesagility/SuiteCRM/issues/3151[#3151 ] Fix #3151 typo in sql query.
+* https://github.com/salesagility/SuiteCRM/issues/3054[#3054 ] Fixed #3054 - problem with roles when configured for "owner" attribute.
+* https://github.com/salesagility/SuiteCRM/issues/3012[#3012 ] Fixed #3012 - SuiteR: Advanced filter displaying issue with non-english langpacks.
+* https://github.com/salesagility/SuiteCRM/issues/905[#905 ] Fixed #905 - Calling custom folder facebook/twitter mapping.
+* https://github.com/salesagility/SuiteCRM/issues/3079[#3079 ] Fix #3079 History View Summary blank screen.
+* https://github.com/salesagility/SuiteCRM/issues/3072[#3072 ] Fixed #3072 - show search form for save query if popuplate only.
 
 *This release addresses an Important Security Issue and addresses many
 other Issues. Users of ALL previous releases are advised to Upgrade to 7.8.2 as soon
