@@ -8,7 +8,7 @@ hidden: true
 
 :imagesdir: /images/en/blog/
 :sectnums:
-:toc: macro     ////to allow toc after excerpt
+:toc: macro 
 
 Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible. 
 But we know that if you're many versions behind the latest, and dealing with a large instance full 
@@ -48,7 +48,7 @@ When one piece of your architecture is upgraded, often others are required to mo
 You should take a moment to think in long-term about the scope and intent of your upgrade.
 
 - Choose your *SuiteCRM target version*: will you be moving to 7.10 LTS (long-term support)? Or the newest 7.11?
-- Check the link:../admin/compatibility-matrix/[Compatibility Matrix] to see if your stack 
+- Check the link:../../admin/compatibility-matrix/[Compatibility Matrix] to see if your stack 
 (web server, database, PHP) needs upgrading, which will likely be the case.
 - Specifically, make sure your *PHP version* has a sufficient future time as a 
 https://www.php.net/supported-versions.php[supported version^], your security depends on it.
