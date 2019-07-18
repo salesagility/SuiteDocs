@@ -8,7 +8,7 @@ hidden: true
 
 :imagesdir: /images/en/blog/
 :sectnums:
-:toc: macro
+:toc: macro     ////to allow toc after excerpt
 
 Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible. 
 But we know that if you're many versions behind the latest, and dealing with a large instance full 
