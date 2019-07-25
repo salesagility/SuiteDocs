@@ -3,6 +3,8 @@ title: "Nominate Issues"
 weight: 10
 ---
 
+:imagesdir: /images/en/community/
+
 == How to Nominate Issues
 '''
 
@@ -21,8 +23,12 @@ The following instructions are to help guide you through how to nominate your/co
 <!--- Why do you feel like this issue should be included within this current sprint, please state so below -->
 ....
 
+2 - Navigate to the Current Sprint Discussion issue and paste the template in the comment box then complete the template with your information.
 
-2 - Once the comment has been posted we will review your request and decide whether to put it into our sprint.
+image:30currentsprintimage.png[title="Current Sprint Image"]
+
+
+3 - Once the comment has been posted we will review your request and decide whether to put it into our sprint.
 
 
 
