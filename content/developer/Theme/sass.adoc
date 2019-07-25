@@ -1,8 +1,7 @@
----
+
 title: "Sass"
 weight: 4
-pre: "<b> </b>"
----
+
 
 
 {{% notice info %}}
@@ -97,7 +96,7 @@ The style of each feature of SuiteCRM is broken down into separate css files. Th
 https://docs.suitecrm.com/community/contributing-code/coding-standards/[Please ensure that your css complies with our style guide] and http://csslint.net/[please check your code in css lint for issue before committing.]
 
 ==== File Structure
-
+'''
 Here is a list of each section currently used.
 
 * `variables.scss`
@@ -376,8 +375,6 @@ Please keep in mind that selectors and properties are applied in the order they 
   background-color: $other-bg; /* this is the color now unless something more specific has been selected */
 }
 ....
-
-'''
 
 
 

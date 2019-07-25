@@ -1,7 +1,6 @@
 ---
 title: "Smarty Template Overrides"
 weight: 5
-pre: "<b> </b>"
 ---
 
 As of SuiteCRM 7.7, you can use a theme to change the output from a smarty template (.tpl) file, which can be useful when you need to customise the look and feel of SuiteCRM without effecting existing functionality.
@@ -23,6 +22,7 @@ If you are using PhpStorm you can simply copy `default.tpl`, select the template
 
 In order to take advantage of this smarty template overrides feature and to import other template files, you must use the following code in your smarty template.
 
+[source, html]
 ....
 {{sugar_include type="smarty" file=$headerTpl}}
 ....
@@ -33,6 +33,7 @@ Notice the new `type="smarty"`. This helps the sugar_include function (include/S
 ==== How to Import Other JavaScript files
 '''
 
+[source, html]
 ....
 {{getjspath file="path/to/file.js"}}
 ....
@@ -44,6 +45,7 @@ There is a new change to the how the smarty template engine handles images. Sinc
 
 So this can pose a problem if you happen to have multiple images with the same name but with different file extensions. The ideal way to handle this is in the smarty template file by adding params to specify what you need.
 
+[source, html]
 ....
 <img src="{sugar_getimagepath  directory='sidebar/modules' file_name=$item.module_name file_extension="svg" file='sidebar/modules/'.$item.module_name.".svg"}"/>
 ....
@@ -68,6 +70,5 @@ So this can pose a problem if you happen to have multiple images with the same n
 * Use a function field instead
 * Override the display method in a SugarView.
 
-'''
 
 

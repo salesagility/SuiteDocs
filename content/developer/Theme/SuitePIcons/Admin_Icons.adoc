@@ -1,12 +1,10 @@
 ---
 title: "Admin Icons"
 weight: 20
-pre: "<b> </b>"
 ---
 
 :imagesdir: /images/en/developer/theme-icons/
 
-'''
 
 image:Admin_image.png[title="Admin image"]
 

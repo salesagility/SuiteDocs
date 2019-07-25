@@ -1,13 +1,11 @@
 ---
 title: "Accordion Icons"
 weight: 20
-pre: "<b> </b>"
 ---
 
 :experimental:
 
 :imagesdir: /images/en/developer/theme-icons/
 
-'''
 
 image:Accordion_image.png[title="Accordion image"]

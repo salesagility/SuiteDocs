@@ -1,13 +1,13 @@
 ---
 title: "SuiteP Icons Font"
 weight: 2
-pre: "<b> </b>"
 ---
 
 Since 7.9, SuiteCRM has a new font called suitepicon which takes all the icons of SuiteP and turns them into a font. Then means that you can easily change the colors and styling of the icons while keeping them in an optimised format.
 
 To use the icons you need to specify the css classes which are defined in the font:
 
+[source, html]
 ....
 <span class="suitepicon action-first"></span>
 ....
@@ -25,4 +25,3 @@ To use the icons you need to specify the css classes which are defined in the fo
 
 These files are available online in the https://salesagility.github.io/SuiteP-Icon-Font/index.html[SuiteP Icon Font GitHub repository]
 
-'''
