@@ -84,9 +84,11 @@
 . Руководство администратора
  
 * Установка и обновление SuiteCRM
-**     link:/content/admin/installation-guide/Downloading%20%26%20Installing.ru.adoc[Установка и русификация]
+**     link:/content/admin/installation-guide/Downloading%20%26%20Installing.ru.adoc[Установка SuiteCRM]
 **     link:/content/admin/installation-guide/Upgrading.ru.adoc[Обновление системы]
 **     link:/content/admin/installation-guide/Using%20the%20Upgrade%20Wizard.ru.adoc[Использование мастера обновления]
+**     link:/content/admin/installation-guide/languages/install-a-new-language[Русификация SuiteCRM]
+**     link:/content/admin/installation-guide/languages/update-a-language-pack[Обновление языкового пакета]
 **     link:/content/admin/installation-guide/Uninstalling.ru.adoc[Удаление системы]
 
 * Панель администратора
@@ -115,19 +117,17 @@
 
 * link:/content/admin/Advanced%20Configuration%20Options.ru.adoc[Настройка дополнительных параметров]
 
-* link:/content/admin/Releases.ru.adoc[Версии]
-
 * link:/content/admin/Compatibility%20Matrix.ru.adoc[Таблица совместимости] 
 
-* link:/content/admin/releasepages/_index.ru.adoc[История релизов]
+* link:/content/admin/releases/_index.ru.adoc[История релизов]
 
 [start=3]
  . Развитие проекта
  
-* link:/content/community/contributing-code/_index.ru.adoc[Вклад в исходный код проекта]
+* Вклад в исходный код проекта
+** link:/content/community/contributing-code/Test%20Pull%20Requests.ru.adoc[Тестирование запросов на слияние]
 
 * Вклад в создание документации
-
 **     link:/content/community/contributing-to-docs/simple-edit.ru.adoc[Редактирование страницы]
 **     link:/content/community/contributing-to-docs/simple-issue.ru.adoc[Сообщение об ошибке]
 **     link:/content/community/contributing-to-docs/local-setup.ru.adoc[Локальное развёртывание сайта документации]

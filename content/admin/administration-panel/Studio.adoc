@@ -113,8 +113,8 @@ Custom address fields cannot be grouped together like stock address fields (e.g.
 |*DateTime*|Creates a field to enter the date and time. Includes a Calendar icon button to choose a date via the popup calendar, as well as a dropdown list to select the time 
 |*Decimal*|Creates a field to hold a number rounded to a specified decimal precision. SuiteCRM stores the exact representation of the number in the database (e.g. For a precision of 2: 2.539 is stored as 2.60) 
 |*DropDown*|Creates a field where you can associate a dropdown list of values 
-|*DynamicDropdown*|Creates a dropdown list from which you can relate a single record from a variety of modules. + 
-Only one Flex Relate-type field is allowed per module. Out of the box, the Flex Relate option is not available for the Accounts, Calls, Contracts, Meetings, Notes, and Tasks modules. 
+|*DynamicDropdown*|Creates a dropdown list from which you can relate a single record from a variety of modules. 
+|*Flex Relate*|To specify a one-to-many relationship with another module, but allows linking to several kinds of modules. For example, Notes use a Flex Relate so they can be related to Accounts, Contacts, Leads, etc. Only one Flex Relate-type field is allowed per module, which explains why you can't add another field of this kind to the Accounts, Calls, Meetings, Notes, and Tasks modules. 
 |*Float*|Creates a field to hold a number rounded to a specified decimal precision. SuiteCRM stores the value differently based on the database platform SuiteCRM is running on 
 |*HTML*|Creates static HTML-formatted text to display in record views 
 |*IFrame*|Creates a field to store a URL to display in an iFrame in record views. This URL can also be generated dynamically from data in other fields.

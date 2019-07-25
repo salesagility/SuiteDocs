@@ -1,0 +1,49 @@
+---
+Title: "Install New Languages"
+Weight: 50
+---
+
+:experimental: ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/admin/install-guide/
+
+{{% notice note %}}
+If you are not adding a new language to SuiteCRM, but rather updating an already 
+installed language, make sure you start by following the appropriate
+link:/admin/installation-guide/languages/update-a-language-pack/[Language Packs Update] guide.
+{{% /notice %}}
+
+== Download a Language pack
+
+. Choose either https://sourceforge.net/projects/suitecrmtranslations/files/[Stable SuiteCRM Language Packs^]
+or https://crowdin.com/project/suitecrmtranslations[Latest Build SuiteCRM Language Packs^]
+
+. Choose your version and language
+. Download ZIP file
+
+== Installation steps
+
+. Login as English
+image:1.png[1.png] +
+. Go to 'Admin / Module Loader' 
+image:2.png[2.png] image:3.png[3.png] +
+. Upload and install the new Language pack (zip file) 
+image:4.png[4.png] +
+image:5.png[5.png] +
+. Click btn:[Upload] to send the file to the server 
+image:6.png[6.png] +
+. Click btn:[Install] and confirm to apply the changes
+image:7.png[7.png] +
+image:8.png[8.png] +
+image:9.png[9.png] +
+. Go to 'Admin / Repair / Quick Repair and Rebuild
+image:10.png[10.png] +
+image:11.png[11.png] +
+image:12.png[12.png] +
+image:13.png[13.png] +
+. Logout
+image:14.png[14.png] +
+. Login for your new language
+image:15.png[15.png]
+
+
