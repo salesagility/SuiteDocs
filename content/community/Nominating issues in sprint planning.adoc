@@ -14,14 +14,15 @@ The following instructions are to help guide you through how to nominate your/co
 +
 
 
-....
+[source]
+----
 #### Link -
 <!--- Provide a link to the issue below -->
 
 #### Context -
 <!--- How has this bug affected you? -->
 <!--- Why do you feel like this issue should be included within this current sprint, please state so below -->
-....
+----
 
 . Navigate to the Current Sprint Discussion issue and paste the template in the comment box then complete the template with your information.
 +
