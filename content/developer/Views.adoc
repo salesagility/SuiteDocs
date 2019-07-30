@@ -185,7 +185,7 @@ class StoreView extends SugarView
     {
         $storeName = $store->storeName;
         $location = $store->location;
-        $products = $store->products';
+        $products = $store->products;
 
         $html = <<<"HTML"
 <h1>$storeName</h1>
@@ -234,7 +234,7 @@ class StoreView extends SugarView
 
 And then we'll create a file at `custom/modules/Store/templates/store.tpl`, that looks like this:
 
-[source,tpl]
+[source,smarty]
 ----------
 <h1>{$storeName}</h1>
 <h2>Location: {$location}</h2>
