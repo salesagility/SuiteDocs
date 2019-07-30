@@ -4,6 +4,8 @@ weight: 5
 title: "Views"
 ---
 
+:toc:
+
 = 5. Views
 
 SuiteCRM follows the MVC (Model-View-Controller) pattern and as such has
