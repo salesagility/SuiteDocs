@@ -321,14 +321,12 @@ DELETE {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
 === Get relationship
 
 [source,php]
-GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/relationships/{relation}
-
-Available parameters: fields, page, sort, filter
+GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}/relationships/{relation}
 
 Example:
 
 [source,php]
-V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
+V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493/relationships/aos_contracts
 
 === Create relationship
 
