@@ -1,0 +1,74 @@
+---
+title: "Smarty Template Overrides"
+weight: 5
+---
+
+As of SuiteCRM 7.7, you can use a theme to change the output from a smarty template (.tpl) file, which can be useful when you need to customise the look and feel of SuiteCRM without effecting existing functionality.
+
+== How it Works
+'''
+The smarty template methods have been modified so that you can treat a theme folder as a root location. This means that you can create the folder structure within the a themes/<theme name> and then place the tpl file to override a smarty template file.
+
+=== Example
+
+Let say, you wanted to change the way the alerts looked for a group of users. The template file you wish to edit exists in modules/Alerts/templates/default.tpl. You could create a theme for the group of users by duplicating one of the existing themes and then change the themedef.php file. Which ensures that the theme will never be overridden when the instance is upgraded. In order to override it in the theme folder, you would need to create the folder structure `modules/Alerts/templates/default` and place a new `default.tpl`. You can then edit the new file with the customisation's you desire. Testing is simply a matter of switching the themes in your user profile.
+
+{{% notice info %}}
+If you are using PhpStorm you can simply copy `default.tpl`, select the templates folder and paste the `default.tpl`. In the dialog to confirm the copy. simple add the the 'themes/<theme name>' prefix to the location. PhpStorm will take care of the folder structure for you.
+{{% /notice %}}
+
+==== How to Import Other Smarty Templates
+'''
+
+In order to take advantage of this smarty template overrides feature and to import other template files, you must use the following code in your smarty template.
+
+[source, html]
+....
+{{sugar_include type="smarty" file=$headerTpl}}
+....
+
+Notice the new `type="smarty"`. This helps the sugar_include function (include/Smarty/plugins/function.sugar_include.php) to correctly use the theme folder as a root folder.
+
+
+==== How to Import Other JavaScript files
+'''
+
+[source, html]
+....
+{{getjspath file="path/to/file.js"}}
+....
+
+==== How to  Handle Images in Smarty Templates
+'''
+
+There is a new change to the how the smarty template engine handles images. Since theme SuiteP predominately uses Scalable Vector Graphics (SVG files). The `SugarThemeRegistry::current()->getImage(...)` method which is used by the smarty template engine looks for SVG files first, then .png, then .gif files. You can also set the search location of an images. Which is useful if you need to organise your images into sub folders.
+
+So this can pose a problem if you happen to have multiple images with the same name but with different file extensions. The ideal way to handle this is in the smarty template file by adding params to specify what you need.
+
+[source, html]
+....
+<img src="{sugar_getimagepath  directory='sidebar/modules' file_name=$item.module_name file_extension="svg" file='sidebar/modules/'.$item.module_name.".svg"}"/>
+....
+
+
+* sugar_getimagepath - is the function responsible for giving the correct url to the image. See include/Smarty/plugins/function.sugar_getimagepath.php
+
+* directory - specifies the sub directory of themes/<theme name>/images/ to search for the file.
+
+* file_name - specifies the file name excluding the file extension
+
+* file_extension - specifies the file extension eg svg, png, gif
+
+* file - is the relative path as a fallback
+
+
+==== Alternatives to Using Smarty Ttemplate Overrides
+'''
+
+* Include JavaScript locations in metadata file
+* Customise a metadata file
+* Use a function field instead
+* Override the display method in a SugarView.
+
+
+

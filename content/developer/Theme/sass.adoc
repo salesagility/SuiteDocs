@@ -1,0 +1,396 @@
+---
+title: "Sass"
+weight: 4
+---
+
+
+{{% notice info %}}
+From SuiteCRM version 7.8, the SuiteP theme is written in Sass. Which enables developers and system admins to easily configure the SuiteP theme; thanks to the `variables.scss` file. To ensure that your changes are not overidden by the compile/build process; In order to change the style of the SuiteP theme you must edit the sass files instead of the css files.
+{{% /notice %}}
+
+
+== About Sass
+
+'''
+Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized, and get small stylesheets up and running quickly, particularly with the help of the Compass style library.
+
+Please see the https://sass-lang.com/documentation[Sass Documentation] for more information about Sass.
+
+
+=== About Sass Compliers and Git
+'''
+There are many Sass compilers available. So you can pick the one you prefer. However, you should not run multiple compilers at the same time as this can cause problems. Each compiler will generate the style.css file with different color and measurement formats. This can create unnecessary bloat in your git repository. So in order to reduce the file size of your git repository, before you commit style.css to git, you *should* use the Scss PHP Compiler. Please also only include the style.css in your last commit, this also helps to reduce the repository file size. The Scss PHP Compiler can be a little slow. You may wish to use an other compiler while you are working on the css. You may have to turn off the auto compilation / file watcher of your compiler before compiling with Sccs PHP.
+
+
+
+=== Typical Workflow for Projects
+'''
+* Change a .scss file
+* Commit just the .scss file to git
+* Change a .scss file
+* Commit just the .scss file to git
+* Compile style.scss with the php compiler
+* Commit style.css
+
+=== Typical Workflow for the Product
+'''
+* Change a .scss file
+* Commit just the .scss file to git
+* Change a .scss file
+* Commit just the .scss file to git
+* Make a pull request. Under the "How To Test" section" add "Rebuild sass".
+
+{{% notice info %}}
+Don't commit style.css as we do not want any more bloat added to the product. Style.css will be built during the release process.
+{{% /notice %}}
+
+=== Setting Up A Compiler
+'''
+Here are a few guides on how to set up a compiler for Sass.
+
+=== Scss PHP Compiler
+'''
+The http://leafo.net/scssphp/[Scss PHP] which used in SuiteP 7.8 or above, ensures that SuiteCRM can compile the Sass code. It also ensures that the style.css uses the same color and measurement formats.
+
+==== Install Composer
+....
+sudo apt-get install composer
+....
+
+==== Install Scss PHP
+
+* Open a terminal
+* cd /path/to/your/instance
+* Run
+....
+composer require leafo/scssphp
+composer install
+....
+
+==== Using Scss PHP
+
+* Open a terminal
+* cd /path/to/your/instance
+* Run
+
+*Pre 7.10*
+....
+./vendor/bin/pscss -f compressed themes/SuiteP/css/style.scss >  themes/SuiteP/css/style.css
+....
+
+*7.10 and above*
+....
+./vendor/bin/pscss -f compressed themes/SuiteP/css/Dawn/style.scss >  themes/SuiteP/css/Dawn/style.css
+./vendor/bin/pscss -f compressed themes/SuiteP/css/Day/style.scss >  themes/SuiteP/css/Day/style.css
+./vendor/bin/pscss -f compressed themes/SuiteP/css/Dusk/style.scss >  themes/SuiteP/css/Dusk/style.css
+./vendor/bin/pscss -f compressed themes/SuiteP/css/Night/style.scss >  themes/SuiteP/css/Night/style.css
+....
+
+'''
+
+=== Styling SuiteP
+'''
+The style of each feature of SuiteCRM is broken down into separate css files. This helps to make the compiler slightly faster and it also helps to make the CSS more organised. The style.scss file is the main stylesheet file. Meaning that it imports all of the other stylesheets into style.css. The variables.scss is the stylesheet that contains all of the colors and measurements which can be easily configured.
+
+
+https://docs.suitecrm.com/community/contributing-code/coding-standards/[Please ensure that your css complies with our style guide] and http://csslint.net/[please check your code in css lint for issue before committing.]
+
+==== File Structure
+'''
+Here is a list of each section currently used.
+
+* `variables.scss`
+* `studio.scss`
+* `style.scss`
+** `tabs.scss`
+** `sidebar.scss`
+** `projects.scss
+** `panels.scss`
+** `navbar.scss`
+** `main.scss`
+** `login.scss`
+** `listview.scss`
+** `forms.scss`
+** `editview.scss`
+** `detailview.scss`
+** `dashboard.scss`
+** `cases.scss`
+** `campaigns.scss`
+** `calendar.scss`
+** `admin.scss`
+* `yui.scss`
+
+==== Adding New Sass Files
+
+When you need to add a new Sass file.
+
+* Create the `<name>.scss` in the themes/SuiteP/css/ directory.
+* Add the `<name>.css` and `<name>.css.map` to the .gitignore
+* Add the following to the top of `<name>.scss`
+....
+/**** <Feature name> ***/
+@import 'variables';
+....
+
+==== Making your CSS configurable
+
+Let's say you wanted to style the background color a feature element in the SuiteP theme.
+
+* Create a prefix css class for your feature
+* give the element a css class in your template.
+
+....
+<div class="feature">
+    <div class="element"></div>
+</div>
+....
+
+* Add the your variable to the `variables.scss`
+
+....
+// Feature
+$feature-bg: #333333;
+....
+
+* Then add the variable in your stylesheet
+
+....
+/**** <Feature name> ***/
+@import 'variables'
+
+.feature .element {
+    background-color: $feature-bg;
+}
+....
+
+
+=== Quick Tips to Write Better CSS
+'''
+
+Before you use the css lint here are a few things you can do to prevent issues in the first place:
+
+==== Never use inline styles
+
+Inline styles are impossible to change using well written css. Please use classes.
+....
+<div class="feature"></div>
+....
+
+instead of
+....
+<div style="color: white"></div>
+....
+
+
+==== Always use classess over id's
+
+Even when you wish to select a single element in the DOM please just use a unique class instead of an id. IDs tend to have a higher specificity than classes and classes allows the same functionality to be reused. When possible, try to have a class for the feature and then a class for each sub feature.
+
+....
+.feature .sub-feature-1 > .sub-feature-2 {}
+....
+
+....
+<div class="feature">
+    <div class="sub-feature-1">
+        <div class="sub-feature-2"></div>
+    </div>
+</div>
+....
+
+==== Order your Properties in Alpha Numeric Order
+
+It helps others to find properties when they are sorted in alpha numeric order. Particularly when there are a lot of properties within a selector.
+
+....
+.feature .element {
+    background-color: $feature-bg;
+    bottom: auto;
+    left: auto;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 66.7%;
+    z-index: 100;
+}
+....
+
+==== Do *NOT* Stack Selectors
+
+This helps the browser performance and it helps to make your CSS more readable. Though it may seem counter intuitive to programmers who are trying to prevent code duplication or if you need to get the same result for multiple elements. Consider using variables or mixins instead. That way you still can have the properties in one location.
+
+....
+@mixin subnav() {
+  padding: 0;
+  width: auto;
+}
+
+.selectLinkTop > .sugar_action_button > .subnav  {
+  @include subnav();
+}
+
+.selectLinkBottom > .sugar_action_button > .subnav {
+    @include subnav();
+}
+....
+
+instead of
+
+....
+.selectLinkTop > .sugar_action_button > .subnav,
+.selectLinkBottom > .sugar_action_button > .subnav {
+  padding: 0;
+  width: auto;
+}
+....
+
+==== Choose the most Specific Selectors
+
+CSS uses what it known as specificity to choose the style selector of an element. So try to select items as specific as you can but with a little room for others to override your changes. This helps to reduce style sheet bugs.
+
+....
+.button > .unique-class-name {}
+....
+
+instead of
+
+....
+.button span {}
+....
+
+==== *Table 1-1.* Specificity example
+[cols="3", options="header"]
+|===
+|Selector
+|Specificity
+|Specificity in base 10
+
+|Style=""
+|1,0,0,0
+|1000
+
+|#wrapper #content {}
+|0,2,0,0
+|200
+
+|#content .datePosted {}
+|0,1,1,0
+|110
+
+|div#content {}
+|0,1,0,1
+|101
+
+|#content {}
+|0,1,0,0
+|100
+
+|p.comment .dateposted {}
+|0,0,2,1
+|21
+
+|p.comment{}
+|0,0,1,1
+|11
+
+|div p {}
+|0,0,0,2
+|2
+
+|p {}
+|0,0,0,1
+|1
+|===
+
+==== Do *NOT* use wild cards
+
+Wild cards are really bad for performance plus they sometimes cause undefined behaviour in CSS. Use a specific selector instead.
+
+*NEVER DO THIS:*
+
+....
+table * {
+  background-color: $list-view-action-menu-link-bg !important;
+}
+
+
+ul id^=subpanel {
+  background-color: $list-view-action-menu-link-bg !important;
+}
+....
+
+==== Do *NOT* combine elements with class names
+
+Try to use the existing class names instead or give the element a unique class name.
+
+....
+.unique-class-name {}
+
+/* or */
+
+li > button {}
+
+/* or */
+
+li > .btn-default {}
+....
+
+instead of
+
+....
+button.btn-default {}
+....
+
+==== Do *NOT* use !important
+
+Never use !important as it prevents others from overriding a style in a project. If you are having trouble styling an element it is likely because you need use a more specific selector, or you need to change some javascript to use css classes over an inline style.
+
+....
+.selectLinkTop > .sugar_action_button > .subnav a:hover {
+  background-color: $list-view-action-menu-link-bg;
+}
+....
+
+instead of
+
+....
+ul li a:hover {
+  background-color: $list-view-action-menu-link-bg !important;
+}
+....
+
+The only exception to this rule is when you have to force a style on an element that is using an inline style. Where possible change the javascript to support a css class instead.
+
+
+==== Note the order of your selectors
+
+Please keep in mind that selectors and properties are applied in the order they are loaded into the browser. So you may wish to switch the order of some selectors to get the correct result. Also be aware that more specific selectors will override this rule.
+
+....
+.unique-class {
+  background-color: $page-bg;
+}
+
+.unique-class {
+  background-color: $other-bg; /* this is the color now unless something more specific has been selected */
+}
+....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
