@@ -2,16 +2,20 @@
 title: Scheduler Jobs in SuiteCRM in Linux - the Definitive Guide
 date: 2017-04-14T12:00:00+01:00
 author: pgorod
-tags: ["development"]
+tags: ["admin"]
 source: https://pgorod.github.io/Scheduler-Jobs/
 hidden: true
 ---
+
+:toc: macro
 
 SuiteCRM uses a number of `Scheduler jobs` that are supposed to run at
 scheduled times, supporting functionalities like search indexing,
 workflows, email notifications, database maintenance, etc.
 
 <!--more-->
+
+toc::[]
 
 When completing installation, the Scheduler jobs need to be *manually
 enabled*. This is done by asking your operating system to run a script
