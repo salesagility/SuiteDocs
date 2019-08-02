@@ -3,8 +3,6 @@ title: "Sidebar Icons  "
 weight: 20
 ---
 
-:imagesdir: /images/en/developer/theme-icons/
+:imagesdir: /images/en/developer/theme-icons
 
-
-
-image:Sidebar_image.png[title="Sidebar image"]
+image:Sidebar_image.jpg[title="Sidebar image"]
