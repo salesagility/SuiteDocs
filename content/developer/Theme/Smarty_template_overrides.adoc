@@ -1,6 +1,6 @@
 ---
 title: "Smarty Template Overrides"
-weight: 5
+weight: 90
 ---
 
 As of SuiteCRM 7.7, you can use a theme to change the output from a smarty template (.tpl) file, 
