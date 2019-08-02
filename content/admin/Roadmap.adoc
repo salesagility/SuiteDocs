@@ -1,6 +1,7 @@
 ---
 title: SuiteCRM Roadmap
 weight: 10
+draft: true
 ---
 
 Ok so let's try a nice-looking graph!
@@ -28,3 +29,39 @@ gantt
         Active task               :active,  des2, 2019-01-09, 90d
 {{< /mermaid >}}
 
+
+{{<mermaid>}}
+gantt
+    dateFormat  YYYY-MM-DD
+    title SuiteCRM Release Cycle
+
+    section SuiteCRM (LTS) 7.8
+    Develop/Release                     :r78, 2017-01-06, 280d
+    Criticals                           :r78c, after r78, 280d
+    Security Fixes only                 :r78sf, after r78c, 120d
+
+    section SuiteCRM 7.9
+    Develop/Release                     :r79, 2017-04-01, 90d
+    Criticals                           :r79c, after r79, 90d
+    Security Fixes only                 :r79sf, after r79c, 120d
+
+    section SuiteCRM (LTS) 7.10
+    Develop/Release                     :r710, 2017-07-01, 270d
+    Criticals                           :r710c, after r710, 630d
+    Security Fixes only                 :r710sf, after r710c, 180d
+
+    section SuiteCRM 7.11
+    Develop/Release                     :r711, 2018-04-01, 270d
+    Criticals                           :r711c, after r711, 90d
+    Security Fixes only                 :r711sf, after r711c, 120d
+
+    section SuiteCRM 8.0
+    Develop/Release                     :r80, 2018-07-01, 360d
+    Criticals                           :r80c, after r80, 90d
+    Security Fixes only                 :r80sf, after r80c, 120d
+
+    section SuiteCRM (LTS) 8.1
+    Develop/Release                     :r81, 2019-07-01, 180d
+    Criticals                           :r81c, after r81, 630d
+    Security Fixes only                 :r81sf, after r81c, 180d
+{{< /mermaid >}}
