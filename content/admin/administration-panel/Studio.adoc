@@ -152,8 +152,12 @@ with a letter and contain no spaces.
 
 Click btn:[ADD] to add each new entry.
 
+To add a blank item, click btn:[ADD] without entering any values for the Item Name and the Display Label. 
+It is not possible to add a blank name, but with a non-blank label.
+
 The list can be optionally sorted alphabetically by the Display Label by clicking the appropriate
-sort button.
+btn:[SORT] button. If you want to set a default item, this is not the place to configure that; instead, look for a 
+"default value" option in the settings for the field that will be using this dropdown.
 
 Click btn:[SAVE] to save the new dropdown list and return to the field properties. 
 
