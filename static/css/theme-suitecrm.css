@@ -1,5 +1,5 @@
 :root{
-	--MAIN-TEXT-color:#5C566A; /* Color of text by default */
+   --MAIN-TEXT-color:#5C566A; /* Color of text by default */
    --MAIN-TITLES-TEXT-color: #5C566A; /* Color of titles h2-h3-h4-h5 */
    --MAIN-LINK-color:#ED6758; /* Color of links */
    --MAIN-LINK-HOVER-color:#CF5A4D; /* Color of hovered links */
@@ -1390,4 +1390,8 @@ div.license a {
 div.license p {
    font-size: smaller;
    margin: 0px 0px;
+}
+
+.ulist li p {
+   margin: 0.5rem 0;
 }

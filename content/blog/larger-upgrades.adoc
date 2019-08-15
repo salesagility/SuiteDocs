@@ -1,0 +1,187 @@
+---
+title: Preparing for a Larger Upgrade
+date: 2019-07-15T12:00:00+01:00
+author: pgorod
+tags: ["admin"]
+hidden: true
+--- 
+
+:imagesdir: /images/en/blog/
+:sectnums:
+:toc: macro 
+
+Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible. 
+But we know that if you're many versions behind the latest, and dealing with a large instance full 
+of customisations, or having inherited the instance from a predecessor, perhaps with little 
+documentation, can make the prospect of upgrading a bit more daunting.
+<!--more-->
+
+This guide is aimed at providing system administrators or CRM managers a checklist of considerations 
+and tasks that will help ensure existing functionality and data integration are maintained between 
+major version upgrades. It would be beneficial to have a developer resource to carry out the more technical jobs.
+
+{{% notice note %}}
+This article is written in the context of our effort to facilitate the EOL process for SuiteCRM version 7.8. 
+Although most things will apply generically to other upgrades, some of the issues described here will be specific 
+to that scenario.
+{{% /notice %}}
+
+toc::[]
+
+== Planning
+
+=== Is your current system healthy?
+
+Like getting your car some service before a longer trip, it's a good idea to make sure your system 
+is ready for the upgrade process. 
+
+- *Check database for overgrown tables*. Some tables tend to grow with time. Deletions are also handled 
+as "mark as deleted" without actually removing the data from database. You might want to check your
+pruning policy and remove any accumulated excess.
+
+- *Check logs and try to clear up any recurring serious errors*. This will provide some insight into potential 
+problems, and if you get errors after the upgrade, it will enable you to understand which were already there before.
+
+=== Aims and Scope
+
+When one piece of your architecture is upgraded, often others are required to move along with it. 
+You should take a moment to think in long-term about the scope and intent of your upgrade.
+
+- Choose your *SuiteCRM target version*: will you be moving to 7.10 LTS (long-term support)? Or the newest 7.11?
+- Check the link:../../admin/compatibility-matrix/[Compatibility Matrix] to see if your stack 
+(web server, database, PHP) needs upgrading, which will likely be the case.
+- Specifically, make sure your *PHP version* has a sufficient future time as a 
+https://www.php.net/supported-versions.php[supported version^], your security depends on it.
+
+Decide if you will be taking this opportunity to improve your *hardware/architecture/processes*:
+
+- scaling up by moving to a newer, more powerful server
+- scaling out to a double server set-up, separating database and web server.
+- moving to a virtual-machine-based install
+- moving to a container-based install
+- working from a `git` repository to better manage code changes
+- re-thinking your fault-tolerance / backup strategies
+- moving to a generic cloud-based service
+- favouring SuiteCRM-specific services and support by moving to https://suitecrm.com/suiteondemand/[Suite-On-Demand^]
+
+=== Audit your customizations
+
+Your aim is to upgrade without breaking existing customizations and functionalities that your users rely on. 
+Sometimes they have been there for so long that nobody remembers they're not part of the core product, or who
+made those customizations, and how... the first step is to be aware and list these items.
+
+These could include things like:
+
+- add-ons
+- visual changes, logos and themes
+- layouts with different fields and columns
+- logic hooks and workflows
+- other code customizations
+- etc
+
+Most of these things will be retained after the upgrade, with no special intervention, but it's good to 
+check each one independentely.
+
+- Can you gather *existing Documentation* for your company's SuiteCRM project? Requirements, User Guides, 
+Processes Designs, test cases?
+- Do any *add-ons* need updating? Are they compatible with the new SuiteCRM?
+- Did you use any *custom changes* done in a non-upgrade-safe way, editing files in core, instead of using established
+customization mechanisms? These will need to be redone.
+- Any SuiteR-specifc *Theme customizations* will need to be redone for SuiteP Theme.
+
+=== Align with your organization 
+
+Upgrading a Company's CRM is a process that likely will affect the day-to-day processes of most people 
+in the organization. You will want to ensure all actors and stake-holders are alerted, involved and motivated:
+
+- technical staff
+- managers 
+- users
+- customers, suppliers, partners, if you expect some impact will be visible to them for some reason
+
+=== Make the upgrade a Project
+
+Some of your concerns can be:
+
+- Establish your upgrade project
+- Identify risks 
+- Define timelines
+- Identify the critical path in project execution
+- Assign responsabilities to each team
+- Include extensive testing and perhaps a phased roll-out plan
+- Try to minimize downtime and mitigate inconveniences, paying special attention to the final moment 
+where the old server is removed and the new one goes live.
+
+== Performing the Upgrade
+
+=== Upgrade strategy and use of a clone system
+
+You will need a second server to work on your upgrade, so it can serve as a testing and UAT 
+(User Acceptance Testing) environment. There are different ways to approach this, we could call them 
+the "Migrate-to-Upgrade Strategy" vs "Test-and-Upgrade Strategy":
+
+image:upgrading-strategies.png[title="Upgrading strategies Diagram"]
+
+{{% notice tip %}}
+*Virtualization* or *Containerization* are a great advantadge at this point, providing you with 
+the ability to try things and go back to previous points in time (snapshots) if needed.
+{{% /notice %}}
+
+Although giving specific instructions about each of those steps is beyond the scope of this article, 
+in the next sections some parts are elaborated on.
+
+=== Database migration
+
+Moving your database to a new server can be as simple as doing a full SQL dump of all the structure and data, 
+and then importing this dump on the new server.
+
+{{% notice warning %}}
+*Never* attempt to move a database from a certain version of SuiteCRM onto a server that is using a different 
+version of SuiteCRM. When you're migrating the data, you're not upgrading the code in the same step. 
+Serious data integrity issues might ensue, and it's possible some problems will
+only become apparent much later, when it's too late to go back...
+{{% /notice %}}
+
+If you need a more elaborate data migration process, consider using an ETL tool or SQL Workbench tool at this point.
+
+=== Transferring the files
+
+If you're going for an exact clone, move the entire SuiteCRM directory, except the `cache` directory.
+
+If you just want to move your data and customizations to a server with a newer version, you will 
+want to carefully transfer the relevant parts of `uploads` (photos, attachments, documents) and 
+`custom` directories.
+
+=== Testing and validating the new server
+
+Focus your attention on specific areas:
+
+- Anything you customized
+- Email configuration
+- Theme customizations
+- Test on each platform you use: desktop, tablet, mobile, 3rd-party mobile apps
+- Explore new features if you want them: Google Calendar Sync and Elastic Search
+
+=== Server name changes
+
+If your upgrade involved changing to a server with a different name, please check 
+
+- Any links pointing to it in your website or other organization systems
+- Update SuiteCRM's `config.php` file, entries `site_url` and `host_name`
+- Update Workflow URL's 
+- Check any relevant parts of Web Server configuration (`.htaccess` files, for example).
+
+== Post-upgrade care
+
+Once your new system is running, it's time to think about lessons learned and set some future goals.
+
+You should aim to keep your system healthy and up-to-date, as security fixes and bug fixes are ongoing, 
+and should never be considered as fully done, as with any large software project.
+
+Ideally, you would now have the processes in place so that you could upgrade sooner and more often, 
+without taking any particularly worrying risks. 
+
+Please also ask in the https://suitecrm.com/suitecrm/forum[Forums^] about any Issues you find. If after some triage in the Forums you realize you
+found a bug in the software, please make sure you raise it on 
+our https://github.com/salesagility/SuiteCRM/issues[Github repository^]. 
+

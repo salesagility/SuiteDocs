@@ -1,0 +1,39 @@
+---
+title: "Nominating issues in sprint planning"
+weight: 30
+---
+
+:imagesdir: /images/en/community/
+
+== How to Nominate Issues
+
+The following instructions are to help guide you through how to nominate your/community issues that we will tackle in weekly sprints.
+
+
+. Leave a comment following the template we have provided. The format must be followed below. Please Provide the link to the issue and justify why you would like that issue in the our sprint.
++
+
+[source]
+----
+#### Link -
+<!--- Provide a link to the issue below -->
+
+#### Context -
+<!--- How has this bug affected you? -->
+<!--- Why do you feel like this issue should be included within the next sprint, please state so below -->
+----
+
+. Navigate to the Sprint Planning issue and paste the template in the comment box then complete the template with your information.
++
+
+image:31sprintplanningimage.png[title="Sprint Planning Image"]
+
+
+. Once the comment has been posted we will review your request and decide whether to put it into our sprint.
+
+
+
+{{% notice info %}}
+If your issue is not picked to go into our sprint one week then you can post it
+again in the next sprint.
+{{% /notice %}}

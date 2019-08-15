@@ -1,0 +1,128 @@
+---
+title: "Fonts and Colours"
+weight: 1
+---
+
+== Fonts
+
+'''
+
+* There is just one font used within the design, this uses Google fonts.
+* The font used is Lato click https://fonts.google.com/specimen/Lato[here] to view this font.
+
+
+== Colours
+
+'''
+
+++++
+
+<div style="background-color: #534D64; color: black ; padding: 10px; border: 1px solid black;">
+#534D64 - standard body text colour
+</div>
+
+</br>
+
+<div style="background-color: #F5F5F5; color: black ; padding: 10px; border: 1px solid black;">
+#F5F5F5 - main background colour
+</div>
+
+</br>
+
+<div style="background-color: #534D64; color: black ; padding: 10px; border: 1px solid black;">
+#534D64 - navbar
+</div>
+
+</br>
+
+<div style="background-color: #778591; color: black ; padding: 10px; border: 1px solid black;">
+#778591 - sidebar
+</div>
+
+</br>
+
+<div style="background-color: #E6E6E6; color: black ; padding: 10px; border: 1px solid black;">
+#E6E6E6 - footer/panels within page
+</div>
+
+</br>
+
+<div style="background-color: #94A6B5; color: black ; padding: 10px; border: 1px solid black;">
+#94A6B5 - sidebar buttons
+</div>
+
+</br>
+
+<div style="background-color: #8499AB; color: black ; padding: 10px; border: 1px solid black;">
+#534D64 - #8499AB - sidebar buttons hover
+</div>
+
+</br>
+
+<div style="background-color: #F08377; color: black ; padding: 10px; border: 1px solid black;">
+#F08377 - red button
+</div>
+
+</br>
+
+<div style="background-color: #D66C60; color: black ; padding: 10px; border: 1px solid black;">
+#D66C60 - red button hover
+</div>
+
+</br>
+
+<div style="background-color: #AA9DCC; color: black ; padding: 10px; border: 1px solid black;">
+#AA9DCC - purple button
+</div>
+
+</br>
+
+<div style="background-color: #9589b3; color: black ; padding: 10px; border: 1px solid black;">
+#9589b3 - purple button hover
+</div>
+
+</br>
+
+<div style="background-color: #778591; color: black ; padding: 10px; border: 1px solid black;">
+#778591 - table headers
+</div>
+
+</br>
+
+<div style="background-color: #BFCAD3; color: black ; padding: 10px; border: 1px solid black;">
+#BFCAD3 - table navigation bar
+</div>
+
+</br>
+
+<div style="background-color: #D8F5EE; color: black ; padding: 10px; border: 1px solid black;">
+#D8F5EE - input colour when in edit screen
+</div>
+
+</br>
+
+<div style="background-color: #FAF7CF; color: black ; padding: 10px; border: 1px solid black;">
+#FAF7CF - rollover colour of table rows
+</div>
+
+</br>
+
+<div style="background-color: #5D5670; color: black ; padding: 10px; border: 1px solid black;">
+#5D5670 - main menu dropdown background colour
+</div>
+
+</br>
+
+<div style="background-color: #B29Eb5; color: black ; padding: 10px; border: 1px solid black;">
+#B29Eb5 - create menu dropdown background colour
+</div>
+
+</br>
+
+<div style="background-color: #FFFFFF; color: black ; padding: 10px; border: 1px solid black;">
+#FFFFFF - alternate rows in list view
+</div>
+
+</br>
+
+++++

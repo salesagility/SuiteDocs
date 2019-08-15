@@ -119,7 +119,7 @@ Custom address fields cannot be grouped together like stock address fields (e.g.
 |*HTML*|Creates static HTML-formatted text to display in record views 
 |*IFrame*|Creates a field to store a URL to display in an iFrame in record views. This URL can also be generated dynamically from data in other fields.
 |*Image*|Creates an image field to upload an image to display on a record 
-|*Integrer*|Creates a field to specify positive or negative numbers with no decimal places 
+|*Integer*|Creates a field to specify positive or negative numbers with no decimal places 
 |*Multiselect*|Creates a dropdown list of values where multiple values can be selected at once 
 |*Phone*|Creates a field to enter a phone number 
 |*Radio*|Creates a radio button for a user to select one value from a dropdown list 
@@ -152,8 +152,12 @@ with a letter and contain no spaces.
 
 Click btn:[ADD] to add each new entry.
 
+To add a blank item, click btn:[ADD] without entering any values for the Item Name and the Display Label. 
+It is not possible to add a blank name, but with a non-blank label.
+
 The list can be optionally sorted alphabetically by the Display Label by clicking the appropriate
-sort button.
+btn:[SORT] button. If you want to set a default item, this is not the place to configure that; instead, look for a 
+"default value" option in the settings for the field that will be using this dropdown.
 
 Click btn:[SAVE] to save the new dropdown list and return to the field properties. 
 
