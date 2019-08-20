@@ -14,17 +14,17 @@ begin making commits to the project.
 
 * First, determine which base branch your bug fix should use. 
 
-{{%notice info%}}The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so unless your bug is `hotfix` or `develop` specific, make the PR to `hotfix`.{{%/notice%}}
+{{%notice info%}}The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so unless your bug is `hotfix` or `develop` specific, make the PR to `hotfix-7.10.x`.{{%/notice%}}
 
 {{<mermaid align="center">}}
 graph TD;
-  Bugfix{Bugfix}-->|Your PR|;
+  Bugfix{Bugfix}-->|Your PR|hotfix-7.10x;
   hotfix-->|Merged Into|master;
-  Bugfix-->|Your PR|hotfix-7.10x;
   hotfix-7.10x-->|Merged Into|7.10.x
   hotfix-7.10x-->|Merged Into|hotfix;
   hotfix-->|Merged Into|develop;
 {{< /mermaid >}}
+
 
 * Separate each issue fix into a new branch in your repository (Either
 from the `hotfix-7.10.x` or `hotfix` branch) and name it with the issue
