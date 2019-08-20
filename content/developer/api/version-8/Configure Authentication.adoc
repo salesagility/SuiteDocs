@@ -3,7 +3,7 @@ title: Configure Authentication
 weight: 4
 ---
 
-:imagesdir: ./../../../../images/en/developer
+:imagesdir: /images/en/developer
 
 :toc:
 :toclevels: 4
@@ -85,7 +85,7 @@ Required parameters
 $ch = curl_init();
 $header = array(
     'Content-type: application/vnd.api+json',
-    'Accept: application/vnd.api+json',`
+    'Accept: application/vnd.api+json',
  );
 $postStr = json_encode(array(
     'grant_type' => 'client_credentials',
@@ -185,7 +185,7 @@ details.
 $ch = curl_init();
 $header = array(
     'Content-type: application/vnd.api+json',
-    'Accept: application/vnd.api+json',`
+    'Accept: application/vnd.api+json',
  );
 $postStr = json_encode(array(
     'grant_type' => 'password',
