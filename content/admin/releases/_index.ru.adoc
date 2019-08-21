@@ -7,11 +7,11 @@ weight: 10000
 :email: likhobory@mail.ru
 
 {{% notice note %}}
-В этом разделе представлена полная история изменений системы. +
-Краткая история основных нововведений и изменений системы представлена в русскоязычном разделе link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[форума^].
+Полная история изменений системы link:../../../admin/releases/[представлена] в англоязычном разделе документации. +
+Краткая история основных нововведений и изменений системы link:https://suitecrm.com/suitecrm/forum/suitecrm-forum-russian-general-discussion/17973-suitecrm[представлена^] в русскоязычном разделе форума.
 {{% /notice %}}
 
-{{% children %}}
+
 
 
 
