@@ -31,6 +31,7 @@ $layout_defs["Cases"]["subpanel_setup"]['incident_cases'] = array(
    'get_subpanel_data' => 'function:get_cases_by_incident',
    'function_parameters' => 
            array('import_function_file' => 'custom/modules/Cases/IncidentUtils.php',),
+           "generate_select" => true,
 );
 ----
 
