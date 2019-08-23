@@ -28,8 +28,6 @@ _Released 23/08/2019_
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752 ] - Reflected XSS
 * CVE: Unassigned - Unintended public exposure of files
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454 ] - Employee module does not implement ACL
-
-//1REPLACE
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
@@ -38,7 +36,6 @@ _Released 23/08/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7698[7698 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7581[7581 ] - SuiteBot config.yml
 * PR: https://github.com/salesagility/SuiteCRM/pull/7672[7672 ] - Composerify Zend
 * PR: https://github.com/salesagility/SuiteCRM/pull/7636[7636 ] - Optimize images
-//2REPLACE
 [discrete]
 
 ==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
@@ -54,29 +51,19 @@ _Released 23/08/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7682[7682 ] - Documents - Image Field Does Not Display Uploaded Image
 * PR: https://github.com/salesagility/SuiteCRM/pull/7681[7681 ] - EmailMan sendEmail missing restricted_addresses check
 * PR: https://github.com/salesagility/SuiteCRM/pull/7610[7610 ] - Fixed error message css + email warning config option
-//3REPLACE
-[discrete]
-
-//==== pass:[<i class="fa fa-code-fork fa-1x"></i>] Development
-
-//4REPLACE
 [discrete]
 
 '''
 === pass:[<i class="fa fa-heart fa-1x"></i>] Community
 
-//GRAPH/s showing the monthly metrics
-
-// Optional
-
 _Special thanks to the following members for their contributions and participation in this release!_
 
-* image:https://github.com/JanSiero.png[alt="SuiteCRM Contributor",width=50,height=50] https://github.com/JanSiero[JanSiero]
-* image:https://github.com/connorshea.png[alt="SuiteCRM Contributor",width=50,height=50] https://github.com/connorshea[connorshea]
-* image:https://github.com/604media.png[alt="SuiteCRM Contributor",width=50,height=50] https://github.com/604media[604media]
-//5REPLACE
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/JanSiero.png" data-featherlight="image"><img src="https://github.com/JanSiero.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/JanSiero" class="highlight">JanSiero</a></div>]
 
-// Optional
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
+
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
+
 '''
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
@@ -84,9 +71,6 @@ Please https://suitecrm.com/download[visit the official website] to find the app
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
 '''
-
-
-
 
 == 7.11.7
 
