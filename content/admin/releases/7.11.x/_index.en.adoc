@@ -9,7 +9,6 @@ weight: 9880
 
 :experimental:
 
-'''
 == 7.11.8
 
 _Released 23/08/2019_
@@ -18,8 +17,6 @@ _Released 23/08/2019_
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.8.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.8.tar.gz[*Source code* (tar.gz)]
-
-'''
 
 ===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
 
@@ -53,7 +50,6 @@ _Released 23/08/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7610[7610 ] - Fixed error message css + email warning config option
 [discrete]
 
-'''
 === pass:[<i class="fa fa-heart fa-1x"></i>] Community
 
 _Special thanks to the following members for their contributions and participation in this release!_
