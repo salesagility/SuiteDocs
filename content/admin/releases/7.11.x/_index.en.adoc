@@ -33,6 +33,25 @@ _Released 23/08/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7698[7698 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7581[7581 ] - SuiteBot config.yml
 * PR: https://github.com/salesagility/SuiteCRM/pull/7672[7672 ] - Composerify Zend
 * PR: https://github.com/salesagility/SuiteCRM/pull/7636[7636 ] - Optimize images
+* PR: https://github.com/salesagility/SuiteCRM/pull/7591[7591 ] - Composerify Smarty
+
+===== Potential breaking change with Smarty
+
+If you maintain a custom SuiteCRM theme, you should note that this release may require some small changes to your `.tpl` Smarty files. This is because of a legacy customization to Smarty that was removed when it was moved to inclusion via Composer.
+
+The only breaking change will be if you've used the `theme_template` attribute for any Smarty ``include``s. You'll need to remove the `theme_template` attribute and change the file attribute to use the full path:
+
+[source,html]
+----
+{* before *}
+{ include file="_head.tpl" theme_template=true }
+
+{* after *}
+{ include file="themes/SuiteP/tpls/_head.tpl" }
+----
+
+Plugin files are still usable in the same way as before – at `./include/Smarty/plugins/` – and can be ``require``d explicitly. Custom plugins should still go in `./custom/include/Smarty/plugins/`. It should be noted that all other files in `./include/Smarty` have been replaced by empty files to prevent errors in case users were `require`ing the files. They're deprecated, and requires referencing them can be safely removed. Smarty's internal files will be autoloaded by Composer by default.
+
 [discrete]
 
 ==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
@@ -58,7 +77,7 @@ pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/Ja
 
 pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
 
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
+pass:[<div style="float:clear; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
 
 '''
 
