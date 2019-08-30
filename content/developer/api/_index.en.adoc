@@ -3,4 +3,5 @@ title: API Versions
 weight: 16
 ---
 
-:toc:
+=== Table of Contents
+{{% children depth="3" showhidden="true" %}}
