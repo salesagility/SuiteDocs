@@ -1,0 +1,70 @@
+---
+title: Generating Public and Private Keys
+weight: 3
+---
+:imagesdir: /images/en/developer/
+
+=== Composer
+
+Install composer packages with
+
+[source,php]
+composer install
+
+=== Generate private and public.key for OAUTH2
+
+SuiteCRM Api uses OAuth2 protocol, which needs public and private keys.
+
+First, open a terminal and go to `{{your-SuiteCRM-root}}/Api/V8/OAuth2`
+
+Generate a private key:
+[source,php]
+openssl genrsa -out private.key 2048
+
+Then a public key:
+[source,php]
+openssl rsa -in private.key -pubout -out public.key
+
+If you need more information about generating, https://oauth2.thephpleague.com/installation/[please visit this page].
+
+The permission of the key files must be 600 or 660, so change it.
+[source,php]
+sudo chmod 600 private.key public.key
+
+Also, you have to be sure that the config files are owned by PHP.
+[source,php]
+sudo chown www-data:www-data p*.key
+
+=== If you are using Postman
+
+You can easily import postman collections of all endpoint, you can find it in `Api/docs/postman`
+
+== Authentication
+
+SuiteCRM Api allows two kind of grant types:
+
+* Client credential
+* Password
+
+.Token request parameters
+|===
+|Parameter |Description
+
+|*Access Token URL*
+|{{your-SuiteCRM-url}}/Api/access_token
+
+|*Username*
+|Only available for Password grants. Must be a valid SuiteCRM user name.
+
+|*Password*
+|Only available for Password grants. Password for the selected user.
+
+|*Client ID*
+|Client ID exists in OAuth2Clients module's ID. Must be a valid GUID.
+
+|*Client Secret*
+|Client secret is also in OAuth2Clients module as SHA256 generated value.
+
+|*Scopes*
+|Scopes haven't implemented yet
+|===

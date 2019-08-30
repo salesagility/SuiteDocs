@@ -1,0 +1,45 @@
+---
+title: Import Collection File into Postman
+weight: 4
+---
+:imagesdir: /images/en/developer/API-images/
+
+=== Import Collection File into Postman
+
+1 - Click Import
+
+image:import_Files.png[Import Collection File]
+
+2 - Import collection file. You can find it in `Api/docs/postman`
+
+{{% notice note %}}
+If you can't find your collection file it may been in a directory that postman can't upload from -
+Solution: Move collection file into `documents`.
+{{% /notice %}}
+
+=== Setup Environment
+
+1 - Click Manage Environments -> Add
+
+2 - Set Environment name - Example: SuiteCRM V8 API Environment
+
+3 - Fill table out as shown below:
+
+.Manage Environments
+|===
+|VARIABLE |INITIAL VALUE |CURRENT VALUE
+
+|suitecrm.url
+|http://{{IP ADDRESS}}/{{Your Instance}}/Api
+|http://{{IP ADDRESS}}/{{Your Instance}}/Api
+
+|token.url
+|http://{{IP ADDRESS}}/{{Your Instance}}/Api/access_token
+|http://{{IP ADDRESS}}/{{Your Instance}}/Api/access_token
+|===
+
+-> Add
+
+4 - Click Environment from the Drop down
+
+image:change_environment.png[Changing Environment]
