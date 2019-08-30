@@ -1,6 +1,6 @@
 ---
 title: Customization
-weight: 9
+weight: 90
 ---
 
 :imagesdir: ./../../../../images/en/developer
@@ -9,7 +9,7 @@ weight: 9
 == Customization
 
 Each customization should be in a base folder `custom/Extension/application/Ext/Api/V8/`.
-See more about Slim famework at https://www.slimframework.com.
+See more about Slim framework at https://www.slimframework.com.
 
 Extending Slim configuration in `custom/application/Ext/Api/V8/slim.php` is a native php file should returns an array of slim configurations.
 Additional configuration will be merged into the default slim configuration.
@@ -25,7 +25,7 @@ custom/application/Ext/Api/V8/Config/routes.php
 $app->post('/my-route/{myParam}', 'MyCustomController:myCustomAction');
 
 
-Extending Sevices in `custom/application/Ext/Api/V8/services.php` is a native php file should returns an array of slim services.
+Extending Services in `custom/application/Ext/Api/V8/services.php` is a native php file should returns an array of slim services.
 Additional services will be merged into the default slim services.
 custom/application/Ext/Api/V8/services.php
 [source,php]
