@@ -15,7 +15,7 @@ weight: 5
 image:Authorization.png[Authorization button]
 
 
-=== Getting a New Access Token using Client Credentials Grant
+== Getting a New Access Token using Client Credentials Grant
 
 {{% notice note %}}
 The following is how to get a new Access Token using Client Credentials Grant.
@@ -52,7 +52,7 @@ image:Client_secret.png[Client Secret]
 3 - To make sure your token has worked in the URl (top of screen) Make sure you are using GET -> then in the URL use `{{suitecrm.url}}/V8/module/Accounts/` -> Send
 
 
-=== Getting a New Access Token using Password Grant
+== Getting a New Access Token using Password Grant
 
 1 - Give the token a name - Example: Token_1
 
