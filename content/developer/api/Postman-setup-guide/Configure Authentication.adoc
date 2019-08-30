@@ -1,0 +1,86 @@
+---
+title: Available Grant Types
+weight: 40
+---
+:imagesdir: /images/en/developer/
+
+
+== Configure Authentication: Obtaining A Session
+
+The SuiteCRM API requires that a client has an active session to consume
+the API. Sessions are acquired by authenticating with the
+http://oauth2.thephpleague.com/[OAuth 2 Server], using one of the
+available grant types.
+
+== Configure Grant Types
+Before you can consume the API, you must first configure SuiteCRM to
+grant access to a client. SuiteCRM 7.10 provides an administrative
+panel, through which you can add clients and revoke tokens. To configure the grant types, select the admin panel, and then select OAuth2 Clients and Tokens:
+
+image:Admin-OAuth2Clients-3.png[Configure SuiteCRM API]
+
+== Available Grant Types
+
+[width="50, cols="25,25",options="header",]
+|=======================================
+|SuiteCRM Version |Available Grant Types
+|7.10.0 | Password Grant
+|7.10.2 + | Password Grant, Client credentials Grant
+|=======================================
+
+image:Admin-OAuth2Clients-4.png[Create a new grant]
+
+== Client Credentials Grant
+
+A client credentials grant is the simplest of all of the grants types, this grant is used to authenticate a machine or service. Select new client credentials client:
+
+image:Admin-OAuth2Clients-8.png[Create a new client credentials grant]
+
+Begin configuring the grant:
+
+image:Admin-OAuth2Clients-2.png[Create a new Client]
+
+[cols="15,85",options="header"]
+|=======================================================================
+| Field| Description
+|*Name* |This makes it easy to identify the client.
+|*Secret* |Defines the *client_secret* which is posted to the server
+during authentication.
+|*Is Confidential* |A confidential client is an application that is
+capable of keeping a client password confidential to the world.
+|*Associated User* |Limits the client access to CRM, by associating the client with the security privileges of a user.
+|=======================================================================
+
+
+The 'secret' will be hashed when saved, and will not be accessible
+later. The 'id' is created by SuiteCRM and will be visible once the
+client is saved.
+
+image:Admin-OAuth2Clients-5.png[View a Client Credentials Client]
+
+== Password Grant
+
+A password grant is used for allow users to log into SuiteCRM with a
+username and a password. Select new password client:
+
+image:Admin-OAuth2Clients-9.png[Create a Password Client]
+
+Begin configuring grant:
+
+image:Admin-OAuth2Clients-6.png[Create a new Client]
+
+[cols="15,85", frame="none", grid="none"]
+|=======================================================================
+|*Name* |This makes it easy to identify the client.
+|*Secret* |Defines the *client_secret* which is posted to the server
+during authentication.
+|*Is Confidential* |A confidential client is an application that is
+capable of keeping a client password confidential to the world.
+|=======================================================================
+
+
+The 'secret' will be hashed when saved, and will not be accessible
+later. The 'id' is created by SuiteCRM and will be visible once the
+client is saved.
+
+image:Admin-OAuth2Clients-7.png[View a password grant client]
