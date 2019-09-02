@@ -1,6 +1,6 @@
 ---
 Title: SuiteCRM Analytics
-Weight: 300
+Weight: 10
 ---
 
 :imagesdir: ./../../images/en/user
@@ -15,5 +15,6 @@ The new, ready-to-use business analytics platform, SuiteCRM Analytics is a fully
 == Table of Contents
 
 {{% children depth="4" showhidden="true" %}}
+
 
 
