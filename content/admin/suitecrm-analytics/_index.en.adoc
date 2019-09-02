@@ -1,0 +1,20 @@
+---
+Title: SuiteCRM Analytics
+Weight: 70
+---
+
+:imagesdir: ./../../images/en/user
+
+= SuiteCRM Analytics
+
+The new, ready-to-use business analytics platform, SuiteCRM Analytics is a fully Open Source and free-to-download solution which was built using Pentaho BI Suite Community Edition and will provide SuiteCRM users the ability to launch, administrate and customise their own BI platform and is completely extendable. SuiteCRM Analytics is comprised of two major components; SuiteCRM Data Integration and SuiteCRM Web Analytics.
+
+* SuiteCRM Data Integration
+* SuiteCRM Web Analytics
+
+== Table of Contents
+
+{{% children depth="4" showhidden="true" %}}
+
+
+
