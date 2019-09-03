@@ -1,0 +1,44 @@
+---
+title: Getting Started
+weight: 20
+---
+
+:imagesdir: ./../../../images/en/user
+
+= Getting Started
+
+== Logging Into SuiteCRM Web Analytics
+
+{{% notice note %}}
+If you are a system administrator please follow the Downloading & Installing guide to both SuiteCRM Data Integration & SuiteCRM Analytics Web Application.
+{{% /notice %}}
+
+To log into the SuiteCRM Analytics Web Application you simply have to navigate to the hostname or IP address of the server in your favourite web browser. By default the web application is listening
+on port 8080 so for example, your server may be available at ***http://localhost:8080/suitecrmanalytics***
+
+image:scrm_analytics_login.png[title="Log in"]
+
+== Running Reports
+
+To run reports the user must browse to the report file the solution repository browser.
+To do this simply select ​***Browse***​ from the homepage. This will open the ​***Solution Browser​*** .
+You can then expand the ***Public***​ folder to view all the SuiteCRM Analytics solution folders including some default sample ones for the platform.
+Expand the SuiteCRM Analytics​ folder and then ***Reports***​. On the right hand panel you can see the reports listed in the Reports folder.
+Simply ​double click​ a report to open it in a new application tab.
+
+image:scrm_analytics_browse.png[title="Browse Files"]
+
+
+The report will execute immediately based on default filter values.
+You can now edit the report filters and properties. Each change to a report filter or property will cause the report to refresh.
+You can turn this functionality off by unchecking the ​***Auto Submit***​ checkbox and instead click ​***View Report***​ when you are happy with the filters selected.
+
+image:scrm_analytics_report.png[title="Run Report"]
+
+== Running Dashboards
+
+Running dashboards is done the same way as running a report.
+We simply navigate to the ***Public > SuiteCRM Analytics > Dashboards***​ folder in the ​***Solution Browser***​ and double click​ any of the dashboards we wish to run.
+This will open up the dashboard in a new application tab where the user can select various data filters and click the ​***Refresh***​ button to execute the dashboard.
+
+image:scrm_analytics_dashboard.png[title="Run Dashboard"]
