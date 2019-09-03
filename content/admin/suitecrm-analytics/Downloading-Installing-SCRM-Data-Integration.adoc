@@ -133,7 +133,7 @@ SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
 
 The SMTP config variables will define the connection to an email mail client to send out notifications on the status of the extraction script (success or failure). These are optional.
 
-=== Installing SuiteCRM Data Integration
+== Installing SuiteCRM Data Integration
 
 Once the configuration has been defined, now run the setup script within the same root directory of your suitecrm-data-integration
 
