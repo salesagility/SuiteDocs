@@ -267,7 +267,7 @@ image:image1.png[Замена выпадающего меню на кнопки]
  . Добавьте в него строку: 
  
 [source,php]
-$layout_defs['Leads']['subpanel_setup']['history']['flat'] = 1
+$layout_defs['Leads']['subpanel_setup']['history']['flat'] = 1;
  
 [start=3]
  . Выполните link:../administration-panel/system/#_Восстановление[Быстрое восстановление].
