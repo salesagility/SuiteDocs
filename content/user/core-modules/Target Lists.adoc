@@ -1,8 +1,3 @@
----
-title: Target Lists
-weight: 185
----
-
 == Target Lists
 
 The Target Lists module in SuiteCRM is used to separate Targets into
@@ -51,3 +46,22 @@ link:./../../introduction/user-interface/record-management/#_exporting_records[E
 * To track all changes to audited fields, in the Target List, you can
 click the View Change Log button on the Target List's Detail View or
 Edit View.
+
+=== Target List Types
+A target list can specify individuals or organization who need to be included in a campaign or excluded from a campaign. This can be controlled using the following target list types:
+
+[width="100%"]
+|=======
+|*Target List Type* |*Description*
+|Default |A list of people who are the primary recipients of the campaign email
+|Seed |A list of people who need to receive the campaign email but not be tracked in the campaign statistics +
+*Note*: This list is typically used for internal purposes where the individuals in this group need to approve the campaign before it is launched. The seed list is ignored in the campaign's View Status page.
+|Suppression List - By Domain |A list of people who should be excluded from the campaign email recipient list and whose email addresses share a common domain name, such as "website.com" +
+*Note*: Suppression by domain can be used to prevent marketing to entire organizations such as competitors.
+|Suppression List - By Email Address |A list of people who should be excluded from the campaign email recipient list +
+*Note*: This list typically consists of people who chose to opt out from receiving your campaign message.
+|Suppression List - By Id |A list of people who should be excluded from a Newsletter-type campaign email recipient list +
+*Note*: The "Suppression List - By Id" must be related to the Newsletter campaign in order for the message's opt-out link to function properly.
+|Test |A list of people who receive test email campaigns to make sure that the message's layout is displayed properly before the campaign is finalized and sent to the default list +
+*Note*: A campaign may be sent to the test list multiple times by using the Delete Test Entries button on the View Status page between re-sends.
+|=======
