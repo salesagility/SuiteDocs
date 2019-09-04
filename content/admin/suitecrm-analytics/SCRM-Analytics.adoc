@@ -1,5 +1,5 @@
 ---
-title: Downloading & Installing SuiteCRM Web Analytics
+title: SuiteCRM Web Analytics
 weight: 30
 ---
 
@@ -147,7 +147,7 @@ org.apache.catalina.startup.Catalina.start Server startup in N ms
 Once the server has initialised you can log into the SuiteCRM Analytics Web Application by navigating to the hostname or IP address of the server in your web browser.
 By default the web application is listening on port 8080 so for example, your server may be available on ***http://localhost:8080/suitecrmanalytics***
 
-Check out the [SuiteCRM Analytics User Guide] for more information of the application
+Check out the link:/user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for more information of the application
 
 
 
