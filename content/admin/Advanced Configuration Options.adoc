@@ -139,7 +139,7 @@ To change the subpanel *history* do the following :
  . Add a line to it:
 
 [source,php]
-$layout_defs['Leads']['subpanel_setup']['history']['flat'] = 1
+$layout_defs['Leads']['subpanel_setup']['history']['flat'] = 1;
 
 [start=3]
  . Execute link:../administration-panel/system/#_repair[Quick Repair and Rebuild].
