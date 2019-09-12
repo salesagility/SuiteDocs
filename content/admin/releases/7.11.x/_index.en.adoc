@@ -9,6 +9,84 @@ weight: 9880
 
 :experimental:
 
+== 7.11.8
+
+_Released 23/08/2019_
+
+=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.8.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.8.tar.gz[*Source code* (tar.gz)]
+
+===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+
+==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752 ] - Reflected XSS
+* CVE: Unassigned - Unintended public exposure of files
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454 ] - Employee module does not implement ACL
+[discrete]
+
+==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/7702[7702 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7696[7696 ] - Update README
+* PR: https://github.com/salesagility/SuiteCRM/pull/7698[7698 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7581[7581 ] - SuiteBot config.yml
+* PR: https://github.com/salesagility/SuiteCRM/pull/7672[7672 ] - Composerify Zend
+* PR: https://github.com/salesagility/SuiteCRM/pull/7636[7636 ] - Optimize images
+* PR: https://github.com/salesagility/SuiteCRM/pull/7591[7591 ] - Composerify Smarty
+
+===== Potential breaking change with Smarty
+
+If you maintain a custom SuiteCRM theme, you should note that this release may require some small changes to your `.tpl` Smarty files. This is because of a legacy customization to Smarty that was removed when it was moved to inclusion via Composer.
+
+The only breaking change will be if you've used the `theme_template` attribute for any Smarty ``include``s. You'll need to remove the `theme_template` attribute and change the file attribute to use the full path:
+
+[source,html]
+----
+{* before *}
+{ include file="_head.tpl" theme_template=true }
+
+{* after *}
+{ include file="themes/SuiteP/tpls/_head.tpl" }
+----
+
+Plugin files are still usable in the same way as before – at `./include/Smarty/plugins/` – and can be ``require``d explicitly. Custom plugins should still go in `./custom/include/Smarty/plugins/`. It should be noted that all other files in `./include/Smarty` have been replaced by empty files to prevent errors in case users were `require`ing the files. They're deprecated, and requires referencing them can be safely removed. Smarty's internal files will be autoloaded by Composer by default.
+
+[discrete]
+
+==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/7719[7719 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6982[6982 ] - Fix/backwards compatiblity
+* PR: https://github.com/salesagility/SuiteCRM/pull/7718[7718 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7712[7712 ] - New user password not being generated
+* PR: https://github.com/salesagility/SuiteCRM/pull/7713[7713 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7667[7667 ] - Case insensitive detection of header X-CampTrackID
+* PR: https://github.com/salesagility/SuiteCRM/pull/7699[7699 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6415[6415 ] - Cannot import Email if plain-text plus attachment
+* PR: https://github.com/salesagility/SuiteCRM/pull/7697[7697 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7138[7138 ] - Folder include/SugarCharts/Jit missing in 7.11.7 installation
+* PR: https://github.com/salesagility/SuiteCRM/pull/7695[7695 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7605[7605 ] - Add a proper return type to getUserRoleNames()
+* PR: https://github.com/salesagility/SuiteCRM/pull/7689[7689 ] - Format InlineEditing.js with prettier
+* PR: https://github.com/salesagility/SuiteCRM/pull/7683[7683 ] - Bug when inbound email Leave Messages On Server set to No
+* PR: https://github.com/salesagility/SuiteCRM/pull/7682[7682 ] - Documents - Image Field Does Not Display Uploaded Image
+* PR: https://github.com/salesagility/SuiteCRM/pull/7681[7681 ] - EmailMan sendEmail missing restricted_addresses check
+* PR: https://github.com/salesagility/SuiteCRM/pull/7610[7610 ] - Fixed error message css + email warning config option
+[discrete]
+
+=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/JanSiero.png" data-featherlight="image"><img src="https://github.com/JanSiero.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/JanSiero" class="highlight">JanSiero</a></div>]
+
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
+
+pass:[<div style="float:clear; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
+
+'''
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.11.7
 
 _Released 31st July 2019_

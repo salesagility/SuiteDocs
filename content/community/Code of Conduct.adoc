@@ -4,61 +4,41 @@ Title: Code of Conduct
 
 == SuiteCRM Community Code of Conduct
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our
-project and our community a harassment-free experience for everyone,
-regardless of age, body size, disability, ethnicity, gender identity and
-expression, level of experience, nationality, personal appearance, race,
-religion, or sexual identity and orientation.
+We understand that in order to have a healthy and inclusive community we need to create and encourage an environment that allows members to feel welcome and safe, learn from each other, and all benefit from the platform. Our SuiteCRM community is made up of end-users, systems administrators, developers, partners, employees and those providing services for SuiteCRM, so we all must play a part in ensuring the success and well-being of the community.
 
-Examples of behaviour that contributes to creating a positive
-environment include:
+. **Be** **considerate**. Treat people kindly and be helpful. Our community welcomes and supports people of all backgrounds and identities and so should be treated with professional respect. Disrespectful and unacceptable behaviour includes, but is not limited to:
+.. The use of sexualized language or imagery and unwelcome sexual attention or advances
+        
+.. Trolling, insulting/derogatory comments, and personal or political attacks
+        
+.. Public or private harassment
+        
+.. Publishing others' private information, such as a physical or electronic address, without explicit permission
+        
+. **Be objective**. We’re dealing mostly with technical issues here: emotions are human, but please know that negative emotions don’t solve technical problems. Assume other people have the best intentions.
+    
+. **Be responsible.** Ensure that the consequences of your actions are for the good of the project and community.  Respect security best-practices and aim for solid, maintainable solutions. If you know of any security issues in SuiteCRM, you can email mailto:security@suitecrm.com[security@suitecrm.com].
+    
+. **Help people learn**. We welcome people of all levels of knowledge. Not understanding basic SuiteCRM features or not knowing how to search for a solution is normal in the beginning, we’ve all been there.
+    
+. **Be Spam Free.** This is an Open Source community, not a marketplace. Don’t advertise services or products. If you’re a partner, add-on developer, or someone that provides development or consulting services specifically for SuiteCRM then you can inform others about it and answer requests. However, you are not allowed to just advertise without substance or your posts will be regarded as unsolicited spam.
+    
+. **Do your part.** Read Documentation and search for any guides or recommendations before asking, and save other people's time
+    
+. **Be patient**. Much of what happens in the Community comes from individuals or companies that volunteer their time and effort to the project. It is possible that your question, code contribution or suggestion might not receive an immediate response. Give people time and earn other people’s attention by being a good contributor, not by insisting.
+    
+. **Don’t just take, give**. One of the principles of Open Source is to participate and so a lot of things in our community happen for free, out of goodwill. Do for others what others do for you. There are many different ways to help with code, support, documentation, testing, translating, promoting…
+    
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community in a professional manner
-* Showing empathy towards other community members
+  
+  
 
-Examples of unacceptable behaviour by participants include:
+We reserve the right to delete any posts that do not adhere to these guidelines or to ban anyone who repeatedly violates these Guidelines.
 
-* The use of sexualized language or imagery and unwelcome sexual
-attention or advances
-* Trolling, insulting/derogatory comments, and personal or political
-attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or
-electronic address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-professional setting
+These Guidelines applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, within project forums, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
-The SuiteCRM project maintainers are responsible for clarifying the
-standards of acceptable behaviour and are expected to take appropriate
-and fair corrective action in response to any instances of unacceptable
-behaviour. Project maintainers who do not follow or enforce the Code of
-Conduct may be permanently removed from the project team.
+Instances of abusive, harassing or other unacceptable behaviour may be reported by contacting the project team at mailto:community@suitecrm.com[community@suitecrm.com]. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
 
-The SuiteCRM project maintainers have the right and responsibility to
-remove, edit, or reject comments, commits, code, wiki edits, issues, and
-other contributions that are not aligned to this Code of Conduct, or to
-ban temporarily or permanently any contributor for other behaviours that
-they deem inappropriate, threatening, offensive, or harmful.
+These Guidelines are adapted from the http://contributor-covenant.org/[Contributor Covenant], version 1.4, available http://contributor-covenant.org/version/1/4/[here].
 
-This Code of Conduct applies both within project spaces and in public
-spaces when an individual is representing the project or its community.
-Examples of representing a project or community include using an
-official project e-mail address, within project forums, posting via an
-official social media account, or acting as an appointed representative
-at an online or offline event.
 
-Instances of abusive, harassing, or otherwise unacceptable behaviour may
-be reported by contacting the project team at community@suitecrm.com.
-All complaints will be reviewed and investigated and will result in a
-response that is deemed necessary and appropriate to the circumstances.
-The project team is obligated to maintain confidentiality with regard to
-the reporter of an incident. Further details of specific enforcement
-policies may be posted separately.
-
-This Code of Conduct is adapted from the 
-http://contributor-covenant.org[Contributor Covenant], version 1.4, available 
-http://contributor-covenant.org/version/1/4/[here].

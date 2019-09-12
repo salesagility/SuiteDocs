@@ -1,0 +1,21 @@
+---
+title: SuiteCRM V8 API Set Up For Postman
+weight: 30
+---
+:imagesdir: /images/en/developer/API-Images/
+
+== Steps to Set Up V8 API on Postman
+
+== Composer
+
+Install composer packages with
+
+[source,php]
+composer install
+
+== .htaccess rebuild
+
+Go to Admin Panel -> Repair -> Rebuild .htaccess File
+
+image:htaccess_rebuild.png[Rebuild of .htaccess]
+

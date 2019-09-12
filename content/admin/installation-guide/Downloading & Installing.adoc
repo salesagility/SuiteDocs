@@ -195,10 +195,10 @@ database here, please make sure you have installed the correct php
 modules.
 ...  _Provide Database Name_
 ....  _Database Name_
-<tt>suitecrm</tt> is default name for the database. You can specify a
+`suitecrm` is default name for the database. You can specify a
 custom name as well.
 ....  _Host Name_
-It is set to <tt>localhost</tt> by default. If your database server is
+It is set to `localhost` by default. If your database server is
 running on a different machine as your web server, you can specify a
 custom location.
 ....  _User_ & _Password_
@@ -218,13 +218,13 @@ _System Credentials_ on the _Confirm Settings_ page at the end of the installati
 ...  _Identify Administration User_
 ....  _SuiteCRM Application Admin Name_
 This is the username of the administrator account. Ex:
-<tt>johnsmith</tt>
+`johnsmith`
 ....  _SuiteCRM Admin User Password_
 This is the password of the administrator account. Please re-enter it
 in the _Re-enter SuiteCRM Admin User Password_ section for validation.
 ....  _URL of SuiteCRM Instance_
 The URL to the CRM. Ex:
-<tt><nowiki>http://crm.yourserver.com/Suite-CRM-Directory%3C/nowiki%3E%3C/tt%3E
+http://crm.yourserver.com/Suite-CRM-Directory
 ....  _Email Address_
 This is the administrator's email address. Ex:
 `john.smith@yourserver.com`

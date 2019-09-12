@@ -1,6 +1,6 @@
 ---
 title: JSON API
-weight: 7
+weight: 50
 ---
 
 :toc:
@@ -47,10 +47,6 @@ OAuth2’s AuthorizationServer needs to set an encryption key for security reaso
 Now update its value with generating a new one using `base64_encode(random_bytes(32))`
 
 If you need more information about this issue, https://oauth2.thephpleague.com/v5-security-improvements/[please visit this page].
-
-=== If you are using Postman
-
-You can easily import postman collections of all endpoint, you can find it in `Api/docs/postman`
 
 == Authentication
 
