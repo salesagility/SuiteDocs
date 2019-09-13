@@ -7,9 +7,12 @@ weight: 30
 
 = SuiteCRM Web Analytics
 
-SuiteCRM Web Analytics is a web based analysis and reporting frontend that allows users to explore data in the Data Warehouse that has been extracted from SuiteCRM and third party data sources.
+SuiteCRM Web Analytics is a web based analysis and reporting frontend that allows users to explore data 
+in the Data Warehouse that has been extracted from SuiteCRM and third party data sources.
 
-Users are able to log into the web portal to run, filter data or schedule reports. The web portal provides the ability to import new reports and dashboards created using Pentaho powerful CTools and Report Designer. Reports can support a number of different visual charts and output types such as HTML, PDF and Excel.
+Users are able to log into the web portal to run, filter data or schedule reports. The web portal provides 
+the ability to import new reports and dashboards created using Pentaho powerful CTools and Report Designer. 
+Reports can support a number of different visual charts and output types such as HTML, PDF and Excel.
 
 == Downloading & Installing SuiteCRM Web Analytics
 
@@ -22,13 +25,15 @@ SuiteCRM Web Analytics requires the following pre-requisites installed on your s
 * zip
 
 {{% notice note %}}
-SuiteCRM Web Analytics requires the SuiteCRM Data Integration solution pre-installed and executed
+SuiteCRM Web Analytics requires the SuiteCRM Data Integration solution pre-installed and executed.
 {{% /notice %}}
 
 There are two ways of downloading the SuiteCRM Data Integration.
 
-* https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website]: a pre-built package containing installation scripts, web server and all the the third party open source libraries required
-* Clone the SuiteCRM Web Analytics repo: a script to build the SuiteCRM web analytics package (generating the same available package via the SuiteCRM website)
+* https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website^]: a pre-built 
+package containing installation scripts, web server and all the the third party open source libraries required.
+* Clone the SuiteCRM Web Analytics repo: a script to build the SuiteCRM web analytics package 
+(generating the same available package via the SuiteCRM website).
 
 === Manually Build the package (cloning from repo)
 
@@ -60,14 +65,16 @@ Would you like to remove the installation files? This will save disk space. [y/N
 -------------------------------------------------------------
 ----
 
-This will generate a package named ***suitecrm-analytics-server.zip*** within the root of your directory. This is the same package available via the SuiteCRM website.
+This will generate a package named **suitecrm-analytics-server.zip** within the root of your directory. 
+This is the same package available via the SuiteCRM website.
 
 
 === Configuring SuiteCRM Data Integration
 
-After downloading or generating the zip ***suitecrm-analytics-server.zip*** file. ***Upload*** and ***extract*** this file on a hosted web server.
+After downloading or generating the `suitecrm-analytics-server.zip´ file, **Upload** and **extract** this 
+file on a hosted web server.
 
-Navigate into the newly extracted ***suitecrm-analytics-server*** folder and edit the ***install.properties***
+Navigate into the newly extracted `suitecrm-analytics-server´ folder and edit the `install.properties`.
 
 [source,bash]
 ----
@@ -98,7 +105,8 @@ SUITECRM_USERNAME=suitecrmrootuser
 SUITECRM_PASSWORD=suitecrmrootuserpassword
 ----
 
-These config variables define the connection to your SuiteCRM data warehouse (created by the SuiteCRM Data Integration solution) to retrieve your transformed SuiteCRM data.
+These config variables define the connection to your SuiteCRM data warehouse (created by the 
+SuiteCRM Data Integration solution) to retrieve your transformed SuiteCRM data.
 
 [source,bash]
 ----
@@ -112,7 +120,8 @@ SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
 
 === Installing SuiteCRM Web Analytics
 
-Once the configuration has been defined, now run the setup script within the same root directory of your suitecrm-analytics-server
+Once the configuration has been defined, now run the setup script within the same root directory of 
+your suitecrm-analytics-server.
 
 [source,bash]
 ----
@@ -121,7 +130,7 @@ Once the configuration has been defined, now run the setup script within the sam
 
 This will check that the web server can successfully run and the database connections are successful.
 
-Then you can run the SuiteCRM Web Analytics web server to access the application
+Then you can run the SuiteCRM Web Analytics web server to access the application.
 
 [source,bash]
 ----
@@ -137,17 +146,21 @@ To follow the web server logs you can run this command:
 tail -f tomcat/logs/catalina.out
 ----
 
-To confirm the server has successfully started look for the following line in the above log file with N is a dynamic number depending on how quickly the server initialised.
+To confirm the server has successfully started look for the following line in the above log file 
+with `N` is a dynamic number depending on how quickly the server initialised.
 
 [source,bash]
 ----
 org.apache.catalina.startup.Catalina.start Server startup in N ms
 ----
 
-Once the server has initialised you can log into the SuiteCRM Analytics Web Application by navigating to the hostname or IP address of the server in your web browser.
-By default the web application is listening on port 8080 so for example, your server may be available on ***http://localhost:8080/suitecrmanalytics***
+Once the server has initialised you can log into the SuiteCRM Analytics Web Application by navigating 
+to the hostname or IP address of the server in your web browser.
+By default the web application is listening on port `8080` so for example, your server may be 
+available on `http://localhost:8080/suitecrmanalytics`.
 
-Check out the link:/user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for more information of the application
+Check out the link:/user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for 
+more information on the application.
 
 
 

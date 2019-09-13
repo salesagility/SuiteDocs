@@ -7,7 +7,10 @@ weight: 20
 
 = SuiteCRM Data Integration
 
-SuiteCRM Data Integration is an Extract, Transform and Load (ETL) solution that connects to an existing SuiteCRM installation to extract source data from the MySQL database and load that into the Data Warehouse, that has been optimised for analytical functions. SuiteCRM Data Integration can be installed as a stand-alone solution and can be used with other reporting tools if desired.
+SuiteCRM Data Integration is an Extract, Transform and Load (ETL) solution that connects to an existing 
+SuiteCRM installation to extract source data from the MySQL database and load that into the Data Warehouse, 
+that has been optimised for analytical functions. SuiteCRM Data Integration can be installed as a stand-alone 
+solution and can be used with other reporting tools if desired.
 
 == Downloading & Installing SuiteCRM Data Integration
 
@@ -22,8 +25,10 @@ SuiteCRM Data Integration requires the following pre-requisites installed on you
 
 There are two ways of downloading the SuiteCRM Data Integration.
 
-* https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website]: a pre-built package containing installation scripts, web server and all the the third party open source libraries required
-* Clone the SuiteCRM Data Integration repo: a script to build the SuiteCRM data integration package (generating the same available package via the SuiteCRM website)
+* https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website^]: a pre-built 
+package containing installation scripts, web server and all the the third party open source libraries required.
+* Clone the SuiteCRM Data Integration repo: a script to build the SuiteCRM data integration package 
+(generating the same available package via the SuiteCRM website).
 
 === Manually Build the package (cloning from repo)
 
@@ -34,7 +39,7 @@ Clone repo via terminal:
 git clone https://github.com/ivylabs/suitecrm-data-integration
 ----
 
-Navigate into the newly clone repository's directory and run build.sh
+Navigate into the newly clone repository's directory and run `build.sh`.
 
 [source,bash]
 ----
@@ -55,14 +60,15 @@ Would you like to remove the installation files? This will save disk space. [y/N
 -------------------------------------------------------------
 ----
 
-This will generate a package named ***suitecrm-data-integration-server.zip*** within the root of your directory. This is the same package available via the SuiteCRM website.
-
+This will generate a package named `suitecrm-data-integration-server.zip` within the root of your directory. 
+This is the same package available via the SuiteCRM website.
 
 === Configuring SuiteCRM Data Integration
 
-After downloading or generating the zip ***suitecrm-data-integration-server.zip*** file. ***Upload*** and ***extract*** this file on a hosted web server.
+After downloading or generating the `suitecrm-data-integration-server.zip` file, **Upload** and **extract** this 
+file on a hosted web server.
 
-Navigate into the newly extracted ***suitecrm-data-integration-server*** folder and edit the ***install.properties***
+Navigate into the newly extracted `suitecrm-data-integration-server` folder and edit the `install.properties`.
 
 [source,bash]
 ----
@@ -115,10 +121,11 @@ SUITECRM_USERNAME=suitecrmrootuser
 SUITECRM_PASSWORD=suitecrmrootuserpassword
 ----
 
-These config variables define the connection to your SuiteCRM Data Integration to transform and load the extracted SuiteCRM data into.
+These config variables define the connection to your SuiteCRM Data Integration to transform and load 
+the extracted SuiteCRM data into.
 
 {{% notice note %}}
-Remember to create a new MySQL database for the SuiteCRM Data Integration data warehouse
+Remember to create a new MySQL database for the SuiteCRM Data Integration data warehouse.
 {{% /notice %}}
 
 [source,bash]
@@ -131,11 +138,13 @@ SUITECRM_ANALYTICS_USERNAME=suitecrmrootuser
 SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
 ----
 
-The SMTP config variables will define the connection to an email mail client to send out notifications on the status of the extraction script (success or failure). These are optional.
+The SMTP config variables will define the connection to an email mail client to send out notifications 
+on the status of the extraction script (success or failure). These are optional.
 
 == Installing SuiteCRM Data Integration
 
-Once the configuration has been defined, now run the setup script within the same root directory of your suitecrm-data-integration
+Once the configuration has been defined, now run the setup script within the same root directory of 
+your `suitecrm-data-integration`.
 
 [source,bash]
 ----
@@ -151,7 +160,8 @@ Then you can run the SuiteCRM Data Integration script to extract and transform y
 ./run-suitecrm-data-integration.sh
 ----
 
-This should output on your terminal all logging referring to the extracting, transforming and loading data into the data warehouse tables.
+This should output on your terminal all logging referring to the extracting, transforming and loading data 
+into the data warehouse tables.
 
 The solution currently extracts data from the following modules:
 
@@ -166,17 +176,12 @@ The solution currently extracts data from the following modules:
 * Users
 * Custom Fields from Cases,Leads
 
-This is the end of the SuiteCRM Data Integration installation. If you wish to know more about Pentaho ETL solutions you can visit the ***Spoon*** https://wiki.pentaho.com/display/EAI/Spoon+User+Guide[user guide].
+This is the end of the SuiteCRM Data Integration installation. If you wish to know more about Pentaho ETL 
+solutions you can visit the https://wiki.pentaho.com/display/EAI/Spoon+User+Guide[Spoon user guide^].
 This solution includes a pre-packaged spoon client that you can run via terminal.
 
 [source,bash]
 ----
 ./data-integration-client.sh
 ----
-
-
-
-
-
-
 
