@@ -74,7 +74,7 @@ This is the same package available via the SuiteCRM website.
 After downloading or generating the `suitecrm-analytics-server.zip´ file, **Upload** and **extract** this 
 file on a hosted web server.
 
-Navigate into the newly extracted `suitecrm-analytics-server´ folder and edit the `install.properties`.
+Navigate into the newly extracted `suitecrm-analytics-server` folder and edit the `install.properties`.
 
 [source,bash]
 ----
