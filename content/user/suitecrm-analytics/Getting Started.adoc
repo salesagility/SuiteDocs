@@ -16,7 +16,9 @@ If you are a system administrator please follow the link:/admin/suitecrm-analyti
 To log into the SuiteCRM Analytics Web Application you simply have to navigate to the hostname or IP address of the server in your favourite web browser. By default the web application is listening
 on port 8080 so for example, your server may be available at ***http://localhost:8080/suitecrmanalytics***
 
- The default username is ​***admin***​ and the default password is ​***password***​
+{{% tip note %}}
+The default username is ​***admin***​ and the default password is ​***password***​
+{{% /tip %}}
 
 image:scrm_analytics_login.png[title="Log in"]
 
