@@ -99,3 +99,35 @@ weight = 30
 title = "SuiteCRM - Русскоязычная документация"
 weight = 3
 languageName = "Русский"
+
+
+
+[Languages.pt]
+#title = "SuiteCRM Documentation"
+title = "Docs"
+weight = 4
+languageName = "Português"
+
+[[Languages.pt.menu.shortcuts]]
+name = "<i class='fa fa-newspaper-o'></i> Blog"
+url = "blog"
+weight = 10
+
+[[Languages.pt.menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Github"
+identifier = "ds"
+url = "https://github.com/salesagility/SuiteCRM"
+weight = 11
+
+
+# [[Languages.en.menu.shortcuts]]
+# name = "<i class='fa fa-bookmark'></i> Hugo Documentation"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
+
+[[Languages.pt.menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> Créditos"
+url = "/credits"
+weight = 30
+
