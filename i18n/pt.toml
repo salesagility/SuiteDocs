@@ -1,0 +1,138 @@
+[suitedocs-title]
+other= "Site de Documentação do SuiteCRM"
+
+[navigation] 
+other="Navegação"
+
+[Search-placeholder]
+other = "Pesquisa..."
+
+[Clear-History]
+other = "Marcar tudo como não-lido"
+
+[Attachments-label]
+other = "Anexos"
+
+[title-404]
+other = "Erro"
+
+[message-404]
+other = "Oops! Parece que esta página não existe ¯\\_(ツ)_/¯."
+
+[Go-to-homepage]
+other = "Ir para a página principal"
+
+[Edit-this-page]
+other = "Editar esta página"
+
+[Shortcuts-Title]
+other = "Mais"
+
+[Expand-title]
+other = "Expanda-me..."
+
+[Issue-for-page]
+other = "Issue"
+
+[Documentation]
+other = "Documentação"
+
+[Guides]
+other = "Guias"
+
+[User]
+other = "Utilizador"
+
+[Developer]
+other = "Programador"
+
+[Administrator]
+other = "Administrador"
+
+[Admin-SHORT]
+other = "Admin"
+
+[Community]
+other = "Comunidade"
+
+[TechnicalBlog]
+other = "Blog Técnico"
+
+[FromTechnicalBlog]
+other = "Do nosso Blog Técnico"
+
+[LatestPosts]
+other = "Posts mais recentes"
+
+[GettingStarted]
+other = "Começar"
+
+[Installing]
+other = "Instalar"
+
+[Upgrading]
+other = "Atualizar"
+
+[An-existing-installation]
+other = " uma instalação existente do SuiteCRM"
+
+[Add-features-with]
+other = "Adicione funcionalidades com "
+
+[3rdPartyAdd-Ons]
+other ="acrescentos de 3ª parte"
+
+[Using-SuiteCRM]
+other = "Usar o SuiteCRM"
+
+[Learn-the]
+other = "Compreender a "
+
+[UserInterface]
+other = "Interface de Utilizador"
+
+[Understand-the]
+other = "Compreender os "
+
+[CoreModules]
+other = "Módulos de Base"
+
+[Its-open-source]
+other = "É open source e os"
+
+[Developers]
+other = "Developers"
+
+[Customize-all-the-code]
+other = "personalizam tudo!"
+
+[Contribute]
+other = "Contribuir"
+
+[Learn-how-to]
+other = "Aprender a "
+
+[Edit-a-page]
+other = "Editar uma Página"
+
+[In-this-site]
+other = " neste site"
+
+[Report-an]
+other = "Reportar um "
+
+[Issue]
+other = "Problema"
+
+[About-a-page]
+other = " numa página"
+
+[Code]
+other = "Código"
+
+[RecentlyEdited]
+other = "Recentemente Editado"
+
+[DocumentationPages]
+other = "Páginas de Documentação"
+
