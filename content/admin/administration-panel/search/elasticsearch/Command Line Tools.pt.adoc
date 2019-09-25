@@ -9,7 +9,7 @@ weight: 5
 :imagesdir: /images/en/admin/ElasticSearch
 
 {{% notice info %}}
-Esta funcionalidade só está disponível para a versões do SuiteCRM posteriores a 7.11.
+Esta funcionalidade só está disponível para versões do SuiteCRM posteriores a 7.11.
 {{% /notice %}}
 
 A integração do SuiteCRM com Elasticsearch inclui duas úteis ferramentas de linha de comandos fornecidas pela
