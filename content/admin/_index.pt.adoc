@@ -1,0 +1,13 @@
+---
+title: "Guia de Administrador"
+weight: 30
+pre: "<b>3. </b>"
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+=== Índice
+{{% children depth="2" showhidden="false" showhidden="true" %}}
+
+
