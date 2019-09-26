@@ -1,0 +1,496 @@
+---
+Title: Appendix A
+Weight: 300
+hidden: true
+---
+
+:imagesdir: /images/en/user
+
+= Appendix A
+
+== Contacts Field List
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Name: | |Salutation + First Name + Last Name
+
+s|Date Created: | |Date/Time
+
+s|Date Modified: | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Created by: | |Relationship - Users
+
+s|Description: | |Text Area
+
+s|Assigned User: | |Relationship - Users
+
+s|Salutation | |Drop Down List
+
+s|First Name: | |Textfield
+
+s|Last Name: |Yes |Textfield
+
+s|Title: | |Textfield
+
+s|Department: | |Textfield
+
+s|Do Not Call: | |Checkbox
+
+s|Home: | |Phone
+
+s|Mobile: | |Phone
+
+s|Office Phone: | |Phone
+
+s|Other Phone: | |Phone
+
+s|Fax: | |Phone
+
+s|Email Address: | |Textfield
+
+s|Other Email: | |Textfield
+
+s|Invalid Email: | |Checkbox
+
+s|Email Opt Out: | |Checkbox
+
+s|Primary Address Street: | |Textfield
+
+s|Primary Address Street 2: | |Textfield
+
+s|Primary Address Street 3: | |Textfield
+
+s|Primary Address City: | |Textfield
+
+s|Primary Address State: | |Textfield
+
+s|Primary Address Postal Code: | |Textfield
+
+s|Primary Address Country: | |Textfield
+
+s|Alt Address Street: | |Textfield
+
+s|Alt Address Street 2: | |Textfield
+
+s|Alt Address Street 3: | |Textfield
+
+s|Alt Address City: | |Textfield
+
+s|Alt Address State: | |Textfield
+
+s|Alt Address Postalcode: | |Textfield
+
+s|Alt Address Country: | |Textfield
+
+s|Assistant: | |Textfield
+
+s|Assistant Phone: | |Phone
+
+s|Email Address: | |Email
+
+s|Referred by: | |Textfield
+
+s|Lead Source: | |Drop Down List
+
+s|Lead Source Description: | |Text Area
+
+s|Status: | |Drop Down List
+
+s|Status Description: | |Text Area
+
+s|Reports To: | |Relationship - Leads
+
+s|Account Name: | |Textfield
+
+s|Opportunity Name: | |Textfield
+
+s|Opportunity Amount: | |Textfield
+
+s|Campaign: | |Relationship - Campaigns
+
+s|Birthdate: | |Date
+|====
+
+== Leads Field List
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Name: | |Salutation + First Name + Last Name
+
+s|Date Created: | |Date/Time
+
+s|Date Modified: | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Created By: | |Relationship - Users
+
+s|Description: | |Text Area
+
+s|Assigned User: | |Relationships - Users
+
+s|Salutation | |Drop Down List
+
+s|First Name: | |Textfield
+
+s|Last Name: |Yes |Textfield
+
+s|Title: | |Textfield
+
+s|Department: | |Textfield
+
+s|Do Not Call: | |Checkbox
+
+s|Home Phone: | |Phone
+
+s|Mobile: | |Phone
+
+s|Office Phone: | |Phone
+
+s|Other Phone: | |Phone
+
+s|Fax: | |Phone
+
+s|Email Address: | |Textfield
+
+s|Other Email | |Textfield
+
+s|Invalid Email: | |Checkbox:
+
+s|Email Opt Out: | |Checkbox
+
+s|Primary Address Street: | |Textfield
+
+s|Primary Address Street 2: | |Textfield
+
+s|Primary Address Street 3: | |Textfield
+
+s|Primary Address City: | |Textfield
+
+s|Primary Address State: | |Textfield
+
+s|Primary Address Postalcode: | |Textfield
+
+s|Primary Address Country: | |Textfield
+
+s|Alternate Address Street: | |Textfield
+
+s|Alternate Address Street 2: | |Textfield
+
+s|Alternate Address Street 3: | |Textfield
+
+s|Alternate Address City: | |Textfield
+
+s|Alternate Address Postal Code: | |Textfield
+
+s|Alternate Address Country: | |Textfield
+
+s|Assistant: | |Textfield
+
+s|Assistant Phone: | |Phone
+
+s|Email Address: | |Email
+
+s|Referred By: | |Textfield
+
+s|Lead Source: | |Drop Down List
+
+s|Lead Source Description: | |Text Area
+
+s|Status: | |Drop Down List
+
+s|Status Description: | |Text Area
+
+s|Reports To: | |Relationship - Leads
+
+s|Account Name: | |Textfield
+
+s|Opportunity Name: | |Textfield
+
+s|Opportunity Amount | |Textfield
+
+s|Campaign | |Relationship - Campaigns
+
+s|Birthdate | |Date
+|====
+
+== Targets Field List
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Date Created: | |Salutation + First Name + Last Name
+
+s|Date Modified: | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Created By: | |Relationship - Users
+
+s|Description: | |Text Area
+
+s|Assigned to: | |Relationship - Users
+
+s|Salutation: | |Drop Down List
+
+s|First Name: | |Textfield
+
+s|Last Name: |Yes |Textfield
+
+s|Title: | |Textfield
+
+s|Department | |Textfield
+
+s|Do Not Call: | |Checkbox
+
+s|Home: | |Phone
+
+s|Mobile | |Phone
+
+s|Office Phone: | |Phone
+
+s|Other Phone: | |Phone
+
+s|Fax: | |Phone
+
+s|Email Address | |Email
+
+s|Other Email: | |Email
+
+s|Invalid Email: | |Checkbox
+
+s|Email Opt Out: | |Checkbox
+
+s|Primary Address Street: | |Textfield
+
+s|Primary Address Street 2: | |Textfield
+
+s|Primary Address Street 3: | |Textfield
+
+s|Primary Address City: | |Textfield
+
+s|Primary Address State: | |Textfield
+
+s|Primary Address Postalcode: | |Textfield
+
+s|Primary Address Country: | |Textfield
+
+s|Alternate Address Street: | |Textfield
+
+s|Alternate Address Street 2: | |Textfield
+
+s|Alternate Address Street 3: | |Textfield
+
+s|Alternate Address City: | |Textfield
+
+s|Alternate Address Postal Code: | |Textfield
+
+s|Alternate Address Country: | |Textfield
+
+s|Assistant: | |Textfield
+
+s|Assistant Phone: | |Phone
+
+s|Birthdate: | |Date
+
+s|Account Name: | |Textfield
+|====
+
+== Accounts Field List
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Label s|Required s|Type
+
+s|ID: |Yes |ID
+
+s|Name: |Yes |Name
+
+s|Date Created | |Date/Time
+
+s|Date Modified | |Date/Time
+
+s|Modified By: | |Relationship - Users
+
+s|Description | |Text Area
+
+s|Deleted: | |Checkbox
+
+s|Assigned User | |Relationship - Users
+
+s|Type: | |Drop Down List
+
+s|Industry: | |Drop Down List
+
+s|Annual Revenue | |Textfield
+
+s|Fax | |Phone
+
+s|Billing street: | |Textfield
+
+s|Billing street 2: | |Textfield
+
+s|Billing street 3: | |Textfield
+
+s|Billing street 4: | |Textfield
+
+s|Billing City: | |Textfield
+
+s|Billing State: | |Textfield
+
+s|Billing Postal Code: | |Textfield
+
+s|Billing Country: | |Textfield
+
+s|Rating: | |Textfield
+
+s|Office Phone: | |Phone
+
+s|Alternate Phone: | |Phone
+
+s|Website: | |URL
+
+s|Ownership: | |Textfield
+
+s|Employees | |Textfield
+
+s|Ticker Symbol | |Textfield
+
+s|Shipping Street: | |Textfield
+
+s|Shipping Street 2: | |Textfield
+
+s|Shipping Street 3: | |Textfield
+
+s|Shipping Street4: | |Textfield
+
+s|Shipping City: | |Textfield
+
+s|Shipping State: | |Textfield
+
+s|Shipping Postal Code: | |Textfield
+
+s|Shipping Country: | |Textfield
+
+s|Email Address: | |Email
+
+s|Non-Primary Emails | |Email
+
+s|SIC Code: | |Textfield
+
+s|Member Of: | |Relationship - Accounts
+
+s|Email Opt Out: | |Checkbox
+
+s|Invalid Email: | |Checkbox
+|====
+
+== Opportunities Field List
+
+image:Opportunities.png[Opportunities.png,title="Opportunities.png"]
+
+== Products Field List
+
+image:Products.png[Products.png,title="Products.png"]
+
+== Product Categories Field List
+
+image:Product_Categories.png[Product_Categories.png,title="Product_Categories.png"]
+
+== Quotes Field List
+
+image:Quotes.png[Quotes.png,title="Quotes.png"]
+
+== Invoices Field List
+
+image:Invoices.png[Invoices.png,title="Invoices.png"]
+
+== Contracts Field List
+
+image:Contracts.png[Contracts.png,title="Contracts.png"]
+
+== Line Items Field List
+
+image:Line_Items.png[Line_Items.png,title="Line_Items.png"]
+
+== Groups Field List
+
+image:Groups.png[Groups.png,title="Groups.png"]
+
+== PDF Templates Field List
+
+image:PDF_Templates.png[PDF_Templates.png,title="PDF_Templates.png"]
+
+== Cases Field List
+
+image:Cases.png[Cases.png,title="Cases.png"]
+
+== Notes Field List
+
+image:Notes.png[Notes.png,title="Notes.png"]
+
+== Calls Field List
+
+image:Calls.png[Calls.png,title="Calls.png"]
+
+== Emails Field List
+
+image:Emails.png[Emails.png,title="Emails.png"]
+
+== Meetings Field List
+
+image:Meetings.png[Meetings.png,title="Meetings.png"]
+
+== Tasks Field List
+
+image:Tasks.png[Tasks.png,title="Tasks.png"]
+
+== Projects Field List
+
+image:Projects.png[Projects.png,title="Projects.png"]
+
+== Project Tasks Field List
+
+image:Project_Tasks.png[Project_Tasks.png,title="Project_Tasks.png"]
+
+== Campaigns Field List
+
+image:Campaigns.png[Campaigns.png,title="Campaigns.png"]
+
+== Target Lists Field List
+
+image:Target_Lists.png[Target_Lists.png,title="Target_Lists.png"]
+
+== Email Templates Field List
+
+image:Email_Templates.png[Email_Templates.png,title="Email_Templates.png"]
+
+== Documents Field List
+
+image:Documents.png[Documents.png,title="Documents.png"]
+
+== Events Field List
+
+image:Events.png[Events.png,title="Events.png"]
+
+== Locations Field List
+
+image:Locations.png[Locations.png,title="Locations.png"]
+
+== Users Field List
+
+image:Users.png[Users.png,title="Users.png"]
+
