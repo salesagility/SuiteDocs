@@ -3,235 +3,240 @@ Title: Security Suite (Groups)
 Weight: 280
 ---
 
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
 :imagesdir: ./../../images/en/user
 
 = Security Suite (Groups)
 
-Security Suite allows control of what users can access. It allows
-restricting sensitive data in SuiteCRM to specific teams (groups).
-SecuritySuite comes loaded with options which allow you to configure it
-to meet your exact needs. Choose from a number of automatic assignment
-options to ensure that your users can always access the data that you
-need.
+O Security Suite permite controlar o acesso dos utilizadores. Permite
+retringir dados sensíveis presentes no SuiteCRM a equipas específicas 
+(grupos).
+O SecuritySuite tem imensas opções de confirguração para se ajustar às
+suas necessidades. Escolha um dos modos de atribuição automática para
+garantir que os utilizadores acedem sempre aos dados que precisam.
 
-== Create Groups
+== Criação de Grupos
 
-System Administrators can add groups and roles or set up Security Groups
-preferences in Security Suite Settings found at the top of the Admin
-page.
+Os Administradores do Sistema podem acresentar grupos e roles ou 
+definir as preferências de Grupos de Segurança nas Definições do 
+Security Suite no topo da página de administração.
 
-image:167Create_groups.png[title="Create Groups"]
+image:167Create_groups.png[title="Criação de Grupos"]
 
-== Allow Non-admins to Create Groups
+== Permitir a criação de grupos por não administradores
 
-System Administrators can allow non-admin users to add groups to
-records. This can be done by doing the following steps:
+Os Administradores do Sistema podem permitir que utilizadores 
+não-administradores adicionem grupos a registos. Isto consegue-se do
+seguinte modo:
 
-1.  Navigate to Configure Tabs. Add Security Groups to the displayed
-tabs.
-2.  Run Repair Roles, within Admin->Repair, to be able to assign rights
-to Security Groups.
-3.  Edit role(s) to Enable Security Groups Management.
-4.  Edit role(s) to set List to All or Group for Security Groups
-Management as desired.
+1.  Navegue para Configurar Tabs. Acrescente Security Groups às tabs a mostrar.
+2.  Corra o Reparar Roles, dentro do Admin->Reparar, para poder atribuir 
+permissões aos Grupos de Segurança.
+3.  Edite o(s) role(s) para Permitir Gestão de Grupos de Segurança.
+4.  Edite o(s) role(s) para definir Todos ou Grupo na permissão de Listar da
+Gestão de Grupos de Segurança, como desejado.
 
-== Configure SecuritySuite Settings
+== Configurar definições do SecuritySuite
 
-SecuritySuite is very configurable and allows for support near every
-possible situation. Because of that there may be a learning curve and
-some time required to understand what each option does and how it may be
-used for your specific needs. You can find the settings page by going to
-Admin->SecuritySuite Settings.
+O SecuritySuite é muito configurável e suporta quase todas as situações. 
+Devido a esta característica a curva de aprendizagem pode ser mais íngreme e 
+necessitar de algum tempo para compreender o que cada opção faz e como pode
+ser usada para os seus propósitos. Pode encontrar a página de configuração
+através da página de Administração: Admin->SecuritySuite Settings.
 
-== Groups Setup
+== Definição de Grupos
 
-There are 3 key steps to setting up Groups so that you work correctly.
+Há 3 passos essenciais para definir Grupos de modo a que funcionem 
+correctamente.
 
-1.  Create a group for each team of users and add the appropriate users
-to the group.
-2.  Create a role and select Group for the access level for every
-appropriate cell in the grid. Assign that role to each group
-3.  Add the groups to records in your SuiteCRM instance. You can use the
-Mass Assign on the List View to do this. Going forward the groups will
-automatically inherit based on your SecuritySuite Settings. You can also
-use logic hooks, workflow, or do a direct database insert into the
-securitygroups_records table if doing a one-time initial setup.
+1.  Criar um grupo para cada equipa de utilizadores e atribuir os utilizadores
+ao grupo apropriado.
+2.  Criar um role e seleccionar Grupo como nível de acesso nas células apropriadas, 
+na grelha. Atribuir esse role a cada grupo
+3.  Acrescentar os grupos aos registos na sua instância do SuiteCRM. Pode usar a
+opção "Atribuição em Massa" da vista de Lista para o conseguir. A partir daqui os 
+grupos serão herdados automaticamente de acordo com as definições do SecuritySuite. 
+Pode também usar logic hooks, workflow, ou fazer um insert directo à tabela
+securitygroups_records da base de dados se o fizer na instalação.
 
-If your users should only typically see their own records then the role
-assigned to the group would be configured to have Owner only rights. A
-manager who is a part of the group, but who should see be able to see
-all records in the group would have a role directly assigned to you
-record that gives Group access.
+Se os seus utilizadores vêem apenas os seus registos, o role atribuído ao grupo
+deverá ser configurado para ter direitos de Apenas Dono. Um gestor que faça parte
+do grupo, mas que também deverá ter permissões para ver todos os registos além 
+dos seus deve ter um role directamente atribuído ao registo que permita acesso de 
+Grupo.
 
-For more help check out this 
-https://www.youtube.com/watch?v=yJ-BzM3GTgA[Introduction
-Video^].
+Para mais ajuda, veja este 
+https://www.youtube.com/watch?v=yJ-BzM3GTgA[Vídeo de Introdução^].
 
-Roles determine what a user can do with a record once they have access to it.
+Os roles determinam o que um utilizador pode fazer com um registo a que tenham acesso.
 
-1.  Create the roles
-2.  Edit role(s) to Enable Security Groups Management
-3.  Edit role(s) to set List to All or Group for Security Groups Management as desired
+1.  Criar os roles
+2.  Editar o(s) role(s) para permitr Gestão de Grupos de Segurança
+3.  Editar o(s) role(s) para definir Listar para Todos ou Grupo na Gestão de Grupos de Segurança conforme desejado
 
-== A Typical Hierarchy Setup
+== Uma definição hierárquica típica
 
-Although SecuritySuite can handle any organizational structure, the most
-common scenario it is used for is one where the owner can see
-everything, managers can see both their own records and those of their
-team, and team members can only see their own records.
+Apesar do SecuritySuite poder tratar de qualquer estrutura organizacional, o
+cenário mais comum é quando existe um utilizador com permissões para 
+consultar todos os registos, gestores que podem ver todos os registos
+da sua equipa e membros de equipa que podem apenas ver os seus registos.
 
-=== The Scenario
+=== O Cenário
 
-This company has 2 sales teams; East and West. The owner, Jill, should
-be able to see everything. The East Sales team is lead by Will and Sarah
-leads the West Sales team. Both of them should see everything just in
-your own respective teams. The rest of the Sales Reps in each teams
-should only be allowed to see your own records.
+Esta empresa tem duas equipas de vendas: Este e Oeste. A dona, Joana, deve
+poder consultar todos os registos. A equipa Este é liderada pelo Guilherme
+e a Oeste pela Sara. Ambos devem poder consultar todos os registos da sua
+equipa, o Guilherme vê tudo sobre a equipa Este e a Sara tudo o que é
+relacionado com a equipa Oeste. Os restantes membros das equipas só podem 
+ver os seus próprios registos.
 
-=== Set up the Groups
+=== Definir os Grupos
 
-1.  Create a group called East Sales
-2.  Add Will and the Sales Reps
-3.  Create a group called West Sales
-4.  Add Sarah and the Sales Reps
+1.  Criar um grupo chamado "Vendas Este"
+2.  Acrescentar a este grupo o Guilherme e os membros da equipa
+3.  Criar um grupo chamado "Vendas Oeste"
+4.  Acrescentar a este grupo a Sara e os membros da equipa
 
-=== Set up the Roles
+=== Definir os Roles
 
-1.  Create a role called Everything and set the rights to All._Tips and
-Tricks: Click the header in any column on the role grid and you can set
-the rights for the whole column at one time_
-2.  Assign the Everything role directly to Jill's user account
-3.  Create a role called Group Only and set the rights for everything to
-Group
-4.  Assign the Group role directly to Will and Sarah
-5.  Create a role called Owner Only and set the rights for everything to
-Owner
-6.  Assign the Owner Only role to the East Sales and West Sales groups
+1.  Criar um role chamado "Todos" e definir permissões para "Tudo"._Dica: 
+Clicar no cabeçalho de qualquer coluna na grelha de roles para poder
+definir as permissões para toda a coluna ao mesmo tempo_
+2.  Atribuir o role "Todos" directamente à conta do utilizador Joana
+3.  Criar um role chamado "Só Grupo" com permissões "Grupo" para todos
+os módulos
+4.  Atribuir o role "Só Grupo" directamente aos utilizadores Guilherme e Sara
+5.  Criar um role chamado "Só Meus" com permissões "Dono" para todos os 
+módulos
+6.  Atribuir o role "Só Meus" aos grupos "Vendas Este" e "Vendas Oeste"
 
-=== Assign the Groups
+=== Atribuir os Grupos
 
-This instance already has some existing Leads so we will assign them to
-the appropriate groups.
+Esta instância já tem algumas Leads por isso vamos associá-las aos grupos
+apropriados.
 
-1.  Go to the Leads List View and search for the Leads that should
-belong to the East Sales group
-2.  Check the appropriate Leads, in the Mass Assign panel choose East
-Sales, and click "Assign"
-3.  Repeat for the West Sales team
+1.  Vá à vista de lista de Leads e pesquise Leads que devam pertencer ao
+grupo "Vendas Este"
+2.  Marque as Leads apropriadas e no painel de "Atribuição em Massa" 
+escolha "Vendas Este" e clique em "Atribuir"
+3.  Repetir para equipa de "Vendas Oeste"
 
 {{% notice note %}}
-Going forward the groups will be automatically inherited by any
-Calls, Contacts, Notes, etc that get added based on the SecuritySuite
-Settings that are configured. If the SuiteCRM instance is already loaded
-with lots of data at the time of starting with SecuritySuite then there
-may be some initial work to be done to add those groups to the related
-records. The Mass Assign functionality on the List View can be used or
-direct database insertion into the securitygroups_records table. See
-existing data in that table for how to format the data. This will
-require SQL knowledge if you want to go that route.
+A partir daqui os grupos serão automaticamente herdados pelos novos 
+registos de Chamadas, Contactos, Notas, etc baseado nas definições
+configuradas do SecuritySuite. Se, quando começar a usar o 
+SecuritySuite, a instância de SuiteCRM já incluir muitos registos 
+poderá necessitar de algum trabalho inicial para atribuir os grupos
+aos registos relevantes. 
+Pode usar a funcionalidade de "Atribuição em Massa" da Vista de Lista
+ou inserções directas na tabela securitygroups_records da base de 
+dados. Confira os dados existentes nessa tabela para entender a 
+formatação necessária. Esta última opção requer conhecimentos de SQL.
 {{% /notice %}}
 
-=== Check the Settings
+=== Verificar as Definições
 
-These settings determine how SecuritySuite functions. In the Group
-Inheritance Rules panel the defaults of "Inherit from Created By User",
-"Inherit from Assigned To User", and "Inherit from Parent Record" will
-work perfectly in this scenario.
+Estas definições determinam como funciona o SecuritySuite. No painel de
+"Regras de Herança de Grupos" os valores pré-definidos de
+"Herdar do utilzador que criou", "Herdar do utilizador atribuído" e de
+"Herdar de registo pai" servem perfeitamente para este cenário.
 
-Any Lead that gets created will automatically have groups assigned to it
-based on who created it and who gets assigned to it. If a Call is
-created for a Lead then the Call will inherit the groups from the Lead
-record (parent record) along with inheriting the groups from the created
-by user and the assigned to user.
+Qualquer Lead que seja criada irá ter automaticamente atribuídos os 
+grupos baseado em quem a criou e a quem é atribuída. Se, posteriormente,
+for criada uma Chamada para essa Lead, a Chamada irá herdar os grupos
+atribuídos à Lead (registo pai) bem como os grupos do utilizador que a 
+criou e do que lhe for atribuído.
 
-Another key setting is "Strict Rights". In the scenario above the
-default settings will cause the links on the List View for the team
-Leads to show with no link for records that are assigned to your group.
-In many cases you will want to uncheck "Strict Rights" so that you can
-assign groups in the manner described in this doc.
+Outra definição impostante é "Direitos Rigorosos". No cenário apresentado,
+os valores pré-definidos irão fazer com que, na vista de Lista, os gestores
+da equipa não consigam clicar nos links das Leads dos grupos. Em muitos
+casos irá querer desmarcar esta opção para que a atribuição de grupos
+funcione efectivamente como mostrado.
 
-=== That's it!
+=== É isso!
 
-The hardest part is always the initial setup. Once you have things
-configured and figured out it will just run on its own.
+A parte mais complicada é sempre a definição inicial. Após ter as
+configurações definidas irá correr sem problemas.
 
-Have a more complicated structure? Apply the same principles here for
-each additional level of hierarchy that you may have. The key is to
-create a group at the lowest levels of the structure and then work your
-way back up.
+Tem uma estrutura mais complicada? Aplique os mesmos princípios aqui
+enunciados para cada nível de hierarquia. O truque é criar os grupos
+no nível mais baixo da estrutura e criar o resto de baixo para cima.
 
-== Advanced Options
+== Opções Avançadas
 
-SuiteCRM System Administrators can configure many advanced options for
-Security Suite. This allows you to control various access/rights,
-inheriting of records, filters and more.
+Os administradores de sistema do SuiteCRM podem configurar muitas opções
+avançadas para o Security Suite. Isto permite controlar os diversos 
+acessos e permissões, herança de registos, filtros e mais.
 
 image:168Security_group_management.png[title="Advanced Options"]
 
-=== Additive Rights
+=== Direitos Aditivos
 
-User gets greatest rights of all roles assigned to you or user's
-group(s)
+O utilizador obtém os direitos mais abrangentes de todos os roles
+atribuídos ao utilizador ou grupos a que pertence
 
-=== Strict Rights
+=== Direitos Rigorosos
 
-If a user is a member of several groups only the respective rights from
-the group assigned to the current record are used.
+Se um utilizador for membro de diversos grupos, apenas as permissões do
+grupo a que pertence o registo são relevantes.
 
-=== New User Group Popup
+=== Popup Grupo de Novo utilizador
 
-When creating a new user show the SecurityGroups popup to assign them to
-a group(s).
+Ao criar um novo utilizador mostrar um popup com os Grupos de Segurança
+para atribuir o utilizador a um ou mais grupos.
 
-=== User Role Precedence
+=== Precedência de Role de Utilizador
 
-If any role is assigned directly to a user that role should take
-precedence over any group roles.
+Indica se os roles atribuídos directamente aos utilizadores têm 
+precedência sobre roles atribuídos a grupos.
 
-=== Filter User List
+=== Filtrar Lista de Utilizadores
 
-Non-admin users can only assign to users in the same group(s)
+Utilizadores não-administadores podem atribuir registos apenas a 
+utilizadores do(s) mesmo(s) grupo(s)
 
-=== Use Popup Select
+=== Popup de Selecção de Grupo
 
-When a record is created by a user in more than one group popup a group
-selection screen otherwise inherit that one group. Inheritance rules
-will only be used for non-user created records (e.g. Workflows, etc).
+Quando um registo é criado por um utilizador que pertence a mais que um
+grupo, apresentar um popup de selecção de grupo, ou, pelo contrário, 
+herda do grupo. As regras de herança só serão usadas para registos
+criados pelo sistema (p.e. Workflows, etc).
 
-=== Use Creator Group Select
+=== Usar Selecção de Grupo do Criador
 
-Adds a panel to a record creation screen if a user is a member of more
-than one inheritable group that allows a user to select one or more
-groups that you belongs to that should be associated with the newly
-created record. If a user is in just one group the normal inheritance
-rules will instead be applied.
+Acrescenta um painel ao écran de criação de registos se o utilizador
+pertencer a mais que um grupo, para que o utilizador possa escolher a
+que grupo pertence o registo a ser criado. Se um utilizador pertencer
+apenas a um grupo, aplicam-se as regras normais de herança.
 
 {{% notice note %}}
-The new record will still inherit from the Assigned To user or
-Parent record if these options are set. This setting only overrides the
-Created By setting.
+O novo registo irá na mesma herdar do utilizador atribuído ou do 
+registo pai se estas opções estiverem definidas. Esta definição 
+apenas se sobrepõe a definição de utilizador criador.
 {{% /notice %}}
 
-=== Inherit from Created By User
+=== Herda do utilizador criador
 
-The record will inherit all the groups assigned to the user who created it.
+O registo irá herdar todos os grupos atribuídos ao utilizador que o criou.
 
-=== Inherit from Assigned To User
+=== Herdar do utilizador atribuído
 
-The record will inherit all the groups of the user assigned to the record.
-Other groups assigned to the record will NOT be removed.
+O registo irá herdar todos os grupo do utilizador atribuído ao registo.
+Outros grupos atribuídos ao registo NÃO serão removidos.
 
-=== Inherit from Parent Record
+=== Herda do Registo Pai
 
-e.g. If a case is created for a contact the case will inherit the groups
-associated with the contact.
+p.e. Se um caso for aberto para um contacto, o caso irá herdar os grupos
+associados ao contacto.
 
-=== Default Groups for New Records
+=== Grupos padrão para Novos Registos
 
-Set groups that should always be attached when a specific module is
-created.
+Define grupos que terão que ser sempre atribuídos sempre que um 
+novo registo seja criado.
 
-=== Inbound email account
+=== Conta de recepção de email
 
-Locks down inbound email accounts in the email client to only list those
-that belong to the same group as the current user.
+Apenas permite acesso a contas de recepção de email que pertençam ao 
+mesmo grupo que o utilizador.
