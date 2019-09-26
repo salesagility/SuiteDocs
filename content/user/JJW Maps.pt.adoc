@@ -3,13 +3,15 @@ Title: JJW Maps
 Weight: 290
 ---
 
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
 :imagesdir: ./../../images/en/user
 
 = JJW Maps
 
-JJW Maps provides mapping functionality for SuiteCRM. JJW Maps is a
-third party module, provided by http://www.jjwdesign.com/[JJW Design].
+JJW Maps fornece funcionalidades de mapeamento para o SuiteCRM. JJW Maps 
+é um módulo de terceira parte, desenvolvido por http://www.jjwdesign.com/[JJW Design].
 
-Documentation and releases are kept up to date on the
-http://www.jjwdesign.com/google-maps-for-sugarcrm/[JJW Maps project
-page].
+Documentação e laçamentos são mantidos na
+http://www.jjwdesign.com/google-maps-for-sugarcrm/[página de projecto de JJW Maps].
