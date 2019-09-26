@@ -51,11 +51,11 @@ Implementation of an abstract test case, this class overrides the `setUp()` and 
 Formerly, we had `StateSaver` and `StateChecker` helpers to make it easier to write state-safe tests. This proved slow and complex, so we've replaced it with a more standard system involving database transactions that are rolled back following each individual unit test.
 
 *Keep the system global environment state clean, especially in tests.* +
-If a test leaves some extra data in the database, file system, superglobals, etc. this could change the behaviour of the other tests run afterward. When you write a new test make sure it is *state-safe*, which means tests should not leave any 'garbage' data in the test environment state such as database, file system, superglobals etc.
+If a test leaves some extra data in the database, file system, superglobals, etc. this could change the behaviour of the other tests run afterward. When you write a new test make sure it is *state-safe*, which means tests should not leave any 'garbage' data in the test environment's state.
 
 In order to ensure state remains unchanged when a unit test is run, there are a few things you should keep in mind:
 
-- Database state, this is handled automatically by the, however if you explicitly create a database transaction in your test you'll need to make sure the test uses the `truncate` cleanup strategy instead of the default `transaction` strategy.
+- Database state, this is handled automatically by the database transaction rollback system. However, if you explicitly create a database transaction in your test you'll need to make sure the test uses the `truncate` cleanup strategy instead of the default `transaction` strategy.
 - Changes to files on the filesystem, currently we don't handle this.
 - Error level, if your test relies on a specific error level, you should save the error reporting level that exists at the start of the test, change the error level, then restore it at the end of the test.
 - Global PHP variables, these can be handled by PHPUnit itself, though we don't currently use that functionality.
