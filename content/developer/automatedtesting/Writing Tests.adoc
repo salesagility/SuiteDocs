@@ -48,7 +48,7 @@ Implementation of an abstract test case, this class overrides the `setUp()` and 
 
 == State-safe Tests
 
-Formerly, we had `StateSaver` and `StateChecker` helpers to make it easier to write. This proved slow and complex, so we've replaced it with a more standard system involving database transactions that are rolled back following every individual unit test.
+Formerly, we had `StateSaver` and `StateChecker` helpers to make it easier to write state-safe tests. This proved slow and complex, so we've replaced it with a more standard system involving database transactions that are rolled back following each individual unit test.
 
 *Keep the system global environment state clean, especially in tests.* +
 If a test leaves some extra data in the database, file system, superglobals, etc. this could change the behaviour of the other tests run afterward. When you write a new test make sure it is *state-safe*, which means tests should not leave any 'garbage' data in the test environment state such as database, file system, superglobals etc.
