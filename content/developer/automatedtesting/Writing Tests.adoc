@@ -44,7 +44,7 @@ See more about PHPUnit tests at https://phpunit.readthedocs.io
 
  - abstract class `SuiteCRM\TestCaseAbstract`
 
-Implementation of state checker Codeception tests, class StateCheckerPHPUnitTestCaseAbstract extends PHPUnit_Framework_TestCase and override setUp() and tearDown() methods so if you want to call these methods in the inheritance test classes you should call parent::setUp() and parent::tearDown() in it.
+Implementation of an abstract test case, this class overrides the `setUp()` and `tearDown()` methods to handle the database transaction creation and rollback. 
 
 == State-safe Tests
 
