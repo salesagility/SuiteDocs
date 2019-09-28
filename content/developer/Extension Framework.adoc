@@ -16,7 +16,7 @@ directory to override all its contents, but has advantages:
 
 - you can override just a part of what you're modifying
 - different people can override different parts, without conflicts. For example, 
-you can add-on can add a field to a layout, and then an add-on adds another, and a second add-on changes
+you can add a field to a layout, and then an add-on adds another, and a second add-on changes
 something else in the same layout. SuiteCRM will make sure all changes will be consolidated.
 
 In general a folder is provided in `custom/Extension` (the exact path depends on the
