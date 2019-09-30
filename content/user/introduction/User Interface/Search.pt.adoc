@@ -1,0 +1,111 @@
+---
+Title: Search
+Weight: 53
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Search
+
+Searching is a vital aspect within the CRM as this allows you to quickly
+define what it is you want to see. Many CRM's will have large data sets
+so it is vital to you that you have a way to refine your search. In the
+following sub-sections we will cover the various searching options
+available to you.
+
+== Global Search
+
+You can search all records within the CRM using the global search
+functionality. You can search for records via global search by using the
+search bar in the main navigation menu.
+
+image:38Search.png[title="Global Search"]
+
+Once you have entered your search term, you can press the return key or
+click the magnifying glass/search icon. This will return records that
+match the search criteria and categorise them by the modules available.
+
+image:39Search.png[title="Global Search results"]
+
+Modules can be added to the global search functionality by the System
+Administrator.
+
+== Full Text Search
+
+SuiteCRM has an option to enable or disable a full text global search.
+The full text global search is powered by
+http://framework.zend.com/manual/1.12/en/zend.search.lucene.overview.html[Zend
+Lucene] search framework. The search works very similar to the standard
+global search, but provides the enhanced functionality of searching text
+in documents and other files, compared to the record-level search
+provided by the standard global search.
+
+{{% notice note %}}
+System Administrators can enable/disable the full text search by
+clicking on the AOD Settings link within the admin panel.
+{{% /notice %}}
+
+image:169AOD_Settings.png[title="AOD Settings"]
+
+This will display the AOD option to enable/disable the full text search.
+
+image:170Enable_AOD.png[title="Enable AOD"]
+
+The search returns results slightly different to global search. Results
+are returned in order of score. Records are scored dependent on how well
+you match the search criteria provided by you – from 0-100%.
+
+image:171Search_results.png[title="Full Text Search"]
+
+== Basic Module Search
+
+Basic search is available on all modules within the CRM. Basic search,
+as standard, allows users to search on the record name.
+
+image:193Search_button.png[title="Basic Module Search button"]
+
+image:194Search_box.png[title="Basic Module Search"]
+
+Basic search also allows users to check the 'My Items' check box.
+Enabling this option will only return records that are assigned to you.
+
+image:195Search_my_items.png[title="Search my items"]
+
+Once a user has searched for a record, the search will be saved. This
+means that you can navigate to records and other modules within the CRM
+but the search will not be cleared. If you wish to clear your search,
+you can click btn:[Clear] and then click btn:[Search]. This will clear any saved
+searches and return to the default result set for that module.
+
+{{% notice note %}}
+System Administrators can modify which fields are searchable in
+Basic Search within Studio.
+{{% /notice %}}
+
+== Advanced Module Search
+
+Advanced Search is available on all modules within the CRM. Advanced
+Search provides you with a more detailed module search functionality. As
+standard, there are more fields available to you via Advanced Search.
+
+image:196Advanced_search.png[title="Advanced Module Search"]
+
+Advanced Searches may have many fields and specific criteria. For this
+reason, You can save your advanced search criteria to easily populate
+this in future.
+
+image:197Save_search.png[title="Save search"]
+
+To load a saved search, you can select the saved search from the 'My
+Filters' drop down. This will return results that match the criteria
+specified in the saved search.
+
+image:198Saved_search.png[title="Saved searches"]
+
+{{% notice note %}}
+System Administrators can modify which fields are searchable in
+Advanced Search within Studio.
+{{% /notice %}}
+
