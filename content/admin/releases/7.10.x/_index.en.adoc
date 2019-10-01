@@ -30,6 +30,7 @@ _Released 01/10/2019_
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/7643[7643^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7622[7622^] - Make the code:coverage Robo command work outside of CI
 * PR: https://github.com/salesagility/SuiteCRM/pull/7837[7837^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7836[7836^] - Robo task to compile css in a custom theme
+* PR: https://github.com/salesagility/SuiteCRM/pull/7198[7198^] - Added a series of Robo API tasks to allow developers to quickly configure the V8 API
 * PR: https://github.com/salesagility/SuiteCRM/pull/7809[7809^] - Add a --filter option to tests:unit for filtering tests
 * PR: https://github.com/salesagility/SuiteCRM/pull/7906[7906^] - Gitattributes + codeception.dist.yml
 
@@ -66,7 +67,6 @@ _Released 01/10/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7141[7141^] - Type casting
 * PR: https://github.com/salesagility/SuiteCRM/pull/7193[7193^] - Unused Import
 * PR: https://github.com/salesagility/SuiteCRM/pull/7195[7195^] - Inspections compat
-* PR: https://github.com/salesagility/SuiteCRM/pull/7198[7198^] - Robo API
 * PR: https://github.com/salesagility/SuiteCRM/pull/7525[7525^] - API Create Relationship via Link
 * PR: https://github.com/salesagility/SuiteCRM/pull/7529[7529^] - Codacy
 * PR: https://github.com/salesagility/SuiteCRM/pull/7650[7650^] - Fix 'customMetadate' typo in DashletGeneric.php
