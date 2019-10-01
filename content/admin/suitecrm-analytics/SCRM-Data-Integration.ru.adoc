@@ -1,0 +1,174 @@
+---
+title: Настройка SuiteCRM Data Integration
+weight: 20
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+= Настройка SuiteCRM Data Integration
+
+SuiteCRM Data Integration - это решение для извлечения, преобразования и загрузки данных (https://ru.wikipedia.org/wiki/ETL[ETL^]), подключаемое к существующему экземпляру SuiteCRM для извлечения информации из базы данных MySQL и загрузки её в хранилище данных, специально оптимизированное для проведения аналитики. 
+При желании SuiteCRM Data Integration можно установить как автономное решение и  использовать с другими инструментами отчётности.
+
+== Загрузка и установка 
+
+Для работы требуется ОС Linux со следующими установленными пакетами:
+
+* OpenJDK 8 JRE (Java)
+* Wget
+* unzip
+* zip
+* Mysql-сервер 
+
+Есть два способа загрузки SuiteCRM Data Integration.
+
+* https://suitecrm.com/resources/suitecrm-analytics-tool[Загрузить архив с сайта SuiteCRM^]: Архив содержит сценарии установки, веб-сервер и все необходимые сторонние библиотеки с открытым исходным кодом.
+* Клонировать репозиторий SuiteCRM Data Integration, содержащий сценарий для создания пакета интеграции данных SuiteCRM (по сути, сценарий создаёт тот же архив, что доступен на сайте SuiteCRM)
+
+=== Сборка пакета вручную (клонирование из репозитория)
+
+[source,bash]
+----
+git clone https://github.com/ivylabs/suitecrm-data-integration
+----
+
+Перейдите в каталог клонированного репозитория и запустите скрипт `build.sh`
+
+[source,bash]
+----
+./build.sh
+----
+
+В терминале отобразятся файлы, которые будут загружены и упакованы в архив.
+В конце работы скрипта будет выведен запрос об удалении установочных файлов.
+
+[source,bash]
+----
+Would you like to remove the installation files? This will save disk space. [y/N] y
+
+-------------------------------------------------- -----------
+
+ Build is complete!
+
+-------------------------------------------------- -----------
+----
+
+В результате работы скрипта будет создан архив *suitecrm-data-integration-server.zip* аналогичный тому, что можно загрузить с официального сайта SuiteCRM.
+
+
+=== Настройка SuiteCRM Data Integration
+
+После загрузки или создания архива *suitecrm-data-integration-server.zip* загрузите и распакуйте его на необходимом веб-сервере.
+
+Перейдите в распакованную папку *suitecrm-data-integration-server* и отредактируйте файл  *install.properties*:
+
+[source,bash]
+----
+# Java Virtual Memory allocation
+JVM_SIZE=1024
+# SuiteCRM Source Database Connection Details
+SUITECRM_HOST=127.0.0.1
+SUITECRM_PORT=3306
+SUITECRM_DATABASE=suitecrm_testdata
+SUITECRM_USERNAME=suitecrmrootuser
+SUITECRM_PASSWORD=suitecrmrootuserpassword
+# SuiteCRM Analytis Target Database Connection
+SUITECRM_ANALYTICS_HOST=127.0.0.1
+SUITECRM_ANALYTICS_PORT=3306
+SUITECRM_ANALYTICS_DATABASE=suitecrm_dwh
+SUITECRM_ANALYTICS_USERNAME=suitecrmrootuser
+SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
+# Enable SMTP email functionality
+SMTP_ENABLED=0
+# SMTP Server Details
+SMTP_HOSTNAME=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USE_AUTHENTICATION=1
+SMTP_USERNAME=user@suitecrm-analytics.co.uk
+SMTP_PASSWORD=password
+#SMTP_SECURE_AUTHENTICATION=
+#SMTP_SECURE_AUTHENTICATION=SSL
+SMTP_SECURE_AUTHENTICATION=TLS
+# Email address that SuiteCRM Analytics sends from
+SMTP_FROM_EMAIL_ADDRESS=donotreply@suitecrm-analytics.co.uk
+SMTP_FROM_EMAIL_NAME=SuiteCRM Analytics
+# Email addresses seperated by spaces that error emails are delivered to
+SMTP_SEND_ERROR_EMAILS_TO=user@suitecrm-analytics.co.uk
+# Set this to 1 or zero. Setting it to 1 means that you will get an email for every sucessful run on the ETL
+SMTP_SEND_SUCCESS_EMAILS=1
+# Email addresses seperated by spaces that success emails are delivered to
+SMTP_SEND_SUCCESS_EMAILS_TO=user@suitecrm-analytics.co.uk user123@suitecrm-analytics.co.uk
+----
+
+Перечисленные ниже параметры отвечают за соединение с базой данных SuiteCRM, которая будет служить источником данных.
+
+[source,bash]
+----
+# SuiteCRM Source Database Connection Details
+SUITECRM_HOST = 127.0.0.1
+SUITECRM_PORT = 3306
+SUITECRM_DATABASE = suitecrm_testdata
+SUITECRM_USERNAME = suitecrmrootuser
+SUITECRM_PASSWORD = suitecrmrootuserpassword
+----
+
+Перечисленные ниже параметры отвечают за соединение с хранилищем данных, куда будут загружаться извлечённые из SuiteCRM и преобразованные данные.
+
+{{% notice note %}}
+Не забудьте создать соответствующую базу данных MySQL для хранения данных SuiteCRM Data Integration.
+{{% / notice %}}
+
+[source,bash]
+----
+# SuiteCRM Analytis Target Database Connection
+SUITECRM_ANALYTICS_HOST = 127.0.0.1
+SUITECRM_ANALYTICS_PORT = 3306
+SUITECRM_ANALYTICS_DATABASE = suitecrm_dwh
+SUITECRM_ANALYTICS_USERNAME = suitecrmrootuser
+SUITECRM_ANALYTICS_PASSWORD = suitecrmrootuserpassword
+----
+
+SMTP-параметры отвечают за соединение с почтовым клиентом для отправки уведомлений о результатах работы сценария извлечения данных (успех или неудача). Эти параметры не являются обязательными.
+
+=== Установка SuiteCRM Data Integration
+
+После настройки конфигурации запустите следующий сценарий, расположенный в корне распакованного архива:
+
+[source,bash]
+----
+./setup-suitecrm-data-integration.sh
+----
+
+Сценарий проверит подключение к базам данных и создаст таблицы, необходимые для извлечения данных из SuiteCRM.
+
+Затем запустите следующий сценарий для извлечения и преобразования данных:
+
+[source,bash]
+----
+./run-suitecrm-data-integration.sh
+----
+
+При работе сценария будет выведена подробная информация, касаемая извлечения, преобразования и загрузки преобразованных данных в таблицы хранилища данных.
+
+На данный момент поддерживается извлечение данных из следующих модулей:
+
+* Контрагенты
+* Маркет. кампании
+* Обращения
+* Контакты
+* Счета
+* Предварит. контакты
+* Сделки
+* Товары/Категории товаров
+* Пользователи
+* Пользовательские поля из модулей *Обращения* и *Предварит. контакты*.
+
+Более детальная информация о решениях Pentaho ETL содержится в https://wiki.pentaho.com/display/EAI/Spoon+User+Guide[этом^] руководстве.
+
+Приведённый ниже сценарий включает в себя предварительно упакованный  клиент, который вы можете запустить через терминал:
+
+[source,bash]
+----
+./data-integration-client.sh
+----
