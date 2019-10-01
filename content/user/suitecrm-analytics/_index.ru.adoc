@@ -1,0 +1,21 @@
+---
+Title: SuiteCRM Аналитика
+Weight: 80
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+= SuiteCRM Аналитика
+
+Новая, готовая к использованию платформа бизнес-аналитики, 
+SuiteCRM Аналитика - это полностью открытое и бесплатное решение, 
+созданное с использованием Pentaho BI Suite Community Edition, 
+позволяющее пользователям SuiteCRM запускать, администрировать и 
+настраивать свою собственную и полностью расширяемую 
+https://ru.wikipedia.org/wiki/Business_Intelligence[BI^]-платформу.
+
+== Оглавление
+
+{{% children depth="4" showhidden="true" %}}
+

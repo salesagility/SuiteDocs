@@ -28,7 +28,7 @@ SuiteCRM Web Analytics requires the following pre-requisites installed on your s
 SuiteCRM Web Analytics requires the SuiteCRM Data Integration solution pre-installed and executed.
 {{% /notice %}}
 
-There are two ways of downloading the SuiteCRM Data Integration.
+There are two ways of downloading the SuiteCRM Web Analytics.
 
 * https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website^]: a pre-built 
 package containing installation scripts, web server and all the the third party open source libraries required.
@@ -159,7 +159,7 @@ to the hostname or IP address of the server in your web browser.
 By default the web application is listening on port `8080` so for example, your server may be 
 available on `http://localhost:8080/suitecrmanalytics`.
 
-Check out the link:/user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for 
+Check out the link:../../../user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for 
 more information on the application.
 
 
