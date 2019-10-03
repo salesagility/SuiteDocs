@@ -3,100 +3,104 @@ Title: User Wizard
 Weight: 30
 ---
 
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
 :experimental:   ////this is here to allow btn:[]syntax used below
 
 :imagesdir: ./../../../images/en/user
 
 = User Wizard
 
-The User Wizard guides you through the configuration options available
-to you post login. This allows you to select many formats for data that
-will display in SuiteCRM, and these are specific to your user.
+O User Wizard guia-o através do processo de configuração na primeira
+vez que entrar no SuiteCRM. Este processo permite-lhe definir as 
+muitas opções e formatos que existem para apresentar dados no SuiteCRM
+e as opções são específicas de cada utilizador.
 
-== Welcome to SuiteCRM
+== Bem-vindo ao SuiteCRM
 
-The first step you will see is a simple welcome page that displays once
-you have logged in. Click btn:[Next] on this page to progress to configure
-your user preferences.
+O primeiro passo é apenas uma página de boas-vindas ao SuiteCRM. Clique
+em btn:[Seguinte] nesta página para avançar para a configuração das
+suas preferências.
 
-image:04SuiteCRM_welcome.png[title="Welcome to SuiteCRM!"]
+image:04SuiteCRM_welcome.png[title="Bem-vindo ao SuiteCRM!"]
 
-== Your Information
+== A sua Informação
 
-On this screen you are able to provide information about yourself. When
-you provide this information, other users can view this information such
-as your Full Name, Email Address and Contact details. Fields marked with
-a red star(*) are required fields, and as such need to be filled in with
-valid data before you can progress.
+Neste écran poderá definir informação sobre si. Ao incluir esta 
+informação, os outros utilizadores podem consultá-la. Exemplos desta
+informação são o Nome Completo, Endereço de email ou detalhes de
+Contacto. Campos marcados com um asterisco vermelho(*) são
+obrigatórios e precisam de ser preenchidos antes de continuar.
 
-image:05Welcome_info.png[title="User Information"]
+image:05Welcome_info.png[title="Informação de Utilizador"]
 
-Once you have filled in all information on this page, click btn:[Next] to
-progress to the next step in the wizard.
+Depois de ter completado este formulário, clique em btn:[Seguinte] 
+para avançar para o passo seguinte.
 
-== Your Locale
+== As suas definições Locais
 
-On this screen, you are able to specify your preferred Locale settings.
+Neste écran pode definir as suas definições locais preferidas.
 
-image:06SuiteCRM_Locale.png[title="Locale Settings"]
+image:06SuiteCRM_Locale.png[title="Definições Locais"]
 
-== Currency Selection
+== Selecção de Moeda
 
-Select the Currency you wish to be displayed for all Currency fields
-within SuiteCRM. The Currency options are populated from the options
-added by the System Administrator. If there are Currency options you
-require but do not see, please contact your System Administrator.
+Seleccione a Moeda que quer que seja mostrada em todos os campos do
+tipo Moeda no SuiteCRM. As opções de Moeda são definidas a partir 
+das opções disponibilizadas pelo Administrador do Sistema. Se houver
+alguma opção que seja necessária mas não apareça, contacte o seu
+Administrador do Sistema.
 
-image:180Currency_selection.png[title="Currency Selection"]
+image:180Currency_selection.png[title="Selecção de Moeda"]
 
-== Date Format
+== Formato de Data
 
-Select the Date Format you wish to be displayed for all Date fields
-within SuiteCRM. There are many different date format options to select
-from, all of which are specific to your user. This date format will also
-apply to Date Time fields.
+Seleccione o formato em que prefere que a data seja apresentada em 
+todos os campos de Data do SuiteCRM. Há muitos formatos diferentes
+que pode escolher. Este formato também se aplica aos campos Data/Hora.
 
-image:08Date_format.png[title="Date Format"]
+image:08Date_format.png[title="formato de Data"]
 
-== Time Zone
+== Fuso horário
 
-Select the Time Zone you wish to use within SuiteCRM. This allows you to
-tailor your use of SuiteCRM specific to where you are located globally.
-If you are travelling between various countries, you can change the Time
-Zone at any time in your User Preferences after you Wizard set-up, to
-allow you to view records in that Time Zone.
+Seleccione o fuso horário que deseja usar com o SuiteCRM. Isto permite
+que siga a sua utilização do SuiteCRM de acordo com a sua localização
+no mundo. Se está a viajar de um fuso horário para outro, pode alterar
+esta definição a qualquer altura no écran de Preferências de Utilizador
+após concluir este Wizard.
 
-image:09Time_zone.png[title="Time Zone"]
+image:09Time_zone.png[title="Fuso Horário"]
 
-== Name Format
+== Formato de Nome
 
-Select the Name Format you wish to be displayed for all Name fields
-within SuiteCRM. This is applicable to the various 'Person' modules
-within SuiteCRM, and allows you to set your preferred name format
-dependent on your requirement.
+Seleccione o Formato de Nome que quer ver mostrado nos campos de tipo 
+Nome no SuiteCRM. Esta definição aplica-se aos diversos módulos do 
+tipo 'Pessoa' dentro do SuiteCRM, e permite ver o nome de acordo com 
+as suas preferências.
 
-image:181Name_format.png[title="Name Format"]
+image:181Name_format.png[title="Formato de Nome"]
 
-Once you have specified all of your Locale preferences, click btn:[Next] to
-progress to the final step/confirmation page of the User Wizard.
+Assim que tenha todas as suas Definições Locais definidas, clique em 
+btn:[Seguinte] para avançao para o passo final/página de confirmação
+do User Wizard.
 
-== Final Step
+== Passo Final
 
-The final step of the User Wizard provides you with multiple useful
-links for learning more and obtaining further support from the SuiteCRM
-website and dedicated team. There is a btn:[Back] button if you have made
-any mistakes you wish to amend in previous steps.
+O passo final do User Wizard indica-lhe algumas ligações para aprender
+mais sobre, e procurar suporte a partir do site web do SuiteCRM.
+Há um botão btn:[Voltar] se precisar de voltar atrás e alterar alguma
+das definições indicadas anteriormente.
 
-image:241Finish User Wizard.png[title="Finish User Wizard"]
+image:241Finish User Wizard.png[title="Completar o User Wizard"]
 
-Clicking btn:[Finish] will complete the User Wizard and will present you
-with SuiteCRM login form.
+Ao clicar em btn:[Terminar] irá completar a configuração e ser-lhe-á 
+apresentado o écran de entrada.
 
-== Summary
+== Sumário
 
-In this chapter, we progressed through the User Wizard. This allows you
-to set your preferences when using SuiteCRM.
+Neste capítulo percorremos o User Wizard, que lhe permite definir as suas
+preferências para usar o SuiteCRM.
 
-In the next chapter, we will cover managing user accounts, which will
-discuss how to update user details, select themes, change passwords and
-more.
+No próximo capítulo iremos ver como gerir contas de utilizador, actualizar
+detalhes de utilizador, seleccionar temas, alterar passwords e mais.
