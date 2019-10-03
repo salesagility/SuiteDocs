@@ -247,7 +247,7 @@ Result:
 === Logout
 
 [source,php]
-GET {{your-SuiteCRM-url}}/V8/logout
+POST {{your-SuiteCRM-url}}/V8/logout
 
 === Get a module by ID
 
