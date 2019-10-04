@@ -56,16 +56,16 @@ Plugin files are still usable in the same way as before – at `./include/Smarty
 
 ==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
 
-* PR: https://github.com/salesagility/SuiteCRM/pull/7719[7719 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6982[6982 ] - Fix/backwards compatiblity
-* PR: https://github.com/salesagility/SuiteCRM/pull/7718[7718 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7712[7712 ] - New user password not being generated
-* PR: https://github.com/salesagility/SuiteCRM/pull/7713[7713 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7667[7667 ] - Case insensitive detection of header X-CampTrackID
-* PR: https://github.com/salesagility/SuiteCRM/pull/7699[7699 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6415[6415 ] - Cannot import Email if plain-text plus attachment
-* PR: https://github.com/salesagility/SuiteCRM/pull/7697[7697 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7138[7138 ] - Folder include/SugarCharts/Jit missing in 7.11.7 installation
-* PR: https://github.com/salesagility/SuiteCRM/pull/7695[7695 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7605[7605 ] - Add a proper return type to getUserRoleNames()
+* PR: https://github.com/salesagility/SuiteCRM/pull/7719[7719 ] - Fix/backwards compatibility
+* PR: https://github.com/salesagility/SuiteCRM/pull/7718[7718 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6982[6982 ] - New user password not being generated
+* PR: https://github.com/salesagility/SuiteCRM/pull/7713[7713 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7712[7712 ] - Case insensitive detection of header X-CampTrackID
+* PR: https://github.com/salesagility/SuiteCRM/pull/7699[7699 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7667[7667 ] - Cannot import Email if plain-text plus attachment
+* PR: https://github.com/salesagility/SuiteCRM/pull/7697[7697 ] - Folder include/SugarCharts/Jit missing in 7.11.7 installation
+* PR: https://github.com/salesagility/SuiteCRM/pull/7695[7695 ] - Add a proper return type to getUserRoleNames()
 * PR: https://github.com/salesagility/SuiteCRM/pull/7689[7689 ] - Format InlineEditing.js with prettier
-* PR: https://github.com/salesagility/SuiteCRM/pull/7683[7683 ] - Bug when inbound email Leave Messages On Server set to No
+* PR: https://github.com/salesagility/SuiteCRM/pull/7683[7683 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6415[6415 ] - Bug when inbound email Leave Messages On Server set to No
 * PR: https://github.com/salesagility/SuiteCRM/pull/7682[7682 ] - Documents - Image Field Does Not Display Uploaded Image
-* PR: https://github.com/salesagility/SuiteCRM/pull/7681[7681 ] - EmailMan sendEmail missing restricted_addresses check
+* PR: https://github.com/salesagility/SuiteCRM/pull/7681[7681 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7138[7138 ] - EmailMan sendEmail missing restricted_addresses check
 * PR: https://github.com/salesagility/SuiteCRM/pull/7610[7610 ] - Fixed error message css + email warning config option
 [discrete]
 
