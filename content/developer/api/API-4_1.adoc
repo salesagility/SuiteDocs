@@ -3,9 +3,6 @@ weight: 16
 title: "API v4.1"
 ---
 
-// :source-highlighter: coderay
-// :coderay-linenums-mode: table
-
 {{% notice warning %}}
 This documentation pertains to SuiteCRM versions up to v.7.9.x. 
 Since SuiteCRM version 7.10, a link:../[brand new v8 REST API] is available.
@@ -13,7 +10,6 @@ Since SuiteCRM version 7.10, a link:../[brand new v8 REST API] is available.
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
 data and functionality. 
-// {source-highlighter}
 
 == Using the API
 
