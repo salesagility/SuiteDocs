@@ -3,7 +3,7 @@ title: Requirements
 weight: 20
 ---
 
-:imagesdir: ./../../../../images/en/developer
+:imagesdir: /images/en/developer
 
 In order to prevent man-in-the-middle attacks, the authorization server
 MUST require the use of TLS with server authentication as defined by

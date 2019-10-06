@@ -3,7 +3,7 @@ title: Requirements
 weight: 20
 ---
 
-:imagesdir: ./../../../../images/en/developer
+:imagesdir: /images/en/developer
 
 SuiteCRM uses key cryptography in order to encrypt and decrypt, as well
 as verify the integrity of signatures.

@@ -3,7 +3,7 @@ title: Setting up SuiteCRM on Digital Ocean
 weight: 60
 ---
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: /images/en/community
 
 This post will cover deploying an instance of SuiteCRM to Digital Ocean
 from creating the droplet to logging into SuiteCRM. If there’s enough
