@@ -6,7 +6,7 @@ echo -e "<?php\n\n  \$array_from_to = array( \n" > _source/replacements.php
 
 files=_source/html/*.xhtml
 
-for f in $files do
+for f in $files; do
   
   # Get name of file
   filename="${f##*/}"
