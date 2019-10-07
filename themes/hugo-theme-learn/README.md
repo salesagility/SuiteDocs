@@ -56,3 +56,39 @@ For both solutions, the documentation is available at https://github.com/matcorn
 ## Credits
 
 Many thanks to [@vjeantet](https://github.com/vjeantet/) for the fork [docdock](https://github.com/vjeantet/hugo-theme-docdock). The v2 of this theme is mainly based on his work !
+
+
+![](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmatcornic%2Fhugo-theme-learn.svg?type=large)
+
+## Releasing
+
+Somewhat work-in-progress steps to release with gren
+
+- Check all MRs assigned to the milestone are closed or pushed back to another release
+- Close the milestone
+- Check merged MRs on the milestone have a tag (Bug, Enhancement, etc.)
+- Tag and push the repo
+
+```
+git tag <tag>
+git push origin <tag>
+```
+- Generate CHANGELOG.md with gren
+
+```
+gren changelog  --override --generate --tags=all
+```
+- Fix the date for the current release in CHANGELOG.md
+- Add the changelog to git and update the tag
+
+```
+git add CHANGELOG.md
+git commit -m "Ship tag <tag>"
+git push origin master
+git tag -f <tag>
+git push --force origin <tag>
+```
+- Generate release with gren
+```
+gren release -t <tag>
+```
