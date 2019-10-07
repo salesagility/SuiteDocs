@@ -2,11 +2,11 @@
 
 # Get all source files into a loop
 
-echo -e "<?php\n\n  \$array_from_to = array( \n" > _source/replacements.php
+echo -e "<?php\n\n  \$array_from_to = array( \n" > _source/replacements.php;
 
 files=_source/html/*.xhtml
 
-for f in $files; do
+for f in $files do
   
   # Get name of file
   filename="${f##*/}"
@@ -14,23 +14,23 @@ for f in $files; do
   basefilename="${filename%.*}"
   numfile="${filename//[^0-9]/}"
   numchap=$[10#$numfile+1]
-  echo $f $extension $basefilename $numfile
+  echo $f $extension $basefilename $numfile ;
 
 
   # Add header and pandocized markdown
-  echo -e "$(pandoc $f -f html -t asciidoc)" > temp_yamlize.txt
+  echo -e "$(pandoc $f -f html -t asciidoc)" > temp_yamlize.txt;
   title="$(head -n 2 temp_yamlize.txt | tail -n 1)"
-  echo $title
-  echo -e "---\nweight: $numchap\ntitle: \"$title\"\n---\n$(cat temp_yamlize.txt)" > "content/developer/$title.adoc"
+  echo $title;
+  echo -e "---\nweight: $numchap\ntitle: \"$title\"\n---\n$(cat temp_yamlize.txt)" > "content/developer/$title.adoc";
   title_lower="${title,,}"
   title_slug="${title_lower// /-}"
-  echo -e "      '$filename' => '../$title_slug'," >> _source/replacements.php
+  echo -e "      '$filename' => '../$title_slug'," >> _source/replacements.php;
 
   
   rm temp_yamlize.txt
 
 done 
 
-echo -e "\n  );\n\n" >> _source/replacements.php
+echo -e "\n  );\n\n" >> _source/replacements.php;
 #echo -e "\n\n?>" >> _source/replacements.php
 cat _source/replacements.php
