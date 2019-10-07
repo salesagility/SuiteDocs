@@ -26,6 +26,7 @@ or working on a new complex site feature in Go) we can consider providing a sepa
 This will allow you to run Preview Deploys on Netlify so you (and the rest of the Community) can browse your version 
 before deploying it to `master`.
 
+To know more about it do check this link :[https://docs.suitecrm.com/user/advanced-modules/workflow/#_creating_a_workflow_process]
 ## Additional languages
 
 We know that many members of this community are eager to read this Documentation in their own language. This will eventually be possible, but as this site is in its initial stage, we will only be working on two additional languages - Spanish and Russian for now.
