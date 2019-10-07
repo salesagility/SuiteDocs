@@ -2,12 +2,15 @@ GEM
   remote: https://rubygems.org/
   specs:
     asciidoctor (1.5.6.1)
+    nokogiri (1.10.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   asciidoctor
+  nokogiri
 
 BUNDLED WITH
    1.15.1
+   2.4.0
