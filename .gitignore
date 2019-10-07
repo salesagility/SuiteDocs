@@ -19,3 +19,27 @@ node_modules/
 /nbproject/
 
 /tmp/
+
+# Eclipse/PyCharm/Other IDE Settings
+.cproject
+.project
+.settings/
+.idea
+
+# Let these ones be user specific, since we have so many different configurations
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/last.sql
+.vscode/temp.sql
+.vscode/ipch/
+.stfolder
+.tags
+
+# ignore image files
+*.png
+*.jpg
+*.gif
+
+# python things
+__pycache__
