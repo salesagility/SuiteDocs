@@ -1,15 +1,20 @@
 ---
-title: Requirements weight: 20
+title: Requirements
+weight: 20
 ---
 
 :imagesdir: ./../../../../images/en/developer
 
-In order to prevent man-in-the-middle attacks, the authorization server MUST require the use of TLS with server authentication as defined by
-https://tools.ietf.org/html/rfc2818[RFC2818] for any request sent to the authorization and token endpoints.
-The client MUST validate the authorization server’s TLS certificate as defined by
-https://tools.ietf.org/html/rfc6125[RFC6125] and in accordance with its requirements for server identity authentication.
+In order to prevent man-in-the-middle attacks, the authorization server
+MUST require the use of TLS with server authentication as defined by
+https://tools.ietf.org/html/rfc2818[RFC2818] for any request sent to the
+authorization and token endpoints. The client MUST validate the
+authorization server’s TLS certificate as defined by
+https://tools.ietf.org/html/rfc6125[RFC6125] and in accordance with its
+requirements for server identity authentication.
 
-SuiteCRM uses key cryptography in order to encrypt and decrypt, as well as verify the integrity of signatures.
+SuiteCRM uses key cryptography in order to encrypt and decrypt, as well
+as verify the integrity of signatures.
 
 Please ensure that you have the following:
 
