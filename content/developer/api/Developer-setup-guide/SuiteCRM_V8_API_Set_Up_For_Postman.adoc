@@ -45,12 +45,12 @@ Solution: Move collection file into `documents`.
 |VARIABLE |INITIAL VALUE |CURRENT VALUE
 
 |suitecrm.url
-|http://{{IP ADDRESS}}/{{Your Instance}}/Api
-|http://{{IP ADDRESS}}/{{Your Instance}}/Api
+|\http://{{IP ADDRESS}}/{{Your Instance}}/Api
+|\http://{{IP ADDRESS}}/{{Your Instance}}/Api
 
 |token.url
-|http://{{IP ADDRESS}}/{{Your Instance}}/Api/access_token
-|http://{{IP ADDRESS}}/{{Your Instance}}/Api/access_token
+|\http://{{IP ADDRESS}}/{{Your Instance}}/Api/access_token
+|\http://{{IP ADDRESS}}/{{Your Instance}}/Api/access_token
 |===
 
 -> Add
