@@ -48,36 +48,6 @@ Now update its value with generating a new one using `base64_encode(random_bytes
 
 If you need more information about this issue, https://oauth2.thephpleague.com/v5-security-improvements/[please visit this page].
 
-== Authentication
-
-SuiteCRM Api allows two kind of grant types:
-
-* Client credential
-* Password
-
-.Token request parameters
-|===
-|Parameter |Description
-
-|*Access Token URL*
-|{{your-SuiteCRM-url}}/Api/access_token
-
-|*Username*
-|Only available for Password grants. Must be a valid SuiteCRM user name.
-
-|*Password*
-|Only available for Password grants. Password for the selected user.
-
-|*Client ID*
-|Client ID exists in OAuth2Clients module's ID. Must be a valid GUID.
-
-|*Client Secret*
-|Client secret is also in OAuth2Clients module as SHA256 generated value.
-
-|*Scopes*
-|Scopes haven't implemented yet
-|===
-
 == Available parameters
 
 According to JsonApi specification, the available parameters are the following depending on the GET endpoint:
