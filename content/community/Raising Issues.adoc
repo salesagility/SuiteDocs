@@ -40,29 +40,68 @@ We have a number of labels that we tag issues with to define it's type,
 priority, and action.
 
 [discrete]
-===== Type:
+===== General Labels:
 
-* bug
-* duplicate
-* invalid
-* question
-* suggestion
+* https://github.com/salesagility/SuiteCRM/labels/Bug[Bug^]
+* https://github.com/salesagility/SuiteCRM/labels/Community%20Contribution[Community Contribution^]
+* https://github.com/salesagility/SuiteCRM/labels/Deprecated[Deprecated^]
+* https://github.com/salesagility/SuiteCRM/labels/Enhancement[Enhancement^]
+* https://github.com/salesagility/SuiteCRM/labels/Fix%20Proposed[Fix Proposed^]
+* https://github.com/salesagility/SuiteCRM/labels/Good%20First%20Issue[Good First Issue^]
+* https://github.com/salesagility/SuiteCRM/labels/Help%20Wanted[Help Wanted^]
+* https://github.com/salesagility/SuiteCRM/labels/High%20Priority[High Priority^]
+* https://github.com/salesagility/SuiteCRM/labels/Medium%20Priority[Medium Priority^]
+* https://github.com/salesagility/SuiteCRM/labels/Low%20Priority[Low Priority^]
+* https://github.com/salesagility/SuiteCRM/labels/Resolved%3A%20Next%20Release[Resolved: Next Release^]
+* https://github.com/salesagility/SuiteCRM/labels/Suggestion[Suggestion^]
+* https://github.com/salesagility/SuiteCRM/labels/Question[Question^]
 
 [discrete]
-===== Priority:
+===== Description Labels:
 
-* Low Priority
-* Medium Priority
-* High Priority
+* https://github.com/salesagility/SuiteCRM/labels/API[API^]
+* https://github.com/salesagility/SuiteCRM/labels/Campaigns[Campaigns^]
+* https://github.com/salesagility/SuiteCRM/labels/Cases[Cases^]
+* https://github.com/salesagility/SuiteCRM/labels/Clean%20Up[Clean Up^]
+* https://github.com/salesagility/SuiteCRM/labels/Databases[Databases^]
+* https://github.com/salesagility/SuiteCRM/labels/Dependencies[Dependencies^]
+* https://github.com/salesagility/SuiteCRM/labels/Developer%20Tools[Developer Tools^]
+* https://github.com/salesagility/SuiteCRM/labels/Discussion[Discussion^]
+* https://github.com/salesagility/SuiteCRM/labels/Elasticsearch[Elasticsearch^]
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACampaigns[Emails:Campaigns^]
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACases[Emails:Campaigns^]
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACompose[Emails:Compose^]
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3AConfig[Emails:Config^]
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ATemplates[Emails:Templates^]
+* https://github.com/salesagility/SuiteCRM/labels/Emails[Emails^]
+* https://github.com/salesagility/SuiteCRM/labels/Environment[Environment^]
+* https://github.com/salesagility/SuiteCRM/labels/Installation[Installation^]
+* https://github.com/salesagility/SuiteCRM/labels/Language[Language^]
+* https://github.com/salesagility/SuiteCRM/labels/Module[Module^]
+* https://github.com/salesagility/SuiteCRM/labels/Reports[Reports^]
+* https://github.com/salesagility/SuiteCRM/labels/Studio[Studio^]
+* https://github.com/salesagility/SuiteCRM/labels/Styling[Styling^]
+* https://github.com/salesagility/SuiteCRM/labels/Upgrading[Upgrading^]
+* https://github.com/salesagility/SuiteCRM/labels/Workflow[Workflow^]
+* https://github.com/salesagility/SuiteCRM/labels/Security[Security^]
 
 [discrete]
-===== Action:
+===== Status Labels:
 
-* Resolved: Next Release
-* Fixed Proposed
-* Pending Input
-* Wrong Branch
-* In Review
+* https://github.com/salesagility/SuiteCRM/labels/Duplicate[Duplicate^]
+* https://github.com/salesagility/SuiteCRM/labels/Assessed[Assessed^]
+* https://github.com/salesagility/SuiteCRM/labels/Community%20Assessed[Community Assessed^]
+* https://github.com/salesagility/SuiteCRM/labels/In%20Review[In Review^]
+* https://github.com/salesagility/SuiteCRM/labels/Invalid[Invalid^]
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Assessed[Needs Assessed^]
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Documentation[Needs Documentation^]
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Duplicated%3A%20Latest[Needs Duplicated: Latest^]
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Duplicated%3A%20LTS[Needs Duplicated: LTS^]
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Review[Needs Review^]
+* https://github.com/salesagility/SuiteCRM/labels/Requires%20Tests[Requires Tests^]
+* https://github.com/salesagility/SuiteCRM/labels/Requires%20Updates[Requires Updates^]
+* https://github.com/salesagility/SuiteCRM/labels/Work%20In%20Progress[Work In Progress^]
+* https://github.com/salesagility/SuiteCRM/labels/Wrong%20Branch[Wrong Branch^]
 
 We encourage users whom feel an issue should be raised as a higher
 priority for a next release that they should make a comment to that
