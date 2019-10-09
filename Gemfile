@@ -2,4 +2,4 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'asciidoctor'
+gem "asciidoctor", "~> 1.5.8"
