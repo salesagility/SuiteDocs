@@ -56,7 +56,7 @@ giving this command from the root of the SuiteCRM installation:
 `cp -R themes/SuiteP/css/Day themes/SuiteP/css/Noon`
 
 At this point, just do a *Quick Repair and Rebuild* and the Sub-theme is operational and can be selected 
-from the link:../../user/modules/themes/#_changing_theme_colours[User's profile], under *Layout options*.
+from the link:../../user/modules/themes[User's profile], under *Layout options*.
 
 == Compiling the styles
 

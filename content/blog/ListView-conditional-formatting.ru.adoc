@@ -18,7 +18,7 @@ In this post we’ll be adding a simple coloured border to the
 ''Industry'' field in the Accounts list view. We’ll end up with
 something similar to this:
 
-:imagesdir: ./../../images/en/community
+:imagesdir: /images/en/community
 
 image:02IndustryColours.png[Coloured fields on the list view]
 

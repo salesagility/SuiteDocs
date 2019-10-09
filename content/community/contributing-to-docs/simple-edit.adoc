@@ -4,7 +4,7 @@ Weight: 10
 ---
 :experimental: ////this is here to allow btn:[]syntax used below 
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: /images/en/community
 
 == Your first simple edit
 

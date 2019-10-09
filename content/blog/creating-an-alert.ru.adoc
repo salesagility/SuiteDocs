@@ -7,7 +7,7 @@ source: http://www.jsmackin.co.uk/suitecrm/suitecrm-creating-an-alert/
 hidden: true
 ---
 
-:imagesdir: ./../../images/en/community
+:imagesdir: /images/en/community
 
 Alerts in the menu bar are an excellent way of calling user's attention. 
 What if you what to create a custom alert through code? It's easy, here's how to do it.

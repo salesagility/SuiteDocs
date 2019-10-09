@@ -64,7 +64,7 @@ for invitees when scheduling calls and meetings.
 
 === Logger Settings
 Specify log filename, extension and size as well as the log level here.
-See the link: ./../../../developer/logging/[chapter on logging] for more information.
+See the link:../../../developer/logging/[chapter on logging] for more information.
 
 Click the View Log link to view the log file.
 
