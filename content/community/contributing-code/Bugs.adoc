@@ -14,7 +14,7 @@ begin making commits to the project.
 
 * First, determine which base branch your bug fix should use. 
 
-{{%notice info%}}If the bug you're fixing is present in `hotfix-7.8.x` then you will need to make two separate pull requests, one to `hotfix-7.8.x` and one to `hotfix-7.10.x`. The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so no more duplicates are necessary.{{%/notice%}}
+//{{%notice info%}}If the bug you're fixing is present in `hotfix-7.10.x` then you will need to make two separate pull requests, one to `hotfix-7.8.x` and one to `hotfix-7.10.x`. The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so no more duplicates are necessary.{{%/notice%}}
 
 {{<mermaid align="center">}}
 graph TD;

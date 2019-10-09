@@ -20,7 +20,7 @@ could usually use the URL https://github.com/{username}/SuiteCRM replacing
 {{% /notice %}}
 
 Now we have these essential pieces of information we can pull down the code to test.
-Create a new branch using the base of the PR e.g. hotfix, hotfix-7.8.x or develop
+Create a new branch using the base of the PR e.g. hotfix, hotfix-7.10.x or develop
 within your SuiteCRM fork directory.
 Name the new branch uniquely if you want to test alot of PRs e.g. testing6611
 
