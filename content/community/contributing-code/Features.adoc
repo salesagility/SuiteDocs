@@ -32,7 +32,7 @@ issues relating to your feature. If the feature is to be included in the
 core product we will request for the forked repo to have an Issues tab
 so we can raise any bugs from our testing. This will also allow you to
 fix those issues using the below commit message format similar to how to
-submit bug fixes to the `hotfix-7.8.x` branch.
+submit bug fixes to the `hotfix-7.10.x` branch.
 
 `git commit -m "Fixed #1436 - Reports with nested Parentheses are removing parameters"`
 
@@ -41,7 +41,7 @@ You can add an Issues tab to your forked repository via the `Settings` tab.
 {{% /notice %}}
 
 New features that have been accepted and merged will be included in the
-next suitable Major release of the project for e.g 7.7 or 7.8 are major
+next suitable Major release of the project for e.g 7.10 or 7.11 are major
 releases. Minor releases only include bug fixes or in-house features
-developed, e.g 7.6.5 or 7.7.1 would be minor releases.
+developed, e.g 7.10.5 or 7.11.2 would be minor releases.
 
