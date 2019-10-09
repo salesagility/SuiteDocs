@@ -1,21 +1,21 @@
 ---
-title: Downloading & Installing
-weight: 20
+Title: Downloading & Installing
+Weight: 20
 ---
 
 == Downloading and installing SuiteCRM
 
 If you are installing SuiteCRM for the first time, follow the
-instructions in this section. If you have an earlier version of SuiteCRM
+instructions in this section. If you already have an earlier version of SuiteCRM
 installed, refer to the upgrade section for instructions on how to
 upgrade your SuiteCRM instance. Follow the steps listed below to install
 SuiteCRM:
 
 .  Install the platform-appropriate (Linux or Windows) version of PHP,
-web server, and database on your machine.
+Web server, and Database on your machine.
 .  Download the SuiteCRM files from suitecrm.com(see “Downloading the
 latest SuiteCRM files” section).
-.  Copy the SuiteCRM files to your web server.
+.  Copy the SuiteCRM files to your Web server.
 .  Install SuiteCRM by following the SuiteCRM installation wizard.
 
 === Downloading the latest SuiteCRM files
@@ -23,9 +23,9 @@ latest SuiteCRM files” section).
 .  Navigate to the SuiteCRM Downloads section at
 http://suitecrm.com/download
 .  Download your flavour of SuiteCRM. We advise that all users download
-the latest SuiteCRM release. The latest version will contain the latest
+the latest SuiteCRM release. The latest version will contain all the latest
 features and bug fixes.
-.  If you experience any issues during registering an account on our
+.  If you experience any issue during registering an account on our
 website or downloading SuiteCRM, please use our support forums.
 
 === Copying SuiteCRM files to web server
@@ -61,7 +61,7 @@ The commands/steps taken to setting permissions differ dependant on
 your operating system. If you are experiencing issues with setting
 permissions on your SuiteCRM instance, visit our support forums.
 
-=== Recommended installation pre-requisites
+=== Recommended installation Pre-requisites
 
 * PHP
 * JSON
