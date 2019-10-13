@@ -64,7 +64,7 @@ in +
 (`<Name>` in this case should be used to give it a descriptive name). An example is +
 `custom/Extension/modules/Accounts/Ext/Language/en_us.MyLanguageFile.php`.
 
-See the link:../extension-framework/[extensions] section for more information on the Extensions
+See the link:../developer/Extension%20Framework.adoc/[extensions] section for more information on the Extensions
 folder.
 
 == Application Strings
@@ -102,7 +102,7 @@ An example of a redefinition in this directory would look like this:
 $app_strings['LBL_HELLO'] = 'Hello';
 -----
 
-See the link:../extension-framework/[extensions] section for more information on the Extensions folder.
+See the link:../developer/Extension%20Framework.adoc/[extensions] section for more information on the Extensions folder.
 
 == Application List Strings
 
@@ -131,7 +131,7 @@ However to promote modularity it is recommended that you add a new file in the l
 (`<Name>` should be used to give the file a descriptive name). For example +
 `custom/Extension/application/Ext/Language/es_es.MyAppListLanguageFile.php`.
 
-See the link:../extension-framework/[extensions] section for more information on the Extensions
+See the link:../developer/Extension%20Framework.adoc/[extensions] section for more information on the Extensions
 folder.
 
 == Why and when to customise
