@@ -46,7 +46,7 @@ $mod_strings['fieldTypes']['ColourPicker'] = 'Colour Picker';
 After a quick repair and rebuild this gives us the option to create a
 field with type ``Colour Picker'':
 
-:imagesdir: /images/en/community
+:imagesdir: /static/images/en/community
 
 image:03ColourPickerStudio.png[ColourPickerStudio]
 
