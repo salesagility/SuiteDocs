@@ -359,12 +359,12 @@ for a given record.
 ----
 get_linked_beans(
                 $field_name,
-                $bean_name,
-                $sort_array = array(),
+                $bean_name = '',
+                $order_by = '',
                 $begin_index = 0,
                 $end_index = -1,
-                $deleted=0,
-                $optional_where="");
+                $deleted = 0,
+                $optional_where = "");
 ----
 
 
@@ -376,9 +376,10 @@ get_linked_beans(
   `cache/modules/<TheModule>/<TheModule>Vardefs.php` for the link
   definition.
 `$bean_name`::
-  The name of the bean that we wish to retrieve.
-`$sort_array`::
-  This is a legacy parameter and is unused.
+  Used to specify the bean name of the beans you are expecting back. Not needed in current versions, kept for backward 
+  compatibility or for the unlikely event you have an old style relationship.
+`$order_by`::
+  Optionally, add a clause like `last_name DESC` to get sorted results (only available from SuiteCRM 7.4 onwards).
 `$begin_index`::
   Skips the initial `$begin_index` results. Can be used to paginate.
 `$end_index`::
