@@ -1,5 +1,5 @@
 ---
-Title: Raising Issues
+Title:  Issue Raising
 Weight: 10
 ---
 
@@ -34,37 +34,7 @@ Your email will be acknowledged within 24 hours during the business week
 within 72 hours during the business week (Mon - Fri) indicating the next
 steps in handling your report.
 
-== Labelling
 
-We have a number of labels that we tag issues with to define it's type,
-priority, and action.
 
-[discrete]
-===== Type:
 
-* bug
-* duplicate
-* invalid
-* question
-* suggestion
-
-[discrete]
-===== Priority:
-
-* Low Priority
-* Medium Priority
-* High Priority
-
-[discrete]
-===== Action:
-
-* Resolved: Next Release
-* Fixed Proposed
-* Pending Input
-* Wrong Branch
-* In Review
-
-We encourage users whom feel an issue should be raised as a higher
-priority for a next release that they should make a comment to that
-affect. This also applies to incorrect labelling.
 
