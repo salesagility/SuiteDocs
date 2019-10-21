@@ -7,6 +7,7 @@ chapter: true
 == Contributing to the Documentation
 
 {{% children depth="3" showhidden="false" %}}
+Anyone can edit any page on the SuiteCRM Documentation site and propose a change.
 
 
 
