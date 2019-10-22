@@ -8,7 +8,7 @@ This enhancement is only available in SuiteCRM from version 7.11 onwards.
 {{% /notice %}}
 
 https://www.elastic.co/[Elasticsearch] is an indexing engine that is built specifically to
-have almost real time search results, optimised for searching text strings.
+have almost real-time search results, optimised for searching text strings.
 It is built in Java and runs as a separate server/process.
 
 Elasticsearch can be integrated with SuiteCRM to widely improve search quality and time.
@@ -18,7 +18,7 @@ which will perform an optimised search and return the results back to the CRM.
 
 SuiteCRM currently supports only `Elasticsearch 5.6`.
 
-Synchronisation between the database and the elasticsearch index happens in three main ways:
+Synchronisation between the database and the Elasticsearch index happens in three main ways:
 
 Logic Hooks:: Every time a record is updated it gets re-indexed automatically.
 Scheduled task:: A scheduler job will run periodically to make sure that the database and the index are synchronised.

@@ -12,11 +12,11 @@ very verbose and dedicated logging: `search_index.log`. This is mostly because t
 background, where they are hard to debug. Logging calls get redirected to the standard logging, filtered with the
 configured logging level.
 
-In addition to checking the logs, you could try running the search or the indexing from the command line using the
-link:../command-line-tools[command line tools]. Given the verbosity of the console output, this should surely help
-narrowing down the issue.
+In addition to checking the logs, you could try running the search or the indexing from the command-line using the
+link:../command-line-tools[command line tools]. Given the verbosity of the console output, this should surely help to narrow 
+down the issue.
 
-Finally, enabling the *developer mode* in the admin settings, will provide a clear exception page if the error happens
+Finally, enabling *developer mode* in the admin settings, will provide a clear exception page if the error happens
 at some point during the search process.
 
 :imagesdir: /images/en/admin/ElasticSearch
