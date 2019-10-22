@@ -6,7 +6,7 @@
 	</h4>
 	<p class="">
 	   Edited on the {{ .Lastmod.Format "2 January" }} in commit <b>"{{ with .GitInfo }}{{ .Subject }}{{ else }}[Commit description]{{ end }}"</b>  
-             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank"><i class="fa fa-github"></i></a>
+             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
         </p>
     </li>
 {{ end }}
