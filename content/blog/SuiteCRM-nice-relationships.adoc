@@ -23,8 +23,8 @@ cleaning up some studio created relationships to make them clearer.
 There’s a lot of tweaks to vardefs and files in this post. As always you
 will want to do a full backup before making any changes.
 
-First off let’s add a relationship to try out our changes on. We can
-first add a one to many relationships between products and accounts like
+First off, let’s add a relationship to try out our changes on. We can
+first add a one-to-many relationship between products and accounts like
 so:
 
 :imagesdir: /images/en/community
@@ -44,7 +44,7 @@ Looking at this table we see the following fields:
 
 We have two main issues here. The first is that those field names are
 pretty long. Secondly we may not even want a join table if the
-relationship is truly one to many.
+relationship is truly one-to-many.
 
 == Fixing many to many field names
 
@@ -116,14 +116,14 @@ INNER JOIN aos_products
     ON (aos_products.id = accounts_aos_products_1_c.products_id AND aos_products.deleted = 0)
 WHERE accounts.deleted = 0;
 
-== Moving to a true one to many schema
+== Moving to a true one-to-many schema
 
-SuiteCRM by default will create a many to many database schema even for
-one to many relationships created through studio. This can be nice if,
+SuiteCRM by default will create a many-to-many database schema even for
+one-to-many relationships created through studio. This can be nice if,
 in the future, the relationship changes. However if it is unlikely to
-change it complicates SQL for querying the relationships. If you will be
+change, it complicates SQL for querying the relationships. If you will be
 writing SQL to query these tables you may want to consider switching to
-a one to many schema.
+a one-to-many schema.
 
 We can start by deleting the join table definition. The file
 `custom/metadata/accounts_aos_products_1MetaData.php` can be removed. As
