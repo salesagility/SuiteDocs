@@ -15,7 +15,7 @@ Extension for PHP standard Exception with an extra LangText parameter, typical u
 try {
 
   // throw new LangException with located exception message:
-  thow new LangException(
+  throw new LangException(
     'Exception message for developers', EXCEPTION_CODE, null, 
     new LangText('LBL_TRANSLATABLE_USER_MESSAGE'));
   
