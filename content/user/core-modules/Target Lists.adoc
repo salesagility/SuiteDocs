@@ -60,24 +60,25 @@ Edit View.
 A target list can specify individuals or organization who need to be included in a campaign or excluded 
 from a campaign. This can be controlled using the following target list types:
 
-[cols="30,70"]
+[cols="30h,70", options="header"]
 |=======
-|*Target List Type* |*Description*
-|*Default* |The normal list of targets you intend to send your campaign to.
-|*Seed* |These targets will receive the campaign, but they won't be recorded in the statistics 
-for the campaign on the *View Status* page. You can use this list for people who preview and approve your 
+|Target List Type |Description
+|Default |The normal list of targets you intend to send your campaign to.
+|Seed |These targets will receive the campaign, but they won't be recorded in the statistics
+for the campaign on the *View Status* page. You can use this list for people who preview and approve your
 campaign email before it is actually sent to everybody else, or any other use where tracking is not desired.
-|*Suppression List* - By Domain |Targets with email domain names on this list will be suppressed, so the campaign 
-email will *not* be sent to them. So, if you need to keep all emails belonging to "somesite.com" from going out, 
+|Suppression List - By Domain |Targets with email domain names on this list will be suppressed, so the campaign
+email will not be sent to them. So, if you need to keep all emails belonging to "somesite.com" from going out,
 you add that domain to this list.
-|*Suppression List* - By Email Address |Targets with individual email addresses on this list will be suppressed, 
-so the campaign email will *not* be sent to them. A typical use of this list is for people who have opted-out 
+|Suppression List - By Email Address |Targets with individual email addresses on this list will be suppressed,
+so the campaign email will not be sent to them. A typical use of this list is for people who have opted-out
 of from receiving emails from your company, or from a specific campaign.
-|*Suppression List* - By Id |Here the suppression is made by linking SuiteCRM records (Contacts, Leads, Targets, 
-Accounts, Users) to the target list. This is different from the previous option because a single record may have 
-several emails which will all be excluded. When you're setting up a Newsletter Campaign, in order to have an 
+|Suppression List - By Id |Here the suppression is made by linking SuiteCRM records (Contacts, Leads, Targets,
+Accounts, Users) to the target list. This is different from the previous option because a single record may have
+several emails which will all be excluded. When you're setting up a Newsletter Campaign, in order to have an
 operational opt-out link in the emails, a suppression list of this kind is required to be linked to the Campaign.
-|*Test* |The list of those you want to receive the test emails from the Campaign, while you're still working on 
-the form and content of your message. You can send your Campaign to the test list multiple times by using 
+|Test |The list of those you want to receive the test emails from the Campaign, while you're still working on
+the form and content of your message. You can send your Campaign to the test list multiple times by using
 the btn:[Delete Test Entries] button on the *View Status* page between re-sends.
 |=======
+
