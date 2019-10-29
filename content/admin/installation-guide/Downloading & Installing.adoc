@@ -57,7 +57,7 @@ operating system. Common web server users are as follows:
 ..  apache (Linux/Apache)
 ..  nobody (Linux/Apache)
 ..  IUSR_computerName (Windows/IIS)
-The commands/steps taken to setting permissions differ dependant on
+The commands/steps taken to setting permissions differ depending on
 your operating system. If you are experiencing issues with setting
 permissions on your SuiteCRM instance, visit our support forums.
 
@@ -179,7 +179,7 @@ installation.
 `http://crm.yourserver.com/Suite-CRM-Directory/install.php`
  
 .  The _Welcome to the SuiteCRM Setup Wizard_ screen
-You need to accept the licence agreement first. To do so:
+You need to accept the license agreement first. To do so:
 ..  Click the _I Accept_ checkbox.
 ..  Click _Next_ to continue.
 .  The _Pre-Installation requirements_ screen
@@ -191,7 +191,7 @@ This is where you will configure SuiteCRM to work with your customized environme
 ..  _Database Configuration_
 ...  _Specify Database Type_
 Select the type of database you will be using. If you do not see your
-database here, please make sure you have installed the correct php
+database here, please make sure you have installed the correct PHP
 modules.
 ...  _Provide Database Name_
 ....  _Database Name_
