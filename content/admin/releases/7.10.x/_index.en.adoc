@@ -22,7 +22,9 @@ _Released 23/10/2019_
 
 ==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
 
-TBC
+* CVE: Unassigned - .htaccess Improvements
+* CVE: Unassigned - API Access Token and Credential fix
+* CVE: Unassigned - SQL Injections
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
