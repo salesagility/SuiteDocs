@@ -154,10 +154,10 @@ $sampleArray = array(1, 2, 3, 'Zend', 'Studio');
 
 When declaring a multi-line indexed array the
 initial array item may begin on the following line. If so, it should be
-padded at one indentation level greater than the line contain the array
+padded at one indentation level greater than the line contains the array
 declaration, and all successive lines should have the same indentation;
 the closing parenthesis should be on a line by itself at the same
-indentation level as the line contain the array declaration.
+indentation level as the line containing the array declaration.
 
 .Example
 [source,php]

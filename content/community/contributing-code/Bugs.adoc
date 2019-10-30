@@ -50,7 +50,7 @@ fixes within major and minor *Release notes*.
 If you are new to Writing Commit Messages in git follow the guide
 http://chris.beams.io/posts/git-commit/#seven-rules[here].
 
-* When pushing a branch that has bean created from an upstream branch 
+* When pushing a branch that has been created from an upstream branch 
 to your remote fork, you will need to specify "origin", e.g.
 +
 `git push origin _bugfix_3062_`
