@@ -6,9 +6,9 @@ weight: 50
 :toc:
 
 For a full explanation of how to work in our Documentation files, you need to get acquainted 
-with Hugo (our rendering engine), Learn (our Hugo Theme), and Asciidoc (the mark up style we use).
+with Hugo (our rendering engine), Learn (our Hugo Theme), and Asciidoc (the markup style we use).
 
-The explanations below are simply a short list of some frequently used syntax, and a few recommendations
+The explanations below are simply a shortlist of some frequently used syntax, and a few recommendations
 regarding naming conventions and other rules we adhere to, for consistency and other practical reasons.
 
 == Placing files
@@ -26,7 +26,7 @@ though we plan to use them in the future.
 Both for directory names and file names, we use the page titles as they appear in the front-matter, 
 but use only lowercase, and no spaces or special characters. 
 
-Basically we are trying to emulate the way Hugo produces the final content under `public` directory, so that there
+Basically, we are trying to emulate the way Hugo produces the final content under the `public` directory so that there
 isn't much difference between the source and the rendered content. We've found this tends to facilitate 
 managing the content.
 
@@ -35,8 +35,8 @@ of `installation-guide/downloading-installing.adoc`.
 
 === Naming Translated Files  
 
-For translations, we keep the english file name (that's how Hugo gets the fact that these are 
-translated versions of the same thing), but add a language code before the `.adoc` extension.
+For translations, we keep the English file name (that's how Hugo gets the fact that these are 
+translated versions of the same thing) but add a language code before the `.adoc` extension.
 
 So these are all translations of the same file (English, Spanish, Russian):
 
@@ -62,7 +62,7 @@ Although there are link:https://gohugo.io/content-management/front-matter/[many 
 be defined here, we require only the `title` and `weight` properties. 
 
 The `weight` defines the position in the table of contents, that is, the order within the section where 
-the page belongs. We use increments of 10 for `weight`, so that if we want to insert a new page inbetween 
+the page belongs. We use increments of 10 for `weight` so that if we want to insert a new page in between 
 two other pre-existing pages, it's easier to find an available number. So we number them 10, 20, 30, etc.,
 instead of just 1, 2, 3, etc.
 

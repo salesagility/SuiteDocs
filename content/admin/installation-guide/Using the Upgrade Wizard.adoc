@@ -27,7 +27,7 @@ click admin on the right-hand corner of the page.
 page.
 * This displays the Upgrade Wizard page.
 4.  Click Next.
-* This displays the System Checks page. and SuiteCRM begins the system
+* This displays the System Checks page. SuiteCRM begins the system
 check process. The Systems Check page indicates that there were no
 issues if the system check process completes successfully. Issues with
 file permissions, database, and server settings are listed on the page
@@ -36,14 +36,14 @@ if the system check process encountered any problems.
 * This displays the Upload an Upgrade page.
 6.  Click Browse, and navigate to the location of the upgrade zip file
 and select it.
-* The path to the file displays in the Upload an upgrade field.
+* The path to the file displays in the Upload an Upgrade field.
 7.  Click Upload Upgrade to upload the package to the SuiteCRM
 application.
 * The system uploads the package and displays it on the page. Use the
 Delete Package button to remove the package if necessary.
 8.  Click Next.
 * This displays the Preflight Check page.
-* Click Show Schema Change Script toview differences in the SuiteCRM
+* Click Show Schema Change Script to view differences in the SuiteCRM
 databases schema between your current and new SuiteCRM versions.
 * By default, the Upgrade Wizard Runs SQL option is selected as the
 database update method. Select Manual SQL Queries from the Database
@@ -96,7 +96,7 @@ merged (if you chose to update your modules).
 steps for manual merging of files or running SQL queries now.
 15. Click Done.
 * This displays the Home page indicating that the upgrade is complete.
-16. Click Repair and select the Rebuild Relationships andRebuild
+16. Click Repair and select the Rebuild Relationships and Rebuild
 Extensions options in the Systems panel of the Administration Home page.
 * For more information, see Repair.
 17. Manually merge the files by extracting the skipped file from the

@@ -1,0 +1,170 @@
+---
+title: SuiteCRM Web Analytics
+weight: 30
+---
+
+:imagesdir: /images/en/admin
+
+= SuiteCRM Web Analytics
+
+SuiteCRM Web Analytics is a web based analysis and reporting frontend that allows users to explore data 
+in the Data Warehouse that has been extracted from SuiteCRM and third party data sources.
+
+Users are able to log into the web portal to run, filter data or schedule reports. The web portal provides 
+the ability to import new reports and dashboards created using Pentaho powerful CTools and Report Designer. 
+Reports can support a number of different visual charts and output types such as HTML, PDF and Excel.
+
+== Downloading & Installing SuiteCRM Web Analytics
+
+SuiteCRM Web Analytics requires the following pre-requisites installed on your server
+
+* Linux environment
+* OpenJDK 8 JRE (Java)
+* wget
+* unzip
+* zip
+
+{{% notice note %}}
+SuiteCRM Web Analytics requires the SuiteCRM Data Integration solution pre-installed and executed.
+{{% /notice %}}
+
+There are two ways of downloading the SuiteCRM Web Analytics.
+
+* https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website^]: a pre-built 
+package containing installation scripts, web server and all the the third party open source libraries required.
+* Clone the SuiteCRM Web Analytics repo: a script to build the SuiteCRM web analytics package 
+(generating the same available package via the SuiteCRM website).
+
+=== Manually Build the package (cloning from repo)
+
+Clone repo via terminal:
+
+[source,bash]
+----
+git clone https://github.com/ivylabs/suitecrm-analytics
+----
+
+Navigate into the newly cloned repository's directory and run build.sh
+
+[source,bash]
+----
+./build.sh
+----
+
+This should output on your terminal all the files that the solution downloads and zips up into a package.
+The end of the script will ask if you wish to delete the installation files.
+
+[source,bash]
+----
+Would you like to remove the installation files? This will save disk space. [y/N] y
+
+-------------------------------------------------------------
+
+ Build is complete!
+
+-------------------------------------------------------------
+----
+
+This will generate a package named **suitecrm-analytics-server.zip** within the root of your directory. 
+This is the same package available via the SuiteCRM website.
+
+
+=== Configuring SuiteCRM Data Integration
+
+After downloading or generating the `suitecrm-analytics-server.zip´ file, **Upload** and **extract** this 
+file on a hosted web server.
+
+Navigate into the newly extracted `suitecrm-analytics-server` folder and edit the `install.properties`.
+
+[source,bash]
+----
+JVM_SIZE=1024
+SUITECRM_HOST=127.0.0.1
+SUITECRM_PORT=3306
+SUITECRM_DATABASE=suitecrm_testdata
+SUITECRM_USERNAME=suitecrmrootuser
+SUITECRM_PASSWORD=suitecrmrootuserpassword
+SUITECRM_ANALYTICS_HOST=127.0.0.1
+SUITECRM_ANALYTICS_PORT=3306
+SUITECRM_ANALYTICS_DATABASE=suitecrm_dwh
+SUITECRM_ANALYTICS_USERNAME=suitecrmrootuser
+SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
+# DO NOT CHANGE FROM PORT 8080! There is a bug with uploading the solution when the port is changed
+SUITECRM_ANALYTICS_WEBAPP_PORT=8080
+----
+
+These config variables define the connection to your SuiteCRM database to extract information from.
+
+[source,bash]
+----
+# SuiteCRM Source Database Connection Details
+SUITECRM_HOST=127.0.0.1
+SUITECRM_PORT=3306
+SUITECRM_DATABASE=suitecrm_testdata
+SUITECRM_USERNAME=suitecrmrootuser
+SUITECRM_PASSWORD=suitecrmrootuserpassword
+----
+
+These config variables define the connection to your SuiteCRM data warehouse (created by the 
+SuiteCRM Data Integration solution) to retrieve your transformed SuiteCRM data.
+
+[source,bash]
+----
+# SuiteCRM Analytis Target Database Connection
+SUITECRM_ANALYTICS_HOST=127.0.0.1
+SUITECRM_ANALYTICS_PORT=3306
+SUITECRM_ANALYTICS_DATABASE=suitecrm_dwh
+SUITECRM_ANALYTICS_USERNAME=suitecrmrootuser
+SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
+----
+
+=== Installing SuiteCRM Web Analytics
+
+Once the configuration has been defined, now run the setup script within the same root directory of 
+your suitecrm-analytics-server.
+
+[source,bash]
+----
+./setup-suitecrm-analytics.sh
+----
+
+This will check that the web server can successfully run and the database connections are successful.
+
+Then you can run the SuiteCRM Web Analytics web server to access the application.
+
+[source,bash]
+----
+./start-suitecrm-analytics.sh
+----
+
+This should output on your terminal that the tomcat server has started.
+
+To follow the web server logs you can run this command:
+
+[source,bash]
+----
+tail -f tomcat/logs/catalina.out
+----
+
+To confirm the server has successfully started look for the following line in the above log file 
+with `N` as a dynamic number depending on how quickly the server initialised.
+
+[source,bash]
+----
+org.apache.catalina.startup.Catalina.start Server startup in N ms
+----
+
+Once the server has initialised you can log into the SuiteCRM Analytics Web Application by navigating 
+to the hostname or IP address of the server in your web browser.
+By default the web application is listening on port `8080` so for example, your server may be 
+available on `http://localhost:8080/suitecrmanalytics`.
+
+Check out the link:../../../user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for 
+more information on the application.
+
+
+
+
+
+
+

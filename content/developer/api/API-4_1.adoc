@@ -3,17 +3,13 @@ weight: 16
 title: "API v4.1"
 ---
 
-// :source-highlighter: coderay
-// :coderay-linenums-mode: table
-
 {{% notice warning %}}
 This documentation pertains to SuiteCRM versions up to v.7.9.x. 
-Since SuiteCRM version 7.10, a link:../version-8[brand new v8 REST API] is available.
+Since SuiteCRM version 7.10, a link:../[brand new v8 REST API] is available.
 {{% /notice %}}
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
 data and functionality. 
-// {source-highlighter}
 
 == Using the API
 
@@ -102,8 +98,8 @@ example.com/suitecrm/service/v4_1/rest.php
 
 
 
-Where example.com/suitecrm is the address of your SuiteCRM instance.
-v4_1 is the version of the API and can be changed.
+Where `example.com/suitecrm` is the address of your SuiteCRM instance.
+`v4_1` is the version of the API and can be changed.
 
 The SuiteCRM REST API is not a true REST API - all calls are performed
 as POSTs and all calls are to the base URL with the method passed in as
@@ -220,7 +216,7 @@ For web service version `v4_1` this would be `custom/service/v4_1_custom/`.
 
 Next we create the implementing class. This will create our new method.
 In our example we will simply create a new method which writes to the
-SuiteCRM log We will call this method `write_log_message`.
+SuiteCRM log. We will call this method `write_log_message`.
 
 [discrete]
 ==== Examples

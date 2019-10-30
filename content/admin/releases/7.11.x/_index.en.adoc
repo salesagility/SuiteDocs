@@ -9,6 +9,198 @@ weight: 9880
 
 :experimental:
 
+== 7.11.8
+
+_Released 23/08/2019_
+
+=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.8.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.8.tar.gz[*Source code* (tar.gz)]
+
+===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+
+==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752 ] - Reflected XSS
+* CVE: Unassigned - Unintended public exposure of files
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454 ] - Employee module does not implement ACL
+[discrete]
+
+==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/7702[7702 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7696[7696 ] - Update README
+* PR: https://github.com/salesagility/SuiteCRM/pull/7698[7698 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7581[7581 ] - SuiteBot config.yml
+* PR: https://github.com/salesagility/SuiteCRM/pull/7672[7672 ] - Composerify Zend
+* PR: https://github.com/salesagility/SuiteCRM/pull/7636[7636 ] - Optimize images
+* PR: https://github.com/salesagility/SuiteCRM/pull/7591[7591 ] - Composerify Smarty
+
+===== Potential breaking change with Smarty
+
+If you maintain a custom SuiteCRM theme, you should note that this release may require some small changes to your `.tpl` Smarty files. This is because of a legacy customization to Smarty that was removed when it was moved to inclusion via Composer.
+
+The only breaking change will be if you've used the `theme_template` attribute for any Smarty ``include``s. You'll need to remove the `theme_template` attribute and change the file attribute to use the full path:
+
+[source,html]
+----
+{* before *}
+{ include file="_head.tpl" theme_template=true }
+
+{* after *}
+{ include file="themes/SuiteP/tpls/_head.tpl" }
+----
+
+Plugin files are still usable in the same way as before – at `./include/Smarty/plugins/` – and can be ``require``d explicitly. Custom plugins should still go in `./custom/include/Smarty/plugins/`. It should be noted that all other files in `./include/Smarty` have been replaced by empty files to prevent errors in case users were `require`ing the files. They're deprecated, and requires referencing them can be safely removed. Smarty's internal files will be autoloaded by Composer by default.
+
+[discrete]
+
+==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/7719[7719 ] - Fix/backwards compatibility
+* PR: https://github.com/salesagility/SuiteCRM/pull/7718[7718 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6982[6982 ] - New user password not being generated
+* PR: https://github.com/salesagility/SuiteCRM/pull/7713[7713 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7712[7712 ] - Case insensitive detection of header X-CampTrackID
+* PR: https://github.com/salesagility/SuiteCRM/pull/7699[7699 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7667[7667 ] - Cannot import Email if plain-text plus attachment
+* PR: https://github.com/salesagility/SuiteCRM/pull/7697[7697 ] - Folder include/SugarCharts/Jit missing in 7.11.7 installation
+* PR: https://github.com/salesagility/SuiteCRM/pull/7695[7695 ] - Add a proper return type to getUserRoleNames()
+* PR: https://github.com/salesagility/SuiteCRM/pull/7689[7689 ] - Format InlineEditing.js with prettier
+* PR: https://github.com/salesagility/SuiteCRM/pull/7683[7683 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6415[6415 ] - Bug when inbound email Leave Messages On Server set to No
+* PR: https://github.com/salesagility/SuiteCRM/pull/7682[7682 ] - Documents - Image Field Does Not Display Uploaded Image
+* PR: https://github.com/salesagility/SuiteCRM/pull/7681[7681 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7138[7138 ] - EmailMan sendEmail missing restricted_addresses check
+* PR: https://github.com/salesagility/SuiteCRM/pull/7610[7610 ] - Fixed error message css + email warning config option
+[discrete]
+
+=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/JanSiero.png" data-featherlight="image"><img src="https://github.com/JanSiero.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/JanSiero" class="highlight">JanSiero</a></div>]
+
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
+
+pass:[<div style="float:clear; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
+
+'''
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+== 7.11.7
+
+_Released 31st July 2019_
+
+=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.7.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.7.tar.gz[*Source code* (tar.gz)]
+
+===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+
+==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+
+[discrete]
+
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13335[#CVE-2019-13335 ] - *Security Issue* - Fixed SSRF
+* *Security Issue* - Fixed privilege escalation
+
+==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements 
+
+* https://github.com/salesagility/SuiteCRM/pull/7374[#7374 ] Robo test-running commands
+* https://github.com/salesagility/SuiteCRM/pull/7474[#7474 ] SecuritySuite 3.1.16
+* https://github.com/salesagility/SuiteCRM/pull/7503[#7503 ] Scheduled Reports: Enable security groups support and add the subpanel
+
+==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+
+* https://github.com/salesagility/SuiteCRM/issues/3756[#3756 ] Fixed #3756 - Calendar pop-ups now auto close after 500ms
+* https://github.com/salesagility/SuiteCRM/pull/6850[#6850 ] SAML2: Use php-saml from composer
+* https://github.com/salesagility/SuiteCRM/pull/7154[#7154 ] Fixes SugarPHPMailer encountered an error: Could not access file
+* https://github.com/salesagility/SuiteCRM/issues/5754[#5754 ] Fixed #5754 - Error with custom fields on getQuery from One2Many relationships
+* https://github.com/salesagility/SuiteCRM/pull/7345[#7345 ] Get ChromeDriver's latest release in Robo task
+* https://github.com/salesagility/SuiteCRM/issues/7390[#7390 ] Fixed #7390 - Unable to set Minimum Password Length in Password Management
+* https://github.com/salesagility/SuiteCRM/pull/7433[#7433 ] Clean up codeception environments
+* https://github.com/salesagility/SuiteCRM/issues/5552[#5552 ] Fixed #5552 - Inbound Email Auto-reply send email without Attachments
+* https://github.com/salesagility/SuiteCRM/issues/6992[#6992 ] Fixed #6992 - Group Email Inbox accounts doesn't respect reply as option in admin
+* https://github.com/salesagility/SuiteCRM/pull/7477[#7477 ] Remove unused webDriverHelper variables
+* https://github.com/salesagility/SuiteCRM/issues/3756[#3756 ] Fixed #3756 - Popup Studio and Calendar don't auto-close
+* https://github.com/salesagility/SuiteCRM/issues/7409[#7409 ] Fixed #7409 - Managing Delegates Removes main windows Scrolling
+* https://github.com/salesagility/SuiteCRM/issues/7421[#7421 ] Fixed #7421 - Use of ampersand (&) in email subject sends email subject misformatted
+* https://github.com/salesagility/SuiteCRM/pull/7491[#7491 ] Remove unnecessary test files
+* https://github.com/salesagility/SuiteCRM/pull/7492[#7492 ] Replace the createAccount method
+* https://github.com/salesagility/SuiteCRM/issues/7509[#7509 ] Fixed #7509 - Using prefix index to not hit Key threshold in MySQL5.6/UTF-8
+* https://github.com/salesagility/SuiteCRM/issues/7511[#7511 ] Fixed #7511 - Silent installer tries to do unknown things on completion
+* https://github.com/salesagility/SuiteCRM/issues/7467[#7467 ] Fixed #7467 - Survey entry-point broken in 7.11.5
+* https://github.com/salesagility/SuiteCRM/issues/7267[#7267 ] Fixed #7267 - Database Failure after upgrading to Version 7.11.4
+* https://github.com/salesagility/SuiteCRM/issues/7407[#7407 ] Fixed #7407 - "Users may send as themselves" broken - Invalid address: (punyEncode)
+* https://github.com/salesagility/SuiteCRM/pull/7520[#7520 ] PSR-2
+* https://github.com/salesagility/SuiteCRM/issues/6935[#6935 ] Fixed #6935 - Cookie path is not respected if globally set
+* https://github.com/salesagility/SuiteCRM/issues/6470[#6470 ] Fixed #6470 - Email module: Inline image not shown in received/sent email
+* https://github.com/salesagility/SuiteCRM/pull/7530[#7530 ] Fix missing function getAssignedEmailsCountForUsers
+* https://github.com/salesagility/SuiteCRM/pull/7535[#7535 ] Misc automated testing improvements
+* https://github.com/salesagility/SuiteCRM/pull/7536[#7536 ] Cleanup files created by acceptance tests between test runs
+* https://github.com/salesagility/SuiteCRM/issues/7304[#7304 ] Fixed #7304 - ListView: Fix selection count for the "Select All" case
+* https://github.com/salesagility/SuiteCRM/pull/7541[#7541 ] ListView: Fix the selection count when executing an action without any selection
+* https://github.com/salesagility/SuiteCRM/pull/7542[#7542 ] ListView: Fix selection when switch from "select all" to "select page" 
+* https://github.com/salesagility/SuiteCRM/pull/7550[#7550 ] SugarWidgetSubPanelEmailLink: Fix missing opt-in ticks after inline editing
+* https://github.com/salesagility/SuiteCRM/pull/7553[#7553 ] sugar_3.js: Remove unused send_form_for_emails()
+* https://github.com/salesagility/SuiteCRM/issues/7554[#7554 ] Fixed email attachment icon
+* https://github.com/salesagility/SuiteCRM/issues/7284[#7284 ] Fixed #7284 - Top of dashlets being cut off by nav bar nd positioning of dashlet pop-up
+* https://github.com/salesagility/SuiteCRM/pull/7561[#7561 ] Add a get_current_language() helper function
+* https://github.com/salesagility/SuiteCRM/pull/7562[#7562 ] Fix/silent upgrade
+* https://github.com/salesagility/SuiteCRM/issues/7547[#7547 ] Fixed #7547 - use correct login image on install.php
+* https://github.com/salesagility/SuiteCRM/issues/5190[#5190 ] Fixed #5190 - Attachment in detail view of non imported email doesn't show
+* https://github.com/salesagility/SuiteCRM/pull/7565[#7565 ] Add wait to HomeCest so it won't flake
+* https://github.com/salesagility/SuiteCRM/issues/7567[#7567 ] Fixed #7567 - Missing Contracts from selection of Related to: field
+* https://github.com/salesagility/SuiteCRM/issues/4881[#4881 ] Fixed #4881 - Detail view of no imported email is different as imported + missing time unit + attachments
+* https://github.com/salesagility/SuiteCRM/issues/2464[#2464 ] Fixed #2464 - Logo upload function is not working
+* https://github.com/salesagility/SuiteCRM/pull/7573[#7573 ] Remove sugar references
+* https://github.com/salesagility/SuiteCRM/pull/7582[#7582 ] Fix codecov path
+* https://github.com/salesagility/SuiteCRM/issues/7209[#7209 ] Fixed #7209 - Inline Edit alert Even if I dont make a change
+* https://github.com/salesagility/SuiteCRM/pull/7588[#7588 ] Fix pagination button class
+* https://github.com/salesagility/SuiteCRM/issues/7298[#7298 ] Fixed #7298 - Emails 'Bulk Action' is disabled after upgrade to 7.10.16
+* https://github.com/salesagility/SuiteCRM/issues/7594[#7594 ] Fixed #7594 - Remove include/timezone/timezones.php
+* https://github.com/salesagility/SuiteCRM/pull/7607[#7607 ] Remove lastView variables from tests
+* https://github.com/salesagility/SuiteCRM/issues/7599[#7599 ] Fixed #7599 - Unwanted email generated in case creation & update
+* https://github.com/salesagility/SuiteCRM/issues/7608[#7608 ] Fixed #7608 - A non-numeric value encountered at ListViewSubPanel.php
+* https://github.com/salesagility/SuiteCRM/pull/7624[#7624 ] Fixed email settings "data error" 
+* https://github.com/salesagility/SuiteCRM/issues/6996[#6996 ] Escaped strings issue, breaks "My favorites" filters and perhaps other things
+* https://github.com/salesagility/SuiteCRM/pull/7639[#7639 ] Fixed DB failure with activities subpanel
+
+=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+
+_Special thanks to all members for their contributions and participation in this release!_
+
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/lazka.png" data-featherlight="image"><img src="https://github.com/lazka.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/lazka" class="highlight">lazka</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/marin-h.png" data-featherlight="image"><img src="https://github.com/marin-h.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/marin-h" class="highlight">marin-h</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/gody01.png" data-featherlight="image"><img src="https://github.com/gody01.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/gody01" class="highlight">gody01</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/Abuelodelanada.png" data-featherlight="image"><img src="https://github.com/Abuelodelanada.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/Abuelodelanada" class="highlight">Abuelodelanada</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/eggsurplus.png" data-featherlight="image"><img src="https://github.com/eggsurplus.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/eggsurplus" class="highlight">eggsurplus</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/sanchezfauste.png" data-featherlight="image"><img src="https://github.com/sanchezfauste.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/sanchezfauste" class="highlight">sanchezfauste</a></div>]
+
+pass:[<div style="float:left;margin-right:10px;"><a href="https://github.com/adriangibanelbtactic.png" data-featherlight="image"><img src="https://github.com/adriangibanelbtactic.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/adriangibanelbtactic" class="highlight">adriangibanelbtactic</a></div>]
+
+pass:[<div style="float:clear;margin-right:10px;"><a href="https://github.com/ebogaard.png" data-featherlight="image"><img src="https://github.com/ebogaard.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/ebogaard" class="highlight">ebogaard</a></div>]
+
+'''
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+
+'''
+
+
 == 7.11.6
 
 _Released 1st July 2019_

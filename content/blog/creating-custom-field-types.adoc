@@ -46,7 +46,7 @@ $mod_strings['fieldTypes']['ColourPicker'] = 'Colour Picker';
 After a quick repair and rebuild this gives us the option to create a
 field with type ``Colour Picker'':
 
-:imagesdir: ./../../images/en/community
+:imagesdir: /images/en/community
 
 image:03ColourPickerStudio.png[ColourPickerStudio]
 
@@ -118,6 +118,6 @@ and one for the Edit View at
 </script>
 
 After a quick repair and rebuild (and assuming the field has been added
-to the views). You’ll see the new field:
+to the views), you’ll see the new field:
 
 image:04ColourPicker.png[Colour Picker Exmaple]

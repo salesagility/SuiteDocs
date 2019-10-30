@@ -14,7 +14,8 @@ begin making commits to the project.
 
 * First, determine which base branch your bug fix should use. 
 
-{{%notice info%}}The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so unless your bug is `hotfix` or `develop` specific, make the PR to `hotfix-7.10.x`.{{%/notice%}}
+{{%notice info%}}The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so unless your bug
+is `hotfix` or `develop` specific, make the PR to `hotfix-7.10.x`.{{%/notice%}}
 
 {{<mermaid align="center">}}
 graph TD;
