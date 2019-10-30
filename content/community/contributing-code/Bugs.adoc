@@ -14,26 +14,26 @@ begin making commits to the project.
 
 * First, determine which base branch your bug fix should use. 
 
-//{{%notice info%}}If the bug you're fixing is present in `hotfix-7.10.x` then you will need to make two separate pull requests, one to `hotfix-7.8.x` and one to `hotfix-7.10.x`. The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so no more duplicates are necessary.{{%/notice%}}
+{{%notice info%}}The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so unless your bug
+is `hotfix` or `develop` specific, make the PR to `hotfix-7.10.x`.{{%/notice%}}
 
 {{<mermaid align="center">}}
 graph TD;
-  Bugfix{Bugfix}-->|Your PR|hotfix-7.8.x;
-  hotfix-7.8.x-->|Merged Into|7.8.x
+  Bugfix{Bugfix}-->|Your PR|hotfix-7.10x;
   hotfix-->|Merged Into|master;
-  Bugfix-->|Your PR|hotfix-7.10x;
   hotfix-7.10x-->|Merged Into|7.10.x
   hotfix-7.10x-->|Merged Into|hotfix;
   hotfix-->|Merged Into|develop;
 {{< /mermaid >}}
 
+
 * Separate each issue fix into a new branch in your repository (Either
-from the `hotfix-7.8.x` or `hotfix-7.10.x` branch) and name it with the issue
+from the `hotfix-7.10.x` or `hotfix` branch) and name it with the issue
 ID e.g. _bugfix_3062_ or _issue-1234_.
 +
-e.g. to create the branch from `hotfix-7.8.x` with the following git command:
+e.g. to create the branch from `hotfix-7.10.x` with the following git command:
 +
-`git checkout -b _bugfix_3062_ upstream/hotfix-7.8.x`
+`git checkout -b _bugfix_3062_ upstream/hotfix-7.10.x`
 
 * When committing to your individual bugfix branch, it helps to follow
 the message format below:
@@ -65,7 +65,7 @@ Request for each issue you fix – *do not* combine multiple bugfixes into
 one Pull Request.
 
 * Ensure that in your Pull Request that the base fork is
-*salesagility/SuiteCRM* and base branch is either `hotfix-7.8.x` or `hotfix-7.10.x`
+*salesagility/SuiteCRM* and base branch is either `hotfix-7.10.x` or `hotfix`
 with the head fork being *your repository* and a base branch of your unique bugfix branch e.g. _bugfix_1234_
 
 * We will automatically reject any Pull Requests made to the wrong
