@@ -61,7 +61,6 @@ _Released 01/11/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7193[7193^] - Remove Unused Import
 * PR: https://github.com/salesagility/SuiteCRM/pull/7141[7141^] - Type casting
 * PR: https://github.com/salesagility/SuiteCRM/pull/6765[6765^] - Issue: https://github.com/salesagility/SuiteCRM/issues/321[321^] - Hitting enter in the password input saves the user but not the password
-* PR: https://github.com/salesagility/SuiteCRM/pull/6750[6750^] - Issue: https://github.com/salesagility/SuiteCRM/issues/4754[4754^] - Remove PHP4 style constructors
 * PR: https://github.com/salesagility/SuiteCRM/pull/6503[6503^] - Add a SAML2 metadata endpoint
 * PR: https://github.com/salesagility/SuiteCRM/pull/5537[5537^] - Issue: https://github.com/salesagility/SuiteCRM/issues/5520[5520^] - Do not clear existing attachments when loading a template
 * PR: https://github.com/salesagility/SuiteCRM/pull/4471[4471^] - Update DeleteRelationship.php
@@ -138,7 +137,6 @@ _Released 01/11/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/8015[8015^] - Make the pagination buttons on DetailView pages links.
 * PR: https://github.com/salesagility/SuiteCRM/pull/8010[8010^] - Skip cache building if custom class exists for dashlets
 * PR: https://github.com/salesagility/SuiteCRM/pull/8009[8009^] - Update contributing.md
-* PR: https://github.com/salesagility/SuiteCRM/pull/8000[8000^] - More PHP 7.4 array accessor deprecations
 * PR: https://github.com/salesagility/SuiteCRM/pull/7998[7998^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7997[7997^] - Datetime field caching issue
 * PR: https://github.com/salesagility/SuiteCRM/pull/7995[7995^] - Typos and made it grammatically better
 * PR: https://github.com/salesagility/SuiteCRM/pull/7994[7994^] - Update config.yml to include 7.10.x branch
@@ -151,8 +149,6 @@ _Released 01/11/2019_
 * PR: https://github.com/salesagility/SuiteCRM/pull/7970[7970^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7969[7969^] - Cannot call logger
 * PR: https://github.com/salesagility/SuiteCRM/pull/7966[7966^] - Email css error
 * PR: https://github.com/salesagility/SuiteCRM/pull/8086[8086^] - Link contributors badge to contributors insights
-* PR: https://github.com/salesagility/SuiteCRM/pull/8085[8085^] - Deprecated string concatenation
-* PR: https://github.com/salesagility/SuiteCRM/pull/8080[8080^] - Replaced alias functions
 * PR: https://github.com/salesagility/SuiteCRM/pull/8076[8076^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8057[8057^] - Deprecated usage of join
 * PR: https://github.com/salesagility/SuiteCRM/pull/8075[8075^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8057[8057^] - Misc PHP 7.4 deprecations
 * PR: https://github.com/salesagility/SuiteCRM/pull/8073[8073^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8057[8057^] - Remove all uses of get_magic_quotes_gpc
@@ -174,10 +170,10 @@ _Released 01/11/2019_
 
 ==== pass:[<i class="fa fa-code-fork fa-1x"></i>] Development
 
-* PR: https://github.com/salesagility/SuiteCRM/pull/7606[7606^] - Remove HTMLPurifier ConfigForm.js file
-* PR: https://github.com/salesagility/SuiteCRM/pull/8088[8088^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7605[7605^] - Remove XML_HTMLSax3
-* PR: https://github.com/salesagility/SuiteCRM/pull/8084[8084^] - Remove dead code: Re:Remastered
-* PR: https://github.com/salesagility/SuiteCRM/pull/8074[8074^] - Remove deprecated helper files
+* PR: https://github.com/salesagility/SuiteCRM/pull/8000[8000^] - More PHP 7.4 array accessor deprecations
+* PR: https://github.com/salesagility/SuiteCRM/pull/6750[6750^] - Issue: https://github.com/salesagility/SuiteCRM/issues/4754[4754^] - Remove PHP4 style constructors
+* PR: https://github.com/salesagility/SuiteCRM/pull/8085[8085^] - Deprecated string concatenation
+* PR: https://github.com/salesagility/SuiteCRM/pull/8080[8080^] - Replaced alias functions
 
 [discrete]
 
