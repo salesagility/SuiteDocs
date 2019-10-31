@@ -11,7 +11,7 @@ weight: 9890
 
 == 7.10.21
 
-_Released 23/10/2019_
+_Released 01/11/2019_
 
 === pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
 
@@ -43,6 +43,8 @@ _Released 23/10/2019_
 
 ==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
 
+* PR: https://github.com/salesagility/SuiteCRM/pull/8154[8154^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8153[8153^] - SQL query in the ACLAction code
+* PR: https://github.com/salesagility/SuiteCRM/pull/8151[8151^] - Resolve issue with email templates
 * PR: https://github.com/salesagility/SuiteCRM/pull/7659[7659^] - Icons not rendering properly in Alerts
 * PR: https://github.com/salesagility/SuiteCRM/pull/7655[7655^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7648[7648^] - Case Module: Description field not showing after Save and continue
 * PR: https://github.com/salesagility/SuiteCRM/pull/7650[7650^] - 'customMetadate' typo in DashletGeneric.php
