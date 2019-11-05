@@ -80,7 +80,7 @@ These could include things like:
 - etc
 
 Most of these things will be retained after the upgrade, with no special intervention, but it's good to 
-check each one independentely.
+check each one independently.
 
 - Can you gather *existing Documentation* for your company's SuiteCRM project? Requirements, User Guides, 
 Processes Designs, test cases?
@@ -107,7 +107,7 @@ Some of your concerns can be:
 - Identify risks 
 - Define timelines
 - Identify the critical path in project execution
-- Assign responsabilities to each team
+- Assign responsibilities to each team
 - Include extensive testing and perhaps a phased roll-out plan
 - Try to minimize downtime and mitigate inconveniences, paying special attention to the final moment 
 where the old server is removed and the new one goes live.
@@ -123,7 +123,7 @@ the "Migrate-to-Upgrade Strategy" vs "Test-and-Upgrade Strategy":
 image:upgrading-strategies.png[title="Upgrading strategies Diagram"]
 
 {{% notice tip %}}
-*Virtualization* or *Containerization* are a great advantadge at this point, providing you with 
+*Virtualization* or *Containerization* are a great advantage at this point, providing you with 
 the ability to try things and go back to previous points in time (snapshots) if needed.
 {{% /notice %}}
 
@@ -183,5 +183,5 @@ without taking any particularly worrying risks.
 
 Please also ask in the https://suitecrm.com/suitecrm/forum[Forums^] about any Issues you find. If after some triage in the Forums you realize you
 found a bug in the software, please make sure you raise it on 
-our https://github.com/salesagility/SuiteCRM/issues[Github repository^]. 
+our https://github.com/salesagility/SuiteCRM/issues[GitHub repository^]. 
 

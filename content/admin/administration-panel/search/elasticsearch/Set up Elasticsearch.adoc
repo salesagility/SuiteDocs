@@ -136,7 +136,7 @@ And you should receive something like this:
 ----
 
 {{% notice warning %}}
-Note that the current set up does not provide authentication.
+Note that the current setup does not provide authentication.
 Remember to secure your Elasticsearch server before going to production,
 or your data will be vulnerable!
 {{% /notice %}}

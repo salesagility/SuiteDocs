@@ -44,7 +44,7 @@ Clone repo via terminal:
 git clone https://github.com/ivylabs/suitecrm-analytics
 ----
 
-Navigate into the newly clone repository's directory and run build.sh
+Navigate into the newly cloned repository's directory and run build.sh
 
 [source,bash]
 ----
@@ -147,7 +147,7 @@ tail -f tomcat/logs/catalina.out
 ----
 
 To confirm the server has successfully started look for the following line in the above log file 
-with `N` is a dynamic number depending on how quickly the server initialised.
+with `N` as a dynamic number depending on how quickly the server initialised.
 
 [source,bash]
 ----

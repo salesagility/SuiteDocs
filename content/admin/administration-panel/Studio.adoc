@@ -14,6 +14,8 @@ weight: 55
 The Studio tools allow you to customise the information shown in the
 modules and how it is displayed.
 
+To access Studio, log in as an Administrator user. In the top-right corner of the screen you find a menu with a profile figure icon. Click this icon, then select "Admin". Scroll down the page and click "Studio".
+
 When Studio is opened, it will display a list of all the modules which 
 can be customised. Click to select the required module.
 
@@ -250,7 +252,7 @@ on the right-hand side.
 
 image:StudioEditViewAddPanel.png["studio - add panel to view"]
 
-If you have added a new panel, this can be renamed by clicking the the pencil icon. 
+If you have added a new panel, this can be renamed by clicking the pencil icon. 
 This will open the edit view for the panel label. Edit the label and click btn:[SAVE]
 to return to the layout.
 

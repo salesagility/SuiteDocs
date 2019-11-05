@@ -214,7 +214,7 @@ image:AdminScheduledTask.png[title = "Scheduled Task"]
 
 In edit mode, you can set the job status (only Active jobs will run) and configure the interval at which the job runs
 as well as the start time.
-Unckecking the the 'Advanced Options' box will show a more user-friendly way to set the job interval if you are not 
+Unchecking the 'Advanced Options' box will show a more user-friendly way to set the job interval if you are not 
 familiar with the crontab notation. Re-checking Advanced Options will let you set the initial start time. 
 
 image:AdminEditScheduledTask.png[title = "Edit Scheduled Task"]

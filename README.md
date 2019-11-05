@@ -35,5 +35,6 @@ We will add more languages later on.
 You can open an Issue if you have any questions or comments. Thank you.
 
 
-
+## License
+SuiteDocs is licensed under the GNU Free Documentation License. See [LICENSE.md](./LICENSE.md) for full license details.
 

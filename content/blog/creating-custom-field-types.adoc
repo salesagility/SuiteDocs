@@ -118,6 +118,6 @@ and one for the Edit View at
 </script>
 
 After a quick repair and rebuild (and assuming the field has been added
-to the views). You’ll see the new field:
+to the views), you’ll see the new field:
 
 image:04ColourPicker.png[Colour Picker Exmaple]

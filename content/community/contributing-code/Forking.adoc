@@ -7,22 +7,22 @@ Weight: 30
 
 === Fork the SuiteCRM repository
 
-You can do this entirely from the Github website. See
+You can do this entirely from the GitHub website. See
 https://help.github.com/articles/fork-a-repo/[Forking Git] to learn how.
 
 === Setup Git on your local machine
 
 Follow the guide produced by
-https://help.github.com/articles/set-up-git/[Github], which provides
-detailed instructions on setting up git and connecting to Github from
+https://help.github.com/articles/set-up-git/[GitHub], which provides
+detailed instructions on setting up git and connecting to GitHub from
 your local machine.
 
 === Clone your repository on your local machine
 
-With git setup and your Github fork created, we can now clone the git
+With git setup and your GitHub fork created, we can now clone the git
 repository to our local machine. Change to the directory you wish to do
 this at, and issue this command to clone the SuiteCRM repository (
-changing username for your username in Github ) 
+changing username for your username in GitHub ) 
 
 `git clone git@github.com:username/SuiteCRM.git`
 
