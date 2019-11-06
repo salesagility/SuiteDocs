@@ -22,9 +22,9 @@ _Released 04/11/2019_
 
 ==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
 
-* CVE: Unassigned - .htaccess Improvements
-* CVE: Unassigned - API Access Token and Credential fix
-* CVE: Unassigned - SQL Injections
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18782[CVE-2019-18782^] - .htaccess Improvements
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18785[CVE-2019-18785^] - API Access Token and Credential fix
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18784[CVE-2019-18784^] - SQL Injections
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
@@ -219,9 +219,9 @@ _Released 23/08/2019_
 
 ==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
 
-* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752 ] - Reflected XSS
-* CVE: Unassigned - Unintended public exposure of files
-* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454 ] - Employee module does not implement ACL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752^] - Reflected XSS
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18783[CVE-2019-18783^] - Unintended public exposure of files
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454^] - Employee module does not implement ACL
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
