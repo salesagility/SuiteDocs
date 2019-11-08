@@ -31,7 +31,7 @@ SuiteCRM Web Analytics requires the SuiteCRM Data Integration solution pre-insta
 There are two ways of downloading the SuiteCRM Web Analytics.
 
 * https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website^]: a pre-built 
-package containing installation scripts, web server and all the the third party open source libraries required.
+package containing installation scripts, web server and all the third party open source libraries required.
 * Clone the SuiteCRM Web Analytics repo: a script to build the SuiteCRM web analytics package 
 (generating the same available package via the SuiteCRM website).
 

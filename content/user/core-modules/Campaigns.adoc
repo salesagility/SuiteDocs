@@ -194,7 +194,7 @@ Once you have ensured all sections are complete you have three options:
 From the campaign's Detail view click btn:[VIEW STATUS]
 [cols="60,40", frame = "none", grid = "none"]
 |===
-|OR, from List view, click the the status icon|image:CampaignsViewStatusIcon.png[title="Status icon"]
+|OR, from List view, click the status icon|image:CampaignsViewStatusIcon.png[title="Status icon"]
 |===
 
 The campaign status page gives an overview of the campaign details as well as a graphical representation of your campaign response. This includes the number of messages sent, bounced messages, number of views, opt-outs and click-thrus. 

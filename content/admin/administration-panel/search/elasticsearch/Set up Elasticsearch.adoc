@@ -16,7 +16,7 @@ SuiteCRM requires Elasticsearch 5.6.
 Elasticsearch requires Java 8 to run, supporting only `Oracle Java` and `OpenJDK`.
 
 The quickest ways of having an Elasticsearch server up and running is by
-either using the the official Docker image, or the .deb package for Debian-based systems (like Ubuntu).
+either using the official Docker image, or the .deb package for Debian-based systems (like Ubuntu).
 
 In this guide we will assume that you are attempting to install
 Elasticsearch on an Ubuntu machine. Refer to the
