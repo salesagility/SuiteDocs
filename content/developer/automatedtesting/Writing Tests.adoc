@@ -71,7 +71,7 @@ Implementation of state checker Codeception tests, class StateCheckerPHPUnitTest
 
  - abstract class `SuiteCRM\StateCheckerCestAbstract`
 
-Implementation of state checker Codeception tests, it uses _before() and _after() methods so if you want to call these methods in the heritance test classes you should call parent::_before() and parent::_after() in it.
+Implementation of state checker Codeception tests, it uses _before() and _after() methods so if you want to call these methods in the inheritance test classes you should call parent::_before() and parent::_after() in it.
 
 ---
 
@@ -240,7 +240,7 @@ Error Collection:
     public function getErrorsClear();
 --
 
-Push/pop stack storeage:
+Push/pop stack storage:
 
 [source, php]
 --
@@ -841,10 +841,10 @@ If imap_test set, the system use fake calls by pre defined method parameters and
 - ImapHandler: Wrapper class for functions of IMAP PHP built in extension.
 - ImapHandlerFacotry: Retrieves an ImapHandlerInterface. It could be ImapHandler or ImapHandlerFake. Use `$sugar_config['imap_test'] = true` in config_override.php to set test mode on.
 - ImapHandlerFake: Wrapper class for functions of IMAP PHP built in extension. (tests only)
-- ImapHandlerFakeCalls.php: describes the fake imap functions return values for each function calls with a specific parameters in every test screnario.
+- ImapHandlerFakeCalls.php: describes the fake imap functions return values for each function calls with a specific parameters in every test scenario.
 - ImapHandlerFakeData: For tests only, it deals fake return values for fake calls on an IMAP wrapper.
 - ImapHandlerInterface: IMAP wrappers need to implements so that the system can use it as an IMAP handler.
-- ImapTestSettingsEntry.php: for an entry point to set the current test scennario in any acceptance test can call it. (entry point example: `index.php?entryPoint=setImapTestSettings&imap_test_settings=[index of array in ImapHandlerFakeCalls.php]`)
+- ImapTestSettingsEntry.php: for an entry point to set the current test scenario in any acceptance test can call it. (entry point example: `index.php?entryPoint=setImapTestSettings&imap_test_settings=[index of array in ImapHandlerFakeCalls.php]`)
 
 Example usage in Unit Tests:
 
@@ -881,7 +881,7 @@ Example unit test for imap connection (using fake imap data)
          $fake->add('ping', null, [true]);
          $fake->add('reopen', ['{:/service=}', 32768, 0], [true]);
          
-         // instanciate a fake imap handler
+         // instantiate a fake imap handler
          $imap = new ImapHandlerFake($fake);
          
          $_REQUEST['ssl'] = 1;
