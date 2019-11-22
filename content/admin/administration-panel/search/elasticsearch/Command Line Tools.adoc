@@ -9,9 +9,9 @@ weight: 5
 This enhancement is only available in SuiteCRM from version 7.11 onwards.
 {{% /notice %}}
 
-SuiteCRM's Elasticsearch integration ships with two useful command line tools powered by https://robo.li/[_Robo_].
+SuiteCRM's Elasticsearch integration ships with two useful command-line tools powered by https://robo.li/[_Robo_].
 
-These two commands allow to perform indexing and searches from the command line, making debug and integration
+These two commands allow to perform indexing and searches from the command-line, making debug and integration
 with external tools easier.
 
 {{% notice note %}}
@@ -21,7 +21,7 @@ please execute them from a shell on the same host as the SuiteCRM web server.
 
 == elastic:index
 
-The `elastic:index` command allows to run an indexing from the command line and see the step-by-step logs.
+The `elastic:index` command allows to run an indexing from the command-line and see the step-by-step logs.
 Both partial and full indexing are supported.
 
 === Usage
@@ -50,11 +50,11 @@ from the CLI. It also allows to return a JSON with additional data about the rec
 [source,bash]
 elastic:search <query> [<size> = 20] [<showJson> = false]
 
-You can use the full query syntax for for `query` argument.
+You can use the full query syntax for `query` argument.
 
 The `size` option specifies the number of results.
 
-When the `showJson` option is enabled a json will be returned for each result
+When the `showJson` option is enabled a JSON will be returned for each result
 
 === Examples
 

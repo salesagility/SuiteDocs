@@ -3,7 +3,7 @@ title: Getting Available Resources
 weight: 40
 ---
 
-:imagesdir: ./../../../../images/en/developer
+:imagesdir: /images/en/developer
 
 To see what resources and authentication methods are available, you can
 retrieve the https://swagger.io/specification/[swagger documentation]:

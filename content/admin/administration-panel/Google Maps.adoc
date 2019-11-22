@@ -53,7 +53,7 @@ To avoid repeated queries, all geocoding results are cached in the system, as de
 {{%/notice%}}
 
 To perform automatic geocoding of system addresses, it is recommended
-to configure the appropriate task for CRON by adding the URL `./index.php?module=jjwg_Maps&entry==jjwg_Maps&cron=1`
+to configure the appropriate task for CRON by adding the URL `./index.php?module=jjwg_Maps&entryPoint=jjwg_Maps&cron=1`
 to the task of the scheduler, and perform it at an appropriate time.
 
 image:SetupGeocode.png[Automatic geocoding setup in the Scheduler]

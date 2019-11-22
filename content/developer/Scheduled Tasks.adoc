@@ -3,7 +3,7 @@ weight: 13
 title: "Scheduled Tasks"
 ---
 
-:imagesdir: ./../../images/en/developer
+:imagesdir: /images/en/developer
 
 = 13. Scheduled Tasks
 
@@ -302,7 +302,7 @@ for more information on how job failures can be handled.
 
 With Scheduled tasks and jobs running in the background it can sometimes
 be difficult to determine what is going on when things go wrong. If you
-are debugging a scheduled task the the scheduled task page is a good
+are debugging a scheduled task, the scheduled task page is a good
 place to start. For both scheduled tasks and job queue tasks you can
 also check the job_queue table. For example, in MySQL we can check the
 last five scheduled jobs:

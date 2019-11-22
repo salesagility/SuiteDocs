@@ -5,7 +5,7 @@ Weight: 240
 
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/user
+:imagesdir: /images/en/user
 
 :toc:
 :toclevels: 4
@@ -88,7 +88,7 @@ and other notes to clarify what the current Workflow is all about.
 
 Once set up, you can add conditions to a workflow process using the
 conditions panel. This allows you to specify restrictive criteria so that only the records matching 
-all these conditions will be affected by the Worklow's Acions.
+all these conditions will be affected by the Workflow's Actions.
 
 image:107Adding_conditions.png[title="Add Condition"]
 
@@ -314,7 +314,7 @@ accounts who are customers to a Target-List when the record is created
 or modified. Set Up
 
 1.  Start by navigating to the Workflow module and clicking *'Create
-Workflow'* from the the action bar.
+Workflow'* from the action bar.
 2.  Give your workflow a Name such as 'Populate Target List'.
 3.  Select *Accounts* as the Workflow Module.
 4.  Ensure *Repeated Runs* is NOT selected and the *Status* is *Active* (this
@@ -359,7 +359,7 @@ the assigned user and then a particular manger user when an open Case
 has not been updated/modified within two days. Set Up
 
 1.  Start by navigating to the Workflow module and clicking *'Create
-Workflow'* from the the action bar.
+Workflow'* from the action bar.
 2.  Give your workflow a Name such as 'Case Escalation'.
 3.  Select Cases as the Workflow Module.
 4.  Ensure Repeated Runs is NOT selected and the Status is Active (This
@@ -438,7 +438,7 @@ system.
 ==== Set Up
 
 1.  Start by navigating to the Workflow module and clicking *'Create
-Workflow'* from the the action bar.
+Workflow'* from the action bar.
 2.  Give your workflow a Name such as 'Web Lead Assignment and Follow
 Up'.
 3.  Select Leads as the Workflow Module.
