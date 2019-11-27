@@ -46,7 +46,7 @@ Drag and drop modules between the columns to enable/disable AJAX.
 image:SystemSettings2.png[title = "System Settings"]
 
 === Proxy Settings
-Configure Click-To-Call settings here.
+Select the *Use Proxy server?* checkbox to configure proxy server address and authentication settings.
 
 === Google Authentication
 This is where you upload the JSON credential file for Google Calendar Sync. +
