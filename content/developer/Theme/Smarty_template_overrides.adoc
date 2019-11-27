@@ -23,7 +23,7 @@ You can then edit the new file with the customisation's you desire. Testing is s
 the themes in your user profile.
 
 {{% notice info %}}
-If you are using PhpStorm you can simply copy `default.tpl`, select the templates folder and paste the `default.tpl`. In the dialog to confirm the copy. simple add the the 'themes/<theme name>' prefix to the location. PhpStorm will take care of the folder structure for you.
+If you are using PhpStorm you can simply copy `default.tpl`, select the templates folder and paste the `default.tpl`. In the dialog to confirm the copy. simple add the 'themes/<theme name>' prefix to the location. PhpStorm will take care of the folder structure for you.
 {{% /notice %}}
 
 ==== How to Import Other Smarty Templates

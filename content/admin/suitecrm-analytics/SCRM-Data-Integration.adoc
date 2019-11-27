@@ -26,7 +26,7 @@ SuiteCRM Data Integration requires the following pre-requisites installed on you
 There are two ways of downloading the SuiteCRM Data Integration.
 
 * https://suitecrm.com/resources/suitecrm-analytics-tool[Download from SuiteCRM website^]: a pre-built 
-package containing installation scripts, web server and all the the third party open source libraries required.
+package containing installation scripts, web server and all the third party open source libraries required.
 * Clone the SuiteCRM Data Integration repo: a script to build the SuiteCRM data integration package 
 (generating the same available package via the SuiteCRM website).
 
