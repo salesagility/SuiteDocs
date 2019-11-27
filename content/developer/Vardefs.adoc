@@ -321,7 +321,7 @@ Vardefs can be customised by adding a file into
 
 .Example 4.5: Custom vardef location
 [source,php]
-custom/Extension/modules/<TheModule>/Ext/SomeFile.php
+custom/Extension/modules/<TheModule>/Ext/Vardefs/SomeFile.php
 
 
 
@@ -334,6 +334,10 @@ $dictionary["TheModule"]["fields"]["some_field"]['type'] = 'int';
 
 
 == Frontend
+
+{{% notice info %}}
+This section applies only to SuiteCRM versions 7.11 and newer.
+{{% /notice %}}
 
 When developing some complex JavaScript functionality is very useful to have module vardefs definitions or custom data in the SUGAR global variable so you can read it from JavaScript.
 

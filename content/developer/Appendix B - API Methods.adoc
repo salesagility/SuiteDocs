@@ -845,7 +845,7 @@ No arguments.
 |Name |Type |Desc
 |flavor |string |The SugarCRM flavor. For SuiteCRM will always be ‘CE’.
 
-|version |string |The SugarCRM version. Note this this is distinct from
+|version |string |The SugarCRM version. Note that this is distinct from
 the SuiteCRM version
 
 |gmt_time |string |The server time in UTC.
