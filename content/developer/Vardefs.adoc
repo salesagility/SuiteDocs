@@ -321,7 +321,7 @@ Vardefs can be customised by adding a file into
 
 .Example 4.5: Custom vardef location
 [source,php]
-custom/Extension/modules/<TheModule>/Ext/SomeFile.php
+custom/Extension/modules/<TheModule>/Ext/Vardefs/SomeFile.php
 
 
 
