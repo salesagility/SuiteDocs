@@ -32,8 +32,6 @@ title: "SuiteCRM Directory Structure"
   Stores relationship metadata for the various stock SuiteCRM modules.
   This should not be confused with module metadata which contains
   information on view, dashlet and search definitions.
-`mobile`::
-  Stores code for the http://www.quickcrm.fr[QuickCRM] mobile app.
 `ModuleInstall`::
   Code for the module installer.
 `modules`::
