@@ -15,7 +15,7 @@ timeout = 37000
   issueURL    = "https://github.com/salesagility/SuiteDocs/issues/new?"
   title       = "Documentation for SuiteCRM"
   description = "User, Developer, Administrator and Community Guides for SuiteCRM"
-  images      = ["suitecrm-logo.png"]
+  #images      = ["suitecrm-logo.png"]
   author      = "SalesAgility"
   showVisitedLinks = true
   themeVariant = "suitecrm"
@@ -26,6 +26,7 @@ section = [ "HTML", "RSS"]
 
 [Languages]
 [Languages.en]
+# the following site title appears as PageTitle :: SiteTitle on every page; it will be the tab name on the browser
 title = "SuiteCRM Documentation"
 #title = "Docs"
 weight = 1
