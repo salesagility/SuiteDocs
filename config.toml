@@ -10,11 +10,13 @@ enableGitInfo = true
 timeout = 37000
 
 [params]
-  GitHubRepo = "https://github.com/salesagility/SuiteDocs/"
-  editURL =  "https://github.com/salesagility/SuiteDocs/edit/master/content/"
-  issueURL = "https://github.com/salesagility/SuiteDocs/issues/new?"
-  description = "Documentation for SuiteCRM"
-  author = "SalesAgility"
+  GitHubRepo  = "https://github.com/salesagility/SuiteDocs/"
+  editURL     = "https://github.com/salesagility/SuiteDocs/edit/master/content/"
+  issueURL    = "https://github.com/salesagility/SuiteDocs/issues/new?"
+  title       = "Documentation for SuiteCRM"
+  description = "User, Developer, Administrator and Community Guides for SuiteCRM"
+  images      = ["static/images/suitecrm-logo.png"]
+  author      = "SalesAgility"
   showVisitedLinks = true
   themeVariant = "suitecrm"
 
