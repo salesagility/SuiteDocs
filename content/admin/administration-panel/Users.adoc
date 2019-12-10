@@ -144,6 +144,12 @@ theme. These settings can be configured by the user.
 Please see the link:../../../user/modules/themes[user Themes documentation] 
 for more information on these settings.
 
+===== Show collapsed subpanel hint
+
+If this feature is enabled, collapsed subpanels throughout the application displays a count of the related records within the subpanel.
+
+image:ShowCollapsedHint.png[User - Show collapsed subpanel hint]
+
 == Password Management
 
 From the *Admin* panel, select *Password Management* to open the settings page.
