@@ -1,0 +1,296 @@
+---
+Title: Gestão de Registos
+Weight: 55
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+:toc: 
+
+
+= Gestão de Registos
+
+Já abordámos as várias vistas que pode utilizar, vamos agora abordar a getão de
+registos. Nesta secção iremos mostrar as diversas áreas da gestão de registos
+para que possa guardar e gerir de maneira eficiente os dados dos seus clientes.
+
+== Criar Registos
+
+Pode criar registos em várias áreas da Interface. A seguir mostram-se os pontos
+de criação de registos.
+
+image:43Create_record1.png[title="Criação de Registos 1"]
+
+image:44Create_record2.png[title="Criação de Registos 2"]
+
+image:45Create_record_3.png[title="Criação de Registos 3"]
+
+Ao clicar num destes botões de criação, será redireccionado para o formulário de
+criação de registo. Este é na prática a link:../views/[Vista de Edição] que já
+antes foi apresentada.Esta vista permite preencher todos os campos necessários
+ao registo. De notar que os campos marcados com um asterisco vermelho `*` são
+campos obrigatórios. É feita uma validação para garantir que os dados guardados
+no CRM são válidos.
+
+image:46Create_contact.png[title="Criação de Registo"]
+
+Depois de preenchido o formulário, pode guardar o registo, criando um novo
+registo no módulo correspondente do CRM. Depois de guardar, ser-lhe-á mostrada a
+Vista de Detalhe do registo que acabou de criar.
+
+== Alterar Registos
+
+Pode iniciar o processo de alteração de registos a partir de diversos pontos da
+Interface. Em seguida mostram-se esses pontos.
+
+image:47Edit_contact.png[title="Alteração de Registos 1"]
+
+image:48Edit_contact.png[title="Alteração de Registos 2"]
+
+Após clicar no botão btn:[Editar] (ou no ícone do lápis), ser-lhe-á apresentada
+a Vista de Edição. Nesta vista poderá alterar ou definir os valores dos campos
+que desejar. Campos com um asterisco vermelho `*` são campos de preenchimento
+obrigatório. É faita alguma validação para que não possam ser guardados registos
+com valores inválildos em campos obrigatórios.
+
+Depois de preenchido o formulário, pode guardar o registo, actualilzando o
+registo no módulo correspondente do CRM. Depois de guardar, ser-lhe-á mostrada a
+Vista de Detalhe do registo que acabou de alterar.
+
+== Eliminar Registo
+
+Pode eliminar registos a partir da Vista de Lista e da Vista de Detalhe. Em
+seguida mostram-se as capturas de écran para as duas situações:
+
+=== Eliminar registo a partir da Vista de Detalhe
+
+Para eliminar um registo a aprtir da respectiva Vista de Detalhe, basta escolher
+a opção *Eliminar* do menu.
+
+image:49Delete_contact.png[title="Eliminar Registos"]
+
+Ao clicar nesta opção, irá ver um diálogo de confirmação para confirmar que
+deseja realmente eliminar este registo.
+
+image:50Delete_contact.png[title="Confirmar Eliminação"]
+
+Pode clicar em *Cancelar* ou *OK*. Se clicar em Cancelar, voltará à Vista de
+Detalhe e não elimina o registo. Se clicar em OK, elimina o registo e será
+redireccionado para a Vista de Lista do módulo.
+
+=== List View Deletion method
+
+Para eliminar registos a partir da Vista de lista, pode selecionar registos
+através das caixas de selecção à esquerda. É possível selecionar um só registo
+ou usar as opções 'Selecionar esta Página' ou 'Selecionar Todos', para
+selecionar todos os registos da página ou todos os registos do módulo.
+
+image:51ListView_deletion.png[title="Método de eliminação a partir da Vista de
+Lista"]
+
+Depois de selecionar os registos que quer apagar, pode clicar no botão
+*'Apagar'*. Quando clicar neste botão, irá ver um popup que indica o número de
+registos a eliminar e uma confirmação para executar a ação.
+
+image:image59.png[title="Confirmar Eliminação"]
+
+Pode clicar em em *Cancelar* ou em *OK*. Clicar em Cancelar voltará à Vista de
+Detalhe e não o irá apagar. Clicar em OK irá executar a ação e eliminar o
+registo. Se escolher a eliminação do registo, este será apagado e será
+redireccionado para a vista de Lista do módulo.
+
+== Actualização de registos em massa
+
+Pode actualizar registos em massa a partir da Vista de Lista de qualquer módulo,
+desde que esteja autorizado para tal. Para actualizar registos em massa, tem que
+selecionar os registos na Vista de Lista e escolher a opção 'Actualização em
+Massa' no menu pendente (junto ao link para apagar).
+
+image:52Mass_update_records.png[title="Actualização de registos em massa"]
+
+Ao clicar na opção de actualização em massa ser-lhe-á mostrado, a seguir à Vista
+de Lista, uma lista dos campos disponíveis para serem actualizados em massa.
+
+image:53Mass_update.png[title="Actualização em Massa"]
+
+Depois de ter definido os valores nos campos que deseja actualizar, pode clicar
+em btn:[Actualizar] ou em btn:[Cancelar]. Cancelar a actualilzação em massa irá
+descartar quaisquer alterações e restornar à Vista de Lista do módulo. Clicar em
+Actualizar irá actualizar todos os registos seleccionados com os valores que
+indicou.
+
+image:54Mass_update.png[title="Actualização em Massa"]
+
+== Junção de Registos
+
+Pode juntar registos a partir da Vista de Lista de qualquer módulo, desde que
+tenha as autorizações necessárias, ou através da Vista de Detalhe, seguindo o
+processo de 'Encontrar Duplicados'.
+
+Para juntar registos, deve seleccionar os registos na Vista de Lista e depois
+seleccionar a opção *'Juntar'* do menu pendente (junto ao link de eliminação).
+
+image:55Merge.png[title="Juntar"]
+
+Após clicar na opção *'Juntar'*, ser-lhe-á apresentado o registo principal e os
+possíveis duplicados que poderá querer juntar a esse registo.
+
+image:182Merging_records.png["Écrã de juntar"]
+
+Pode escolher o registo principal com o botão *'Definir como principal'* do lado
+direito da vista. Pode mover dados dos registos duplicados para o principal com
+os botões btn:[<<]. Neste exemplo, movemos o Primeiro Nome e o Apelido do
+registo duplicado para o principal.
+
+image:183Merging_records.png[title="Juntar campos"]
+
+Depois de fazer as alterações no écran de Juntar, pode clicar em btn:[Guardar
+junção] ou em btn:[Cancelar]. Clicar em Cancelar irá descartar as alterações e
+voltar à Vista de Lista para esse módulo. Clicar em 'Guardar junção' irá
+prosseguir com o processo de junção e irá informar que o registo duplicado irá
+ser eliminado.
+
+image:184Save_merge.png[title="Confirmar junção"]
+
+Pode clicar em *'OK'* ou *'Cancelar'*. Clicar em Cancelar irá descartar as
+alterações de junção e voltar à Vista de lista. Clicar em 'OK' irá guardar as
+alterações e redireccioná-lo para a Vista de Detalhe do registo final.
+
+image:185Saved_merge.png[title="Junção terminada"]
+
+Como se pode ver neste exemplo, o processo foi completado com sucesso. Os campos
+Apelido e Primeiro Nome foram actualizados e todos os outros dados foram
+mantidos como estavam.
+
+== Importing Records
+
+It is possible to import data easily by using SuiteCRM's easy-to-use
+User Import Wizard. There are many hints and tips as you progress
+through the Import Wizard on the requirements of importing data and for
+further steps in the Wizard.
+
+=== User Import Wizard features
+
+There are many features of the Import Wizard which make it easier for
+you to map data to CRM fields and also for future imports. These are:
+
+* *Sample .csv file for easier import of data* — Use the available sample
+.csv file as a template for import of files
+* *Retain settings from previous imports* — Save/preserve import file
+properties, mappings, and duplicate check indexes from previous imports
+for ease of current data import process
+* *Ability to accept both database name and display labels of drop-down
+and multi-select field items* — Field labels as well as database names
+are accepted and mapped during import, but only the field labels are
+displayed for ease of use
+* *Ability to accept both usernames and full names in user fields during
+import and export of data* — Full names of Users displayed for Assigned
+To and other User-related fields in exported .csv file for easier
+identification of user records
+* *Ability to auto-detect file properties in import file* — Upload import
+files without specifying file properties such as tab, comma, double and
+single quotes, date and time formats, making the process simpler and
+faster
+* *Ability to import contacts from external sources such as Google* —
+Ability to import Google Contacts for person-type modules such as
+Contacts, Leads, and Targets, relate SuiteCRM records to Google
+Contacts, and communicate with Google Contacts from within SuiteCRM
+
+=== Steps to Import data
+
+{{% notice note %}}
+Always import the Account data first and then import Contacts and
+other data related to Accounts (such as Meetings, Calls, Notes) to
+automatically create a relationship between the imported Account and
+Contacts and activity records related to the Account.
+{{% /notice %}}
+
+Follow the steps listed below to import data for a module, such as
+Accounts:
+
+.  Select Import from the Actions drop-down list in the module menu
+options.
+.  This displays Step 1 of the import process with a link to a sample
+Import File Template.
+.  Upload your import file to this page using the Browse button in the
+Select File field or,
+.  Optionally, download the available template, delete the existing
+data, input your data and upload to this page using the Browse button.
+.  Click Next.
+.  This displays Step 2 (Confirm Import File Properties).
+.  Auto-detection of imported data takes place at this step.
+.  Click View Import File Properties button to verify and change the
+data as needed, if you notice irregularities in the Confirm Import File
+Properties table.
+.  Click the Hide Import File Properties to collapse the panel.
+. Click Next.
+. This displays Step 3: Confirm Field Mappings.
+. The table in this page displays all the fields in the module that
+can be mapped to the data in the import file. If the file contains a
+header row, the columns in the file map to matching fields.
+. Check for correct mapping and modify if necessary.
+. Map to all of the required fields (indicated by an asterisk).
+. Click Next.
+. This displays Step 4: Check for Possible Duplicates.
+. Follow the instructions on this page.
+. Step 4 also provides the option of saving the current import file
+properties, mappings, and duplicate check indexes for future imports.
+. (Optionally) Save the import settings.
+. Click Import Now.
+. Click the Errors tab to check for errors in the process. Follow the
+instructions to fix problems (if any) and Click Import Again.
+. This displays Step 1 of the import process.
+. Follow all the steps in the wizard through Step 5.
+. If the import was successful, you can to view all the imported
+records at Step 5.
+. Click Undo Import if you are not satisfied with the imported
+records,
+. Or, click Import Again to import more data
+. Or, click Exit to navigate to the List View page of the module that
+you imported your records into.
+
+== Exporting Records
+
+You can export SuiteCRM records in .csv format. When you exports records
+from the CRM, you will be provided with the .csv file to download when
+the export has finished executing. You can save and open this file in
+applications such as Libre Office Calc or Microsoft Office Excel.
+
+The .csv file displays in a tabular format with columns and rows. When
+data is exported from the CRM, the record ID is included with all other
+fields that are specified in the export list for that module. You can
+then use the record ID as a reference for performing a 'Create new
+records and update existing records' import, as detailed in the
+<<Importing Records>> section of the user guide.
+
+{{% notice note %}}
+When exporting values from drop-down lists, SuiteCRM exports the
+ID associated with each option and not the display labels. For example,
+if a drop down list has options labelled High, Medium and Low with an ID
+of 1, 2 and 3 – the .csv file will show the drop down options as 1, 2 or
+3.
+{{% /notice %}}
+
+=== Steps to Export Records
+
+.  Select the records from the List View on the module's home page.
+.  Select Export from the Actions drop-down menu in the List View.
+.  To export all records listed on the page, click Select located above
+the item list and select one of the following options:
+.  This Page. To export all the records listed on the page, select this
+option.
+.  All Records. To export all records on the list (if it is more than a
+page long), select this option.
+.  This displays an Opening.csv dialog box.
+.  Select Open to open the export file in .csv format or select Save to
+Disk to save the .csv file to your local machine.
+.  Click OK to execute the operation. If you chose to open the file,
+the csv file opens in Microsoft Excel.
+.  The file contains all the fields in the module from which you are
+exporting the data.
+

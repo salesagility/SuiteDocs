@@ -1,0 +1,70 @@
+---
+Title: Edição em Linha
+Weight: 56
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Edição em Linha
+
+A edição em linha permite a alteração de valores "no local". Esta funcionalidade
+foi implementada tanto nas vistas de Lista como de Detalhe, permitindo a
+alteração rápida de valores, sem necessidade de mudar para a vista de Edição e
+reduzindo o número de clicks necessários.
+
+{{% notice note %}}
+A edição em linha pode ser activada e desactivada para as vistas de Lista e de
+Detalhe, nas definições do Sistema, pelo Administrador do Sistema.
+{{% /notice %}}
+
+image:186In-line_editing.png[title="Activar Edição em linha"]
+
+== Edição em linha na vista de Lista
+
+Pode editar o registo na vista de Lista ao clicar nos campos com um ícone de
+lápis.
+
+image:60ListView_editing.png[title="Edição em linha na Vista de Lista"]
+
+Pode clicar no ícone do lápis ou dar um duplo clique no campo para alterar o
+valor.
+
+image:61ListView_editing.png[title="Editar campo na Vista de Lista"]
+
+Após ter alterado o valor desejado, pode usar a tecla Enter ou clicar na 'marca
+de verificação'. Qualquer uma destas acções irá guardar as alterações. Se
+navegar para outra zona sem guardar as alterações, ser-lhe-á mostrada uma
+mensagem a alertar para o facto de haver alterações não guardadas.
+
+image:image71.png[image71.png,title="image71.png"]
+
+Pode clicar em *Cancelar* e continuar a alterar o valor, ou pode clicar em *OK*
+e descartar as alterações.
+
+== Edição em linha na Vista de Detalhe
+
+Como na Vista de lista, pode editar o registo ao clicar nos campos com um ícone
+de lápis.
+
+image:62DetailView_Editing.png[title="Edição em linha na Vista de Detalhe"]
+
+Pode clicar no ícone do lápis ou dar um duplo clique no campo para alterar o
+valor.
+
+image:63DetailView_editing.png[title="Editar campo na Vista de Detalhe"]
+
+Após ter alterado o valor desejado, pode usar a tecla Enter ou clicar na 'marca
+de verificação'. Qualquer uma destas acções irá guardar as alterações. Se
+navegar para outra zona sem guardar as alterações, ser-lhe-á mostrada uma
+mensagem a alertar para o facto de haver alterações não guardadas.
+
+image:image74.png[title="Aviso de alterações não guardadas"]
+
+Pode clicar em *Cancelar* e continuar a alterar o valor, ou pode clicar em *OK*
+e descartar as alterações.
+

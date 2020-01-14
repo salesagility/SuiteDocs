@@ -1,0 +1,133 @@
+---
+Title: Home Page
+Weight: 52
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Página de Entrada
+
+A página de entrada é a primeira página mostrada após a autenticação.
+Vários elementos desta página podem ser configurados, tais como 
+Dashlets (Miniaplicações), Dashboards e Barra Lateral (Sidebar).
+
+== Dashlets (Miniaplicações)
+
+Os dashlets são secções mostradas na página de entrada, configuráveis
+pelo utilizador, que podem mostrar uma olhadela rápida sobre os 
+registos e actividades logo após o login. Isto é particularmente 
+útil para as equipas de vendas e suporte, pois reduz o número de 
+cliques para aceder aos dados.
+
+Os dashlets podem ser arrastadas e reordenadas dentro da página de
+entrada. Pode acrescentar dashlets clicando na ligação 
+'Acrescentar Dashlets' na página de entrada.
+
+image:24Add_dashlets.png[title="Acrescentar Dashlets"]
+
+Clicar na ligação 'Acresecntar Dashlets' na página de entrada irá 
+mostrar o popup de "Acrescentar Dashlets" que permite escolher dos
+dashlets disponíveis para acrescentar à página de entrada.
+
+image:25Add_dashlets.png[title="Selecção de Dashlets"]
+
+Para acrescentar um dos dashlets, basta clicar na ligação do dashlet. 
+Esta acção irá acrescentar o dashlet à página de entrada do utilizador.
+O popup ficará aberto, para permitir acrescentar mais dashlets. Quando
+não quiser acrescentar mais dashlets, pode fechar o popup.
+
+image:26Dashlet.png[title="Dashlet"]
+
+Pode modificar os dashlets clicando no ícone do lápis no dashlet desejado.
+
+image:27Modify_dashlet.png[title="Modificar dashlet"]
+
+Clicar no ícone do lápis irá abrir um popup. Este popup inclui todas as
+opções configuráveis para o dashlet.
+
+image:28Configure_dashlet.png[title="Configurar dashlet"]
+
+Após ter alterado as definições no popup de configuração de dashlet, pode clicar
+em btn:[Guardar] para aplicar as novas definições, ou btn:[Cancelar] se
+pretender voltar atrás e desfazer-se das alterações introduzidas.
+
+{{% notice note %}}
+Alguns dashlets exigem que a página de entrada seja recarregada. Se tiver algum
+deles activo, será notificado.
+{{% /notice %}}
+
+== Painéis de Bordo
+
+Painéis de bordo (ou Dashboards) são uma novidade no suiteCRM. Saõ configuráveis
+por utilizador e podem ser acrescentados ou removidos de modo similar aos
+dashlets. Para acrescentar um separador para painéis de bordo, pode clicar na
+ligação 'Acrescentar Separador' na página de entrada..
+
+image:29Add_tab.png[title="Acrescentar Separador"]
+
+Ao clicar na ligação 'Acrescentar Separador' na página de entrada irá ser
+mostrada a popup para Acrescentar Separador que permite que o utilizador indique
+um nome para o separador e também quantas colunas a página. Pode optar por uma,
+duas ou três colunas.
+
+image:192Add_tab.png[title="Acrescentar Separador"]
+
+Após ter indicado os detalhes do separador pode clicar em btn:[Guardar]. Pode
+também clicar em btn:[Cancelar] para desfazer as alterações. Depois de ter
+guardado as alterações, o separador Painel de Bordo será crescentado à página de
+entrada e mostrado na lista de separadores da página. Pode, em seguida,
+acrescentar os dashlets que pretender ao seu novo Painel de Bordo.
+
+image:31New_tab.png[title="Novo separador"]
+
+Se desejar eliminar o separador de painel de bordo, pode clicar no ícone 'x'. A
+acção será alvo de confirmação e, caso confirme, o separador será removido do
+seu perfil. 
+
+{{% notice note %}}
+*Suite Dashboard*
+é o separador padrão que naõ pode ser removido. Pode, no entanto, configurar os
+dashlets que são mostrados nesse separador.
+{{% /notice %}}
+
+== Activity Stream (Mural)
+
+O Mural (Activity Stream) é um excelente método de se manter a par das
+interacções dos seus colegas com o SuiteCRM. O mural vem pré-definido para
+mostrar as actualizações relativas a Oportunidades, Contatos, Leads e
+Ocorrências. As feeds do Twitter e Facebook da sua organização podem também ser
+incluídas neste dashlet, se assim for configurado por um administrador.
+
+image:32Activity_stream.png[title="Mural"]
+
+Pode também comentar uma actualização que apareça no Mural através do botão
+Responder no lado direito do post.
+
+image:33Reply.png[title="Responder ao post"]
+
+O seus posts podem ser apagados do Mural ao clicar no botão Apagar.
+
+image:34Delet3.png[title="Apagar post"]
+
+O seu comentário irá aparcer sob o post e marcado com data e hora.
+
+O Mural é também uma ferramenta útil para mensagens instantâneas dentro da sua
+organização. É possível enviar mensagens para todos os utilizadores. Para o
+conseguir, escreva a sua mensagem e clique em btn:[Post]
+
+image:35Activity_post.png[title="Post do Mural"]
+
+Os seus colegas verão esta mensagem e terão a oportunidade de responder ao
+clicar no botão Responder, à direita do post.
+
+image:36Reply.png[title="Resposta no Mural"]
+
+A resposta aparecerá sob o seu post, também marcada com data e hora.
+
+image:37Reply_view.png[title="Resposta a post"]
+
