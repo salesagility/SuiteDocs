@@ -10,7 +10,9 @@ Weight: 140
 
 = Lawful basis
 
-{{%notice note%}}This documentation refers to *SuiteCRM 7.10.5 and later*. {{%/notice%}}
+{{%notice note%}}This documentation refers to *SuiteCRM 7.10.5 and later*. It was introduced as an optional 
+feature for those concerned with GDPR compliance in the European Union, but it is generic enough that you 
+can use it for other purposes. {{%/notice%}}
 
 *SuiteCRM 7.10.5* introduces new abilities to track the basis for which a business has permission to both store and process a users information.
 

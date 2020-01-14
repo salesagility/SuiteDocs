@@ -28,6 +28,10 @@ Once Opt In or Confirmed Opt In settings have been selected:
 
 * Campaign emails will NOT be sent to email addresses which are not marked as *Opt In* or *Confirmed Opt In*, depending on which settings you choose here.
  
+{{%notice note%}}This was introduced as an optional feature for those concerned with GDPR compliance 
+in the European Union, but it is generic enough that you can use it for other purposes. If you don't need 
+confirmed opt-in (also known as double opt-in) at all, just leave your setting as `Opt in`.{{%/notice%}}
+
 == Opt In Email Settings
 
 To configure your Opt In settings, open the *Admin* panel and select *Email Settings*. Opt In settings can be found on the *Email Options* panel.
