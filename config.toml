@@ -10,11 +10,13 @@ enableGitInfo = true
 timeout = 37000
 
 [params]
-  GitHubRepo = "https://github.com/salesagility/SuiteDocs/"
-  editURL =  "https://github.com/salesagility/SuiteDocs/edit/master/content/"
-  issueURL = "https://github.com/salesagility/SuiteDocs/issues/new?"
-  description = "Documentation for SuiteCRM"
-  author = "SalesAgility"
+  GitHubRepo  = "https://github.com/salesagility/SuiteDocs/"
+  editURL     = "https://github.com/salesagility/SuiteDocs/edit/master/content/"
+  issueURL    = "https://github.com/salesagility/SuiteDocs/issues/new?"
+  title       = "Documentation for SuiteCRM"
+  description = "All you need to know to successfully use SuiteCRM as an End-User, Developer or Administrator, plus Community Guidelines and Technical Blog."
+  images      = ["https://docs.suitecrm.com/images/logo-square.png"]
+  author      = "SalesAgility"
   showVisitedLinks = true
   themeVariant = "suitecrm"
 
@@ -24,8 +26,9 @@ section = [ "HTML", "RSS"]
 
 [Languages]
 [Languages.en]
-#title = "SuiteCRM Documentation"
-title = "Docs"
+# the following site title appears as PageTitle :: SiteTitle on every page; it will be the tab name on the browser
+title = "SuiteCRM Documentation"
+#title = "Docs"
 weight = 1
 languageName = "English"
 
