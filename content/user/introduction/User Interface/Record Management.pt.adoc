@@ -167,130 +167,130 @@ Como se pode ver neste exemplo, o processo foi completado com sucesso. Os campos
 Apelido e Primeiro Nome foram actualizados e todos os outros dados foram
 mantidos como estavam.
 
-== Importing Records
+== Importação de Registos
 
-It is possible to import data easily by using SuiteCRM's easy-to-use
-User Import Wizard. There are many hints and tips as you progress
-through the Import Wizard on the requirements of importing data and for
-further steps in the Wizard.
+É possível importar facilmente dados através do Wizard de importação do
+SuiteCRM. Há bastantes ajudas ao longo do processo de importação.
 
-=== User Import Wizard features
+=== Funcionalidades do Wizard de Importação
 
-There are many features of the Import Wizard which make it easier for
-you to map data to CRM fields and also for future imports. These are:
+O wizard de importação tem muitas funcionalidades para tornar mais simples o
+mapeamento de dados para os campos do CRM. Estas são:
 
-* *Sample .csv file for easier import of data* — Use the available sample
-.csv file as a template for import of files
-* *Retain settings from previous imports* — Save/preserve import file
-properties, mappings, and duplicate check indexes from previous imports
-for ease of current data import process
-* *Ability to accept both database name and display labels of drop-down
-and multi-select field items* — Field labels as well as database names
-are accepted and mapped during import, but only the field labels are
-displayed for ease of use
-* *Ability to accept both usernames and full names in user fields during
-import and export of data* — Full names of Users displayed for Assigned
-To and other User-related fields in exported .csv file for easier
-identification of user records
-* *Ability to auto-detect file properties in import file* — Upload import
-files without specifying file properties such as tab, comma, double and
-single quotes, date and time formats, making the process simpler and
-faster
-* *Ability to import contacts from external sources such as Google* —
-Ability to import Google Contacts for person-type modules such as
-Contacts, Leads, and Targets, relate SuiteCRM records to Google
-Contacts, and communicate with Google Contacts from within SuiteCRM
+* *Ficheiro .csv de amostra para facilitar a importação de dados* — Use este
+ficheiro de amostra como modelo para a importação de dados
+* *Reter definições de importações anteriores* — Guardar/manter as propriedades
+de importação, mapeamentos e validação de duplicados de outras importações já
+realizadas, para facilitar o processo de importação
+* *Capacidade de aceitar tanto nomes de campos da base de dados como etiquetas
+apresentadas na interface de campos de listas e multi-selecção* — Aceitar tanto
+os nomes que são usados na base de dados como as etiquetas dos campos no
+processo de importação, mas apenas as etiquetas serão mostradas
+* *Capacidade de aceitar tanto nomes de utilizador como nomes completos em
+campos de utilizador durate a importação ou exportação de dados* — Permite, nos
+campos que relacionem utilizadores com os registos (e.g., Atribuído a), incluir
+nomes de utilizador ou Nomes Completos no ficheiro .csv para mais facilmente
+identificar registos relacionados
+* *Capacidade de auto-detecção de propriedades dos ficheiros de importação* —
+Carregar ficheiros para importação sem especificar propriedades como ta,
+vírgula, aspas simples ou duplas, formatos de data e hora, tornando o processo
+mais simples e rápido
+* *Capacidade de importação de contactos a partir de fontes externas como a
+Google* — Capacidade de importar contactos da Google para módulos do tipo Pessoa
+como Contactos, Leads e Targets, relacionar registos do SuiteCRM com contactos
+da Google e comunicar com contactos da Google a partir do SuiteCRM
 
-=== Steps to Import data
+=== Passos para importar dados
 
-{{% notice note %}}
-Always import the Account data first and then import Contacts and
-other data related to Accounts (such as Meetings, Calls, Notes) to
-automatically create a relationship between the imported Account and
-Contacts and activity records related to the Account.
+{{% notice nota %}}
+Importar sempre os dados de Entidades em primeiro lugar e só depois os dados de
+Contactos e outros relacionados com Entidades (tais como Reuniões, Chamadas,
+Notas) para poder criar automaticamente os relacionamentos entre os registos de
+Entidades importados e os outros relacionados com as mesmas.
 {{% /notice %}}
 
-Follow the steps listed below to import data for a module, such as
-Accounts:
+Seguir os passo enunciados a seguir para importar dados para um módulo, tal como
+Entidades:
 
-.  Select Import from the Actions drop-down list in the module menu
-options.
-.  This displays Step 1 of the import process with a link to a sample
-Import File Template.
-.  Upload your import file to this page using the Browse button in the
-Select File field or,
-.  Optionally, download the available template, delete the existing
-data, input your data and upload to this page using the Browse button.
-.  Click Next.
-.  This displays Step 2 (Confirm Import File Properties).
-.  Auto-detection of imported data takes place at this step.
-.  Click View Import File Properties button to verify and change the
-data as needed, if you notice irregularities in the Confirm Import File
-Properties table.
-.  Click the Hide Import File Properties to collapse the panel.
-. Click Next.
-. This displays Step 3: Confirm Field Mappings.
-. The table in this page displays all the fields in the module that
-can be mapped to the data in the import file. If the file contains a
-header row, the columns in the file map to matching fields.
-. Check for correct mapping and modify if necessary.
-. Map to all of the required fields (indicated by an asterisk).
-. Click Next.
-. This displays Step 4: Check for Possible Duplicates.
-. Follow the instructions on this page.
-. Step 4 also provides the option of saving the current import file
-properties, mappings, and duplicate check indexes for future imports.
-. (Optionally) Save the import settings.
-. Click Import Now.
-. Click the Errors tab to check for errors in the process. Follow the
-instructions to fix problems (if any) and Click Import Again.
-. This displays Step 1 of the import process.
-. Follow all the steps in the wizard through Step 5.
-. If the import was successful, you can to view all the imported
-records at Step 5.
-. Click Undo Import if you are not satisfied with the imported
-records,
-. Or, click Import Again to import more data
-. Or, click Exit to navigate to the List View page of the module that
-you imported your records into.
+.  Seleccionar Importar do menu de ações do módulo.
+.  É mostrado o Passo 1 do processo de importação com um link para um ficheiro
+de exemplo.
+.  Carregue o seu ficheiro de dados a importar para esta página através do botão
+Navegar no campo de Selecionar Ficheiro ou,
+.  Opcionalmente, descarregue o modelo disponível, apague os dados desse
+ficheiro, insira os seus dados e carregue este ficheiro modificado para esta
+página através do botão Navegar.
+.  Clique em Seguinte.
+.  É mostrado o Passo 2 (Confirmar Propriedades do Ficheiro de Importação).
+.  A detecção automática dos dados importados é feita neste passo.
+.  Clique em Ver Propriedades do Ficheiro de Importação para verificar e alterar
+os dados conforme necessário, se notar alguma irregularidade na tabela de
+Confirmação de Propriedades do Ficheiro de Importação.
+.  Clique em Esconder Propriedades do Ficheiro de Importação para esconder o
+painel.
+. Clique em Seguinte.
+. É mostrado o Passo 3: Confirmar Mapeamento de Campos.
+. A tabela nesta página mostra todos os campos no módulo que podem ser mapeados
+para os dados do ficheiro de importação. Se o ficheiro contiver uma linha de
+cabeçalho, as colunas do ficheiro são mapeadas para os campos correspondentes.
+. Verifique se o mapeamento está correcto e modifique-o se necessário.
+. Mapeie todos os campos obrigatórios (indicados por um asterisco).
+. Clique em Seguinte.
+. É mostrado o Passo 4: Verificar possíveis duplicados.
+. Siga as instruções nesta página.
+. O passo 4 inclui também a opção de guardar as propriedades, mapeamentos e
+verificação de duplicação para importações futuras.
+. (Opcionalmente) Guardar as definições de importação.
+. Clique em Importar Agora.
+. Clique no separador Erros para verificar se houve erros no processo. Siga as
+instruções para resolver os problemas (se algum) e clique em Importar Novamente.
+. Se clicar em Importar Novamente, é mostrado novamente o Passo 1 do processo de
+importação.
+. Siga todos os passos no wizard até ao Passo 5.
+. Se a importação foi bem sucedida, pode ver todos os registos importados no
+Passo 5.
+. Clique em Desfazer Importação se não estiver satisfeito com os resultados da
+importação,
+. Ou, clique em Importar Novamente para importar mais dados
+. Ou, clique em Sair para ir para a Vista de Lista do módulo para onde acabou de
+importar os seus dados.
 
-== Exporting Records
+== Exportar Registos
 
-You can export SuiteCRM records in .csv format. When you exports records
-from the CRM, you will be provided with the .csv file to download when
-the export has finished executing. You can save and open this file in
-applications such as Libre Office Calc or Microsoft Office Excel.
+Pode exportar registos do SuiteCRM no formato .csv. Quando exporta registos a
+partir do CRM, ser-lhe-á apresentado um ficheiro .csv, no final do processo, com
+os registos exportados, para que o possa descarregar. Pode guardar este ficheiro
+e abri-lo em aplicações como o Libre Office Calc ou Microsoft Office Excel.
 
-The .csv file displays in a tabular format with columns and rows. When
-data is exported from the CRM, the record ID is included with all other
-fields that are specified in the export list for that module. You can
-then use the record ID as a reference for performing a 'Create new
-records and update existing records' import, as detailed in the
-<<Importing Records>> section of the user guide.
+O ficheiro .csv mostra os dados em formato tabular com colunas e linhas. Quando
+os dados são exportados do CRM, o ID do registo é incluído juntamente com os
+restantes campos escolhidos na lista de exportação. Pode depois usar o ID do
+registo como referência para executar uma importação do tipo 'Criar novos
+registos e actualizar registos existentes', como detalhado na secção <<Importar
+Registos>> do guia de utilizador.
 
-{{% notice note %}}
-When exporting values from drop-down lists, SuiteCRM exports the
-ID associated with each option and not the display labels. For example,
-if a drop down list has options labelled High, Medium and Low with an ID
-of 1, 2 and 3 – the .csv file will show the drop down options as 1, 2 or
-3.
+{{% notice nota %}}
+Ao exportar valores a partir de listas de opções, o SuiteCRM exporta o ID
+associado a cada opção e não os valores que são mostrados. Por exemplo, se uma
+lista de opções tem opções etiquetadas Alta, Média e Baixa com ID de 1, 2 e 3, o
+ficheiro .csv irá mostrar as opções 1, 2 e 3.
 {{% /notice %}}
 
-=== Steps to Export Records
+=== Passos para Exportar Dados
 
-.  Select the records from the List View on the module's home page.
-.  Select Export from the Actions drop-down menu in the List View.
-.  To export all records listed on the page, click Select located above
-the item list and select one of the following options:
-.  This Page. To export all the records listed on the page, select this
-option.
-.  All Records. To export all records on the list (if it is more than a
-page long), select this option.
-.  This displays an Opening.csv dialog box.
-.  Select Open to open the export file in .csv format or select Save to
-Disk to save the .csv file to your local machine.
-.  Click OK to execute the operation. If you chose to open the file,
-the csv file opens in Microsoft Excel.
-.  The file contains all the fields in the module from which you are
-exporting the data.
+.  Escolher os registos da Vista de Lista na página principal do módulo.
+.  Escolher Exportar do menu de Acções na Vista de Lista.
+.  Para exportar todos os registos listados na página, clicar em Selecionar
+acima da lista e escoler uma das seguintes opções:
+.  Esta Página. Para exportar todos os registos que estão a ser mostrados nesta
+página.
+.  Todos os Registos. Para exportar todos os registos na lista, mesmo que ocupe
+mais que uma página.
+.  É mostrada uma caixa de diálogo Abrir.csv.
+.  Escolher Abrir para abrir o fichero de exportação em formato .csv ou escolher
+Guardar no Disco para guardar o ficheiro .csv na sua máquina.
+.  Clique em OK para executar a operação. Se escolher abrir o ficheiro, o csv
+pode ser aberto no Microsoft Excel.
+.  O ficheiro contém todos os campos do módulo a partir do qual está a exportar
+os dados.
 
