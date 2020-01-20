@@ -48,6 +48,17 @@ Now update its value with generating a new one using `base64_encode(random_bytes
 
 If you need more information about this issue, https://oauth2.thephpleague.com/v5-security-improvements/[please visit this page].
 
+=== Verify if rewrite module is installed and activated
+It is necessary to verify if '**mod_rewrite**' module of Apache server is enabled. Make sure to **enable** and activate it. This process depends on Operating System, installed versions of software etc. Please check this stackoverflow's answers https://stackoverflow.com/questions/7337724/how-to-check-whether-mod-rewrite-is-enable-on-server/10891317#10891317/[1], https://stackoverflow.com/questions/18310183/how-to-check-for-mod-rewrite-on-php-cgi/27589801#27589801/[2] to get directions how to enable the module.
+
+Also, for the SuiteCRM location (root{/var/www} or subdir{/var/www/subdir}) one should change **AllowOverride** directive inside Directory directive from **None** to **All** to assure that rewrite rules of .htaccess work:
+[source,apache]
+<Directory /var/www/subdir>
+	Options Indexes FollowSymLinks
+	AllowOverride All
+	Require all granted
+</Directory>
+
 == Authentication
 
 SuiteCRM Api allows two kind of grant types:
