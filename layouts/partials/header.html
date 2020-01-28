@@ -109,7 +109,7 @@
           {{$parent := .page.Parent }}
           {{ if $parent }}
             {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
-            {{ template "breadcrumb" dict "page" $parent "value" $value }} 
+            {{ template "breadcrumbz" dict "page" $parent "value" $value }} 
           {{else}}
             {{(replace .value .page.Title "<i class='fas fa-home'></i>")|safeHTML}}
           {{end}}
