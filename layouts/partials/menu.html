@@ -206,7 +206,7 @@
         <ul>
           {{ range sort . "Weight"}}
               <li class="" role=""> 
-                  {{.Pre}}<a class="padding" href="{{.RelPermalink | absLangURL }}">{{safeHTML .Name}}</a>{{.Post}}
+                  {{.Pre}}<a class="padding" href="{{.URL | absLangURL }}">{{safeHTML .Name}}</a>{{.Post}}
               </li>
           {{end}}
         </ul>
