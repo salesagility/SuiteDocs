@@ -51,14 +51,14 @@
                   {{ $Site := .Site }}
                   {{with $File.Path }}
                   <div id="top-github-link" style="margin-left: 5px;">
-                    <a class="github-link" href="{{ $Site.Params.issueURL }}title=Issue%20about%20Page%20{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}&labels=page-specific&assignee=pgorod" target="blank">
+                    <a class="github-link"  title='{{T "Issue-for-page"}}' href="{{ $Site.Params.issueURL }}title=Issue%20about%20Page%20{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}&labels=page-specific&assignee=pgorod" target="blank">
                       <i class="fas fa-exclamation-circle"></i>
-                      {{ T "Issue-for-page" }}
+                      {{ T "Issue-for-page-short" }}
                     </a>
                   </div>
                   <div id="top-github-link">
                     <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                      <i class="fas fa-code-fork"></i>
+                      <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
                     </a>
                   </div>

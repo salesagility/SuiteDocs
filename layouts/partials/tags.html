@@ -1,5 +1,5 @@
 {{ if .Params.tags }}
-   | <i class='fa fa-tags'> </i>
+   | <i class='fas fa-tags'> </i>
   {{ range $index, $category := .Params.tags }}
        {{ if $index }}, {{ end }}
        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">
