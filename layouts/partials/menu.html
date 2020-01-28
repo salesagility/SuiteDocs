@@ -238,11 +238,11 @@
     {{safeHTML .Params.head}}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
+        {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
         ">
       <a href="{{.RelPermalink}}">
-          {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
+          {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
             <i class="fas fa-check read-icon"></i>
           {{ end }}
@@ -250,11 +250,11 @@
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{ if ne $numberOfPages 0 }}
         <ul>
-          {{ .Scratch.Set "pages" .Pages }}
+          {{ $currentNode.Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
-            {{ .Scratch.Set "pages" (.Pages | union .Sections) }}
+            {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
           {{end}}
-          {{ $pages := (.Scratch.Get "pages") }}
+          {{ $pages := ($currentNode.Scratch.Get "pages") }}
           
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{ range $pages.ByTitle }}
@@ -276,9 +276,9 @@
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
-      <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
+      <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}">
         <a href="{{ .RelPermalink}}">
-        {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
+        {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
         {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
         </a>
     </li>
@@ -286,4 +286,5 @@
   {{end}}
  {{ end }}
 {{ end }}
+
 
