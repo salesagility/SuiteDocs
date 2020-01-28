@@ -149,7 +149,7 @@
       {{ if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
           <a class="padding">
-            <i class="fas fa-fw fa-language"></i>
+            <i class="fas fa-fw fa-user-edit"></i>
           <div class="select-style">
             <select id="select-language" onchange="location = this.value;">
           {{ $siteLanguages := .Site.Languages}}
