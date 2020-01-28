@@ -3,7 +3,7 @@
 
 <div class="blog_wrap">
 {{ range first 3 ( sort (where .Data.Pages "Section" "blog") "Date" "desc" ) }}
-  <h3><a href="{{ .URL }}">{{ .Params.title }}</a></h3>
+  <h3><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
   <p class="author">
     {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
   </p>

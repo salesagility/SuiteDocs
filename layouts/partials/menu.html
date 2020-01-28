@@ -149,7 +149,7 @@
       {{ if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
           <a class="padding">
-            <i class="fa fa-fw fa-language"></i>
+            <i class="fas fa-fw fa-language"></i>
           <div class="select-style">
             <select id="select-language" onchange="location = this.value;">
           {{ $siteLanguages := .Site.Languages}}
@@ -160,9 +160,9 @@
                   {{ if eq $translation.Lang .Lang }}
                     {{ $selected := false }}
                     {{ if eq $pageLang .Lang}}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}" selected>{{ .LanguageName }}</option>
+                      <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}</option>
                     {{ else }}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}">{{ .LanguageName }}</option>
+                      <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
                     {{ end }}
                   {{ end }}
               {{ end }}
@@ -218,7 +218,7 @@
       <hr/>
       <ul>
       {{ if $showvisitedlinks}}
-        <li><a class="padding" href="#" data-proofer-ignore data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
+        <li><a class="padding" href="#" data-proofer-ignore data-clear-history-toggle=""><i class="fas fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
       {{ end }}
       </ul>
     </section>
@@ -236,7 +236,7 @@
  {{with .sect}}
   {{if .IsSection}}
     {{safeHTML .Params.head}}
-    <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item 
+    <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
@@ -244,7 +244,7 @@
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
-            <i class="fa fa-check read-icon"></i>
+            <i class="fas fa-check read-icon"></i>
           {{ end }}
       </a>
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
@@ -276,10 +276,10 @@
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
-      <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
+      <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
         <a href="{{ .RelPermalink}}">
         {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
-        {{ if $showvisitedlinks}}<i class="fa fa-check read-icon"></i>{{end}}
+        {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
         </a>
     </li>
      {{ end }}
