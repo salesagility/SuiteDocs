@@ -89,9 +89,6 @@
               </div>
             </div>
             {{ end }}
-        <div id="head-tags">
-        {{ partial "tags.html" . }}
-        </div>
         {{ if .Params.chapter }}
           <div id="chapter">
         {{ end }}
@@ -103,6 +100,9 @@
               {{ end }}
               {{.Title}}
             </h1>
+            <div id="head-tags">
+            {{ partial "tags.html" . }}
+            </div>
           {{end}}
 
         {{define "breadcrumbz"}}
