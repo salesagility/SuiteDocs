@@ -10,11 +10,13 @@ enableGitInfo = true
 timeout = 37000
 
 [params]
-  GitHubRepo = "https://github.com/salesagility/SuiteDocs/"
-  editURL =  "https://github.com/salesagility/SuiteDocs/edit/master/content/"
-  issueURL = "https://github.com/salesagility/SuiteDocs/issues/new?"
-  description = "Documentation for SuiteCRM"
-  author = "SalesAgility"
+  GitHubRepo  = "https://github.com/salesagility/SuiteDocs/"
+  editURL     = "https://github.com/salesagility/SuiteDocs/edit/master/content/"
+  issueURL    = "https://github.com/salesagility/SuiteDocs/issues/new?"
+  title       = "Documentation for SuiteCRM"
+  description = "All you need to know to successfully use SuiteCRM as an End-User, Developer or Administrator, plus Community Guidelines and Technical Blog."
+  images      = ["https://docs.suitecrm.com/images/logo-square.png"]
+  author      = "SalesAgility"
   showVisitedLinks = true
   themeVariant = "suitecrm"
 
@@ -23,11 +25,18 @@ home = [ "HTML", "RSS", "JSON"]
 section = [ "HTML", "RSS"]
 
 [Languages]
+
+# ------------------------------------------------------------
+# ------------------ ENGLISH ---------------------------------
+# ------------------------------------------------------------
+
 [Languages.en]
-#title = "SuiteCRM Documentation"
-title = "Docs"
+# the following site title appears as PageTitle :: SiteTitle on every page; it will be the tab name on the browser
+title = "SuiteCRM Documentation"
+#title = "Docs"
 weight = 1
 languageName = "English"
+languageDir = "/"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fa fa-newspaper-o'></i> Blog"
@@ -52,10 +61,15 @@ name = "<i class='fa fa-bullhorn'></i> Credits"
 url = "/credits"
 weight = 30
 
+# ------------------------------------------------------------
+# ------------------ SPANISH ---------------------------------
+# ------------------------------------------------------------
+
 [Languages.es]
 title = "Documentación de SuiteCRM"
 weight = 2
 languageName = "Español"
+languageDir = "/es/"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fa fa-github'></i> GitHub"
@@ -90,9 +104,13 @@ weight = 30
 # url = "https://gohugo.io/"
 # weight = 20
 
-
+# ------------------------------------------------------------
+# ------------------ RUSSIAN ---------------------------------
+# ------------------------------------------------------------
 
 [Languages.ru]
 title = "SuiteCRM - Русскоязычная документация"
 weight = 3
 languageName = "Русский"
+languageDir = "/ru/"
+

@@ -88,7 +88,7 @@ $postStr = json_encode(array(
     'client_secret' => 'client_secret',
 ));
 $url = 'https://path-to-instance/Api/access_token';
-curl_setopt($ch, CURLOPT_URL, url);
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postStr);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -192,7 +192,7 @@ $postStr = json_encode(array(
     'password' => 'admin',
 ));
 $url = 'https://path-to-instance/Api/access_token';
-curl_setopt($ch, CURLOPT_URL, url);
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postStr);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
