@@ -1,34 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
   <head>
     {{ template "_internal/opengraph.html" . }}
     <meta property="og:image" content="https://docs.suitecrm.com/images/logo-square.png">
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    {{ .Hugo.Generator }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ hugo.Generator }}
     {{ partial "meta.html" . }}
     {{ partial "favicon.html" . }}
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
-    
+
     {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
     <link href="{{"css/nucleus.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
-    <link href="{{"css/font-awesome.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/fontawesome-all.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hybrid.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/featherlight.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/perfect-scrollbar.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
-    <link href="{{"css/horsey.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/auto-complete.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/atom-one-dark-reasonable.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hugo-theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{with .Site.Params.themeVariant}}
       <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{end}}
 
-    <script src="{{"js/jquery-2.x.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
-    
-    <style type="text/css">
-      :root #header + #content > #left > #rlblock_left{ 
+    <script src="{{"js/jquery-3.3.1.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
           display:none !important;
       }
       {{ if .Site.Params.disableInlineCopyToClipBoard }}
@@ -52,15 +51,15 @@
                   {{ $Site := .Site }}
                   {{with $File.Path }}
                   <div id="top-github-link" style="margin-left: 5px;">
-                    <a class="github-link" href="{{ $Site.Params.issueURL }}title=Issue%20about%20Page%20{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}&labels=page-specific&assignee=pgorod" target="blank">
-                      <i class="fa fa-exclamation-circle"></i>
-                      {{ i18n "Issue-for-page" }}
+                    <a class="github-link"  title='{{T "Issue-for-page"}}' href="{{ $Site.Params.issueURL }}title=Issue%20about%20Page%20{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}&labels=page-specific&assignee=pgorod" target="blank">
+                      <i class="fas fa-exclamation-circle"></i>
+                      {{ T "Issue-for-page-short" }}
                     </a>
                   </div>
                   <div id="top-github-link">
-                    <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                      <i class="fa fa-code-fork"></i>
-                      {{ i18n "Edit-this-page"}}
+                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
                     </a>
                   </div>
                   {{ end }}
@@ -68,15 +67,20 @@
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
-                        <a href="#" data-proofer-ignore id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fa fa-bars"></i>
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
                         </a>
                     </span>
                   {{ if $toc }}
-                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
                   {{ end }}
                   <span class="links">
-                    {{ template "breadcrumbz" dict "page" . "value" .Title }}   
+                 {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
+                 {{if $showBreadcrumb}}
+                    {{ template "breadcrumbz" dict "page" . "value" .Title }}
+                 {{ else }}
+                   {{ .Title }} 
+                 {{ end }}
                   </span>
                 </div>
                 {{ if $toc }}
@@ -85,21 +89,29 @@
               </div>
             </div>
             {{ end }}
-
         {{ if .Params.chapter }}
           <div id="chapter">
         {{ end }}
         <div id="body-inner">
           {{if and (not .IsHome) (not .Params.chapter) }}
-            <h1>{{.Title}}</h1>
+            <h1>
+              {{ if eq .Kind "taxonomy" }}
+                {{.Kind}} ::
+              {{ end }}
+              {{.Title}}
+            </h1>
+            <div id="head-tags">
+            {{ partial "tags.html" . }}
+            </div>
           {{end}}
 
         {{define "breadcrumbz"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}
-            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $parent.Title .value) }}
+            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
             {{ template "breadcrumbz" dict "page" $parent "value" $value }} 
           {{else}}
-            {{ (replace .value .page.Title "<i class='fa fa-home'></i>") | safeHTML }}
+            {{(replace .value .page.Title "<i class='fas fa-home'></i>")|safeHTML}}
           {{end}}
-         {{end}}
+        {{end}}
+
