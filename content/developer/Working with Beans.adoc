@@ -3,6 +3,8 @@ weight: 3
 title: "Working with Beans"
 ---
 
+:toc:
+
 = 3. Working with Beans
 
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
@@ -341,6 +343,21 @@ record is new (perhaps in a custom import script) then you can set
 is new.
 {{% /notice %}}
 
+== Marking a Bean as deleted
+
+Use the `mark_deleted` method for this. It will set the `deleted` field to `1`, also mark any relationships of that Bean 
+as deleted, and remove the reference to that item from the **Recently viewed** lists.
+
+[source,php]
+----
+$bean->mark_deleted($id);
+
+// Saving is required afterwards
+$bean->save();
+----
+
+This method will also call the appropriate `before_delete` and `after_delete` logic hooks.
+
 == Related beans
 
 We have seen how to save single records but, in a CRM system,
@@ -493,7 +510,6 @@ $accountBean->contacts->delete($accountBean->id, $contactBean);
 
 
 {{% notice warning %}}
-Be careful with the
-delete method. Omitting the second argument will cause all relationships
-for this link to be removed. link:../working-with-beans[↩]
+Be careful with the delete method. Omitting the second argument will cause all relationships
+for this bean to be removed.
 {{% /notice %}}

@@ -32,6 +32,9 @@ other = "More"
 other = "Expand me..."
 
 [Issue-for-page]
+other = "Report an Issue about this Page"
+
+[Issue-for-page-short]
 other = "Issue"
 
 [Documentation]

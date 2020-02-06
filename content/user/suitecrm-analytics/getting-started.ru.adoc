@@ -28,7 +28,7 @@ ifdef::env-github[:btn:]
 Например, ваш сервер может быть доступен по адресу
 *\http://localhost:8080/suitecrmanalytics*.
 
-{{% notice info%}}
+{{% notice info %}}
 По умолчанию используется имя пользователя `admin`, пароль - `password`.
 {{% /notice%}}
 

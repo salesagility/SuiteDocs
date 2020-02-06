@@ -33,11 +33,11 @@ elastic:index [<differential> = 1]
 
 Running a full indexing:
 [source,bash]
-vendor/bin/robo elastic:index 1
+vendor/bin/robo elastic:index 0
 
 Running a partial indexing:
 [source,bash]
-vendor/bin/robo elastic:index 0
+vendor/bin/robo elastic:index 1
 
 image:ElasticIndexCLI.png["Elasticsearch Index CLI"]
 
@@ -50,7 +50,7 @@ from the CLI. It also allows to return a JSON with additional data about the rec
 [source,bash]
 elastic:search <query> [<size> = 20] [<showJson> = false]
 
-You can use the full query syntax for for `query` argument.
+You can use the full query syntax for `query` argument.
 
 The `size` option specifies the number of results.
 

@@ -73,7 +73,7 @@ if (!defined('sugarEntry') || !sugarEntry) {
 
 == Indentation
 
-Using PSR-2 Indentation.
+Using https://www.php-fig.org/psr/psr-2/#24-indenting[PSR-2] Indentation.
 
 Code MUST use an indent of *4 spaces*, and MUST NOT use tabs for
 indenting.
@@ -104,7 +104,7 @@ preferably a verb in them.
 [source, php]
 function printLoginStatus($user, $time) 
 {
-    // do Something
+    // Do Something
 } 
 
 
@@ -150,7 +150,7 @@ must be added after each comma delimiter to improve readability.
 
 .Example
 [source,php]
-$sampleArray = array(1, 2, 3, 'Zend', 'Studio');  
+$sampleArray = [1, 2, 3, 'Zend', 'Studio'];
 
 When declaring a multi-line indexed array the
 initial array item may begin on the following line. If so, it should be
@@ -161,11 +161,11 @@ indentation level as the line containing the array declaration.
 
 .Example
 [source,php]
-$sampleArray = array(
+$sampleArray = [
    1, 2, 3, 'Zend', 'Studio', 
    $a, $b, $c, 
    56.44, $d, 500, 
-);  
+];
 
 When declaring associative arrays the initial array item may
 begin on the following line. If so, it should be padded at one
@@ -178,10 +178,10 @@ that they align.
 
 .Example
 [source, php]
-$sampleArray = array(
+$sampleArray = [
    'firstKey'  => 'firstValue', 
    'secondKey' => 'secondValue', 
-); 
+];
 
 == Brace Style
 
@@ -206,15 +206,13 @@ if (condition)
    do_stuff(); 
 }
 
-if ($a != 2) {
+if ($a !== 2) {
    $a = 2; 
-} 
-elseif ($a == 3) {
+} elseif ($a === 3) {
    $a = 4; 
-} 
-else {
+} else {
    $a = 7; 
-} 
+}
 ----
 
 Opening bracket on class, function, method names should be on the next
@@ -269,7 +267,6 @@ going on in a reasonable amount of time.
 * @param string $variable with a description of this argument
 * @return void
 */
-
 public function myMethod($variable) 
 {
    // Do something here
@@ -283,9 +280,9 @@ constructor `__construct`, but only where a constructor is required.
 
 .Example:
 [source, php]
-function __construct() 
+public function __construct()
 {
-   // do child class specific code here
+   // Do child class specific code here
    parent::__construct();
 } 
 
@@ -300,6 +297,9 @@ If including JavaScript files, a minified version should be used in the
 core, with an un-minified version added to the equivalent directory
 within `jssource` folder. Any modifications to JavaScript files should
 be made in the `jssource` folder and then minified into the core.
+
+if including theme changes, a minified version of the CSS must be provided.
+ See the https://docs.suitecrm.com/developer/theme/sass/[SASS Guide] for further details.
 
 If developing a new core feature do not create files within the custom
 directory and ensure that the new module name is sensible and relevant

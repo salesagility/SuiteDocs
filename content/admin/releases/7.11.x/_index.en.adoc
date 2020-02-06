@@ -9,6 +9,36 @@ weight: 9880
 
 :experimental:
 
+== 7.11.10
+
+_Released 11/11/2019_
+
+=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.10.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.10.tar.gz[*Source code* (tar.gz)]
+
+===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+
+==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+
+* CVE: Unassigned - SQL Injection
+
+==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/8185[8185^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7946[7946^] - Removed unnecessary JSSource files
+* PR: https://github.com/salesagility/SuiteCRM/pull/8187[8187^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8183[8183^] - Non-group records show on list view if group only access
+* PR: https://github.com/salesagility/SuiteCRM/pull/8189[8189^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8151[8151^] - Email Template
+* PR: https://github.com/salesagility/SuiteCRM/pull/8190[8190^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8173[8173^] - Workflow actions missing in edit and detail view
+* PR: https://github.com/salesagility/SuiteCRM/pull/8192[8192^] - Fixed employees module not appearing in ACL role list
+* PR: https://github.com/salesagility/SuiteCRM/pull/8207[8207^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8203[8203^] - Repair Administration section ISSUENAME Google Calendar settings menu option
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.11.9
 
 _Released 04/11/2019_
@@ -22,9 +52,10 @@ _Released 04/11/2019_
 
 ==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
 
-* CVE: Unassigned - .htaccess Improvements
-* CVE: Unassigned - API Access Token and Credential fix
-* CVE: Unassigned - Neutralization of potential vulnerability with use of Special Elements within SQL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18782[CVE-2019-18782^] - .htaccess Improvements
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18785[CVE-2019-18785^] - API Access Token and Credential fix
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18784[CVE-2019-18784^] - Neutralization of potential vulnerability with use of Special Elements within SQL
+
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
@@ -227,9 +258,9 @@ _Released 23/08/2019_
 
 ==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
 
-* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752 ] - Reflected XSS
-* CVE: Unassigned - Unintended public exposure of files
-* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454 ] - Employee module does not implement ACL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752^] - Reflected XSS
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18783[CVE-2019-18783^] - Unintended public exposure of files
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454^] - Employee module does not implement ACL
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
