@@ -24,7 +24,7 @@ _Released 10/02/2020_
 You may notice when installing SuiteCRM a new panel which allows for the configuration of different collations and type-sets. This is part of our progression towards resolving issues with special characters and emojis. Currently available sets include utf8 and utf8mb4.
 
 ==== pass:[<i class="fa fa-clipboard fa-1x"></i>] Administrators Note 2/2
-Within this release, we have also resolved a few known issues with the upgrade process; however, they will unfortunately not take effect until the next upgrade cycle. Therefore it is vital that if you encounter any problems while installing that you review and follow the recommended process within the SuiteDocs upgrade debugging page which can be found https://docs.suitecrm.com/admin/installation-guide/using-the-upgrade-wizard/[here]
+Within this release, we have also resolved a few known issues with the upgrade process; however, they will unfortunately not take effect until the next upgrade cycle. Therefore it is vital that if you encounter any problems while installing that you review and follow the recommended process within the SuiteDocs upgrade debugging page which can be found https://community.suitecrm.com/t/debugging-steps-for-use-in-upgrade-version-prior-to-7-11-11-and-7-10-23/71273[here]
 
 ==== pass:[<i class="fa fa-wrench fa-1x"></i>] Potential breaking change with package container-interop
 If you maintain a CRM utilising container-interop for API extension, you should note that this release may require some small changes to routing as seen below:
