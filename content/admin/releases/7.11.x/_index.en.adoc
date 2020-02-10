@@ -11,7 +11,7 @@ weight: 9880
 
 == 7.11.11
 
-_Released 10/02/20_
+_Released 10/02/2020_
 
 === pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
 
@@ -46,11 +46,11 @@ use Psr\Container\ContainerInterface;
 
 ==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
 
-* CVE: CVE-2020-8787 - Bean ID validation strictness
-* CVE: CVE-2020-8783 - Neutralization of potential vulnerability with use of Special Elements within SQL
-* CVE: CVE-2020-8784 - Neutralization of potential vulnerability with use of Special Elements within SQL
-* CVE: CVE-2020-8785 - Neutralization of potential vulnerability with use of Special Elements within SQL
-* CVE: CVE-2020-8786 - Neutralization of potential vulnerability with use of Special Elements within SQL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8787[CVE-2020-8787^] - Bean ID validation strictness
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8783[CVE-2020-8783^] - Neutralization of potential vulnerability with use of Special Elements within SQL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8784[CVE-2020-8784^] - Neutralization of potential vulnerability with use of Special Elements within SQL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8785[CVE-2020-8785^] - Neutralization of potential vulnerability with use of Special Elements within SQL
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8786[CVE-2020-8786^] - Neutralization of potential vulnerability with use of Special Elements within SQL
 
 [discrete]
 
