@@ -13,38 +13,6 @@ directory, is writable, before using the Upgrade Wizard. Note: Manual
 upgrades by file replacements and running the upgrade SQL are not
 supported.
 
-== Debugging steps for use in upgrade version prior to 7.11.11 and 7.10.23
-Known issues with the upgrade process fixed as part of this release will unfortunately not take effect until the next upgrade cycle. Therefore it is vital that if you encounter any issue while installing that you review and follow the recommended process as noted below:
-
-==== 1: The screen becomes blank and stops loading.
-*Symptoms*
-
-* Only visible are the background colours for the header and left-sidebar.
-* The page has stopped loading, and the refresh icon is stationary.
-* The loading centre box has disappeared
-
-*Action*
-
-1. Press the home button
-2. Wait until you arrive on the home page. Navigate to the Administration Menu and press on upgrade wizard.
-3. Your page may not change away from the Administration Menu however you will notice the refresh icon revolving, indicating that the upgrade is completing.
-4. Wait until you are redirected to the commit page at which point you can resume your upgrade as usual.
-
-==== 2: Timeout Error Page
-*Symptoms*
-
-* CRM is no longer visible, and a browser error page has appeared.
-* The page has stopped loading, and the refresh icon is stationary.
-
-*Action*
-
-1. Refresh the page. You will be redirected back to the home page of your SuiteCRM instance.
-2. Navigate to the Administration Menu and press on upgrade wizard.
-3. Your page will not change away from the Administration Menu however you will notice the refresh icon revolving, indicating that the upgrade is completing.
-4. Wait until you are redirected to either the first page of the Upgrade Wizard at which point you upgrade is complete and you should be able to press home continue using the CRM as usual in the new version or the commit page at which point you can resume your upgrade as usual.
-
-Note: This issue could potentially arise twice during the upgrade process; however, it's solved by following the instructions for a second time.
-
 === Upgrading SuiteCRM using the Upgrade Wizard
 
 1.  Download the appropriate SuiteCRM Upgrade zip file from the SuiteCRM
