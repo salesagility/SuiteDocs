@@ -54,7 +54,8 @@ _Released 04/11/2019_
 
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18782[CVE-2019-18782^] - .htaccess Improvements
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18785[CVE-2019-18785^] - API Access Token and Credential fix
-* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18784[CVE-2019-18784^] - SQL Injections
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18784[CVE-2019-18784^] - Neutralization of potential vulnerability with use of Special Elements within SQL
+
 [discrete]
 
 ==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
@@ -231,8 +232,12 @@ pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/Ki
 pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/ognjen-petrovic.png" data-featherlight="image"><img src="https://github.com/ognjen-petrovic.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/ognjen-petrovic" class="highlight">ognjen-petrovic</a></div>]
 pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/ApatheticCosmos.png" data-featherlight="image"><img src="https://github.com/ApatheticCosmos.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/ApatheticCosmos" class="highlight">ApatheticCosmos</a></div>]
 pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/akshitsarin.png" data-featherlight="image"><img src="https://github.com/akshitsarin.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/akshitsarin" class="highlight">akshitsarin</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/grahambrown11.png" data-featherlight="image"><img src="https://github.com/grahambrown11.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/grahambrown11" class="highlight">grahambrown11</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/00MB.png" data-featherlight="image"><img src="https://github.com/00MB.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/00MB" class="highlight">00MB</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/IvanArjona.png" data-featherlight="image"><img src="https://github.com/IvanArjona.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/IvanArjona" class="highlight">IvanArjona</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/ozdemirburak.png" data-featherlight="image"><img src="https://github.com/ozdemirburak.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/ozdemirburak" class="highlight">ozdemirburak</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/mirajkovic.png" data-featherlight="image"><img src="https://github.com/mirajkovic.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/mirajkovic" class="highlight">mirajkovic</a></div>]
 pass:[<div style="float:clear; margin-right:10px;"><a href="https://github.com/steffinstanly.png" data-featherlight="image"><img src="https://github.com/steffinstanly.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/steffinstanly" class="highlight">steffinstanly</a></div>]
-
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
 
