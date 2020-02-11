@@ -6,21 +6,24 @@ weight: 9880
 :toc:
 :toc-title:
 :toclevels: 1
-
+:icons: font
 :experimental:
+
+// Disable all captions for figures (i.e. text "Figure X:" before titles).
+:!figure-caption:
 
 == 7.11.10
 
 _Released 11/11/2019_
 
-=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+=== icon:files[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.10.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.11.10.tar.gz[*Source code* (tar.gz)]
 
-===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+===  icon:check[] Release Notes
 
-==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+==== icon:lock[] Security
 
 * CVE: Unassigned - SQL Injection
 
@@ -216,22 +219,30 @@ _Released 04/11/2019_
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/tsummerer.png" data-featherlight="image"><img src="https://github.com/tsummerer.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/tsummerer" class="highlight">tsummerer</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/re8260.png" data-featherlight="image"><img src="https://github.com/re8260.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/re8260" class="highlight">re8260</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/lazka.png" data-featherlight="image"><img src="https://github.com/lazka.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/lazka" class="highlight">lazka</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/Abuelodelanada.png" data-featherlight="image"><img src="https://github.com/Abuelodelanada.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/Abuelodelanada" class="highlight">Abuelodelanada</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/dominicchinkh.png" data-featherlight="image"><img src="https://github.com/dominicchinkh.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/dominicchinkh" class="highlight">dominicchinkh</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/JanSiero.png" data-featherlight="image"><img src="https://github.com/JanSiero.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/JanSiero" class="highlight">JanSiero</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/QuickCRM.png" data-featherlight="image"><img src="https://github.com/QuickCRM.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/QuickCRM" class="highlight">QuickCRM</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/HVStechnik.png" data-featherlight="image"><img src="https://github.com/HVStechnik.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/HVStechnik" class="highlight">HVStechnik</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/lex111.png" data-featherlight="image"><img src="https://github.com/lex111.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/lex111" class="highlight">lex111</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/Kishlin.png" data-featherlight="image"><img src="https://github.com/Kishlin.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/Kishlin" class="highlight">Kishlin</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/ognjen-petrovic.png" data-featherlight="image"><img src="https://github.com/ognjen-petrovic.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/ognjen-petrovic" class="highlight">ognjen-petrovic</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/ApatheticCosmos.png" data-featherlight="image"><img src="https://github.com/ApatheticCosmos.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/ApatheticCosmos" class="highlight">ApatheticCosmos</a></div>]
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/akshitsarin.png" data-featherlight="image"><img src="https://github.com/akshitsarin.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/akshitsarin" class="highlight">akshitsarin</a></div>]
-pass:[<div style="float:clear; margin-right:10px;"><a href="https://github.com/steffinstanly.png" data-featherlight="image"><img src="https://github.com/steffinstanly.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/steffinstanly" class="highlight">steffinstanly</a></div>]
+{{% ghcontributors connorshea 604media Abuelodelanada lazka re8260 ApatheticCosmos pgorod QuickCRM %}}
+
+END BLOCK
+
+[.float-group]
+--
+image::https://github.com/connorshea.png[AAA, 50, 50, title="Connor Shea", float="left"]
+image::https://github.com/604media.png[AAA, 50, 50, title="604Media", float="left"]
+image::https://github.com/tsummerer.png"[AAA, 50, 50, title="tsummerer", float="left"]
+image::https://github.com/re8260.png"[AAA, 50, 50, title="re8260", float="left"]
+image::https://github.com/lazka.png"[AAA, 50, 50, title="lazka", float="left"]
+--
+
+image::https://github.com/Abuelodelanada.png"><img src="https://github.com/Abuelodelanada.png"></a><a href="https://github.com/Abuelodelanada">Abuelodelanada</a></div>]
+image::https://github.com/dominicchinkh.png"><img src="https://github.com/dominicchinkh.png"></a><a href="https://github.com/dominicchinkh">dominicchinkh</a></div>]
+image::https://github.com/JanSiero.png"><img src="https://github.com/JanSiero.png"></a><a href="https://github.com/JanSiero">JanSiero</a></div>]
+image::https://github.com/QuickCRM.png"><img src="https://github.com/QuickCRM.png"></a><a href="https://github.com/QuickCRM">QuickCRM</a></div>]
+image::https://github.com/HVStechnik.png"><img src="https://github.com/HVStechnik.png"></a><a href="https://github.com/HVStechnik">HVStechnik</a></div>]
+image::https://github.com/lex111.png"><img src="https://github.com/lex111.png"></a><a href="https://github.com/lex111">lex111</a></div>]
+image::https://github.com/Kishlin.png"><img src="https://github.com/Kishlin.png"></a><a href="https://github.com/Kishlin">Kishlin</a></div>]
+image::https://github.com/ognjen-petrovic.png"><img src="https://github.com/ognjen-petrovic.png"></a><a href="https://github.com/ognjen-petrovic">ognjen-petrovic</a></div>]
+image::https://github.com/ApatheticCosmos.png"><img src="https://github.com/ApatheticCosmos.png"></a><a href="https://github.com/ApatheticCosmos">ApatheticCosmos</a></div>]
+image::https://github.com/akshitsarin.png"><img src="https://github.com/akshitsarin.png"></a><a href="https://github.com/akshitsarin">akshitsarin</a></div>]
+image::https://github.com/steffinstanly.png"><img src="https://github.com/steffinstanly.png"></a><a href="https://github.com/steffinstanly">steffinstanly</a></div>]
 
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
@@ -304,9 +315,9 @@ Plugin files are still usable in the same way as before – at `./include/Smarty
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/JanSiero.png" data-featherlight="image"><img src="https://github.com/JanSiero.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/JanSiero" class="highlight">JanSiero</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/JanSiero.png"><img src="https://github.com/JanSiero.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/JanSiero">JanSiero</a></div>]
 
-pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png" data-featherlight="image"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
+pass:[<div style="float:left; margin-right:10px;"><a href="https://github.com/604media.png"><img src="https://github.com/604media.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/604media" class="highlight">604media</a></div>]
 
 pass:[<div style="float:clear; margin-right:10px;"><a href="https://github.com/connorshea.png" data-featherlight="image"><img src="https://github.com/connorshea.png" alt="SuiteCRM Contributor" style="margin:0px;" width="50" height="50"></a><a href="https://github.com/connorshea" class="highlight">connorshea</a></div>]
 
