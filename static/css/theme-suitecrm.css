@@ -554,6 +554,7 @@ div.sidebar-announcement a:hover {
    overflow: hidden;
    background-color: var(--MENU-TOP-BG-color);
    background-color:#DE6150;
+	max-height: 50px;
 }
 
 #topmenu li {
@@ -564,8 +565,8 @@ div.sidebar-announcement a:hover {
 
 #topmenu li.guide_start {
 	padding: 15px 2px 15px 15px;
-	color:#fff;
-	font-weight:300;
+	color:#e3e3e3db;
+	/*font-weight:300;*/
 }
 
 #topmenu li.guide_end {
