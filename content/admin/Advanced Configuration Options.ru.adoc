@@ -304,6 +304,6 @@ $GLOBALS['app_list_strings']['satellite_list']=array (
 [source,php]
 ----
  $sugar_config['hideColumnFilter'] = [
-    'Accounts' => false,
+    'Accounts' => true,
 ];
 ----
