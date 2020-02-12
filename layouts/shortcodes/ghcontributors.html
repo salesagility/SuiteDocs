@@ -1,3 +1,4 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
 {{/*
 --------------------
 Shortcode usage:
@@ -23,7 +24,7 @@ Shortcode usage:
 {{ range .Params }}
   {{ $git_user := . }}
   {{ $u := getJSON "https://api.github.com/users/" $git_user }}
-<div>
+  <div>
     <div style="float:top;">
       <a href="{{$u.avatar_url}}" data-featherlight="image">
       <img src="{{$u.avatar_url}}" class="inline" style="width: 50px;height: 50px;margin-bottom:.25em; vertical-align:middle;">
@@ -33,3 +34,4 @@ Shortcode usage:
   </div>
 {{ end }}
 </div>
+<div style="clear: both;"></div>
