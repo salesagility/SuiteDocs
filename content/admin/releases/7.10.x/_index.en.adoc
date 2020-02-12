@@ -6,27 +6,26 @@ weight: 9890
 :toc:
 :toc-title:
 :toclevels: 1
-
-:experimental:
+:icons: font
 
 == 7.10.23
 
 _Released 10/02/2020_
 
-=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+=== icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.23.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.23.tar.gz[*Source code* (tar.gz)]
 
 [discrete]
 
-==== pass:[<i class="fa fa-clipboard fa-1x"></i>] Administrators Note 1/2
+==== icon:clipboard[] Administrators Note 1/2
 You may notice when installing SuiteCRM a new panel which allows for the configuration of different collations and type-sets. This is part of our progression towards resolving issues with special characters and emojis. Currently available sets include utf8 and utf8mb4.
 
-==== pass:[<i class="fa fa-clipboard fa-1x"></i>] Administrators Note 2/2
+==== icon:clipboard[] Administrators Note 2/2
 Within this release, we have also resolved a few known issues with the upgrade process; however, they will unfortunately not take effect until the next upgrade cycle. Therefore it is vital that if you encounter any problems while installing that you review and follow the recommended process within the SuiteDocs upgrade debugging page which can be found https://community.suitecrm.com/t/debugging-steps-for-use-in-upgrade-version-prior-to-7-11-11-and-7-10-23/71273[here]
 
-==== pass:[<i class="fa fa-wrench fa-1x"></i>] Potential breaking change with package container-interop
+==== icon:wrench[] Potential breaking change with package container-interop
 If you maintain a CRM utilising container-interop for API extension, you should note that this release may require some small changes to routing as seen below:
 
 Instead of `Interop`
@@ -39,9 +38,9 @@ use Psr\Container\ContainerInterface;
 ```
 [discrete]
 
-===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+===  icon:check[] Release Notes
 
-==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+==== icon:lock[] Security
 
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8787[CVE-2020-8787^] - Bean ID validation strictness
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8783[CVE-2020-8783^] - Neutralization of potential vulnerability with use of Special Elements within SQL
@@ -51,7 +50,7 @@ use Psr\Container\ContainerInterface;
 
 [discrete]
 
-==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
+==== icon:star[] Enhancements
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/8100[8100^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8099[8099^] - Add a way to hide/show columnChooser in ListViews
 * PR: https://github.com/salesagility/SuiteCRM/pull/7879[7879^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7876[7876^] - Render phone fields as links
@@ -62,7 +61,7 @@ use Psr\Container\ContainerInterface;
 
 [discrete]
 
-==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+==== icon:bug[] Bug Fixes
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/8422[8422^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8421[8421^] - Fix issue with validation on aos settings
 * PR: https://github.com/salesagility/SuiteCRM/pull/8395[8395^] - Issue: https://github.com/salesagility/SuiteCRM/issues/6000[6000^] - Notifications not working when using mssql
@@ -95,7 +94,7 @@ use Psr\Container\ContainerInterface;
 * PR: https://github.com/salesagility/SuiteCRM/pull/8326[8326^] - Logo upload
 [discrete]
 
-==== pass:[<i class="fa fa-code-fork fa-1x"></i>] Development
+==== icon:code-branch[] Development
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/8231[8231^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7891[7891^] - Clean up include/ tests
 * PR: https://github.com/salesagility/SuiteCRM/pull/8218[8218^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7744[7744^] - Remove deprecated functions from utils.php
@@ -128,7 +127,7 @@ use Psr\Container\ContainerInterface;
 * PR: https://github.com/salesagility/SuiteCRM/pull/8161[8161^] - Fix a PHP warning in Meeting.php
 [discrete]
 
-=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+=== icon:heart[] Community
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
@@ -152,18 +151,18 @@ To report any security issues please follow our Security Process and send them d
 
 _Released 11/11/2019_
 
-=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+=== icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.22.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.22.tar.gz[*Source code* (tar.gz)]
 
-===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+===  icon:check[] Release Notes
 
-==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+==== icon:lock[] Security
 
 * CVE: Unassigned - SQL Injection
 
-==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+==== icon:bug[] Bug Fixes
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/8185[8185^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7946[7946^] - Removed unnecessary JSSource files
 * PR: https://github.com/salesagility/SuiteCRM/pull/8187[8187^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8183[8183^] - non-group records show on list view if group only access
@@ -182,21 +181,21 @@ To report any security issues please follow our Security Process and send them d
 
 _Released 04/11/2019_
 
-=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+=== icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.21.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.21.tar.gz[*Source code* (tar.gz)]
 
-===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+===  icon:check[] Release Notes
 
-==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+==== icon:lock[] Security
 
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18782[CVE-2019-18782^] - .htaccess Improvements
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18785[CVE-2019-18785^] - API Access Token and Credential fix
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18784[CVE-2019-18784^] - Neutralization of potential vulnerability with use of Special Elements within SQL
 [discrete]
 
-==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
+==== icon:star[] Enhancements
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/7198[7198^] - Add Robo API commands
 * PR: https://github.com/salesagility/SuiteCRM/pull/5464[5464^] - Filter email templates on Events
@@ -210,7 +209,7 @@ _Released 04/11/2019_
 
 [discrete]
 
-==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+==== icon:bug[] Bug Fixes
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/8154[8154^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8153[8153^] - SQL query in the ACLAction code
 * PR: https://github.com/salesagility/SuiteCRM/pull/8151[8151^] - Resolve issue with email templates
@@ -337,7 +336,7 @@ _Released 04/11/2019_
 
 [discrete]
 
-==== pass:[<i class="fa fa-code-fork fa-1x"></i>] Development
+==== icon:code-branch[] Development
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/8000[8000^] - More PHP 7.4 array accessor deprecations
 * PR: https://github.com/salesagility/SuiteCRM/pull/6750[6750^] - Issue: https://github.com/salesagility/SuiteCRM/issues/4754[4754^] - Remove PHP4 style constructors
@@ -346,7 +345,7 @@ _Released 04/11/2019_
 
 [discrete]
 
-=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+=== icon:heart[] Community
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
@@ -383,21 +382,21 @@ To report any security issues please follow our Security Process and send them d
 
 _Released 23/08/2019_
 
-=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+=== icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.20.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.20.tar.gz[*Source code* (tar.gz)]
 
-===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+===  icon:check[] Release Notes
 
-==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+==== icon:lock[] Security
 
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14752[CVE-2019-14752^] - Reflected XSS
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18783[CVE-2019-18783^] - Unintended public exposure of files
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14454[CVE-2019-14454^] - Employee module does not implement ACL
 [discrete]
 
-==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements
+==== icon:star[] Enhancements
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/7702[7702 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7696[7696 ] - Update README
 * PR: https://github.com/salesagility/SuiteCRM/pull/7698[7698 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/7581[7581 ] - SuiteBot config.yml
@@ -424,7 +423,7 @@ Plugin files are still usable in the same way as before – at `./include/Smarty
 
 [discrete]
 
-==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+==== icon:bug[] Bug Fixes
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/7719[7719 ] - Fix/backwards compatibility
 * PR: https://github.com/salesagility/SuiteCRM/pull/7718[7718 ] - Issue: https://github.com/salesagility/SuiteCRM/issues/6982[6982 ] - New user password not being generated
@@ -439,7 +438,7 @@ Plugin files are still usable in the same way as before – at `./include/Smarty
 * PR: https://github.com/salesagility/SuiteCRM/pull/7610[7610 ] - Fixed error message css + email warning config option
 [discrete]
 
-=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+=== icon:heart[] Community
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
@@ -461,27 +460,27 @@ To report any security issues please follow our Security Process and send them d
 
 _Released 31st July 2019_
 
-=== pass:[<i class="fa fa-files-o fa-1x"></i>] Assets
+=== icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.19.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.19.tar.gz[*Source code* (tar.gz)]
 
-===  pass:[<i class="fa fa-check fa-1x"></i>] Release Notes
+===  icon:check[] Release Notes
 
-==== pass:[<i class="fa fa-lock fa-1x"></i>] Security
+==== icon:lock[] Security
 
 [discrete]
 
 * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13335[#CVE-2019-13335 ] - *Security Issue* - Fixed SSRF
 * *Security Issue* - Fixed privilege escalation
 
-==== pass:[<i class="fa fa-star-o fa-1x"></i>] Enhancements 
+==== icon:star[] Enhancements 
 
 * https://github.com/salesagility/SuiteCRM/pull/7374[#7374 ] Robo test-running commands
 * https://github.com/salesagility/SuiteCRM/pull/7474[#7474 ] SecuritySuite 3.1.16
 * https://github.com/salesagility/SuiteCRM/pull/7503[#7503 ] Scheduled Reports: Enable security groups support and add the subpanel
 
-==== pass:[<i class="fa fa-bug fa-1x"></i>] Bug Fixes
+==== icon:bug[] Bug Fixes
 
 * https://github.com/salesagility/SuiteCRM/issues/3756[#3756 ] Fixed #3756 - Calendar pop-ups now auto close after 500ms
 * https://github.com/salesagility/SuiteCRM/pull/6850[#6850 ] SAML2: Use php-saml from composer
@@ -538,7 +537,7 @@ _Released 31st July 2019_
 * https://github.com/salesagility/SuiteCRM/issues/6996[#6996 ] Escaped strings issue, breaks "My favorites" filters and perhaps other things
 * https://github.com/salesagility/SuiteCRM/pull/7639[#7639 ] Fixed DB failure with activities subpanel
 
-=== pass:[<i class="fa fa-heart fa-1x"></i>] Community
+=== icon:heart[] Community
 
 _Special thanks to all members for their contributions and participation in this release!_
 
@@ -1917,3 +1916,4 @@ code* (tar.gz)]
 *This is a Beta release and should not be used in a production environment.*
 
 '''
+
