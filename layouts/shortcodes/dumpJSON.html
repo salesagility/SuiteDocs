@@ -1,0 +1,16 @@
+
+{{ $urlPre := "https://api.github.com" }}
+{{ $git_user := "pgorod" }}
+{{ $user_json := getJSON $urlPre "/users/" $git_user "/repos" }}
+{{ range $u := $user_json }}
+ <h2>{{ $u.name }}</h2>
+  {{ $repo_json := getJSON $urlPre "/repos/" $git_user "/" $u.name }}
+<code>
+  {{ range $k,$v :=   $repo_json }}
+   {{ $k }} =&gt; {{ $v }}<br>
+ {{ end }}
+  <hr>
+{{ end }}
+
+
+

@@ -1,4 +1,13 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
+{{/*
+--------------------
+Shortcode usage:
+
+{% ghcontributors user1 user2 user3 %}}
+
+(You can use an indefinite number of parameters)
+-------------------
+*/}}
+
 <style type="text/css">
 .ghContributors {
   display:flex;
@@ -24,7 +33,3 @@
   </div>
 {{ end }}
 </div>
-
-
-
-
