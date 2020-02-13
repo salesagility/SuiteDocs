@@ -8,7 +8,9 @@ weight: 9890
 :toclevels: 1
 :icons: font
 
-WARNING: Notice: SuiteCRM Version 7.11.11 and 7.10.23 are no longer available due to a high priority issue been identified. A new release will be soon to follow, any user who has downloaded 7.11.11 and 7.10.23 and is having problems with special characters and would like to patch their instance in the meantime  details of the pending fix are available https://github.com/salesagility/SuiteCRM/pull/8542[here]
+{{% notice warning %}}
+SuiteCRM Version 7.11.11 and 7.10.23 are no longer available due to a high priority issue been identified. A new release will be soon to follow, any user who has downloaded 7.11.11 and 7.10.23 and is having problems with special characters and would like to patch their instance in the meantime  details of the pending fix are available https://github.com/salesagility/SuiteCRM/pull/8542[here]
+{{% /notice %}}
 
 == 7.10.23
 
