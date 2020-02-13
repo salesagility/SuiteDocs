@@ -34,7 +34,7 @@ the link:../../../admin/administration-panel/email[Emails] section of the Admini
 {{% /notice %}}
 
 The *Emails* Module can be found on the *ALL* menu on the top navigation bar. 
-The module opens in List View, showing all the the mail from the default mail account inbox in the main window. 
+The module opens in List View, showing all the mail from the default mail account inbox in the main window.
 
 image:250EmailsListView.png[title="Emails Module List View"]
 
@@ -196,7 +196,7 @@ have to synchronise in the future. We recommend taking a backup of your database
 From the *Admin* panel, select *Repair* and then *Sync Inbound Email Accounts*.
 image:SyncInboundEmailAccounts.png[Sync Inbound Email Accounts]
 
-This will display a multiple selection box *Mail Account Name* listing all of the the active inbound email accounts 
+This will display a multiple selection box *Mail Account Name* listing all of the active inbound email accounts
 (including personal accounts) and a btn:[SYNC] button.
 
 [cols="20,80",frame="none", grid="none"]

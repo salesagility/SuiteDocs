@@ -8,12 +8,12 @@ title: "Logging"
 
 == Logging messages
 
-Logging in SuiteCRM is achieved by accessing the log global. Accessing
-an instance of the logger is as simple as
+Logging in SuiteCRM is achieved by accessing the log singleton. Accessing
+an instance of the logger is as simple as:
 
 .Example 11.1: Accessing the log
 [source,php]
-$GLOBALS['log']
+LoggerManager::getLogger();
 
 
 
@@ -23,8 +23,8 @@ method. For example:
 .Example 11.2: Logging messages
 [source,php]
 ----
-$GLOBALS['log']->debug('This is a debug message');
-$GLOBALS['log']->error('This is an error message');
+LoggerManager::getLogger()->debug('This is a debug message');
+LoggerManager::getLogger()->error('This is an error message');
 ----
 
 
@@ -82,3 +82,9 @@ Generally on a production instance you will use the less verbose levels
 use whatever level you prefer. I prefer the most verbose level -
 `debug`. 
 {{% /notice %}}
+
+== Log file location
+
+The log file, by default, is called `suitecrm.log` and resides in your installation's root directory. 
+
+But you can change log settings through the UI, under link:../../admin/administration-panel/system/#_logger_settings[Admin / System settings / Logger Settings].

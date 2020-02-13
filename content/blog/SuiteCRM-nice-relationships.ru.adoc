@@ -27,7 +27,7 @@ First off let’s add a relationship to try out our changes on. We can
 first add a one to many relationships between products and accounts like
 so:
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: /images/en/community
 
 image:01nice-relationships.png[title="Adding a relationship"]
 

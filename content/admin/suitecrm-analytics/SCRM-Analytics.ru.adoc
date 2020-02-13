@@ -1,0 +1,152 @@
+---
+title: Настройка SuiteCRM Web Analytics
+weight: 30
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+= Настройка SuiteCRM Web Analytics
+
+SuiteCRM Web Analytics - это веб-интерфейс для анализа и отчётности, который позволяет пользователям исследовать информацию в хранилище данных, извлечённую ранее из SuiteCRM или сторонних источников данных.
+
+Для фильтрации данных или планирования отчётов используется веб-портал. 
+Веб-портал предоставляет возможность импортировать отчёты и информационные панели, созданные с помощью мощных инструментов CTools и дизайнера отчётов Pentaho.
+Отчёты поддерживают несколько различных визуальных диаграмм и могут выводить данные в форматах HTML, PDF и Excel.
+
+== Загрузка и установка SuiteCRM Web Analytics
+
+Для работы SuiteCRM Web Analytics требуется ОС Linux со следующими установленными пакетами:
+
+* OpenJDK 8 JRE (Java)
+* wget
+* unzip
+* zip
+
+{{% notice note %}}
+Для SuiteCRM Web Analytics требуется предварительно установленное и запущенное link:../scrm-data-integration[решение для интеграции данных].
+{{% /notice %}}
+
+Есть два способа загрузки SuiteCRM Web Analytics.
+
+* https://suitecrm.com/resources/suitecrm-analytics-tool[Загрузить архив с сайта SuiteCRM^]: Архив содержит сценарии установки, веб-сервер и все необходимые сторонние библиотеки с открытым исходным кодом.
+* Клонировать репозиторий SuiteCRM Web Analytics, содержащий сценарий для создания пакета веб-аналитики (по сути, сценарий создаёт тот же архив, что доступен на сайте SuiteCRM)
+
+=== Сборка пакета вручную (клонирование из репозитория)
+
+[source,bash]
+----
+git clone https://github.com/ivylabs/suitecrm-analytics
+----
+
+Перейдите в каталог клонированного репозитория и запустите скрипт `build.sh`
+
+[source,bash]
+----
+./build.sh
+----
+
+В терминале отобразятся файлы, которые будут загружены и упакованы в архив.
+В конце работы скрипта будет выведен запрос об удалении установочных файлов.
+
+[source,bash]
+----
+Would you like to remove the installation files? This will save disk space. [y/N] y
+
+-------------------------------------------------- -----------
+
+ Build is complete!
+
+-------------------------------------------------- -----------
+----
+
+В результате работы скрипта будет создан архив *suitecrm-analytics-server.zip* аналогичный тому, что можно загрузить с официального сайта SuiteCRM.
+
+
+=== Настройка SuiteCRM Data Integration
+
+После загрузки или создания архива *suitecrm-analytics-server.zip* загрузите и распакуйте его на необходимом веб-сервере.
+
+Перейдите в распакованную папку *suitecrm-analytics-server* и отредактируйте файл  *install.properties*:
+
+[source,bash]
+----
+JVM_SIZE=1024
+SUITECRM_HOST=127.0.0.1
+SUITECRM_PORT=3306
+SUITECRM_DATABASE=suitecrm_testdata
+SUITECRM_USERNAME=suitecrmrootuser
+SUITECRM_PASSWORD=suitecrmrootuserpassword
+SUITECRM_ANALYTICS_HOST=127.0.0.1
+SUITECRM_ANALYTICS_PORT=3306
+SUITECRM_ANALYTICS_DATABASE=suitecrm_dwh
+SUITECRM_ANALYTICS_USERNAME=suitecrmrootuser
+SUITECRM_ANALYTICS_PASSWORD=suitecrmrootuserpassword
+# DO NOT CHANGE FROM PORT 8080! There is a bug with uploading the solution when the port is changed
+SUITECRM_ANALYTICS_WEBAPP_PORT=8080
+----
+
+Перечисленные ниже параметры отвечают за соединение с базой данных SuiteCRM, которая будет служить источником данных.
+
+[source,bash]
+----
+# SuiteCRM Сведения о подключении к исходной базе данных
+SUITECRM_HOST = 127.0.0.1
+SUITECRM_PORT = 3306
+SUITECRM_DATABASE = suitecrm_testdata
+SUITECRM_USERNAME = suitecrmrootuser
+SUITECRM_PASSWORD = suitecrmrootuserpassword
+----
+
+Перечисленные ниже параметры отвечают за соединение с созданным ранее хранилищем данных для извлечения преобразованных данных SuiteCRM.
+
+[source,bash]
+----
+# SuiteCRM Analytis Соединение с целевой базой данных
+SUITECRM_ANALYTICS_HOST = 127.0.0.1
+SUITECRM_ANALYTICS_PORT = 3306
+SUITECRM_ANALYTICS_DATABASE = suitecrm_dwh
+SUITECRM_ANALYTICS_USERNAME = suitecrmrootuser
+SUITECRM_ANALYTICS_PASSWORD = suitecrmrootuserpassword
+----
+
+=== Установка SuiteCRM Web Analytics
+
+После настройки конфигурации запустите следующий сценарий, расположенный в корне распакованного архива:
+
+[source,bash]
+----
+./setup-suitecrm-analytics.sh
+----
+
+Сценарий проверит, что веб-сервер может быть запущен и соединение с базой данных установлено.
+
+Затем вы можете запустить веб-сервер SuiteCRM Web Analytics для доступа к приложению:
+
+[source,bash]
+----
+./start-suitecrm-analytics.sh
+----
+
+Скрипт должно вывести на терминал сообщение о запуске Tomcat-сервера.
+
+Для отслеживания логов веб-сервера вы можете запустить команду:
+
+[source,bash]
+----
+tail -f tomcat/logs/catalina.out
+----
+
+Чтобы убедиться в том, что сервер успешно запущен, найдите следующую строку в приведённом выше файле журнала,
+где *N* - число, зависящее от скорости запуска сервера:
+
+[source,bash]
+----
+org.apache.catalina.startup.Catalina.start Server startup in N ms
+----
+
+После запуска сервера вы можете войти в веб-приложение SuiteCRM Analytics, указав имя хоста или IP-адрес сервера в вашем веб-браузере.
+По умолчанию веб-приложение прослушивает порт *8080*, поэтому, например, ваш сервер может быть доступен по адресу 
+http://localhost:8080/suitecrmanalytics.
+
+Детальная информация о работе с веб-приложением описана в link:../../../user/suitecrm-analytics/getting-started[этом] разделе документации.

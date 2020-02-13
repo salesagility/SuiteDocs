@@ -4,7 +4,7 @@ weight: 40
 ---
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/admin
+:imagesdir: /images/en/admin
 
 :toc:
 
@@ -209,9 +209,9 @@ Cases will be assigned randomly to members of the specified group or role.
 *New Case Auto-Reply template* 
 
 If *SuiteCRM* has been configured to auto-create cases, you can select or create an 
-link:../../../user/core-modules/emailtemplates[email template] to use as an automated reponse to 
+link:../../../user/core-modules/emailtemplates[email template] to use as an automated response to 
 notify the sender that a case has been created. If no template is specified here, this automated 
-reponse will not be sent. image:EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
+repsonse will not be sent. image:EmailsNewCaseAutoReply.png[New Case Auto-Reply template]
 
 [cols="20,80", frame = "none", grid = "none"]
 |===

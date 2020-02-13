@@ -48,14 +48,14 @@ code* (tar.gz)]
 * Escaping the ID in the query as it comes from the $_REQUEST object.
 * Adding additional checks on data.
 * Adding additional checks on data.
-* Fixed all major vunerabilities
+* Fixed all major vulnerabilities
 * Fixed issue #381
 * Fixed issue #353 This fix should be combined with Jims proposal to remove references
 * Fixed issue #305
 * Fixed issue #51
-* Fixed injection vunerability in the delete function.
-* XSS Vunerability echoing out request data.
-* XSS Vunerability
+* Fixed injection venerability in the delete function.
+* XSS Venerability echoing out request data.
+* XSS Venerability
 * Adding the City field to the Lead Convert form in the Contact section
 * Scrolling in Edit of Layout in Studio/ModuleBuilder not possible
 * Update TemplateHandler.php

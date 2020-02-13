@@ -2,7 +2,7 @@
 other = "Search..."
 
 [Clear-History]
-other = "Mark all as unread"
+other = "Clear History"
 
 [Attachments-label]
 other = "Attachments"
@@ -24,6 +24,3 @@ other = "More"
 
 [Expand-title]
 other = "Expand me..."
-
-[Issue-for-page]
-other = "Create an Issue for this Page"

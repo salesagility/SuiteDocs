@@ -8,7 +8,7 @@ Weight: 40
 
 Check out awaiting pull requests on our SuiteCRM repo https://github.com/salesagility/SuiteCRM/pulls[here].
 
-Select a pull request that is ready to test e.g.https://github.com/salesagility/SuiteCRM/pull/6612
+Select a pull request that is ready to test e.g. https://github.com/salesagility/SuiteCRM/pull/6612
 
 Obtain the author's repo. e.g. https://github.com/jack7anderson7/SuiteCRM
 and the branch specific to the PR e.g. issue-6611
@@ -20,7 +20,7 @@ could usually use the URL https://github.com/{username}/SuiteCRM replacing
 {{% /notice %}}
 
 Now we have these essential pieces of information we can pull down the code to test.
-Create a new branch using the base of the PR e.g. hotfix, hotfix-7.8.x or develop
+Create a new branch using the base of the PR e.g. hotfix, hotfix-7.10.x or develop
 within your SuiteCRM fork directory.
 Name the new branch uniquely if you want to test alot of PRs e.g. testing6611
 

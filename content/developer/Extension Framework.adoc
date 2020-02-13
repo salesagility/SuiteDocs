@@ -103,7 +103,7 @@ actions.
 
 == Forcing overrides
 
-To make sure certain customizatins take precendence, there is an additional mechanism using files starting with `_override`, 
+To make sure certain customisations take precedence, there is an additional mechanism using files starting with `_override`, 
 for example:
 
 `custom\Extension\modules\Accounts\Ext\Vardefs\_override_my_field_change.php`

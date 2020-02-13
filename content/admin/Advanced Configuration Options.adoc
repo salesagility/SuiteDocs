@@ -30,7 +30,7 @@ For this in the file `config.php` set the following parameter:
 
 == Module Load Control
 
-To ensure that users of the system have administrative rights
+To ensure that users of the system who have administrative rights
 (but not having access to the configuration file `config.php`)
 cannot load extraneous modules into the system, you can limit
 the file downloads to the frames of a specific folder you control.
@@ -54,7 +54,7 @@ For import, export, synchronization, and when working in the administration pane
 the maximum number of requests is 50,000. Thus, all processes that take up too
 much system resources are interrupted. You can change these settings as
 desired by specifying values ​​for variables
-`defaultpass:[_]limit` and `specialpass:[_]querypass:[_]limit` in file `config.php`.
+`default_limit` and `special_query_limit` in file `config.php`.
 
 == Setting file system permissions in Linux
 
@@ -71,16 +71,16 @@ The following example shows the read, write and execute permissions for the user
 'chown' => 'apache',
 'chgrp' => 'apache',),
 
-For the parameter `dirpass:[_]mode` you can set the value to ```1528```,
+For the parameter `dir_mode` you can set the value to ```1528```,
 which is the decimal equivalent of the octal value ```02770```. For the parameter
-`filepass:[_]mode` you can set the value to ```432```, which is the decimal equivalent of the octal value ```0660```.
+`file_mode` you can set the value to ```432```, which is the decimal equivalent of the octal value ```0660```.
 
 == Changing the location of the download folder
 
-All files downloaded by the system are stored in a special download folder, its location is set by variable
-`uploadpass:[_]dir` in file `config.php`. By default, this is the upload folder, located in the installed system folder.
-If necessary, its location can be changed, for this purpose in a variable `uploadpass:[_]dir` set absolute
-The path to the new location of the download folder.
+All files downloaded by the system are stored in a special download folder. Its location is set by variable
+`upload_dir` in file `config.php`. By default, this is the upload folder, located in the installed system folder.
+If necessary, its location can be changed, for this purpose in a variable `upload_dir` set the absolute
+path to the new location of the download folder.
 
 {{% notice note %}}
 Do not forget to copy all the files from the old download folder to the new one.
@@ -94,7 +94,7 @@ The system actively uses data caching, which greatly improves its performance.
 A special folder is used to store cached data (compiled templates, email data, etc.)
 and its size can be quite large. By default, this is the cache folder located in the installed system folder.
 If necessary, its location can be changed, for this purpose in a variable
-`cachepass:[_]dir`, located in the file `config.php`, set the absolute path to the new
+`cache_dir`, located in the file `config.php`, set the absolute path to the new
 location of the cache folder. At the same time, the link pointing to the new cache
 folder should be placed in the same place of the cache folder.
 This is necessary to provide access to some cached system files.
@@ -102,7 +102,7 @@ The new folder must be writable by the user who is running the web server.
 
 == Permanent display of Advanced Filters in List Forms
 
-In SuiteCRM version 7.8, a more compact was introduced instead of Basic and Advanced Search
+In SuiteCRM version 7.8, a more compact display was introduced instead of Basic and Advanced Search
 functional link:../../user/introduction/user-interface/search/[of filters].
 If you still need a permanent display of filter fields at the top of the List Form
 certain modules (as it was in earlier versions of the system), add the appropriate
@@ -124,7 +124,7 @@ $sugar_config['enable_legacy_search'][] = 'Users';
 $sugar_config['enable_legacy_search'][] = 'Employees';
 
 
-== Subpanels: replacing the drop-down menu with buttons
+== Sub-panels: replacing the drop-down menu with buttons
 
 If necessary, you can display the functions of a particular
 sub-panel not in the form of drop-down menu items, but in the form of buttons.
@@ -133,7 +133,7 @@ The figure below shows an example of a standard sub-panel
 
 image:measures-subpanel.png[Replacing the drop-down menu with buttons]
 
-To change the subpanel *history* do the following :
+To change the sub-panel *history* do the following :
 
  . Create a file `custom/Extension/modules/Leads/Ext/Layoutdefs/myCustomization.php`
  . Add a line to it:

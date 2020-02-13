@@ -3,6 +3,8 @@ weight: 3
 title: "Working with Beans"
 ---
 
+:toc:
+
 = 3. Working with Beans
 
 Beans are the Model in SuiteCRM’s MVC (Model View Controller)
@@ -341,6 +343,21 @@ record is new (perhaps in a custom import script) then you can set
 is new.
 {{% /notice %}}
 
+== Marking a Bean as deleted
+
+Use the `mark_deleted` method for this. It will set the `deleted` field to `1`, also mark any relationships of that Bean 
+as deleted, and remove the reference to that item from the **Recently viewed** lists.
+
+[source,php]
+----
+$bean->mark_deleted($id);
+
+// Saving is required afterwards
+$bean->save();
+----
+
+This method will also call the appropriate `before_delete` and `after_delete` logic hooks.
+
 == Related beans
 
 We have seen how to save single records but, in a CRM system,
@@ -359,12 +376,12 @@ for a given record.
 ----
 get_linked_beans(
                 $field_name,
-                $bean_name,
-                $sort_array = array(),
+                $bean_name = '',
+                $order_by = '',
                 $begin_index = 0,
                 $end_index = -1,
-                $deleted=0,
-                $optional_where="");
+                $deleted = 0,
+                $optional_where = "");
 ----
 
 
@@ -376,9 +393,10 @@ get_linked_beans(
   `cache/modules/<TheModule>/<TheModule>Vardefs.php` for the link
   definition.
 `$bean_name`::
-  The name of the bean that we wish to retrieve.
-`$sort_array`::
-  This is a legacy parameter and is unused.
+  Used to specify the bean name of the beans you are expecting back. Not needed in current versions, kept for backward 
+  compatibility or for the unlikely event you have an old style relationship.
+`$order_by`::
+  Optionally, add a clause like `last_name DESC` to get sorted results (only available from SuiteCRM 7.4 onwards).
 `$begin_index`::
   Skips the initial `$begin_index` results. Can be used to paginate.
 `$end_index`::
@@ -492,7 +510,6 @@ $accountBean->contacts->delete($accountBean->id, $contactBean);
 
 
 {{% notice warning %}}
-Be careful with the
-delete method. Omitting the second argument will cause all relationships
-for this link to be removed. link:../working-with-beans[↩]
+Be careful with the delete method. Omitting the second argument will cause all relationships
+for this bean to be removed.
 {{% /notice %}}

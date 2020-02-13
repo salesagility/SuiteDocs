@@ -21,7 +21,7 @@ composer install
 
 SuiteCRM Api uses OAuth2 protocol, which needs public and private keys.
 
-First, open a terminal and go to `{{your-SuiteCRM-root}}/Api/V8/OAuth2`
+First, open a terminal and go to `{{suitecrm.root}}/Api/V8/OAuth2`
 
 Generate a private key:
 [source,php]
@@ -60,7 +60,7 @@ SuiteCRM Api allows two kind of grant types:
 |Parameter |Description
 
 |*Access Token URL*
-|{{your-SuiteCRM-url}}/Api/access_token
+|{{suitecrm.url}}/Api/access_token
 
 |*Username*
 |Only available for Password grants. Must be a valid SuiteCRM user name.
@@ -89,7 +89,7 @@ Fields can filter on attribute object. Allowed keys are valid bean properties.
 Example:
 
 [source,php]
-{{your-SuiteCRM-url}}/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
+{{suitecrm.url}}/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
 
 Result:
 
@@ -122,7 +122,7 @@ Page can filter beans and set pagination. Allowed key are *number* and *size*.
 Example:
 
 [source,php]
-{{suitecrm71.url}}/V8/module/Accounts?fields[Account]=name,account_type&page[number]=3&page[size]=1
+{{suitecrm.url}}/V8/module/Accounts?fields[Account]=name,account_type&page[number]=3&page[size]=1
 
 Result:
 
@@ -166,7 +166,7 @@ Sorting is set to ASC by default. If the property is prefixed with hyphen, the s
 Example:
 
 [source,php]
-{{suitecrm71.url}}/V8/module/Accounts?sort=-name
+{{suitecrm.url}}/V8/module/Accounts?sort=-name
 
 Result:
 
@@ -234,7 +234,7 @@ LTE = '<=';
 Example:
 
 [source,php]
-{{suitecrm71.url}}/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
+{{suitecrm.url}}/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
 
 Result:
 
@@ -247,12 +247,12 @@ Result:
 === Logout
 
 [source,php]
-GET {{your-SuiteCRM-url}}/V8/logout
+POST {{suiteCRM.url}}/V8/logout
 
 === Get a module by ID
 
 [source,php]
-GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
+GET {{suitecrm.url}}/V8/module/{moduleName}/{id}
 
 Available parameters: fields
 
@@ -264,7 +264,7 @@ V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,ac
 === Get collection of modules
 
 [source,php]
-GET {{your-SuiteCRM-url}}/V8/module/{moduleName}
+GET {{suitecrm.url}}/V8/module/{moduleName}
 
 Available parameters: fields, page, sort, filter
 
@@ -276,7 +276,7 @@ V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=
 === Create a module record
 
 [source,php]
-POST {{your-SuiteCRM-url}}/V8/module
+POST {{suitecrm.url}}/V8/module
 
 Example body:
 
@@ -294,7 +294,7 @@ Example body:
 === Update a module record
 
 [source,php]
-PATCH {{your-SuiteCRM-url}}/V8/module
+PATCH {{suitecrm.url}}/V8/module
 
 Example body:
 
@@ -312,12 +312,12 @@ Example body:
 === Delete a module record
 
 [source,php]
-DELETE {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}
+DELETE {{suitecrm.url}}/V8/module/{moduleName}/{id}
 
 === Get relationship
 
 [source,php]
-GET {{your-SuiteCRM-url}}/V8/module/{moduleName}/relationships/{relation}
+GET {{suitecrm.url}}/V8/module/{moduleName}/relationships/{relation}
 
 Available parameters: fields, page, sort, filter
 
@@ -329,7 +329,7 @@ V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=
 === Create relationship
 
 [source,php]
-POST {{your-SuiteCRM-url}}/V8/module/{moduleName}/relationships/{relation}
+POST {{suitecrm.url}}/V8/module/{moduleName}/relationships/{relation}
 
 Example body:
 
@@ -345,7 +345,7 @@ Example body:
 === Delete relationship
 
 [source,php]
-POST {{your-SuiteCRM-url}}/V8/module/{moduleName}/{id}/relationships
+POST {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships
 
 Example body:
 

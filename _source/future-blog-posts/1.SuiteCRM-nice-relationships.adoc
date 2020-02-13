@@ -3,7 +3,7 @@ title: Nice Relationships
 weight: 10
 ---
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: /images/en/community
 
 Module builder and studio are both great tools. They allow simple
 customisation of a SuiteCRM instance without having to know all the
