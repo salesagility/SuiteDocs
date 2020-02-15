@@ -59,8 +59,8 @@ securitygroups_records table if doing a one-time initial setup.
 
 If your users should only typically see their own records then the role
 assigned to the group would be configured to have Owner only rights. A
-manager who is a part of the group, but who should see be able to see
-all records in the group would have a role directly assigned to you
+manager who is a part of the group and who should also be able to see
+all records in the group would have a role directly assigned to the manger's
 record that gives Group access.
 
 For more help check out this 
@@ -76,9 +76,8 @@ Roles determine what a user can do with a record once they have access to it.
 == A Typical Hierarchy Setup
 
 Although SecuritySuite can handle any organizational structure, the most
-common scenario it is used for is one where the owner can see
-everything, managers can see both their own records and those of their
-team, and team members can only see their own records.
+common scenario is one where the owner can see everything, managers can see both their 
+own records as well as those of their team, and team members can only see their own records.
 
 === The Scenario
 
