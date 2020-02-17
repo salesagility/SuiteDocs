@@ -88,14 +88,14 @@ it doesn't apply for links to pages, which should be relative.
 :toc:
 ```
 - Including an automatically generated *Table of Contents* of the pages in directory levels below the current page, 
-to be used in pages that have a sub-directory. (This is a shorcode provided by link:https://learn.netlify.com/en/shortcodes/children/[our Theme]).
+to be used in pages that have a sub-directory. (This is a shorcode provided by link:https://learn.netlify.com/en/shortcodes/children/[our Theme^]).
 
 ```
 {{%/* children depth="3" showhidden="true" */%}}
 ```
 - Including an automatically generated *List of GitHub Contributors* (for the *Release Notes* pages). You can 
 list an indefinte number of contributors. (This is a shortcode 
-link:https://github.com/salesagility/SuiteDocs/blob/master/layouts/shortcodes/ghcontributors.html[defined in our own site]), 
+link:https://github.com/salesagility/SuiteDocs/blob/master/layouts/shortcodes/ghcontributors.html[defined in our own site^]), 
 and can serve as an example if you want to create others).
 ```
 {{%/* ghcontributors username1 username2 */%}}
