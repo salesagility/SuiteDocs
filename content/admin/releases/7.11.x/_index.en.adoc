@@ -21,13 +21,10 @@ _Released 14/02/2020_
 
 ==== icon:lock[] Security
 
-* CVE: tba - Local File Inclusion
-* CVE: tba - PHP Object Injection
-* CVE: tba - PHP Object Injection
-* CVE: tba - PHP Object Injection
-* CVE: tba - Second-Order PHP Object Injection
-* CVE: tba - Second-Order PHP Object Injection
-* CVE: tba - Bean Manipulation
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-8803[CVE: 2020-8803^] - Local File Inclusion
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-8801[CVE: 2020-8801^] - PHP Object Injections
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-8800[CVE: 2020-8800^] - Second-Order PHP Object Injections
+* https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-8802[CVE: 2020-8802^] - Bean Manipulation
 
 
 ==== icon:bug[] Bug Fixes
