@@ -79,17 +79,25 @@ Example sentence indicating you can press a btn:[Save] on the user interface.
 ```
 :imagesdir: /images/en/admin
 ```
-This directory should be specified as an absolute path (starting with a `/`), not relative (like `../../images`).
+For images, this directory should be specified as an absolute path (starting 
+with a `/`), not relative like `../../images`. Note that this guideline is just for images, 
+it doesn't apply for links to pages, which should be relative.
 
-- Including an automatically generated *Table of Contents* of the sections inside this file:
+- Including an automatically generated *Table of Contents* of the sections inside this file:https://learn.netlify.com/en/shortcodes/children/
 ```
 :toc:
 ```
-- Including an automatically generated *Table of Contents* of the pages in directory levels below the current page 
-(used in pages that have a sub-directory).
+- Including an automatically generated *Table of Contents* of the pages in directory levels below the current page, 
+to be used in pages that have a sub-directory. (This is a shorcode provided by [our Theme](https://learn.netlify.com/en/shortcodes/children/)).
 
 ```
-{{%/* children depth="3" showhidden="true" */%}}
+{{% children depth="3" showhidden="true" %}}
+```
+- Including an automatically generated *List of GitHub Contributors* (for the *Release Notes* pages). You can 
+list an indefinte number of contributors. (This is a shortcode [defined in our own site](https://github.com/salesagility/SuiteDocs/blob/master/layouts/shortcodes/ghcontributors.html), and can serve as an example if you want
+to create others).
+```
+{{% ghcontributors username1 username2 %}}
 ```
 
 == Content
