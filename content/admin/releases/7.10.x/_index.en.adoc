@@ -166,6 +166,8 @@ use Psr\Container\ContainerInterface;
 
 === icon:heart[] Community
 
+_Special thanks to http://karmainsecurity.com/[Egidio Romano^] for reporting the security issues addressed in this release!_
+
 _Special thanks to the following members for their contributions and participation in this release!_
 
 {{% ghcontributors re8260 connorshea marin-h ebogaard lazka crgrieve Abuelodelanada dominicchinkh kichloo %}}
