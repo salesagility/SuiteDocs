@@ -1,0 +1,41 @@
+---
+Title: Types of Pull Request Labels
+Weight: 30
+---
+
+Types of Issue Labels
+|===
+|Label name |salesagility/suiteCRM |Description
+
+|Assessed
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Pull requests that have been confirmed to fix the original issue by a SalesAgility member.
+
+|Ready to Merge
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Pull requests that have both been assessed and code reviewed by SalesAgility.
+
+|Needs Tests
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Pull requests that require addition acceptance or unit tests before they can be merged.
+
+|Community Contribution
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Pull requests that have been created by a member of the community.
+
+|Enhancement
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Pull requests that add additional features or functionality. These pull requests will need to be reviewed by SalesAgility before being merged.
+
+|In Review
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Currently in-review and requires additional work from creator
+
+|Wrong Branch
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Pull requests that have been created to the wrong branch.
+
+|duplicate
+|https://github.com/salesagility/SuiteCRM/pulls?q=is%3Aopen+is%3Apr+label%3AAssessed[search]
+|Duplicate of other pull requests.
+|===
