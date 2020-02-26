@@ -3,6 +3,8 @@ weight: 6
 title: "Metadata"
 ---
 
+:toc:
+
 = 6. Metadata
 
 == Intro
@@ -794,4 +796,57 @@ used to confirm if a module should be shown in studio for user tweaking.
 Note that, unlike other metadata files, the file in
 `modules/<TheModule>/metadata/studio.php` will be the only one checked.
 A file in `custom/modules/<TheModule>/metadata/studio.php` will have no
-effect. link:../metadata[↩]
+effect. 
+
+== Code Example
+
+This is an example of setting up a function subpanel using Metadata.
+
+In this example the cases module has a custom field `incident_code_c`
+which is used to track cases with the same root cause. We’ll add a
+subpanel to show all cases that have the same `incident_code_c`.
+
+Initially we add to the `subpanel_setup` section of Cases by creating
+the following file in
+`custom/Extension/modules/Cases/Ext/Layoutdefs/IncidentLayoutdefs.php`
+
+.Example A.1: IncidentLayoutdefs.php
+[source,php]
+----
+<?php
+$layout_defs["Cases"]["subpanel_setup"]['incident_cases'] = array(
+   'module' => 'Cases',
+   'title_key' => 'LBL_INCIDENT_CASES',
+   'subpanel_name' => 'default',
+   'get_subpanel_data' => 'function:get_cases_by_incident',
+   'function_parameters' => 
+           array('import_function_file' => 'custom/modules/Cases/IncidentUtils.php',),
+           "generate_select" => true,
+);
+----
+
+
+
+Next we create the file which will define our `get_cases_by_incident`
+function `custom/modules/Cases/IncidentUtils.php`.
+
+.Example A.2: IncidentUtils.php
+[source,php]
+----
+<?php
+ function get_cases_by_incident(){
+         global $db;
+         //Get the current bean
+         $bean = $GLOBALS['app']->controller->bean;
+         $incidentCode = $db->quote($bean->incident_code_c);
+         //Create the SQL array
+         $ret = array();
+         $ret['select'] = ' SELECT id FROM cases ';
+         $ret['from'] = ' FROM cases ';
+         $ret['join'] = "";
+         //Get all cases where the incident code matches but exclude the current case.
+         $ret['where']="WHERE cases.deleted = 0 AND cases_cstm.incident_code_c = '{$incidentCode}' AND cases.id != '{$bean->id}'";
+         return $ret;
+}
+----
+
