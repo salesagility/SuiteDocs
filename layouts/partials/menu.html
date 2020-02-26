@@ -149,7 +149,7 @@
       {{ if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
           <a class="padding">
-            <i class="fas fa-fw fa-user-edit"></i>
+            <i class="fas fa-user-edit fa-fw"></i>
           <div class="select-style">
             <select id="select-language" onchange="location = this.value;">
           {{ $siteLanguages := .Site.Languages}}
@@ -218,7 +218,7 @@
       <hr/>
       <ul>
       {{ if $showvisitedlinks}}
-        <li><a class="padding" href="#" data-proofer-ignore data-clear-history-toggle=""><i class="fas fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
+        <li><a class="padding" href="#" data-proofer-ignore data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> {{T "Clear-History"}}</a></li>         
       {{ end }}
       </ul>
     </section>
@@ -244,7 +244,7 @@
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
-            <i class="fas fa-check read-icon"></i>
+            <i class="fas read-icon"></i>
           {{ end }}
       </a>
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
