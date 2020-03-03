@@ -667,8 +667,7 @@ entry for each subpanel usually has the following defined:
   the form `function:theFunctionName`. Additionally you can specify the
   location of the function and any additional parameters that are needed
   by using the `function_parameters` key. An example of a subpanel which
-  uses a function can be found in link:../appendix-a-code-examples/[Appendix
-  A].
+  uses a function can be found below.
 `function_parameters`::
   Specifies the parameters for a subpanel which gets it’s information
   from a function (see +
