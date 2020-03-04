@@ -2,7 +2,7 @@
 
 asciidoctor -V
 hugo thou shalt fail
-hugoReturnCode = $?
+hugoReturnCode=$?
 echo "Hugo return code is "$hugoReturnCode
 
 if [ $hugoReturnCode -ne 0 ] 
