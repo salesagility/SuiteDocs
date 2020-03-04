@@ -1,10 +1,17 @@
 #!/bin/bash
 
+cat /etc/issue
 asciidoctor -V
 hugo thou shalt fail
 hugoReturnCode=$?
-echo "Hugo return code is "$hugoReturnCode
 
 if [ $hugoReturnCode -ne 0 ] 
-   then echo "Error is caught in if"
+  then 
+     echo "Hugo failed with return code "$hugoReturnCode"!!! ------------------------------------ !!!"
+  else
+     echo "Hugo succeeded, running htmltest..."
+     curl https://htmltest.wjdp.uk | bash
+     ./bin/htmltest  | tee >(grep -v 'errors in\|failed in\|htmltest started\|======' | cut -d '-' -f 1 | sort | uniq -c -w 10)
 fi
+
+return $hugoReturnCode
