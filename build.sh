@@ -17,6 +17,7 @@ echo COMMIT_REF is $COMMIT_REF
 echo -------------
 
 # the main call to Hugo, passing it all parameters from the command-line:
+echo Running Hugo with arguments: "$@"
 hugo "$@"
 hugoReturnCode=$?
 
