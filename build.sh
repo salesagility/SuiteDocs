@@ -2,7 +2,7 @@
 
 cat /etc/issue
 asciidoctor -V
-hugo thou shalt fail
+hugo 
 hugoReturnCode=$?
 
 if [ $hugoReturnCode -ne 0 ] 
@@ -14,4 +14,4 @@ if [ $hugoReturnCode -ne 0 ]
      ./bin/htmltest  | tee >(grep -v 'errors in\|failed in\|htmltest started\|======' | cut -d '-' -f 1 | sort | uniq -c -w 10)
 fi
 
-return $hugoReturnCode
+exit $hugoReturnCode
