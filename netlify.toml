@@ -1,6 +1,6 @@
 
 # Our build command used to include "bundle" to support Asciidoc format,
-# making sure Asciidoctor gets installed, now Netlifty seems to take care of it
+# making sure Asciidoctor gets installed, now Netlify seems to take care of it
 [build]
   publish = "public"
   command = "chmod +x build.sh && ./build.sh"
@@ -10,7 +10,7 @@
 [context.production.environment]
   HUGO_VERSION = "0.63.2"
   HUGO_ENV = "production"
-  HUGO_BASEURL = "https://docs.suitecrm.com/"
+  HUGO_BASEURL = "https://docs.suitecrm.com"
 
 # The Deploy Preview Context applies to every Deploy Preview you create:
 [context.deploy-preview]
@@ -28,7 +28,7 @@
 
 # Besides these three predefined contexts, you can also use branch names as context names:
 [context.preview.environment]
-  HUGO_BASEURL = "https://docs.suitecrm.com/"
+  HUGO_BASEURL = "https://docs.suitecrm.com"
 
 
 
