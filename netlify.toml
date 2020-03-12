@@ -4,7 +4,8 @@
   publish = "public"
   command = "chmod +x build.sh && ./build.sh"
   HUGO_ENABLEGITINFO = "true"
-
+  RUBY_VERSION = "2.6.2"
+  
 # The Production Context applies to the branch you have configured as main branch to deploy:
 [context.production.environment]
   HUGO_VERSION = "0.63.2"
