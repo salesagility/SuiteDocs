@@ -1,6 +1,6 @@
 ---
-weight: 19
 title: "Further Resources"
+weight: 200
 ---
 
 :experimental:
@@ -14,16 +14,16 @@ developing with SuiteCRM.
 
 == SuiteCRM Website
 
-The SuiteCRM website http://suitecrm.com[SuiteCRM.com] has many
+The SuiteCRM website http://suitecrm.com[suitecrm.com^] has many
 excellent resources including:
 
-* https://community.suitecrm.com[SuiteCRM forums] - Come and say hi!
-* https://suitecrm.com/suitecrm/blog[SuiteCRM Blog]
-* https://suitecrm.com/wiki/index.php/Main_Page[SuiteCRM Wiki]
+* https://community.suitecrm.com[SuiteCRM Community Forums^] - Come and say hi!
+* https://suitecrm.com/about/newsroom/news/[SuiteCRM Blog^]
 
 == External SuiteCRM Resources
 
-https://github.com/salesagility/SuiteCRM[SuiteCRM GitHub] - The SuiteCRM source code is hosted on GitHub. Here you can get bleeding edge code changes and even contribute code.
+https://github.com/salesagility/SuiteCRM[SuiteCRM GitHub^] - The SuiteCRM source code is hosted on GitHub. 
+Here you can get bleeding edge code changes and even contribute code.
 
 == SugarCRM Resources
 
@@ -32,29 +32,29 @@ edition and much of the documentation is still valid. The appropriate
 version for SuiteCRM information is 6.5. Versions of documentation
 higher than this (i.e. 7) will probably not be relevant.
 
-* https://support.sugarcrm.com/Documentation/Unsupported_Versions/Sugar_6.5/[SugarCRM version 6.5 Developer docs]
-* https://community.sugarcrm.com/community/developer[SugarCRM Developer Blog]
+* https://support.sugarcrm.com/Documentation/Unsupported_Versions/Sugar_6.5/[SugarCRM version 6.5 Developer docs^]
+* https://community.sugarcrm.com/community/developer[SugarCRM Developer Blog^]
 
 == Technical Links
 
-* https://www.php.net[PHP] - The main language used by SuiteCRM
-* https://www.smarty.net/[Smarty] - The templating language used throughout SuiteCRM.
-* https://xdebug.org[XDebug] - Debugging/profiling extension for PHP
-* https://git-scm.com/[Git] - Distributed version control system
-* https://yuilibrary.com/[YUI] - Legacy Javascript library used in SuiteCRM
-* https://jquery.com/[JQuery] - Javascript library used in SuiteCRM - to
+* https://www.php.net[PHP^] - The main language used by SuiteCRM
+* https://www.smarty.net/[Smarty^] - The templating language used throughout SuiteCRM.
+* https://xdebug.org[XDebug^] - Debugging/profiling extension for PHP
+* https://git-scm.com/[Git^] - Distributed version control system
+* https://yuilibrary.com/[YUI^] - Legacy Javascript library used in SuiteCRM
+* https://jquery.com/[JQuery^] - Javascript library used in SuiteCRM - to
 be preferred over YUI.
-* https://github.com/PHPMailer/PHPMailer[PHPMailer] Email library used
+* https://github.com/PHPMailer/PHPMailer[PHPMailer^] Email library used
 in SuiteCRM
-* http://php.net/manual/en/book.apc.php[APC] - Alternative PHP Cache.
+* http://php.net/manual/en/book.apc.php[APC^] - Alternative PHP Cache.
 PHP Opcode cache supported by SuiteCRM
-* https://www.php.net/manual/en/book.wincache.php[WinCache] - Windows PHP
+* https://www.php.net/manual/en/book.wincache.php[WinCache^] - Windows PHP
 cache. PHP Opcode cache supported by SuiteCRM
-* https://www.jetbrains.com/phpstorm/[PHPStorm] - PHP IDE (Paid)
-* https://eclipse.org/pdt/[Eclipse PHP Development Tools] - PHP IDE
+* https://www.jetbrains.com/phpstorm/[PHPStorm^] - PHP IDE (Paid)
+* https://eclipse.org/pdt/[Eclipse PHP Development Tools^] - PHP IDE
 (Free and Open Source)
 
 == Other Links
 
-* https://salesagility.com/[SalesAgility] - The company behind SuiteCRM.
-* http://www.jsmackin.co.uk[Jim Mackin] - Me :) link:../further-resources[↩]
+* https://salesagility.com/[SalesAgility^] - The company behind SuiteCRM.
+* http://www.jsmackin.co.uk[Jim Mackin^] - Personal website of the original author of this Developer Guide.
