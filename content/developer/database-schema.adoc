@@ -3,11 +3,15 @@ title: Database Schema
 weight: 195
 ---
 
+:imagesdir: /images/en/developer/database-schema
+
 == SchemaSpy tables and diagrams
 
 To learn about our database structure, with its tables and relationships, 
-please visit the link:++https://schema--suitecrm-docs.netlify.com/schema++[SuiteCRM Database Schema^], 
+please visit the link:++https://schema%2D%2Dsuitecrm%2Ddocs.netlify.com/schema++[SuiteCRM Database Schema^], 
 generated with SchemaSpy.
+
+image:schemaspy.png[link="https://schema%2D%2Dsuitecrm%2Ddocs.netlify.com/schema", SchemaSpy screenshot, window="_blank"]
 
 == General principles and sample SQL queries
 
@@ -43,9 +47,10 @@ Here is a sample query to join a module's table with some custom fields (in this
 
 [source,sql]
 ----
-SELECT first_name, last_name, contacts_cstm.age_c FROM `contacts`
-LEFT JOIN contacts_cstm 
-ON contacts.id = contacts_cstm.id_c
+SELECT first_name, last_name, contacts_cstm.age_c 
+  FROM `contacts`
+  LEFT JOIN contacts_cstm 
+       ON contacts.id = contacts_cstm.id_c
 ----
 
 List orphaned records from `contacts_cstm`, where the base record is not present, but a row for it still
@@ -54,10 +59,10 @@ exists in the custom table:
 [source,sql]
 ----
 SELECT * -- DELETE ChildTable
-FROM contacts_cstm ChildTable    
-LEFT JOIN contacts ParentTable 
-ON ChildTable.id_c = ParentTable.id
-WHERE ParentTable.id IS NULL
+  FROM contacts_cstm ChildTable    
+  LEFT JOIN contacts ParentTable 
+       ON ChildTable.id_c = ParentTable.id
+  WHERE ParentTable.id IS NULL
 ----
 
 That query is a SELECT, but if you change the first line to what is after the comment (`--`),
@@ -82,35 +87,54 @@ There is a table called `relationships` which contains metadata information retr
 A few sample queries should suffice to give you an idea of how SuiteCRM tables typically reference each other:
 
 . The query to get data from a **custom field** that was given above;
-
++
 . Traversing a **Flex Relate** field where several connected record types are allowed. The `parent_type` 
 field contains the name of the related module, while the `parent_id` is a foreign key into that module's table:
-
++
 [source,sql]
 ----
 SELECT accounts.name, calls.name, calls.status
-FROM accounts
-INNER JOIN calls
-ON
-   calls.parent_type = 'Accounts' AND
-   calls.parent_id = accounts.id AND 
-   calls.deleted = 0
-WHERE accounts.deleted = 0
+  FROM accounts
+  INNER JOIN calls ON
+        calls.parent_type = 'Accounts' AND
+        calls.parent_id = accounts.id AND 
+        calls.deleted = 0
+  WHERE accounts.deleted = 0
 ----
-
++
 . A query to traverse a **many-to-many relationship** using a middle table. In this example, a list of 
 account names and linked contacts:
-
++
+image:schema.png[Schema]
++
 [source,sql]
 ----
 SELECT accounts.name, contacts.first_name, contacts.last_name
-FROM accounts
-INNER JOIN accounts_contacts
-    ON (accounts.id = accounts_contacts.account_id AND accounts_contacts.deleted = 0) 
-INNER JOIN contacts
-    ON (contacts.id = accounts_contacts.contact_id AND contacts.deleted = 0)
-WHERE accounts.deleted = 0
-ORDER BY accounts.name
+  FROM accounts
+  INNER JOIN accounts_contacts
+        ON (accounts.id = accounts_contacts.account_id AND accounts_contacts.deleted = 0) 
+  INNER JOIN contacts
+        ON (contacts.id = accounts_contacts.contact_id AND contacts.deleted = 0)
+  WHERE accounts.deleted = 0
+  ORDER BY accounts.name
+----
++
+. Traversing the **`email_addresses` relationship** to get the email addresses of Users (easily adaptable for
+other modules, like Contacts, Leads, etc).
++
+[source,sql]
+----
+SELECT users.user_name,
+      email_address
+ FROM users
+      LEFT JOIN email_addr_bean_rel
+             ON email_addr_bean_rel.bean_id=users.id
+               AND email_addr_bean_rel.bean_module = 'Users'
+               AND email_addr_bean_rel.primary_address = 1
+               AND email_addr_bean_rel.deleted = 0
+      LEFT JOIN email_addresses
+             ON email_addresses.id = email_addr_bean_rel.email_address_id
+               AND email_addresses.deleted = 0
 ----
 
 ==== Cleaning up Relationships to deleted records
@@ -126,11 +150,11 @@ to missing records:
 [source,sql]
 ----
 SELECT record_id, module, s.deleted, c.last_name, c.deleted
-FROM securitygroups_records s    
-LEFT JOIN contacts c 
-ON s.record_id = c.id
-WHERE c.id IS NULL  
-AND s.module='Contacts'  
+  FROM securitygroups_records s    
+       LEFT JOIN contacts c 
+         ON s.record_id = c.id
+  WHERE c.id IS NULL AND
+        s.module='Contacts'  
 ----
 
 This query can easily be turned into a DELETE in order to remove these records.
@@ -141,8 +165,8 @@ even if the `record_id` still exists:
 [source,sql]
 ----
 SELECT record_id, module, deleted
-FROM securitygroups_records    
-WHERE module='Contacts' AND deleted='1'
+  FROM securitygroups_records    
+  WHERE module='Contacts' AND deleted='1'
 ----
 
 
