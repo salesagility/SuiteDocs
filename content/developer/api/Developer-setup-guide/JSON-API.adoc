@@ -342,7 +342,7 @@ Example body:
 ----
 {
   "data": {
-    "type": "contacts",
+    "type": "Contacts",
     "id": "129a096c-5983-1d59-5ddf-5d95ec91c144"
   }
 }
