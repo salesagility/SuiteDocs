@@ -236,6 +236,13 @@ Example:
 [source,php]
 {{suitecrm.url}}/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
 
+Example:
+
+[source,php]
+{{suitecrm.url}}/V8/module/Accounts?filter[account_type][eq]=Customer
+
+
+
 Result:
 
 [source,json]
@@ -317,7 +324,7 @@ DELETE {{suitecrm.url}}/V8/module/{moduleName}/{id}
 === Get relationship
 
 [source,php]
-GET {{suitecrm.url}}/V8/module/{moduleName}/relationships/{relation}
+GET {{suitecrm.url}}/V8/module/{moduleName}/relationships/{relatedModule}
 
 Available parameters: fields, page, sort, filter
 
@@ -329,7 +336,7 @@ V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=
 === Create relationship
 
 [source,php]
-POST {{suitecrm.url}}/V8/module/{moduleName}/relationships/{relation}
+POST {{suitecrm.url}}/V8/module/{moduleName}/relationships
 
 Example body:
 
@@ -337,7 +344,8 @@ Example body:
 ----
 {
   "data": {
-    "type": "contacts"
+    "type": "contacts",
+    "id": "129a096c-5983-1d59-5ddf-5d95ec91c144"
   }
 }
 ----
@@ -345,14 +353,5 @@ Example body:
 === Delete relationship
 
 [source,php]
-POST {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships
+POST {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships/{relatedModule}/{relatedBeanId}
 
-Example body:
-
-[source,json]
-{
-  "data": {
-    "type": "contacts",
-	"id": "67267a29-ef0d-a14d-e11a-5b02edd1b180"
-  }
-}
