@@ -324,14 +324,12 @@ DELETE {{suitecrm.url}}/V8/module/{moduleName}/{id}
 === Get relationship
 
 [source,php]
-GET {{suitecrm.url}}/V8/module/{moduleName}/relationships/{relatedModule}
-
-Available parameters: fields, page, sort, filter
+GET {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships/{relatedModuleName}
 
 Example:
 
 [source,php]
-V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
+V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts
 
 === Create relationship
 
@@ -354,4 +352,9 @@ Example body:
 
 [source,php]
 POST {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships/{relatedModule}/{relatedBeanId}
+
+Example:
+
+[source,php]
+V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts/11a71596-83e7-624d-c792-5ab9006dd493
 
