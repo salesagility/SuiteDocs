@@ -42,66 +42,118 @@ priority, and action.
 [discrete]
 ===== General Labels:
 
-* https://github.com/salesagility/SuiteCRM/labels/Bug[Bug^]
-* https://github.com/salesagility/SuiteCRM/labels/Community%20Contribution[Community Contribution^]
-* https://github.com/salesagility/SuiteCRM/labels/Deprecated[Deprecated^]
-* https://github.com/salesagility/SuiteCRM/labels/Enhancement[Enhancement^]
-* https://github.com/salesagility/SuiteCRM/labels/Fix%20Proposed[Fix Proposed^]
-* https://github.com/salesagility/SuiteCRM/labels/Good%20First%20Issue[Good First Issue^]
-* https://github.com/salesagility/SuiteCRM/labels/Help%20Wanted[Help Wanted^]
-* https://github.com/salesagility/SuiteCRM/labels/High%20Priority[High Priority^]
-* https://github.com/salesagility/SuiteCRM/labels/Medium%20Priority[Medium Priority^]
-* https://github.com/salesagility/SuiteCRM/labels/Low%20Priority[Low Priority^]
-* https://github.com/salesagility/SuiteCRM/labels/Resolved%3A%20Next%20Release[Resolved: Next Release^]
-* https://github.com/salesagility/SuiteCRM/labels/Suggestion[Suggestion^]
-* https://github.com/salesagility/SuiteCRM/labels/Question[Question^]
+* https://github.com/salesagility/SuiteCRM/labels/Bug[Bug^] +
+Bugs within the core SuiteCRM codebase
+* https://github.com/salesagility/SuiteCRM/labels/Community%20Contribution[Community Contribution^] +
+These are contribution made by the community
+* https://github.com/salesagility/SuiteCRM/labels/Deprecated[Deprecated^] +
+Issues & PRs related to an unsupported version of SuiteCRM
+* https://github.com/salesagility/SuiteCRM/labels/Enhancement[Enhancement^] +
+Pull requests that provide more functionality. Associated Issues are called suggestions
+* https://github.com/salesagility/SuiteCRM/labels/Fix%20Proposed[Fix Proposed^] +
+A issue that has a PR related to it that provides a possible resolution
+* https://github.com/salesagility/SuiteCRM/labels/Good%20First%20Issue[Good First Issue^] +
+A good issue for someone new to SuiteCRM or web development
+* https://github.com/salesagility/SuiteCRM/labels/Help%20Wanted[Help Wanted^] +
+Requesting help from the community to achieve a solution
+* https://github.com/salesagility/SuiteCRM/labels/High%20Priority[High Priority^] +
+Issues & PRs that are critical; broken core functionality; fatal errors; there are no workarounds
+* https://github.com/salesagility/SuiteCRM/labels/Medium%20Priority[Medium Priority^] +
+Issues & PRs that are important; broken functions; errors; there are workarounds
+* https://github.com/salesagility/SuiteCRM/labels/Low%20Priority[Low Priority^] +
+Issues & PRs that are minor; broken styling; warns; there are practical workarounds
+* https://github.com/salesagility/SuiteCRM/labels/Resolved%3A%20Next%20Release[Resolved: Next Release^] +
+Issues that have been resolved in a hotfix branch and scheduled to be in the next release
+* https://github.com/salesagility/SuiteCRM/labels/Suggestion[Suggestion^] +
+Issue containing a suggestion of functionality, process or UI. Associated PRs are called enhancement
+* https://github.com/salesagility/SuiteCRM/labels/Question[Question^] +
+This is a question raised about the functionality of SuiteCRM
 
 [discrete]
 ===== Description Labels:
 
-* https://github.com/salesagility/SuiteCRM/labels/API[API^]
-* https://github.com/salesagility/SuiteCRM/labels/Campaigns[Campaigns^]
-* https://github.com/salesagility/SuiteCRM/labels/Cases[Cases^]
-* https://github.com/salesagility/SuiteCRM/labels/Clean%20Up[Clean Up^]
-* https://github.com/salesagility/SuiteCRM/labels/Databases[Databases^]
-* https://github.com/salesagility/SuiteCRM/labels/Dependencies[Dependencies^]
-* https://github.com/salesagility/SuiteCRM/labels/Developer%20Tools[Developer Tools^]
-* https://github.com/salesagility/SuiteCRM/labels/Discussion[Discussion^]
-* https://github.com/salesagility/SuiteCRM/labels/Elasticsearch[Elasticsearch^]
-* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACampaigns[Emails:Campaigns^]
-* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACases[Emails:Campaigns^]
-* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACompose[Emails:Compose^]
-* https://github.com/salesagility/SuiteCRM/labels/Emails%3AConfig[Emails:Config^]
-* https://github.com/salesagility/SuiteCRM/labels/Emails%3ATemplates[Emails:Templates^]
-* https://github.com/salesagility/SuiteCRM/labels/Emails[Emails^]
-* https://github.com/salesagility/SuiteCRM/labels/Environment[Environment^]
-* https://github.com/salesagility/SuiteCRM/labels/Installation[Installation^]
-* https://github.com/salesagility/SuiteCRM/labels/Language[Language^]
-* https://github.com/salesagility/SuiteCRM/labels/Module[Module^]
-* https://github.com/salesagility/SuiteCRM/labels/Reports[Reports^]
-* https://github.com/salesagility/SuiteCRM/labels/Studio[Studio^]
-* https://github.com/salesagility/SuiteCRM/labels/Styling[Styling^]
-* https://github.com/salesagility/SuiteCRM/labels/Upgrading[Upgrading^]
-* https://github.com/salesagility/SuiteCRM/labels/Workflow[Workflow^]
-* https://github.com/salesagility/SuiteCRM/labels/Security[Security^]
+* https://github.com/salesagility/SuiteCRM/labels/API[API^] +
+Issues & PRs related to all things regarding the API
+* https://github.com/salesagility/SuiteCRM/labels/Campaigns[Campaigns^] +
+Issues & PRs related to all things regarding campaigns
+* https://github.com/salesagility/SuiteCRM/labels/Cases[Cases^] +
+Issues & PRs related to all things regarding cases
+* https://github.com/salesagility/SuiteCRM/labels/Clean%20Up[Clean Up^] +
+Issues & PRs related to all things regarding to technical debt and log files
+* https://github.com/salesagility/SuiteCRM/labels/Databases[Databases^] +
+Issues & PRs related to all things regarding databases
+* https://github.com/salesagility/SuiteCRM/labels/Dependencies[Dependencies^] +
+Pull Requests that update a core dependency
+* https://github.com/salesagility/SuiteCRM/labels/Developer%20Tools[Developer Tools^] +
+Issues & PRs related to all things regarding development tools like Robo, Travis, etc
+* https://github.com/salesagility/SuiteCRM/labels/Discussion[Discussion^] +
+Issues & PRs related to ongoing discussions
+* https://github.com/salesagility/SuiteCRM/labels/Elasticsearch[Elasticsearch^] +
+Issues & PRs related to all things regarding Elasticsearch
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACampaigns[Emails:Campaigns^] +
+Issues & PRs related to email campaigns
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACases[Emails:Cases^] +
+Issues & PRs related to email cases & AOP
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ACompose[Emails:Compose^] +
+Issues & PRs related to email compose
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3AConfig[Emails:Config^] +
+Issues & PRs related to email configuration
+* https://github.com/salesagility/SuiteCRM/labels/Emails%3ATemplates[Emails:Templates^] +
+Issues & PRs related to email templates
+* https://github.com/salesagility/SuiteCRM/labels/Emails[Emails^] +
+Issues & PRs related to all things regarding emails & email module
+* https://github.com/salesagility/SuiteCRM/labels/Environment[Environment^] +
+Pull requests that provide more functionality. Associated Issues are called suggestions
+* https://github.com/salesagility/SuiteCRM/labels/Installation[Installation^] +
+Issues & PRs related to the installation of the application
+* https://github.com/salesagility/SuiteCRM/labels/Language[Language^] +
+Issues & PRs that are confirmed as issues with language & translation within the core
+* https://github.com/salesagility/SuiteCRM/labels/Module[Module^] +
+Issues & PRs related to modules that do not have specific label
+* https://github.com/salesagility/SuiteCRM/labels/Reports[Reports^] +
+Issues & PRs related to all things regarding reports
+* https://github.com/salesagility/SuiteCRM/labels/Studio[Studio^] +
+Issues & PRs related to all things regarding studio & module builder
+* https://github.com/salesagility/SuiteCRM/labels/Styling[Styling^] +
+Issues & PRs related to all things regarding styling
+* https://github.com/salesagility/SuiteCRM/labels/Upgrading[Upgrading^] +
+Issues & PRs related to all things regarding upgrading & UpgradeWizard
+* https://github.com/salesagility/SuiteCRM/labels/Workflow[Workflow^] +
+Issues & PRs related to all things regarding workflow
+* https://github.com/salesagility/SuiteCRM/labels/Security[Security^] +
+Pull requests that address a security vulnerability
 
 [discrete]
 ===== Status Labels:
 
-* https://github.com/salesagility/SuiteCRM/labels/Duplicate[Duplicate^]
-* https://github.com/salesagility/SuiteCRM/labels/Assessed[Assessed^]
-* https://github.com/salesagility/SuiteCRM/labels/Community%20Assessed[Community Assessed^]
-* https://github.com/salesagility/SuiteCRM/labels/In%20Review[In Review^]
-* https://github.com/salesagility/SuiteCRM/labels/Invalid[Invalid^]
-* https://github.com/salesagility/SuiteCRM/labels/Needs%20Assessed[Needs Assessed^]
-* https://github.com/salesagility/SuiteCRM/labels/Needs%20Documentation[Needs Documentation^]
-* https://github.com/salesagility/SuiteCRM/labels/Needs%20Duplicated%3A%20Latest[Needs Duplicated: Latest^]
-* https://github.com/salesagility/SuiteCRM/labels/Needs%20Duplicated%3A%20LTS[Needs Duplicated: LTS^]
-* https://github.com/salesagility/SuiteCRM/labels/Needs%20Review[Needs Review^]
-* https://github.com/salesagility/SuiteCRM/labels/Requires%20Tests[Requires Tests^]
-* https://github.com/salesagility/SuiteCRM/labels/Requires%20Updates[Requires Updates^]
-* https://github.com/salesagility/SuiteCRM/labels/Work%20In%20Progress[Work In Progress^]
-* https://github.com/salesagility/SuiteCRM/labels/Wrong%20Branch[Wrong Branch^]
+* https://github.com/salesagility/SuiteCRM/labels/Duplicate[Duplicate^] +
+Issues & PRs which are a duplicate of an existing issue/PR
+* https://github.com/salesagility/SuiteCRM/labels/Assessed[Assessed^] +
+PRs that have been tested and confirmed to resolve an issue by a core team member
+* https://github.com/salesagility/SuiteCRM/labels/Community%20Assessed[Community Assessed^] +
+PRs that have been tested and confirmed to resolve an issue by at least 2 community members
+* https://github.com/salesagility/SuiteCRM/labels/In%20Review[In Review^] +
+Pull Requests that are activity being reviewed by the core team
+* https://github.com/salesagility/SuiteCRM/labels/Invalid[Invalid^] +
+Issues & PRs that are deemed as not required, unrelated or incorrect
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Assessed[Needs Assessed^] +
+Needs the core team to assess
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Documentation[Needs Documentation^] +
+Requires adding documentation
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Duplicated%3A%20Latest[Needs Duplicated: Latest^] +
+Pull Requests that require being duplicated to the "latest" branches i.e. Hotfix
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Duplicated%3A%20LTS[Needs Duplicated: LTS^] +
+Pull Requests that require being duplicated to the LTS branches i.e. hotfix-7.x.x
+* https://github.com/salesagility/SuiteCRM/labels/Needs%20Review[Needs Review^] +
+Needs the core team to code review
+* https://github.com/salesagility/SuiteCRM/labels/Requires%20Tests[Requires Tests^] +
+Suggestion to OP to provide automated testing (unit, or acceptance)
+* https://github.com/salesagility/SuiteCRM/labels/Requires%20Updates[Requires Updates^] +
+Issues & PRs which requires input or update from the author
+* https://github.com/salesagility/SuiteCRM/labels/Work%20In%20Progress[Work In Progress^] +
+Pull Requests that are not yet ready to be assessed
+* https://github.com/salesagility/SuiteCRM/labels/Wrong%20Branch[Wrong Branch^] +
+Pull requests that point towards a restricted branch such as master
 
 We encourage users whom feel an issue should be raised as a higher
 priority for a next release that they should make a comment to that
