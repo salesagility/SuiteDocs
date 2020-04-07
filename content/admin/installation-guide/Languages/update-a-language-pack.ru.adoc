@@ -12,10 +12,10 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Instal
 
 
  . Перед установкой обновлённого языкового пакета удалите ранее установленный пакет, как это описано в разделе 
-link:../../../administration-panel/developer-tools/#_Загрузчик_модулей[Деинсталляция модуля].
+link:../../../administration-panel/developer-tools/#_загрузчик_модулей[Деинсталляция модуля].
 
  . Установите новый языковой пакет, как это описано в разделе 
 link:../install-a-new-language[Русификация SuiteCRM].
 
- . В панели администратора выполните link:../../../administration-panel/system/#_Восстановление[быстрое восстановление]. 
+ . В панели администратора выполните link:../../../administration-panel/system/#_восстановление[быстрое восстановление]. 
 

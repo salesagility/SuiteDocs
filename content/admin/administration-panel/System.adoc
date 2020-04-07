@@ -46,7 +46,7 @@ Drag and drop modules between the columns to enable/disable AJAX.
 image:SystemSettings2.png[title = "System Settings"]
 
 === Proxy Settings
-Configure Click-To-Call settings here.
+Select the *Use Proxy server?* checkbox to configure proxy server address and authentication settings.
 
 === Google Authentication
 This is where you upload the JSON credential file for Google Calendar Sync. +
@@ -64,7 +64,7 @@ for invitees when scheduling calls and meetings.
 
 === Logger Settings
 Specify log filename, extension and size as well as the log level here.
-See the link:../../../../developer/logging/[chapter on logging] for more information.
+See the link:../../../developer/logging/[chapter on logging] for more information.
 
 Click the View Log link to view the log file.
 
@@ -130,6 +130,29 @@ during development when <<Advanced Settings, Developer Mode>> is not set.
 When running a Quick Repair and Rebuild, be sure to scroll to the bottom of the page to view any
 new SQL code which may need to be executed to ensure that your database tables are correctly
 synced with any changes that have been made.
+
+The following functions are available to you in the section:
+
+Quick Repair and Rebuild:: Repairs and rebuilds DB, Extensions, Vardefs, SuiteCRM Dashlets etc.
+Expand Column Width:: Expands certain char, varchar and text columns in database (MSSQL ONLY)
+Rebuild .htaccess File:: Rebuilds .htaccess to limit access to certain files directly
+Rebuild Config File:: Rebuilds config.php by updating version and adding defaults when not explicitly declared
+Rebuild Relationships:: Rebuilds relationship metadata and drops the cache file
+Rebuild Schedulers:: Rebuilds out-of-the-box Scheduler Jobs
+Rebuild SuiteCRM Dashlets:: Rebuilds the SuiteCRM Dashlets cache file
+Rebuild Javascript Languages:: Rebuilds javascript versions of language files
+Rebuild JS Compressed Files:: Copies original Full JS Source files and replaces existing compressed JS files
+Rebuild JS Grouping Files:: Re-concatenates and overwrites existing group files with latest versions of group files
+Rebuild Minified JS Files:: Copies original Full JS Source Files and minifies them, then replaces existing compressed files
+Repair JS Files:: Compresses Existing JS files - includes any changes made, but does not overwrite original JS Source files
+Repair Non-Lowercase Fields:: Repair mixed-case custom table(s) and metadata file(s) to fix issues where code expects lowercase field names
+Repair Roles:: Repairs Roles by adding all new modules that support Access Controls, and by adding any new Access Controls to existing modules
+Repair Inbound Email Accounts:: Repairs Inbound Email accounts and encrypts account passwords
+Sync Inbound Email Accounts:: Sync Inbound Email Accounts and Emails
+Remove XSS:: Removes XSS Vulnerabilities from the database
+Repair Activities:: Repairs Activities (Calls, Meetings) end dates
+Enable/Disable Seed Users:: Quickly enable or disable seed users populated during demo installation.
+Remove missed files from upload directory:: Please note that removal can take a lot of time 
 
 == Global Search
 
@@ -214,7 +237,7 @@ image:AdminScheduledTask.png[title = "Scheduled Task"]
 
 In edit mode, you can set the job status (only Active jobs will run) and configure the interval at which the job runs
 as well as the start time.
-Unckecking the the 'Advanced Options' box will show a more user-friendly way to set the job interval if you are not 
+Unchecking the 'Advanced Options' box will show a more user-friendly way to set the job interval if you are not 
 familiar with the crontab notation. Re-checking Advanced Options will let you set the initial start time. 
 
 image:AdminEditScheduledTask.png[title = "Edit Scheduled Task"]

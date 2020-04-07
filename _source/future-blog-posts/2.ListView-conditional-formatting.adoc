@@ -3,7 +3,7 @@ title: ListView Conditional Formatting
 weight: 20
 ---
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: /images/en/community
 
 Sometimes you will want to format fields that are shown on the list view
 depending on the values. For example you may want to colour the

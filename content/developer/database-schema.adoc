@@ -1,0 +1,173 @@
+---
+title: Database Schema
+weight: 195
+---
+
+:imagesdir: /images/en/developer/database-schema
+
+== SchemaSpy tables and diagrams
+
+To learn about our database structure, with its tables and relationships, 
+please visit the link:++https://schema%2D%2Dsuitecrm%2Ddocs.netlify.com/schema++[SuiteCRM Database Schema^], 
+generated with SchemaSpy.
+
+image:schemaspy.png[link="https://schema%2D%2Dsuitecrm%2Ddocs.netlify.com/schema", SchemaSpy screenshot, window="_blank"]
+
+== General principles and sample SQL queries
+
+{{% notice warning %}}
+Some of the queries provided below delete data from your database. Use at your own risk, and be sure
+to create full backups before trying them. A single mistaken SQL query can produce irreparable 
+damage to your database.
+{{% /notice %}}
+
+=== Unique identifiers
+
+SuiteCRM uses UUID's for its unique identifiers. They look like this: `46c35607-bcad-c7f1-1745-558d6b858b27`. 
+They can be generated in SQL and inserted into other queries as a sub-select:
+
+[source,sql]
+----
+UPDATE some_table SET id=(SELECT uuid());
+----
+
+Historically, since the SugarCRM days, these id's have followed this format, but in practice _any_ format
+was allowed, numeric, string, etc., as long as it was unique. This sometimes greatly facilitates imports
+by allowing previous numbering schemes to be maintained.
+
+=== Custom Fields
+
+Custom fields get saved in tables with the same name as the module their defined in, but with an 
+appended suffix `_cstm`. 
+
+Each custom field will have the name you entered for it in Studio, with a suffix `_c`.
+
+Here is a sample query to join a module's table with some custom fields (in this case, a field called 
+**age** when created in Studio):
+
+[source,sql]
+----
+SELECT first_name, last_name, contacts_cstm.age_c 
+  FROM `contacts`
+  LEFT JOIN contacts_cstm 
+       ON contacts.id = contacts_cstm.id_c
+----
+
+List orphaned records from `contacts_cstm`, where the base record is not present, but a row for it still
+exists in the custom table:
+
+[source,sql]
+----
+SELECT * -- DELETE ChildTable
+  FROM contacts_cstm ChildTable    
+  LEFT JOIN contacts ParentTable 
+       ON ChildTable.id_c = ParentTable.id
+  WHERE ParentTable.id IS NULL
+----
+
+That query is a SELECT, but if you change the first line to what is after the comment (`--`),
+it will delete those rows. Please read the warning above and decide responsibly.
+
+=== Relationships
+
+SuiteCRM does not rely on the database engine to enforce relationships (foreign key constraints, etc). 
+All these things are handled at application level in our own PHP code.
+
+In general, SuiteCRM also does not do any cascaded updates or cascaded deletes, there are only a few 
+exceptions for some particular cases. This means that you might need some periodic database clean-up.
+There is a "Prune database on the 1st of month" scheduled job that handles some of these tasks, 
+but you need to evaluate your own case in order to decide on the appropriate house-cleaning tasks. 
+There is no "one-size-fits-all" solution for this, so each implementation should take the necessary 
+steps for its own case.
+
+There is a table called `relationships` which contains metadata information retrieved from the **vardefs**.
+
+==== Typical ways to JOIN tables
+
+A few sample queries should suffice to give you an idea of how SuiteCRM tables typically reference each other:
+
+. The query to get data from a **custom field** that was given above;
++
+. Traversing a **Flex Relate** field where several connected record types are allowed. The `parent_type` 
+field contains the name of the related module, while the `parent_id` is a foreign key into that module's table:
++
+[source,sql]
+----
+SELECT accounts.name, calls.name, calls.status
+  FROM accounts
+  INNER JOIN calls ON
+        calls.parent_type = 'Accounts' AND
+        calls.parent_id = accounts.id AND 
+        calls.deleted = 0
+  WHERE accounts.deleted = 0
+----
++
+. A query to traverse a **many-to-many relationship** using a middle table. In this example, a list of 
+account names and linked contacts:
++
+image:schema.png[Schema]
++
+[source,sql]
+----
+SELECT accounts.name, contacts.first_name, contacts.last_name
+  FROM accounts
+  INNER JOIN accounts_contacts
+        ON (accounts.id = accounts_contacts.account_id AND accounts_contacts.deleted = 0) 
+  INNER JOIN contacts
+        ON (contacts.id = accounts_contacts.contact_id AND contacts.deleted = 0)
+  WHERE accounts.deleted = 0
+  ORDER BY accounts.name
+----
++
+. Traversing the **`email_addresses` relationship** to get the email addresses of Users (easily adaptable for
+other modules, like Contacts, Leads, etc).
++
+[source,sql]
+----
+SELECT users.user_name,
+      email_address
+ FROM users
+      LEFT JOIN email_addr_bean_rel
+             ON email_addr_bean_rel.bean_id=users.id
+               AND email_addr_bean_rel.bean_module = 'Users'
+               AND email_addr_bean_rel.primary_address = 1
+               AND email_addr_bean_rel.deleted = 0
+      LEFT JOIN email_addresses
+             ON email_addresses.id = email_addr_bean_rel.email_address_id
+               AND email_addresses.deleted = 0
+----
+
+==== Cleaning up Relationships to deleted records
+
+When you delete a record from a module, in many cases SuiteCRM does not delete all the associated records, 
+because it is impossible to decide which should or should not be removed without knowing the specifics of each 
+business. Not deleting is _generically_ the sensible, conservative approach. But if you decide in your
+case you need to remove some left-overs from previously existing records, then the following should help you.
+
+Here is a sample query to look for orphaned records, in this case security groups entries referring 
+to missing records:
+
+[source,sql]
+----
+SELECT record_id, module, s.deleted, c.last_name, c.deleted
+  FROM securitygroups_records s    
+       LEFT JOIN contacts c 
+         ON s.record_id = c.id
+  WHERE c.id IS NULL AND
+        s.module='Contacts'  
+----
+
+This query can easily be turned into a DELETE in order to remove these records.
+
+You might also make a simpler delete of rows where `deleted='1'`, where the relationship itself was deleted, 
+even if the `record_id` still exists:
+
+[source,sql]
+----
+SELECT record_id, module, deleted
+  FROM securitygroups_records    
+  WHERE module='Contacts' AND deleted='1'
+----
+
+
+

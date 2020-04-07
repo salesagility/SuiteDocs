@@ -1,19 +1,3 @@
-{{ partial "suitecrm.com-menu.html" }}
-
-<nav id="topmenu" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
-	
-	<ul class="menu_desktop">
-		<li><a title="Home" href="/">Home</a></li><li><a title="Blog" href="/blog">Blog</a></li><li class="guide guide_start">Guides:</li><li class="guide"><a title="User Guide" href="/user">User</a></li><li class="guide"><a title="Developer Guide" href="/developer">Developer</a></li><li class="guide guide_end"><a title="Administrator Guide" href="/administrator">Administrator</a></li><li class="guide"><a href="/community">Community</a></li>
-	</ul> 
-	
-	<ul class="menu_mobile">
-		<li><a title="Home" href="/">Home</a></li><li><a title="Blog" href="/blog">Blog</a></li><br><li class="guide guide_start">Guides:</li><li class="guide"><a title="User Guide" href="/user">User</a></li><li class="guide"><a title="Developer Guide" href="/developer">Developer</a></li><li class="guide guide_end"><a title="Administrator Guide" href="/administrator">Admin</a></li><li class="guide"><a href="/community">Community</a></li>
-	</ul>
-	
-	
-</nav>
-
-
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 
 {{ $currentNode := . }}
@@ -47,7 +31,7 @@
         <h3>{{ if not $disableShortcutsTitle}}{{ T "Shortcuts-Title"}}{{ end }}</h3>
         <ul>
           {{ range sort . "Weight"}}
-              <li class="" role=""> 
+              <li> 
                   {{.Pre}}<a class="padding" href="{{.URL | absLangURL }}">{{safeHTML .Name}}</a>{{.Post}}
               </li>
           {{end}}
@@ -62,7 +46,7 @@
       {{ if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
           <a class="padding">
-            <i class="fa fa-fw fa-language"></i>
+            <i class="fas fa-language fa-fw"></i>
           <div class="select-style">
             <select id="select-language" onchange="location = this.value;">
           {{ $siteLanguages := .Site.Languages}}
@@ -73,9 +57,9 @@
                   {{ if eq $translation.Lang .Lang }}
                     {{ $selected := false }}
                     {{ if eq $pageLang .Lang}}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}" selected>{{ .LanguageName }}</option>
+                      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}</option>
                     {{ else }}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}">{{ .LanguageName }}</option>
+                      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
                     {{ end }}
                   {{ end }}
               {{ end }}
@@ -92,10 +76,10 @@
         </div>
         </a>
         </li>
-      {{end}} 
+      {{end}}
       
       {{ if $showvisitedlinks}}
-        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> {{T "Clear-History"}}</a></li>         
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> {{T "Clear-History"}}</a></li>
       {{ end }}
       </ul>
     </section>
@@ -113,25 +97,25 @@
  {{with .sect}}
   {{if .IsSection}}
     {{safeHTML .Params.head}}
-    <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item 
+    <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
+        {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
         ">
       <a href="{{.RelPermalink}}">
-          {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
+          {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
-            <i class="fa fa-check read-icon"></i>
+            <i class="fas fa-check read-icon"></i>
           {{ end }}
       </a>
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{ if ne $numberOfPages 0 }}
         <ul>
-          {{ .Scratch.Set "pages" .Pages }}
+          {{ $currentNode.Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
-            {{ .Scratch.Set "pages" (.Pages | union .Sections) }}
+            {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
           {{end}}
-          {{ $pages := (.Scratch.Get "pages") }}
+          {{ $pages := ($currentNode.Scratch.Get "pages") }}
           
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{ range $pages.ByTitle }}
@@ -153,10 +137,10 @@
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
-      <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
+      <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}">
         <a href="{{ .RelPermalink}}">
-        {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
-        {{ if $showvisitedlinks}}<i class="fa fa-check read-icon"></i>{{end}}
+        {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+        {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
         </a>
     </li>
      {{ end }}

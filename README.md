@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2cb9437a-4da2-47de-9dc7-11477d85c3ae/deploy-status)](https://app.netlify.com/sites/suitedocs/deploys)
+
 # SuiteDocs
 
 This is the Project for the SuiteCRM Documentation Site which you can browse at [https://docs.suitecrm.com](https://docs.suitecrm.com).
@@ -35,5 +37,6 @@ We will add more languages later on.
 You can open an Issue if you have any questions or comments. Thank you.
 
 
-
+## License
+SuiteDocs is licensed under the GNU Free Documentation License. See [LICENSE.md](./LICENSE.md) for full license details.
 

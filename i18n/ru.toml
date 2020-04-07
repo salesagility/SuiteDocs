@@ -32,6 +32,9 @@ other = "Показать больше"
 other = "Развернуть..."
 
 [Issue-for-page]
+other = "Сообщить об ошибке"
+
+[Issue-for-page-short]
 other = "Ошибка"
 
 [Documentation]

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+
+/* Tags */
+@import "tags.css";
+
 #top-github-link, #body #breadcrumbs {
     position: relative;
     top: 50%;
@@ -101,7 +105,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     background: #8451a1;
     color: #fff;
     text-align: center;
-    border-bottom: 4px solid #333333;
+    border-bottom: 4px solid #9c6fb6;
     padding: 1rem;
 }
 #header a {
@@ -492,8 +496,9 @@ div.notices p:first-child:before {
     position: absolute;
     top: 2px;
     color: #fff;
-    font-family: FontAwesome;
-    content: '';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f06a";
     left: 10px;
 }
 div.notices p:first-child:after {
@@ -641,7 +646,7 @@ code + .copy-to-clipboard {
 pre {
     padding: 1rem;
     margin: 2rem 0;
-    background: #1d1f21;
+    background: #282c34;
     border: 0;
     border-radius: 2px;
     line-height: 1.15;
@@ -985,7 +990,6 @@ td {
 #top-bar {
     background: #F6F6F6;
     border-radius: 2px;
-    margin: 0rem -1rem 2rem;
     padding: 0 1rem;
     height: 0;
     min-height: 3rem;
@@ -1074,7 +1078,7 @@ pre .copy-to-clipboard {
     position: absolute;
     right: 4px;
     top: 4px;
-    background-color: #4d5257;
+    background-color: #949bab;
     color: #ccc;
     border-radius: 2px;
 }
@@ -1126,5 +1130,3 @@ pre .copy-to-clipboard:hover {
 #searchResults {
     text-align: left;
 }
-
-/*# sourceMappingURL=theme.css.map */

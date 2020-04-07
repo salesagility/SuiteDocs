@@ -2,11 +2,12 @@
 {{ range  . }}
     <li>
 	<h4 class="">
-		<a href="{{ .Permalink }}">{{ .Title }}</a>
+	    <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="https://github.com/salesagility/SuiteDocs/commits/{{.GitInfo.Hash}}/content/{{.Path}}" target="_blank" title="File History"><i class="far fa-sm fa-clock"></i></a>
 	</h4>
 	<p class="">
 	   Edited on the {{ .Lastmod.Format "2 January" }} in commit <b>"{{ with .GitInfo }}{{ .Subject }}{{ else }}[Commit description]{{ end }}"</b>  
-             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank"><i class="fa fa-github"></i></a>
+             <a href="https://github.com/salesagility/SuiteDocs/commit/{{.GitInfo.Hash}}" target="_blank" title="Commit Diff"><i class="fas fa-sm fa-indent"></i></a>
         </p>
     </li>
 {{ end }}

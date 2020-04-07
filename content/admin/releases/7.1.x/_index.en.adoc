@@ -183,7 +183,7 @@ code* (tar.gz)]
 * Fixed Russian language file in Security Suite
 * Fix bug in AOD which could cause errors when trying to load certain modules.
 * Prevent AOD creating multiple indexes caused by security suite preventing access to the index.
-* Shortcut return when attemping to index on the save of AOD_Index
+* Shortcut return when attempting to index on the save of AOD_Index
 * AOD now respects security groups when displaying results
 * Fix undefined index in AOD.
 * Add Print PDF option to contracts

@@ -5,7 +5,7 @@ weight: 20
 
 :experimental:   ////this is here to allow btn:[]syntax used below
 
-:imagesdir: ./../../../images/en/admin
+:imagesdir: /images/en/admin
 
 :toc:
 
@@ -143,6 +143,12 @@ The Layout Options tab allows you to set colour choices for the *SuiteP*
 theme. These settings can be configured by the user. 
 Please see the link:../../../user/modules/themes[user Themes documentation] 
 for more information on these settings.
+
+===== Show collapsed subpanel hint
+
+If this feature is enabled, collapsed subpanels throughout the application displays a count of the related records within the subpanel.
+
+image:ShowCollapsedHint.png[User - Show collapsed subpanel hint]
 
 == Password Management
 

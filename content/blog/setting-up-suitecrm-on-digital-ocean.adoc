@@ -26,7 +26,7 @@ account. If you don’t have one it’s easy to create one.
 This will bring us to the following page, where we will do the
 following:
 
-:imagesdir: ./../../../images/en/community
+:imagesdir: /images/en/community
 
 image:06CreateDropletPage.png[CreateDropletPage]
 
