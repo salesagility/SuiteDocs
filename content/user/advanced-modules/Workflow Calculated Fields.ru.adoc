@@ -1470,5 +1470,5 @@ image:image40.png[Добавление нового уведомления со 
 Нажав на заголовок сообщения, пользователь перейдёт к созданной записи.
 
 {{% notice tip %}}
-При необходимости подобное уведомление можно создать https://community.suitecrm.com/t/how-to-create-notifications-by-using-workflows-logic-hooks/70809[программно^], используя https://docs.suitecrm.com/developer/logic-hooks[logic hooks^].
+При необходимости подобное уведомление можно создать https://community.suitecrm.com/t/how-to-create-notifications-by-using-workflows-logic-hooks/70809[программно^], используя ../../../../developer/logic-hooks[logic hooks^].
 {{% /notice %}}
