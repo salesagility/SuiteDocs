@@ -90,7 +90,7 @@ But you can change log settings through the UI, under link:../../admin/administr
 == Advanced logging configuration
 
 {{% notice note %}}
-The functionlity described in this section only applies starting with SuiteCRM version 7.11.6
+The functionality described in this section only applies starting with SuiteCRM version 7.11.14
 {{% /notice %}}
 
 Using `sugar_config` entries in `config_override.php` you can get much richer debugging and troubleshooting 
