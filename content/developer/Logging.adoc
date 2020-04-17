@@ -1,4 +1,3 @@
-
 ---
 weight: 11
 title: "Logging"
@@ -76,11 +75,10 @@ The default log levels (in order of verbosity) are:
 * `fatal`
 * `security`
 
-{{% notice note %}}
-Generally on a production instance you will use the less verbose levels
-(probably `error` or `fatal`). However whilst you are developing you can
-use whatever level you prefer. I prefer the most verbose level -
-`debug`. 
+{{% notice tip %}}
+Generally on a production instance you will use the less verbose levels (probably `error` or `fatal`). 
+However whilst you are developing you can use whatever level you prefer. 
+Developers often prefer the most verbose level - `debug`. 
 {{% /notice %}}
 
 == Log file location
@@ -88,3 +86,259 @@ use whatever level you prefer. I prefer the most verbose level -
 The log file, by default, is called `suitecrm.log` and resides in your installation's root directory. 
 
 But you can change log settings through the UI, under link:../../admin/administration-panel/system/#_logger_settings[Admin / System settings / Logger Settings].
+
+== Advanced logging configuration
+
+{{% notice note %}}
+The functionlity described in this section only applies starting with SuiteCRM version 7.11.6
+{{% /notice %}}
+
+Using `sugar_config` entries in `config_override.php` you can get much richer debugging and troubleshooting 
+information in your logs. 
+
+=== Filtering log entries
+
+Apart from the control given by the **Log level settings** explained avbove, often you find repetitive 
+messages in your logs that don't interest you, and possibly even prevent the relevant messages 
+from standing out when you need them. To address this issue, you can filter out undersired messages 
+with the configurations shown below.
+
+These are similar to what you would achieve in Linux with `grep`, but have the advantage of giving 
+you better control over multi-line log entries.
+
+Be careful with these settings, since hiding log entries can keep you from seeing important messages. 
+Normally you will only use these filters temporarily. When not in use, you should ommit these entries entirely.
+
+==== Exclusions
+[source,php]
+$sugar_config['show_log_regexp_exclude'] = '/css|email/i';
+
+Use a Regular expression with PHP's `preg_match` syntax to specify log lines to exclude from log. 
+The above example would exclude lines with either `css` or `email` in them. The final 
+`i` flag makes it case-insensitive.
+
+==== Inclusions
+[source,php]
+$sugar_config['show_log_regexp'] = '/hook/i';
+
+Same as above, but this rule specifies what to include (instead of what to exclude). 
+In the example, only lines with `hook` (case-insensitive) will appear.
+
+=== Redirecting PHP messages
+
+When using SuiteCRM, you always have to keep your eye on (at least) two logs: `suitecrm.log` and
+the web server PHP log (defined in the `error_log` entry in your `php.ini`, often called `php_errors.log`).
+$sugar_config['show_log_with_php_messages'] = true;
+
+Since this duplicity is sometimes inconvenient, and since SuiteCRM now provides much richer log information
+and stack traces that the default PHP logger, you can ask SuiteCRM to redirect the PHP messages into
+its own log.
+
+[source,php]
+$sugar_config['show_log_with_php_messages'] = true;
+
+There are some technical limitations to this possibility, so you might find some kinds of messages
+aren't redirected. Also, most will be able to provide the rich stack traces, but not all.
+
+The redirected messages will show up in `suitecrm.log` with a type of `PHP S` ("shutdown" handler) 
+or `PHP E` ("error" handler), followed by PHP's severity type, for example:
+
+[source,php]
+Thu Apr 16 16:46:26 2020 [9668][1][PHP S] [E_NOTICE] 'Undefined index: item_id' at /cache/smarty/templates_c/headerModuleList.tpl.php (1076)
+
+=== Stack Traces
+
+Often, when a message occurs, it's useful to know which sequence of calls led to that point in the code. 
+PHP will provide a stack trace (also know as a "debug backtrace"), and combining several techniques we
+are able to enrich these traces with lots of useful information: source code, argument names, argument values, 
+even if they're structured types like arrays or objects.
+
+==== Warnings about turning on stack traces
+
+{{% notice warning %}}
+Please read this section carefully, it contains important things for your consideration.
+{{% /notice %}}
+
+. Using log traces with argument values might leave sensitive information in the system logs, like passwords
+and other sensitive data, therefore: 
+.. Use it only temporarily for troubleshooting purposes; 
+.. Obfuscate the information before posting it online; 
+.. Double-check that your logs are only accessible to admins, as they always should. Check that your web server 
+is not allowed to serve your log file when somebody accesses `https://your.server.com/suitecrm.log`.
+.. Delete the logs when finished troubleshooting.
+. Some of these options impact performance (lots of string operations, more file activity) but it's 
+always opt-in: the impact only occurs when you configure it to happen. So make sure you turn off the 
+more intensive logging options when not needed.
+
+==== Selecting which log messages will display a stack trace
+
+[cols="20s,80a"]
+|================================================================ 
+|None | 
+[source,php]
+$sugar_config['show_log_trace'] = false;
+
+The log will not contain any stack traces. The other stack trace options detailed below will be ignored.
+Use a boolean, without quotes.
+
+|All |
+[source,php]
+$sugar_config['show_log_trace'] = true;
+
+Every single log message will contain a stack trace. This can generate a great amount of logging. You 
+will probably only consider this setting if you are limiting your logging a lot elsewhere (e.g. through
+log level or inclusion filtering).
+Use a boolean, without quotes.
+
+|Matching a string|
+[source,php]
+$sugar_config['show_log_trace'] = 'some string';
+
+Only the log messages matching the provided string will include a stack trace. The string will be matched 
+only against the "message" part, i.e. the text provided by the line of code
+that produced this log entry. 
+A match happens if the provided string appears in any part of the message string, with the exact case.
+|================================================================
+
+==== Configuring what is shown about each function call
+
+[cols="20s,80a"]
+|================================================================ 
+|Single-line versus Multi-line |
+[source,php]
+$sugar_config['show_log_trace_with_eol'] = true;
+
+A boolean **false** (without quotes) will keep each stack frame in a single line, without line breaks 
+(**eol** means "end-of-line").
+
+A boolean **true** (without quotes) will let each stack frame expand across multiple lines. 
+This is very convenient when your other settings require a lot of information to be printed. 
+
+|Source code context | 
+[source,php]
+$sugar_config['show_log_trace_source'] = 1;
+
+Display a portion of the context surrounding the actual source code. 
+
+Using the value **-1** no source code will be displayed (this is the default).
+
+Use **0** to show only the focus line of this frame, with no addtional lines around it. This mostly
+repeats the information already present in the frame text, but allows you to see the _actual_ 
+arguments (not the _formal_ arguments shown in the frame text).
+
+Use **1** or larger values to show the focus line plus **N** lines on each side, before and after. 
+
+Here is a sample of how the value of **1** displays, with the focus line in the middle marked with **>>**.
+[source]
+----
+   >          $this->setupResourceManagement($module);
+   >>         $this->controller->execute();
+   >          sugar_cleanup();
+----
+**Note** that this option will only be effective if you configured the **eol** option above to multi-line.
+|Structured arguments depth |
+[source,php]
+$sugar_config['show_log_trace_depth'] = 7;
+
+When printing the values of arguments in function calls, in each trace line, if the arguments are 
+structured, multi-level types, like arrays and objects, then this option lets you define the maximum
+level to include. The printing goes on recursively into the objects, and when the level is reached it stops
+and shows a `…)` marker.
+
+If this setting is ommitted it will default to **3**.
+
+|Trim Arguments to a maximum length |
+[source,php]
+$sugar_config['show_log_trace_trim'] = 700;
+
+This is the maximum limit of characters to use when printing each arguments value in each trace line. 
+
+If this setting is ommitted it will default to **100**, which is an appropriate value when 
+you opted for single-line stack frames (see above). 
+
+If you're really digging into what is in structured argument values, you migth want to aim for a much 
+higher value.
+
+|================================================================
+
+==== Sample stack traces, explained
+
+A single-line stack trace is helpful to understand the basic structure of a trace:
+[source,php]
+----
+Fri Apr 17 15:38:58 2020 [9994][1][INFO ] Query:INSERT INTO tracker (monitor_id,user_id,module_name,item_id,item_summary,date_modified,action,session_id,visible ) VALUES ( 'aa7448dd-6ab3-99c4-67b9-5e99bf930d0f','1','Contacts','b71c7bd4-5674-db36-d3e9-5b6226dd85a1','Irvin Ricky','2020-04-17 14:38:58','detailview','sfvd9f03g8s2rtud5q3oe174j1','1')
+#0 /include/database/MysqliManager.php(133):  LoggerManager->__call(method: 'info', message: Array ( [0] => 'Query:INSERT INTO tracker (monitor_id,user_id,module_name,item_id,item_summary,da …))
+#1 /modules/Trackers/store/DatabaseStore.php(92):  MysqliManager->query(sql: 'INSERT INTO tracker (monitor_id,user_id,module_name,item_id,item_summary,date_modified,action,se …))
+#2 /modules/Trackers/monitor/tracker_monitor.php(94):  DatabaseStore->flush(tracker_monitor Object ( [metricsFile] => 'modules/Trackers/vardefs.php' [name] => 'Tracker' [met …))
+#3 /modules/Trackers/TrackerManager.php(232):  tracker_monitor->save(flush: 1)
+#4 /include/MVC/View/SugarView.php(360):  TrackerManager->saveMonitor(monitor: tracker_monitor Object ( [metricsFile] => 'modules/Trackers/vardefs.php' [name] => 'Tracker' [met …), flush: 1, ignoreDisabled: 1)
+#5 /include/MVC/View/SugarView.php(192):  SugarView->_trackView()
+#6 /include/MVC/Controller/SugarController.php(435):  SugarView->process()
+#7 /include/MVC/Controller/SugarController.php(375):  SugarController->processView()
+#8 /include/MVC/SugarApplication.php(113):  SugarController->execute()
+#9 /index.php(52):  SugarApplication->execute()
+----
+
+* It starts with a **message** on the first line, and then lists the several **stack frames** of the successive 
+function calls that led the code to reach that point;
+
+* each frame then starts with a **`#`** sign, and the frame sequence number,
+
+* then has a **file name**, and a **line number**;
+
+* after the colon (**`:`**) you get the **class name** (if there is one) and a **function or method name**;
+
+* then parentheses will open to list the arguments, each composed of a formal name, a colon and a value.
+
+* if the value is a structured object itself, such as an array or object, a new parentheses will open to start
+printing that value's contents. 
+
+* eventually printing may be cut short with a **`…)`** marker, due to the **level** or **trim** limits.
+
+Here is the same stack trace in a more verbose version, with multi-line arguments, source code context, 
+and a less stringent trim:
+
+[source,php]
+----
+Fri Apr 17 15:37:59 2020 [10000][1][INFO ] Query:INSERT INTO tracker (monitor_id,user_id,module_name,item_id,item_summary,date_modified,action,session_id,visible ) VALUES ( 'b30331d0-de75-1d87-b512-5e99bf552ae7','1','Contacts','b71c7bd4-5674-db36-d3e9-5b6226dd85a1','Irvin Ricky','2020-04-17 14:37:59','detailview','sfvd9f03g8s2rtud5q3oe174j1','1')
+#0 /include/database/MysqliManager.php(133):
+   >          parent::countQuery($sql);
+   >>         $GLOBALS['log']->info('Query:' . $sql);
+   >          $this->checkConnection();
+   Called LoggerManager->__call(
+     method: 'info',
+     message: Array (
+      [0] => 'Query:INSERT INTO tracker (monitor_id,user_id,module_name,item_id,item_summary,date_modified,action,session_id,visible ) VALUES ( 'b30331d0-de75-1d87-b512-5e99bf552ae7','1','Contacts','b71c7bd4-5674-db36-d3e9-5b6226dd85a1','Irvin Ricky','2020-04-17 14:37:59','detailview','sf …))
+#1 /modules/Trackers/store/DatabaseStore.php(92):
+   >          $query = "INSERT INTO $monitor->table_name (" .implode(",", $columns). " ) VALUES ( ". implode(",", $values). ')';
+   >>         DBManagerFactory::getInstance()->query($query);
+   >      }
+   Called MysqliManager->query(     sql: 'INSERT INTO tracker (monitor_id,user_id,module_name,item_id,item_summary,date_modified,action,session_id,visible ) VALUES ( 'b30331d0-de75-1d87-b512-5e99bf552ae7','1','Contacts','b71c7bd4-5674-db36-d3e9-5b6226dd85a1','Irvin Ricky','2020-04-17 14:37:59','detailview','sfvd9f03g8s2rtud5q3oe174j1',' …))
+#2 /modules/Trackers/monitor/tracker_monitor.php(94):
+   >                  $store = $this->getStore($s);
+   >>                 $store->flush($this);
+   >              }
+   Called DatabaseStore->flush(
+     tracker_monitor Object (
+      [metricsFile] => 'modules/Trackers/vardefs.php'
+      [name] => 'Tracker'
+      [metrics] => Array (
+        [monitor_id] => Metric Object (
+          [_name] => 'monitor_id'
+          [_type] => 'id'
+          [_mutable] =>
+        [user_id] => Metric Object (
+    …))
+----
+This produced a lot more information, as you can see - and only the first trace frames are shown, for brevity. 
+Also note that a **larger screen width** is recommended and would allow you to get a lot more clarity 
+than what is possible to display here in the Documentation site. 
+
+* The **source code context** of each frame is identified with **`>`** markers, with the **focus line** using 
+a double marker (**`>>`**). This is where the function call that produced this stack frame occurred.
+
+* You can see the structured **objects** and **arrays** laid out in indented lines.
+
+All this allows you to get a quick grasp of what SuiteCRM was doing, and which values it was handling, 
+at the time the log message occurred.
+
