@@ -256,10 +256,52 @@ This is the maximum limit of characters to use when printing each arguments valu
 If this setting is ommitted it will default to **100**, which is an appropriate value when 
 you opted for single-line stack frames (see above). 
 
-If you're really digging into what is in structured argument values, you migth want to aim for a much 
+If you're really digging into what is in structured argument values, you might want to aim for a much 
 higher value.
 
 |================================================================
+
+==== Appending an overview of the current request
+
+[source,php]
+$sugar_config['show_log_trace_overview'] = true;
+
+A boolean **true** (without quotes) will cause the stack trace to be followed with an array of values
+describing the current request. 
+
+This is ad-hoc information, like breadcrumbs, gathered in the initial stages of the request to the server, 
+namely while setting up **SugarApplication**, **SugarController**, and **SugarView** objects. 
+Some relevant global variables are also included.
+
+A boolean **false** (without quotes), or simply ommitting this entry will turn the feature off.
+
+Here's a sample output from this option, showing useful information that is hard to get from the stack trace,
+but quite useful to "locate" where you are in a SuiteCRM server request:
+
+[source,php]
+----
+Request Overview:Array (
+      [$_REQUEST] => Array (
+        [module] => 'FP_events'
+        [offset] => '1'
+        [stamp] => '1587658868021400200'
+        [return_module] => 'FP_events'
+        [action] => 'DetailView'
+        [record] => '4e86662a-ca14-f342-149f-5ea1b4783519'
+        [ajax_load] => '1'
+        [searchFormTab] => 'basic_search'
+      [Selected $GLOBALS] => Array (
+        [SuiteCRM Version] => '7.10.25'
+        [db] => 'suitecrm'
+        [BASE_DIR] => '/var/www/html/SuiteCRM'
+      [SugarController] => Array (
+        [entryPointFile] => ''
+        [processTasksHistory] => 'blockFileAccess…ok. handleEntryPoint…ok. callLegacyCode…ok. remapAction…ok. handle_action…ok. handleActionMaps…ok. '
+        [handleActionTasksHistory] => 'pre_action…ok. do_action…ok. post_action…ok. '
+        [redirect_url] => ''
+      )
+----
+
 
 ==== Sample stack traces, explained
 
