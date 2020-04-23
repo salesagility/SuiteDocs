@@ -3,7 +3,10 @@ weight: 11
 title: "Logging"
 ---
 
-= 11. Logging
+:toc:
+:toclevels: 4
+
+= 11. Logging 
 
 == Logging messages
 
