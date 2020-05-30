@@ -36,22 +36,22 @@ example, when an Account is created/edited.
 to deactivate a Workflow without having to delete it.
 * *Run* – This controls the way the Workflow is triggered.
 +
-[cols="20,80"]
+[cols="20s,80"]
 |================================================================
-|*On Save* | The Workflow will run immediately for a given record when a save action occurs in the module specified.
-|*On Scheduler* | The Workflow will be started from the Scheduler Job *Process Workflow Tasks*, 
+|On Save | The Workflow will run immediately for a given record when a save action occurs in the module specified.
+|On Scheduler | The Workflow will be started from the Scheduler Job *Process Workflow Tasks*, 
 the next time the job runs, and will apply to every record in the module, 
 restricted by the *Run on* property and by the Workflow's conditions.
-|*Always* | The Workflow will run on both the situations described above.
+|Always | The Workflow will run on both the situations described above.
 |================================================================
 +
 * *Run On* – This specifies the selection of records for which the Workflow will be executed.
 +
-[cols="20,80"]
+[cols="20s,80"]
 |================================================================
-|*New Records* | The Workflow will run only for new records being created.
-|*Modified Records* | The Workflow will run only for records that were already created and are being changed.
-|*All Records* | 
+|New Records | The Workflow will run only for new records being created.
+|Modified Records | The Workflow will run only for records that were already created and are being changed.
+|All Records | 
 - For *On Save* workflows, this means the Workflow will run for both new and modified records. +
 - For *On Scheduler* Workflows, this means the Workflow will go through every record in the module, 
 even old ones that weren't changed.
@@ -65,11 +65,11 @@ if your module has many records. These operations will run in the background, bu
 This allows you to control whether you want the Workflow actions to run only once for each record, 
 or repeatedly, as the Worfklow is triggered again. +
 +
-[cols="20,80"]
+[cols="20s,80"]
 |================================================================
-|*Unchecked* | The Workflow will be blocked from running against any record that has already 
+|Unchecked | The Workflow will be blocked from running against any record that has already 
 been handled by the current Workflow in the past.
-|*Checked* | The Workflow will run against every record, regardless of whether that record has already
+|Checked | The Workflow will run against every record, regardless of whether that record has already
 been handled by the current Workflow in the past.
 {{% notice tip %}}
 It is wise to consider whether there are enough restrictions in place so that this 
