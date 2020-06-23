@@ -8,6 +8,113 @@ weight: 9890
 :toclevels: 1
 :icons: font
 
+== 7.10.27
+
+_Released 10/06/2020_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.27.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.27.tar.gz[*Source code* (tar.gz)]
+* https://suitecrm.com/files/162/SuiteCRM-7.11/507/SuiteCRM_Upgrade_Patch.zip[*Upgrade Patch* (zip)]
+
+===  icon:check[] Release Notes
+
+7.10.27 addresses an issue in 7.10.26 where the change log would fail to display, please refer to the 7.10.26 release note for the further details and changes
+
+'''
+
+== 7.10.26
+
+_Released 09/06/2020_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.26.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.26.tar.gz[*Source code* (tar.gz)]
+* https://suitecrm.com/files/162/SuiteCRM-7.11/507/SuiteCRM_Upgrade_Patch.zip[*Upgrade Patch* (zip)]
+
+===  icon:check[] Release Notes
+
+This release includes an additional patch that you can install if you are having issue upgrading. This allows you apply the enhancements and fixes we have brought in recent release to the upgrade wizard, prior to you upgrading to hopefully resolve many issue we have seen in the community.
+To apply the patch download it from the https://suitecrm.com/files/162/SuiteCRM-7.11/507/SuiteCRM_Upgrade_Patch.zip[here] and install via module loader, not via the upgrade wizard. Then proceed to upgrade as normal.
+
+
+==== icon:lock[] Security
+
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+
+Full disclosure of the security issues addressed in this release will be made at a later date
+
+
+==== icon:star[] Enhancements
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/7795[7795^] - PR: https://github.com/salesagility/SuiteCRM/pull/7806[7806] Custom Extend Core Modules
+* PR: https://github.com/salesagility/SuiteCRM/pull/8405[8405^] - Remove deprecated sudo from .travis.yml
+* PR: https://github.com/salesagility/SuiteCRM/pull/8506[8506^] - Increase driver timeouts to be a little more lenient
+* PR: https://github.com/salesagility/SuiteCRM/pull/8523[8523^] - Update the index on the target list - targets middle table
+* PR: https://github.com/salesagility/SuiteCRM/pull/8618[8618^] - Move OAuth2 Encryption Key into config.php
+* PR: https://github.com/salesagility/SuiteCRM/pull/8639[8639^] - Display Data table under maps in any language
+* PR: https://github.com/salesagility/SuiteCRM/pull/8638[8638^] - Check permissions only on required directories on upgrade system checks
+
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/6669[6669^] - Issue: https://github.com/salesagility/SuiteCRM/issues/5526[5526^] -  Fix Inline edit date/datetime issue
+* PR: https://github.com/salesagility/SuiteCRM/pull/7056[7056^] - Issue: https://github.com/salesagility/SuiteCRM/issues/3911[3911^] -  LDAPAutheticate warnings in log
+* PR: https://github.com/salesagility/SuiteCRM/pull/7863[7863^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7723[7723^] -  Fix missing campaign analysis graphs
+* PR: https://github.com/salesagility/SuiteCRM/pull/8208[8208^] - Issue: https://github.com/salesagility/SuiteCRM/issues/6676[6676^] -  Add editview check to stop cacheing issues for dates on aow conditions
+* PR: https://github.com/salesagility/SuiteCRM/pull/8257[8257^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8261[8261^] -  Handling of temp files during Upgrades
+* PR: https://github.com/salesagility/SuiteCRM/pull/8481[8481^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8450[8450^] -  Minor bug in GridLayoutMetaDataParser::addField()
+* PR: https://github.com/salesagility/SuiteCRM/pull/8483[8483^] - Fix function declaration of SugarFieldTime::save()
+* PR: https://github.com/salesagility/SuiteCRM/pull/8504[8504^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8499[8499^] -  API V8 issues for password grants SuiteCRM 7.10.22
+* PR: https://github.com/salesagility/SuiteCRM/pull/8511[8511^] - Issue: https://github.com/salesagility/SuiteCRM/issues/5012[5012^] -  Remove maxLength from user name in DB config
+* PR: https://github.com/salesagility/SuiteCRM/pull/8550[8550^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8549[8549^] -  Added CSS to make case updates textfield re-sizeable
+* PR: https://github.com/salesagility/SuiteCRM/pull/8559[8559^] - Fix issue for non based on Emails Campaigns
+* PR: https://github.com/salesagility/SuiteCRM/pull/8594[8594^] - Fix db convert directly calling abstract function
+* PR: https://github.com/salesagility/SuiteCRM/pull/8596[8596^] - Add missing business hours calculation to reports
+* PR: https://github.com/salesagility/SuiteCRM/pull/8597[8597^] - Issue: https://github.com/salesagility/SuiteCRM/issues/5836[5836^] -  Fix/5836 two factor authentication redirect
+* PR: https://github.com/salesagility/SuiteCRM/pull/8598[8598^] - Fix usage of deprecated Redis::delete() function
+* PR: https://github.com/salesagility/SuiteCRM/pull/8601[8601^] - Fix PHP notices  Fix missing query offset in SugarBean::get_linked_beans() warnings
+* PR: https://github.com/salesagility/SuiteCRM/pull/8607[8607^] - Fix missing query offset in SugarBean::get_linked_beans()
+* PR: https://github.com/salesagility/SuiteCRM/pull/8629[8629^] - Fix string within sub query
+* PR: https://github.com/salesagility/SuiteCRM/pull/8636[8636^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8489[8489^] -  No validation when using header save button in AOS_Products
+* PR: https://github.com/salesagility/SuiteCRM/pull/8638[8638^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8637[8637^] -  Upgrade Wizard fatal error after upgrade on windows
+* PR: https://github.com/salesagility/SuiteCRM/pull/8646[8646^] - Fix Report navigation display
+* PR: https://github.com/salesagility/SuiteCRM/pull/8647[8647^] - Issue: https://github.com/salesagility/SuiteCRM/issues/5487[5487^] -  Report groups repeat for each record
+* PR: https://github.com/salesagility/SuiteCRM/pull/8648[8648^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7821[7821^] -  Fix Username alignment in all screen widths
+* PR: https://github.com/salesagility/SuiteCRM/pull/8651[8651^] - Fix warnings when running upgrade via cli
+* PR: https://github.com/salesagility/SuiteCRM/pull/8652[8652^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8643[8643^] -  Reports do not work related module custom fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/8654[8654^] - Fix naming from SugarCRM Reports to AOR_Reports
+* PR: https://github.com/salesagility/SuiteCRM/pull/8655[8655^] - Reports: Remove useless recalculation
+* PR: https://github.com/salesagility/SuiteCRM/pull/8659[8659^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7766[7766^] -  Invalid depreciated log in SugarBean fixUpFormatting
+* PR: https://github.com/salesagility/SuiteCRM/pull/8661[8661^] - Task Status key is displayed in View Summary
+* PR: https://github.com/salesagility/SuiteCRM/pull/8755[8755^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7152[7152^] -  Fix cases Update text not saving when using html field
+* PR: https://github.com/salesagility/SuiteCRM/pull/8758[8758^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8757[8757^] -  Time format preference typo
+
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!
+
+Đào Quốc Vương, Global Ip Action & Connor Shea
+
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors gitbnw iDevIt007 QuickCRM lazka 604media marin-h ChangezKhan serfreeman1337 connorshea tsmgeek tsitle %}}
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.10.25
 
 _Released 25/03/2020_
