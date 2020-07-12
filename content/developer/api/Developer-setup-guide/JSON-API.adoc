@@ -41,10 +41,14 @@ Also, you have to be sure that the config files are owned by PHP.
 [source,php]
 sudo chown www-data:www-data p*.key
 
-=== Update encryption key
-OAuth2’s AuthorizationServer needs to set an encryption key for security reasons. For doing this, please, go to Api/Core/Config/ApiConfig.php and find "const OAUTH2_ENCRYPTION_KEY".
+=== OAUTH2 encryption key
+OAuth2’s AuthorizationServer needs to set an encryption key for security reasons.
+This key has been gererated during the SuiteCRM installation and stored in the config.php under "oauth2_encryption_key".
+If you would like to change its value you may generate a new one by running
+[source,php]
+echo base64_encode(random_bytes(32)).PHP_EOL;
 
-Now update its value with generating a new one using `base64_encode(random_bytes(32))`
+and then storing the output in the config.php.
 
 If you need more information about this issue, https://oauth2.thephpleague.com/v5-security-improvements/[please visit this page].
 
