@@ -8,10 +8,10 @@ weight: 195
 == SchemaSpy tables and diagrams
 
 To learn about our database structure, with its tables and relationships, 
-please visit the link:++https://schema%2D%2Dsuitecrm%2Ddocs.netlify.com/schema++[SuiteCRM Database Schema^], 
+please visit the link:++https://schema--suitecrm-docs.netlify.com/schema++[SuiteCRM Database Schema^], 
 generated with SchemaSpy.
 
-image:schemaspy.png[link="https://schema%2D%2Dsuitecrm%2Ddocs.netlify.com/schema", SchemaSpy screenshot, window="_blank"]
+image:schemaspy.png[link="https://schema--suitecrm-docs.netlify.com/schema", SchemaSpy screenshot, window="_blank"]
 
 == General principles and sample SQL queries
 
