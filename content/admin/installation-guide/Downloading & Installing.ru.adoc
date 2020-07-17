@@ -52,13 +52,14 @@ ifdef::env-github[:btn:]
 
 Для установки драйверов выполните следующее:
 
- .	Загрузите необходимые драйвера, руководствуясь данной таблицей. 
-[cols="1,3,3",options="header"]
+ .	Загрузите необходимые драйвера, руководствуясь данной таблицей:
+ 
+[cols="1,1,5",options="header"]
 |===
 |Тип БД	|Расширение	|Драйвер
-|MySQL	|mysqli	|http://us.php.net/manual/en/book.mysqli.php
+|MySQL	|mysqli	|https://www.php.net/manual/ru/book.mysqli.php
 
-|Microsoft SQL	|sqlsrv	|http://msdn.microsoft.com/en-us/library/cc296170.aspx
+|Microsoft SQL	|sqlsrv	|https://docs.microsoft.com/ru-ru/sql/connect/php/system-requirements-for-the-php-sql-driver
 |===
 
 [start=2]
@@ -73,16 +74,14 @@ link:../../compatibility-matrix[Таблица совместимости].
 
 Для предотвращения неавторизованного доступа к файлам системы при использовании веб-сервера Apache рекомендуется выполнить следующее: 
 
-Перед запуском процесса установки в файле httpd.conf установите для папки SuiteCRM параметр *_AllowOverride_* в значение *_All_*. После установки системы в корневой папке устанавливаемой системы появится файл  .htaccess, содержащий следующие строки:  
+Перед запуском процесса установки в файле httpd.conf установите для папки SuiteCRM параметр *_AllowOverride_* в значение *_All_*. После установки системы в корневой папке устанавливаемой системы появится файл  .htaccess, содержащий в том числе следующие строки:  
+
 [source]
 ----
-# BEGIN SUITECRM RESTRICTIONS 
-RedirectMatch 403 (?i)^.*\.log$ 
-RedirectMatch 403 (?i)/+not_imported_.*\.txt 
-RedirectMatch 403 (?i)/+(soap|cache|xtemplate|data|examples|include|log4php|metadata|modules)/+.*\.(php|tpl) 
-RedirectMatch 403 (?i)/+emailmandelivery\.php 
-RedirectMatch 403 (?i)/+cache/+upload 
-# END SUITECRM RESTRICTIONS 
+# BEGIN SUITECRM RESTRICTIONS
+RedirectMatch 403 (?i).*\.log$
+RedirectMatch 403 (?i)/+not_imported_.*\.txt
+RedirectMatch 403 (?i)/+(soap|cache|xtemplate|data|examples|include|log4php|metadata|modules|vendor)/+.*\.(php|tpl)
 ----
 
 Для проверки действия этих ограничений попытайтесь просмотреть через браузер файл *_suitecrm.log_*, должна появиться ошибка *_#403_*. Если этого не произошло – проверьте файл *_.htaccess_*. За более подробной информацией обратитесь к документации Apache.
