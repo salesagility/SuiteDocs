@@ -1,4 +1,3 @@
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -8,7 +7,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  asciidoctor
+  asciidoctor (~> 2.0, >= 2.0.10)
 
 BUNDLED WITH
    1.17.2
