@@ -1,0 +1,17 @@
+---
+Title: "翻译文档"  
+Weight: 60
+---
+:experimental: ////this is here to allow btn:[]syntax used below 
+
+:imagesdir: /images/en/community
+
+你可以帮忙将 SuiteCRM 文档网站翻译成自己的语言版本。
+
+首先，学习如何 link:./../simple-edit/[编辑页面]。
+
+接下来，你只需要创建一个与你正在翻译的页面名称相一致的新页面，但是得在扩展名前加上你的国际语言代码。
+
+所以当把一个文件翻译成西班牙文时，其文件名会从 `upgrade.adoc` 变成 `upgrade.es.adoc`。
+
+想了解更多相关信息，请参阅 link:../guidelines/[文档指南].
