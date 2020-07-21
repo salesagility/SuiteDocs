@@ -104,7 +104,7 @@ Fields can filter on attribute object. Allowed keys are valid bean properties.
 Example:
 
 [source,php]
-{{suitecrm.url}}/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
+{{suitecrm.url}}/Api/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
 
 Result:
 
@@ -137,7 +137,7 @@ Page can filter beans and set pagination. Allowed key are *number* and *size*.
 Example:
 
 [source,php]
-{{suitecrm.url}}/V8/module/Accounts?fields[Account]=name,account_type&page[number]=3&page[size]=1
+{{suitecrm.url}}/Api/V8/module/Accounts?fields[Account]=name,account_type&page[number]=3&page[size]=1
 
 Result:
 
@@ -181,7 +181,7 @@ Sorting is set to ASC by default. If the property is prefixed with hyphen, the s
 Example:
 
 [source,php]
-{{suitecrm.url}}/V8/module/Accounts?sort=-name
+{{suitecrm.url}}/Api/V8/module/Accounts?sort=-name
 
 Result:
 
@@ -249,12 +249,12 @@ LTE = '<=';
 Example:
 
 [source,php]
-{{suitecrm.url}}/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
+{{suitecrm.url}}/Api/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
 
 Example:
 
 [source,php]
-{{suitecrm.url}}/V8/module/Accounts?filter[account_type][eq]=Customer
+{{suitecrm.url}}/Api/V8/module/Accounts?filter[account_type][eq]=Customer
 
 
 
@@ -269,46 +269,46 @@ Result:
 === Logout
 
 [source,php]
-POST {{suiteCRM.url}}/V8/logout
+POST {{suiteCRM.url}}/Api/V8/logout
 
 === Modules
 
 [source,php]
-GET {{suiteCRM.url}}/V8/meta/modules
+GET {{suiteCRM.url}}/Api/V8/meta/modules
 
 === Module Fields
 
 [source,php]
-GET {{suiteCRM.url}}/V8/meta/fields/{moduleName}
+GET {{suiteCRM.url}}/Api/V8/meta/fields/{moduleName}
 
 === Get a module by ID
 
 [source,php]
-GET {{suitecrm.url}}/V8/module/{moduleName}/{id}
+GET {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}
 
 Available parameters: fields
 
 Example:
 
 [source,php]
-V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
+Api/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
 
 === Get collection of modules
 
 [source,php]
-GET {{suitecrm.url}}/V8/module/{moduleName}
+GET {{suitecrm.url}}/Api/V8/module/{moduleName}
 
 Available parameters: fields, page, sort, filter
 
 Example:
 
 [source,php]
-V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
+Api/V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
 
 === Create a module record
 
 [source,php]
-POST {{suitecrm.url}}/V8/module
+POST {{suitecrm.url}}/Api/V8/module
 
 Example body:
 
@@ -316,7 +316,6 @@ Example body:
 {
   "data": {
     "type": "Accounts",
-    "id": "86ee02b3-96d2-47b3-bd6d-9e1035daff3a",
     "attributes": {
       "name": "Test account"
     }
@@ -326,7 +325,7 @@ Example body:
 === Update a module record
 
 [source,php]
-PATCH {{suitecrm.url}}/V8/module
+PATCH {{suitecrm.url}}/Api/V8/module
 
 Example body:
 
@@ -344,22 +343,22 @@ Example body:
 === Delete a module record
 
 [source,php]
-DELETE {{suitecrm.url}}/V8/module/{moduleName}/{id}
+DELETE {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}
 
 === Get relationship
 
 [source,php]
-GET {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships/{relatedModuleName}
+GET {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{relatedModuleName}
 
 Example:
 
 [source,php]
-V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts
+Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts
 
 === Create relationship
 
 [source,php]
-POST {{suitecrm.url}}/V8/module/{moduleName}/relationships
+POST {{suitecrm.url}}/Api/V8/module/{moduleName}/relationships
 
 Example body:
 
@@ -376,10 +375,10 @@ Example body:
 === Delete relationship
 
 [source,php]
-DELETE {{suitecrm.url}}/V8/module/{moduleName}/{id}/relationships/{relatedModule}/{relatedBeanId}
+DELETE {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{relatedModule}/{relatedBeanId}
 
 Example:
 
 [source,php]
-V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts/11a71596-83e7-624d-c792-5ab9006dd493
+/Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts/11a71596-83e7-624d-c792-5ab9006dd493
 
