@@ -46,7 +46,7 @@ OAuth2’s AuthorizationServer needs to set an encryption key for security reaso
 This key has been gererated during the SuiteCRM installation and stored in the config.php under "oauth2_encryption_key".
 If you would like to change its value you may generate a new one by running
 [source,php]
-echo base64_encode(random_bytes(32)).PHP_EOL;
+php -r 'echo base64_encode(random_bytes(32)), PHP_EOL;'
 
 and then storing the output in the config.php.
 
