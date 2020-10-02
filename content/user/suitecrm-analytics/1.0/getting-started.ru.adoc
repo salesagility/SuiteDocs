@@ -1,12 +1,12 @@
 ---
-title: Начало работы
+title: Версия 1.0 - Начало работы
 weight: 20
 ---
 
 :author: likhobory
 :email: likhobory@mail.ru
 
-:experimental: 
+:experimental:
 
 :imagesdir: /images/en/user
 
@@ -38,8 +38,8 @@ image:scrm_analytics_login.png[Вход в SuiteCRM Analytics]
 
 Для создания отчёта перейдите к соответствующему файлу отчёта в  репозитории решений.
 
-Для этого на главной странице нажмите на кнопку {btn}[Browse].  
-В левой панели открывшейся страницы выберите папку *Public* > *SuiteCRM Analytics* > *Reports*. 
+Для этого на главной странице нажмите на кнопку {btn}[Browse].
+В левой панели открывшейся страницы выберите папку *Public* > *SuiteCRM Analytics* > *Reports*.
 В правой панели дважды кликните на необходимый отчёт для  его открытия в новой вкладке браузера.
 
 image:scrm_analytics_browse.png[Обзор файлов]
