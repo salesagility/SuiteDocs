@@ -16,12 +16,12 @@ The SuiteCRM User Console allows end users to run reports and dashboards that ha
 == Log In
 Get started with SuiteCRM Analytics by following these steps to login:
 
-1. Launch a Web browser and enter the URL of the SuiteCRM Analytics server.
+. Launch a Web browser and enter the URL of the SuiteCRM Analytics server.
 This will typically be *http://localhost:8080/suitecrmanalytics* if the server is running on your own machine
 
-2. The page loads an introductory screen with a *Login* section.
+. The page loads an introductory screen with a *Login* section.
 
-3. Enter your user name and password and click *Login*.
+. Enter your user name and password and click *Login*.
 
 image:IMAGE1.png[title="Log In"]
 
@@ -43,7 +43,7 @@ The first thing you see after you log into the *SuiteCRM Analytics User Console*
 
 image:IMAGE2.png[title="Home"]
 
-[options="header",cols="s, , "]
+[cols="1s,3,20",options="header"]
 |=======================
 |Item |Name |Function
 |1 |Home Indicator |Indicates the current User Console perspective that you are using. The
@@ -67,7 +67,7 @@ The *Browse Files* perspective helps you keep your files and folders organized a
 
 image:IMAGE3.png[title="Browse Files"]
 
-[options="header",cols="s, ,a"]
+[cols="1s,3,20a",options="header"]
 |=======================
 |Item |Name |Function
 |1 |Browse Files Indicator |Indicates the current User Console perspective that you are using.
@@ -105,7 +105,7 @@ It provides a simple space to work with your files.
 
 image:IMAGE4.png[title="Opened"]
 
-[options="header",cols="s, ,a"]
+[cols="1s,3,20a",options="header"]
 |=======================
 |Item |Name |Function
 |1 |Opened indicator
@@ -138,7 +138,7 @@ The list of schedules shows which reports are scheduled to run, the recurrence p
 
 image:IMAGE5.png[title="Schedules"]
 
-[options="header",cols="s, ,a"]
+[cols="1s,3,20a",options="header"]
 |=======================
 |Item |Name |Function
 |1 |Schedule Indicator |Indicates the current User Console perspective that you are using.
@@ -166,7 +166,7 @@ If you do not have administration privileges, Administration does not appear wit
 
 image:IMAGE6.png[title="Administration"]
 
-[options="header",cols="s, ,a"]
+[cols="1s,3,20a",options="header"]
 |=======================
 |Item |Name |Function
 |1 |Administration |The Administration perspective enables you to set up users, configure the mail server and change authentication settings on the SuiteCRM Analytics Server.
@@ -215,29 +215,31 @@ You can control users and roles in the User Console with a point-and-click user 
 The *Users & Roles* page allows you to switch between user and role settings.
 You can add, delete, and edit users and roles from this page.
 
-*Note*: Access to files or folders can also be refined using the *Browse Files* perspective in the *User Console*.
+{{% notice note %}}
+Access to files or folders can also be refined using the *Browse Files* perspective in the *User Console*.
 Each file or folder can use the default permissions or permissions can be customized for specific users and roles.
+{{% /notice %}}
 
 === Sample Users, Default Roles, and Permissions
 By viewing the sample user and default role examples you can get ideas about ways to define actual users and specific roles.
 
-1. *Login* to the User Console. Click *Home > Administration*.
+. *Login* to the User Console. Click *Home > Administration*.
 The Administration perspective opens the *Users & Roles* page with the *Manage Users* tab selected.
 
-2. Highlight a user in the users list to display which roles are available for that user, as well as which role is currently defined for that user.
+. Highlight a user in the users list to display which roles are available for that user, as well as which role is currently defined for that user.
 
-3. Select the *Manage Roles* tab to display the *Operation Permissions* for the user's role, as defined by the checked boxes.
+. Select the *Manage Roles* tab to display the *Operation Permissions* for the user's role, as defined by the checked boxes.
 These roles, added for your convenience, can be removed or altered based on your needs (*see Table 1*).
 Each default role and sample user comes with a standard set of permissions, which provides for a specific set of capabilities when using SuiteCRM Analytics tools and the SuiteCRM Analytics Server (*see Table 2*).
 
-4. Select the *System Roles* tab to display the user's system role.
+. Select the *System Roles* tab to display the user's system role.
 System Roles are built-in roles used to control default behaviors and permissions in the User Console, handled implicitly or through system configuration, with automatic assignments.
 The default system role for all users is *Authenticated*.
 If you want to restrict permissions, the Authenticated role must be restricted or removed from the user.
 
 
 .Default SuiteCRM Analytics Security Settings
-[options="header",cols=" , ,a"]
+[cols="2,1,10a",options="header"]
 |=======================
 |Default Role |Sample User |Default Operation Permissions
 |Administrator |admin |* Administer Security
@@ -258,7 +260,7 @@ If you want to restrict permissions, the Authenticated role must be restricted o
 |=======================
 
 .Operation Permissions Defined
-[options="header",cols=" ,a"]
+[cols="1,3a",options="header"]
 |=======================
 |Operation Permission  |Definition
 |Administer Security  |The default Administrator role automatically conveys all operation
@@ -286,74 +288,76 @@ perspective.
 |=======================
 
 === Add Users
-1. With the Manage Users tab selected, click the plus *(+)* sign. The New User dialog box appears.
+. With the Manage Users tab selected, click the plus *(+)* sign. The New User dialog box appears.
 
-2. Enter a new *User Name* and *Password*, then *Confirm Password* and click *OK*.
+. Enter a new *User Name* and *Password*, then *Confirm Password* and click *OK*.
 The new user account is active and displays in the Users list.
 
 === Change User Passwords
-1. With the *Manage Users* tab selected, click the user for whose password you want to edit.
+. With the *Manage Users* tab selected, click the user for whose password you want to edit.
 The user's information populates to the right of the *Users* field.
 
-2. Click *Edit*. Enter the *New Password* and *Confirm Password* then click *OK*.
+. Click *Edit*. Enter the *New Password* and *Confirm Password* then click *OK*.
 The password is changed and the user is able to login with the new password.
 
-Note: After you have logged into the User Console for the first time, it is a best practice to change
+{{% notice note %}}
+After you have logged into the User Console for the first time, it is a best practice to change
 the default administrator password.
+{{% /notice %}}
 
 === Delete Users
-1. With the *Manage* Users tab selected, click the user or users in the *Users* list that you want to
+. With the *Manage* Users tab selected, click the user or users in the *Users* list that you want to
 delete.
-2. Click the *X* to delete the user or users. The *Delete* User confirmation dialog box appears.
-3. Click *Yes*, *Delete* to delete the user(s) and refresh the user list.
+. Click the *X* to delete the user or users. The *Delete* User confirmation dialog box appears.
+. Click *Yes*, *Delete* to delete the user(s) and refresh the user list.
 The selected user accounts are deleted and the users are no longer able to login to the SuiteCRM Analytics Server.
 
 === Assign Users to Roles
-1. With the *Manage* Users tab selected, click to highlight the user from the *Users* list that you want to associate with a role.
+. With the *Manage* Users tab selected, click to highlight the user from the *Users* list that you want to associate with a role.
 
-2. In the *Available* list, click to highlight the role that you want to associate with the selected user.
+. In the *Available* list, click to highlight the role that you want to associate with the selected user.
 
-3. Click the right arrow *(>)* to move the role to the Selected list.
+. Click the right arrow *(>)* to move the role to the Selected list.
 
-4. You can remove a role from the Selected list by highlighting that role and clicking on the left
+. You can remove a role from the Selected list by highlighting that role and clicking on the left
 arrow *(<)*.
 The role moves from the *Selected* to *Available* list, and the user no longer has the associated permissions.
 The user now has all of the permissions associated with the role in the Selected list
 
 === Add Roles
-1. With the *Manage* Roles tab selected, click the plus *(+)* sign.
+. With the *Manage* Roles tab selected, click the plus *(+)* sign.
 The *New Role* dialog box appears.
 
-2. Enter a new *Name* for the role, then click *OK*. The new role is created, and appears in the *Available* roles list.
+. Enter a new *Name* for the role, then click *OK*. The new role is created, and appears in the *Available* roles list.
 After adding a new role, you need to assign operation permissions to it, see *Assign Permissions* to *Roles*, below, for details.
 
 === Assign Permissions to Roles
-1. Make sure that the role is highlighted in the *Roles* list.
+. Make sure that the role is highlighted in the *Roles* list.
 
-2. Click in the check boxes in the *Operation Permissions* list.
+. Click in the check boxes in the *Operation Permissions* list.
 The role has permissions assigned to it, and users associated with that role have those permissions.
 
 === Delete Roles
-1. With the *Manage Roles* tab selected, click the role or roles you want to delete.
+. With the *Manage Roles* tab selected, click the role or roles you want to delete.
 
-2. Click the *X* to delete the role(s).
+. Click the *X* to delete the role(s).
 The *Delete* Role confirmation dialog box appears.
 
-3. Click *Yes* to delete the role(s) and refresh the role list.
+. Click *Yes* to delete the role(s) and refresh the role list.
 The selected role is deleted and is no longer available on the server.
 The users who were associated with that role are no longer associated with it.
 Other roles assigned to users are not affected. If users have only one role assigned to them and that role is deleted, then the users have no role assigned to them.
 The default role is *Authenticated* and all users have that role unless you remove it.
 
 === Assign Roles to Users
-1. Make sure the *Manage Roles* tab is selected, then click the role in the *Roles* list that you want to associate with a user or users.
+. Make sure the *Manage Roles* tab is selected, then click the role in the *Roles* list that you want to associate with a user or users.
 
-2. In the *Available* list, click the user or users that you want to associate with that role.
+. In the *Available* list, click the user or users that you want to associate with that role.
 
-3. Click the right arrow *(>)* to move the users to the *Selected* list.
+. Click the right arrow *(>)* to move the users to the *Selected* list.
 You can click the double-right arrow *(>>)* to move all users from the *Available* list to the *Selected* list.
 
-4. You can remove users from the *Selected* list by highlighting that user and clicking on the left arrow *(<)*.
+. You can remove users from the *Selected* list by highlighting that user and clicking on the left arrow *(<)*.
 The user moves from the *Selected* list to the *Available* list, and no longer has the permissions associated with that role.
 The users that appear in the Selected list are now tied to the highlighted role and have all of the permissions associated with that role.
 
@@ -362,19 +366,20 @@ You can run reports in the background from the User Console.
 
 Perform the following steps to run a report in the background:
 
-1. Log on to the User Console, and then click the Browse Files button.
+. Log on to the User Console, and then click the Browse Files button.
 
-2. In the *Folders* pane, browse to the folder containing the file that you want to run.
+. In the *Folders* pane, browse to the folder containing the file that you want to run.
 
-3. In the *File* pane, click on the file that you want to run.
+. In the *File* pane, click on the file that you want to run.
 
-4. In the *File Actions* pane, click *Run in background*. The Run In Background dialog box displays.
-+
+. In the *File Actions* pane, click *Run in background*. The Run In Background dialog box displays.
+
 image:IMAGE9.png[title="Run Files in Background"]
 
-5. Enter your selections for the following fields.
-+
-[options="header",cols=" ,a"]
+[start=5]
+. Enter your selections for the following fields.
+
+[cols="1,3a",options="header"]
 |=======================
 |Field |Description
 |Generated Content Name |Specify a name for the generated content. If no name is entered in the Name field, the default is the report name.
@@ -386,10 +391,11 @@ Click *Select* to browse to a folder location to choose it.
 |Overwrite Existing File |Click this check box to overwrite any existing files that have the same name and timestamp as the one you are running and saving to the specified location.
 |=======================
 
-6. Click *Next*.
+[start=6]
+. Click *Next*.
 If the selected report has run parameters, such as *Output Type*, you will be asked to specify them here.
 
-7. When you have completed your parameter selections, click *Finish*.
+. When you have completed your parameter selections, click *Finish*.
 
 The system will deliver the content generated from the report to your specified location.
 
@@ -405,17 +411,18 @@ If any blocked out times are set up, you can view these times so you can choose 
 You can run reports from the User Console using scheduling options to launch reports during off-peak
 hours or on a recurring basis.
 
-1. Log on to the User Console, and then click the *Browse Files* button.
-2. In the *Folders* pane, browse to the folder containing the file that you want to run.
-3. In the *File* pane, click on the file that you want to run.
-4. In the *File Actions* pane, click *Schedule*.
+. Log on to the User Console, and then click the *Browse Files* button.
+. In the *Folders* pane, browse to the folder containing the file that you want to run.
+. In the *File* pane, click on the file that you want to run.
+. In the *File Actions* pane, click *Schedule*.
 The New Schedule dialog box displays.
-+
+
 image:IMAGE10.png[title="Schedule Report"]
 
-5. Enter your selections for the following fields
-+
-[options="header",cols=" ,a"]
+[start=5]
+. Enter your selections for the following fields
+
+[cols="1,3a",options="header"]
 |=======================
 |Field |Description
 |Schedule Name |Specify a name for the schedule, which will also be the name of the generated report content.
@@ -428,14 +435,16 @@ Click *Select* to browse to a folder location to choose it.
 |Overwrite Existing File |Click this check box to overwrite any existing files that have the same name and timestamp as the one you are running and saving to the specified location.
 |=======================
 
-6. Click *Next*.
+[start=6]
+. Click *Next*.
 The schedule fields display
-+
+
 image:IMAGE11.png[title="Schedule Report"]
 
-7. If selecting a recurrence, be sure to select start and end dates, as well as a recurrence pattern.
-+
-[options="header",cols=" ,a"]
+[start=7]
+. If selecting a recurrence, be sure to select start and end dates, as well as a recurrence pattern.
+
+[cols="1,3a",options="header"]
 |=======================
 |Field |Description
 |Recurrence |Choose a time interval for the report from the Recurrence list.
@@ -462,65 +471,67 @@ The report will begin running according to the specified recurrence pattern on t
 |Cron String (Cron) |If you select ‘Cron’ for Recurrence, then specify the Cron syntax. Consult the
 *Quartz Cron Attributes* reference to learn the Quartz Cron syntax.
 |=======================
-+
-*Important!* When you set up a *Cron* schedule you must remember that it will start at *12 noon server time* in the *Start Date* selected.
+
+{{% notice warning %}}
+When you set up a *Cron* schedule you must remember that it will start at *12 noon server time* in the *Start Date* selected.
 This means if you create a new schedule at *9am* to run every 15 minutes, it will only start running at *12:00* on the Start Date selected. To make sure your cron schedule starts executing straight away its best to select the day prior to today's date.
 That will allow the cron job to be active right away.
+{{% /notice %}}
 
-8. Click *Next*.
+[start=8]
+. Click *Next*.
 The selected report may run using several parameters which you may be asked to specify, such as output type.
-
-9. If your SuiteCRM Analytics administrator has set up an email server, you may elect to email a copy of the report to selected users.
+. If your SuiteCRM Analytics administrator has set up an email server, you may elect to email a copy of the report to selected users.
 For example, you may want users in the Finance department to receive the Excel output of the report via email every time the report is run on the recurring schedule.
-a. Click *No* to skip emailing a copy of the report to users.
-b. Click *Yes* to email a copy of the report to users.
+[loweralpha]
+.. Click *No* to skip emailing a copy of the report to users.
+.. Click *Yes* to email a copy of the report to users.
 Fill in the fields that display with the users’ details, and then click *OK*.
-
-10. When you have completed your parameter selections, click *Finish*.
+. When you have completed your parameter selections, click *Finish*.
 
 === Edit a Schedule
 You can edit a schedule to change the frequency of the scheduled report, report parameters, and email settings.
 
-1. Click the *Home* drop-down menu on the upper-left and click the link to the *Schedules*.
+. Click the *Home* drop-down menu on the upper-left and click the link to the *Schedules*.
 The list of schedules appears in the Schedules page.
 
-2. Click the schedule you want to edit in the list, then click *Edit* in the scheduling toolbar.
+. Click the schedule you want to edit in the list, then click *Edit* in the scheduling toolbar.
 The Edit Schedule window appears.
 
-3. Type to rename the schedule in the *Schedule Name* field.
+. Type to rename the schedule in the *Schedule Name* field.
 
-4. Choose a new time interval for the report from the *Recurrence* list.
+. Choose a new time interval for the report from the *Recurrence* list.
 
-5. Choose a new *Start Time* and *Recurrence Pattern*, as well as new *Start* and *End Dates* for the
+. Choose a new *Start Time* and *Recurrence Pattern*, as well as new *Start* and *End Dates* for the
 schedule.
 Click *Next*.
 If blockout times have been scheduled by your administrator, a *View Blockout Times* button appears on the bottom of the *New Schedule* window.
 A list of blockout times is viewable by clicking *View Blockout Times*.
 
-6. Choose what type of file you would like the schedule to create from the *Parameters* field.
+. Choose what type of file you would like the schedule to create from the *Parameters* field.
 Click Next.
 The email option will only appear if your system administrator has enabled email on the
 server.
+[loweralpha]
+.. If you do not want to email a copy of the report, choose *No*.
 
-a. If you do not want to email a copy of the report, choose *No*.
-
-b. If you want to email a copy of the report, choose *Yes*.
+.. If you want to email a copy of the report, choose *Yes*.
 Fill in or edit the fields that appear.
 
-7. Click *OK*.
+. Click *OK*.
 
 The schedule is edited and appears in the list in the Schedules window of the console.
 
 === Delete a Schedule
 After you have scheduled a report, you can easily delete the schedule without deleting the report.
 
-1. Click the *Home* drop-down menu on the upper-left and click the link to *Schedules*.
+. Click the *Home* drop-down menu on the upper-left and click the link to *Schedules*.
 The list of schedules appears in the Schedules page.
 
-2. Click the schedule that you want to delete in the list.
+. Click the schedule that you want to delete in the list.
 The schedule is highlighted.
 
-3. Click *Delete* in the upper right of the toolbar to delete the highlighted schedule.
+. Click *Delete* in the upper right of the toolbar to delete the highlighted schedule.
 This deletes the schedule while leaving the report intact.
 
 === Manage Schedules
@@ -542,15 +553,16 @@ You can always come back to it later.
 === About the Mail Server Page
 You use the Administration page within the SuiteCRM Analytics User Console and access *Mail Server* to set up the e-mail server, as shown in the following example steps:
 
-1. Log on to the Suitecrm Analytics Console, click Administration in the upper-right corner, then
+. Log on to the Suitecrm Analytics Console, click Administration in the upper-right corner, then
 click *Mail* Server from the items on the left.
 The Mail Server page appears.
-+
+
 image:IMAGE12.png[title="About the Mail Server Page"]
 
-2. Enter your email server settings
-+
-[options="header",cols=" ,a"]
+[start=2]
+. Enter your email server settings
+
+[cols="1,3a",options="header"]
 |=======================
 |Setting |Description
 |Hostname (SMTP) |Address of your SMTP email server for sending
@@ -562,16 +574,16 @@ User Name User ID to connect to the email server for sending email.
 |Password |Password used to connect to the email server.
 |Server Type |Transport for accessing the email server, usually SMTP.
 For Gmail, SMTP is required.
-|Email From Address |Name that appears in the From field in an email.
+|Email From Address |Address that appears in the From field in an email.If left blank, the default email address for this field is Pentaho Scheduler.
+|Email From Name |Name that appears in the From field in an email.
 If left blank, the default email name for this field is SuiteCRM Analytics Scheduler.
-|Email From Name |Address that appears in the From field in an email.
-If left blank, the default email address for this field is Pentaho Scheduler.
 |Use Start TLS |Enable if the email server requires a Start TLS connection.
 |Use SSL |Enable if the email server requires an SSL connection.
 This value must be enabled for Gmail.
 |=======================
 
-3. Click *Test Email Configuration*, then click *Save*.
+[start=3]
+. Click *Test Email Configuration*, then click *Save*.
 A success message appears.
 
 == Quartz Cron Attributes
@@ -595,7 +607,7 @@ A capital W in the day of month attribute means "Weekday," which only encompasse
 The W character can only be specified when the day-of-month is a single day, not a range or list of days.
 Most of these values can be combined to accommodate unusual cron schedules.
 
-[options="header",cols=" ,a"]
+[cols=",a",options="header"]
 |=======================
 |Attribute |Conditionals and Operators
 |Seconds |, - * /
@@ -609,7 +621,7 @@ Most of these values can be combined to accommodate unusual cron schedules.
 
 === Sample Cron Strings
 
-[options="header",cols=" ,a"]
+[cols=",a",options="header"]
 |=======================
 |Cron |Description
 |0 0/30 * * * ? * |Every 30 minutes every day of the year
@@ -628,11 +640,11 @@ The *CDA Cache* serves the charts and dashboards supplied with SuiteCRM Analytic
 This also includes any charts that are rendered in reports.
 To refresh this cache you can follow these steps
 
-1. Log on to the Suitecrm Analytics Console
+. Log on to the Suitecrm Analytics Console
 
-2. Click the *Tools* menu
+. Click the *Tools* menu
 
-3. Select *Refresh* > *CDA Cache*
+. Select *Refresh* > *CDA Cache*
 
 This will open a new tab informing you when the *CDA* cache has been cleared.
 
@@ -642,11 +654,11 @@ image:IMAGE13.png[title="Refresh CDA Cache"]
 The *Reporting Data Cache* serves the data in reports but not the charts in reports.
 To refresh this cache you can follow these steps:
 
-1. Log on to the Suitecrm Analytics Console
+. Log on to the Suitecrm Analytics Console
 
-2. Click the *Tools* menu
+. Click the *Tools* menu
 
-3. Select *Refresh* > *Reporting Data Cache*
+. Select *Refresh* > *Reporting Data Cache*
 
 This will display a popup informing you when the *Reporting Data* cache has been cleared.
 
