@@ -8,7 +8,6 @@ weight: 9890
 :toclevels: 1
 :icons: font
 
-
 == 7.10.28
 
 _Released 28/10/2020_
@@ -20,8 +19,8 @@ _Released 28/10/2020_
 
 ===  icon:check[] Release Notes
 
-Important - This release removes YUI3 javascript library from the code due to security concerns for the discontinued project.
-If you have code within your instance that still specifically requires or ake use of YUI3 you made need to update your code or include YUI3 manually, prior to updating to this release.
+Important - This release removes the YUI3 JavaScript Library from the codebase due to security concerns for the discontinued project.
+If you have code within your instance that still specifically requires or makes use of YUI3 you made need to update your code or include YUI3 manually, prior to updating to this release.
 
 ==== icon:lock[] Security
 
