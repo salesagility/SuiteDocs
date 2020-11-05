@@ -19,7 +19,8 @@ _Released 05/11/2020_
 
 ===  icon:check[] Release Notes
 
-Important - This release resolves an important issue in 7.10.27 that cause issue in may areas of the crm, including in reports, roles and currency. We recommend all user of 7.10.27 to upgrade to this release asap.
+Important - This release resolves an important issue in 7.10.28 that can cause issues in many areas of the crm, including in reports, roles and currency. We recommend all users of 7.10.28 to upgrade to this release asap. see issues
+https://github.com/salesagility/SuiteCRM/issues/8936[8936^] and https://github.com/salesagility/SuiteCRM/issues/8934[8934^] for more details
 
 
 ==== icon:bug[] Bug Fixes
