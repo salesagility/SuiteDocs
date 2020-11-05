@@ -8,6 +8,45 @@ weight: 9890
 :toclevels: 1
 :icons: font
 
+== 7.10.29
+
+_Released 05/11/2020_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.29.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.29.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+Important - This release resolves an important issue in 7.10.27 that cause issue in may areas of the crm, including in reports, roles and currency. We recommend all user of 7.10.27 to upgrade to this release asap.
+
+
+==== icon:bug[] Bug Fixes
+
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8936[8936^] - +/- get removed from start of text
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8934[8934^] - Report main group issues
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8391[8391^] - Yesterday period option in reports show correct time
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8863[8863^] - Cannot report on Employee Status
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8918[8918^] - Regression with download.php image fields
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8941[8941^] - Cannot delete reports fields
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8826[8826^] - PDF Report contains blank space when using a Main Group and Total
+
+
+=== icon:heart[] Community
+
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors Tuckan pgorod QuickCRM %}}
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.10.28
 
 _Released 28/10/2020_
