@@ -8,6 +8,134 @@ weight: 9890
 :toclevels: 1
 :icons: font
 
+== 7.10.29
+
+_Released 05/11/2020_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.29.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.29.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+Important - This release resolves an important issue in 7.10.28 that can cause issues in many areas of the crm, including in reports, roles and currency. We recommend all users of 7.10.28 to upgrade to this release asap. see issues
+https://github.com/salesagility/SuiteCRM/issues/8936[8936^] and https://github.com/salesagility/SuiteCRM/issues/8934[8934^] for more details
+
+
+==== icon:bug[] Bug Fixes
+
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8936[8936^] - +/- get removed from start of text
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8934[8934^] - Report main group issues
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8391[8391^] - Yesterday period option in reports show correct time
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8863[8863^] - Cannot report on Employee Status
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8918[8918^] - Regression with download.php image fields
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8941[8941^] - Cannot delete reports fields
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8826[8826^] - PDF Report contains blank space when using a Main Group and Total
+
+
+=== icon:heart[] Community
+
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors Tuckan pgorod QuickCRM %}}
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+== 7.10.28
+
+_Released 28/10/2020_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.28.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.28.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+Important - This release removes the YUI3 JavaScript Library from the codebase due to security concerns for the discontinued project.
+If you have code within your instance that still specifically requires or makes use of YUI3 you made need to update your code or include YUI3 manually, prior to updating to this release.
+
+==== icon:lock[] Security
+
+* _Important Security Issue_
+* _Important Security Issue_
+* _Important Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+* _Moderate Security Issue_
+
+Security issues information will be added shortly
+
+==== icon:star[] Enhancements
+
+* PR: https://github.com/salesagility/SuiteCRM/issues/8818[8818^] - Add 'Contains' as valid opp for multienum
+* PR: https://github.com/salesagility/SuiteCRM/issues/8814[8814^] - Allow custom SugarFieldBase class
+* Move TinyMCE Editor to composer
+
+
+==== icon:bug[] Bug Fixes
+
+* Issue: https://github.com/salesagility/SuiteCRM/issues/7972[7972^] - IMAP import fails with Office 365
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8688[8688^] - Fatal error on install with MySQL 8
+* Issue: https://github.com/salesagility/SuiteCRM/issues/6046[6046^] - DBMS reserved words fail in MySQL8
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8830[8830^] - File names with underscores in download.php
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8610[8610^] - Uninitialised variables in ModuleInstaller.php
+* Issue: https://github.com/salesagility/SuiteCRM/issues/4435[4435^] - TinyMCE pagebreaks work correctly
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8771[8771^] - Silent failure when no PHP-json module installed
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8905[8905^] - Report joins fail on one to one relationships
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8904[8904^] - Optimistic Locking is not compatible with all field types
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8904[8904^] - Optimistic locking module definition incorrectly set on some modules
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8903[8903^] - Campaign Bounce email import - better mine type recognition
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8882[8882^] - Delegates subpanel select all / select page doesn't work
+* Issue: https://github.com/salesagility/SuiteCRM/issues/7306[7306^] - API v8 not working on php-fcgid - Missing /api/.htaccess
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8486[8486^] - Rewriting of '.htaccess' file
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8535[8535^] - Email To field being deleted on save
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8730[8730^] - duplicate Compose Email Modal from Activities subpanel
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8641[8641^] - Compose button / Related ID not set when no email
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8812[8812^] - Add to target list in Campaign results
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8824[8824^] - Too few arguments on SugarWebServiceImpl set_relationship
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8677[8677^] - Subpanel end navigation
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8888[8888^] - Fixes DynamicField reference
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8785[8785^] - Incorrect Syntax in install.php
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8795[8795^] - Change log level to warn loading non existing Bean
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8819[8819^] - Update OutboundEmail.php to handle deleted rows
+* Issue: https://github.com/salesagility/SuiteCRM/issues/6427[6427^] - Stacked Bar chart totals incorrect
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8348[8348^] - V8 API CORS prevents DELETE HTTP call
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8816[8816^] - module name on logic_hook install
+* Issue: https://github.com/salesagility/SuiteCRM/issues/3468[3468^] - Email template retrieving cached beans
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8841[8841^] - Change private to protected to fix EmailMan overrides
+* Issue: https://github.com/salesagility/SuiteCRM/issues/8490[8490^] - Fix php Notices
+* Issue - Calender fails to display event the last over 3 weeks
+* Issue - Theme display issues - Header & Footer clean up, Action and List view view buttons
+
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!
+
+Luis Noriega wizlynx group, M. Cory Billington (@_th3y), Hao Wang, QuickCRM, pgorod & Apple Information Security
+
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors tsitle matthewpoer tsummerer maaarghk pribeiro42 gouchaoer IBlasterus JanSiero dominicchinkh Abuelodelanada hannenule mayerelyashiv QuickCRM %}}
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.10.27
 
 _Released 10/06/2020_
