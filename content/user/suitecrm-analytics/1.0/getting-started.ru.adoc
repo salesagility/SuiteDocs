@@ -21,7 +21,7 @@ ifdef::env-github[:btn:]
 == Вход в SuiteCRM Web Analytics
 
 {{% notice note %}}
-Для настройки SuiteCRM Analytics выполните действия, описанные в link:../../../admin/suitecrm-analytics[этом] разделе.
+Для настройки SuiteCRM Analytics выполните действия, описанные в link:../../../../admin/suitecrm-analytics[этом] разделе.
 {{% /notice%}}
 
 Для входа в SuiteCRM Analytics откройте приложение в браузере, по умолчанию используется порт *8080*.
