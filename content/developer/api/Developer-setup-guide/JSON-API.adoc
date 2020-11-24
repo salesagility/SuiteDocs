@@ -260,6 +260,16 @@ Result:
 [source,php]
 POST {{suiteCRM.url}}/V8/logout
 
+=== Modules
+
+[source,php]
+GET {{suiteCRM.url}}/V8/meta/modules
+
+=== Module Fields
+
+[source,php]
+GET {{suiteCRM.url}}/V8/meta/fields/{moduleName}
+
 === Get a module by ID
 
 [source,php]
