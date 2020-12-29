@@ -60,7 +60,7 @@ securitygroups_records table if doing a one-time initial setup.
 If your users should only typically see their own records then the role
 assigned to the group would be configured to have Owner only rights. A
 manager who is a part of the group and who should also be able to see
-all records in the group would have a role directly assigned to the manger's
+all records in the group would have a role directly assigned to the manager's
 record that gives Group access.
 
 For more help check out this 
