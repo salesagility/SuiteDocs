@@ -16,11 +16,14 @@ _Released 05/11/2020_
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.29.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.10.29.tar.gz[*Source code* (tar.gz)]
+* https://suitecrm.com/files/162/SuiteCRM-7.11/530/SuiteCRM_Upgrade_Patch_1.0.1.zip[*Upgrade Patch* (zip)]
 
 ===  icon:check[] Release Notes
 
 Important - This release resolves an important issue in 7.10.28 that can cause issues in many areas of the crm, including in reports, roles and currency. We recommend all users of 7.10.28 to upgrade to this release asap. see issues
 https://github.com/salesagility/SuiteCRM/issues/8936[8936^] and https://github.com/salesagility/SuiteCRM/issues/8934[8934^] for more details
+
+Important - Update 17 March 2021 - The upgrade patch has been updated to version 1.0.1. This update addresses an issue in which the upgrade patch may have prevented the option to select "Next" after a successful system check when upgrading. Special thanks to JanSiero for highlighting this issue and fix.
 
 
 ==== icon:bug[] Bug Fixes
@@ -752,7 +755,7 @@ _Released 31st July 2019_
 * https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13335[#CVE-2019-13335 ] - *Security Issue* - Fixed SSRF
 * *Security Issue* - Fixed privilege escalation
 
-==== icon:star[] Enhancements 
+==== icon:star[] Enhancements
 
 * https://github.com/salesagility/SuiteCRM/pull/7374[#7374 ] Robo test-running commands
 * https://github.com/salesagility/SuiteCRM/pull/7474[#7474 ] SecuritySuite 3.1.16
@@ -788,7 +791,7 @@ _Released 31st July 2019_
 * https://github.com/salesagility/SuiteCRM/pull/7536[#7536 ] Cleanup files created by acceptance tests between test runs
 * https://github.com/salesagility/SuiteCRM/issues/7304[#7304 ] Fixed #7304 - ListView: Fix selection count for the "Select All" case
 * https://github.com/salesagility/SuiteCRM/pull/7541[#7541 ] ListView: Fix the selection count when executing an action without any selection
-* https://github.com/salesagility/SuiteCRM/pull/7542[#7542 ] ListView: Fix selection when switch from "select all" to "select page" 
+* https://github.com/salesagility/SuiteCRM/pull/7542[#7542 ] ListView: Fix selection when switch from "select all" to "select page"
 * https://github.com/salesagility/SuiteCRM/pull/7550[#7550 ] SugarWidgetSubPanelEmailLink: Fix missing opt-in ticks after inline editing
 * https://github.com/salesagility/SuiteCRM/pull/7553[#7553 ] sugar_3.js: Remove unused send_form_for_emails()
 * https://github.com/salesagility/SuiteCRM/issues/7554[#7554 ] Fixed email attachment icon
@@ -811,7 +814,7 @@ _Released 31st July 2019_
 * https://github.com/salesagility/SuiteCRM/pull/7607[#7607 ] Remove lastView variables from tests
 * https://github.com/salesagility/SuiteCRM/issues/7599[#7599 ] Fixed #7599 - Unwanted email generated in case creation & update
 * https://github.com/salesagility/SuiteCRM/issues/7608[#7608 ] Fixed #7608 - A non-numeric value encountered at ListViewSubPanel.php
-* https://github.com/salesagility/SuiteCRM/pull/7624[#7624 ] Fixed email settings "data error" 
+* https://github.com/salesagility/SuiteCRM/pull/7624[#7624 ] Fixed email settings "data error"
 * https://github.com/salesagility/SuiteCRM/issues/6996[#6996 ] Escaped strings issue, breaks "My favorites" filters and perhaps other things
 * https://github.com/salesagility/SuiteCRM/pull/7639[#7639 ] Fixed DB failure with activities subpanel
 
