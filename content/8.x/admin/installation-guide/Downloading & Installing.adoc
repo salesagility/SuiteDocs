@@ -6,7 +6,7 @@ weight: 20
 The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:/admin/installation-guide/downloading-installing[here].
 
 == Downloading and installing SuiteCRM
-If you are installing SuiteCRM for the first time, follow the instructions in this section. If you have an earlier version of SuiteCRM installed, refer to the upgrade section for instructions on how to upgrade your SuiteCRM instance. Follow the steps listed below to install SuiteCRM:
+If you are installing SuiteCRM for the first time, follow the instructions in this section.If you have an earlier version of SuiteCRM installed, refer to the upgrade section for instructions on how to upgrade your SuiteCRM instance.Follow the steps listed below to install SuiteCRM:
 
 . Install the platform-appropriate (Linux or Windows) version of PHP, web server, and database on your machine.
 . Download the SuiteCRM files from suitecrm.com(see "Downloading the latest SuiteCRM files" section).
@@ -23,17 +23,7 @@ If you are installing SuiteCRM for the first time, follow the instructions in th
 
 === Recommended installation pre-requisites
 
-Compatibility Matrix
-^^^^^^^^^^^^^^^^^^^^
-[options="header,"]
-|======================
-Requirement|Version|Database|Version
-|PHP|7.3+|MariaDB|10.2+
-|Angular|9|MySQL|5.6-5.7
-|Node.js|10|SQL Server|2012+
-|Apache|2.4||
-|======================
-
+* link:/8.x/admin/compatibility-matrix/[Compatibility matrix]
 * JSON
 * XML Parsing
 * MB Strings Module
@@ -57,11 +47,12 @@ Requirement|Version|Database|Version
 . Unzip the SuiteCRM zip file contents to your destination directory.
 . Set the required permissions to continue with the install as follows;
 +
-```
+[source,bash]
+----
 sudo chmod +x ./bin/console
 sudo chown -R www-data:www-data .
 sudo chmod -R 775 .
-```
+----
 * That `www-data` needs to be replaced by the actual system user that your webserver runs under. This varies depending on your
 operating system. Common web server users are as follows:
 ** `www-data` (Ubuntu Linux/Apache)
@@ -75,16 +66,18 @@ permissions on your SuiteCRM instance, visit our support forums.
 
 . Install the legacy system by running the following command, replacing the variables as required using the section below for more detail.
 +
-```bash
+[source,bash]
+----
 ./bin/console suitecrm:app:install -u "admin_username" -p "admin_password" -U "db_user" -P "db_password" -H "db_host" -N "db_name" -S "site_url" -d "demo_data"
-```
+----
 +
 *Further Info*
 +
-```bash
+[source,bash]
+----
 #Example
 ./bin/console suitecrm:app:install -u "admin" -p "pass" -U "root" -P "dbpass" -H "mariadb" -N "suitecrm" -S "https://yourcrm.com/SuiteCRM/" -d "yes"
-```
+----
 * *“admin_username”* - The SuiteCRM administrator username.
 * *"admin_password"* - The SuiteCRM administrator password.
 * *"db_user"* - The username for the Database Administrator
@@ -100,11 +93,13 @@ uses SuiteCRM Database User to communicate with the SuiteCRM database.
 
 . After allowing time for the installation to complete, again set permissions as done in step 3.
 +
-```
+[source]
+----
 sudo chmod +x ./bin/console
 sudo chown -R www-data:www-data .
 sudo chmod -R 775 .
-```
+----
 * That `www-data` needs to be replaced by the actual system user that your webserver runs under.
 . After the script has finished running, you can access the instance at the https://yourcrm.com/SuiteCRM/public/
-. (Optional Step) *It is recommended that you update the webroot or configure vhost to point to the public directory, as the other files and folder should not be available to the web*.
+[NOTE]
+(Optional Step) *It is recommended that you update the webroot or configure vhost to point to the public directory, as the other files and folder should not be available to the web*.

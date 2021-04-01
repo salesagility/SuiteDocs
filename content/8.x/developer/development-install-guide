@@ -23,12 +23,14 @@ For System Requirements see the compatibility matrix link:/8.x/admin/compatibili
 . Run `composer install` or for production `composer install --no-dev` in legacy directory
 . Run legacy theme compile in the legacy directory
 +
-```bash
+[source,bash]
+----
 ./vendor/bin/pscss -f compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css
-```
+----
 . Set permissions (though these may need to be different depending on your setup)
 +
-```bash
+[source,bash]
+----
 find . -type d -not -perm 2775 -exec chmod 2775 {} \;
 
 find . -type f -not -perm 0644 -exec chmod 0644 {} \;
@@ -36,7 +38,7 @@ find . -type f -not -perm 0644 -exec chmod 0644 {} \;
 find . \! -user www-data -exec chown www-data:www-data {} \;
 
 chmod +x bin/console
-```
+----
 . Go back to suite8 root folder
 . Run `./bin/console suitecrm:app:install` (or pass on the options, e.g. -u <admin_username>)
 
@@ -48,7 +50,8 @@ chmod +x bin/console
 . Re-set permissions
 
 +
-```bash
+[source,bash]
+----
 find . -type d -not -perm 2775 -exec chmod 2775 {} \;
 
 find . -type f -not -perm 0644 -exec chmod 0644 {} \;
@@ -56,7 +59,7 @@ find . -type f -not -perm 0644 -exec chmod 0644 {} \;
 find . \! -user www-data -exec chown www-data:www-data {} \;
 
 chmod +x bin/console
-```
+----
 
 . Set your web server `DocumentRoot` to `/{root}/{suitecrm-8}/public.` This is normally found in `/etc/apache2/sites-available/applications.conf`
 
