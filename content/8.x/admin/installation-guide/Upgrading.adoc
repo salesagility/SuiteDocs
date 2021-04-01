@@ -1,0 +1,25 @@
+---
+Title: Upgrading
+weight: 30
+---
+
+:imagesdir: /images/en/user
+
+[NOTE]
+This feature is not yet implemented in SuiteCRM 8 yet, please check back soon.
+
+== Upgrading SuiteCRM
+
+Log into your SuiteCRM instance to use the Upgrade Wizard.
+CAUTION: It is strongly recommended that you run the upgrade process on a copy of your
+production system.
+
+=== Compatibility matrix for upgrade
+
+SuiteCRM runs on a variety of Operating Systems, Web servers, databases
+and PHP versions. It supports many browsers.
+
+Check the link:/8.x/admin/compatibility-matrix[Compatibility Matrix] for complete
+information on compatible versions.
+
+To be continued...

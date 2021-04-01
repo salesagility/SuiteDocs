@@ -1,0 +1,104 @@
+---
+title: "8.0-beta Releases"
+weight: 9880
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+
+== 8.0-beta
+
+_Released 05/11/2020_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.18.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.18.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Enhancements
+
+* Leads, Opportunities and Accounts ListView charts enhanced to be based on selected ListView data.
+* Field Validation: Including both record level (required fields) and field level (based on the type of field) validation for both the RecordView and also the Filter on ListView.
+* Additional boolean and enum fields implemented
+* Invoices, Quotes, Contracts and Campaigns given specific Subpanel Insight statistics.
+* Generic Insight statistic implemented.
+* Popups have been designed and implemented in Angular front-end
+* Relate fields designed and implemented including additional popup with search filters, datatable and selecting a record functionality
+* Filter information stored in session variables so any active filter is still applied on refresh while the session is still active
+* Extension Framework - backend implemented to allow extension of core, dataprovider and configuration.
+* Extension Framework - frontend base implementation using Dynamic Module Federation to allow extension of services, components and routing.
+* Subpanel insights redesigned including container.
+* Subpanel insights enhanced to include tooltips.
+* Subpanel insights enhanced to allow comparisons with total values (used in Invoices and Cases).
+* Performance enhancment to run Insights statistics on batch calls.
+* Legacy EditView design updated to be consistent with Suite8 RecordView.
+* Group fields implemented such as Address and Full Name fields.
+* Frontend upgraded to run on Angular 11.
+* General design enhancements to the Login, Navbars and Views.
+* Homepage designed to match Suite8 theme.
+* Read Only fields implemented.
+* Threads Insight added to Cases - currently displaying demo information
+* Photo Insight added to Leads and Contacts - currently displaying demo information
+* Base Installation script added to allow for easy install
+* Checkboxes redesigned.
+* Date fields implemented including time picker (ng-boostrap)
+* Text Area fields added to Edit mode of the RecordView
+* Legacy enhanced to be translated to the selected language
+* Convert a Lead functionality added to the Leads module
+* CreateView implemented based on RecordView
+
+==== icon:bug[] Bug Fixes
+
+* Unable to navigate to the password reset screen through Forgot Password option
+* Some buttons appear as duplicates due to removal of module name from the button label (for example, Import on Quotes and New in Roles).
+* CreateView contains the Date Created and Date Modified fields.
+* Some Non-standard Legacy DetailViews require additional styling.
+* Products and Service subpanel insight does not function.
+* Security groups subpanel insight does not function.
+* Relate fields have not been fully implemented on ListView filters.
+* Parent relate fields have not been fully implemented.
+* Currency conversion issues between subpanel values and RecordView values.
+* Some fields that are hidden from the Legacy EditView are still shown in RecordView Edit Mode.
+* Inline edit buttons are visible on ReadOnly fields although they are not functional.
+* Some minor spacing inconsistencies between Create and RecordViews.
+* The Assign To field does not save an updated values.
+* History Insight updates based on day and not time specifically.
+* Due Date field does not populate for Meetings on the History and Activities subpanels.
+
+==== Known Missing Features
+
+Several field types are still to be implemented.
+Popup warnings on delete (bulk and single record) to be implemented.
+Full implementation of Extension Framework.
+Subpanel open status to be saved to session.
+Case Updates/Threads Insight to be fully implemented.
+Photos insight for Leads and Contacts to be fully implemented.
+History Timeline insight to be fully implemented.
+Column Selector to be fully implemented.
+Mass Update functionalty to be fully implemented.
+Relate Fields to be implemented on ListView filters.
+Missing 'between' functionality for Date fields on ListView filters.
+Missing RecordView actions such as Print as PDF, View Changelog.
+Missing ListView bulk actions such as Add to Target List, Print as PDF, Email.
+RecordView navigation buttons to be added.
+Additional Subpanel buttons to be added such as removing the relationship and custom buttons.
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone
+
+SuiteCRM 8 is still in active development and all current releases are not yet production ready, so be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues] before getting involved
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers will be coming soon so stay tuned
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''

@@ -1,0 +1,105 @@
+---
+title: Downloading & Installing
+weight: 20
+---
+[NOTE]
+The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:/admin/installation-guide/downloading-installing[here].
+
+== Downloading and installing SuiteCRM
+If you are installing SuiteCRM for the first time, follow the instructions in this section.If you have an earlier version of SuiteCRM installed, refer to the upgrade section for instructions on how to upgrade your SuiteCRM instance.Follow the steps listed below to install SuiteCRM:
+
+. Install the platform-appropriate (Linux or Windows) version of PHP, web server, and database on your machine.
+. Download the SuiteCRM files from suitecrm.com(see "Downloading the latest SuiteCRM files" section).
+. Copy the SuiteCRM files to your web server.
+. Install SuiteCRM by following the SuiteCRM installation guide below.
+
+=== Downloading the latest SuiteCRM files
+
+
+=== Required installation pre-requisites
+. Install the platform-appropriate (Linux or Windows) version of PHP, web server, and database on your machine.
+. Download the SuiteCRM files from suitecrm.com(see "Downloading the latest SuiteCRM files" section).
+. Copy the SuiteCRM files to your web server.
+
+=== Recommended installation pre-requisites
+
+* link:/8.x/admin/compatibility-matrix/[Compatibility matrix]
+* JSON
+* XML Parsing
+* MB Strings Module
+* Writable SugarCRM Configuration File (config.php)
+* Writeable Custom Directory
+* Writable Modules Sub-Directories and Files
+* Writable Upload Directory
+* Writable Data Sub-Directories
+* Writable Cache Sub-Directories
+* PHP Memory Limit (at least 128M)
+* ZLIB Compression Module
+* ZIP Handling Module
+* PCRE Library
+* IMAP Module
+* cURL Module
+* Upload File Size
+* Sprite Support
+
+=== Preparing and install SuiteCRM files to a web server
+. Locate the directory on the webserver in which the SuiteCRM directory will be located(most commonly the root directory or within a subdirectory).
+. Unzip the SuiteCRM zip file contents to your destination directory.
+. Set the required permissions to continue with the install as follows;
++
+[source,bash]
+----
+sudo chmod +x ./bin/console
+sudo chown -R www-data:www-data .
+sudo chmod -R 775 .
+----
+* That `www-data` needs to be replaced by the actual system user that your webserver runs under. This varies depending on your
+operating system. Common web server users are as follows:
+** `www-data` (Ubuntu Linux/Apache)
+** `apache` (Linux/Apache)
+** `nobody` (Linux/Apache)
+** `IUSR_computerName` (Windows/IIS)
+[NOTE]
+The commands/steps taken to set permissions differ depending on
+your operating system. If you are experiencing issues with setting
+permissions on your SuiteCRM instance, visit our support forums.
+
+. Install the legacy system by running the following command, replacing the variables as required using the section below for more detail.
++
+[source,bash]
+----
+./bin/console suitecrm:app:install -u "admin_username" -p "admin_password" -U "db_user" -P "db_password" -H "db_host" -N "db_name" -S "site_url" -d "demo_data"
+----
++
+*Further Info*
++
+[source,bash]
+----
+#Example
+./bin/console suitecrm:app:install -u "admin" -p "pass" -U "root" -P "dbpass" -H "mariadb" -N "suitecrm" -S "https://yourcrm.com/SuiteCRM/" -d "yes"
+----
+* *“admin_username”* - The SuiteCRM administrator username.
+* *"admin_password"* - The SuiteCRM administrator password.
+* *"db_user"* - The username for the Database Administrator
+** Ensure that the Database Administrator you specify has the
+permissions to create and write to the SuiteCRM database.
+**  For MySQL, MariaDB and SQL Server, the Installer selects the Admin User as the SuiteCRM Database User by default. The SuiteCRM application
+uses SuiteCRM Database User to communicate with the SuiteCRM database.
+* *"db_password"* - The password for the Database Administrator
+* *"db_host"* - The Host Instance for the MySQL, MariaDB or SQL Server. The hostname is, by default, set to localhost if your database server is running on the same machine as your web server.
+* *"db_name"* - The name of the database you wish to create for this instance.
+* *"site_url"* - The URL to the SuiteCRM 8 instance.
+* *"demo_data"* - Whether to install with demo data.
+
+. After allowing time for the installation to complete, again set permissions as done in step 3.
++
+[source]
+----
+sudo chmod +x ./bin/console
+sudo chown -R www-data:www-data .
+sudo chmod -R 775 .
+----
+* That `www-data` needs to be replaced by the actual system user that your webserver runs under.
+. After the script has finished running, you can access the instance at the https://yourcrm.com/SuiteCRM/public/
+[NOTE]
+(Optional Step) *It is recommended that you update the webroot or configure vhost to point to the public directory, as the other files and folder should not be available to the web*.
