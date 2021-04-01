@@ -5,7 +5,7 @@ Weight: 50
 
 :experimental: ////this is here to allow btn:[]syntax used below
 
-:imagesdir: /images/en/admin/install-guide/
+:imagesdir: /images/en/8.x/admin/install-guide/
 
 {{% notice note %}}
 If you are not adding a new language to SuiteCRM, but rather updating an already 
@@ -37,13 +37,13 @@ image:7.png[7.png] +
 image:8.png[8.png] +
 image:9.png[9.png] +
 . Go to 'Admin / Repair / Quick Repair and Rebuild
+image:2.png[2.png] +
 image:10.png[10.png] +
 image:11.png[11.png] +
 image:12.png[12.png] +
-image:13.png[13.png] +
 . Logout
-image:14.png[14.png] +
+image:13.png[13.png] +
 . Login for your new language
-image:15.png[15.png]
+image:14.png[14.png]
 
 

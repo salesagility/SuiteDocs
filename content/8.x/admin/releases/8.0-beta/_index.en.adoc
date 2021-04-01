@@ -10,12 +10,12 @@ weight: 9880
 
 == 8.0-beta
 
-_Released 05/11/2020_
+_Released 01/04/2021_
 
 === icon:box-open[] Assets
 
-* https://github.com/salesagility/SuiteCRM/archive/v7.11.18.zip[*Source code* (zip)]
-* https://github.com/salesagility/SuiteCRM/archive/v7.11.18.tar.gz[*Source code* (tar.gz)]
+* https://github.com/salesagility/SuiteCRM-Core/archive/refs/tags/v8.0.0-beta.1.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM-Core/archive/refs/tags/v8.0.0-beta.1.tar.gz[*Source code* (tar.gz)]
 
 ===  icon:check[] Release Notes
 
@@ -71,21 +71,21 @@ _Released 05/11/2020_
 
 ==== Known Missing Features
 
-Several field types are still to be implemented.
-Popup warnings on delete (bulk and single record) to be implemented.
-Full implementation of Extension Framework.
-Subpanel open status to be saved to session.
-Case Updates/Threads Insight to be fully implemented.
-Photos insight for Leads and Contacts to be fully implemented.
-History Timeline insight to be fully implemented.
-Column Selector to be fully implemented.
-Mass Update functionalty to be fully implemented.
-Relate Fields to be implemented on ListView filters.
-Missing 'between' functionality for Date fields on ListView filters.
-Missing RecordView actions such as Print as PDF, View Changelog.
-Missing ListView bulk actions such as Add to Target List, Print as PDF, Email.
-RecordView navigation buttons to be added.
-Additional Subpanel buttons to be added such as removing the relationship and custom buttons.
+* Several field types are still to be implemented.
+* Popup warnings on delete (bulk and single record) to be implemented.
+* Full implementation of Extension Framework.
+* Subpanel open status to be saved to session.
+* Case Updates/Threads Insight to be fully implemented.
+* Photos insight for Leads and Contacts to be fully implemented.
+* History Timeline insight to be fully implemented.
+* Column Selector to be fully implemented.
+* Mass Update functionalty to be fully implemented.
+* Relate Fields to be implemented on ListView filters.
+* Missing 'between' functionality for Date fields on ListView filters.
+* Missing RecordView actions such as Print as PDF, View Changelog.
+* Missing ListView bulk actions such as Add to Target List, Print as PDF, Email.
+* RecordView navigation buttons to be added.
+* Additional Subpanel buttons to be added such as removing the relationship and custom buttons.
 
 === icon:heart[] Community
 

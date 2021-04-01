@@ -5,7 +5,7 @@ Weight: 60
 
 :experimental: ////this is here to allow btn:[]syntax used below
 
-:imagesdir: /images/en/admin/install-guide/
+:imagesdir: /images/en/8.x/admin/install-guide/
 
 {{% notice warning %}}
 If you have an older translation version already installed you need to remove previous pack and upload a new one.
@@ -21,20 +21,21 @@ In overview, the process for updating a Language Pack is
 == Steps to remove old pack
 
 . Login as English
-image:17.png[17.png] +
+image:1.png[1.png] +
 . Go to Admin / Module Loader
-image:18.png[18.png] +
-image:19.png[19.png] +
+image:2.png[2.png] +
+image:3.png[3.png] +
 . Uninstall previous language pack by clicking btn:[Uninstall] followed by btn:[Commit]
-image:20.png[20.png] +
-image:21.png[21.png] +
+image:15.png[15.png] +
+image:16.png[16.png] +
+image:9.png[9.png] +
 . Go to Admin / Repair / Quick Repair and Rebuild
-image:22.png[22.png] +
-image:23.png[23.png] +
-image:24.png[24.png] +
-image:25.png[25.png] +
+image:2.png[2.png] +
+image:10.png[10.png] +
+image:11.png[11.png] +
 . Logout
+image:13.png[13.png] +
 
 == Steps to install the updated language pack
 
-Just follow the normal link:/admin/installation-guide/languages/install-a-new-language/[installation steps].
+Just follow the normal link:/8.x/admin/installation-guide/languages/install-a-new-language/[installation steps].
