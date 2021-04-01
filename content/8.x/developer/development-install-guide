@@ -1,0 +1,95 @@
+---
+title: "Developer Install Guide"
+weight: 30
+---
+
+= Developer Install Guide
+
+== Quick Start Guide
+For System Requirements see the compatibility matrix link:/8.x/admin/compatibility-matrix[here]
+
+=== Pre-Installation
+
+. Setup php, mysql and apache
+. Install composer
+. Install node and npm
+. Install angular cli
+. Install yarn: (https://yarnpkg.com/getting-started/install)
+
+=== Installation
+
+. Run `composer install` or for production `composer install --no-dev` in the root directory
+. Run `yarn install` in the root directory
+. Run `composer install` or for production `composer install --no-dev` in legacy directory
+. Run legacy theme compile in the legacy directory
++
+```bash
+./vendor/bin/pscss -f compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css
+```
+. Set permissions (though these may need to be different depending on your setup)
++
+```bash
+find . -type d -not -perm 2775 -exec chmod 2775 {} \;
+
+find . -type f -not -perm 0644 -exec chmod 0644 {} \;
+
+find . \! -user www-data -exec chown www-data:www-data {} \;
+
+chmod +x bin/console
+```
+. Go back to suite8 root folder
+. Run `./bin/console suitecrm:app:install` (or pass on the options, e.g. -u <admin_username>)
+
+. Run `yarn run build:common` or `yarn run build-dev:common` (for dev environment)
+. Run `yarn run build:core` or `yarn run build-dev:core` (for dev environment)
+
+. Run `yarn run build:shell` or `yarn run build-dev:shell` (for dev environment)
+. Run `composer dumpautoload`
+. Re-set permissions
+
++
+```bash
+find . -type d -not -perm 2775 -exec chmod 2775 {} \;
+
+find . -type f -not -perm 0644 -exec chmod 0644 {} \;
+
+find . \! -user www-data -exec chown www-data:www-data {} \;
+
+chmod +x bin/console
+```
+
+. Set your web server `DocumentRoot` to `/{root}/{suitecrm-8}/public.` This is normally found in `/etc/apache2/sites-available/applications.conf`
+
+
+== Developer working guide
+
+=== Backend
+From the suite 8 root folder
+
+. Run `composer install`
++
+[NOTE]
+Depending on the changes you are working on you may also need to run the following
+
+. Run `composer dumpautoload`
+. Run `./bin/console cache:clear`
+
+=== Frontend
+
+From the suite 8 root folder
+
+* Run `yarn run build-dev:common`
+* Run `yarn run build-dev:core`
+* Run `yarn run build:shell`
+
+==== Run frontend unit tests
+
+* Run `yarn run test:core`
+
+==== Run backend unit tests
+
+The backend unit tests use codeception. You can install codeception
+
+To run the tests do;
+
+* Run `codecept run unit`
