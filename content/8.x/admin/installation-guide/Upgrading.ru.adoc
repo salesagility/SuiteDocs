@@ -1,0 +1,44 @@
+---
+Title: Обновление системы
+Weight: 30
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 1
+
+:experimental:
+
+:imagesdir: /images/ru/admin/Upgrading
+
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Upgrading]
+
+:btn: btn:
+
+ifdef::env-github[:btn:]  
+
+{{% notice note %}}
+Описание обновления для SuiteCRM 8 ещё в процессе создания, наберитесь терпения. 
+ {{% /notice %}}
+
+
+= Обновление системы
+
+В данном разделе описывается процесс обновления системы при помощи мастера обновления. 
+
+Прежде всего, необходимо скачать необходимый https://suitecrm.com/upgrade-suitecrm[пакет обновления].
+ 
+{{% notice warning %}}
+Перед выполнением обновления настоятельно рекомендуется сделать резервную копию системы!
+{{% /notice %}}
+
+== Таблица совместимости 
+
+Таблицы совместимости для всех версий системы рассматриваются на 
+link:../../compatibility-matrix[этой] странице.
+
+Продолжение обязательно будет...
