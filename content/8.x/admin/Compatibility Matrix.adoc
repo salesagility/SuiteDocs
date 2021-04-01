@@ -3,7 +3,7 @@ Title: Compatibility Matrix
 weight: 60
 ---
 [NOTE]
-The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:/admin/installation-guide/compatibility-matrix[here].
+The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:/admin/compatibility-matrix[here].
 
 
 == Versions
@@ -16,11 +16,11 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 
 2+^h| Platform 
 
-| Linux, Unix, Mac OS | Any version supporting PHP 
-
-| Windows | Windows Server 2012+
-
+| Linux, Unix, Mac OS | Any version supporting PHP
 | PHP | 7.3, 7.4, 8.0
+
+2+^| Additional requirements for Development
+
 | Angular CLI | 11+
 | Node.js | 10
 | yarn | 1.22.10+
