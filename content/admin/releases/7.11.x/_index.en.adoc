@@ -8,6 +8,82 @@ weight: 9880
 :toclevels: 1
 :icons: font
 
+== 7.11.19
+
+_Released 28/04/2021_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.19.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.19.tar.gz[*Source code* (tar.gz)]
+
+==== icon:lock[] Security
+
+* CVE: Pending - XSS Vulnerability
+* CVE: Pending - XSS Vulnerability
+* CVE: Pending - XSS Vulnerability
+* CVE: Pending - XSS Vulnerability
+* CVE: Pending - XSS Vulnerability
+* CVE: Pending - Fixed Dependency
+* CVE: Pending - Fixed stored XSS vulnerability
+* CVE: Pending - Fixed stored XSS vulnerability
+* CVE: Pending - Fixed file check bypass
+* CVE: Pending - Improved file upload checks
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/8642[8642^] - Issue: https://github.com/salesagility/SuiteCRM/issues/5107[5107^] -  Fix Inline edit date/datetime issue
+* PR: https://github.com/salesagility/SuiteCRM/pull/7999[7999^] - Prevent securitygroups mass assign damage
+* PR: https://github.com/salesagility/SuiteCRM/pull/8571[8571^] - Remove duplicate code in users detailviewdefs
+* PR: https://github.com/salesagility/SuiteCRM/pull/8514[8514^] - Implement effective opcache file clearing
+* PR: https://github.com/salesagility/SuiteCRM/pull/8700[8700^] - Various problems in PHPDocs throughout the codebase.
+* PR: https://github.com/salesagility/SuiteCRM/pull/9068[9068^] - Issue: https://github.com/salesagility/SuiteCRM/issues/9067[9067^] - Fix the drop down width
+* PR: https://github.com/salesagility/SuiteCRM/pull/9093[9093^] - Add Additional api filter option `like`
+* PR: https://github.com/salesagility/SuiteCRM/pull/9090[9090^] - User menu alignment
+* PR: https://github.com/salesagility/SuiteCRM/pull/8570[8570^] - Issue: https://github.com/salesagility/SuiteCRM/issues/6051[6051] - Modulebuilder labels edit fixes
+* PR: https://github.com/salesagility/SuiteCRM/pull/9088[9088^] - Update JQuery JS Library to v3.6.0
+* PR: https://github.com/salesagility/SuiteCRM/pull/9000[9000^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8999[8999^] - Hardcoded 'by' label in calls
+* PR: https://github.com/salesagility/SuiteCRM/pull/9035[9035^] - Issue: https://github.com/salesagility/SuiteCRM/issues/9034[9034^] - Business Hours does not work in non-english languages
+* PR: https://github.com/salesagility/SuiteCRM/pull/8910[8910^] - Update the V8 Api to allow for upload of documents similar to notes
+* PR: https://github.com/salesagility/SuiteCRM/pull/9010[9010^] - Add missing 'view task' label on calendar
+* PR: https://github.com/salesagility/SuiteCRM/pull/9003[9003^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8894[8894^] - Add missing label for calendar dashlet
+* PR: https://github.com/salesagility/SuiteCRM/pull/9032[9032^] - Prevent Notice Error During Import
+* PR: https://github.com/salesagility/SuiteCRM/pull/8206[8206^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8182[8182^] - Update updateTimeDateFields to handle undefined dates
+* PR: https://github.com/salesagility/SuiteCRM/pull/9076[9076^] - Issue: https://github.com/salesagility/SuiteCRM/issues/9075[9075^] - Removing deleted related beans via link
+* PR: https://github.com/salesagility/SuiteCRM/pull/8988[8988^] - Improve upon solution which doesn't cache incomplete beans
+* PR: https://github.com/salesagility/SuiteCRM/pull/7884[7884^] - Issue: https://github.com/salesagility/SuiteCRM/issues/6800[6800^] - Elasticsearch: Elastic index name is hardcoded
+* PR: https://github.com/salesagility/SuiteCRM/pull/9060[9060^] - Project Form action should not be changed if delete is not confirmed
+* PR: https://github.com/salesagility/SuiteCRM/pull/9059[9059^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8676[8676^] - New Scheduled Reports does not run
+* PR: https://github.com/salesagility/SuiteCRM/pull/9079[9079^] - Issue: https://github.com/salesagility/SuiteCRM/issues/2645[2645^] - Calendar quick create ignores required fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/9054[9054^] - Add missing scheduler label for trimSugarFeeds
+* PR: https://github.com/salesagility/SuiteCRM/pull/9070[9070^] - Fix php compatibility issues
+* PR: https://github.com/salesagility/SuiteCRM/pull/8974[8974^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8956[8956^] - Email compose body not shown in detail view
+* PR: https://github.com/salesagility/SuiteCRM/pull/9096[9096^] - Issue: https://github.com/salesagility/SuiteCRM/issues/7772[7772^] - Only index ElasticSearch when enabled
+* PR: https://github.com/salesagility/SuiteCRM/pull/9101[9101^] - Fix LangText exception breaking ElasticSearch
+* PR: https://github.com/salesagility/SuiteCRM/pull/8513[8513^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8472[8472^] - No or not complete Searchresults using elasticsearch engine
+* PR: https://github.com/salesagility/SuiteCRM/pull/8981[8981^] - Issue: https://github.com/salesagility/SuiteCRM/issues/8916[8916^] - Misspelled elasticsearch labels
+* PR: https://github.com/salesagility/SuiteCRM/pull/9080[9080^] - Update config for google/apiclient at composer.json
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!
+
+Cory Billington, Thanhlocpanda of https://vincss.net[VinCSS^] (Member of Vingroup),  Hao Wang, Sam Sanoop, Chris Forbes, James Addison
+
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors RustyDust topesantos gunnicom pgorod JanSiero duncanf95 jperez-murcia QuickCRM mayerelyashiv lehnerr tsitle dawid-zaroda tsummerer sweettbug3 mubat eliaski staganyi tsmgeek ebogaard %}}
+
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.11.18
 
 _Released 05/11/2020_
