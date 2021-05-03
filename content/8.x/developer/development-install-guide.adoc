@@ -26,10 +26,12 @@ All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrit
 
 === Installation
 
-. Run `composer install` or for production `composer install --no-dev` in the root directory
+. Run `composer install` in the root directory
 . Run `yarn install` in the root directory
-. Run `composer install` or for production `composer install --no-dev` in legacy directory (`/public/legacy`)
+. Run `composer install` in legacy directory (`/public/legacy`)
 . Run legacy theme compile in the legacy directory (`/public/legacy`)
+    - *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
+
 +
 [source,bash]
 ----
