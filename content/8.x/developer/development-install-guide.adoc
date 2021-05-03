@@ -60,7 +60,7 @@ chmod +x bin/console
 . Run `./bin/console suitecrm:app:install` (or pass on the options, e.g. -u <admin_username>)
     - **Note:** before running the command make sure to create the database (the command will create the needed tables)
 
-. Re-set permissions
+. Re-set permissions on Suite 8 root folder
 
 +
 [source,bash]
