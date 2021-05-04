@@ -5,7 +5,11 @@ weight: 30
 
 :imagesdir: /images/en/user
 
+<<<<<<< HEAD
 {{% notice info %}}
+=======
+{{% notice note %}}
+>>>>>>> Replace absolute paths with relative links into 8.x sections
 This feature is not yet implemented in SuiteCRM 8 yet, please check back soon.
 {{% /notice %}}
 
@@ -20,7 +24,7 @@ production system.
 SuiteCRM runs on a variety of Operating Systems, Web servers, databases
 and PHP versions. It supports many browsers.
 
-Check the link:/8.x/admin/compatibility-matrix[Compatibility Matrix] for complete
+Check the link:../../compatibility-matrix[Compatibility Matrix] for complete
 information on compatible versions.
 
 To be continued...

@@ -10,7 +10,7 @@ Weight: 50
 {{% notice note %}}
 If you are not adding a new language to SuiteCRM, but rather updating an already 
 installed language, make sure you start by following the appropriate
-link:/8.x/admin/installation-guide/languages/update-a-language-pack/[Language Packs Update] guide.
+link:../update-a-language-pack/[Language Packs Update] guide.
 {{% /notice %}}
 
 == Download a Language pack
