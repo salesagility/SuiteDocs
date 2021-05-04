@@ -37,7 +37,7 @@ by allowing previous numbering schemes to be maintained.
 
 === Custom Fields
 
-Custom fields get saved in tables with the same name as the module their defined in, but with an 
+Custom fields get saved in tables with the same name as the module they are defined in, but with an 
 appended suffix `_cstm`. 
 
 Each custom field will have the name you entered for it in Studio, with a suffix `_c`.

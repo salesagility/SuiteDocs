@@ -43,35 +43,35 @@ configure for those fields:
 * *Display* – True or false option. Allows you to specify whether this
 field should be displayed on the report, or hidden. Users may wish to
 add fields to perform a function/sort/group/total but may not wish to
-show this on the Report.<br/>
+show this on the Report.
 
 * *Link* – True or false option. Allows you to make the field a link.
 Setting this option to true will hyperlink the field on the Detail View
 of the report, allowing you to click on the record. This will navigate
 you to the appropriate record. For example, linking the Opportunity Name
-will take you to the Detail View of that Opportunity.<br/>
+will take you to the Detail View of that Opportunity.
 
 * *Label* – This is the label that will be displayed for the Column/Field
 on the Report. You can change the label from the default to any
-alphanumerical value.<br/>
+alphanumerical value.
 
 * *Function* - Provides five options: Count, Minimum, Maximum, Sum and
 Average. Allows you to perform functions on alphanumerical fields. Users
 may wish to calculate the average Opportunity Amount, or Count total
-Opportunities at a given Sales Stage.<br/>
+Opportunities at a given Sales Stage.
 
 * *Sort* – Ascending or Descending. Allows you to select whether to sort
 the field/column descending or ascending. This can be done for all
-fields.<br/>
+fields.
 
 * *Group* – True or false option. Allows you to group by this field. For
 example, you may wish to group by Sales Stage when reporting on an
-Opportunity.<br/>
+Opportunity.
 
 * *Total* – Provides three options: Count, Sum and Average. This allows
 users to perform total calculations on numerical fields. This is useful
 for financial reporting such as the total value of all Opportunities at
-a given Sales Stage.<br/>
+a given Sales Stage.
 
 [discrete]
 ===== Adding Conditions

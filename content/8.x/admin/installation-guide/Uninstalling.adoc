@@ -1,0 +1,17 @@
+---
+title: Uninstalling SuiteCRM
+weight: 90
+---
+
+== Uninstalling a SuiteCRM instance
+
+Follow these steps to uninstall your SuiteCRM instance:
+
+.  Navigate to the directory within your web server where SuiteCRM is
+located.
+.  Remove the SuiteCRM directory. In Linux, you can use `rm -r <suitedirectory>` if you
+wish to be prompted, or `rm -rf <suitedirectory>` if you wish to delete the
+directory without being prompted.
+.  Delete the SuiteCRM database schema from your server
+database. The default is `suitecrm`, but it will differ if it has been
+renamed during the installation process.

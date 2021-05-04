@@ -1,0 +1,21 @@
+---
+Title: "Обновление языкового пакета"
+Weight: 60
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+:imagesdir: /images/ru/admin/Installing/Languages
+
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Installing/Languages]
+
+
+ . Перед установкой обновлённого языкового пакета удалите ранее установленный пакет, как это описано в разделе 
+link:../../../administration-panel/developer-tools/#_загрузчик_модулей[Деинсталляция модуля].
+
+ . Установите новый языковой пакет, как это описано в разделе 
+link:../install-a-new-language[Русификация SuiteCRM].
+
+ . В панели администратора выполните link:../../../administration-panel/system/#_восстановление[быстрое восстановление]. 
+
