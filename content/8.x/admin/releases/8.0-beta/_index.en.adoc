@@ -8,6 +8,82 @@ weight: 9880
 :toclevels: 1
 :icons: font
 
+== 8.0-beta-2
+
+_Released 20/05/2021_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM-Core/archive/refs/tags/v8.0.0-beta.2.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM-Core/archive/refs/tags/v8.0.0-beta.2.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Enhancements
+
+* Case Threads Insight implemented into the Cases RecordView.
+* Column Selector implemented allowing users to customise which fields are shown on the ListView.
+* Link buttons added to the Subpanel actions, allowing users to select which records to relate.
+* Unlink buttons added to the Subpanel records, allowing users to remove the relationship for the selected record.
+* Filter Panel enhanced to include options to save a filter and to set an sort order and direction.
+* Filter Panel enhanced to include options to edit or delete a saved filter.
+* Relate Fields and relate popup implemented into the Filter Panel
+* Subpanels enhanced to store open/closed preferences for the session.
+* Charts enhanced to update in real time when a record is deleted.
+* DateTime fields implemented.
+* DynamicEnum fields implemented.
+* History Subpanel Insight enhanced to consider time and date when showing latest touch point.
+* Assigned User field issue fixed and will allow for changes to assigned user.
+* Convert Lead page redesigned to match the SuiteCRM8 theme.
+* User Profile page redesigned to match the SuiteCRM8 theme.
+* Inbound Email page redesigned to match the SuiteCRM8 theme.
+* Salutation field alignment and width dynamically adjusted on Edit Mode.
+* Minor styling enhancements to the Home Screen, Navigation Bar, RecordView and Legacy Subpanels.
+* Homepage enhanced for mobile and tablet views.
+* Insights enhanced for mobile and tablet views.
+* ListView enhanced for mobile and tablet views.
+
+==== Known Missing Features
+
+* Several field types are still to be implemented.
+* Popup warnings on delete (bulk and single record) to be implemented.
+* Full implementation of Extension Framework.
+* Photos insight for Leads and Contacts to be fully implemented.
+* History Timeline insight to be fully implemented.
+* Mass Update functionality to be fully implemented.
+* Missing 'between' functionality for Date fields on ListView filters.
+* Missing RecordView actions such as Print as PDF, View Changelog.
+* Missing ListView bulk actions such as Add to Target List, Print as PDF, Email.
+* RecordView navigation buttons to be added.
+* Column Selector functionality is not stored locally and reset on refresh.
+* Dashlets columns alignment issues on mobile and tablet views.
+* Navigation via the navbar in mobile and tablet views will not route to the module ListView.
+* Convert Lead page datetime picker uses legacy styling.
+* Convert Lead page redirects point to legacy views.
+* Some minor styling changes required for Inbound Emails, such as pagination buttons.
+* The Relate Field Popup is currently limited to allowing you to link one record at a time.
+* Roles are not currently factored into Subpanel actions.
+* Insight charts are not translated.
+* Subpanel “Select which subpanels to view” panel is not translated.
+* Top widget labels are not translated.
+* My Closed Opportunities and Top Campaigns Widgets styling is misaligned.
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 is still in active development and all current releases are not yet production ready, so be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues] before getting involved.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 8.0-beta
 
 _Released 01/04/2021_
@@ -23,12 +99,12 @@ _Released 01/04/2021_
 
 * Leads, Opportunities and Accounts ListView charts enhanced to be based on selected ListView data.
 * Field Validation: Including both record level (required fields) and field level (based on the type of field) validation for both the RecordView and also the Filter on ListView.
-* Additional boolean and enum fields implemented
+* Additional boolean and enum fields implemented.
 * Invoices, Quotes, Contracts and Campaigns given specific Subpanel Insight statistics.
 * Generic Insight statistic implemented.
-* Popups have been designed and implemented in Angular front-end
-* Relate fields designed and implemented including additional popup with search filters, datatable and selecting a record functionality
-* Filter information stored in session variables so any active filter is still applied on refresh while the session is still active
+* Popups have been designed and implemented in Angular front-end.
+* Relate fields designed and implemented including additional popup with search filters, datatable and selecting a record functionality.
+* Filter information stored in session variables so any active filter is still applied on refresh while the session is still active.
 * Extension Framework - backend implemented to allow extension of core, dataprovider and configuration.
 * Extension Framework - frontend base implementation using Dynamic Module Federation to allow extension of services, components and routing.
 * Subpanel insights redesigned including container.
@@ -41,19 +117,19 @@ _Released 01/04/2021_
 * General design enhancements to the Login, Navbars and Views.
 * Homepage designed to match Suite8 theme.
 * Read Only fields implemented.
-* Threads Insight added to Cases - currently displaying demo information
-* Photo Insight added to Leads and Contacts - currently displaying demo information
-* Base Installation script added to allow for easy install
+* Threads Insight added to Cases - currently displaying demo information.
+* Photo Insight added to Leads and Contacts - currently displaying demo information.
+* Base Installation script added to allow for easy install.
 * Checkboxes redesigned.
-* Date fields implemented including time picker (ng-boostrap)
-* Text Area fields added to Edit mode of the RecordView
-* Legacy enhanced to be translated to the selected language
-* Convert a Lead functionality added to the Leads module
-* CreateView implemented based on RecordView
+* Date fields implemented including time picker (ng-boostrap).
+* Text Area fields added to Edit mode of the RecordView.
+* Legacy enhanced to be translated to the selected language.
+* Convert a Lead functionality added to the Leads module.
+* CreateView implemented based on RecordView.
 
 ==== icon:bug[] Bug Fixes
 
-* Unable to navigate to the password reset screen through Forgot Password option
+* Unable to navigate to the password reset screen through Forgot Password option.
 * Some buttons appear as duplicates due to removal of module name from the button label (for example, Import on Quotes and New in Roles).
 * CreateView contains the Date Created and Date Modified fields.
 * Some Non-standard Legacy DetailViews require additional styling.
@@ -89,13 +165,13 @@ _Released 01/04/2021_
 
 === icon:heart[] Community
 
-We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
 
-SuiteCRM 8 is still in active development and all current releases are not yet production ready, so be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues] before getting involved
+SuiteCRM 8 is still in active development and all current releases are not yet production ready, so be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues] before getting involved.
 
 If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
 
-If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers will be coming soon so stay tuned
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers will be coming soon so stay tuned.
 
 Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
 
