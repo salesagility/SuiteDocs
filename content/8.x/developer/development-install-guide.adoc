@@ -28,15 +28,23 @@ All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrit
 
 . Run `composer install` in the root directory
 . Run `yarn install` in the root directory
-. Run `composer install` in legacy directory (`/public/legacy`)
-. Run legacy theme compile in the legacy directory (`/public/legacy`)
+. Run legacy theme compile in the root directory
     - *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
-
 +
 [source,bash]
 ----
-./vendor/bin/pscss -f compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css
+./vendor/bin/pscss -f compressed ./public/legacy/themes/suite8/css/Dawn/style.scss > ./public/legacy/themes/suite8/css/Dawn/style.css
 ----
+
+    - *NOTE:* Pre beta 2 steps
+    ** On SuiteCRM 8 Beta 2 version the legacy composer.json file has been aligned and unified into the Suite 8 composer.json file.
+    ** Hence, from Beta 2 onwards there is only one composer file under `{Suite 8 Root}/composer.json`.
+    ** For SuiteCRM 8 versions prior to Beta 2 you need to:
+    *** Run `composer install` in legacy directory (`/public/legacy`)
+    *** Run legacy theme compile in the legacy directory (`/public/legacy`)
+    **** *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
+    ****`./vendor/bin/pscss -f compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css`
+
 . Set permissions (though these may need to be different depending on your setup)
 +
 [source,bash]
