@@ -1,0 +1,198 @@
+---
+Title: Użytkownicy
+weight: 20
+---
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/admin
+
+:toc:
+
+= Users
+
+== Informacje ogólne
+
+Ten poradnik zawiera informacje o ustawieniach dostępnych w panelu administracyjnym w sekcji użytkownicy.
+
+*Użytkownik* określenie osoby która może zalogować się do Twojegu systemu *SuiteCRM*. 
+Oprócz podstawowych informacji(imię, stanowisko, adres, numer telefonu itp) 
+zawartych w module *Pracownicy*, użytkownik posiada nazwę użytkownika i hasło
+umożliwiające mu zalogowanie się do systemu, oraz adres email. Kiedy w systemie SuiteCRM tworzony jest nowy użytkownik, odpowiedni rekord jest automatycznie tworzony w sekcji Pracownicy. 
+Odpowiednio, kiedy tworzony jest nowy rekord Pracownika automatycznie tworzony jest nowy użytkownik. 
+Nowy rekord użytkownika musi być zedytowany (jeśli trzeba) żeby dodać nazwę użytkownika/hasło 
+i adres email aby umożliwić zalogowanie się do *SuiteCRM*.
+
+Sekcja *Użytkownicy* w *Panelu Administracyjnym* przechowuje ustawienia kont użytkowników i ustawienia dostępu systemu *SuiteCRM*. 
+
+{{%notice note %}}Musisz posiadać uprawnienia Administratora aby tworzyć konta nowych użytkowników oraz edytować ich ustawienia dostępu. Zwykli użytkownicy mają dostęp tylko do ustawień swojego własnego konta i mogą edytować informacje takie jak adres, preferencje, adres email oraz zmienić swoje hasło.{{% /notice %}}
+
+Otwórz panel administracyjny wybierając pozycję *Administrator* z listy rozwijanego menu dostępnego w prawym górny rogu pulpitu *SuiteCRM*.
+
+image:AdminPanelOpenPanel.png["Open Admin Panel"]
+
+== Zarządzanie użytkownikami
+
+Wybierz pozycję Zarządzanie użytkownikami aby przeglądać,edytować i dodawać nowe konta użytkowników.
+
+image:UsersAdminPanel.png["Users Admin Panel"]
+
+image:UsersListView.png["User Management - List View"]
+
+=== Dodaj nowego użytkownika
+
+Wybierz *Utwórz użytkownika* z panelu bocznego w sekcji *Zarządzanie użytkownikami* aby dodać nowego użytkownika.
+
+image:UsersSidebarCreateNewUser.png["Users sidebar - create new user"]
+
+==== Strona profilu użytkownika
+
+image:UsersCreateUser.png["Create new user"]
+
+Podczas tworzenia *Nowego użytkownika*, podaj nazwę użytkownika, jego imię oraz nazwisko oraz status konta (Aktywne lub Nieaktywne). 
+
+{{%notice info %}}Tylko *Aktywne* konta mogą być używane do zalogowania się w systemie *SuiteCRM*. 
+Dodatkowo, *Nieaktywne* nazwy użytkowników nie są uwzględniane w rozwijanych listach użytkowników 
+(np.: przypisane do lub zmodyfikowane przez) używanych do wyszukiwania rekordów.{{% /notice %}}
+
+Wybierz Typ Użytkownika z listy rozwijanej.Użytkownik z uprawnieniami administratora może uzyskać
+dostęp do Panelu Administracyjnego i wszystkich rekordów w *SuiteCRM*. Zwykły użytkownik
+ma dostęp do modułów u rekordów odpowiednio z uprawnieniami które zostały mu przypisane. Zobacz
+link:../roles-and-security-groups[Profile uprawnień i grupy bezpieczeństwa ]aby uzyskać więcej informacji.
+
+Dodatkowo możesz dodać zdjęcie każdego użytkownika. Wybierz odpowiednie zdjęcie 
+używając przycisku btn:[Wybierz plik]. Zdjęcie będzie wyświetlane w widoku szczegółowym profilu użytkownika.
+
+==== Autoryzacja dwuskładnikowa
+
+{{%notice note %}}Autoryzacja dwuskładnikowa jest dostępna w *SuiteCRM* od wersji
+7.10 i nowszych{{% /notice %}}
+
+Autoryzacja dwuskładnikowa może być włączona dla każdego użytkownika. Po uruchomieniu, 
+użytkownik będzie musiał podać kod weryfikacyjny dostarczony na adres email za każdym razem kiedy będzie się logował
+do *SuiteCRM*.
+
+Zaznacz pole Autoryzacja dwuskładnikowa aby ją uruchomić.
+
+image:TwoFactorAuth.png[title = "Two Factor Authentication - user settings]
+
+Kliknij btn:[ZAPISZ] aby zachować ustawienia.
+
+Podczas logowania, po podaniu nazwy użytkownika i hasła, użytkownik 
+zostanie poproszony o podanie kody który został otrzymał na swoją skrzynkę email podaną podczas zakładania konta.
+
+image:TwoFactorAuthCodeSent.png[title="Two Factor Authentication code required"]
+
+Po podaniu kody i kliknięciu btn:[Weryfikuj] zostanie
+pomyślnie zalogowany do *SuiteCRM*.
+
+{{%notice tip %}}Wzór emaila Autoryzacji dwuskładnikowej
+który będzie wysłany do użytkownika może być edytowany w sekcji *Zarządzanie hasłami* {{% /notice %}}
+
+==== Informacje o pracowniku
+
+Dodatkowe informacje o użytkowniku mogą być dodane w panelu
+Informacje o pracowniku.Zmiany które zostaną tutaj wprowadzone zostaną automatycznie wprowadzone 
+do rekordu Pracownika.
+
+==== Ustawienia email
+
+Do utworzenia konta wymagany jest również adres email. Adres ten będzie używany 
+do wysyłania maili wygenerowanych przez system takich jak powiadomienia workflow, przypisanie rekordu itp. Dodatkowe konta mogą być utworzone przy użyciu
+przycisku btn:[+]. 
+Jeśli zostało podane więcej niż jedno konto email, wybierz to które
+ma być używane jako domyślne.
+
+Dodatkowe informacje dotyczące adresów email użytkownika znajdziesz w sekcji 
+link:../../../user/introduction/managing-user-accounts/#_personal_email_account_settings[Ustawienia email użytkownika]
+ 
+==== Zakładka Hasło
+
+Tutaj możesz utworzyć hasło dla nowego użytkownika, lub zresetować hasło użytkownika który już istnieje.
+
+{{%notice note %}}Zakładka hasło nie będzie widoczna w rekordzie użytkownika jeśli
+masz włączoną usługę *Automatycznego generowania hasła*. Żeby włączyć/wyłączyć 
+automatyczne generowanie haseł, sprawdź sekcję <<#_password_management, Zarządzanie hasłami>> 
+tej instrukcji.
+{{% /notice %}}
+
+image:UsersAddPassword.png[User - add password]
+
+Enter the new password details and click btn:[SAVE]
+
+==== Zakładka Zaawansowane
+
+Ustawienia użytkownika (zawierająca ustawienia przypomnień, powiadomień i importu), 
+Ustawienia lokalne (data/czas, waluta itp) oraz opcje kalendarza dla integracji 
+usługi iCal mogą być zmienione tutaj. Wszystkie wymienione mogą być również zmieniane samodzielnie przez użytkownika. 
+
+==== Opcje szablonu
+{{%notice note %}}Opcje szablonu dostępne są w *SuiteCRM* w wersji 
+7.10 i nowszych{{% /notice %}}
+
+Zakładka opcje szablonu umożliwia wybranie stylu dla motywu *SuiteP*. Te ustawienia mogą być zmieniane przez użytkownika. 
+Sprawdź:../../../user/modules/themes[Opcje szablonu] 
+aby uzyskać więcej informacji.
+
+===== Pokazuj podpowiedzi zminimalizowanych subpaneli
+
+Jeśli ta opcja jest włączona, zwinięte subpanele w całym systemie wyświetlają liczbę rekordów dodanych do każdego z nich.
+
+image:ShowCollapsedHint.png[User - Show collapsed subpanel hint]
+
+== Zarządzanie hasłami
+
+W panelu *Administrator*, wybierz *Zarządzanie hasłami* aby otworzyć listę ustawień.
+
+=== Automatycznie wygenerowane hasło
+
+Jeśli ta opcja jest włączona, hasła dla nowych kont użytkowników zostaną wygenerowane 
+automatycznie i wysłane na adres email podany w profilu użytkownika.
+
+{{%notice note%}}Ta opcja wymaga skonfigurowania serwera poczty przychodzącej oraz wychodzącej
+a także poprawnego adresu email w rekordzie użytkownika {{%/notice%}}
+
+=== Ustawienia bezpieczeństwa haseł
+
+Znajdują się tutaj dodatkowe wymagania dotyczącze haseł użytkowników. 
+Po skonfigurowaniu, hasło użytkownika będzie musiało spełnić podane przez nas kryteria.
+
+image:PasswordSecuritySettings.png[title = "Password security settings"]
+
+Zaznacz odpowiednie pola aby zastosować wymagane opcje.
+
+Pamiętaj że znakami specjalnymi są #$%^&*()+=-[]';,./{}|:<>?~
+
+Kliknij btn:[Zapisz] aby zachować ustawienia.
+
+=== Resetowanie hasła
+
+Kiedy ta opcja jest włączana, użytkownicy będą mogli zresetować swoje hasło
+przy użyciu linku dostępnego na stronie logowania do *SuiteCRM*. 
+
+{{%notice note%}}Ta opcja wymaga skonfigurowania serwera poczty przychodzącej oraz wychodzącej
+a także poprawnego adresu email w rekordzie użytkownika {{%/notice%}}
+	
+image:UsersResetPassword.png[title = "User Password Reset settings"]
+
+=== Szablony e-mail
+
+Szablony dla systemowo generowanych emaili dotyczących haseł mogą być edytowane tutaj. 
+Sprawdź sekcję:../../../user/core-modules/emailtemplates[Szablony email] 
+aby uzyskać więcej informacji dotyczących tworzenia i edytowania szablonów.
+
+image:UsersEmailTemplates.png[title = "User password email template settings"]
+
+=== Wsparcie LDAP
+
+Jeżeli opcja "Włącz uwierzytelnianie LDAP" jest zaznaczona, zarządzanie hasłami odbywa się z poziomu LDAP. 
+Żadne opcje zarządzania hasłami w SuiteCRM nie zostaną zastosowane.
+
+=== Uwierzytelnianie SAML
+
+Jeśli uwierzytelnianie SAML jest włączone hasła mogą być dostarczane jedynie przez SAML. 
+Opcje zarządzania hasłami nie będą dostępne.
+
+
+
+
