@@ -46,10 +46,21 @@ directory.
 +
 [source]
 ----
-  sudo chown -R www-data:www-data .
-  sudo chmod -R 755 .
-  sudo chmod -R 775 cache custom modules themes data upload
-  sudo chmod 775 config_override.php 2>/dev/null
+SUITE_PATH=/var/www/html/suitecrm/
+HTTP_USER=www-data
+# Set classic permissions:
+mkdir cache
+touch .htaccess config.php
+sudo chgrp -R $HTTP_USER custom/ cache/ modules/ upload/ .htaccess config.php config_override.php
+sudo chmod -R g+w custom/ cache/ modules/ upload/ .htaccess config.php config_override.php
+
+# Set SELinux context (modern Linux distributions only)
+sudo restorecon -vr ./
+sudo chcon -R -t httpd_sys_rw_content_t custom/ cache/ modules/ upload/ .htaccess config.php config_override.php
+sudo semanage fcontext -a -t httpd_sys_rw_content_t "$SUITE_PATH(/.*)?"
+
+After configuring SuiteCRM, you may wish to increase security by preventing certain further changes via the web:
+chmod g-w .htaccess config.php config_override.php
 ----
 .  That `www-data` needs to be replaced by the actual system user that your web server runs under. This varies depending on your
 operating system. Common web server users are as follows:
