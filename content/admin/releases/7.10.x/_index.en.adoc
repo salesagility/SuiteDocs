@@ -25,12 +25,12 @@ _Released 02/06/2021_
 
 ==== icon:bug[] Bug Fixes
 
-* Issue: https://github.com/salesagility/SuiteCRM/issues/9106[9106^] - JSON Error in related field's popup
 * PR: https://github.com/salesagility/SuiteCRM/pull/9149[9149^] Issue: https://github.com/salesagility/SuiteCRM/issues/8319[8319^] - Multiple IMAP Inboxes
-* PR: https://github.com/salesagility/SuiteCRM/pull/9123[9123^] - Upgrade PHPMailer
 * PR: https://github.com/salesagility/SuiteCRM/pull/8731[8731^] Issue: https://github.com/salesagility/SuiteCRM/issues/7285[7285^] - Database failure when filter custom fields by V8 API
+* PR: https://github.com/salesagility/SuiteCRM/pull/9123[9123^] - Upgrade PHPMailer
+* Issue: https://github.com/salesagility/SuiteCRM/issues/9106[9106^] - JSON Error in related field's popup
+* Issue: https://github.com/salesagility/SuiteCRM/issues/9166[9166^] - Fix Missing locale in FullCalender 3.10
 * Fix Users index incompatible with MSSQL
-* Fix Missing local in FullCalender 3.10
 * Fix Php compatibility within Admin ConfigureTabs
 * Fix Email Address loading performance
 * Fix theme - dashletclose.png loading error in console
