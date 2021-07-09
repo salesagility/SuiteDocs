@@ -24,6 +24,10 @@ Application hooks are hooks which are fired in the application context
 must be defined in the top level logic hook (i.e.
 `custom/modules/logic_hooks.php`).
 
+`after_user_load`::
+  Called after SuiteCRM has loaded the user, this is slightly different from 
+  `after_login` in the user hook as this is fired for each request unlike
+  `after_login` which is only fired when performing the login
 `after_entry_point`::
   Called after SuiteCRM has initialised but before any other processing
   is carried out.
