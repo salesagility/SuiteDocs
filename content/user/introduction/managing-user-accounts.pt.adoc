@@ -1,0 +1,196 @@
+---
+Title: Gestão de contas de Utilizador
+Weight: 40
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+:toc:
+
+= Gestão de Contas de Utilizador
+
+Há muitas opções de configuração disponíveis para os utilizadores 
+após entrarem no sistema. Pode ver e modificar as suas preferências
+ao clicar no seu nome, no canto superior direito do menu.
+
+image:11User_select.png[title="Gerir Conta"]
+
+== Tab de Perfil de Utilizador
+
+Depois de aceder às suas preferências, ser-lhe-á mostrado o tab de 
+'Perfil de Utilizador' que apresenta uma vista geral das suas
+credenciais como Nome de Utilizador, Nome Prório, Apelido, Título, etc.
+
+image:12User_profile.png[title="Perfil de Utilizador"]
+
+
+=== Definições Pessoais de Conta de Email
+
+Definir uma conta pessoal de email no *SuiteCRM* permite que veja a sua
+conta de email pessoal no módulo link:../../core-modules/emails[Emails].
+
+Os emails das caixas de correio pessoais não são alojados na base de 
+dados do *SuiteCRM* a não ser que sejam manualmente importados. Veja 
+a documentação do módulo link:../../core-modules/emails[Emails] para
+mais informação.
+
+{{% notice tip %}}
+Cada utilizador pode configurar a sua própria conta. Os administradores 
+podem configurar contas pessoais para os outros utilizadores a partir
+da secção Gestão de Utilizadores do Painel de Administração.
+{{% /notice %}}
+
+==== Definiçoes de Email do Perfil de Utilizador
+Abra o perfil de utilizador e role até ao fim do tab *Perfil de Utilizador* para
+ver as definições de email. Note que se está a configurar as definições para
+outro utilizador, necessita de seleccionar *Editar* no menu *Acções* de modo a
+conseguir ver estas definições.
+
+image:270Emailusersettings.png[Definições de Email de Utilizador]
+
+* *Endereço de Email* - Acrescenta o(s) endereços(s) de email à sua conta *SuiteCRM*. 
+Clique em btn:[+] to add more addresses. Quanto tiver mais que um endereço de email
+pode indicar qual é o principal através do botão de rádio *Primário*. Pode também
+indicar qual é o endereço a usar como endereço de resposta (Reply-to).
+* *Cliente de Email* - Esta definição controla o cliente de email a usar para escrever
+e enviar email quando clica num link de email no SuiteCRM, por exemplo no endereço de
+email de um contacto ou de uma conta.
+	** *Editor de Email do SuiteCRM* - O módulo *Emails* do *SuiteCRM* será usado
+	** *Editor de Email Externo* - Os links de email do *SuiteCRM* irão ser abertos pelo programa que estiver configurado para tratar de links `mailto://`, por exemplo o Outlook ou o Thunderbird
+
+* *Editor dee Email* - Esta definição permite escolher qual o editor a usar ao criar e
+editar link:../../core-modules/emailtemplates[modelos de email] e também no módulo 
+link:../../core-modules/campaigns[Campanhas]. Note que a definição de *Editor de Email*
+não afecta a vista *Compor* do módulo *Emails* do *SuiteCRM*. Neste caso o utilizador
+não pode escolher. As opções disponíveis são *Mozaik*, *TinyMCE* e *Direct HTML*.
+
+==== Acrescentar uma conta de email pessoal
+Clique em btn:[DEFINIÇÕES] no fundo da tab 'Perfil de Utilizador' para acrescentar uma conta de email pessoal.
+
+Seleccione a tab Contas de Email e clique em btn:[ADIOCIONAR] a seguir a Contas de Email para configurar a sua conta de entrada de email.
+
+image:271EmailsAddPersonalAccount.png[Tab de Contas de Email]
+
+Preencha os detalhes necessários na caixa de diálogo que aparece. Vai precisar do
+nome de utilizador e password para a conta que está a acrescentar, além do endereço
+do servidor de mail. O protocolo de email suportado pelo *SuiteCRM* é IMAP. Pode
+também necessitar de definir o porto do servidor, se for diferente do porto padrão
+do IMAP. O seu administrador do sistema deve ser capaz de lhe fornecer as informações
+necessárias.
+
+Depois de preencher os dados, pode verificar as definições clicando em btn:[TESTAR DEFINIÇÕES] 
+para testar a ligação ao servidor. 
+
+image:272EmailsPersonalAccountSettings.png[Definições de Email de Utilizador] 
+
+*Pastas Monitorizadas:* sºao as pastas que serão verificadas para obter correio não-lido. Tem
+que indicar as pastas *Inbox* (ou Caixa de Entrada) e *Lixo*. Indique os nomes das pastas ou
+clique em btn:[SELECCIONAR] para ligar ao servidor de email e seleccionar as pastas relevantes.
+
+image:273EmailsMonitoredFolders.png[Escolher pastas a monitorizar]
+
+*Assinaturas:* Seleccione a assinatura para esta conta. Será automaticamente acrescentada ao
+corpo do email ao compor uma mensagem com o módulo de Emails. Se quiser criar uma nova
+assinatura, terá que o fazer via <<User Mail Settings - General Tab, tab Geral>> e 
+seleccioná-la aí. Esta definição irá sobrepor-se à definição da <<User Mail Settings - General Tab, Tab Genral>>.
+
+Indiqeu também as definições de *Email de Envio* para a conta de utilizador. 
+
+image:276EmailsAddPersonalAccount2.png[Definições de Email de Saída]
+
+Clique em btn:[CONCLUIR] para guardar as definições de conta e voltar à tab de *Contas de Email*. 
+
+image:275EmailsAccountList.png[Lista de Contas]
+
+Se tem mais de uma conta configurada pode definir a conta padrão que aparece ao escolher o 
+módulo *Emails*. Contas activas estarão disponíveis para escolher. 
+
+Para editar as definições das contas de email pessoal clique no ícone do lápis na coluna Editar.
+
+
+==== Definições de Email de Utilizador - tab Geral
+
+Há outras definições de emial na *Tab Geral*:
+
+image:274EmailsGeneralTab.png[Tab geral de Definições de Email de Utilizador]
+
+* *Verificar Novo Correio* - Pode especificar um intervalo de tempo para verificar automaticamente a existência de novo email. O padrão é fazer a verificação manual, com o botão "Verificar Novo Email" na vista de lista de Emails. 
+
+* *Assinatura Padrão* - Especifica a assinatura padrão que será acrescentada ao corpo do email ao compor nova mensagem. Clique em btn:[CRIAR] para acrescentar uma nova assinatura ou escolha uma da lista. As assinaturas existentes podem ser editadas e apagadas aqui. 
+
+* *Gestão de pastas* - Escolha a(s) pasta(s) que estarão disponíveis no módulo *Emails*. Esta lista mostra todas as pastas monitorizadas em todas as contas. Use ctrl+clique para seleccionar mais que uma pasta. 
+
+Clique em btn:[CONCLUIR] para guardar as definições. Ser-lhe-á pedido confirmação.
+
+A partir de agora deve ser possível ver os seus emails no link:../../core-modules/emails[módulo de *Emails*].
+
+
+
+== Tab de Password
+
+A tab de '*Password*' permite-lhe alterar a password da sua conta. 
+Para alterar a sua password, indique a password actual, a nova
+password e repita a nova password para confirmação. Recomenda-se
+que as passwords sejam seguras, ou seja, no mínimo com uma letra
+maiúscula, uma letra minúscula, um algarismo e um tamanh de 8
+caracteres.
+
+image:13Password_tab.png[title="Tab de Password"]
+
+Se se esqueceu da sua password e não pode entrar, pode usar a
+funcionalidade de password esquecida detalhada na secção
+link:/user/introduction/getting-started[Começar] deste Guia.
+
+== Tab Configurações Avançadas
+
+A tab de Configurações Avançadas permite-lhe alterar as preferências
+definidas durante o processo de User Wizard, caso haja necessidade.
+
+image:14Advanced_tab.png[title="Tab Configurações Avançadas"]
+
+== Repor Preferências de Utilizador
+
+Pode repor as suas preferências de utilizador de acordo com os valores
+pré-definidos para o sistema, clicando no botão
+btn:[Repor Preferências de Utilizador] no seu perfil.
+
+image:15User_preference.png[title="Repor Preferências de Utilizador"]
+
+Ao clicar no botão ir-lhe-á ser pedida confirmação para a reposição 
+dos valores pré-definidos, com a mensagem: _"Tem a certeza que deseja
+repor todas as suas preferências?"_
+
+{{% notice warning %}}
+Esta acção irá fazê-lo sair da aplicação. Pode clicar em 'OK' ou 
+'Cancelar' de acordo com o que quiser, mas se clicar em 'OK' irá
+sair da aplicação e necessitará de voltar a entrar.
+{{% /notice %}}
+
+== Repor a página inicial de Utilizador
+
+Pode repor a sua página de entrada para a página pré-definida do 
+sistema clicando no botão btn:[Repor página inicial] no seu perfil.
+Esta acção irá repor todas as suas preferências de dashlets e 
+layouts para as opções pré-definidas.
+
+image:16Reset_homepage.png[title="Repor Página Inicial"]
+
+Ao clicar no botão ser-lhe-á pedido para confirmar esta reposição, 
+com a seguinte mensagem: _"Tem a certeza que quer repor a sua
+página inicial?"_. Pode depois clicar em 'OK' ou 'Cancelar' de 
+acordo com a sua preferência.
+
+== Sumário
+
+Neste capítulo, percorremos a gestão de contas de utilizador, que lhe
+permite gerir a sua informação e modificar/repor as suas preferências,
+entre outros.
+
+No próximo capítulo, iremos percorrer a Interface. A Interface é uma
+parte integral do SuiteCRM. Conhecendo a sua Interface, pode continuar
+a descoberta das funcionalidades e processos do SuiteCRM.

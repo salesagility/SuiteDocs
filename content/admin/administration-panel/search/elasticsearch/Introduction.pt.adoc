@@ -1,0 +1,30 @@
+---
+title: Introdução
+weight: 1
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+{{% notice info %}}
+{Esta funcionalidade só está disponível para versões do SuiteCRM posteriores a 7.11.
+{% /notice %}}
+
+O https://www.elastic.co/[Elasticsearch] é um motor de indexação criado especificamente 
+para fornecer resultados de pesquisa em quase-tempo real, optimizado para a pesquisa 
+de texto. É programado em Java e corre como um processo ou num servidor separado.
+
+O Elasticsearch pode ser integrado com o SuiteCRM para melhorar bastante a qualidade 
+e rapidez de pesquisa.
+Para atingir este fim, os módulos com possibilidades de pesquisa são indexados no
+servidor Elasticsearch. Quando uma pesquisa é efectuada no SuiteCRM, é redireccionada
+para o servidor Elasticsearch, que irá executar uma pesquisa optimizada e devolver os
+resultados ao CRM.
+
+O SuiteCRM suporta apenas o `Elasticsearch 5.6`.
+
+A sincronização da base de dados com o índice elasticsearch acontece de três modos:
+
+Logic Hooks:: Cada vez que um registo é actualizade é automaticamente reindexado.
+Tarefa Programada:: Uma tarefa programada irá correr periodicamente para garantir que a base de dados e o índice se mantêm em sincronia.
+Indexação Manual:: Uma indexação completa ou parcial pode ser pedida por um administrador através do painel de administração ou de uma tarefa Robo.

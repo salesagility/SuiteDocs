@@ -1,0 +1,110 @@
+---
+Title: Elementos de Navegação
+Weight: 51
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Elementos de Navigação
+
+A possibilidade de ver e navegar facilmente para as várias áreas do
+CRM é fundamental para a melhoria da produtividade e adopção pelos
+utilizadores. O SuiteCRM tem uma UI clara, com vários elementos que
+vamos abordar nesta secção.
+
+== Menu de navegação de topo
+
+O menu de topo da navegação é o menu principal que os utilizadores 
+irão usar para navegar para os módulos, de modo a criar e gerir 
+registos. O layout padrão para o menu de topo é uma lista de 10
+módulos. A ordem em que este menu é apresentado é a ordem definida
+na secção Administração → Mostrar Módulos e Sub-painéis. O menu
+de navegação de topo tem seis elementos. São eles:
+
+* *Nome do CRM* – Este é o nome do CRM que foi indicado durante a 
+instalação. O padrão é SuiteCRM.
+* *Menu de Módulos* – Lista ou agrupa os módulos, dependendo das
+preferências de utilizador. Permite que os utilzadores naveguem 
+entre os diversos módulos do CRM
+* *Contagem de Notificações* – Mostra o número de notificações que
+o utilzador ainda não leu. Estas notificações podem ser geridas 
+pelo utilizador. Para mais detalhes sobre Notificações, veja a
+secção link:../desktop-notifications/[Notificações de Desktop] 
+deste Guia.
+* *Criação Rápida* – A criação rápida permite a criação de alguns
+registos mais frequentes a partir de qualquer parte do CRM.
+* *Pesquisa Completa/Global* – Permite a pesquisa em todos os
+registos do CRM.
+* *Menu de utilizador* – Mostra o nome de utilizador para o 
+utilizador com sessão activa. Há um menu pendente que dá acesso 
+aos Funcionários, ao respectivo perfil, uma página sobre o SuiteCRM
+e um link para sair.
+
+image:17Navigation_menu.png[title="Menu de Navigação de Topo"]
+
+Para ver um módulo, pode clicar no nome do mesmo. Esta aação irá
+mostrar a vista de lista do módulo. Para detalhes sobre vistas, 
+veja a secção link:../views/[Vistas] deste Guia.
+
+Manter o rato sobre o nome do módulo mostra um menu pendente. Este 
+menu mostra as Acções e Últimos Registos Vistos para o módulo.
+
+image:18Dropdown_menu.png[title="Menu Pendente"]
+
+Pode editar registos mostrados na secção Últimos Regitos Vistos do
+menu pendente clicando no ícone do lápis. Isto irá direccioná-lo para
+a Vista de Edição para o registo.
+
+image:19Recently_viewed.png[title="Editar Últimos Regitos Vistos"]
+
+Também está disponível para o SuiteCRM uma estrutura de navegação por
+módulos agrupados. Os utilizadores podem escolher esta opção nas suas
+preferências. Para detalhes completos sobre a modificação das
+preferências de utilizador, veja a secção 
+link:/user/introduction/managing-user-accounts[Gerir Contas de Utilizador]
+deste Guia.
+
+image:20.png[title="Tabs agrupadas"]
+
+O menu de navegação por tabs agrupadas permite que o utilizador agrupe
+os módulos de acordo com tabs da sua preferẽncia, tal como "Vendas".
+
+image:21Grouped_tab.png[title="Tabs agrupadas"]
+
+== Criação Rápida
+
+Pode clicar no icon 'criar' no menu de navegaão de topo para aceder às
+opções de criação rápida. Apresenta-se uma lista de módulos usados com
+frequência, para permitir a criação de registos nestes módulos a partir
+de qualquer localização.
+
+image:22Quick_create.png[title="Criação Rápida"]
+
+== Sidebar
+
+O sidebar é parte do tema responsivo e é configurável pelo utilizador.
+O sidebar pode ser aberto ou fechado com um clique no botão destacado na 
+figura seguinte.
+
+image:23Sidebar.png[title="Sidebar"]
+
+=== Actions
+
+This displays the Actions for the module you are currently viewing. For
+example, if you are viewing the Accounts module, the actions that
+display are: Create Account, View Accounts, Import Accounts. This
+provides you with one-click access to module actions.
+
+=== Recently Viewed
+
+This section displays the last 10 records you have viewed. This leaves a
+breadcrumbs trail so that previously viewed records can be quickly and
+easily accessed via the sidebar. There is also the option to click the
+pencil icon, which will take you directly to the Edit View of the
+record.
+

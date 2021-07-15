@@ -1,0 +1,75 @@
+---
+title: Ferramentas de Linha de Comandos
+weight: 5
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:imagesdir: /images/en/admin/ElasticSearch
+
+{{% notice info %}}
+Esta funcionalidade só está disponível para versões do SuiteCRM posteriores a 7.11.
+{{% /notice %}}
+
+A integração do SuiteCRM com Elasticsearch inclui duas úteis ferramentas de linha de comandos fornecidas pela
+https://robo.li/[_Robo_].
+
+Estes dois comandos permitem realizar indexação e pesquisas a partir da linha de comandos, tornando mais fácil
+o debug e integração com ferramentas externas.
+
+{{% notice note %}}
+Estes comandos necessitam de uma ligação activa com a base de dados. Se está a correr o SuiteCRM em cima de 
+Docker ou numa Máquina Virtual, execute-os da linha de comandos do mesmo servidor do SuiteCRM.
+{{% /notice %}}
+
+== elastic:index
+
+O comando `elastic:index` permite executar a indexação a partir da linha de comandos e ver os registos 
+passo-a-passo.
+Tanto indexação parcial como completa são suportadas.
+
+=== Uso
+
+[source,bash]
+elastic:index [<differential> = 1]
+
+=== Exemplos
+
+Correr uma indexação completa:
+[source,bash]
+vendor/bin/robo elastic:index 1
+
+Running a partial indexing:
+[source,bash]
+vendor/bin/robo elastic:index 0
+
+image:ElasticIndexCLI.png["Elasticsearch Index CLI"]
+
+== elastic:search
+
+O comando `elastic:search` permite executar o mesmo tipo de pesquisa que se poderá fazer a partir da barra
+de pesquisa, directamente da linha de comands. Retorna um objecto JSON com dados adicionais sobre o registo.
+
+=== Uso
+[source,bash]
+elastic:search <query> [<size> = 20] [<showJson> = false]
+
+Pode usar a sintaxe completa para o argumento `query`.
+
+A opção `size` indica o número de resultados.
+
+Quando a opção `showJson` estiver activada, será retornado um objecto json para cada resultado
+
+=== Exemplos
+
+Pesquisa por todos os registoc com a palavra 'rohan':
+[source,bash]
+vendor/bin/robo elastic:search "rohan"
+
+image:ElasticSearchCLI.png["Elasticsearch CLI"]
+
+Pesquisar a primeira conta com nome 'Maxwell' e mostrar um JSON:
+[source,bash]
+vendor/bin/robo elastic:search "_type:Accounts AND named:Maxwell" 1 true
+

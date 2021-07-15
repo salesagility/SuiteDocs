@@ -1,0 +1,62 @@
+---
+Title: Notificações do Ambiente de Trabalho
+Weight: 57
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Notificações de Ambiente de Trabaho
+
+== Activar as Notifiações de Ambiente de Trabalho
+
+Pode activar as notificações de Ambiente de Trabalho através da tab
+*'Avançada'* nas suas preferências. Isto irá activar as notificações
+de ambiente de trabalho neste browser para este computador. Pode 
+escolher activar as notificações apenas para esta sessão do browser
+ou activá-las em permanência.
+
+{{% notice note %}}
+Os utilizadores terão que activar as notificações do ambiente de
+trabalho em todos os browsers e todos os computadores se usarem
+mais que um.
+{{% /notice %}}
+
+image:199Enable_desktop_notifications.png[title="Activar Notificações de Ambiente de Trabalho"]
+
+Após a activação das notificações de ambiente de trabalho, os 
+utilizadores irão receber notificações para todos os eventos de 
+Calendário, tais como:
+
+* *Reuniões* – Reuniões para as quais foi convidado que tenham 
+os popups de lembrete activados.
+* *Chamadas* – Chamadas para as quais tenha sido convidado que
+tenham os popus de lembrete activados.
+
+== Gerir Notificações de Ambiente de Trabalho
+
+Se não tem notificações, o contador de notificações irá mostrar '0'
+para indicar que não tem notificações a verificar.
+
+image:65Managing_notifications.png[title="Notificações"]
+
+Se não clicar numa notificação quando esta é mostrada no broser, por
+exemplo quando está longe do teclado, a notificação irá ser à lista
+de notificações mostrada através do contador na barra de navegação
+principal.
+
+image:66Managing_notifications.png[title="Gerir Notificações"]
+
+Pode gerir as suas notificações de ambiente de trabalho ao clicar
+no ícone que irá mostrar as notificações existentes.
+
+image:67Managing_notifications.png[title="Mostrar notificações"]
+
+Pode clicar na notificação que o irá levar ao registo relacionado com a
+notificação, ou pode clicar no pequeno ícone de 'x' para a limpar 
+imediatamente.
+
