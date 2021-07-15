@@ -61,11 +61,11 @@ grupos serão herdados automaticamente de acordo com as definições do Security
 Pode também usar logic hooks, workflow, ou fazer um insert directo à tabela
 securitygroups_records da base de dados se o fizer na instalação.
 
-Se os seus utilizadores vêem apenas os seus registos, o role atribuído ao grupo
-deverá ser configurado para ter direitos de Apenas Dono. Um gestor que faça parte
-do grupo, mas que também deverá ter permissões para ver todos os registos além 
-dos seus deve ter um role directamente atribuído ao registo que permita acesso de 
-Grupo.
+Se os seus utilizadores devem ver apenas os seus registos, o role atribuído ao 
+grupo deverá ser configurado para ter direitos de Apenas Dono. Um gestor que 
+faça parte do grupo, mas que também deverá ter permissões para ver todos os 
+registos além dos seus deve ter um role directamente atribuído ao registo que 
+permita acesso de Grupo.
 
 Para mais ajuda, veja este 
 https://www.youtube.com/watch?v=yJ-BzM3GTgA[Vídeo de Introdução^].
