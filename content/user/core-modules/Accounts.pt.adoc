@@ -1,0 +1,73 @@
+---
+Title: Contas
+Weight: 70
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+= Contas
+
+O módulo Contas é um dos módulos base a partir do qual se podem criar
+associações com a maioria dos registos no SuiteCRM. É possível criar um
+relacionamento com Contactos, Leads Convertidas, Oportunidades, Actividades tais
+como Emails ou Reuniões e Ocorrências. Por norma as Contas do SuiteCRM guardam
+toda a informação sobre empresas e organizações com que a sua organização
+interage. No mundo real, uma Conta pode ser uma entidade de negócio que seja um
+Prospector Comercial, um Cliente, um Fornecedor ou um Vendedor e pode ser usada
+para ir mantendo um registo das diversas interacções entre a sua organização e
+essas entidades.
+
+== Accções de Contas
+
+Pode aceder às acções de contas a partir do menu do módulo de Contas ou através
+da Sidebar. As acções disponíveis são as seguintes:
+
+* *Criar Conta* – Ao clicar, é apresentado um formulário que lhe permite criar
+um novo registo de Conta.
+* *Ver Contas* – Ao clicar, é-lhe apresentada a Vista de Lista do módulo de
+Contas. Permite-lhe procurar e ver a lista de registos de Contas.
+* *Importar Contas* – Apresenta-lhe o wizard de Importação para o módulo de
+Contas. Para mais informação veja
+link:./../../introduction/user-interface/record-management/#_importing_records[Importar
+ Registos].
+
+Para ver a lista completa de campos ao criar uma Conta, Veja 
+link:./../../appendix-a/#_accounts_field_list[Lista de Campos de Contas].
+
+== Gerir Contas
+
+* Para ordenar registos na Vista de Lista de Contas, clique em qualquer título
+de coluna ordenável. Irá ordenar a coluna de modo ascendente ou descendente.
+* Para procurar por uma Conta, veja a secção de
+link:./../../introduction/user-interface/search[Pesquisa] deste guia.
+* Para actualizar alguns ou todos os registos de Contas na Vista de Lista, use o
+painel de Actualização em Massa tal como descrito na secção
+link:./../../introduction/user-interface/record-management/#_mass_updating_records[Actualização
+em Massa de Registos] deste guia.
+* Para duplicar uma Conta, pode clicar o botão Duplicar na Vista de Detalhe e
+depois guardar o registo duplicado.
+* Para juntar registos duplicados, seleccione os registos na VIsta de Lista de
+Contas, clique no link Juntar no menu pendente de acção, e siga o processo. Para
+mais informação sobre Juntar Diplicados, veja a secção
+link:./../../introduction/user-interface/record-management/#_merging_records[Juntar
+Registos] deste guia.
+* Para eliminar uma ou mais Contas, pode seleccionar vário registos a partir da
+Vista de Lista e depois clicar em eliminar. Pode também eliminar uma Conta a
+partir da Vista de Detalhe clicando no botão Deleted. Para um guia mais
+detalhado sobre eliminação de registos, veja a secção
+link:./../../introduction/user-interface/record-management/#_deleting_records[Eliminar
+Registos] deste guia.
+* Para ver os detalhes de uma Conta, clique no Nome da Conta na Vista de Lista.
+Irá abrir o registo na Vista de Detalhe.
+* Para editar os detalhes de uma Conta, clique no ícone de Editar na Vista de
+Lista ou no botão de Editar na Vista de Detalhes, faça as alterações pretendidas
+e clique em Guardar.
+* Para um guia detalhado sobre a importação e exportação de Contas, vejas as
+secções 
+link:./../../introduction/user-interface/record-management/#_importing_records[Importar
+Registos] e
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exportar
+Registos] deste guia.
+* Para verificar todas as alterações feitas a campos auditados, pode clicar no
+botão Ver Alterações das Vistas de Detalhe ou Edição das Contas.
