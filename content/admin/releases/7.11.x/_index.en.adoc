@@ -8,6 +8,52 @@ weight: 9880
 :toclevels: 1
 :icons: font
 
+== 7.11.20
+
+_Released 02/06/2021_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.20.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.20.tar.gz[*Source code* (tar.gz)]
+
+==== icon:lock[] Security
+
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=2018-19296[CVE-2018-19296^] - Object Injection in PHPMailer
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/8731[8731^] Issue: https://github.com/salesagility/SuiteCRM/issues/7285[7285^] - Database failure when filter custom fields by V8 API
+* PR: https://github.com/salesagility/SuiteCRM/pull/9149[9149^] Issue: https://github.com/salesagility/SuiteCRM/issues/8319[8319^] - Multiple IMAP Inboxes
+* Issue: https://github.com/salesagility/SuiteCRM/issues/9106[9106^] - JSON Error in related field's popup
+* Issue: https://github.com/salesagility/SuiteCRM/issues/9166[9166^] - Fix Missing locale in FullCalender 3.10
+* Fix Users index incompatible with MSSQL
+* Fix Php compatibility within Admin ConfigureTabs
+* Fix Email Address loading performance
+* Fix theme - dashletclose.png loading error in console
+* Fix theme - Footer text colour inconsistency
+* Fix theme - Menu overflow top module alignment
+* Fix theme - Admin settings empty error displays line
+* Change populateDefaultValues fatal log on empty field_defs to warning
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+Daniel Sundbeck
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors cekowu nelem holdusback YonatanRosemarin %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.11.19
 
 _Released 28/04/2021_

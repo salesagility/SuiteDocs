@@ -5,8 +5,9 @@ weight: 30
 
 :imagesdir: /images/en/user
 
-[NOTE]
+{{% notice info %}}
 This feature is not yet implemented in SuiteCRM 8 yet, please check back soon.
+{{% /notice %}}
 
 == Upgrading SuiteCRM
 

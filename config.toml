@@ -8,6 +8,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 enableGitInfo = true
 timeout = 37000
+ignoreErrors = ["error-remote-getjson"]
 
 [params]
   GitHubRepo  = "https://github.com/salesagility/SuiteDocs/"
