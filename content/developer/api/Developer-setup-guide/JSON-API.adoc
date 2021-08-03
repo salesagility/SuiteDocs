@@ -48,7 +48,12 @@ If you would like to change its value you may generate a new one by running
 [source,php]
 php -r 'echo base64_encode(random_bytes(32)), PHP_EOL;'
 
-and then storing the output in the config.php.
+and then store the output in the config.php
+
+Current releases all use the value directly from `config.php`
+
+Older versions updated the file `/Api/Core/Config/Apiconfig.php` with the value from `config.php` when running a repair and rebuild.
+If any issues arise and you are troubleshooting it may be worth taking a look there.
 
 If you need more information about this issue, https://oauth2.thephpleague.com/v5-security-improvements/[please visit this page].
 
