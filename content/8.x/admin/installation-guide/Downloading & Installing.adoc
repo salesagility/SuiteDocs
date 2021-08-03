@@ -4,7 +4,7 @@ weight: 20
 ---
 
 {{% notice info %}}
-The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:/admin/installation-guide/downloading-installing[here].
+The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:../../../../admin/installation-guide/downloading-installing[here].
 {{% /notice %}}
 
 == Downloading and installing SuiteCRM
@@ -17,7 +17,7 @@ If you are installing SuiteCRM for the first time, follow the instructions in th
 
 === Installation pre-requisites
 
-See the link:/8.x/admin/compatibility-matrix/[Compatibility matrix] to ensure you have the correct versions of the required softwares.
+See the link:../../compatibility-matrix/[Compatibility matrix] to ensure you have the correct versions of the required softwares.
 
 {{% notice note %}}
 Some of the dependencies in the above link are only required when setting up a development environment.

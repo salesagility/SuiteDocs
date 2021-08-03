@@ -4,11 +4,11 @@ weight: 30
 ---
 
 {{% notice info %}}
-The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:/developer/introduction[here].
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../developer/introduction[here].
 {{% /notice %}}
 
 == Quick Start Guide
-For System Requirements see the compatibility matrix link:/8.x/admin/compatibility-matrix[here]
+For System Requirements see the compatibility matrix link:../../admin/compatibility-matrix[here]
 
 === Pre-Installation
 
