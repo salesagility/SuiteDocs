@@ -1,36 +1,37 @@
 ---
 title: How to Add Campaign/Target List Support for a Custom Module (contacts)
-weight: 50
-Author: Paul Stevens
-Date: 20-06-2020
+date: 2021-08-03T12:00:00+01:00
+author: Paul Stevens
+tags: ["development"]
+hidden: true
 ---
 
 ---
 
 
-*The Problem*
+== The Problem == 
 
 Just creating a relationship between your custom module contacts and Target Lists does not allow you to use the campaign feature like you're used to with Leads, Targets and Contacts.  In order to add campaign functionality to a custom contact module, you must do the following:
 
 
-*Before You Start*
--------
-* Create One to Many relationship between your custom module and “Activities” module.
-* Create a One to Many relationship between your custom module and “Emails” module.
--------
+== Before You Start ==
 
+* Create a *One to Many* relationship between your custom module and *“Activities”* module.
+* Create a *One to Many* relationship between your custom module and *“Emails”* module.
 
-TIP:  In the code below replace{module} with the name of your custom module. When you navigate to custom/modules/{module}
+{{% notice note %}}
+In the code below replace *{MODULE* with the name of your custom module. When you navigate to *custom/modules/{MODULE}*
 the module name will be the name of the folder.
-------
-------
-Step 1:
-------
-Add a custom list view for your custom module (custom/modules/{MODULE}/views/view.list.php)
+{{% /notice %}}
 
-TIP:  You may have to create the files and directories.
+=== Step 1: ===
+
+Add a custom list view for your custom module *(custom/modules/{MODULE}/views/view.list.php)*.
+You may have to create the files and directories.
+
+.`custom/modules/{MODULE}/views/view.list.php`
 [source,php]
-----
+-----
 <?php
 require_once('include/MVC/View/views/view.list.php');
 class {MODULE}ViewList extends ViewList
@@ -42,12 +43,15 @@ class {MODULE}ViewList extends ViewList
  	}
 }
 ?>
-----
+-----
 
-Step 2:
-------
-Create extended vardef for prospect list → custom module relationship (custom/extension/modules/{MODULE}Ext/Vardefs/prospect_list_{MODULE}.php
-----
+=== Step 2: ===
+
+Create extended vardef for prospect list → custom module relationship
+
+.`custom/extension/modules/{MODULE}Ext/Vardefs/prospect_list_{MODULE}.php`
+[source,php]
+-----
 <?php
 $dictionary["{MODULE}"]["relationships"]["prospect_list_{MODULE}"] = array (
 	'lhs_module' => 'ProspectLists',
@@ -72,11 +76,15 @@ $dictionary["{MODULE}"]["fields"]["prospect_lists"] = array (
 	'source' => 'non-db'
 );
 ?>
-----
-Step 3:
-~~~~~~~
-Create a subpanel definition to show the prospect list subpanel on your custom module (custom/extension/modules/{MODULE}/Ext/Layoutdefs/ProspectListSubpanel.php)
-----
+-----
+
+=== Step 3: ===
+
+Create a subpanel definition to show the prospect list subpanel on your custom module.
+
+.`custom/extension/modules/{MODULE}/Ext/Layoutdefs/ProspectListSubpanel.php`
+[source,php]
+-----
 <?php
 $layout_defs["{MODULE}"]["subpanel_setup"]["prospect_lists"] = array (
 		'order' => 10,
@@ -92,12 +100,15 @@ $layout_defs["{MODULE}"]["subpanel_setup"]["prospect_lists"] = array (
 			),
 );
 ?>
-----
+-----
 
-Step 4:
-~~~~~~~
-Create a subpanel def for your custom module on the prospect list detailview(custom/extension/modules/ProspectLists/Ext/Layoutdefs/prospect_lists_{MODULE}.php
-----
+=== Step 4: ===
+
+Create a subpanel def for your custom module on the prospect list detailview
+
+.`custom/extension/modules/ProspectLists/Ext/Layoutdefs/prospect_lists_{MODULE}.php`
+[source,php]
+-----
 <?php
 $layout_defs["ProspectLists"]["subpanel_setup"]["{MODULE}"] = array (   //module name in lowercase
 	'order' => 10,
@@ -113,12 +124,15 @@ $layout_defs["ProspectLists"]["subpanel_setup"]["{MODULE}"] = array (   //module
 	),
 );
 ?>
-----
+-----
 
-Step 5:
-~~~~~~~
+=== Step 5: ===
+
 Create a vardef relationship field extension in custom/extensions/modules/ProspectLists/Ext/Vardefs/custom.php
-----
+
+.`custom/extensions/modules/ProspectLists/Ext/Vardefs/custom.php`
+[source,php]
+-----
 <?php
 $dictionary['ProspectList']['fields']['{MODULE}'] =array (  //module name in lowercase
   			'name' => '{MODULE}',//lowercase!!
@@ -127,34 +141,42 @@ $dictionary['ProspectList']['fields']['{MODULE}'] =array (  //module name in low
     		'source'=>'non-db',
   		);
   ?>
-----
+-----
 
-Step 6:
-~~~~~~~
-Create subpanel metadata – Copy modules/{MODULE}/metadata/subpanels/default.php then rename and 
-copy to: custom/modules/{MODULE}/metadata/subpanels/ForProspectLists.php
+=== Step 6: ===
 
-Step 7:
-~~~~~~~
-Edit modules/EmailMan/EmailMan.php around line 665 add:
-----
+Create subpanel metadata – Copy *modules/{MODULE}/metadata/subpanels/default.php* then rename and 
+copy to: *custom/modules/{MODULE}/metadata/subpanels/ForProspectLists.php*
+
+=== Step 7: ===
+
+Edit *modules/EmailMan/EmailMan.php* around line *665* add:
+.`modules/EmailMan/EmailMan.php`
+[source,php]
+-----
 $this->ref_email->load_relationship('{MODULE_EMAILS_REL_NAME');
-----
-You must have a relationship between your custom module and the emails module. You can find the name of the of relationship by looking in custom/Extension/modules/Emails/Ext/Vardefs/{MODULE}_activities_emails.php at the “name” property.
+-----
 
-Around Line 689 Add:
+You must have a relationship between your custom module and the emails module. You can find the name of the of relationship by looking in *custom/Extension/modules/Emails/Ext/Vardefs/{MODULE}_activities_emails.php* at the *“name”* property.
 
-----
+Around Line *689* Add:
+
+.`modules/EmailMan/EmailMan.php`
+[source,php]
+-----
 case '{MODULE}':
 		$rel_name="{MODULE_EMAILS_REL_NAME}";
 		break;
-----
+-----
 
-TIP:  Don't Forget to do a Repair and Rebuild
-------
-References
-------
-http://web.archive.org/web/20140825230331/http:/sugaruk.co.uk/blog/how-add-campaigntarget-list-support-custom-person-module-sugarcrm[http://web.archive.org/web/20140825230331/http:/sugaruk.co.uk/blog/how-add-campaigntarget-list-support-custom-person-module-sugarcrm]
+{{% notice note %}}
+Don't forget to do a Repair and Rebuild!
+{{% /notice %}}
 
 
-CAUTION:  This currently works, to be able to add custom contact module person to a target list.  It also allows that person contained in the target list to be added to a campaign.  The campaign is able to be processed and the email receipients are added to the outbound email queue.  At the time of this writing the emails do not get sent from the queue.  Looking for some collaboration to resolve this one last issue.
+_This blog post is a refurbished http://web.archive.org/web/20140825230331/http:/sugaruk.co.uk/blog/how-add-campaigntarget-list-support-custom-person-module-sugarcrm[article] from 2014_
+
+
+
+
+
