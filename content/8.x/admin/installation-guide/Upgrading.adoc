@@ -5,15 +5,7 @@ weight: 30
 
 :imagesdir: /images/en/user
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-{{% notice info %}}
-=======
 {{% notice note %}}
->>>>>>> Replace absolute paths with relative links into 8.x sections
-=======
-{{% notice note %}}
->>>>>>> f1c94135b20ef6975835e8b782e7f7ebd2aadd33
 This feature is not yet implemented in SuiteCRM 8 yet, please check back soon.
 {{% /notice %}}
 
