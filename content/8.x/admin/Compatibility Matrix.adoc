@@ -2,18 +2,9 @@
 Title: Compatibility Matrix
 weight: 60
 ---
-<<<<<<< HEAD
 
-{{% notice info %}}
-<<<<<<< HEAD
-The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:/admin/compatibility-matrix[here].
-=======
 {{% notice note %}}
 The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:../../../admin/compatibility-matrix[here].
->>>>>>> Replace absolute paths with relative links into 8.x sections
-=======
-The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:../../../admin/compatibility-matrix[here].
->>>>>>> f1c94135b20ef6975835e8b782e7f7ebd2aadd33
 {{% /notice %}}
 
 == Versions
