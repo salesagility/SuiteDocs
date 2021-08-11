@@ -8,6 +8,115 @@ weight: 9880
 :toclevels: 1
 :icons: font
 
+== 8.0-beta-3
+
+_Released 19/08/2021_
+
+=== icon:box-open[] Assets
+
+We would recommend downloading the pre-built package(s) from https://sourceforge.net/projects/suitecrm/files/pre-release/SuiteCRM-8.0.0-beta.3.zip/download[*SuiteCRM-8.0.0-beta.3.zip* (zip)] which contains the SuiteCRM instance with pre-built and downloaded requirements.
+Below are the zips of the raw source code.
+
+* https://github.com/salesagility/SuiteCRM-Core/archive/refs/tags/v8.0.0-beta.3.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM-Core/archive/refs/tags/v8.0.0-beta.3.tar.gz[*Source code* (tar.gz)]
+
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Enhancements
+
+* Ranged Search Options Added to Dates on Filters
+* Email Addresses Added As Line Items
+* History Timeline Implemented Based on Real Record Data
+* Print as PDF Functionality Added To List and RecordView
+* Change Log Functionality Added To The RecordView
+* Mass Update Functionality Added To ListView
+* Angular 12 Upgrade
+* DateTimeCombo Field Added
+* Find Duplicate Functionality Added To RecordView
+* Bulk Delete Confirmation Message Added
+
+==== icon:star[] Styling List
+
+* Email Line Item Styling
+* Display Module & Subpanel Page Styling Updated
+* Rename Module Page Styling Updated
+* Security Suite Settings Page Styling Updated
+* Help Icon Styling Updated
+* Hover-over Colour Fixed on Buttons on Various Pages
+* Security Groups Create/Edit View Page Styling Updated
+* Theme Page Styling Updated
+* Language Page Styling Updated
+* Diagnostic Page Styling Updated
+* Activity Streams Page Styling Updated
+* Dashlets styling On Desktop And On Mobile View Updated
+* Homepage - Add Tab & Edit Tab Styling Updated
+* Field Outline Colour Updated
+* Email Settings Page Styling Updated
+* Currencies Page Styling Updated
+* Password Management Page (+ Create and Edit View) Updated
+* Role Create View Styling Updated
+* Locale Page Styling Updated
+* Business Hours Page Styling Updated
+* AOS Settings Page Styling Updated
+
+==== Missing Features:
+
+* Missing Currency dropdown from RecordView
+* No email preference integration to use inbuilt email client
+* Between Filter not showing for any non-date fields
+* No front-end install or upgrade process
+* Roles not currently fully featured in SuiteCRM8 front-end
+
+==== Feature Issues:
+
+* Adding fields via studio can cause errors
+* Products & Services Subpanel Insight does not operate as expected
+* "Select" button disappears when a record is linked on legacy Detail View, requiring a refresh to display as expected
+* The Calendar Popup doesn't load the Meeting/Call modules
+* Unable to import Email records to the History Subpanel for various modules
+* Tasks Top Widget shows ': -' when task is completed
+* Clicking on the Theme Name in Admin->Themes will take you to a blank page
+* If you select a 'Main Group' condition within Reports you cannot minimise any groups
+
+==== Styling Issues:
+
+* Long Module names push navbar along when selected
+* Security Groups Module doesn't have an "Overview" tab label
+* The Email actions button is using a mix of old and new styling
+* Case Updates do not wrap when long
+* The Products Editview Save/Cancel buttons do not match SuiteCRM8 styling
+* Validation styling appears incorrect for Security Groups and Roles
+* Password Management screen layout issues at low resolutions
+* Password Management minor styling issues
+* Homepage minor layout issues at low resolutions
+* Line item fields (workflow, quotes & invoices) require further styling adjustments
+* Clicking on the Edit icon on the ListView of Security Groups shows broken Save And Continue option as well as hidden buttons below (Only shows when there are multiple Security Groups in the CRM)
+* Several buttons require additional hover over colours
+* Text highlight colour inconsistent between some pages
+* Email line items checkboxes slightly misaligned and some minor layout issues
+* Email line items labels should be shown for each row at lower resolutions
+* Legacy date fields (Meetings, Calls etc) and calendar overlap.
+* Report Subpanel's require restyling.
+
+
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 is still in active development and all current releases are not yet production ready, so be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues] before getting involved.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 8.0-beta-2
 
 _Released 20/05/2021_
