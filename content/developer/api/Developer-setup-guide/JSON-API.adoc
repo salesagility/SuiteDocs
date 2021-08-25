@@ -17,6 +17,10 @@ Install composer packages with
 [source,php]
 composer install
 
+You can find composer here: https://getcomposer.org/download/
+
+Make sure to add `composer.phar` to your path. Global install example is in the link above.
+
 === Generate private and public.key for OAUTH2
 
 SuiteCRM Api uses OAuth2 protocol, which needs public and private keys.
