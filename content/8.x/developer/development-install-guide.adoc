@@ -33,7 +33,7 @@ All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrit
 +
 [source,bash]
 ----
-./vendor/bin/pscss -f compressed ./public/legacy/themes/suite8/css/Dawn/style.scss > ./public/legacy/themes/suite8/css/Dawn/style.css
+./vendor/bin/pscss -s compressed ./public/legacy/themes/suite8/css/Dawn/style.scss > ./public/legacy/themes/suite8/css/Dawn/style.css
 ----
 
     - *NOTE:* Pre beta 2 steps
@@ -43,7 +43,7 @@ All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrit
     *** Run `composer install` in legacy directory (`/public/legacy`)
     *** Run legacy theme compile in the legacy directory (`/public/legacy`)
     **** *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
-    ****`./vendor/bin/pscss -f compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css`
+    ****`./vendor/bin/pscss -s compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css`
 
 . Set permissions (though these may need to be different depending on your setup)
 +
