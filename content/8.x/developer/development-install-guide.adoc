@@ -16,7 +16,7 @@ For System Requirements see the compatibility matrix link:../../admin/compatibil
 
 {{% notice note %}}
 Please make sure that your `apache` has `mod_rewrite` enabled and that it is properly configured to allow for re-writes.
-All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrites are not allowed you will get a `404` when calling the api.
+All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrites are not allowed you will get a `404` when calling the api. Please also ensure that your `php` installation has `zip`, `xml`, `curl`, and `intl` extensions installed and enabled and has a `max_execution_time` of at least `300`.
 {{% /notice %}}
 
 . Install composer
@@ -27,6 +27,7 @@ All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrit
 === Installation
 
 . Run `composer install` in the root directory
+    - *NOTE:* Edit Line Number 148 in `composer.json` in the root directory and replace `rm -Rf vendor/elasticsearch/elasticsearch/tests/Elasticsearch/Tests` with `rm -rf vendor/elasticsearch/elasticsearch/tests/Elasticsearch/Tests`
 . Run `yarn install` in the root directory
 . Run legacy theme compile in the root directory
     - *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
