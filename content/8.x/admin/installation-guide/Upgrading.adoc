@@ -5,22 +5,247 @@ weight: 30
 
 :imagesdir: /images/en/user
 
+== Compatibility matrix for upgrade
+
 {{% notice note %}}
-This feature is not yet implemented in SuiteCRM 8 yet, please check back soon.
+Before running the upgrade, please make sure your system complies with the new version compatibility matrix.
 {{% /notice %}}
-
-== Upgrading SuiteCRM
-
-Log into your SuiteCRM instance to use the Upgrade Wizard.
-CAUTION: It is strongly recommended that you run the upgrade process on a copy of your
-production system.
-
-=== Compatibility matrix for upgrade
-
-SuiteCRM runs on a variety of Operating Systems, Web servers, databases
-and PHP versions. It supports many browsers.
 
 Check the link:../../compatibility-matrix[Compatibility Matrix] for complete
 information on compatible versions.
 
-To be continued...
+== Upgrading SuiteCRM
+
+{{% notice info %}}
+It is recommend that you run the upgrade process in a development instance and test. Only after testing, deploying the upgraded version on to a production instance
+{{% /notice %}}
+
+{{% notice note %}}
+Before upgrading please make sure to create a backup of your instance code and database.
+{{% /notice %}}
+
+=== Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
+
+{{% notice info %}}
+Some bugs were found while testing the upgrade from Beta 3 to RC.
+The steps on this section explain how to workaround those problems.
+These issues have been fixed on the RC version.
+{{% /notice %}}
+
+
+==== 1. Prepare for upgrade.
+
+To overcome the issues mentioned above, you need to apply the following change on your code base.
+
+*1* - Open the `config/services/system/upgrades.yaml` config file.
+
+*2* - Add a `tmp` entry to the `toKeep` section.
+
+It should look like this:
+
+[source,yaml]
+----
+parameters:
+  upgrades:
+    toKeep:
+      - 'cache'
+      - 'extensions'
+      - 'public/extensions'
+      - 'public/legacy/modules'
+      - 'public/legacy/custom'
+      - 'public/legacy/cache'
+      - 'public/legacy/upload'
+      - 'public/legacy/Api/V8/OAuth2/private.key'
+      - 'public/legacy/Api/V8/OAuth2/public.key'
+      - 'public/legacy/config.php'
+      - 'public/legacy/config_override.php'
+      - 'public/legacy/config_si.php'
+      - 'public/legacy/suitecrm.log'
+      - 'public/legacy/install.log'
+      - 'logs'
+      - '.env.local'
+      - '.env.local.php'
+      - 'tmp'
+    toExpand:
+    
+    ...
+----
+
+*3* - Run:
+
+* For dev mode run: `composer install`
+* For prod mode run: `composer install --no-dev --prefer-dist --optimize-autoloader`
+
+==== 2. Download the RC package
+
+*1* - Create the following folder on you current instance: 
+
+* `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+*2* - Download the SuiteCRM 8 RC pre-built / installable package
+
+*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+
+*4* - If needed re-set the correct permissions.
+
+==== 3. Run the upgrade command
+
+*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 RC package
+
+{{% notice info %}}
+There is a known issue when running the upgrade command from Beta 3 to the RC version.
+
+The step to overcome that issue are explained next
+{{% /notice %}}
+
+The output of the command should be something like:
+
+*Note*: please ignore the above `libpng warning`
+
+[source,bash]
+----
+SuiteCRM Upgrade
+============
+
+Running: check-package
+step: check-package | status: done
+Package found in path
+Running: extract-package
+step: extract-package | status: done
+Package extracted
+Running: check-permissions
+step: check-permissions | status: done
+Permissions checked
+Running: install-upgrade-package
+step: install-upgrade-package | status: done
+Successfully installed package
+Running: run-migrations
+step: run-migrations | status: done
+Successfully run migrations
+Running: legacy-post-upgrade
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+step: legacy-post-upgrade | status: done
+Post Upgrade process complete
+
+----
+
+In the last step of the command you should get the following error
+
+[source,bash]
+----
+Running: clear-symfony-cache
+PHP Fatal error:  Interface 'Stringable' not found in /<your-suitecr-8-path>/vendor/symfony/string/AbstractString.php on line 30
+
+Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
+  #message: """
+    Attempted to load class "UnicodeString" from namespace "Symfony\Component\String".\n
+    Did you forget a "use" statement for another namespace?
+    """
+  #code: 0
+  #file: "./vendor/symfony/console/Helper/Helper.php"
+  #line: 63
+  trace: {
+    ./vendor/symfony/console/Helper/Helper.php:63 { …}
+    ./vendor/symfony/console/Helper/Helper.php:49 { …}
+    ./vendor/symfony/console/Application.php:826 { …}
+    ./vendor/symfony/console/Application.php:795 { …}
+    ./vendor/symfony/http-kernel/EventListener/DebugHandlersListener.php:136 { …}
+    ./vendor/symfony/error-handler/ErrorHandler.php:607 { …}
+    ./vendor/symfony/error-handler/ErrorHandler.php:695 { …}
+    Symfony\Component\ErrorHandler\ErrorHandler::handleFatalError() {}
+  }
+}
+----
+
+*2* - To overcome the above error you need to clear symfony cache
+
+* On your SuiteCRM 8 instance root, please run: `./bin/console cache:clear`
+
+*3* - Re-set permissions, if needed
+
+==== 4. Open your instance
+
+*1* - If all the above steps went as expected, you should now be able to login into your instance.
+
+
+
+
+
+
+=== Upgrading to a new SuiteCRM 8 version greated that RC
+
+
+==== 1. Download the new version package
+
+*1* - Create the following folder on you current instance: 
+
+* `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+*2* - Download the SuiteCRM 8 target version pre-built / installable package
+
+*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+
+*4* - If needed re-set the correct permissions.
+
+==== 3. Run the upgrade command
+
+*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 package you've downloaded
+
+The output should be something like:
+
+*Note*: please ignore the `libpng warning`
+
+[source,bash]
+----
+SuiteCRM Upgrade
+============
+
+Running: check-package
+step: check-package | status: done
+Package found in path
+Running: extract-package
+step: extract-package | status: done
+Package extracted
+Running: check-permissions
+step: check-permissions | status: done
+Permissions checked
+Running: install-upgrade-package
+step: install-upgrade-package | status: done
+Successfully installed package
+Running: run-migrations
+step: run-migrations | status: done
+Successfully run migrations
+Running: legacy-post-upgrade
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+step: legacy-post-upgrade | status: done
+Post Upgrade process complete
+Running: clear-symfony-cache
+----
+
+
+*2* - Re-set permissions, if needed
+
+==== 4. Open your instance
+
+*1* -  If all the above steps went as expected, you should now be able to login into your instance.
+
