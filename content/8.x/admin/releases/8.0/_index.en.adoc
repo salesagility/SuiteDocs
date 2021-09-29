@@ -1,6 +1,8 @@
 ---
 title: "8.0 Releases"
 weight: 9880
+aliases: 
+  - /8.x/admin/releases/8.0-beta/
 ---
 
 :toc:
@@ -8,7 +10,7 @@ weight: 9880
 :toclevels: 1
 :icons: font
 
-== SuiteCRM 8 - RC
+== 8.0-rc
 
 _Released 29/09/2021_
 
