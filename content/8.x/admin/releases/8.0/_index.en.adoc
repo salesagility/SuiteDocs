@@ -30,7 +30,7 @@ _Released 29/09/2021_
 * Implement Role functionality added to Subpanel action buttons
 * Implement Module Framework for use with the Extension Framework
 * Add Navbar extensions to the Extension Framework
-* Add Horizontal bar chart extensions to the Extension Framework
+* Add extension support for chart widgets to the Extension Framework
 * Add extension support for sidebar widgets to the Extension Framework
 * Add field logic extensions to the Extension Framework
 * Add Currency Field Implementation
