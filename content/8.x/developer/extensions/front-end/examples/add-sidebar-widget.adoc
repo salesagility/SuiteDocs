@@ -1,0 +1,881 @@
+---
+title: "Add custom sidebar widget"
+weight: 30
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/examples/add-sidebar-widget
+
+
+{{% notice note %}}
+The following documentation assumes that you have good understanding of angular and rxjs.
+{{% /notice %}}
+
+The concepts required to understand the following example are:
+
+* link:https://angular.io/guide/component-overview[angular components]
+* link:https://angular.io/guide/lifecycle-hooks[angular component lifecycle]
+* link:https://angular.io/guide/architecture-modules[angular modules]
+* link:https://angular.io/guide/dependency-injection[angular services and dependency injection]
+* link:https://angular.io/guide/content-projection[angular content projection]
+* link:https://rxjs.dev/[rxjs]
+* Reactive angular
+** link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson]
+** link:https://www.youtube.com/watch?v=Z76QlSpYcck[ng-conf 2019 | Data Composition with RxJS | Deborah Kurata]
+** link:https://www.youtube.com/watch?v=-4cwkHNguXE&t=959s[ng-conf 2019 | Thinking Reactively: Most Difficult | Mike Pearson]
+
+== Extension framework setup
+
+{{% notice info %}}
+This guide assumes that you have already setup the front extension on your local environment
+{{% /notice %}}
+
+
+For information on how to setup the frontend extension framework see the Setup guide link:../../admin/compatibility-matrix[here]
+
+== General concepts
+
+As described on the link:../../admin/compatibility-matrix[Front end extension general concepts]. Front end extensions are built using done using registries.
+There is a registry for each of the key areas in the application. By registering new components or services you can override existing ones.
+
+== 1. Hello World example
+
+The first example we are going to setup is a very simple one. It intends to serve as an intro to the process and structure on the frontend extension framework.
+
+On the following sections you will have a step-by-step guide on how to create a simple `hello-world` widget.
+
+=== 1.0 Structure intro
+
+The first step is to create a standard component.
+You can place it anywhere, though we recommend following a folder structure similar to the core one.
+So you could add it to `<suite-8-path>/extensions/<extension-name>/app/src/containers/sidebar-widget/<widget-name>`
+
+For our `hello-world` example we are going to add it to `<suite-8-path>/extensions/<extension-name>/app/src/containers/sidebar-widget/hello-world`
+
+=== 1.1 - Add the html
+
+Add a file named `hello-world-sidebar-widget.component.html`
+
+[source,html,angular2html]
+----
+<scrm-widget-panel [title]="'Example Widget'">
+    <div class="hello-world-sidebar-widget" widget-body>
+        HELLO WORLD!
+    </div>
+</scrm-widget-panel>
+----
+
+`<scrm-widget-panel>` is generic panel for widgets that will allow you to add widget that has the same look and feel as the other widgets
+
+By setting `widget-body` on the `div` angular will project the `div` into the widget body within the `<scrm-widget-panel>` component
+
+=== 1.2 - Add the component
+
+Add a file named `hello-world-sidebar-widget.component.ts`
+
+[source,javascript,typescript]
+----
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {
+    BaseWidgetComponent,
+} from 'core';
+
+@Component({
+    selector: 'scrm-hello-world-sidebar-widget',
+    templateUrl: './hello-world-sidebar-widget.component.html',
+    styles: []
+})
+export class HelloWorldSidebarWidgetComponent extends BaseWidgetComponent implements OnInit, OnDestroy {
+    constructor() {
+        super();
+    }
+}
+----
+
+=== 1.3 - Add the module
+
+Add a file named `hello-world-sidebar-widget.module.ts`
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HelloWorldSidebarWidgetComponent} from './hello-world-sidebar-widget.component';
+import {LoadingSpinnerModule, WidgetPanelModule} from 'core';
+
+@NgModule({
+    declarations: [HelloWorldSidebarWidgetComponent],
+    exports: [
+        HelloWorldSidebarWidgetComponent
+    ],
+    imports: [
+        CommonModule,
+        LoadingSpinnerModule,
+        WidgetPanelModule,
+    ]
+})
+export class HelloWorldSidebarWidgetModule {
+}
+----
+
+=== 1.4 - Register your component
+
+Now that we've created our `hello-world` sidebar widget we need to register in order to make it available.
+This should be done within your extension's main module. Like so:
+
+[source,javascript,typescript]
+----
+
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SidebarWidgetRegistry} from 'core';
+import {HttpClientModule} from '@angular/common/http';
+import {HelloWorldSidebarWidgetModule} from './sidebar-widget/hello-world/hello-world-sidebar-widget.module';
+import {HelloWorldSidebarWidgetComponent} from './sidebar-widget/hello-world/hello-world-sidebar-widget.component';
+
+@NgModule({
+    declarations: [],
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        HelloWorldSidebarWidgetModule
+    ],
+})
+export class ExtensionModule {
+    constructor(protected sidebarWidgetRegistry: SidebarWidgetRegistry) {
+
+        console.log('sidebar widget register');
+        sidebarWidgetRegistry.register('default', 'hello-world', HelloWorldSidebarWidgetComponent);
+
+        console.log('loaded');
+    }
+}
+
+----
+
+=== 1.5 - Build your extension
+
+
+Everything is setup so we can now to build our extension, with the following command.
+
+`yarn run build:<name-of-your-extension>`
+
+For a faster development process you can also build on dev mode and use `--watch`.
+It will watch for changes and auto rebuild every time the code changes.
+
+`yarn run build-dev:<name-of-your-extension> --watch`
+
+
+=== 1.6 - Configure the component to be used on a module
+
+All the previous steps made our new widget avaible and ready to use. We now need to change the view configuration to show it.
+Lets say that you would like to add your new `hello-world` component to the Accounts module on the record view.
+
+For that you would need to edit the Account's detailviewdefs on `public/legacy/modules/Accounts/metadata/detailviewdefs.php`.
+There we can add our widget to the `sidebarWidgets` configuration, using the same name we've registered it with in the above `ExtensionModule`: `hello-world`
+
+[source, php]
+----
+<?php
+
+...
+
+$viewdefs ['Accounts'] = [
+  'DetailView' => [
+    'templateMeta' =>  [...],
+      'topWidget' => [...],
+      'sidebarWidgets' => [
+          ['type' => 'hello-world'],
+          ...
+      ],
+      'panels' => [
+        ...
+----
+
+=== 1.7 - Refresh and test
+
+Depending on how you've setup your extension you many need to run `composer install` to copy over the built files in to the `public` folder
+
+After that your new extension should be ready to use and showing on the Accounts module.
+
+
+
+== 2.  Tasks Insight example
+
+The following guide provides the steps on how to build a more complex widget, that aims to be an example of a more real-world scenario.
+In the guide we are going to setup a tasks sidebar widget. It will fetch the tasks related to the current module and render them in a list.
+
+After we do all the changes it should look something like the following:
+
+image:tasks-sidebar-widget-detail.png[tasks-sidebar-widget-detail.png]
+image:tasks-sidebar-widget-full.png[tasks-sidebar-widget-full.png]
+
+=== 2.0 Structure intro
+
+The first step is to create a standard component.
+You can place it anywhere, though we recommend following a folder structure similar to the core one.
+So you could add it to `<suite-8-path>/extensions/<extension-name>/app/src/containers/sidebar-widget/<widget-name>`
+
+For our `hello-world` example we are going to add it to `<suite-8-path>/extensions/<extension-name>/app/src/containers/sidebar-widget/tasks`
+
+
+=== 2.1 - Add the html
+
+Add a file named `<your-widget-name>.component.html`.
+In this case we are going to add it to `tasks-sidebar-widget.component.html`.
+
+[source,html,angular2html]
+----
+<scrm-widget-panel [title]="getHeaderLabel()">
+    <div class="tasks-sidebar-widget" widget-body>
+
+        <ng-container *ngIf="!context$">
+            <div class="p-3 widget-message">
+                <scrm-label labelKey="LBL_BAD_CONFIG"></scrm-label>
+            </div>
+        </ng-container>
+
+        <div class="tasks-thread">
+            <div *ngIf="!loading && !records && !records.length"
+                 class="d-flex tasks-thread-no-data justify-content-center h3">
+                <scrm-label labelKey="LBL_NO_DATA"></scrm-label>
+            </div>
+
+            <div *ngIf="loading" class="d-flex tasks-thread-loading justify-content-center">
+                <scrm-loading-spinner [overlay]="true"></scrm-loading-spinner>
+            </div>
+
+            <div #list
+                 *ngIf="records && records.length"
+                 [ngStyle]="{'max-height.px': maxHeight, 'overflow-y': 'auto'}"
+                 class="tasks-thread-list">
+
+                <div class="m-2 p-2 border rounded shadow-sm" *ngFor="let record of records">
+                    <div class="d-flex">
+                        <div class="flex-grow-1">
+                            <ng-container *ngIf="initField('name', record)">
+                                <scrm-field [record]="record"
+                                            [field]="record.fields.name"
+                                            [mode]="'detail'"
+                                            [type]="record.fields.name.type"
+                                ></scrm-field>
+                            </ng-container>
+                        </div>
+                        <div class="flex-shrink-1">
+                            <div class="pl-2 small"><scrm-label labelKey="LBL_LIST_DUE_DATE" module="tasks"></scrm-label></div>
+                            <div class="pl-2 small">
+                                <ng-container *ngIf="initField('date_due', record)">
+                                    <scrm-field [record]="record"
+                                                [field]="record.fields['date_due']"
+                                                [mode]="'detail'"
+                                                [type]="record.fields['date_due'].type"
+                                    ></scrm-field>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div *ngIf="!allLoaded()"
+                     class="tasks-thread-load-more d-flex justify-content-center flex-grow-1">
+                    <scrm-button [config]="getLoadMoreButton()"></scrm-button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</scrm-widget-panel>
+----
+
+==== 2.2 - Add the component
+
+Add a file named `<your-widget-name>.component.ts`
+In this case we are going to add it to `tasks-sidebar-widget.component.ts`.
+
+[source,javascript,typescript]
+----
+
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {
+    ButtonInterface,
+    ColumnDefinition,
+    Field,
+    Record,
+    SearchCriteria,
+    SearchCriteriaFieldFilter,
+    SearchCriteriaFilter
+} from 'common';
+import {Subscription} from 'rxjs';
+import {
+    BaseWidgetComponent,
+    FieldManager,
+    LanguageStore,
+    Metadata,
+    MetadataStore,
+    RecordListStore,
+    RecordListStoreFactory
+} from 'core';
+import {shareReplay, take} from 'rxjs/operators';
+
+@Component({
+    selector: 'scrm-tasks-sidebar-widget',
+    templateUrl: './tasks-sidebar-widget.component.html',
+    styles: []
+})
+export class TasksSidebarWidgetComponent extends BaseWidgetComponent implements OnInit, OnDestroy {
+
+    @ViewChild('list') listContainer: ElementRef;
+
+    recordList: RecordListStore;
+    records: Record[];
+    loading = false;
+    maxHeight = 400;
+    module = 'tasks';
+    noData = true;
+
+    protected subs: Subscription[] = [];
+    protected fieldDefs: ColumnDefinition[];
+    protected parentId: string;
+    protected parentType: string;
+
+
+    constructor(
+        protected listStoreFactory: RecordListStoreFactory,
+        protected meta: MetadataStore,
+        protected language: LanguageStore,
+        protected fieldManager: FieldManager
+    ) {
+        super();
+        this.recordList = listStoreFactory.create();
+    }
+
+    ngOnInit(): void {
+
+        if (!this.context$) {
+            return;
+        }
+
+        this.recordList.init(this.module, false, 'list_max_entries_per_subpanel');
+        this.initRecordSubscription();
+        this.initLoading();
+
+        this.loading = true;
+        this.meta.getMetadata(this.module).pipe(
+            take(1),
+            shareReplay()
+        ).subscribe(meta => {
+            this.loading = false;
+            this.initFieldDefinitions(meta);
+            this.initLoadDataSubscription();
+        });
+    }
+
+    ngOnDestroy(): void {
+        this.subs.forEach(sub => sub.unsubscribe());
+    }
+
+    /**
+     * Get Header label
+     */
+    getHeaderLabel(): string {
+        return this.language.getFieldLabel('LBL_MODULE_NAME', 'tasks') || '';
+    }
+
+    /**
+     * Check if all records have been loaded
+     */
+    allLoaded(): boolean {
+        const pagination = this.recordList.getPagination();
+        if (!pagination) {
+            return false;
+        }
+
+        return pagination.pageSize >= pagination.total;
+    }
+
+    /**
+     * Get load more button definitions
+     */
+    getLoadMoreButton(): ButtonInterface {
+        return {
+            klass: 'load-more-button btn btn-link btn-sm',
+            labelKey: 'LBL_LOAD_MORE',
+            onClick: () => {
+                this.loadMore();
+            }
+        } as ButtonInterface;
+    }
+
+    /**
+     * Get field
+     * @param field
+     * @param record
+     */
+    initField(field: string, record: Record): Field {
+
+        if (!field || !record) {
+            return null;
+        }
+
+        if (record.fields && record.fields[field]) {
+            return record.fields[field];
+        }
+
+        const definition = this?.fieldDefs[field] ?? null;
+
+        if (!definition) {
+            return null;
+        }
+
+        return this.fieldManager.addField(record, definition);
+    }
+
+    /**
+     * Init record subscription
+     */
+    protected initRecordSubscription(): void {
+
+        this.subs.push(this.recordList.records$.subscribe(records => {
+            this.records = records;
+        }));
+    }
+
+    /**
+     * Init loading subscription
+     */
+    protected initLoading(): void {
+        this.subs.push(this.recordList.loading$.subscribe(loading => {
+            this.loading = loading === true;
+        }));
+    }
+
+    /**
+     * Update list search criteria
+     * @param parentId
+     * @param parentType
+     */
+    protected updateSearchCriteria(parentId: string, parentType: string): void {
+        this.recordList.updateSearchCriteria({
+            filters: {
+                'parent_id': {
+                    field: 'parent_id',
+                    fieldType: 'id',
+                    operator: '=',
+                    values: [parentId]
+                } as SearchCriteriaFieldFilter,
+                'parent_type': {
+                    field: 'parent_id',
+                    fieldType: 'varchar',
+                    operator: '=',
+                    values: [parentType]
+                } as SearchCriteriaFieldFilter
+            } as SearchCriteriaFilter,
+            orderBy: 'DESC',
+            sortOrder: 'date_due',
+            searchModule: this.module
+        } as SearchCriteria);
+    }
+
+    /**
+     * Init load data subscription
+     */
+    protected initLoadDataSubscription(): void {
+        this.subs.push(this.context$.subscribe(context => {
+            this.context = context;
+
+            this.loadData();
+        }));
+    }
+
+    /**
+     * Load Data
+     */
+    protected loadData(): void {
+        const parentId = this?.context?.id ?? null;
+        const parentType = this?.context?.module ?? null;
+        const sameParentId = this.parentId === parentId;
+        const sameParentType = this.parentType === parentType;
+
+        if (!parentId || !parentType) {
+            this.noData = true;
+
+            this.parentId = null;
+            this.parentType = null;
+
+            return;
+        }
+
+
+        if (sameParentId && sameParentType) {
+            return;
+        }
+
+        this.parentId = parentId;
+        this.parentType = parentType;
+
+        this.updateSearchCriteria(parentId, parentType);
+
+        this.recordList.load().pipe(
+            take(1)
+        ).subscribe();
+    }
+
+    /**
+     * Init field definitions
+     * @param meta
+     */
+    protected initFieldDefinitions(meta: Metadata): void {
+        const fieldDefinitions = meta?.listView?.fields ?? [];
+        this.fieldDefs = [];
+
+        fieldDefinitions.forEach(definition => {
+            if (!definition || !definition.name) {
+                return
+            }
+
+            this.fieldDefs[definition.name] = definition;
+        });
+    }
+
+    /**
+     * Load more records
+     * @param jump
+     */
+    protected loadMore(jump: number = 10): void {
+        const pagination = this.recordList.getPagination();
+        const currentPageSize = pagination.pageSize || 0;
+        let newPageSize = currentPageSize + jump;
+
+        this.recordList.setPageSize(newPageSize);
+        this.recordList.updatePagination(0);
+    }
+
+}
+----
+
+==== 2.3 - Add the module
+
+Add a file named `<your-widget-name>.module.ts`
+In this case we are going to add it to `tasks-sidebar-widget.module.ts`.
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {TasksSidebarWidgetComponent} from './tasks-sidebar-widget.component';
+import {ButtonModule, FieldModule, LabelModule, LoadingSpinnerModule, WidgetPanelModule} from 'core';
+
+@NgModule({
+    declarations: [TasksSidebarWidgetComponent],
+    exports: [
+        TasksSidebarWidgetComponent
+    ],
+    imports: [
+        CommonModule,
+        LoadingSpinnerModule,
+        LabelModule,
+        FieldModule,
+        WidgetPanelModule,
+        ButtonModule,
+    ]
+})
+export class TasksSidebarWidgetModule {
+}
+----
+
+
+=== 2.4 - Register your component
+
+Now that we've created our `tasks` sidebar widget we need to register in order to make it available.
+This should be done within your extension's main module. Like so:
+
+[source,javascript,typescript]
+----
+
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SidebarWidgetRegistry} from 'core';
+import {HttpClientModule} from '@angular/common/http';
+import {TasksSidebarWidgetModule} from './sidebar-widget/tasks/tasks-sidebar-widget.module';
+import {TasksSidebarWidgetComponent} from './sidebar-widget/tasks/tasks-sidebar-widget.component';
+
+@NgModule({
+    declarations: [],
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        TasksSidebarWidgetModule
+    ],
+})
+export class ExtensionModule {
+    constructor(protected sidebarWidgetRegistry: SidebarWidgetRegistry) {
+
+        console.log('sidebar widget register');
+        sidebarWidgetRegistry.register('default', 'tasks', TasksSidebarWidgetComponent);
+
+        console.log('loaded');
+    }
+}
+
+----
+
+=== 2.5 - Build your extension
+
+
+Everything is setup. So we can now to build our extension, with the following command.
+
+`yarn run build:<name-of-your-extension>`
+
+For a faster development process you can also build on dev mode and use `--watch`.
+It will watch for changes and auto rebuild every time the code changes.
+
+`yarn run build-dev:<name-of-your-extension> --watch`
+
+
+=== 2.6 - Configure the component to be used on a module
+
+All the previous steps made our new widget avaible and ready to use. We now need to change the view configuration to show it.
+Lets say that you would like to add your new `tasks` component to the Accounts module on the record view.
+
+For that you would need to edit the Account's detailviewdefs on `public/legacy/modules/Accounts/metadata/detailviewdefs.php`.
+There we can add our widget to the `sidebarWidgets` configuration, using the same name we've registered it with in the above `ExtensionModule`: `tasks`
+
+
+[source, php]
+----
+<?php
+
+...
+
+$viewdefs ['Accounts'] = [
+  'DetailView' => [
+    'templateMeta' =>  [...],
+      'topWidget' => [...],
+      'sidebarWidgets' => [
+          ['type' => 'tasks'],
+          ...
+      ],
+      'panels' => [
+        ...
+----
+
+=== 2.7 - Refresh and test
+
+Depending on how you've setup your extension you many need to run `composer install` to copy over the built files in to the `public` folder
+
+Your new extension should be ready to use.
+
+=== 2.8 - A deeper look into the code
+
+Now that our tasks widget is up and running, it is time to explain in detail how the code is structured.
+The following subsection will try to cover the key parts of the widget code.
+
+==== 2.8.1 - The base component
+
+As you probably already noticed our `TasksSidebarWidgetComponent` extends `BaseWidgetComponent`, which is a base class that provides a common interface for sidebar widgets.
+This allows SuiteCRM to dynamically render widgets just based on configuration.
+
+[source,javascript,typescript]
+----
+export class TasksSidebarWidgetComponent extends BaseWidgetComponent implements OnInit, OnDestroy {
+----
+
+All sidebar widgets must extend this base class and should not add any new mandatory inputs using `@Input`.
+Since the sidebar widgets are dynamic, the inputs that are passed to them are always the same regardless of the implementation.
+
+
+==== 2.8.2 - RecordList Store
+
+To load the tasks we are using a `RecordListStore`. For more details on the concept behind a store, please watch the following `ng-conf` talk:
+link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson]
+
+The `RecordListStore` will handle all aspects related with fetching a list of records from the backend.
+In this widget a list of `task` records. The store can also handle pagination, sorting and the usual functionality found on lists/tables.
+
+In order to use the record list we need to initialize it, for that we must specify the `module`. In our case we are also overriding the optional arguments in order to avoid loading data on init and to set a different page size from the default one.
+
+[source,javascript,typescript]
+----
+this.recordList.init(this.module, false, 'list_max_entries_per_subpanel');
+----
+
+==== 2.8.3 - Fields and Metadata
+
+To render the task data we use the standard `<scrm-field>` component. Which is able to dynamically render a field component depending on the type of field and the mode we want to display the field in.
+
+[source,html,angular2html]
+----
+<scrm-field [record]="record"
+            [field]="record.fields.name"
+            [mode]="'detail'"
+            [type]="record.fields.name.type"
+></scrm-field>
+----
+
+In order to render a field, we need a `Field` and a `Record` objects. There `Record` interface represents a single record from a module.
+It contains the `attributes` sent from the backend, attributes represent the raw values received.
+Those attributes will then be used to instantiate the corresponding field instances. `Field` instances are objects that are able to manipulate a single field. They contain both the value and metadata on how to render that field, e.g. the type, type overrides, if it is readonly or not, etc.
+
+Thus, to create a `Field`, apart from the field's `value` we need the `metadata` on how to render that field.
+
+Therefore, on `ngOnInit` one of the first things we do is to load the metadata required to then properly render the field.
+
+[source,javascript,typescript]
+----
+    this.meta.getMetadata(this.module).pipe(
+        take(1),
+        shareReplay()
+    ).subscribe(meta => {
+        ...
+    });
+----
+
+Though there are other approaches that maybe better, in our widget implementation we only build the each `Field` when before rendering it, in a lazy-loading kind of approach.
+Which means that we only build the fields and inject them into the `Record` when we need.
+
+Please note that this approach, although simple, has some disadvantages. As only the rendered fields are built and ready to be used, which could prevent us to add field level logic that would update other fields.
+
+
+[source,html,angular2html]
+----
+<ng-container *ngIf="initField('date_due', record)">
+    <scrm-field [record]="record"
+----
+
+
+[source,javascript,typescript]
+----
+    /**
+     * Get field
+     * @param field
+     * @param record
+     */
+    initField(field: string, record: Record): Field {
+
+        ...
+
+        if (record.fields && record.fields[field]) {
+            return record.fields[field];
+        }
+
+        const definition = this?.fieldDefs[field] ?? null;
+
+       ...
+
+        return this.fieldManager.addField(record, definition);
+    }
+----
+
+
+==== 2.8.4 - Loading data
+
+On the tasks widget we only want to load the tasks that are related with the currently open record.
+
+Thus, when requesting the data form the `RecordList` API we need to to send the criteria we want to filter by.
+In this case, we will want all tasks where `parent_type = <currently_open_module>` and `parent_id = <currently_open_record_id>`
+
+The `BaseWidgetComponent` provides you with a way to retrieve some context data from the parent. It provides a `context` object with the initial `context` at the moment on initialization and a `context$` Observable, that you can subscribe to, in order to react to updates on the parent.
+
+[source,javascript,typescript]
+----
+    @Input('context') context: ViewContext;
+    @Input('context$') context$: Observable<ViewContext>;
+----
+
+On our example we are subscribing to the `context$` Observable and re-loading the data everytime this context changes.
+
+[source,javascript,typescript]
+----
+    protected initLoadDataSubscription() {
+        this.subs.push(this.context$.subscribe(context => {
+            this.context = context;
+
+            this.loadData();
+        }));
+    }
+----
+
+On every context update we check for the `id` and `module` of the parent module. Then based on that information we update the search criteria and re-fetch data from the backend.
+
+[source,javascript,typescript]
+----
+    /**
+     * Load Data
+     */
+    protected loadData(): void {
+
+        ...
+
+        this.parentId = parentId;
+        this.parentType = parentType;
+
+        this.updateSearchCriteria(parentId, parentType);
+
+        this.recordList.load().pipe(
+            take(1)
+        ).subscribe();
+
+        ...
+    }
+----
+
+==== 2.8.5 - Rendering the list of tasks
+
+As you might have noticed from the above section there is no call to re-render after the `recordList` is re-fetched.
+Like all SuiteCRM frontend this example has been built in a `reactive` way. You don't need to explicitly tell the component to re-render you just need to change the data and the component will re-render.
+
+This is achieved by using observable streams. Our component subscribes to the `records$` observable on `RecordListStore` and everytime there is an update to the list of records the component will re-render.
+
+This process is initialised when we call `initRecordSubscription()` on `ngOnInit`. The component's internal list of records is going to update when the original list is updated. And once the component's `records` property is changed angular will know that the component needs to be re-rendered.
+
+[source,javascript,typescript]
+----
+    /**
+     * Init record subscription
+     */
+    protected initRecordSubscription(): void {
+
+        this.subs.push(this.recordList.records$.subscribe(records => {
+            this.records = records;
+        }));
+    }
+----
+
+This also makes the `html` simpler and cleaner. As it only needs to read from the `records`.
+
+[source,html,angular2html]
+----
+    ...
+
+    <div class="m-2 p-2 border rounded shadow-sm" *ngFor="let record of records">
+        <div class="d-flex">
+            <div class="flex-grow-1">
+
+    ...
+----
+
+Another benefit of this approach is that we keep the list of records in a single place, a "single source of truth".
+It also provides a clear structure on how to read and update data as all updates need to be done in the `RecordListStore`.
+
+A good example of that is the `getLoadMoreButton()`. When the load more button is clicked we change the page size on the `RecordListStore` and re-fetch the data:
+
+[source,javascript,typescript]
+----
+    /**
+     * Load more records
+     * @param jump
+     */
+    protected loadMore(jump: number = 10): void {
+        const pagination = this.recordList.getPagination();
+        const currentPageSize = pagination.pageSize || 0;
+        let newPageSize = currentPageSize + jump;
+
+        this.recordList.setPageSize(newPageSize);
+        this.recordList.updatePagination(0);
+    }
+----
+
+
+The `html` for rendering the list of tasks doesn't need to know about that, it will remain the same, only looking into the `records`. It will just re-render when they are updated, regardless of how and when they are updated.
