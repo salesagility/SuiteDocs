@@ -1,0 +1,555 @@
+---
+title: "Setting up a front-end extension module"
+weight: 30
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/fe-extensions-setup
+
+
+{{% notice note %}}
+The following documentation assumes that you have good understanding of angular framework
+{{% /notice %}}
+
+
+== Extension framework setup
+
+The following guide provides a ste-by-step explanation on how to setup an front-end extension module.
+Which will allow you to add new front-end customizations or to override existing features.
+
+== 0. Choosing an extension name
+
+First thing is to choose an extension machine name. This name should not have spaces, nor `-`, nor special charaters.
+We recommend using camel case, e.g. `myExt` for the key. And snake-case, e.g. `my-ext` for the filename and paths.
+
+*Note:* this recommendation for having a different case system for files, is just to avoid problems in case-sensitive systems.
+
+== 1. Generate a micro-frontend (micro angular app) for your extensions
+
+The first step is to generate your angular extension "micro" app
+
+. You can generate it by running: `ng g app <your-extension-name> --projectRoot=extensions/<your-extension-name>/app --routing=false --style=scss`
+.. On our example it is going to be: `ng g app myExt --projectRoot=extensions/my-ext/app --routing=false --style=scss`
+
+== 2. Initialize module federation on your extension
+
+Next we need to enable module-federation on our extension.
+
+=== 2.1 Enable module federation
+
+. You enable it by running: `ng add @angular-architects/module-federation --project=<your-extension-name>`
+.. On our example it is going to be: `ng add @angular-architects/module-federation --project=myExt`
+
+=== 2.2 Clean webpack configuration
+
+Now we need to clean the sample code that was added by the generator
+
+Clean you your configuration so that it looks like the following:
+
+[source,javascript]
+----
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+
+module.exports = {
+  output: {
+    publicPath: 'auto',
+    uniqueName: 'myExt'
+  },
+  optimization: {
+    runtimeChunk: false
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+
+      name: 'myExt',
+      filename: 'remoteEntry.js',
+      library: {
+        type: 'window',
+        name: 'myExt',
+      },
+      exposes: {
+        './Module': './extensions/my-ext/app/src/extension/extension.module.ts'
+      },
+
+      shared: {
+        '@angular/core': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@angular/common': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@angular/common/http': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@angular/router': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@angular/animations': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@angular/cdk': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@angular/forms': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        '@apollo/client': {
+          singleton: true,
+          requiredVersion: '^3.3.7'
+        },
+        '@apollo/link-error': {
+          singleton: true,
+          requiredVersion: '^2.0.0-beta.3'
+        },
+        'angular-svg-icon': {
+          singleton: true,
+          requiredVersion: '^12.0.0'
+        },
+        'apollo-angular': {
+          singleton: true,
+          requiredVersion: '^2.2.0'
+        },
+        graphql: {
+          singleton: true,
+          requiredVersion: '^14.7.0'
+        },
+        'graphql-tag': {
+          singleton: true,
+          requiredVersion: '^2.11.0'
+        },
+        'lodash-es': {
+          singleton: true,
+          requiredVersion: '^4.17.20'
+        },
+        luxon: {
+          singleton: true,
+          requiredVersion: '^1.25.0'
+        },
+        'ng-animate': {
+          singleton: true,
+          requiredVersion: '^1.0.0'
+        },
+        'ngx-chips': {
+          singleton: true,
+          requiredVersion: '^2.2.2'
+        },
+
+        '@swimlane/ngx-charts': {
+          singleton: true,
+          requiredVersion: '^17.0.0'
+        },
+
+        '@ng-bootstrap/ng-bootstrap': {
+          singleton: true,
+          requiredVersion: '^9.0.2'
+        },
+
+        'bn-ng-idle': {
+          singleton: true,
+          requiredVersion: '^1.0.1'
+        },
+
+        common: {
+          singleton: true,
+          import: 'dist/common',
+          requiredVersion: false
+        },
+
+        core: {
+          singleton: true,
+          import: 'dist/core',
+          requiredVersion: false
+        },
+      }
+
+    }),
+  ],
+};
+
+----
+
+=== 2.3 Configure shared modules
+
+{{% notice note %}}
+The `shared` config added on 2.2 for this example may be out-of-date. So we need to update it.
+{{% /notice %}}
+
+To update the `shared` modules configuration to the correct one, please go through the following steps:
+
+1. Open the webpack config for core shell, located at `core/app/shell/webpack.config.js`
+2. Copy the contents of the `shared` entry.
+3. Replace the contents of the shared entry on your extension's webpack config with the ones from shared
+
+
+
+== 3. Adjust angular.json configuration
+
+. Open `angular.json`
+. Look for the entry with the name of your extension, in our example it is `myExt`
+. Within your extension entry there should be an `architect`
+
+=== 3.1 Change the outputPath
+
+. On `architect`.`build`.`options`  entry of your extension configuration
+. change `outputPath` to `public/extensions/<your-extension>`
+.. in our example it is going to be `public/extensions/my-ext`
+
+{{% notice info%}}
+This `outputPath` we are setting is just to make development easier as it directly places built files in the `public` folder.
+{{% /notice %}}
+
+When preparing the final bundle for your extension you should place your built files under `/extensions/<your-extension-name>/Resources/public`
+* in our example it is going to be `/extensions/my-ext/Resources/public`
+
+you can change the `outputPath` to the above one and rebuild your extension in prod mode.
+
+=== 3.2 Adjust dev build configuration
+. On `architect`.`build`.`options`  entry of your extension configuration
+. Add the following entries
+
+[source,json]
+----
+    "namedChunks": true,
+    "sourceMap": true,
+    "aot": true,
+----
+
+. On `architect`.`build`.`configurations`  entry of your extension configuration
+.. if you have a `development` entry remove it.
+
+
+=== 3.3 Adjust prod build configuration
+
+. On `architect`.`build`.`configurations`.`production`  entry of your extension configuration
+. Add/change the following options
+
+[source,json]
+----
+  "optimization": true,
+  "outputHashing": "all",
+  "sourceMap": false,
+  "namedChunks": true,
+  "extractLicenses": true,
+  "vendorChunk": false,
+  "buildOptimizer": true,
+  "budgets": [
+    {
+      "type": "initial",
+      "maximumWarning": "2mb",
+      "maximumError": "5mb"
+    },
+    {
+      "type": "anyComponentStyle",
+      "maximumWarning": "6kb",
+      "maximumError": "10kb"
+    }
+  ],
+----
+
+=== 3.4 Final configuration example
+
+After the above change your configuration should look something like the following:
+
+[source,json]
+----
+    "myExt": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "extensions/my-ext/app",
+      "sourceRoot": "extensions/my-ext/app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "namedChunks": true,
+            "commonChunk": false,
+            "sourceMap": true,
+            "aot": true,
+            "outputPath": "public/extensions/my-ext",
+            "index": "extensions/my-ext/app/src/index.html",
+            "main": "extensions/my-ext/app/src/main.ts",
+            "polyfills": "extensions/my-ext/app/src/polyfills.ts",
+            "tsConfig": "extensions/my-ext/app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "extensions/my-ext/app/src/favicon.ico",
+              "extensions/my-ext/app/src/assets"
+            ],
+            "styles": [
+              "extensions/my-ext/app/src/styles.scss"
+            ],
+            "scripts": [],
+            "extraWebpackConfig": "extensions/my-ext/app/webpack.config.js",
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "extensions/my-ext/app/src/environments/environment.ts",
+                  "with": "extensions/my-ext/app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "extraWebpackConfig": "extensions/my-ext/app/webpack.prod.config.js"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "myExt:build:production",
+              "extraWebpackConfig": "extensions/my-ext/app/webpack.prod.config.js"
+            },
+            "development": {
+              "browserTarget": "myExt:build:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "extraWebpackConfig": "extensions/my-ext/app/webpack.config.js",
+            "port": 3333
+          }
+        },
+        "extract-i18n": {
+          "builder": "ngx-build-plus:extract-i18n",
+          "options": {
+            "browserTarget": "myExt:build",
+            "extraWebpackConfig": "extensions/my-ext/app/webpack.config.js"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "extensions/my-ext/app/src/test.ts",
+            "polyfills": "extensions/my-ext/app/src/polyfills.ts",
+            "tsConfig": "extensions/my-ext/app/tsconfig.spec.json",
+            "karmaConfig": "extensions/my-ext/app/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "extensions/my-ext/app/src/favicon.ico",
+              "extensions/my-ext/app/src/assets"
+            ],
+            "styles": [
+              "extensions/my-ext/app/src/styles.scss"
+            ],
+            "scripts": [],
+            "extraWebpackConfig": "extensions/my-ext/app/webpack.config.js"
+          }
+        }
+      }
+    }
+----
+
+== 4. Add build command
+
+Add the following to the `scripts` entry of your `package.json`
+
+. Add a dev build command: `"build-dev:<your-extension-name>": "ng build <your-extension-name>",`
+.. On our example it is going to be`"build-dev:myExt": "ng build myExt",`
+. Add a production build command: `"build:<your-extension-name>": "ng build <your-extension-name> --configuration production",`
+.. On our example it is going to be`"build:myExt": "ng build myExt --configuration production",`
+
+== 5. Add ng module for your extension
+
+For extensions to work they need to have a main extension angular module.
+This module works like an "entrypoint". It will be loaded by the "main"/"shell" app. From there you can load all your custom code.
+
+This is the same module that we've added on our extension `webpack.config.js` on the following entry
+
+[source,json]
+----
+      exposes: {
+        './Module': './extensions/my-ext/app/src/extension/extension.module.ts'
+      },
+----
+
+=== 5.1 Add extension ng module
+
+Lets add a angular module in the location we defined in the above entry.
+
+. Please create a `extension` folder under your extension location: `extensions/<your-extension-name>/app/src`
+.. on our example is going to be `extensions/my-ext/app/src/extension`
+. Add a file named `extension.module.ts` within the  `extension` folder
+. Add the following code to the `extension.module.ts`
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+
+@NgModule({
+    declarations: [],
+    imports: [
+        CommonModule,
+    ],
+})
+export class ExtensionModule {
+    constructor() {
+        console.log('Dynamic extension myExt!');
+    }
+
+    init(): void {
+    }
+}
+----
+
+
+{{% notice note %}}
+You can remove the `console.log` from the constructor after getting your example up-and-running
+{{% /notice %}}
+
+
+=== 5.2 Add ExtensionModule to imports
+
+After adding the extension module we need to import it in the app module within your extension.
+Otherwise the angular compiler won't be able to build it.
+
+. Open `app.module.ts` on you extension folder, it should be in `extensions/<your-extension-name>/app/src/app/app.module.ts`.
+** In our example it is on `extensions/my-ext/app/src/app/app.module.ts`
+. Add the `ExtensionModule` to the imports of the `AppModule`. It should look similar to the following example:
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+
+import {AppComponent} from './app.component';
+import {ExtensionModule} from '../extension/extension.module';
+
+@NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        ExtensionModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+----
+
+
+== 6. Build core
+
+In order to build your extension you'll need to build the core dependencies.
+
+. Build common by running: `yarn run build:common`
+** if you want more debugging info on the browser dev tools, you can build in dev mode
+*** `yarn run build-dev:common`
+
+. Build core by running: `yarn run build:core`
+** if you want more debugging info on the browser dev tools, you can build in dev mode
+*** `yarn run build-dev:core`
+
+. Build shell by running: `yarn run build:shell`
+** if you want more debugging info on the browser dev tools, you can build in dev mode
+*** `yarn run build-dev:shell`
+
+*Note:*
+After building the above dependencies you will only need to build again if:
+
+* you've upgraded to a new SuiteCRM version
+* you've deleted the dist folder
+** *note:* the dist folder is only need for building your extension, you don't need it to run the extension. this it is not needed on a production environment
+* you've cleared / deleted the public folder
+
+
+== 7. Build your extension
+
+You have the option to build your extension in prod or dev mode.
+
+* prod mode: you production environment should be running the code on prod mode, thus you need to build it before deploying your extension
+* dev mode: it is better suited for development, as it provides more debugging info, as well as sourcemaps.
+
+For faster builds in development mode you can use the `--watch` option.
+It will keep the command running and watching for any changes made to the files in the extension. We recommend using this options as it will allow for faster build and therefore a faster development process.
+
+* you can use `watch` like so: `yarn run build-dev:<your-extension-name> --watch`
+** in our example it would be: `yarn run build-dev:myExt --watch`
+
+== 8. Enable your extension
+
+We have already setup and build our extension making it ready to use.
+
+
+{{% notice note %}}
+SuiteCRM front-end extensions use module federation in a dynamic way. Which allows to load extensions in run-time based on a list of enabled extensions that is retrieved in runtime from the system configs api.
+{{% /notice %}}
+
+Thus, the next step is to enable our extension. To tell the api that it should be loaded.
+
+. Add a config folder to your extension folder under `/extensions/<your-extension-name>/config`.
+** On our example is going to be `extensions/my-ext/config`
+. Add a `extension.php` file to the new config folder
+** On our example is going to be `extensions/my-ext/config/extension.php`
+. Enable / register your extension by adding the following code to the new `extension.php`
+** on the following example replace `myExt` and `my-ext` by your extension name on:
+*** `remoteEntry`
+*** `remoteName`
+
+
+[source,php]
+----
+<?php
+
+use Symfony\Component\DependencyInjection\Container;
+
+if (!isset($container)) {
+    return;
+}
+
+/** @var Container $container */
+$extensions = $container->getParameter('extensions') ?? [];
+
+$extensions['myExt'] = [
+    'remoteEntry' => './extensions/my-ext/remoteEntry.js',
+    'remoteName' => 'myExt',
+    'enabled' => true
+];
+
+$container->setParameter('extensions', $extensions);
+----
+
+== 8. Refresh your instance and test
+
+Now that we have configured and enabled our extension it should be loaded during the angular the app init.
+
+Please open you browser console before refreshing. After the page loads check your console, you should see the message we left on the `console.log` : `'Dynamic extension myExt!'`
+
