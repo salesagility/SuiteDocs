@@ -1,0 +1,131 @@
+---
+title: "Front-end Architecture Introduction"
+weight: 30
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/fe-architecture-intro
+
+
+{{% notice note %}}
+The following documentation assumes that you have some understanding of angular framework
+{{% /notice %}}
+
+
+== 1. Architecture overview
+
+SuiteCRM's front end architecture was designed with the following concepts in mind.
+
+. Keep a standard design and approach accross the app
+** Aim to have a very standard UI, with the same look and feel across the app
+** Aim for maximum component re-usage and develop similar features using the same components
+. Configuration driven
+** Aim to be backend configuration driven as much as possible.
+*** Allows for easier customizations
+*** Front-end extensions are complex and hard to develop
+** No module specific features.
+*** If a module has a specific feature it should be developed in a configurable way. Allowing it to be re-used
+. Extensible
+** Aim to allow extending / overriding all components and services
+
+== 2. Front-end structure
+
+SuiteCRM front end components are split into some categories according to their goal.
+
+A good way to start is to have a look at the `app-core` structure in `core/app/core`.
+It can provide a high level understanding of how the project is structured and of the existing concepts.
+
+image:app_core_folder_structure.png[app_core_folder_structure.png]
+
+While `directives`, `pipes`, `services` and `components` are well known angular concepts. Some of the other may not be that obvious to understand at a first glance.
+In the next sub-chapters we are going to give a high level intro to the concepts behind some of these parts.
+
+== 2.1 Views
+
+Views is a well know concept in SuiteCRM since way back. Each view represents a page.
+In the new front-end architecture they structure and control all subcomponents in given page.
+
+The following images can help provide a better idea of what a view is on the page.
+
+image:listview-view-highlight.png[listview-view-highlight.png]
+image:recordview-view-highlight.png[recordview-view-highlight.png]
+
+Views could be defined as:
+
+. The Main component for a page
+. Always linked to a route in the router
+** Thus should always be accessible through a route
+. Can load and control data for a record
+** Done using the concept of stores
+. Control display state for other components in the view
+. Can not be re-used within other views or components
+
+
+== 2.2 Components
+
+Components are the well know components in angular.
+However in SuiteCRM there are some extra distinctions
+
+Components could be defined as:
+
+. Represent a ui re-usable component
+** they must be re-usable within any other component
+. Display only
+** Data-wise, they are considered dumb.
+** Components only display data they don't change it control it
+** If a component triggers an action or does something that data changes, they do not contain any of the business logic to handle that. They just notify the parent view / container and that action should be handled by the parent
+. Components can call/use other components
+
+
+Good examples of components are:
+
+* buttons
+* panels
+* image component
+* label component
+
+== 2.3 Fields
+
+Fields follow the same concept that know to SuiteCRM since way back.
+They represent a field in a record.
+A field has a type and is displayed differently depending on that type.
+
+
+Components could be defined as:
+
+. Represent a field in the record
+. Can be displayed in modes: `edit`, `create`, `detail`, `list`, `massupdate`, `filter`, and other that may come
+. Can change the way they display depending on metadata
+. They can display and update data
+
+The following image can help give a better understanding
+
+image:recordview-fields-highlight.png[recordview-fields-highlight.png]
+
+
+== 2.4 Containers
+
+Containers a very similar to views, they can load and manage data, they have and control subcomponents.
+Though the big difference is: the are re-usable. They can be called within other views and aren't linked to a route.
+
+Containers could be defined as:
+
+. Represent a set of data: a record, a list, etc.
+** Can load and control data for a record
+. Their data fetching is not tied to the view's data fetching.
+. They are never linked to a route in the router
+. Control display state for their subcomponents components
+. Can have several instances in a single view
+
+
+Good examples of containers are:
+
+* Subpanels
+* Record selection modals
+* Sidebar widgets
+* Top widgets
+
+The image we've seen previously can help give a better understanding
+
+image:recordview-fields-highlight.png[recordview-fields-highlight.png]
+
+
