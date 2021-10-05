@@ -8,7 +8,7 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
-== 7.12 - RC
+== 7.12-rc
 
 _Released 05/10/2021_
 
@@ -17,15 +17,11 @@ _Released 05/10/2021_
 * https://github.com/salesagility/SuiteCRM/archive/v7.12-rc.zip[*Source code* (zip)]
 * https://github.com/salesagility/SuiteCRM/archive/v7.12-rc.tar.gz[*Source code* (tar.gz)]
 
-==== icon:lock[] Security
-
-[discrete]
-
 ==== icon:star[] Enhancements
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/9244[9244^] - PDF Engine Selection
-- MPDF License has found to no longer be compliant with OpenSource and due to this the system will default to a new engine.
-However, if you have an existing license with MPDF it will not be removed on upgrade.
+- MPDF License has be found to no longer be compliant with AGPL3 and due to this the MPDF will not be included in new installs. 
+MPDF will not be removed on upgrade, but the system will default to a new engine, with an option to revert back to the MDPF if required.
 * PR: https://github.com/salesagility/SuiteCRM/pull/9185[9185^] - Noon Theme
 * PR: https://github.com/salesagility/SuiteCRM/pull/9298[9298^] - Implement TCPDFEngine
 * PR: https://github.com/salesagility/SuiteCRM/pull/9208[9208^] - Implement standard PDF Engines
