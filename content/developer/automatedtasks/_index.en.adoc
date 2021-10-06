@@ -15,21 +15,21 @@ SuiteCRM utilises https://robo.li[Robo tasks] to provide automation for common t
 
 Open `bash` terminal and run robo
 
-`./vendor/bin/robo list`
+`./vendor/consolidation/robo/robo list`
 
 You get help for each task using:
 
-`./vendor/bin/robo [taskname] -h`
+`./vendor/consolidation/robo/robo [taskname] -h`
 
 ==== Windows:
 
 Open `Command Prompt` and run robo
 
-`.\vendor\bin\robo list`
+`.\vendor\consolidation/robo\robo list`
 
 You can get help for each task using:
 
-`.\vendor\bin\robo [taskname] -h`
+`.\vendor\consolidation/robo\robo [taskname] -h`
 
 === Making your own custom Robo tasks
 
@@ -94,7 +94,7 @@ class DeployCommands extends \Robo\Tasks
 }
 ----------
 
-As mentioned above, you can use `./vendor/bin/robo list` to list all available Robo commands, including your 
-custom tasks. You may need to run `composer install` to make sure Composer has installed Robo, and you'll 
-also need to run `composer dump-autoload` when you add a new Robo task to make sure that Composer picks up 
-the new files.
+As mentioned above, you can use `./vendor/consolidation/robo/robo list` to list all available Robo commands,
+including your custom tasks. You may need to run `composer install` to make sure Composer has installed Robo,
+and you'll also need to run `composer dump-autoload` when you add a new Robo task to make sure that Composer
+picks up the new files.
