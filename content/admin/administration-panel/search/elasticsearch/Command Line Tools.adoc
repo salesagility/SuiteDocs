@@ -33,11 +33,11 @@ elastic:index [<differential> = 1]
 
 Running a full indexing:
 [source,bash]
-vendor/bin/robo elastic:index 0
+vendor/consolidation/robo/robo elastic:index 0
 
 Running a partial indexing:
 [source,bash]
-vendor/bin/robo elastic:index 1
+vendor/consolidation/robo/robo elastic:index 1
 
 image:ElasticIndexCLI.png["Elasticsearch Index CLI"]
 
@@ -60,11 +60,11 @@ When the `showJson` option is enabled a JSON will be returned for each result
 
 Search for everything using the keyword 'rohan':
 [source,bash]
-vendor/bin/robo elastic:search "rohan"
+vendor/consolidation/robo/robo elastic:search "rohan"
 
 image:ElasticSearchCLI.png["Elasticsearch CLI"]
 
 Search for the first account named 'Maxwell' and show a JSON:
 [source,bash]
-vendor/bin/robo elastic:search "_type:Accounts AND named:Maxwell" 1 true
+vendor/consolidation/robo/robo elastic:search "_type:Accounts AND named:Maxwell" 1 true
 

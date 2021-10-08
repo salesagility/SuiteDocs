@@ -8,19 +8,19 @@ Title: "Coding Style"
 
 Open terminal and run robo
 
-`./vendor/bin/robo style:configure-phpcsfixer`
+`./vendor/consolidation/robo/robo style:configure-phpcsfixer`
 
 ==== Fix all code style issues:
 
 Open terminal and run robo
 
-`./vendor/bin/robo style:phpcsfixer`
+`./vendor/consolidation/robo/robo style:phpcsfixer`
 
 ==== Fix code style issues in modified files:
 
 Open terminal and run robo
 
-`./vendor/bin/robo style:phpcsfixer-modified`
+`./vendor/consolidation/robo/robo style:phpcsfixer-modified`
 
 === Windows:
 
@@ -28,16 +28,16 @@ Open terminal and run robo
 
 Open Command Prompt and run robo
 
-`.\vendor\bin\robo style:configure-phpcsfixer`
+`.\vendor\consolidation\robo\robo style:configure-phpcsfixer`
 
 ==== Fix all code style issues:
 
 Open Command Prompt and run robo
 
-`.\vendor\bin\robo style:phpcsfixer`
+`.\vendor\consolidation\robo\robo style:phpcsfixer`
 
 ==== Fix code style issues in modified files(Command Prompt):
 
 Open Command Prompt and run robo
 
-`.\vendor\bin\robo style:phpcsfixer-modified`
+`.\vendor\consolidation\robo\robo style:phpcsfixer-modified`

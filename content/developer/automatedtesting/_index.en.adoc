@@ -40,10 +40,10 @@ You can set up the CRM for testing with these steps:
   - `mysql -u root -p -e "GRANT ALL PRIVILEGES ON automated_tests.* TO 'automated_tests'@'localhost';"`
 - Configure environment variables, see environment variables section below for more information.
 - Configure your Apache server so the SuiteCRM server is available at http://localhost (or whatever instance URL you've set up in the previous step).
-- Install http://chromedriver.chromium.org[ChromeDriver] so you can use it to automate the Chrome browser (you'll also need Chrome or Chromium installed): `./vendor/bin/robo chromedriver:install` 
-  - You'll also need an instance of ChromeDriver running in the background for the test suite to use, you can use `./vendor/bin/robo chromedriver:run` to run a ChromeDriver instance. This is necessary for the install and acceptance suites.
-  - You can update your ChromeDriver version if necessary with `./vendor/bin/robo chromedriver:install --reinstall`.
-- Build test dependencies with `./vendor/bin/codecept build`.
+- Install http://chromedriver.chromium.org[ChromeDriver] so you can use it to automate the Chrome browser (you'll also need Chrome or Chromium installed): `./vendor/consolidation/robo/robo chromedriver:install` 
+  - You'll also need an instance of ChromeDriver running in the background for the test suite to use, you can use `./vendor/consolidation/robo/robo chromedriver:run` to run a ChromeDriver instance. This is necessary for the install and acceptance suites.
+  - You can update your ChromeDriver version if necessary with `./vendor/consolidation/robo/robo chromedriver:install --reinstall`.
+- Build test dependencies with `./vendor/consolidation/robo/codecept build`.
 - Set up the custom codeception environment to enable running the install and acceptance tests locally.
   - See "Configuring the test environment" below.
 - Install SuiteCRM.
@@ -93,8 +93,8 @@ This is the preferred method to store sensitive information, as it prevents secu
 
 Open terminal and run Robo:
 
-- `./vendor/bin/robo configure:tests` (Bash)
-- `.\vendor\bin\robo configure:tests` (Command Prompt)
+- `./vendor/consolidation/robo/robo configure:tests` (Bash)
+- `.\vendor\consolidation\robo\robo configure:tests` (Command Prompt)
 
 This will interactively add the necessary environment variables to your `~/.bash_aliases` file. You need to restart your terminal/command prompt in order to get the changes. On macOS/Linux you can use `env` to see your current environment variables.
 
@@ -104,7 +104,7 @@ Note that these variables will apply for the entire device, so if you have more 
 
 It's recommended that you run the test suite with a custom environment set up, to make sure the test suite knows where the CRM instance is, and to allow you to customize the environment to support debugging if necessary. Copy `tests/_envs/custom.dist.yml` to `tests/_envs/custom.yml` and read through the file's comments to configure your environment. `custom.yml` won't be tracked by git, so it can be customized to work with your local environment without being reset or accidentally committed.
 
-You can run codeception tests in a given environment like so: `./vendor/bin/codecept run acceptance --env custom`
+You can run codeception tests in a given environment like so: `./vendor/consolidation/robo/codecept run acceptance --env custom`
 
 Note that the `custom` environment is only meant for use with the acceptance and install test suites. There's also the `travis-ci-hub.yml` environment, which is meant for running the tests in Travis CI.
 
@@ -117,10 +117,10 @@ Once they're set up, you can run the test suites with the following Robo command
 |=======================================================================
 | Suite      | Command
 
-| install    | `./vendor/bin/robo tests:install`
-| acceptance | `./vendor/bin/robo tests:acceptance`
-| unit       | `./vendor/bin/robo tests:unit`
-| api        | `./vendor/bin/robo tests:api`
+| install    | `./vendor/consolidation/robo/robo tests:install`
+| acceptance | `./vendor/consolidation/robo/robo tests:acceptance`
+| unit       | `./vendor/consolidation/robo/robo tests:unit`
+| api        | `./vendor/consolidation/robo/robo tests:api`
 |=======================================================================
 
 A few things to note:
@@ -129,7 +129,7 @@ A few things to note:
 * Each of these commands take these flags:
   * `--debug`: Print more info during test runs, good for debugging.
   * `--fail-fast`: Stop running the test suite after the first failure.
-* Each of these can also be passed a specific directory or folder if you only want to run a few specific tests, e.g. `./vendor/bin/robo tests:unit ./tests/unit/phpunit/modules/`.
+* Each of these can also be passed a specific directory or folder if you only want to run a few specific tests, e.g. `./vendor/consolidation/robo/robo tests:unit ./tests/unit/phpunit/modules/`.
 * The install test suite can only be run once currently, and all other test suites depend on the CRM being installed.
 * The install and acceptance test suites use automated browser testing with Chrome and require that the user runs a separate ChromeDriver process simultaneously with the test suite. Alternatively, you enable the ChromeDriver RunProcess extension provided in `custom.dist.yml` to have ChromeDriver boot automatically whenever the tests need it.
 

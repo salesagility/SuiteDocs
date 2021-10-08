@@ -37,11 +37,11 @@ elastic:index [<differential> = 1]
 
 Запуск полной индексации:
 [source,bash]
-vendor/bin/robo elastic:index 0
+vendor/consolidation/robo/robo elastic:index 0
 
 Запуск частичной индексации:
 [source,bash]
-vendor/bin/robo elastic:index 1
+vendor/consolidation/robo/robo elastic:index 1
 
 image:ElasticIndexCLI.png[Elasticsearch - запуск индексации в консоли]
 
@@ -69,12 +69,12 @@ elastic:search <query> [<size> = 20] [<showJson> = false]
 Поиск всех записей, содержащих 'rohan':
 
 [source,bash]
-vendor/bin/robo elastic:search "rohan"
+vendor/consolidation/robo/robo elastic:search "rohan"
 
 image:ElasticSearchCLI.png[Elasticsearch - поиск в консоли]
 
 Поиск и вывод в формате JSON первого контрагента, содержащего в названии 'Карнавалов':
 
 [source,bash]
-vendor/bin/robo elastic:search "_type:Accounts AND named:Карнавалов" 1 true
+vendor/consolidation/robo/robo elastic:search "_type:Accounts AND named:Карнавалов" 1 true
 

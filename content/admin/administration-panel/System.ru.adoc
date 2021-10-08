@@ -537,7 +537,7 @@ link:../../installation-guide/using-the-upgrade-wizard/#_синхронизац�
 
 [source,shell]
 ----
-./vendor/bin/robo clean:cache
+./vendor/consolidation/robo/robo clean:cache
 ----
 
 {{% notice info %}}
@@ -549,7 +549,7 @@ link:../../installation-guide/using-the-upgrade-wizard/#_синхронизац�
 
 [source,shell] 
 ----
-./vendor/bin/robo repair:database [--no-execute]
+./vendor/consolidation/robo/robo repair:database [--no-execute]
 ----
 
 [horizontal]
@@ -560,7 +560,7 @@ link:../../installation-guide/using-the-upgrade-wizard/#_синхронизац�
 
 [source,shell]             
 ----
-./vendor/bin/robo repair:rebuild-extensions [--show-output]
+./vendor/consolidation/robo/robo repair:rebuild-extensions [--show-output]
 ----
 
 [horizontal]
@@ -571,14 +571,14 @@ link:../../installation-guide/using-the-upgrade-wizard/#_синхронизац�
 
 [source,shell]      
 ----
-./vendor/bin/robo repair:rebuild-relationships [--show-output]
+./vendor/consolidation/robo/robo repair:rebuild-relationships [--show-output]
 ----
 
 [horizontal]
 *--show-output*:: Укажите данный параметр, если необходимо вывести в консоль детальный результат выполнения команды.
 
 {{% notice tip %}}
-Для получения полного перечня доступных заданий запустите команду `./vendor/bin/robo` без параметров.
+Для получения полного перечня доступных заданий запустите команду `./vendor/consolidation/robo/robo` без параметров.
 {{% /notice%}}
 
 == Валюта

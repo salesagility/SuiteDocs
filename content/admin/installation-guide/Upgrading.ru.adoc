@@ -122,7 +122,7 @@ link:../../compatibility-matrix[этой] странице.
  
  . Скачайте необходимый link:https://suitecrm.com/upgrade-suitecrm[пакет обновления^] и поместите его в папку с установленной системой
  . Находясь в папке с установленной системой выполните команду 
- `./vendor/bin/robo upgrade:suite [upgradeZipFile] [logFile] [pathToSuiteCRMInstance] [adminUser]` , где
+ `./vendor/consolidation/robo/robo upgrade:suite [upgradeZipFile] [logFile] [pathToSuiteCRMInstance] [adminUser]` , где
  
  * *upgradeZipFile* - скачанный пакет обновления
  * *logFile* - имя файла журнала
@@ -132,6 +132,6 @@ link:../../compatibility-matrix[этой] странице.
 Пример:
 
 [source,shell] 
- ./vendor/bin/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
+ ./vendor/consolidation/robo/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
  
  

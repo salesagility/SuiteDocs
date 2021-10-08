@@ -25,11 +25,11 @@ You get help for each task using:
 
 Open `Command Prompt` and run robo
 
-`.\vendor\consolidation/robo\robo list`
+`.\vendor\consolidation\robo\robo list`
 
 You can get help for each task using:
 
-`.\vendor\consolidation/robo\robo [taskname] -h`
+`.\vendor\consolidation\robo\robo [taskname] -h`
 
 === Making your own custom Robo tasks
 

@@ -138,7 +138,7 @@ Command line update is only available in version 7.11.3 and newer
  . Download the required link:https://suitecrm.com/upgrade-suitecrm[upgrade pack^] and 
 place it in the folder with the installed system
  . From the folder with the installed system, run the command
- `./vendor/bin/robo upgrade:suite [upgradeZipFile] [logFile] [pathToSuiteCRMInstance] [adminUser]`, where
+ `./vendor/consolidation/robo/robo upgrade:suite [upgradeZipFile] [logFile] [pathToSuiteCRMInstance] [adminUser]`, where
 
  * *upgradeZipFile* - downloaded upgrade package
  * *logFile* - log file name
@@ -148,4 +148,4 @@ place it in the folder with the installed system
 Example:
 
 [source, shell]
- ./vendor/bin/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
+ ./vendor/consolidation/robo/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
