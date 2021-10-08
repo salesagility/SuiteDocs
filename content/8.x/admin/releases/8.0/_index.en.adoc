@@ -1,12 +1,110 @@
 ---
-title: "8.0-beta Releases"
+title: "8.0 Releases"
 weight: 9880
+aliases: 
+  - /8.x/admin/releases/8.0-beta/
 ---
 
 :toc:
 :toc-title:
 :toclevels: 1
 :icons: font
+
+== 8.0-rc
+
+_Released 29/09/2021_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Enhancements & Bug Fixes
+
+* SuiteCRM 8 Installer UI added
+* Upgrade functionality implemented
+* Implement Role functionality in SuiteCRM8 List and Record view (including Actions)
+* Implement Role functionality on page navigation
+* Implement Role functionality added to Subpanel action buttons
+* Implement Module Framework for use with the Extension Framework
+* Add Navbar extensions to the Extension Framework
+* Add extension support for chart widgets to the Extension Framework
+* Add extension support for sidebar widgets to the Extension Framework
+* Add field logic extensions to the Extension Framework
+* Add Currency Field Implementation
+* Add widget reload on related Sub-panels
+* Fix enum default values
+* Fix Converting Leads - Links no longer point to legacy when opened in a new tab/window
+* Fix Hitting enter while adding a new tab on the homescreen will create the new tab.
+* Fix Column selector now able to move items when scrolled to the bottom
+* Fix Email Line items to automatically select the first row as primary
+* Fix Products/ Services Subpanel Insights Implemented
+* Fix Import action link updated
+
+==== icon:star[] Styling
+
+* Fix History Timeline Colour Updated
+* Fix Action Drop-down Arrow Alignment On Homepage
+* Fix Date Calendar Icon Colour On Legacy Pages
+* History Subpanel Minor Styling Changes
+* Fix Cases Thread Text Wrap Added
+* Fix Email Action DropDown Styling
+* Quotes & Invoices Faint Line Removed From Line Items
+* Fix Mobile Homepage Styling Minor Styling Changes
+* Fix Mobile Password Management Page Styling Updated
+* Fix Security Group Styling Updated
+* Fix Email Checkbox Alignment Fixed
+* Fix Admin Modules label Font Updated
+* Fix Convert Lead Styling Updated
+* Fix Admin Release Page Updated
+* Fix OAUTH2 Clients and tokens Page Updated
+
+==== Known Issues
+
+* Install process may occasionally fail which would require the user to press 'proceed' again for the process to succeed
+* Edit button from some module subpanels does not redirect correctly
+* "Select" button disappears when a record is linked on legacy Detail View, requiring a refresh to display as expected
+* The Calendar Popup doesn’t load the Meeting/Call modules
+* Unable to import Email records to the History Subpanel for various modules
+* Clicking on the Theme Name in Admin→Themes will take you to a blank page
+* If you select a 'Main Group' condition within Reports you cannot minimise any groups
+* Create action on subpanels still present even if roles suggest it shouldn't
+* Cannot Navigate Via Mobile/Tablet Navbar
+* The keyboard disappears on some mobile devices
+* Assigned User field doesn’t populate on filter fields
+* Issues with some Link functionality for subpanels on specific modules
+* Records are not being related to the Parent for some modules
+* Non-admin user cant edit email templates
+* Targets module Date Created and Date Modified fields show Created By and Modified By values
+* Users cannot edit the “Body” field in the Knowledge Base module
+* Email Line Items can be saved with no email address even when required for some modules such as Users
+* Due Date field does not populate for meetings in Activities/History subpanel
+* You are unable to enable 2 Factor Authentication, ticking the box in profile does not save and is reset upon leaving page.
+* History Subpanel on some Modules won't show the imported Email on the Suite8 view
+* Long Module names push navbar along when selected
+* Security Groups Module doesn’t have an "Overview" tab label
+* Validation styling appears incorrect for Security Groups and Roles
+* Line item fields Remove button requires updated styling
+* Email line items labels should be shown for each row at lower resolutions
+* Report Subpanel’s require restyling
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 is still in active development and all current releases are not yet production ready, so be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues] before getting involved.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
 
 == 8.0-beta-3
 

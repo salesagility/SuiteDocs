@@ -8,6 +8,47 @@ weight: 9880
 :toclevels: 1
 :icons: font
 
+== 7.11.22
+
+_Released 24/09/2021_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.22.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.11.22.tar.gz[*Source code* (tar.gz)]
+
+==== icon:lock[] Security
+
+* CVE: Pending - Privilege Escalation vulnerability
+* CVE: Pending - Local File Inclusion
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9277[9277] - Issue - https://github.com/salesagility/SuiteCRM/issues/9269[9269] - Fix #9269 - edit view jumps to tab with validation error upon save,if hidden
+* PR: https://github.com/salesagility/SuiteCRM/pull/9259[9259] - Issue: https://github.com/salesagility/SuiteCRM/issues/9269[9269] - Fix #9257 Adjusting references and tests to reflect updated GoogleAPIalias
+* PR: https://github.com/salesagility/SuiteCRM/pull/9262[9262] - Fix #9262 - Add the Overview label to Security Groups detailview
+* PR: https://github.com/salesagility/SuiteCRM/pull/9286[9286] - Fix #9286 - EmailsComposeView.js Formatting
+* PR: https://github.com/salesagility/SuiteCRM/pull/9293[9293] - Fix #9293 - Error on audit save
+* PR: https://github.com/salesagility/SuiteCRM/pull/9297[9297] - Fix #9297 - V8 API Auth issues on windows
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+Konstantin Damotsev
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors schapsl tsmgeek %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.11.21
 
 _Released 20/08/2021_
