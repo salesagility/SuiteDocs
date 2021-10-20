@@ -4,5 +4,388 @@ weight: 50
 ---
 
 {{% notice note %}}
-This page is under construction.
+The following documentation assumes that you have good understanding of angular and rxjs.
 {{% /notice %}}
+
+The concepts required to understand the following example are:
+
+* link:https://angular.io/guide/component-overview[angular components,window=_blank]
+* link:https://angular.io/guide/lifecycle-hooks[angular component lifecycle,window=_blank]
+* link:https://angular.io/guide/architecture-modules[angular modules,window=_blank]
+* link:https://angular.io/guide/dependency-injection[angular services and dependency injection,window=_blank]
+* link:https://angular.io/guide/content-projection[angular content projection,window=_blank]
+* link:https://rxjs.dev/[rxjs,window=_blank]
+* Reactive angular
+** link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson,window=_blank]
+** link:https://www.youtube.com/watch?v=Z76QlSpYcck[ng-conf 2019 | Data Composition with RxJS | Deborah Kurata,window=_blank]
+** link:https://www.youtube.com/watch?v=-4cwkHNguXE&t=959s[ng-conf 2019 | Thinking Reactively: Most Difficult | Mike Pearson,window=_blank]
+
+== Extension framework setup
+
+{{% notice info %}}
+This guide assumes that you have already setup the front extension on your local environment
+{{% /notice %}}
+
+
+For information on how to setup the frontend extension framework see the Setup guide link:../../fe-extensions-setup[here]
+
+== Example of Chart Metadata Configuration
+
+Charts are a type of Insight that can be added to any sidebar widget using metadata configuration.
+This configuration can be added to the `listviewdefs` or `detaiviewdefs` of the module you want to add it to.
+
+At the moment there are only 3 chart types available to use:
+
+- horizontal-bar
+- pie-grid
+- vertical-bar
+
+Other chart types will be added in the future. It is also possible to implement your own custom char type. Towards the end of this page you'll find documentation on it.
+
+The following code snippet takes an example from the Accounts module `listviewdefs` configuration.
+For more examples of configurations you can look at:
+
+- `public/legacy/modules/Accounts/metadata/listviewdefs.php`
+- `public/legacy/modules/Accounts/metadata/detailviewdefs.php`
+- `public/legacy/modules/Leads/metadata/listviewdefs.php`
+- `public/legacy/modules/Opportunities/metadata/listviewdefs.php`
+
+[source, php]
+----
+<?php
+
+...
+
+$viewdefs['Opportunities'] = [
+    'ListView' =>  [
+        'sidebarWidgets' => [
+            'opportunities-by-sales-stage-price' => [
+                'type' => 'chart',
+                'labelKey' => 'LBL_QUICK_CHARTS',
+                'options' => [
+                    'toggle' => true,
+                    'headerTitle' => false,
+                    'charts' => [
+                        [
+                            'chartKey' => 'opportunities-by-sales-stage-price',
+                            'chartType' => 'horizontal-bar',
+                            'statisticsType' => 'opportunities-by-sales-stage-price',
+                            'labelKey' => 'PIPELINE_BY_SALES_STAGE',
+                            'chartOptions' => [
+                            ]
+                        ]
+                    ]
+                ],
+                'acls' => [
+                    'Opportunities' => ['view', 'list']
+                ]
+            ]
+        ]
+    ]
+];
+        ...
+----
+
+From the example above we can see that charts have different options when configuring. Within the `options` array, we can
+see that it then displays `toggle`, this is to show the dropdown with the name of the chart and also allow changing
+between charts.
+You may also see within the `options` array there is another array called `charts`. Within this array there is; `chartKey`,
+`chartType`, `statisticsType`, `labelKey` and `chartOptions`.
+
+Some of these are simple in meaning. `chartKey` is just the name given to the chart to make it individual, 'chartType' is
+they type of chart you would like to display. Some other options for this would include: pie-grid-chart, line-chart, vertical-bar-chart
+and base-chart. `labelKey` is also just the label shown within the chart.
+
+The `statisticsType` option, this is how each chart gets it's data, you are able to see each statistic file within the
+
+`core/modules/<module>` directory, this key links to a specific service within the statistics API.
+
+== How to add a custom chart type
+
+As mentioned in the previous section it is possible to add new chart types to be used on the `sidebarWidget` metadata configuration.
+
+This section explains how to add a new chart type.
+
+{{% notice info %}}
+Please ensure you have set up your front-end installation correctly by following the guide link:fe-extensions-setup.adoc[here].
+{{% /notice %}}
+
+{{% notice info %}}
+To render the charts SuiteCRM is using the `ngx-charts` library. If you would like to see this documentation more in depth
+and how to use it and what other options you may have when implementing your own charts please see
+link:https://swimlane.gitbook.io/ngx-charts/[here].
+{{% /notice %}}
+
+To follow along with the example used please follow the steps below:
+
+First within our `extensions/<service>/Resources/app/src/services`, you should create a new folder called `charts` if
+there is not one there already.
+
+Within this `charts` folder then create another folder called `horizontal-bar-chart`.
+
+=== Component html file
+
+Following the example above, moving on to the `.html` file. `horizontal-bar-chart.component.html`
+
+[source,html,angular2html]
+----
+<div *ngIf="results && results.length > 0">
+    <ngx-charts-bar-horizontal
+        class="horizontal-bar-chart"
+        [animations]="false"
+        [results]="results"
+        [view]="view"
+        [scheme]="scheme"
+        [gradient]="gradient"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
+        [legend]="legend"
+        [legendPosition]="'below'"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel">
+    </ngx-charts-bar-horizontal>
+</div>
+
+----
+
+From the example above we can see that there's an `if` statement within the `.html` file and this just indicates that as
+long as there is a result from the statistics file to show everything correctly.
+
+Below that we can see all the options for the chart. This is where the values of the variables set earlier are given value.
+
+When creating your own chart you will be able to set your own options.
+
+=== Module TypeScript File
+
+Below we will be adding in the final file, the `horizontal-bar-chart.module.ts`.
+
+[source, javascript,typescript]
+----
+import {Component, ElementRef, OnDestroy, OnInit} from '@angular/core';
+import {isFalse, SingleSeries} from 'common';
+import {Subscription} from 'rxjs';
+import {BaseChartComponent} from 'core';
+
+@Component({
+    selector: 'scrm-horizontal-bar-chart',
+    templateUrl: './horizontal-bar-chart.component.html',
+    styleUrls: []
+})
+export class HorizontalBarChartComponent extends BaseChartComponent implements OnInit, OnDestroy {
+
+    results: SingleSeries = [];
+    protected subs: Subscription[] = [];
+
+    constructor(protected elementRef: ElementRef) {
+        super(elementRef);
+    }
+
+    ngOnInit(): void {
+        if (this.dataSource.options.height) {
+            this.height = this.dataSource.options.height;
+        }
+
+        this.calculateView();
+
+        this.subs.push(this.dataSource.getResults().subscribe(value => {
+            this.results = value.singleSeries || [];
+        }));
+    }
+
+    ngOnDestroy(): void {
+        this.subs.forEach(sub => sub.unsubscribe());
+    }
+
+    get scheme(): string {
+        return this.dataSource.options.scheme || 'picnic';
+    }
+
+    get gradient(): boolean {
+        return this.dataSource.options.gradient || false;
+    }
+
+    get xAxis(): boolean {
+        return this.dataSource.options.xAxis || false;
+    }
+
+    get yAxis(): boolean {
+        return !isFalse(this.dataSource.options.yAxis);
+    }
+
+    get legend(): boolean {
+        return !isFalse(this.dataSource.options.legend);
+    }
+
+    get showXAxisLabel(): boolean {
+        return this.dataSource.options.showXAxisLabel || false;
+    }
+
+    get showYAxisLabel(): boolean {
+        return this.dataSource.options.showYAxisLabel || false;
+    }
+
+    get xAxisLabel(): string {
+        return this.dataSource.options.xAxisLabel || '';
+    }
+
+    get yAxisLabel(): string {
+        return this.dataSource.options.yAxisLabel || '';
+    }
+
+    get xAxisTickFormatting(): Function {
+        if (this.dataSource.options.xAxisTickFormatting) {
+            return this.dataSource.tickFormatting;
+        }
+        return null;
+    }
+
+    formatTooltipValue(value: any): any {
+        if (!this.dataSource || !this.dataSource.options || !this.dataSource.options.tooltipFormatting) {
+            return value;
+        }
+        return this.dataSource.options.tooltipFormatting(value);
+    }
+}
+----
+
+Within this file you will see the Component called `HorizontalBarChartComponent` this is extending `BaseChartComponent`.
+When creating a new chart you will always have to extend the `BaseChartComponent`. The reasoning behind this is because
+of the `ChartRegistry`. It will provide functionality common to all chart components. `BaseChartComponent` also serves as the base type for extensibility ,
+the `ChartRegistry` only knows how to work with `BaseChartComponent` types.
+
+
+Above we can also see all the functions that will be returning all the options that were specified within the html file.
+
+=== Module TypeScript File
+
+The first to create is the `.ts` file.
+
+As we can see from the example below, the this works like a regular angular module, where we will declare our component and import the components we need.
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {HorizontalBarChartComponent} from './horizontal-bar-chart.component';
+import {BaseChartModule} from 'core';
+
+@NgModule({
+    declarations: [HorizontalBarChartComponent],
+    exports: [HorizontalBarChartComponent],
+    imports: [
+        CommonModule,
+        NgxChartsModule,
+        BaseChartModule
+    ]
+})
+export class HorizontalBarChartModule {
+}
+----
+
+=== Registering a chart
+
+The only thing left to do now that we have added all the files for the chart is to register it.
+
+When going through the front end extension setup, the file `extension.module.ts` should have been added.
+
+This is where we are going to register our newly built chart.
+
+Within the `extension.module.ts` there's a few things that need added:
+
+Within the `import {<Imports>} from 'core'`, this is where the `ChartRegistry` should be added. This should be at the start
+of the file.
+
+Below that is then where the component and module should be imported:
+
+[source,javascript,typescript]
+----
+import {HorizontalBarChartComponent} from './charts/horizontal-bar-chart/horizontal-bar-chart.component';
+import {HorizontalBarChartModule} from './charts/horizontal-bar-chart/horizontal-bar-chart.module';
+----
+
+The `HorizontalBarChartModule` should then be added to the `imports` under the `declarations`.
+
+Within the constructor of the created Extension Module, `ChartRegistry` should be added:
+
+`protected chartRegistry: ChartRegistry`
+
+Finally within the body of the class this is where you would register the chart:
+
+`chartRegistry.register('default', 'horizontal-bar' , HorizontalBarChartComponent);`
+
+An example of this file would be:
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {
+    AuthGuard,
+    BaseModuleResolver,
+    ChartRegistry,
+} from 'core';
+
+import {HorizontalBarChartComponent} from './charts/horizontal-bar-chart/horizontal-bar-chart.component';
+import {HorizontalBarChartModule} from './charts/horizontal-bar-chart/horizontal-bar-chart.module';
+
+@NgModule({
+    declarations: [
+    ],
+    imports: [
+        CommonModule,
+        ProfileModule,
+        HorizontalBarChartModule,
+    ],
+})
+export class ExtensionModule {
+    constructor(
+        protected chartRegistry: ChartRegistry
+    ) {
+        chartRegistry.register('default', 'horizontal-bar' , HorizontalBarChartComponent);
+    }
+
+    init(): void {
+    }
+}
+----
+
+The following is an example if the configuration of how to add the charts on the view definitions
+
+[source, php]
+----
+<?php
+
+...
+
+$viewdefs['Opportunities'] = [
+    'ListView' =>  [
+        'sidebarWidgets' => [
+            'opportunities-by-sales-stage-price' => [
+                'type' => 'chart',
+                'labelKey' => 'LBL_QUICK_CHARTS',
+                'options' => [
+                    'toggle' => true,
+                    'headerTitle' => false,
+                    'charts' => [
+                        [
+                            'chartKey' => 'opportunities-by-sales-stage-price',
+                            'chartType' => 'horizontal-bar',
+                            'statisticsType' => 'opportunities-by-sales-stage-price',
+                            'labelKey' => 'PIPELINE_BY_SALES_STAGE',
+                            'chartOptions' => [
+                            ]
+                        ]
+                    ]
+                ],
+                'acls' => [
+                    'Opportunities' => ['view', 'list']
+                ]
+            ]
+        ]
+    ]
+];
+        ...
+----
