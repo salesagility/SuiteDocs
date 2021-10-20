@@ -121,3 +121,12 @@ The backend unit tests use codeception. You can install codeception
 To run the tests do;
 
 * Run `codecept run unit`
+
+---
+title: Installation Guide
+weight: 10
+---
+
+== Release Notes
+
+See the latest release notes for SuiteCRM link:../releases[here].
