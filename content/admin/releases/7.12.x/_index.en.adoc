@@ -8,6 +8,61 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+== 7.12
+
+_Released 28/10/2021_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.12.0.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.12.0.tar.gz[*Source code* (tar.gz)]
+
+==== icon:star[] Enhancements
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9244[9244^] - PDF Engine Selection
+- MPDF License has be found to no longer be compliant with AGPL3 and due to this the MPDF will not be included in new installs.
+MPDF will not be removed on upgrade, but the system will default to a new engine, with an option to revert back to the MDPF if required.
+* PR: https://github.com/salesagility/SuiteCRM/pull/9185[9185^] - Noon Theme
+* PR: https://github.com/salesagility/SuiteCRM/pull/9298[9298^] - Implement TCPDFEngine
+* PR: https://github.com/salesagility/SuiteCRM/pull/9208[9208^] - Implement standard PDF Engines
+* PR: https://github.com/salesagility/SuiteCRM/pull/9187[9187^] - Composer 2.0
+* PR: https://github.com/salesagility/SuiteCRM/pull/9291[9291^] - Allow configuring the Calendar name for the Google Sync via config
+* PR: https://github.com/salesagility/SuiteCRM/pull/9171[9171^] - Upgrade ElasticSearch to 7.x
+- This is the new minimum ElasticSearch version that is required for update.
+* PR: https://github.com/salesagility/SuiteCRM/pull/9170[9170^] - PHPUnit/Codeception Upgrade
+* PR: https://github.com/salesagility/SuiteCRM/pull/9159[9159^] - Implement standard SearchEngines
+* PR: https://github.com/salesagility/SuiteCRM/pull/9172[9172^] - Malicious File Scanning
+* PR: https://github.com/salesagility/SuiteCRM/pull/9095[9095^] - Consolidate global search settings (AOD, Basic)
+
+
+==== Other Notable Changes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9094[9094^] - AOD (Lucene) has been Deprecated to be removed in SuiteCRM 8.0
+* PR: https://github.com/salesagility/SuiteCRM/pull/9321[9321^] - Fix TCPDF Scale
+* PR: https://github.com/salesagility/SuiteCRM/pull/9333[9333^] - Deprecate TCPDF
+* PR: https://github.com/salesagility/SuiteCRM/pull/9335[9335^] - Fix PDF Engine Comparability issues
+* PR: https://github.com/salesagility/SuiteCRM/pull/9186[9186^] - Fix missing default config values
+* PR: https://github.com/salesagility/SuiteCRM/pull/9188[9188^] - Fix PDF_Lib constructors
+* PR: https://github.com/salesagility/SuiteCRM/pull/9324[9324^] - Fix search result hits
+* PR: https://github.com/salesagility/SuiteCRM/pull/9318[9318^] - Fix TCPDF Name
+* PR: https://github.com/salesagility/SuiteCRM/pull/9310[9310^] - Fix SearchFormView visible options
+* PR: https://github.com/salesagility/SuiteCRM/pull/9309[9309^] - Update workflow acceptance test
+* PR: https://github.com/salesagility/SuiteCRM/pull/9296[9296^] - Fix CleanCSVTest return types
+* PR: https://github.com/salesagility/SuiteCRM/pull/9306[9306^] - Fix filepath for mPDF class
+* PR: https://github.com/salesagility/SuiteCRM/pull/9294[9294^] - Fix/noon styling issues
+* PR: https://github.com/salesagility/SuiteCRM/pull/9083[9083^] - Update minimum required PHP to v7.3.0
+* All default config value now set on install
+* utf8mb4 charset and utf8mb4_general_ci collation now the default on MySQL Databases on new installs
+
+=== icon:heart[] Community
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+
 == 7.12-rc
 
 _Released 05/10/2021_
@@ -20,7 +75,7 @@ _Released 05/10/2021_
 ==== icon:star[] Enhancements
 
 * PR: https://github.com/salesagility/SuiteCRM/pull/9244[9244^] - PDF Engine Selection
-- MPDF License has be found to no longer be compliant with AGPL3 and due to this the MPDF will not be included in new installs. 
+- MPDF License has be found to no longer be compliant with AGPL3 and due to this the MPDF will not be included in new installs.
 MPDF will not be removed on upgrade, but the system will default to a new engine, with an option to revert back to the MDPF if required.
 * PR: https://github.com/salesagility/SuiteCRM/pull/9185[9185^] - Noon Theme
 * PR: https://github.com/salesagility/SuiteCRM/pull/9298[9298^] - Implement TCPDFEngine
