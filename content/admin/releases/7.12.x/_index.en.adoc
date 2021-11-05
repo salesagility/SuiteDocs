@@ -12,6 +12,10 @@ weight: 9870
 
 _Released 28/10/2021_
 
+=== Update 04/11/2021
+
+Upgrade Packages have been revised to address an issue https://github.com/salesagility/SuiteCRM/issues/9340[#9340] where upgrades could only be performed on php 7.3.x. The revised upgrade packages have been posted to the release section on the main website https://suitecrm.com/upgrade-suitecrm/[here].
+
 === icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM/archive/v7.12.0.zip[*Source code* (zip)]
