@@ -34,7 +34,7 @@ Update panel as described in the link:./../../introduction/user-interface/record
 * To duplicate a Task, you can click the Duplicate button on the Detail
 View and then save the duplicate record.
 * To close a Task, click on the 'x' icon on the Tasks List View. You can
-also close a Meeting by clicking the Close button on the Detail View of
+also close a Task by clicking the Close button on the Detail View of
 a Task. You can also click the Close and Create New button. This will
 close the Task you are viewing and redirect you to the Edit View to
 create a new record.
@@ -43,7 +43,7 @@ the List View and click delete. You can also delete a Task from the
 Detail View by clicking the Delete button. For a more detailed guide on
 deleting records, see the link:./../../introduction/user-interface/record-management/#_deleting_records[Deleting Records]
 section of this user guide.
-* To view the details of a Task, click the Meeting Subject in the List
+* To view the details of a Task, click the Task Subject in the List
 View. This will open the record in Detail View.
 * To edit the Task details, click Edit icon within the List View or
 click the edit button on the Detail View, make the necessary changes,
