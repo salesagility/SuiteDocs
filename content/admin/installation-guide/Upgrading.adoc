@@ -149,3 +149,17 @@ Example:
 
 [source, shell]
  ./vendor/bin/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
+
+{{% notice info %}}
+If you get error like 
+
+```
+Could not find autoloader. Run 'composer install'.
+```
+
+use `./vendor/consolidation/robo/robo` command, e.g.
+
+```
+./vendor/consolidation/robo/robo upgrade:suite SuiteCRM-Upgrade-7.11.x-to-7.11.4.zip upgradeLog.log . admin
+```
+{{% /notice %}}
