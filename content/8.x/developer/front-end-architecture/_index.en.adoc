@@ -1,6 +1,6 @@
 ---
-title: "Front-end Architecture Introduction"
-weight: 30
+title: "Front-end Architecture"
+weight: 10
 ---
 
 :imagesdir: /images/en/8.x/developer/extensions/front-end/fe-architecture-intro
@@ -41,7 +41,7 @@ In the next sub-chapters we are going to give a high level intro to the concepts
 
 == 2.1 Views
 
-Views is a well know concept in SuiteCRM since way back. Each view represents a page.
+Views is a well known concept in SuiteCRM since way back. Each view represents a page.
 In the new front-end architecture they structure and control all subcomponents in given page.
 
 The following images can help provide a better idea of what a view is on the page.
@@ -104,12 +104,12 @@ image:recordview-fields-highlight.png[recordview-fields-highlight.png]
 
 == 2.4 Containers
 
-Containers a very similar to views, they can load and manage data, they have and control subcomponents.
-Though the big difference is: the are re-usable. They can be called within other views and aren't linked to a route.
+Containers are very similar to views. Each can load and manage data and each also have and control subcomponents.
+Though there is a big difference is: Containers are re-usable. Containers can be called within other views and aren't linked to a route.
 
 Containers could be defined as:
 
-. Represent a set of data: a record, a list, etc.
+. Representing a set of data: a record, a list, etc.
 ** Can load and control data for a record
 . Their data fetching is not tied to the view's data fetching.
 . They are never linked to a route in the router
@@ -128,4 +128,16 @@ The image we've seen previously can help give a better understanding
 
 image:recordview-fields-highlight.png[recordview-fields-highlight.png]
 
+== Front-End Extensions/ Framework Examples
 
+To see more information on how to setup Front-End Extensions up please see link:fe-extensions-setup/[here].
+
+If you would like more documentation on building specific extensions. Please see the
+documentation linked below.
+
+* link:add-sidebar-widget/[Custom Sidebar Widget Example]
+* link:add-field-logic-extension/[Custom Field Logic Example]
+* link:add-charts-extension/[Custom Charts Example]
+* link:add-fields-extension/[Custom Field Example]
+* link:add-validators-extension/[Custom Validator Example]
+* link:add-custom-views-extension/[Custom Views Example]

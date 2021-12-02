@@ -1,10 +1,9 @@
 ---
-title: "Add custom sidebar widget"
-weight: 30
+title: "Adding a Custom Sidebar Widget"
+weight: 40
 ---
 
 :imagesdir: /images/en/8.x/developer/extensions/front-end/examples/add-sidebar-widget
-
 
 {{% notice note %}}
 The following documentation assumes that you have good understanding of angular and rxjs.
@@ -12,16 +11,16 @@ The following documentation assumes that you have good understanding of angular 
 
 The concepts required to understand the following example are:
 
-* link:https://angular.io/guide/component-overview[angular components]
-* link:https://angular.io/guide/lifecycle-hooks[angular component lifecycle]
-* link:https://angular.io/guide/architecture-modules[angular modules]
-* link:https://angular.io/guide/dependency-injection[angular services and dependency injection]
-* link:https://angular.io/guide/content-projection[angular content projection]
-* link:https://rxjs.dev/[rxjs]
+* link:https://angular.io/guide/component-overview[angular components,window=_blank]
+* link:https://angular.io/guide/lifecycle-hooks[angular component lifecycle,window=_blank]
+* link:https://angular.io/guide/architecture-modules[angular modules,window=_blank]
+* link:https://angular.io/guide/dependency-injection[angular services and dependency injection,window=_blank]
+* link:https://angular.io/guide/content-projection[angular content projection,window=_blank]
+* link:https://rxjs.dev/[rxjs,window=_blank]
 * Reactive angular
-** link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson]
-** link:https://www.youtube.com/watch?v=Z76QlSpYcck[ng-conf 2019 | Data Composition with RxJS | Deborah Kurata]
-** link:https://www.youtube.com/watch?v=-4cwkHNguXE&t=959s[ng-conf 2019 | Thinking Reactively: Most Difficult | Mike Pearson]
+** link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson,window=_blank]
+** link:https://www.youtube.com/watch?v=Z76QlSpYcck[ng-conf 2019 | Data Composition with RxJS | Deborah Kurata,window=_blank]
+** link:https://www.youtube.com/watch?v=-4cwkHNguXE&t=959s[ng-conf 2019 | Thinking Reactively: Most Difficult | Mike Pearson,window=_blank]
 
 == Extension framework setup
 
@@ -30,11 +29,11 @@ This guide assumes that you have already setup the front extension on your local
 {{% /notice %}}
 
 
-For information on how to setup the frontend extension framework see the Setup guide link:../../fe-extensions-setup[here]
+For information on how to setup the frontend extension framework see the Setup guide link:../fe-extensions-setup/[here]
 
 == General concepts
 
-As described on the link:../../admin/compatibility-matrix[Front end extension general concepts]. Front end extensions are built using done using registries.
+As described on the link:../fe-extensions-setup/[Front end extension general concepts]. Front end extensions are built using registries.
 There is a registry for each of the key areas in the application. By registering new components or services you can override existing ones.
 
 == 1. Hello World example
@@ -689,7 +688,7 @@ Since the sidebar widgets are dynamic, the inputs that are passed to them are al
 ==== 2.8.2 - RecordList Store
 
 To load the tasks we are using a `RecordListStore`. For more details on the concept behind a store, please watch the following `ng-conf` talk:
-link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson]
+link:https://www.youtube.com/watch?v=h-F5uYM69a4[ng-conf 2019 | Before NgRx: Superpowers with RxJS + Facades | Thomas Burleson,window=_blank]
 
 The `RecordListStore` will handle all aspects related with fetching a list of records from the backend.
 In this widget a list of `task` records. The store can also handle pagination, sorting and the usual functionality found on lists/tables.

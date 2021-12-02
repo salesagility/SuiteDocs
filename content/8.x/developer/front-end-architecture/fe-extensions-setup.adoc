@@ -1,5 +1,5 @@
 ---
-title: "Setting up a front-end extension module"
+title: "Setting Up a Front-End Extension Module"
 weight: 30
 ---
 
@@ -16,30 +16,30 @@ The following documentation assumes that you have good understanding of angular 
 The following guide provides a ste-by-step explanation on how to setup an front-end extension module.
 Which will allow you to add new front-end customizations or to override existing features.
 
-== 0. Choosing an extension name
+== 1. Choosing an extension name
 
-First thing is to choose an extension machine name. This name should not have spaces, nor `-`, nor special charaters.
+The first thing is to choose an extension machine name. This name should not have spaces, nor `-`, nor special charaters.
 We recommend using camel case, e.g. `myExt` for the key. And snake-case, e.g. `my-ext` for the filename and paths.
 
 *Note:* this recommendation for having a different case system for files, is just to avoid problems in case-sensitive systems.
 
-== 1. Generate a micro-frontend (micro angular app) for your extensions
+== 2. Generate a micro-frontend (micro angular app) for your extensions
 
 The first step is to generate your angular extension "micro" app
 
 . You can generate it by running: `ng g app <your-extension-name> --projectRoot=extensions/<your-extension-name>/app --routing=false --style=scss`
 .. On our example it is going to be: `ng g app myExt --projectRoot=extensions/my-ext/app --routing=false --style=scss`
 
-== 2. Initialize module federation on your extension
+== 3. Initialize module federation on your extension
 
 Next we need to enable module-federation on our extension.
 
-=== 2.1 Enable module federation
+=== 3.1 Enable module federation
 
 . You enable it by running: `ng add @angular-architects/module-federation --project=<your-extension-name>`
 .. On our example it is going to be: `ng add @angular-architects/module-federation --project=myExt`
 
-=== 2.2 Clean webpack configuration
+=== 3.2 Clean webpack configuration
 
 Now we need to clean the sample code that was added by the generator
 
@@ -174,10 +174,10 @@ module.exports = {
 
 ----
 
-=== 2.3 Configure shared modules
+=== 3.3 Configure shared modules
 
 {{% notice note %}}
-The `shared` config added on 2.2 for this example may be out-of-date. So we need to update it.
+The `shared` config added on 3.2 for this example may be out-of-date. So we need to update it.
 {{% /notice %}}
 
 To update the `shared` modules configuration to the correct one, please go through the following steps:
@@ -188,13 +188,13 @@ To update the `shared` modules configuration to the correct one, please go throu
 
 
 
-== 3. Adjust angular.json configuration
+== 4. Adjust angular.json configuration
 
 . Open `angular.json`
 . Look for the entry with the name of your extension, in our example it is `myExt`
 . Within your extension entry there should be an `architect`
 
-=== 3.1 Change the outputPath
+=== 4.1 Change the outputPath
 
 . On `architect`.`build`.`options`  entry of your extension configuration
 . change `outputPath` to `public/extensions/<your-extension>`
@@ -209,7 +209,7 @@ When preparing the final bundle for your extension you should place your built f
 
 you can change the `outputPath` to the above one and rebuild your extension in prod mode.
 
-=== 3.2 Adjust dev build configuration
+=== 4.2 Adjust dev build configuration
 . On `architect`.`build`.`options`  entry of your extension configuration
 . Add the following entries
 
@@ -224,7 +224,7 @@ you can change the `outputPath` to the above one and rebuild your extension in p
 .. if you have a `development` entry remove it.
 
 
-=== 3.3 Adjust prod build configuration
+=== 4.3 Adjust prod build configuration
 
 . On `architect`.`build`.`configurations`.`production`  entry of your extension configuration
 . Add/change the following options
@@ -252,7 +252,7 @@ you can change the `outputPath` to the above one and rebuild your extension in p
   ],
 ----
 
-=== 3.4 Final configuration example
+=== 4.4 Final configuration example
 
 After the above change your configuration should look something like the following:
 
@@ -374,7 +374,7 @@ After the above change your configuration should look something like the followi
     }
 ----
 
-== 4. Add build command
+== 5. Add build command
 
 Add the following to the `scripts` entry of your `package.json`
 
@@ -383,7 +383,7 @@ Add the following to the `scripts` entry of your `package.json`
 . Add a production build command: `"build:<your-extension-name>": "ng build <your-extension-name> --configuration production",`
 .. On our example it is going to be`"build:myExt": "ng build myExt --configuration production",`
 
-== 5. Add ng module for your extension
+== 6. Add ng module for your extension
 
 For extensions to work they need to have a main extension angular module.
 This module works like an "entrypoint". It will be loaded by the "main"/"shell" app. From there you can load all your custom code.
@@ -397,7 +397,7 @@ This is the same module that we've added on our extension `webpack.config.js` on
       },
 ----
 
-=== 5.1 Add extension ng module
+=== 6.1 Add extension ng module
 
 Lets add a angular module in the location we defined in the above entry.
 
@@ -433,10 +433,10 @@ You can remove the `console.log` from the constructor after getting your example
 {{% /notice %}}
 
 
-=== 5.2 Add ExtensionModule to imports
+=== 6.2 Add ExtensionModule to imports
 
 After adding the extension module we need to import it in the app module within your extension.
-Otherwise the angular compiler won't be able to build it.
+Otherwise the angular compiler will not be able to build it.
 
 . Open `app.module.ts` on you extension folder, it should be in `extensions/<your-extension-name>/app/src/app/app.module.ts`.
 ** In our example it is on `extensions/my-ext/app/src/app/app.module.ts`
@@ -466,7 +466,7 @@ export class AppModule {
 ----
 
 
-== 6. Build core
+== 7. Build core
 
 In order to build your extension you'll need to build the core dependencies.
 
@@ -491,7 +491,7 @@ After building the above dependencies you will only need to build again if:
 * you've cleared / deleted the public folder
 
 
-== 7. Build your extension
+== 8. Build your extension
 
 You have the option to build your extension in prod or dev mode.
 
@@ -504,7 +504,7 @@ It will keep the command running and watching for any changes made to the files 
 * you can use `watch` like so: `yarn run build-dev:<your-extension-name> --watch`
 ** in our example it would be: `yarn run build-dev:myExt --watch`
 
-== 8. Enable your extension
+== 9. Enable your extension
 
 We have already setup and build our extension making it ready to use.
 
@@ -547,7 +547,7 @@ $extensions['myExt'] = [
 $container->setParameter('extensions', $extensions);
 ----
 
-== 8. Refresh your instance and test
+== 10. Refresh your instance and test
 
 Now that we have configured and enabled our extension it should be loaded during the angular the app init.
 
