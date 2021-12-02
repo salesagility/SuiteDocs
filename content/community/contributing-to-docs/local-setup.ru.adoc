@@ -35,14 +35,14 @@ sudo apt-get install git
 
 Для загрузки последней версии Hugo может быть использована следующая команда:
 
-[source, shell]
+[source,shell]
 wget https://github.com`wget -qO- https://github.com/gohugoio/hugo/releases/latest | grep -oE -m 1 '\/gohugoio\/hugo\/releases\/download\/v[0-9]+.[0-9]+.[0-9]*\/hugo_[0-9]+.[0-9]+.[0-9]*_Linux-64bit.deb'`
 
 При необходимости можно загрузить пакет другой версии с link:https://github.com/gohugoio/hugo/releases[этой^] страницы репозитория.
 
 Установите скачанный пакет. Если в папке находится только один  пакет Hugo, можно воспользоваться командой
 
-[source, shell]
+[source,shell]
 sudo dpkg -i hugo*.deb
 
 
