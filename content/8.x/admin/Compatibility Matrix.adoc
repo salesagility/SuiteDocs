@@ -23,7 +23,7 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 2+^| Additional requirements for Development
 
 | Angular CLI | 12+
-| Node.js | 12.14
+| Node.js | ~14
 | yarn | 1.22.10+
 
 2+^h| Web Server
