@@ -19,7 +19,7 @@ _Released 17/12/2021_
 
 ==== icon:lock[] Security
 
-* CVE: Pending - XSS Vulnerability
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45903[CVE-2021-45903] - XSS Vulnerability
 * CVE: Pending - RCE and CSRF Vulnerability
 * CVE: Pending - Privilege Escalation vulnerability
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45041[CVE-2021-45041] - Authenticated SQL-Injection in SuiteCRM
