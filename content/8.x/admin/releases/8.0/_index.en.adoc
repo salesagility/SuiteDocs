@@ -1,7 +1,7 @@
 ---
 title: "8.0 Releases"
 weight: 9880
-aliases: 
+aliases:
   - /8.x/admin/releases/8.0-beta/
 ---
 
@@ -9,6 +9,273 @@ aliases:
 :toc-title:
 :toclevels: 1
 :icons: font
+
+== 8.0.1
+
+_Released 17/12/2021_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:lock[] Security
+
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45903[CVE-2021-45903] - XSS Vulnerability
+* CVE: Pending - RCE and CSRF Vulnerability
+* CVE: Pending - Privilege Escalation vulnerability
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45041[CVE-2021-45041] - Authenticated SQL-Injection in SuiteCRM
+
+[discrete]
+
+==== icon:star[] Enhancements & Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9384[9348] - Fix https://github.com/salesagility/SuiteCRM/issues/9382[#9382] - Outbound Emails editview Unsupported operand types fatal in php 8
+* PR: https://github.com/salesagility/SuiteCRM/pull/9379[9379] - Fix https://github.com/salesagility/SuiteCRM/issues/9374[#9374] - OAuth password creation Unsupported operand types fatal in php8
+* PR: https://github.com/salesagility/SuiteCRM/pull/9087[9087] - Fix #9087 - Allow changing text colors when composing an email
+* PR: https://github.com/salesagility/SuiteCRM/pull/9377[9377] - Fix https://github.com/salesagility/SuiteCRM/issues/9376[#9376] - Allow Workflows to run on imported records
+* PR: https://github.com/salesagility/SuiteCRM/pull/9030[9030] - Fix #9030 - Campaign Email settings removes Email Settings
+* PR: https://github.com/salesagility/SuiteCRM/pull/9395[9359] - Fix https://github.com/salesagility/SuiteCRM/issues/9383[9383] -  Unsupported each function in php8.
+* PR: https://github.com/salesagility/SuiteCRM/pull/9393[9393] - Fix email message modal buttons
+* Fix https://github.com/salesagility/SuiteCRM-Core/issues/42[42] - [8-Subpanels-Bug] Activities & History subpanels do not show create actions
+* Fix https://github.com/salesagility/SuiteCRM-Core/issues/41[41] - SuiteCRM 8 install - Port not properly set
+
+==== icon:star[] Styling
+
+* [Legacy] Scheduler Styling Fixes
+* [Legacy] Diagnostic Tool Whitespace Styling Fixes
+* [Legacy] User Name Longtext styling fixes
+* [Legacy] Jotpad Dashlet Styling Fixes
+* [Legacy] Backup Modules Styling Fixes
+* User Name Mobile Spacing Styling Fixes
+* [Legacy] Admin Import Styling Fixes
+* [Legacy] Popup Selector Styling Fixes
+* [Legacy] Meeting Module Styling Fixes
+
+==== Known Issues
+
+* Report Module Styling Issues
+* Cannot create an "Opportunity" filter with multiple Sales Stages
+* "Undefined" record UUID on one-to-one custom module relationship linked field url
+* When adding a field to Products in studio an error occurs
+* Meetings Module EditView Styling Issues
+* On the Admin->Schedulers Panel, the bottom " [x] Selected" and "Bulk Action" dropdowns don't display
+* When adding "My Open Tasks" to the Homepage the Styling breaks
+* Styling Issues on Username Within the Navbar
+* User Wizard requires Styling
+* Styling Issues on the Record Importer
+* Mobile->Desktop View breaks widgets Styling
+* The Jotpad dashlet shows a Suite 7 view
+* Charts have a limited colour set
+* Navbar Doesn't Highlight when Selected in the Mobile View
+* Navigation stops working when a notification is displayed
+* Background panels in Admin don't have rounded edges
+* LDAP authentication is not currently working.
+* In Diagnostic Tool, There is a lot of whitespace between tick boxes and Field Headers
+* In some modules there is lack of whitespace between fields and field names
+* Fields Length isn't consistent with Suite 8 to colour and length
+* Confirm button doesn't have whitespace between page contents
+* In System Settings and Password Management Panels, the Action Button is incorrectly Positioned
+* In Calls EditView the invitee panel uses Suite7 Styling
+* On Workflow actions, Email & Calendar have some incorrect styling
+* The "Reschedule" action popup has some Suite 7 Styling
+* On Legacy Modules Relate Field Styling Doesn't Lineup with fields on the same level
+* Legacy validation styling issues
+* "My Closed Opportunities" dashlet uses white text on a white background, which can make it difficult to read
+* On the Admin->Schedulers Panel, the bottom " [x] Selected" and "Bulk Action" dropdowns don't display
+* Incorrect Styling on Top Widgets in Mobile View
+* Cannot login after logging out without refreshing the browser
+* Cannot enable two factor authentication
+* Disable option does not work for plugins
+* Full new user wizard does not show
+* Mobile navbar does not highlight current module
+* ListView filter allows for duplicate entries on assigned user field
+* Redirect link on calendar takes you to legacy view with no navbar
+* Redirect after Create on Subpanel actions does not work
+* Default chart drill down does not take you to a filtered ListView as per legacy
+* Product Subcategory module contains a Subpanel insight with no title for Products
+* Inline Edit icon disappears after edit
+* Minor Custom Module deployment relationship issues
+* Edit button shows on Subpanel when user does not have edit access (access is still prevented)
+* Repair and rebuild required for custom modules to display on navbar
+* 'Select Which Subpanels to View' label still shows when no relationships
+* Can't minimise groups within the Reports module
+* Changelog has scrollbar when not required
+* Default dashboard charts do not take roles into consideration
+* Actions partially covered on DetailView for the Project module
+* Case 'Body' field does not render HTML correctly
+* Unable to create a new Email template through Campaigns module (this needs to be created via the Email Template module)
+* Users cannot create Trackers in the Campaign Wizard
+* When selecting another Mailbox via the Emails Module Listview, you are taken to a legacy view that is entirely made up of the Body content (i.e. no navbar)
+* Can't create an email account via the User->Email Settings panel. When clicking "Done", the user always receives the error "Please check your settings", with "Mail Server Protocol" becoming highlighted.
+* History Subpanel on some Modules won't show the imported Email on the Suite8 view (But do on legacy view)
+* Issues picking up custom changes to the User module
+* When running through a fresh install the user will occasionally be shown a blank error message and the installation process will fail. A rerun will then be successful.
+* Due Date field on Activities/History Subpanels does not populate for Meetings
+* Select button will disappear when relating a record via the legacy DetailView
+* Clicking on the Theme Name in Admin→Themes will take you to a blank page
+* Issues with some Link functionality for Subpanels on specific modules
+* Long Module names push navbar along when selected
+* Email line items labels should be shown for each row at lower resolutions
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors QuickCRM yaroslaw74 mstyp peterkracik fcorluka %}}
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+Konstantin Damotsev, Victor Garcia, Manuel Zametter
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+== 8.0.0
+
+_Released 23/11/2021_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+*Important: Please note that the upgrade/migration path from SuiteCRM 7.x to 8.0 is not yet available. Further information regarding the migration process from SuiteCRM 7 will be released very soon.*
+
+==== icon:star[] Enhancements & Bug Fixes
+
+* Add Flex Relate Fields
+* Preload Images for Optimisation
+* Implement Suite8 EntryPoints
+* Implement Suite8 extensions to Legacy
+* Add Option to use Internal System to set Emails
+* Fix Target Date Fields
+* Remove Photo Widget, Alerts & Favourites Icons
+* Fix Owner ACLs
+* Fix/Update Owner and Group ACLs on Widgets
+* Fix Print PDF action
+* Update Legacy Entry Point handling
+* Fix .htaccess Generation
+* Fix Assigned User to Populate filtered fields
+* Fix Redirection for Subpanel Edit Buttons
+* Fix Assigned User Search via Assigned User Field
+* Fix Widgets to Comply with Roles
+* Add Emails to route config
+* Fixes Product Categories->Categories Parent Relationship
+* Add optional DB port on install
+* Fix Keyboard disappearing on some mobile devices
+* Fix the license not showing on the install page on re-install
+* Fix Users Data Caching issue
+
+==== icon:star[] Styling
+
+* Update Activity Button Styling
+* Update Dashlet Labels and Styling
+* Update Map Button Styling
+* Update Reports Button Styling
+* Update Meetings Module Styling
+* Update DetailView Headers
+* Update Mobile View Navigation and Buttons
+* Update ChangeLog Styling
+* Update Admin Styling
+* Update Subpanel Button Styling
+* Update Popup Styling
+* Update User/ User Profile Styling
+* Update Password Management and System Settings Styling
+* Fix Home Module not appearing on Navbar
+
+==== Known Issues
+
+* Report Module Styling Issues
+* Meetings Module EditView Styling Issues
+* On the Admin->Schedulers Panel, the bottom " [x] Selected" and "Bulk Action" dropdowns don't display
+* When adding "My Open Tasks" to the Homepage the Styling breaks
+* Styling Issues on Username Within the Navbar
+* User Wizard requires Styling
+* Styling Issues on the Record Importer
+* Mobile->Desktop View breaks widgets Styling
+* The Jotpad dashlet shows a Suite 7 view
+* Charts have a limited colour set
+* Navbar Doesn't Highlight when Selected in the Mobile View
+* Navigation stops working when a notification is displayed
+* Background panels in Admin don't have rounded edges
+* In Diagnostic Tool, There is a lot of whitespace between tick boxes and Field Headers
+* In some modules there is lack of whitespace between fields and field names
+* Fields Length isn't consistent with Suite 8 to colour and length
+* Confirm button doesn't have whitespace between page contents
+* In System Settings and Password Management Panels, the Action Button is incorrectly Positioned
+* In Calls EditView the invitee panel uses Suite7 Styling
+* On Workflow actions, Email & Calendar have some incorrect styling
+* The "Reschedule" action popup has some Suite 7 Styling
+* On Legacy Modules Relate Field Styling Doesn't Lineup with fields on the same level
+* Legacy validation styling issues
+* "My Closed Opportunities" dashlet uses white text on a white background, which can make it difficult to read
+* On the Admin->Schedulers Panel, the bottom " [x] Selected" and "Bulk Action" dropdowns don't display
+* Incorrect Styling on Top Widgets in Mobile View
+* Cannot login after logging out without refreshing the browser
+* Cannot enable two factor authentication
+* Disable option does not work for plugins
+* Full new user wizard does not show
+* Mobile navbar does not highlight current module
+* ListView filter allows for duplicate entries on assigned user field
+* Redirect link on calendar takes you to legacy view with no navbar
+* Redirect after Create on Subpanel actions does not work
+* Default chart drill down does not take you to a filtered ListView as per legacy
+* Product Subcategory module contains a Subpanel insight with no title for Products
+* Inline Edit icon disappears after edit
+* Minor Custom Module deployment relationship issues
+* Edit button shows on Subpanel when user does not have edit access (access is still prevented)
+* Repair and rebuild required for custom modules to display on navbar
+* 'Select Which Subpanels to View' label still shows when no relationships
+* Can't minimise groups within the Reports module
+* Changelog has scrollbar when not required
+* Default dashboard charts do not take roles into consideration
+* Actions partially covered on DetailView for the Project module
+* Case 'Body' field does not render HTML correctly
+* Unable to create a new Email template through Campaigns module (this needs to be created via the Email Template module)
+* Users cannot create Trackers in the Campaign Wizard
+* When selecting another Mailbox via the Emails Module Listview, you are taken to a legacy view that is entirely made up of the Body content (i.e. no navbar)
+* Can't create an email account via the User->Email Settings panel. When clicking "Done", the user always receives the error "Please check your settings", with "Mail Server Protocol" becoming highlighted.
+* History Subpanel on some Modules won't show the imported Email on the Suite8 view (But do on legacy view)
+* Issues picking up custom changes to the User module
+* When running through a fresh install the user will occasionally be shown a blank error message and the installation process will fail. A rerun will then be successful.
+* Due Date field on Activities/History Subpanels does not populate for Meetings
+* Select button will disappear when relating a record via the legacy DetailView
+* Clicking on the Theme Name in Admin→Themes will take you to a blank page
+* Issues with some Link functionality for Subpanels on specific modules
+* Long Module names push navbar along when selected
+* Email line items labels should be shown for each row at lower resolutions
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
 
 == 8.0-rc
 
