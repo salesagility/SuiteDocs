@@ -8,40 +8,38 @@ weight: 60
 
 == Версии SuiteCRM
 
-=== SuiteCRM 8.0-beta-1
+=== SuiteCRM 8.0.x
 
 [[smaller-table-spacing-8]]
 [cols="1s,2" ]
 |========
 
-2+^h| Платформа 
+2+^h| Platform
 
 | Linux, Unix, Mac OS | Любая версия с поддержкой PHP
 | PHP | 7.3, 7.4, 8.0
 
 2+^| Дополнительные требования для разработчиков
 
-| Angular CLI | 11+
-| Node.js | 10
+| Angular CLI | 12+
+| Node.js | 12.14
 | yarn | 1.22.10+
 
-2+^h| Веб-сервер 
+2+^h| Веб-сервер
 
-| Apache |2.2, 2.4 
+| Apache |2.2, 2.4
 
-| IIS |8, 8.5
+2+^h| Базы данных
 
-2+^h| Базы данных 
+| MariaDB |10.3, 10.4, 10.5, 10.6
 
-| MariaDB |10.1+
+| MySQL |5.7, 8.0
 
-| MySQL |5.6, 5.7, 8
+2+^h| Браузеры
 
-2+^h| Браузеры 
+| Chrome |90+
 
-| Chrome |89+
-
-| Firefox |87+
+| Firefox |90+
 
 | Edge (Chromium) |89+
 
