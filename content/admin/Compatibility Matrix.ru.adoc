@@ -9,6 +9,48 @@ Weight: 60
 
 == Версии SuiteCRM
 
+
+=== SuiteCRM 7.12.x
+
+[[smaller-table-spacing-9]]
+[cols="1s,2" ]
+|========
+
+2+^h| Платформа
+
+| Linux, Unix, Mac OS | Любая версия с поддержкой PHP
+
+| Windows | Windows Server 2012+
+
+| PHP | 7.3, 7.4, 8.0
+
+2+^h| Web Server
+
+| Apache |2.2, 2.4
+
+| IIS |8, 8.5, 10
+
+2+^h| Базы данных
+
+| MariaDB |10.2, 10.3, 10.4, 10.5, 10.6
+
+| MySQL |5.7, 8.0
+
+| SQL Server |SQL Server 2012+
+
+2+^h| Браузеры
+
+| Chrome |90+
+
+| Firefox |90+
+
+| IE | 11 (режим совместимости не поддерживается)
+
+| Edge |88+
+
+| Safari |12+
+|========
+
 === SuiteCRM 7.11.x
 
 [[smaller-table-spacing-8]]

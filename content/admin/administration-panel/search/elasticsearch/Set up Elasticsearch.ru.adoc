@@ -14,7 +14,8 @@ Weight: 2
 {{% /notice %}}
 
 {{% notice note %}}
-В данный момент SuiteCRM поддерживает Elasticsearch версии 5.6.
+SuiteCRM версии 7.11 поддерживает Elasticsearch 5.6. +
+SuiteCRM версии 7.12 поддерживает Elasticsearch 7.x.
 {{% /notice %}}
 
 Для работы Elasticsearch необходимо Java 8 , поддерживается только *Oracle Java* и *OpenJDK*.
