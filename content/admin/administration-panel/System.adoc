@@ -131,6 +131,29 @@ When running a Quick Repair and Rebuild, be sure to scroll to the bottom of the 
 new SQL code which may need to be executed to ensure that your database tables are correctly
 synced with any changes that have been made.
 
+The following functions are available to you in the section:
+
+Quick Repair and Rebuild:: Repairs and rebuilds DB, Extensions, Vardefs, SuiteCRM Dashlets etc.
+Expand Column Width:: Expands certain char, varchar and text columns in database (MSSQL ONLY)
+Rebuild .htaccess File:: Rebuilds .htaccess to limit access to certain files directly
+Rebuild Config File:: Rebuilds config.php by updating version and adding defaults when not explicitly declared
+Rebuild Relationships:: Rebuilds relationship metadata and drops the cache file
+Rebuild Schedulers:: Rebuilds out-of-the-box Scheduler Jobs
+Rebuild SuiteCRM Dashlets:: Rebuilds the SuiteCRM Dashlets cache file
+Rebuild Javascript Languages:: Rebuilds javascript versions of language files
+Rebuild JS Compressed Files:: Copies original Full JS Source files and replaces existing compressed JS files
+Rebuild JS Grouping Files:: Re-concatenates and overwrites existing group files with latest versions of group files
+Rebuild Minified JS Files:: Copies original Full JS Source Files and minifies them, then replaces existing compressed files
+Repair JS Files:: Compresses Existing JS files - includes any changes made, but does not overwrite original JS Source files
+Repair Non-Lowercase Fields:: Repair mixed-case custom table(s) and metadata file(s) to fix issues where code expects lowercase field names
+Repair Roles:: Repairs Roles by adding all new modules that support Access Controls, and by adding any new Access Controls to existing modules
+Repair Inbound Email Accounts:: Repairs Inbound Email accounts and encrypts account passwords
+Sync Inbound Email Accounts:: Sync Inbound Email Accounts and Emails
+Remove XSS:: Removes XSS Vulnerabilities from the database
+Repair Activities:: Repairs Activities (Calls, Meetings) end dates
+Enable/Disable Seed Users:: Quickly enable or disable seed users populated during demo installation.
+Remove missed files from upload directory:: Please note that removal can take a lot of time 
+
 == Global Search
 
 The Global Search functionality is used to search for records using the search bar on the main 

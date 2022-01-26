@@ -149,4 +149,4 @@ org.apache.catalina.startup.Catalina.start Server startup in N ms
 По умолчанию веб-приложение прослушивает порт *8080*, поэтому, например, ваш сервер может быть доступен по адресу 
 http://localhost:8080/suitecrmanalytics.
 
-Детальная информация о работе с веб-приложением описана в link:../../../user/suitecrm-analytics/getting-started[этом] разделе документации.
+Детальная информация о работе с веб-приложением описана в link:../../../user/suitecrm-analytics/1.1/scrm-analytics-getting-started[этом] разделе документации.

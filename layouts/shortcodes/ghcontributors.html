@@ -1,31 +1,37 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{/*
+--------------------
+Shortcode usage:
+
+{% ghcontributors user1 user2 user3 %}}
+
+(You can use an indefinite number of parameters)
+-------------------
+*/}}
+
 <style type="text/css">
-.ghContributors{
-display:flex;
-flex-flow:  wrap;
-align-content: flex-start
+.ghContributors {
+  display:flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
 }
-
-.ghContributors > div{
-width: 50% ;
-display: inline-flex;
-margin-bottom: 5px;
+.ghContributors > div {
+  display: inline-flex;
+  margin: 5px 5px;
 }
-.ghContributors > div label{
-padding-left: 4px ;
-}
-.ghContributors > div span{
-font-size: x-small;
-padding-left: 4px ;
-}
-
 </style>
 <div class="ghContributors">
-  {{ $url := .Get 0 }}
-  {{ range getJSON $url }}
+{{ range .Params }}
+  {{ $git_user := . }}
+  {{ $u := getJSON "https://api.github.com/users/" $git_user }}
   <div>
-    <img src="{{.avatar_url}}" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-    <label><a href="{{.html_url}}">@{{.login}}</a></label>
-    <span class="contributions">{{.contributions}} commits</span>
+    <div style="float:top;">
+      <a href="{{$u.avatar_url}}" data-featherlight="image">
+      <img src="{{$u.avatar_url}}" class="inline" style="width: 50px;height: 50px;margin-bottom:.25em; vertical-align:middle;" alt="{{ $git_user }} Avatar">
+    </a>
+    <div><a href="{{$u.html_url}}"  class="highlight">{{$u.login}}</a></div>
+    </div>
   </div>
-  {{ end }}
+{{ end }}
 </div>
+<div style="clear: both;"></div>

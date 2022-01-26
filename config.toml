@@ -8,6 +8,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 enableGitInfo = true
 timeout = 37000
+ignoreErrors = ["error-remote-getjson"]
 
 [params]
   GitHubRepo  = "https://github.com/salesagility/SuiteDocs/"
@@ -25,12 +26,18 @@ home = [ "HTML", "RSS", "JSON"]
 section = [ "HTML", "RSS"]
 
 [Languages]
+
+# ------------------------------------------------------------
+# ------------------ ENGLISH ---------------------------------
+# ------------------------------------------------------------
+
 [Languages.en]
 # the following site title appears as PageTitle :: SiteTitle on every page; it will be the tab name on the browser
 title = "SuiteCRM Documentation"
 #title = "Docs"
 weight = 1
 languageName = "English"
+languageDir = "/"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fa fa-newspaper-o'></i> Blog"
@@ -55,10 +62,15 @@ name = "<i class='fa fa-bullhorn'></i> Credits"
 url = "/credits"
 weight = 30
 
+# ------------------------------------------------------------
+# ------------------ SPANISH ---------------------------------
+# ------------------------------------------------------------
+
 [Languages.es]
 title = "Documentación de SuiteCRM"
 weight = 2
 languageName = "Español"
+languageDir = "/es/"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fa fa-github'></i> GitHub"
@@ -93,20 +105,26 @@ weight = 30
 # url = "https://gohugo.io/"
 # weight = 20
 
-
+# ------------------------------------------------------------
+# ------------------ RUSSIAN ---------------------------------
+# ------------------------------------------------------------
 
 [Languages.ru]
 title = "SuiteCRM - Русскоязычная документация"
 weight = 3
 languageName = "Русский"
+languageDir = "/ru/"
 
-
+# ------------------------------------------------------------
+# ------------------ PORTUGUESE ------------------------------
+# ------------------------------------------------------------
 
 [Languages.pt]
 #title = "SuiteCRM Documentation"
 title = "Docs"
 weight = 4
 languageName = "Português"
+languageDir = "/pt/"
 
 [[Languages.pt.menu.shortcuts]]
 name = "<i class='fa fa-newspaper-o'></i> Blog"

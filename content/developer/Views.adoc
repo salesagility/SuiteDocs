@@ -165,7 +165,7 @@ most common ones to override are:
   alter this behaviour or to output anything after the main display. You
   usually want to call parent::display(); to ensure that the display
   code is run (unless, of course, you are adding your own display
-  logic). link:../views
+  logic). 
 
 
 === Customising with Smarty templates

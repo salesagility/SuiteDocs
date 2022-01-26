@@ -4,6 +4,8 @@ weight: 15
 title: "Module Installer"
 ---
 
+:toc: 
+
 = 15. Module Installer
 
 As detailed in the other chapters of this book there are many ways to
@@ -19,8 +21,7 @@ to install the package.
 == manifest.php
 
 The `manifest.php` file contains the definition of three arrays. Let’s
-look at each of these arrays in turn. See
-link:../appendix-a-code-examples/[Appendix A] for the full sample
+look at each of these arrays in turn. See below for a full sample
 `manifest.php` file.
 
 {{% notice info %}}
@@ -410,3 +411,113 @@ functionality.
 `scripts/post_uninstall.php`::
   A PHP script which defines a method `post_uninstall()`. This method
   will be called after the package is uninstalled. link:../module-installer[↩]
+
+== Sample manifest file
+
+The following is a basic example manifest file. 
+
+.Example A.3: Example manifest file
+[source,php]
+----
+$manifest = array(
+   'name' => 'Example manifest',
+   'description' => 'A basic manifest example',
+   'version' => '1.2.3',
+   'author' => 'Jim Mackin',
+   'readme' => 'This is a manifest example for the SuiteCRM for Developers book',
+   'acceptable_sugar_flavors' => array('CE'),
+   'acceptable_sugar_versions' => array(
+       'exact_matches' => array('6.5.20',),
+   ),
+   'dependencies' => array(
+     array(
+       'id_name' => 'hello_world',
+       'version' => '3.2.1'
+     ),
+   ),
+   'icon' => 'ManifestExample.png',
+   'is_uninstallable' => true,
+   'published_date' => '2015-05-05',
+   'type' => 'module',
+   'remove_tables' => 'prompt',
+ );
+ $installdefs = array(
+   'id' => 'suitecrmfordevelopers_example_manifest',
+   'image_dir' => '/images/',
+   'copy' => array(
+     array(
+       'from' => '/modules/ExampleModule',
+       'to' => 'modules/ExampleModule',
+     ),
+   ),
+   'dashlets' => array(  
+     array(
+       'from' => '/modules/ExampleModule/Dashlets/',  
+       'name' => 'ExampleModuleDashlet'  
+     )
+   ),
+   'language' => array(
+     array(
+       'from' => 'application/language/en_us.examplemoduleadmin.php',  
+       'to_module' => 'application',  
+       'language' => 'en_us'
+     ),
+     array(    
+       'from' => '/modules/Accounts/language/en_us.examplemodule.php',
+       'to_module' => 'Accounts',
+       'language' => 'en_us'
+     ),
+     array(
+       'from' => '/application/language/es_es.examplemoduleadmin.php',  
+       'to_module' => 'application',
+       'language' => 'es_es'
+     ),  
+     array(    
+       'from' => '/modules/Accounts/language/es_es.examplemodule.php',  
+       'to_module' => 'Accounts',
+       'language' => 'es_es'
+     ),  
+   ),
+   'custom_fields' => array(  
+     array(
+       'name' => 'example_field',
+       'label' => 'Example Field',
+       'type' => 'varchar',
+       'max_size' =>  100,
+       'module' => 'Accounts',  
+     ),
+   ),
+   'vardefs' => array(  
+     array(  
+       'from' => 'modules/Accounts/vardefs/examplemodule_vardefs.php',  
+       'to_module' => 'Accounts',  
+     ),
+   ),
+   'beans' => array(
+     array(
+       'module' => 'ExampleModule',  
+       'class' => 'ExampleModule',
+       'path' => 'modules/ExampleModule/ExampleModule.php',  
+     ),
+   ),
+   'logic_hooks' => array(
+     array(  
+       'module' => 'Accounts',
+       'hook' => 'before_save',  
+       'order' => 100,  
+       'description'  => 'Example module before save hook',  
+       'file' => 'modules/ExampleModule/ExampleModuleHook.php',
+       'class' => 'ExampleModuleLogicHooks',
+       'function' => 'accounts_before_save',  
+     ),
+   ),  
+   'administration' => array(  
+     array(  
+       'from' => 'modules/administration/examplemodule_admin.php',  
+     ),
+   ),
+ );
+ $upgrade_manifest = array(
+);
+----
+

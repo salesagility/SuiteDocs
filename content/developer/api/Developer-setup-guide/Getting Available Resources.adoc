@@ -9,4 +9,4 @@ To see what resources and authentication methods are available, you can
 retrieve the https://swagger.io/specification/[swagger documentation]:
 
 [source]
-GET {{suitecrm.url}}/Api/V8/meta/swagger.json
+GET {{suitecrm.url}}/Api/docs/swagger/swagger.json
