@@ -1,496 +1,496 @@
 ---
-Title: Appendix A
+Title: Apêndice A
 Weight: 300
 hidden: true
 ---
 
 :imagesdir: /images/en/user
 
-= Appendix A
+= Apêndice A
 
-== Contacts Field List
-
-[cols="25,10,25", width="60%", options="header"]
-|====
-s|Label s|Required s|Type
-
-s|ID: |Yes |ID
-
-s|Name: | |Salutation + First Name + Last Name
-
-s|Date Created: | |Date/Time
-
-s|Date Modified: | |Date/Time
-
-s|Modified By: | |Relationship - Users
-
-s|Created by: | |Relationship - Users
-
-s|Description: | |Text Area
-
-s|Assigned User: | |Relationship - Users
-
-s|Salutation | |Drop Down List
-
-s|First Name: | |Textfield
-
-s|Last Name: |Yes |Textfield
-
-s|Title: | |Textfield
-
-s|Department: | |Textfield
-
-s|Do Not Call: | |Checkbox
-
-s|Home: | |Phone
-
-s|Mobile: | |Phone
-
-s|Office Phone: | |Phone
-
-s|Other Phone: | |Phone
-
-s|Fax: | |Phone
-
-s|Email Address: | |Textfield
-
-s|Other Email: | |Textfield
-
-s|Invalid Email: | |Checkbox
-
-s|Email Opt Out: | |Checkbox
-
-s|Primary Address Street: | |Textfield
-
-s|Primary Address Street 2: | |Textfield
-
-s|Primary Address Street 3: | |Textfield
-
-s|Primary Address City: | |Textfield
-
-s|Primary Address State: | |Textfield
-
-s|Primary Address Postal Code: | |Textfield
-
-s|Primary Address Country: | |Textfield
-
-s|Alt Address Street: | |Textfield
-
-s|Alt Address Street 2: | |Textfield
-
-s|Alt Address Street 3: | |Textfield
-
-s|Alt Address City: | |Textfield
-
-s|Alt Address State: | |Textfield
-
-s|Alt Address Postalcode: | |Textfield
-
-s|Alt Address Country: | |Textfield
-
-s|Assistant: | |Textfield
-
-s|Assistant Phone: | |Phone
-
-s|Email Address: | |Email
-
-s|Referred by: | |Textfield
-
-s|Lead Source: | |Drop Down List
-
-s|Lead Source Description: | |Text Area
-
-s|Status: | |Drop Down List
-
-s|Status Description: | |Text Area
-
-s|Reports To: | |Relationship - Leads
-
-s|Account Name: | |Textfield
-
-s|Opportunity Name: | |Textfield
-
-s|Opportunity Amount: | |Textfield
-
-s|Campaign: | |Relationship - Campaigns
-
-s|Birthdate: | |Date
-|====
-
-== Leads Field List
+== Lista de Campos de Contactos
 
 [cols="25,10,25", width="60%", options="header"]
 |====
-s|Label s|Required s|Type
+s|Etiqueta s|Obrigatório s|Tipo
 
-s|ID: |Yes |ID
+s|ID: |Sim |ID
 
-s|Name: | |Salutation + First Name + Last Name
+s|Nome: | |Saudação + Nome Próprio + Apelido
 
-s|Date Created: | |Date/Time
+s|Criado em: | |Data/Hora
 
-s|Date Modified: | |Date/Time
+s|Modificado em: | |Data/Hora
 
-s|Modified By: | |Relationship - Users
+s|Modificado por: | |Relacionamento - Utilizadores
 
-s|Created By: | |Relationship - Users
+s|Criado por: | |Relacionamento - Utilizadores
 
-s|Description: | |Text Area
+s|Descrição: | |Área de Texto
 
-s|Assigned User: | |Relationships - Users
+s|Utilizador atribuído: | |Relacionamento - Users
 
-s|Salutation | |Drop Down List
+s|Saudação | |Lista de Opções
 
-s|First Name: | |Textfield
+s|Nome Próprio: | |Campo de texto
 
-s|Last Name: |Yes |Textfield
+s|Apelido: |Sim |Campo de texto
 
-s|Title: | |Textfield
+s|Título: | |Campo de texto
 
-s|Department: | |Textfield
+s|Departamento: | |Campo de texto
 
-s|Do Not Call: | |Checkbox
+s|Não Telefonar: | |Caixa de verificação
 
-s|Home Phone: | |Phone
+s|Telefone de Casa: | |Telefone
 
-s|Mobile: | |Phone
+s|Telemóvel: | |Telefone
 
-s|Office Phone: | |Phone
+s|Telefone de Trabalho: | |Telefone
 
-s|Other Phone: | |Phone
+s|Outro Telefone: | |Telefone
 
-s|Fax: | |Phone
+s|Fax: | |Telefone
 
-s|Email Address: | |Textfield
+s|Endereço de Email: | |Campo de texto
 
-s|Other Email | |Textfield
+s|Outro Endereço de Email: | |Campo de texto
 
-s|Invalid Email: | |Checkbox:
+s|Email Inválido: | |Caixa de verificação
 
-s|Email Opt Out: | |Checkbox
+s|Não receber email: | |Caixa de verificação
 
-s|Primary Address Street: | |Textfield
+s|Endereço Primário - Rua: | |Campo de texto
 
-s|Primary Address Street 2: | |Textfield
+s|Endereço Primário - Rua 2: | |Campo de texto
 
-s|Primary Address Street 3: | |Textfield
+s|Endereço Primário - Rua 3: | |Campo de texto
 
-s|Primary Address City: | |Textfield
+s|Endereço Primário - Localidade: | |Campo de texto
 
-s|Primary Address State: | |Textfield
+s|Endereço Primário - Estado: | |Campo de texto
 
-s|Primary Address Postalcode: | |Textfield
+s|Endereço Primário - Código Postal: | |Campo de texto
 
-s|Primary Address Country: | |Textfield
+s|Endereço Primário - País: | |Campo de texto
 
-s|Alternate Address Street: | |Textfield
+s|Endereço Alternativo - Rua: | |Campo de texto
 
-s|Alternate Address Street 2: | |Textfield
+s|Endereço Alternativo - Rua 2: | |Campo de texto
 
-s|Alternate Address Street 3: | |Textfield
+s|Endereço Alternativo - Rua 3: | |Campo de texto
 
-s|Alternate Address City: | |Textfield
+s|Endereço Alternativo - Localidade: | |Campo de texto
 
-s|Alternate Address Postal Code: | |Textfield
+s|Endereço Alternativo - Estado: | |Campo de texto
 
-s|Alternate Address Country: | |Textfield
+s|Endereço Alternativo - Código Postal: | |Campo de texto
 
-s|Assistant: | |Textfield
+s|Endereço Alternativo - País: | |Campo de texto
 
-s|Assistant Phone: | |Phone
+s|Assistente: | |Campo de texto
 
-s|Email Address: | |Email
+s|Telefone de Assistente: | |Telefone
 
-s|Referred By: | |Textfield
+s|Endereço de Email: | |Email
 
-s|Lead Source: | |Drop Down List
+s|Referido por: | |Campo de texto
 
-s|Lead Source Description: | |Text Area
+s|Fonte da Lead: | |Lista de Opções
 
-s|Status: | |Drop Down List
+s|Descrição da Fonte da Lead: | |Área de Texto
 
-s|Status Description: | |Text Area
+s|Estado: | |Lista de Opções
 
-s|Reports To: | |Relationship - Leads
+s|Descrição do Estado: | |Área de Texto
 
-s|Account Name: | |Textfield
+s|Reporta a: | |Relacionamento - Leads
 
-s|Opportunity Name: | |Textfield
+s|Nome da Conta: | |Campo de texto
 
-s|Opportunity Amount | |Textfield
+s|Nome da Oportunidade: | |Campo de texto
 
-s|Campaign | |Relationship - Campaigns
+s|Valor da Oportunidade: | |Campo de texto
 
-s|Birthdate | |Date
+s|Campanha: | |Relacionamento - Campaigns
+
+s|Data de Nascimento: | |Date
 |====
 
-== Targets Field List
+== Lista de Campos de Leads
 
 [cols="25,10,25", width="60%", options="header"]
 |====
-s|Label s|Required s|Type
+s|Etiqueta s|Obrigatório s|Tipo
 
-s|ID: |Yes |ID
+s|ID: |Sim |ID
 
-s|Date Created: | |Salutation + First Name + Last Name
+s|Nome: | |Saudação + Nome Próprio + Apelido
 
-s|Date Modified: | |Date/Time
+s|Criado em: | |Data/Hora
 
-s|Modified By: | |Relationship - Users
+s|Modificado em: | |Data/Hora
 
-s|Created By: | |Relationship - Users
+s|Modificado por: | |Relacionamento - Users
 
-s|Description: | |Text Area
+s|Criado por: | |Relacionamento - Users
 
-s|Assigned to: | |Relationship - Users
+s|Descrição: | |Área de Texto
 
-s|Salutation: | |Drop Down List
+s|Utilizador atribuído: | |Relacionamentos - Users
 
-s|First Name: | |Textfield
+s|Saudação | |Lista de Opções
 
-s|Last Name: |Yes |Textfield
+s|Nome Próprio: | |Campo de texto
 
-s|Title: | |Textfield
+s|Apelido: |Sim |Campo de texto
 
-s|Department | |Textfield
+s|Título: | |Campo de texto
 
-s|Do Not Call: | |Checkbox
+s|Departamento: | |Campo de texto
 
-s|Home: | |Phone
+s|Não Telefonar: | |Caixa de verificação
 
-s|Mobile | |Phone
+s|Telefone de Casa: | |Telefone
 
-s|Office Phone: | |Phone
+s|Telemóvel: | |Telefone
 
-s|Other Phone: | |Phone
+s|Telefone de Trabalho: | |Telefone
 
-s|Fax: | |Phone
+s|Outro Telefone: | |Telefone
 
-s|Email Address | |Email
+s|Fax: | |Telefone
 
-s|Other Email: | |Email
+s|Endereço de Email: | |Campo de texto
 
-s|Invalid Email: | |Checkbox
+s|Outro Endereço de Email | |Campo de texto
 
-s|Email Opt Out: | |Checkbox
+s|Email Inválido: | |Caixa de verificação:
 
-s|Primary Address Street: | |Textfield
+s|Não receber email: | |Caixa de verificação
 
-s|Primary Address Street 2: | |Textfield
+s|Endereço Primário - Rua: | |Campo de texto
 
-s|Primary Address Street 3: | |Textfield
+s|Endereço Primário - Rua 2: | |Campo de texto
 
-s|Primary Address City: | |Textfield
+s|Endereço Primário - Rua 3: | |Campo de texto
 
-s|Primary Address State: | |Textfield
+s|Endereço Primário - Localidade: | |Campo de texto
 
-s|Primary Address Postalcode: | |Textfield
+s|Endereço Primário - Estado: | |Campo de texto
 
-s|Primary Address Country: | |Textfield
+s|Endereço Primário - Código Postal: | |Campo de texto
 
-s|Alternate Address Street: | |Textfield
+s|Endereço Primário - País: | |Campo de texto
 
-s|Alternate Address Street 2: | |Textfield
+s|Endereço Alternativo - Rua: | |Campo de texto
 
-s|Alternate Address Street 3: | |Textfield
+s|Endereço Alternativo - Rua 2: | |Campo de texto
 
-s|Alternate Address City: | |Textfield
+s|Endereço Alternativo - Rua 3: | |Campo de texto
 
-s|Alternate Address Postal Code: | |Textfield
+s|Endereço Alternativo - Localidade: | |Campo de texto
 
-s|Alternate Address Country: | |Textfield
+s|Endereço Alternativo - Código Postal: | |Campo de texto
 
-s|Assistant: | |Textfield
+s|Endereço Alternativo - País: | |Campo de texto
 
-s|Assistant Phone: | |Phone
+s|Assistente: | |Campo de texto
 
-s|Birthdate: | |Date
+s|Telefone de Assistente: | |Telefone
 
-s|Account Name: | |Textfield
+s|Endereço de Email: | |Email
+
+s|Referido Por: | |Campo de texto
+
+s|Fonte da Lead: | |Lista de Opções
+
+s|Descrição da Fonte da Lead: | |Área de Texto
+
+s|Estado: | |Lista de Opções
+
+s|Descrição do Estado: | |Área de Texto
+
+s|Reporta a: | |Relacionamento - Leads
+
+s|Nome da Conta: | |Campo de texto
+
+s|Nome da Oportunidade: | |Campo de texto
+
+s|Valor da Oportunidade | |Campo de texto
+
+s|Campanha | |Relacionamento - Campaigns
+
+s|Data de Nascimento | |Data
 |====
 
-== Accounts Field List
+== Lista de Campos de Targets
 
 [cols="25,10,25", width="60%", options="header"]
 |====
-s|Label s|Required s|Type
+s|Etiqueta s|Obrigatório s|Tipo
 
-s|ID: |Yes |ID
+s|ID: |Sim |ID
 
-s|Name: |Yes |Name
+s|Criado em: | |Saudação + Nome Próprio + Apelido
 
-s|Date Created | |Date/Time
+s|Modificado em: | |Data/Hora
 
-s|Date Modified | |Date/Time
+s|Modificado por: | |Relacionamento - Users
 
-s|Modified By: | |Relationship - Users
+s|Criado por: | |Relacionamento - Users
 
-s|Description | |Text Area
+s|Descrição: | |Área de Texto
 
-s|Deleted: | |Checkbox
+s|Atribuído a: | |Relacionamento - Users
 
-s|Assigned User | |Relationship - Users
+s|Saudação: | |Lista de Opções
 
-s|Type: | |Drop Down List
+s|Nome Próprio: | |Campo de texto
 
-s|Industry: | |Drop Down List
+s|Apelido: |Sim |Campo de texto
 
-s|Annual Revenue | |Textfield
+s|Título: | |Campo de texto
 
-s|Fax | |Phone
+s|Departamento | |Campo de texto
 
-s|Billing street: | |Textfield
+s|Não Telefonar: | |Caixa de verificação
 
-s|Billing street 2: | |Textfield
+s|Telefone de Casa: | |Telefone
 
-s|Billing street 3: | |Textfield
+s|Telemóvel | |Telefone
 
-s|Billing street 4: | |Textfield
+s|Telefone de Trabalho: | |Telefone
 
-s|Billing City: | |Textfield
+s|Outro Telefone: | |Telefone
 
-s|Billing State: | |Textfield
+s|Fax: | |Telefone
 
-s|Billing Postal Code: | |Textfield
+s|Endereço de Email | |Email
 
-s|Billing Country: | |Textfield
+s|Outro Endereço de Email: | |Email
 
-s|Rating: | |Textfield
+s|Email Inválido: | |Caixa de verificação
 
-s|Office Phone: | |Phone
+s|Não receber email: | |Caixa de verificação
 
-s|Alternate Phone: | |Phone
+s|Endereço Primário - Rua: | |Campo de texto
+
+s|Endereço Primário - Rua 2: | |Campo de texto
+
+s|Endereço Primário - Rua 3: | |Campo de texto
+
+s|Endereço Primário - Localidade: | |Campo de texto
+
+s|Endereço Primário - Estado: | |Campo de texto
+
+s|Endereço Primário - Código Postal: | |Campo de texto
+
+s|Endereço Primário - País: | |Campo de texto
+
+s|Endereço Alternativo - Rua: | |Campo de texto
+
+s|Endereço Alternativo - Rua 2: | |Campo de texto
+
+s|Endereço Alternativo - Rua 3: | |Campo de texto
+
+s|Endereço Alternativo - Localidade: | |Campo de texto
+
+s|Endereço Alternativo - Código Postal: | |Campo de texto
+
+s|Endereço Alternativo - País: | |Campo de texto
+
+s|Assistente: | |Campo de texto
+
+s|Telefone de Assistente: | |Telefone
+
+s|Data de Nascimento: | |Data
+
+s|Nome da Conta: | |Campo de texto
+|====
+
+== Lista de Campos de Contas
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Etiqueta s|Obrigatório s|Tipo
+
+s|ID: |Sim |ID
+
+s|Nome: |Sim |Nome
+
+s|Criado em | |Data/Hora
+
+s|Modificado em | |Data/Hora
+
+s|Modificado por: | |Relacionamento - Users
+
+s|Descrição | |Área de Texto
+
+s|Eliminado: | |Caixa de verificação
+
+s|Utilizador Atribuído | |Relacionamento - Users
+
+s|Tipo: | |Lista de Opções
+
+s|Indústria: | |Lista de Opções
+
+s|Volume de Vendas | |Campo de texto
+
+s|Fax | |Telefone
+
+s|Endereço de Facturação - Rua: | |Campo de texto
+
+s|Endereço de Facturação - Rua 2: | |Campo de texto
+
+s|Endereço de Facturação - Rua 3: | |Campo de texto
+
+s|Endereço de Facturação - Rua 4: | |Campo de texto
+
+s|Endereço de Facturação - Localidade: | |Campo de texto
+
+s|Endereço de Facturação - Estado: | |Campo de texto
+
+s|Endereço de Facturação - Código Postal: | |Campo de texto
+
+s|Endereço de Facturação - País: | |Campo de texto
+
+s|Classificação: | |Campo de texto
+
+s|Telefone de Trabalho: | |Telefone
+
+s|Telefone alternativo: | |Telefone
 
 s|Website: | |URL
 
-s|Ownership: | |Textfield
+s|Proprietários: | |Campo de texto
 
-s|Employees | |Textfield
+s|Funcionários | |Campo de texto
 
-s|Ticker Symbol | |Textfield
+s|Símbolo da Bolsa | |Campo de texto
 
-s|Shipping Street: | |Textfield
+s|Endereço de Envio - Rua: | |Campo de texto
 
-s|Shipping Street 2: | |Textfield
+s|Endereço de Envio - Rua 2: | |Campo de texto
 
-s|Shipping Street 3: | |Textfield
+s|Endereço de Envio - Rua 3: | |Campo de texto
 
-s|Shipping Street4: | |Textfield
+s|Endereço de Envio - Rua 4: | |Campo de texto
 
-s|Shipping City: | |Textfield
+s|Endereço de Envio - Localidade: | |Campo de texto
 
-s|Shipping State: | |Textfield
+s|Endereço de Envio - Estado: | |Campo de texto
 
-s|Shipping Postal Code: | |Textfield
+s|Endereço de Envio - Código Postal: | |Campo de texto
 
-s|Shipping Country: | |Textfield
+s|Endereço de Envio - País: | |Campo de texto
 
-s|Email Address: | |Email
+s|Endereço de Email: | |Email
 
-s|Non-Primary Emails | |Email
+s|Outros Emails | |Email
 
-s|SIC Code: | |Textfield
+s|Código CAE: | |Campo de texto
 
-s|Member Of: | |Relationship - Accounts
+s|Membro De: | |Relacionamento - Contas
 
-s|Email Opt Out: | |Checkbox
+s|Não receber email: | |Caixa de verificação
 
-s|Invalid Email: | |Checkbox
+s|Email Inválido: | |Caixa de verificação
 |====
 
-== Opportunities Field List
+== Lista de Campos de Oportunidades
 
 image:Opportunities.png[Opportunities.png,title="Opportunities.png"]
 
-== Products Field List
+== Lista de Campos de Produtos
 
 image:Products.png[Products.png,title="Products.png"]
 
-== Product Categories Field List
+== Lista de Campos de Categorias de Produto
 
 image:Product_Categories.png[Product_Categories.png,title="Product_Categories.png"]
 
-== Quotes Field List
+== Lista de Campos de Orçamentos
 
 image:Quotes.png[Quotes.png,title="Quotes.png"]
 
-== Invoices Field List
+== Lista de Campos de Facturas
 
 image:Invoices.png[Invoices.png,title="Invoices.png"]
 
-== Contracts Field List
+== Lista de Campos de Contratos
 
 image:Contracts.png[Contracts.png,title="Contracts.png"]
 
-== Line Items Field List
+== Lista de Campos de Items de Lista
 
 image:Line_Items.png[Line_Items.png,title="Line_Items.png"]
 
-== Groups Field List
+== Lista de Campos de Groupos
 
 image:Groups.png[Groups.png,title="Groups.png"]
 
-== PDF Templates Field List
+== Lista de Campos de Modelos de PDF
 
 image:PDF_Templates.png[PDF_Templates.png,title="PDF_Templates.png"]
 
-== Cases Field List
+== Lista de Campos de Ocorrências
 
 image:Cases.png[Cases.png,title="Cases.png"]
 
-== Notes Field List
+== Lista de Campos de Notas
 
 image:Notes.png[Notes.png,title="Notes.png"]
 
-== Calls Field List
+== Lista de Campos de Chamadas
 
 image:Calls.png[Calls.png,title="Calls.png"]
 
-== Emails Field List
+== Lista de Campos de Emails
 
 image:Emails.png[Emails.png,title="Emails.png"]
 
-== Meetings Field List
+== Lista de Campos de Reuniões
 
 image:Meetings.png[Meetings.png,title="Meetings.png"]
 
-== Tasks Field List
+== Lista de Campos de Tarefas
 
 image:Tasks.png[Tasks.png,title="Tasks.png"]
 
-== Projects Field List
+== Lista de Campos de Projectos
 
 image:Projects.png[Projects.png,title="Projects.png"]
 
-== Project Tasks Field List
+== Lista de Campos de Tarefas de Projecto
 
 image:Project_Tasks.png[Project_Tasks.png,title="Project_Tasks.png"]
 
-== Campaigns Field List
+== Lista de Campos de Campanhas
 
 image:Campaigns.png[Campaigns.png,title="Campaigns.png"]
 
-== Target Lists Field List
+== Lista de Campos de Listas de Targets
 
 image:Target_Lists.png[Target_Lists.png,title="Target_Lists.png"]
 
-== Email Templates Field List
+== Lista de Campos de Modelos de Email
 
 image:Email_Templates.png[Email_Templates.png,title="Email_Templates.png"]
 
-== Documents Field List
+== Lista de Campos de Documentos
 
 image:Documents.png[Documents.png,title="Documents.png"]
 
-== Events Field List
+== Lista de Campos de Eventos
 
 image:Events.png[Events.png,title="Events.png"]
 
-== Locations Field List
+== Lista de Campos de Localizações
 
 image:Locations.png[Locations.png,title="Locations.png"]
 
-== Users Field List
+== Lista de Campos de Utilizadores
 
 image:Users.png[Users.png,title="Users.png"]
 
