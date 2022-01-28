@@ -24,8 +24,9 @@ Important - Extended Support for 7.10.x ends on the 31st of January. We would th
 ==== icon:lock[] Security
 
 * CVE: Pending - SQL Injection
-* CVE: Pending - Local File Inclusion
-* CVE: Pending - RCE Vulnerability
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45898[CVE-2021-45898] - Local File Inclusion
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45899[CVE-2021-45899] - PHAR Deserialization Vulnerability / RCE
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45897[CVE-2021-45897] - RCE Vulnerability
 
 [discrete]
 
