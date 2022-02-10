@@ -65,7 +65,7 @@ To resolve these issues please run the new 'Repair utf encoding' option on the R
 ==== Repairing utf8 data
 
 {{% notice warning %}}
-Important: We have verified an issue with the UTF-8 repair tool marking valid email addresses as deleted.  As such, we would discourage users from using the 'Repair utf encoding' option on the Repair actions via the Admin Tools menu or related Robo CLI commands while we look to investigate and rectify the issue.  We appreciate the continued assistance from the community in identifying this issue and we are actively working on resolving it as our highest priority.
+Important: We have verified an issue with the UTF-8 repair tool marking valid email addresses as deleted.  As such, we would discourage users from using the 'Repair utf encoding' option on the Repair actions via the Admin Tools menu or related Robo CLI commands on this version. Please note this is resolved from 7.12.4, please upgrade to this version or above to make use of this feature.
 {{% /notice %}}
 
 ===== Intro
