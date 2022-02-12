@@ -10,39 +10,40 @@ your own fork of the SuiteCRM repository, make your code changes, commit
 the changes and make a Pull Request to the appropriate branch on the
 SuiteCM repository. See our
 link:../forking/[Quick Guide to Fork SuiteCRM]. Once you have set up your forked repository you can
-begin making commits to the project. 
+begin making commits to the project.
 
-* First, determine which base branch your bug fix should use. 
+* When creating a PR to SuiteCRM, you should always direct it to the `hotfix` branch.
+* When creating a PR to SuiteCRM 8 you should also direct it to the `hotfix` branch.
 
-{{%notice info%}}The `hotfix-7.10.x` branch will be merged into `hotfix` and the `develop` branch so unless your bug
-is `hotfix` or `develop` specific, make the PR to `hotfix-7.10.x`.{{%/notice%}}
+{{%notice info%}}The hotfix branch will then be merged into develop which, in turn, will be merged into `master`.{{%/notice%}}
 
 {{<mermaid align="center">}}
 graph TD;
-  Bugfix{Bugfix}-->|Your PR|hotfix-7.10x;
-  hotfix-->|Merged Into|master;
-  hotfix-7.10x-->|Merged Into|7.10.x
-  hotfix-7.10x-->|Merged Into|hotfix;
-  hotfix-->|Merged Into|develop;
+Bugfix{Bugfix}-->|Your PR|hotfix;
+hotfix-->|Merged Into|7.12.x
+hotfix-->|Merged Into|develop;
+develop-->|Merged Into| master;
 {{< /mermaid >}}
 
-
-* Separate each issue fix into a new branch in your repository (Either
-from the `hotfix-7.10.x` or `hotfix` branch) and name it with the issue
+* Separate each issue fix into a new branch in your repository and name it with the issue
 ID e.g. _bugfix_3062_ or _issue-1234_.
 +
-e.g. to create the branch from `hotfix-7.10.x` with the following git command:
+e.g. to create the branch from `hotfix` with the following git command:
 +
-`git checkout -b _bugfix_3062_ upstream/hotfix-7.10.x`
+`git checkout -b _bugfix_3062_ upstream/hotfix`
++
+e.g. for SuiteCRM 8 this would also be:
++
+`git checkout -b _bugfix_3062_ upstream/hotfix`
 
 * When committing to your individual bugfix branch, it helps to follow
 the message format below:
 +
-`Fixed #1234 - <the subject of the issue>`
+`Fix #1234 - <the subject of the issue>`
 +
-e.g of a commit command 
+e.g of a commit command
 +
-`git commit -m "Fixed #1436 - Reports with nested Parentheses are removing parameters"` + 
+`git commit -m "Fix #1436 - Reports with nested Parentheses are removing parameters"` +
 +
 This commit message format allows us to easily include all bug
 fixes within major and minor *Release notes*.
@@ -50,10 +51,44 @@ fixes within major and minor *Release notes*.
 If you are new to Writing Commit Messages in git follow the guide
 http://chris.beams.io/posts/git-commit/#seven-rules[here].
 
-* When pushing a branch that has been created from an upstream branch 
+* When pushing a branch that has been created from an upstream branch
 to your remote fork, you will need to specify "origin", e.g.
 +
 `git push origin _bugfix_3062_`
+
+=== Changing your Pull Request from 7.10.x to hotfix
+
+As of the 31st January 2022 extended support for 7.10.x has ended. However, that does not mean that the Pull Request you
+created to fix a specific issue or to add a feature is not still applicable!
+
+If the issue you face is still present in 7.12.x but your Pull Request is for 7.10.x there are some steps below showing
+how you can point your Pull Request towards the `hotfix` branch.
+
+1. Checkout your branch that has the intended fix.
+`git checkout <your-branch>`
+
+2. Get the hash for the first commit you made from the branch then work your way through until the most recent via:
+`git log -1 --format=format:"%H"`
++
+When using the command above, in order to get the hashes from all commits you have made to the branch, you must change
+the number `1` to how many commits you have made.
+
+3. Checkout the hotfix branch.
+`git checkout hotfix`
+
+4. Checkout a new branch that you will then update the PR to.
+`git checkout -b <new-branch>`
+
+5. Cherry-pick your commits across.
+`git cherry-pick commit1 commit2`
++
+`commit1` will be replaced with the hash's from your commits.
+
+When pushing up a new branch with the same changes as a previous PR made, please reference the newly created Pull Request
+in the old Pull Request and then close.
+
+However, if you feel comfortable with git, and you are able to then you can re-push to the same branch and change the base
+branch on the PR to hotfix providing you have rebased.
 
 === Make a Bug Fix Pull Request
 
@@ -65,7 +100,9 @@ Request for each issue you fix – *do not* combine multiple bugfixes into
 one Pull Request.
 
 * Ensure that in your Pull Request that the base fork is
-*salesagility/SuiteCRM* and base branch is either `hotfix-7.10.x` or `hotfix`
+*salesagility/SuiteCRM* and base branch is `hotfix`.
+For SuiteCRM 8 ensure that the base fork is
+*salesagility/SuiteCRM-Core* and the base branch is `hotfix`.
 with the head fork being *your repository* and a base branch of your unique bugfix branch e.g. _bugfix_1234_
 
 * We will automatically reject any Pull Requests made to the wrong
