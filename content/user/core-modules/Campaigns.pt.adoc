@@ -1,0 +1,419 @@
+---
+Title: Campanhas
+Weight: 190
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:imagesdir: /images/en/user
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:toc: 
+
+= Campanhas
+
+== Visão Global
+
+O módulo de Campanhas no *SuiteCRM* pode ser uma poderosa ferramenta de
+marketing e publicidade para a sua organização, permitindo a criação e o
+acompanhamento de campanhas de marketing, sejam elas baseadas em email ou
+noutros meios, dirigidas para actuais e potenciais clientes.
+
+Com as ferramentas de acompanhamento incluídas no módulo de Campanhas pode
+monitorizar as respostas à sua campanha, em tempo real, permitindo uma visão do
+Retorno de Investimento (ROI) e outras métricas úteis. Por sua vez, isto
+permitir-lhe-á planear mais eficazmente a sua estratégia de marketing e
+publicidade ao perceber quais as campanhas que melhor funcionam.
+
+* Para ver a lista completa dos campos disponíveis ao criar uma Campanha, veja a
+* link:./../../appendix-a/#_campaigns_field_list[Lista de Campos de Campanha].
+
+{{% notice note %}} 
+Irá necessitar de configurar as suas contas de saída de email e de tratamento de
+bounce de email para enviar campanhas baseadas em email. Veja as Definições de
+Email para mais informação de como fazer isto.
+
+Os emaisl de campanhas são enviados através de uma tarefa agendada. Tem que se
+assegurar que o agendador de tarefas está propriamente configurado.
+{{% /notice %}}
+
+== Criar uma Campanha
+
+No módulo de *Campanhas*, seleccione *Criar Campanha* a partir da barra lateral
+ou do menu pendente do módulo para iniciar o *Assistente de Campanhas*.
+
+image:CampaignsSidebarCreate.png[title="Criar uma Campanha"]
+
+Seleccionar a campanha que deseja criar: "Newsletter", "Email",
+link:../surveys/[Inquérito] (A partir do *SuiteCRM 7.10*) or *Campanhas não
+baseadas em Email*. As campanhas não baseadas em email permitem-lhe manter
+registos das campanhas que ocorrem fora do *SuiteCRM* (e.g. televendas ou rádio).
+
+image:CampaignTypes.png[title="Seleccionar campanha"]
+
+{{% notice nota %}} 
+Note que para uma camapanha do tipo "Inquérito" é necessário criar antecipadamente
+o inquérito para depois associar à campanha. 
+{{% /notice %}}
+
+=== Cabeçalho da Campanha
+
+A primeira página do *Assistente de Campanha* é a página do *Cabeçalho da
+Campanha*.
+image:CampaignHeader.png[title="Cabeçalho de Campanha"]
+
+Indique aqui um nome para a campanha e defina o estado (*Em Planeamento*,
+*Activo*, *Inactivo*, *Terminada*).
+
+Acrescente uma descrição opcional. 
+
+A camapnha será atribuída, por pré-definição, ao utilizador que a define. Altere
+aqui se necessário.
+
+==== Camapnha de Inquérito (a partir do *SuiteCRM 7.10*)
+
+Para uma campanha de *Inquériot* necessita de relacionar a campanha com um
+inquérito existente, Veja link:../surveys/[Inquéritos] para informação sobre
+como criar um inquérito.
+image:CampaignSurveyHeader.png[title="Selecionar inquérito para a campanha"]
+
+==== Campanhas não baseadas em email
+
+Para uma campanha *Não Baseada em Email* pode, opcionalmente, selecionar o tipo
+de campanha.
+
+image:CampaignsNonEmailTypes.png[title="Adicionar o tipo para campanha não-baseade em email"]
+
+==== Orçamento de Campanha
+Os detalhes, opcionais, do orçamento da campanha estão mais abaixo na página.
+Estes valores serão usados para o cálculo do ROI.
+
+Para campanhas não-baseadas em email, esta secção aparece na página seguinte.
+
+image:CampaignBudget.png[title="Orçamento de Campanha"]
+
+Clique em btn:[SEGUINTE] no topo da página para contiuar.
+
+=== Listas de Alvos (Targets)
+
+O próximo passo é identificar a(s) *Lista(s) de Alvos*.
+As listas existentes serão apresentadas em *Adicionar Lista de Alvos Existente*.
+
+Clique no nome da lista para a adicionar à campanha. As listas adicionadas à
+campanha serão apresentadas no painel do lado direito.
+
+Para remover uma lista de alvis, clique em btn:[rem]
+
+image:CampaignsTargetList.png[title="Listas de Alvos"]
+
+==== Criar Lista de Alvos
+
+Se ainda não criou uma lista de alvos ou deseja usar uma nova lista, pode criar
+aqui uma lista vazia e povoá-la após ter completado o resto da definição da
+campanha. Veja link:../target-lists/[Listas de Alvos] para mais informação sobre
+os tipos de listas e como usá-los.
+
+image:80E-mail_campaign.png[title="LIsta de Alvos"]
+
+Indique um nome para a nova lista e seleccione o tipo. Note que irá necessitar
+de ter pelo menos um tipo 'padrão' de lista de alvos atribuido à campanha.
+
+Clique btn:[CRIAR]
+
+=== Modelos
+
+O modelo é a mensgagem que será enviada à sua lista de alvos. Pode seleccionar
+ou alterar um modelo de email existente ou criar um novo. Veja a secção de
+Modelos de Email do guia de utilizador para mais informação.
+
+{{% notice tip %}}O editor de modelos usado para criar e editar os modelos de
+email pode ser seleccionado nas
+link:../../introduction/managing-user-accounts/#_user_profile_email_settings[definições
+de email do utilizador]. A definição padrão (Mozaik) é mostrada nas capturas de
+écran seguintes. {{% /notice %}}
+
+image:81Campaign_template.png[title="Modelo de Assistente de Campanha"]
+
+* *Escolher um modelo existente* – Pode seleccionar um dos Modelos de Email já 
+existentes da lista pendente.
+* *Criar um novo modelo* – Criar um novo modello de email a partir do zero.
+* *Copiar um modelo existente* – Permite-lhe secleccionar um modelo existente e 
+usá-lo como base para fazer alterações
+
+O editor de modelos de email no rodapé da página mostra como o seu modelo irá
+aparecer. Arraste e largue os diferentes componentes do layout a partir da área
+à esquerda para a área da direita, onde poder ser editados.
+
+image:Email_Template_Editor.png[title="Editor de Modelos de Email"]
+
+Clicar num componente irá mostrar o menu de edição. Este menu apresenta uma
+série de opções que permite a personalização do layout e aparência do seu
+modelo. Pode escolher o tipo de letra, formato, cores, alinhamento de texto, e
+pode ainda incluir imagens e vídeos.
+
+image:85Campaign_template.png[title="Editor WYSIWYG"]
+
+{{%notice tip%}}Insira HTML Insert clicando em Ferramentas > Código Fonte{{%/notice%}}
+
+==== Variáveis de Email
+
+image:84Campaign_template.png[title="Variáveis de email"]
+
+=== URLs de Rastreio
+
+Os URLs de rastreio podem ser usados para inserir uma ligação para o website da
+sua organização ou um link directo a um produto que tenha lançado recentemente,
+por exemplo. Um id único é adicionado ao link para cada destinatário o que
+permite ao *SuiteCRM* rastrear cliques. A informação assim obtida pode ser
+consultada na página de estado da campanha.
+
+image:83Campaign_template.png[title="URL de Rastreio"]
+
+To add your own tracker URL link, click btn:[CREATE TRACKER]
+
+image:CampaignsCreateTracker2.png[title="Create tracker"]
+
+Specify the text to display as the link, and the URL.
+
+Clique btn:[CRIAR RASTREADOR]
+
+Acrescente o(s) seu(s) rastreador(es) ao modelo como as outras variáveis. Clique
+dentro do modelo, na localização desejada, e depois escolha o rastreador na
+lista pendentee clique em  btn:[ INSERIR RASTREADOR]
+
+==== URLs de Rstreaor de saída
+
+Um link de saída permite que o destinatário escolha sair da lista de futuros
+emails de marketing, um link de saída padrão será automaticamente ao modelo.
+Pode substituir este padrão por um outro texto de Saída ao adicionar um
+rastreador de saída personalizado.
+
+Clique btn:[CRIAR RASTREADOR]
+
+image:CampaignsOptOutTracker.png[title="Criar rastreador de saída"]
+
+Indique o texto que deseja para o seu link de saída.
+
+Marque a caixa de verificação do Link de Saída. Note que não pode editar o URL
+de rastreamento propriamente dito, apenas o texto.
+
+Acrescente o seu rastreador ao modelo tal como se fosse uma varável. Clique
+dentro do modelo na localização desejada, e depois seleccione o rastreador na
+lista pendente e clique em btn:[ INSERIR RASTREADOR]
+
+Quando o seu modelo email estiver completo, clique em btn:[GUARDAR].
+
+Clique em btn:[SEGUINTE] no topo da página para continuar.
+
+=== Marketing
+
+Na secção de Marketing do Assistente de Campanha deve indicar as definições de
+email para a campanha, e definir um horário para enviar os emails.
+
+image:CampaignsMarketing.png[title="Assistente de Campanha: Marketing"]
+
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|*Nome do Email Marketing*|Indique um nome para este envio de campanha. Isto
+permite re-enviar a camṕanha mais tarde, ou para um conjunto diferente de
+destinatários, ou com outro modelo. A campanha irá armazenar detalhes de estado
+separados para cada registo, e estes podem ser seleccionados na página de
+estado da campanha.
+|*Conta de tratamento de Devolvidos*|Escolha a conta definida para tratamento
+dos emails devolvidos.
+|*Conta de Envio de Email*|A definição padrão é a conta definida no sistema para
+envio de mail.
+|*Agendamento*|Os emails de campanha serão postos em fila para ser enviados na
+data e hora especificado e serão enviados na execução seguinte do trabalho
+*Correr Envio Nocturno de Email de Campanhas*.
+|===
+
+Quando tiver preenchido todos os detalhes, clique em btn:[SEGUINTE] no topo da
+página para continuar.
+
+=== Envio de Email e Sumário
+
+A página de Sumário inclui uma lista de verificação que indica ou não se cada
+secção do Assistente de Campanha foi completado de modo satizfatório. 
+
+[cols="20,80", frame = "none", grid = "none"]
+|===
+|image:CampaignsGreenTick.png[title="Secção de Campanha completada"]|Se uma
+secção estiver completa, é mostrado um ícone de marca de verificação verde.
+|image:CampaignsRedCross.png[title="Secção de Campainha incompleta"]|Secções
+incompletas são mostradas com uma cruz vermelha. Estas irão necessitar de
+intervenção para as resolver antes da campanha poder avançar.
+|===
+
+image:CampaignsSummary.png[title="Sumário de Campanha"]
+
+No exemplo acima, a secção *Escolher Alvos* não foi completada correctamente,
+tal como indicado pelo ícone da cruz vermelha. Poderia ser resolvido através da
+definição de uma lista de alvos 'padrão' com pelo menos uma entrada. 
+
+Clique na linha correspondente à entrada incompleta na lista para aceder à
+secção correspondente.
+
+Quando se tiver assegurado que todas as secções estão completas tem três opções:
+
+* *Enviar Mail à Hora Agendada* – Assim que tiver a certeza que todas as secções
+da campanha estão definidas correctamente e o estado de campanha esttiver
+definido para *Activo*, clique para enviar os emails de campanha. Os emails
+serão postos em fila à hpra agendada, e será enviado aos destinatários na
+execução seguinte do trabalho *Correr Envio Nocturno de Email de Campanha*.
+* *Enviar Email de Marketing como Teste* – Se especificou uma lista de alvos do
+tipo 'teste', irá enviar a campanha para os endereços apenas na lista de teste.
+Ao fazer isto, pode ver a campanha como destinatário e verificar que aparece
+como pretendido, antes da enviar para os destinatários reais. As entradas de
+teste (vistas, cliques, etc...) geradas podem ser removidas posteriormente
+através da página de <<Estado da Campanha e Acompanhamento de Resposta,estado de
+campanha>>.
+* *Ver Detalhes* – Mostra a Vista de Detalhe da campanha que acabou de criar.
+
+== Estado da Campanha e Acompanhamento de Resposta
+Na vista de Detalhe clique em btn:[VER ESTADO]
+[cols="60,40", frame = "none", grid = "none"]
+|===
+|OU, da vista de Lista, clique no ícone de
+estado|image:CampaignsViewStatusIcon.png[title="ícone de estado"]
+|===
+
+A página de estado da campanha apresenta uma vista geral dos detalhes da
+campanha e também uma representação gráfica da resposta da campanha. Esta
+informação inclui o número de mensagens enviada, mensagens devolvidas, número de
+vistas, pedidos de saída e cliques.
+
+image:CampaignStatus3.png[title="Estado de Campanha"]
+
+Informação detalhada pode ser consultada nos subpainéis sob o gráfico, com
+detalhe de respostas por registo. Assim pode consultar quem viu o seu email ou
+clicou numa ligação, ou como responderam a um inquérito, por exemplo.
+
+image:CampaignsStatusViewedMessage.png[title="Mensagens Vistas"]
+
+Se a campanha inclui um <<Formulário Web To Person, formulário Web To Person>>
+poderá ver os detalhes de qualquer lead criado através fo formulário web no
+subpainel *Leads Criados*.
+
+image:CampaignsLeadsCreated.png[title="Leads de Campanha criadas"]
+
+Estes registos podem ser acrescentados a uma nova lista de alvos ao clicar em
+btn:[Acrescentar a Lista de Alvos] Isto permite-lhe criar novas campanhas, mais
+focadas, baseadas nas respostas obtidas.
+
+[discrete]
+=== Apagar Entradas de Teste
+
+Clique em btn:[APAGAR ENTRADAS DE TESTE] para remover quaisquer entradas na
+página de estado de campanha que foram geradas durante o teste com uma
+link:../target-lists/[lista de alvos] do tipo 'teste'. 
+
+== Acompanhamento do ROI da Campanha
+
+O acompanhamento do ROI da campanha pode ser consultado a partir da página de
+detalhes da da campanha ou da página de estado clicando em btn:[VER ROI]
+
+Esta página apresenta uma representação gráfica do Retorno de Investimento
+(ROI), permitindo-lhe visualizar rapidamente como o dinheiro gasto com a
+camapanha se traduziu em potenciais negócios. 
+
+image:CampaignsROIChart.png[title="Detalhes de Retorno de Investimento"]
+
+{{%notice tip%}}Acrescente ou altera detalhes de orçamento para a campanha
+clicando em Lanças o Assistente e acedendo à aba de Cabeçalho de Campanha.{{%/notice%}}
+
+== Formulário Web To Person
+
+A funcionalidade *Criar Formulario de Pessoa* permite criar um formulário
+baseado na web que irá criar um registo de link:../leads/[Lead],
+link:../contacts/[Contacto] ou link:../targets/[Alov] no *SuiteCRM* a partir da
+informação submetida no formulaŕio. Estes registos podem ser atribuídos a um
+utilizador e estão ligaods a uma campanha de modo que as respostas podem ser
+acompahadas.
+
+{{%notice note%}}Irá necessitar de relacionar o formulário Web-to-Person com uma
+campanha existente. Veja a secção <<#_create_a_campaign, Criar uma Campanha>>
+para instruções sobre como o fazer. Uma campanha do tipo não-baseada em email é
+apropriada para esta situação{{%/notice%}}
+
+Clique em *Criar Formulário de Pessoa* no menu lateral, ou seleccione *Criar
+Formulário de Pessoa* no menu pendente de *Campanhas* para abrir o assistente.
+
+image:CampaignsSidebarCreateForm.png[title="Criar Formulário de Pessoa"]
+
+[discrete]
+=== Assistente de Criação de Formulaŕio de Pessoa
+
+Seleccione o tipo de registo que deseja criar a partir do formulário da web:
+*Lead*, *Contacto* ou *Alvo*, da lista pendente. A lista de campos disponíveis
+será automaticamnte actualizada de acordo com a sua escolha. Use a barra de
+scroll para ver a lista completa de campos disponíveis.
+
+image:CampaignsCreatePerson1.png[title="Criar Formulário de Pessoa - seleccionar
+campos"]
+
+Arraste e largue os campos que deseja incluir no formulário para as colunas
+vazias do formulário. Tem a opção de layout numa ou duas colunas. Tem que
+incluir todo os campos obrigatórios (os indicados com um asterisco* e destacados
+na lista).
+
+Clique em btn:[ACRESCENTAR TODOS OS CAMPOS] para acrescentar todos os campos ao
+formulário. Clicar em btn:[RESET DE TODOS OS CAMPOS] irá remover todos os campos
+das colunas de layout.
+
+image:CampaignsCreatePerson2.png[title="Criar Formulário de Pessoa - seleccionar
+campos"]
+
+Quando todos os campos desejados forem acrescentados, clique em btn:[SEGUINTE]
+para continuar.
+
+[discrete]
+==== Criar Formulário Pesoa – Informação Adicional
+
+image:CampaignsCreatePerson3.png[title="Informação Adicional"]
+
+Configure a aparência do formulário web com a adição de um cabeçalho ou rodapé e
+mude o texto do botão de submissão, se desejado.
+
+*URL de Redireccionamento*: Indique um link personalizado para ser mostrado ao
+submeter o formulário.
+
+*Camapnha Relacionada*: Tem que relacionar o formulário com uma campanha
+existente. Clique em  btn:[SELECCIONAR] para seleccionar a campanha no popup.
+
+Quando estiver completo, clique em btn:[GERAR FORMULÁRIO]
+
+[discrete]
+==== Criar Formulário de Pessoa – Editor
+
+O passo final do Assistente de Criação de Formulário de Pessoa permite-lhe
+formatar o formulário web com o editor. O tipo de letra pode ser seleccionado,
+as cores alteradas, o alinhamento do texto definido e figuras podem ser
+inseridas.
+Veja e edite o HTML directamente ao clicar na ligação HTML na barra de
+ferramentas.
+
+image:CampaignsCreatePerson4.png[title="Formulário web"]
+
+Quando estiver satisfeito com a aparência do seu formulário web, clique em
+btn:[GUARDAR FORMULÁRIO WEB]
+
+[discrete]
+==== Guardar Formulário
+Para guardar o formulário web que acabou de gerar, pode:
+
+* Clicar no link *Formulário Web to Person* para descarregar o formulário para a
+sua pasta de Trasnferências *OU*
+* Copiar e guardar o HTML para uma página existente. Tome nota da linha a
+incluir na secção <head> da página.
+
+image:CampaignsCreatePerson5.png[title="Descarregar formulário"]
+
+{{%notice warning%}}Por favor, tome nota que o formulário web não será guardado
+em nenhum sítio do *SuiteCRM*. Para garantir que o formulário é guardado de
+acordo com um dos métodos descritos acima.{{%/notice%}}
+
+
+
+
