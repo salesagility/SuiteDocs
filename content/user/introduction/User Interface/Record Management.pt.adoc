@@ -202,7 +202,7 @@ da Google e comunicar com contactos da Google a partir do SuiteCRM
 
 === Passos para importar dados
 
-{{% notice nota %}}
+{{% notice note %}}
 Importar sempre os dados de Entidades em primeiro lugar e só depois os dados de
 Contactos e outros relacionados com Entidades (tais como Reuniões, Chamadas,
 Notas) para poder criar automaticamente os relacionamentos entre os registos de
@@ -269,7 +269,7 @@ registo como referência para executar uma importação do tipo 'Criar novos
 registos e actualizar registos existentes', como detalhado na secção <<Importar
 Registos>> do guia de utilizador.
 
-{{% notice nota %}}
+{{% notice note %}}
 Ao exportar valores a partir de listas de opções, o SuiteCRM exporta o ID
 associado a cada opção e não os valores que são mostrados. Por exemplo, se uma
 lista de opções tem opções etiquetadas Alta, Média e Baixa com ID de 1, 2 e 3, o

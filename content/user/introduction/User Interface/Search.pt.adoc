@@ -43,7 +43,7 @@ Lucene]. Esta pesquisa trabalha de modo muito semelhante à pesquisa global
 normal mas, além disso, inclui pesquisas dentro de documentos de texto e outros
 ficheiros.
 
-{{% notice nota %}}
+{{% notice note %}}
 Os administradores de sistema podem habilitar ou desabiliar a pesquisa de texto
 completo a partir da ligação Definições AOD no painel de administração.
 {{% /notice %}}
