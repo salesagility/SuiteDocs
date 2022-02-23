@@ -1,0 +1,99 @@
+---
+Title: Vistas
+Weight: 54
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+:toc:
+
+= Vistas
+
+Dentro do CRM ser-lhe-ão apresentadas diversas vistas. Estas vistas estão
+estruturadas para lhe apresentar informação relevante ao longo do processo de
+gestão dos registos. Há três vistas principais, descritas nas secções seguintes.
+
+== Vista de Lista
+
+Esta é a vista apresentada quando se navega para o módulo que pretende.
+
+image:40List_view.png[title="Vista de Lista"]
+
+A Vista de Lista dá-lhe acesso a muitas acções que pode executar para gerir
+registos. São elas:
+
+* *Pesquisar Registos* – permite pesquisar os registos usando as pesquisas
+Básica e Avançada, como descrito na secção link:../search/[Pesquisa].
+* *Ordenar Registos* – clicar no nome da coluna irá ordenar a lista de registos
+de acordo com essa coluna, de modo ascendente ou descendente, se a ordenação
+estiver activa.
+* *Ver Registos* – clicar num qualquer campo com um link irá apresentar a Vista
+de Detalhes do registos.
+* *Edita Registos* – clicar no ícone do lápis irá apresentar a Vista de Edição
+do registo.
+* *Eliminar Registos* – pode seleccionar registos e depois escolher a opção de
+eliminar para remover os registos seleccionados.
+* *Actualização em massa de Registos* – pode seleccionar registos e escolher a
+opção de actualização em massa para actualizar dados em todos os registos
+seleccionados, de forma simultânea.
+* *Juntar Registos* – pode seleccionar registos e escolher a opção para juntar
+registos. Esta escolha irá desencadear o processo de junção de registos. Pode
+escolher um dos registos como primário e depois juntar os dados dos outros
+registos nesse. Após a junção, os registos duplicados serão eliminados e todos
+os dados e histórico se irão referir ao registo primário.
+
+== Vista de Detalhe
+
+Esta é a vista apresentada ao ver um registo.
+
+image:41Detail_view.png[title="Vista de Detalhe"]
+
+A Vista de Detalhe inclui muitas acções que pode usar para ver e gerir os seus
+dados. Estas são específicas para o módulo que estiver a consultar. Há também
+acções padrão nas Vistas de Detalhe da maioria dos módulos. Estas são:
+
+* *Editar* – permite editar o regsto que se estiver a consultar.
+* *Duplicar* – permite duplicar o registo que estiver a consultar.
+* *Eliminar* – permite eliminar o registo que estiver a ver. Se for eliminado,
+ser-lhe-á apresentada a Vista de Lista.
+* *Encontrar Duplicados* – permite iniciar o processo de pesquisa de duplicados
+através das capacidades do sistema para procurar registos duplicados.
+* *Ver Registo de Alterações* – permite ver as alterações que foram feitas a
+campos auditados.
+
+{{% notice note %}}
+Nota: Para definir que campos são auditados e para alterações aos campos que
+definem os registos duplicados, contacte o Administrador do Sistema.
+{{% /notice %}}
+
+Os campos linkados podem ser clicados para navegar para o respectivo registo.
+
+A vista de Detalhes, no SuiteCRM, contém abas. Esta característica minimiza a
+necessidade de scroll e categoriza os dados de modo apropriado.
+
+{{% notice note %}}
+Os Administradores de Sistema podem escolher o modo de apresentação da Vista de
+Detalhes para abas ou painéis. Pode contactar com o Administrador do Sistema
+para mais informação sobre as capacidades das Vistas e layouts.
+{{% /notice %}}
+
+== Vista de Edição
+
+Esta é a vista que lhe é apresentada ao editar um registo.
+
+image:42Edit_view.png[title="Vista de Edição"]
+
+A Vista de Edição permite modificar o conteúdo do registo, de modo a actualizar
+a informação existente, acrescentar ou eliminar informação do registo. Depois de
+realizar as alterações num registo, pode clicar em 'Guardar' para confirmar as
+alterações ou em btn:[Cancelar] para cancelar a alteração. Ambas as opções irão
+redireccionar a vista para a Vista de Detalhes do registo que estiver a editar.
+Pode clicar em btn:[Ver Registo de Alterações] para consultar as alterações já
+feitas aos campos auditados, o que pode ser útil antes de introduzir mais
+alterações ao registo.
+

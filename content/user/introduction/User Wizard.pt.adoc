@@ -1,0 +1,106 @@
+---
+Title: User Wizard
+Weight: 30
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/user
+
+= User Wizard
+
+O User Wizard guia-o através do processo de configuração na primeira
+vez que entrar no SuiteCRM. Este processo permite-lhe definir as 
+muitas opções e formatos que existem para apresentar dados no SuiteCRM
+e as opções são específicas de cada utilizador.
+
+== Bem-vindo ao SuiteCRM
+
+O primeiro passo é apenas uma página de boas-vindas ao SuiteCRM. Clique
+em btn:[Seguinte] nesta página para avançar para a configuração das
+suas preferências.
+
+image:04SuiteCRM_welcome.png[title="Bem-vindo ao SuiteCRM!"]
+
+== A sua Informação
+
+Neste écran poderá definir informação sobre si. Ao incluir esta 
+informação, os outros utilizadores podem consultá-la. Exemplos desta
+informação são o Nome Completo, Endereço de email ou detalhes de
+Contacto. Campos marcados com um asterisco vermelho(*) são
+obrigatórios e precisam de ser preenchidos antes de continuar.
+
+image:05Welcome_info.png[title="Informação de Utilizador"]
+
+Depois de ter completado este formulário, clique em btn:[Seguinte] 
+para avançar para o passo seguinte.
+
+== As suas definições Locais
+
+Neste écran pode definir as suas definições locais preferidas.
+
+image:06SuiteCRM_Locale.png[title="Definições Locais"]
+
+== Selecção de Moeda
+
+Seleccione a Moeda que quer que seja mostrada em todos os campos do
+tipo Moeda no SuiteCRM. As opções de Moeda são definidas a partir 
+das opções disponibilizadas pelo Administrador do Sistema. Se houver
+alguma opção que seja necessária mas não apareça, contacte o seu
+Administrador do Sistema.
+
+image:180Currency_selection.png[title="Selecção de Moeda"]
+
+== Formato de Data
+
+Seleccione o formato em que prefere que a data seja apresentada em 
+todos os campos de Data do SuiteCRM. Há muitos formatos diferentes
+que pode escolher. Este formato também se aplica aos campos Data/Hora.
+
+image:08Date_format.png[title="formato de Data"]
+
+== Fuso horário
+
+Seleccione o fuso horário que deseja usar com o SuiteCRM. Isto permite
+que siga a sua utilização do SuiteCRM de acordo com a sua localização
+no mundo. Se está a viajar de um fuso horário para outro, pode alterar
+esta definição a qualquer altura no écran de Preferências de Utilizador
+após concluir este Wizard.
+
+image:09Time_zone.png[title="Fuso Horário"]
+
+== Formato de Nome
+
+Seleccione o Formato de Nome que quer ver mostrado nos campos de tipo 
+Nome no SuiteCRM. Esta definição aplica-se aos diversos módulos do 
+tipo 'Pessoa' dentro do SuiteCRM, e permite ver o nome de acordo com 
+as suas preferências.
+
+image:181Name_format.png[title="Formato de Nome"]
+
+Assim que tenha todas as suas Definições Locais definidas, clique em 
+btn:[Seguinte] para avançao para o passo final/página de confirmação
+do User Wizard.
+
+== Passo Final
+
+O passo final do User Wizard indica-lhe algumas ligações para aprender
+mais sobre, e procurar suporte a partir do site web do SuiteCRM.
+Há um botão btn:[Voltar] se precisar de voltar atrás e alterar alguma
+das definições indicadas anteriormente.
+
+image:241Finish User Wizard.png[title="Completar o User Wizard"]
+
+Ao clicar em btn:[Terminar] irá completar a configuração e ser-lhe-á 
+apresentado o écran de entrada.
+
+== Sumário
+
+Neste capítulo percorremos o User Wizard, que lhe permite definir as suas
+preferências para usar o SuiteCRM.
+
+No próximo capítulo iremos ver como gerir contas de utilizador, actualizar
+detalhes de utilizador, seleccionar temas, alterar passwords e mais.

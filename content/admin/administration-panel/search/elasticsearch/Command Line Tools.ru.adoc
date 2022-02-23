@@ -37,11 +37,11 @@ elastic:index [<differential> = 1]
 
 Запуск полной индексации:
 [source,bash]
-vendor/bin/robo elastic:index 1
+vendor/bin/robo elastic:index 0
 
 Запуск частичной индексации:
 [source,bash]
-vendor/bin/robo elastic:index 0
+vendor/bin/robo elastic:index 1
 
 image:ElasticIndexCLI.png[Elasticsearch - запуск индексации в консоли]
 

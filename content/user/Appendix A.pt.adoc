@@ -1,0 +1,496 @@
+---
+Title: Apêndice A
+Weight: 300
+hidden: true
+---
+
+:imagesdir: /images/en/user
+
+= Apêndice A
+
+== Lista de Campos de Contactos
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Etiqueta s|Obrigatório s|Tipo
+
+s|ID: |Sim |ID
+
+s|Nome: | |Saudação + Nome Próprio + Apelido
+
+s|Criado em: | |Data/Hora
+
+s|Modificado em: | |Data/Hora
+
+s|Modificado por: | |Relacionamento - Utilizadores
+
+s|Criado por: | |Relacionamento - Utilizadores
+
+s|Descrição: | |Área de Texto
+
+s|Utilizador atribuído: | |Relacionamento - Users
+
+s|Saudação | |Lista de Opções
+
+s|Nome Próprio: | |Campo de texto
+
+s|Apelido: |Sim |Campo de texto
+
+s|Título: | |Campo de texto
+
+s|Departamento: | |Campo de texto
+
+s|Não Telefonar: | |Caixa de verificação
+
+s|Telefone de Casa: | |Telefone
+
+s|Telemóvel: | |Telefone
+
+s|Telefone de Trabalho: | |Telefone
+
+s|Outro Telefone: | |Telefone
+
+s|Fax: | |Telefone
+
+s|Endereço de Email: | |Campo de texto
+
+s|Outro Endereço de Email: | |Campo de texto
+
+s|Email Inválido: | |Caixa de verificação
+
+s|Não receber email: | |Caixa de verificação
+
+s|Endereço Primário - Rua: | |Campo de texto
+
+s|Endereço Primário - Rua 2: | |Campo de texto
+
+s|Endereço Primário - Rua 3: | |Campo de texto
+
+s|Endereço Primário - Localidade: | |Campo de texto
+
+s|Endereço Primário - Estado: | |Campo de texto
+
+s|Endereço Primário - Código Postal: | |Campo de texto
+
+s|Endereço Primário - País: | |Campo de texto
+
+s|Endereço Alternativo - Rua: | |Campo de texto
+
+s|Endereço Alternativo - Rua 2: | |Campo de texto
+
+s|Endereço Alternativo - Rua 3: | |Campo de texto
+
+s|Endereço Alternativo - Localidade: | |Campo de texto
+
+s|Endereço Alternativo - Estado: | |Campo de texto
+
+s|Endereço Alternativo - Código Postal: | |Campo de texto
+
+s|Endereço Alternativo - País: | |Campo de texto
+
+s|Assistente: | |Campo de texto
+
+s|Telefone de Assistente: | |Telefone
+
+s|Endereço de Email: | |Email
+
+s|Referido por: | |Campo de texto
+
+s|Fonte da Lead: | |Lista de Opções
+
+s|Descrição da Fonte da Lead: | |Área de Texto
+
+s|Estado: | |Lista de Opções
+
+s|Descrição do Estado: | |Área de Texto
+
+s|Reporta a: | |Relacionamento - Leads
+
+s|Nome da Conta: | |Campo de texto
+
+s|Nome da Oportunidade: | |Campo de texto
+
+s|Valor da Oportunidade: | |Campo de texto
+
+s|Campanha: | |Relacionamento - Campaigns
+
+s|Data de Nascimento: | |Date
+|====
+
+== Lista de Campos de Leads
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Etiqueta s|Obrigatório s|Tipo
+
+s|ID: |Sim |ID
+
+s|Nome: | |Saudação + Nome Próprio + Apelido
+
+s|Criado em: | |Data/Hora
+
+s|Modificado em: | |Data/Hora
+
+s|Modificado por: | |Relacionamento - Users
+
+s|Criado por: | |Relacionamento - Users
+
+s|Descrição: | |Área de Texto
+
+s|Utilizador atribuído: | |Relacionamentos - Users
+
+s|Saudação | |Lista de Opções
+
+s|Nome Próprio: | |Campo de texto
+
+s|Apelido: |Sim |Campo de texto
+
+s|Título: | |Campo de texto
+
+s|Departamento: | |Campo de texto
+
+s|Não Telefonar: | |Caixa de verificação
+
+s|Telefone de Casa: | |Telefone
+
+s|Telemóvel: | |Telefone
+
+s|Telefone de Trabalho: | |Telefone
+
+s|Outro Telefone: | |Telefone
+
+s|Fax: | |Telefone
+
+s|Endereço de Email: | |Campo de texto
+
+s|Outro Endereço de Email | |Campo de texto
+
+s|Email Inválido: | |Caixa de verificação:
+
+s|Não receber email: | |Caixa de verificação
+
+s|Endereço Primário - Rua: | |Campo de texto
+
+s|Endereço Primário - Rua 2: | |Campo de texto
+
+s|Endereço Primário - Rua 3: | |Campo de texto
+
+s|Endereço Primário - Localidade: | |Campo de texto
+
+s|Endereço Primário - Estado: | |Campo de texto
+
+s|Endereço Primário - Código Postal: | |Campo de texto
+
+s|Endereço Primário - País: | |Campo de texto
+
+s|Endereço Alternativo - Rua: | |Campo de texto
+
+s|Endereço Alternativo - Rua 2: | |Campo de texto
+
+s|Endereço Alternativo - Rua 3: | |Campo de texto
+
+s|Endereço Alternativo - Localidade: | |Campo de texto
+
+s|Endereço Alternativo - Código Postal: | |Campo de texto
+
+s|Endereço Alternativo - País: | |Campo de texto
+
+s|Assistente: | |Campo de texto
+
+s|Telefone de Assistente: | |Telefone
+
+s|Endereço de Email: | |Email
+
+s|Referido Por: | |Campo de texto
+
+s|Fonte da Lead: | |Lista de Opções
+
+s|Descrição da Fonte da Lead: | |Área de Texto
+
+s|Estado: | |Lista de Opções
+
+s|Descrição do Estado: | |Área de Texto
+
+s|Reporta a: | |Relacionamento - Leads
+
+s|Nome da Conta: | |Campo de texto
+
+s|Nome da Oportunidade: | |Campo de texto
+
+s|Valor da Oportunidade | |Campo de texto
+
+s|Campanha | |Relacionamento - Campaigns
+
+s|Data de Nascimento | |Data
+|====
+
+== Lista de Campos de Targets
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Etiqueta s|Obrigatório s|Tipo
+
+s|ID: |Sim |ID
+
+s|Criado em: | |Saudação + Nome Próprio + Apelido
+
+s|Modificado em: | |Data/Hora
+
+s|Modificado por: | |Relacionamento - Users
+
+s|Criado por: | |Relacionamento - Users
+
+s|Descrição: | |Área de Texto
+
+s|Atribuído a: | |Relacionamento - Users
+
+s|Saudação: | |Lista de Opções
+
+s|Nome Próprio: | |Campo de texto
+
+s|Apelido: |Sim |Campo de texto
+
+s|Título: | |Campo de texto
+
+s|Departamento | |Campo de texto
+
+s|Não Telefonar: | |Caixa de verificação
+
+s|Telefone de Casa: | |Telefone
+
+s|Telemóvel | |Telefone
+
+s|Telefone de Trabalho: | |Telefone
+
+s|Outro Telefone: | |Telefone
+
+s|Fax: | |Telefone
+
+s|Endereço de Email | |Email
+
+s|Outro Endereço de Email: | |Email
+
+s|Email Inválido: | |Caixa de verificação
+
+s|Não receber email: | |Caixa de verificação
+
+s|Endereço Primário - Rua: | |Campo de texto
+
+s|Endereço Primário - Rua 2: | |Campo de texto
+
+s|Endereço Primário - Rua 3: | |Campo de texto
+
+s|Endereço Primário - Localidade: | |Campo de texto
+
+s|Endereço Primário - Estado: | |Campo de texto
+
+s|Endereço Primário - Código Postal: | |Campo de texto
+
+s|Endereço Primário - País: | |Campo de texto
+
+s|Endereço Alternativo - Rua: | |Campo de texto
+
+s|Endereço Alternativo - Rua 2: | |Campo de texto
+
+s|Endereço Alternativo - Rua 3: | |Campo de texto
+
+s|Endereço Alternativo - Localidade: | |Campo de texto
+
+s|Endereço Alternativo - Código Postal: | |Campo de texto
+
+s|Endereço Alternativo - País: | |Campo de texto
+
+s|Assistente: | |Campo de texto
+
+s|Telefone de Assistente: | |Telefone
+
+s|Data de Nascimento: | |Data
+
+s|Nome da Conta: | |Campo de texto
+|====
+
+== Lista de Campos de Contas
+
+[cols="25,10,25", width="60%", options="header"]
+|====
+s|Etiqueta s|Obrigatório s|Tipo
+
+s|ID: |Sim |ID
+
+s|Nome: |Sim |Nome
+
+s|Criado em | |Data/Hora
+
+s|Modificado em | |Data/Hora
+
+s|Modificado por: | |Relacionamento - Users
+
+s|Descrição | |Área de Texto
+
+s|Eliminado: | |Caixa de verificação
+
+s|Utilizador Atribuído | |Relacionamento - Users
+
+s|Tipo: | |Lista de Opções
+
+s|Indústria: | |Lista de Opções
+
+s|Volume de Vendas | |Campo de texto
+
+s|Fax | |Telefone
+
+s|Endereço de Facturação - Rua: | |Campo de texto
+
+s|Endereço de Facturação - Rua 2: | |Campo de texto
+
+s|Endereço de Facturação - Rua 3: | |Campo de texto
+
+s|Endereço de Facturação - Rua 4: | |Campo de texto
+
+s|Endereço de Facturação - Localidade: | |Campo de texto
+
+s|Endereço de Facturação - Estado: | |Campo de texto
+
+s|Endereço de Facturação - Código Postal: | |Campo de texto
+
+s|Endereço de Facturação - País: | |Campo de texto
+
+s|Classificação: | |Campo de texto
+
+s|Telefone de Trabalho: | |Telefone
+
+s|Telefone alternativo: | |Telefone
+
+s|Website: | |URL
+
+s|Proprietários: | |Campo de texto
+
+s|Funcionários | |Campo de texto
+
+s|Símbolo da Bolsa | |Campo de texto
+
+s|Endereço de Envio - Rua: | |Campo de texto
+
+s|Endereço de Envio - Rua 2: | |Campo de texto
+
+s|Endereço de Envio - Rua 3: | |Campo de texto
+
+s|Endereço de Envio - Rua 4: | |Campo de texto
+
+s|Endereço de Envio - Localidade: | |Campo de texto
+
+s|Endereço de Envio - Estado: | |Campo de texto
+
+s|Endereço de Envio - Código Postal: | |Campo de texto
+
+s|Endereço de Envio - País: | |Campo de texto
+
+s|Endereço de Email: | |Email
+
+s|Outros Emails | |Email
+
+s|Código CAE: | |Campo de texto
+
+s|Membro De: | |Relacionamento - Contas
+
+s|Não receber email: | |Caixa de verificação
+
+s|Email Inválido: | |Caixa de verificação
+|====
+
+== Lista de Campos de Oportunidades
+
+image:Opportunities.png[Opportunities.png,title="Opportunities.png"]
+
+== Lista de Campos de Produtos
+
+image:Products.png[Products.png,title="Products.png"]
+
+== Lista de Campos de Categorias de Produto
+
+image:Product_Categories.png[Product_Categories.png,title="Product_Categories.png"]
+
+== Lista de Campos de Orçamentos
+
+image:Quotes.png[Quotes.png,title="Quotes.png"]
+
+== Lista de Campos de Facturas
+
+image:Invoices.png[Invoices.png,title="Invoices.png"]
+
+== Lista de Campos de Contratos
+
+image:Contracts.png[Contracts.png,title="Contracts.png"]
+
+== Lista de Campos de Items de Lista
+
+image:Line_Items.png[Line_Items.png,title="Line_Items.png"]
+
+== Lista de Campos de Groupos
+
+image:Groups.png[Groups.png,title="Groups.png"]
+
+== Lista de Campos de Modelos de PDF
+
+image:PDF_Templates.png[PDF_Templates.png,title="PDF_Templates.png"]
+
+== Lista de Campos de Ocorrências
+
+image:Cases.png[Cases.png,title="Cases.png"]
+
+== Lista de Campos de Notas
+
+image:Notes.png[Notes.png,title="Notes.png"]
+
+== Lista de Campos de Chamadas
+
+image:Calls.png[Calls.png,title="Calls.png"]
+
+== Lista de Campos de Emails
+
+image:Emails.png[Emails.png,title="Emails.png"]
+
+== Lista de Campos de Reuniões
+
+image:Meetings.png[Meetings.png,title="Meetings.png"]
+
+== Lista de Campos de Tarefas
+
+image:Tasks.png[Tasks.png,title="Tasks.png"]
+
+== Lista de Campos de Projectos
+
+image:Projects.png[Projects.png,title="Projects.png"]
+
+== Lista de Campos de Tarefas de Projecto
+
+image:Project_Tasks.png[Project_Tasks.png,title="Project_Tasks.png"]
+
+== Lista de Campos de Campanhas
+
+image:Campaigns.png[Campaigns.png,title="Campaigns.png"]
+
+== Lista de Campos de Listas de Targets
+
+image:Target_Lists.png[Target_Lists.png,title="Target_Lists.png"]
+
+== Lista de Campos de Modelos de Email
+
+image:Email_Templates.png[Email_Templates.png,title="Email_Templates.png"]
+
+== Lista de Campos de Documentos
+
+image:Documents.png[Documents.png,title="Documents.png"]
+
+== Lista de Campos de Eventos
+
+image:Events.png[Events.png,title="Events.png"]
+
+== Lista de Campos de Localizações
+
+image:Locations.png[Locations.png,title="Locations.png"]
+
+== Lista de Campos de Utilizadores
+
+image:Users.png[Users.png,title="Users.png"]
+

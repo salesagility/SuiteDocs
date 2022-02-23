@@ -1,0 +1,51 @@
+---
+Title: Começar
+Weight: 20
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: ./../../../images/en/user
+
+= Começar
+
+== Entrar no SuiteCRM
+
+O SuiteCRM permite que os utilizadores entrem com um 
+nome de utilizador e password, que lhe são fornecidos
+pelo Administrador do Sistema.
+
+image:190Home_screen.png[title="Écran de Entrada"]
+
+image:02Login_with_language.png[title="Seleccionar Idioma"]
+
+Antes de entrar no SuiteCRM, pode seleccionar o idioma que preferir.
+Há idiomas pré-definidos disponíveis para o SuiteCRM e há também 
+pacotes de idiomas adicionais.
+
+Depois de escolher o idioma e inserir as suas credenciais de 
+acesso, pode clicar em btn:[Log in] para aceder ao CRM.
+
+image:191Log_in.png[title="Log in"]
+
+== Password Esquecida
+
+Se se esquecer da sua password do CRM e não conseguir aceder, pode usar
+a funcionalidade 'Password Esquecida' para re-enviar a sua
+password para o endereço de email associado à sua conta de utilizador. 
+Ao clicar no link *'Password Esquecida?'* no formulário de entrada irá
+ser apresentado o formulário de password esquecida.
+
+image:179Forgot_password.png[title="Password Esquecida"]
+
+== Sumário
+
+Neste capítulo demonstrámos como aceder ao SuiteCRM através do formulário
+de entrada. Mostrámos também como usar a funcionalidade de password
+esquecida para recurar uma password esquecida ou perdida.
+
+No capítulo seguinte vamos apresentar o User Wizard, que permite a definição
+de preferências de uso para o SuiteCRM.

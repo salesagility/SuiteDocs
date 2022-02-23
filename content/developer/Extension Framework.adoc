@@ -135,10 +135,10 @@ look like:
 ----
 <?php
 $extensions["sports_list"] =  array(
-                "section" => "sports_list",
-                "extdir" => "SportsList",
-                "file" => 'sportslist.ext.php',
-                "module" => "");
+    "section" => "sports_list",
+    "extdir" => "SportsList",
+    "file" => 'sportslist.ext.php',
+    "module" => "");
 ----
 
 Now when a *Quick Repair and Rebuild* is run any files in `custom/Extension/application/Ext/SportsList/` will be consolidated
@@ -147,3 +147,16 @@ into `custom/application/Ext/SportsList/sportslist.ext.php`.
 On its own this file will not do anything but you are now able to write custom code that
 checks the consolidated file rather than having to worry about searching for customisations.
 
+== Composer Extensions
+
+In order to add your own packages to Composer, you can define them in files named like this:
+
+`custom/Extension/application/Ext/Composer/\*/*.json`
+
+An example could be
+`custom/Extension/application/Ext/Composer/MyProject/AddToComposer.json`
+
+Run a `composer install --no-dev` after adding this, and then again after each time you upgrade SuiteCRM.
+
+These Composer extensions are handled not by SuiteCRM directly, but rather by the Composer  
+link:https://github.com/wikimedia/composer-merge-plugin[merge-plugin^].

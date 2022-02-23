@@ -1,0 +1,48 @@
+---
+Title: Compatibility Matrix
+weight: 60
+---
+
+{{% notice note %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation on the same topic for Version 7, click link:../../../admin/compatibility-matrix[here].
+{{% /notice %}}
+
+== Versions
+
+=== SuiteCRM 8.0.x
+
+[[smaller-table-spacing-8]]
+[cols="1s,2" ]
+|========
+
+2+^h| Platform
+
+| Linux, Unix, Mac OS | Any version supporting PHP
+| PHP | 7.3, 7.4, 8.0
+
+2+^| Additional requirements for Development
+
+| Angular CLI | 12+
+| Node.js | 12.14
+| yarn | 1.22.10+
+
+2+^h| Web Server
+
+| Apache |2.2, 2.4
+
+2+^h| Database
+
+| MariaDB |10.3, 10.4, 10.5, 10.6
+
+| MySQL |5.7, 8.0
+
+2+^h| Browsers
+
+| Chrome |90+
+
+| Firefox |90+
+
+| Edge (Chromium) |89+
+
+| Safari |14+
+|========

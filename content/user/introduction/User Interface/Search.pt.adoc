@@ -1,0 +1,113 @@
+---
+Title: Pesquisas
+Weight: 53
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:   ////this is here to allow btn:[]syntax used below
+
+:imagesdir: /images/en/user
+
+= Pesquisa
+
+A pesquisa é um aspecto vital do CRM pois permite a definição rápida daquilo que
+pretende ver. Muitos CRM's gerem muitos dados, portanto é vital que haja um modo
+de refinar a sua pesquisa. Nas sub-secções seguintes vamor cobrir as várias
+opções de pesquisa disponíveis.
+
+== Pesquisa Global
+
+Pode pesquisar todos os registos do CRM através da funcionalidade de pesquisa
+global. Esta pesquisa pode ser acedida através da barra de pesquisa no menu de
+navegação principal.
+
+image:38Search.png[title="Pesquisa Global"]
+
+Depois de escrever o seu termo de pesquisa pode clicar no "Return" ou no ícone
+da lupa. Todos os registos que coincidam com o termo de pesquisa serão
+apresentados e categorizados por módulo.
+
+image:39Search.png[title="Resultados da Pesquisa Global"]
+
+O administrador do sistema pode acrescentar módulos ao sistema de pesquisa
+global.
+
+== Pesquisa de Texto Completo
+
+O SuiteCRM tem uma opção para habilitar ou desabilitar uma pesquisa de texto
+global. A pesquisa global de texto completo é suportada pela framework de
+pesquisa http://framework.zend.com/manual/1.12/en/zend.search.lucene.overview.html[Zend
+Lucene]. Esta pesquisa trabalha de modo muito semelhante à pesquisa global
+normal mas, além disso, inclui pesquisas dentro de documentos de texto e outros
+ficheiros.
+
+{{% notice note %}}
+Os administradores de sistema podem habilitar ou desabiliar a pesquisa de texto
+completo a partir da ligação Definições AOD no painel de administração.
+{{% /notice %}}
+
+image:169AOD_Settings.png[title="Definições AOD"]
+
+A opção AOD para habilitar/desabilitar a pesquisa global de texto.
+
+image:170Enable_AOD.png[title="Habilitar AOD"]
+
+O resultado desta pesquisa é mostrado de modo ligeiramente diferente dos
+resultados da pesquisa global regular. Os resultados são apresentados em ordem
+de pontuação. Esta pontuação depende da compatibilidade entre o termo de
+pesquisa e o conteúdo e varia de 0 a 100%.
+
+image:171Search_results.png[title="Pesquisa de Texto Completo"]
+
+== Pesquisa Básica de Módulo
+
+A pesquisa básica está disponível em todos os módulos do CRM. O padrão desta
+pesquisa permite aos utilizadores pesquisar no nome do registo.
+
+image:193Search_button.png[title="botão de Pesquisa básica de módulo"]
+
+image:194Search_box.png[title="Pesquisa Básica de módulo"]
+
+A pesquisa básica também permite que os utilizadores marquem a caixa de
+verificação 'Os Meus Items'. Esta opção vai restringir a pesquisa apenas aos
+items que estão atribuídos aos utilizadores.
+
+image:195Search_my_items.png[title="Procurar os Meus items"]
+
+Após procurar por um registo, a pesquisa será guradada. Isto significa que
+pode navegar para outros registos e módulos dentro do CRM que a pesquisa
+não será perdida. Se deseja limpar os termos de pesquisa, pode clicar em
+btn:[Limpar] e depois em btn:[Procurar]. Isto irá limpar qualquer termo de
+pesquisa guardado e retornar os resultados padrão para o módulo.
+
+{{% notice note %}}
+Os Administradores de Sistema podem modificar os campos pesquisávies na
+Pesquisa Básica a partir do Estúdio.
+{{% /notice %}}
+
+== Pesquisa Avançada de Módulo
+
+A Pesquisa Avançada está disponível para todos os módulos dentro do CRM. A
+Pesquisa Avançada fornece-lhe um modo mais detalhado de pesquisar dentro do
+módulo. Por padrão, há mais campos disponíveis na Pesquisa Avançada.
+
+image:196Advanced_search.png[title="Pesquisa Avançada de Módulo"]
+
+Pesquisas Avançadas podem ter muitos campos e critérios específicos. Por esta
+razão, pode guardar os seus critérios de pesquisa para os reusar no futuro.
+
+image:197Save_search.png[title="Guardar pesquisa"]
+
+Para recuperar uma pesquisa guardada, pode seleccionar a pesquisa a partir da
+lista pendente de 'Os meus filtros'. Irá obter os resultados correspondentes aos
+critérios determinados na pesquisa guardada.
+
+image:198Saved_search.png[title="Pesquisas guardadas"]
+
+{{% notice note %}}
+Os Administradores de Sistema podem modificar os campos pesquisávies na
+Pesquisa Avançada a partir do Estúdio.
+{{% /notice %}}
+

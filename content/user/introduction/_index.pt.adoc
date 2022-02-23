@@ -1,0 +1,111 @@
+---
+Title: "Introdução"
+Weight: 10
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:imagesdir: ./../../images/en/user
+
+= Introdução
+
+== A Equipa e a Comunidade do SuiteCRM
+
+
+Pode dizer-se que sem o trabalho contínuo da Equipa e da Comunidade
+do SuiteCRM, eu não teria a motivação e o compromisso de me sentar
+e escrever este Guia de Utilizador. Novas funcionalidades e melhorias
+no produto base são constantemente adicionadas para fazer do SuiteCRM
+o melhor produto Open Source CRM do mundo, e para competir com os
+produtos proprietários de vendedores como SugarCRM, Salesforce e 
+Microsoft.
+
+Quanto à Comunidade do SuiteCRM - providenciam relatórios de erros, 
+correcções e testes. A Comunidade está no centro de qualquer projecto
+Open Source e com o SuiteCRM não é diferente. Com cada novo lançamento
+a comunidade cresce e com ela aumentam os benefícios do ecosistema
+Open Source.
+
+== O que é o SuiteCRM?
+ 
+
+O SuiteCRM é uma derivação (fork) do popular sistema CRM - 
+https://en.wikipedia.org/wiki/Customer_relationship_management[Customer
+Relationship Management] https://en.wikipedia.org/wiki/SugarCRM[SugarCRM], 
+desenvolvido e mantido pela SalesAgility. É uma aplicação alternativa 
+com código livre e de fonte aberta (free and open source). Foi
+lançado no dia 21 de Outubro de 2013 como versão 7.0. A versão mais
+recente à data da publicação deste Guia (versão PT) é a 7.11.8.
+
+O SuiteCRM já foi descarregado mais de meio milhão de vezes desde o 
+lançamento inicial. Foi adoptado pelo programa _England's Code for
+Health_ da NHS (National Health Service) da Grã-Bretanha, que procura
+promover a utilização de código aberto no Sistema Nacional de Saúde do
+Reino Unido.
+
+O projecto SuiteCRM declarou que todas as linhas de código que sejam
+lançadas pelo projecto serão sempre de código aberto. O projecto SuiteCRM
+pretende ser uma alternativa de classe empresarial aos produtos proprietários.
+
+Um mapa de objectivos (Roadmap) do projecto está disponível para detalhar as
+melhorias previstas.
+
+Um fórum de suporte com masi de 25000 membros está disponível para permitir
+suporte gratuito e é regularmente monitorizado pela equipa do Projecto.
+
+Um directório de extensões está disponível e inclui tanto melhorias pagas como
+gratuitas.
+
+O projecto mantém o https://suitecrmondemand.com/[SuiteCRM:OnDemand],
+uma instalação em modo _Software As A Service_ para utilizadores que procuram
+uma instalação rápida e sem manutenção.
+
+Não existirá software restringido por licenças como parte do projecto
+gerido pela SalesAgility. Todo o código é livre. Todo o código está disponível
+para download. Não há uma agenda escondida para cobrar pelo acesso ao
+código. É e sempre será livre e aberto. Não existirão versões pagas.
+
+== Quem é a SalesAgility?
+ 
+
+A SalesAgility é uma empresa de consultoria em código aberto, acreditada
+pela ISO e focada em CRM (Customer Relationship Management). Foi uma
+empresa que cedo adoptou o SugarCRM Community Edition, e são os criadores
+e responsáveis pela manutenção da derivação do SugarCRM – SuiteCRM.
+
+A SalesAgility já entregou mais de 300 projectos SuiteCRM e SugarCRM, e 
+são conhecidos como um recurso de classe mundial no conhecimento e 
+experiência de CRM em código aberto. Os seus clientes incluem 
+governos, grandes empresas e negócios familiares em todo o mundo.
+
+A SalesAgility tem uma missão clara:
+
+[quote]
+O nosso objectivo é inovar e fornecer soluções SuiteCRM avançadas
+bem como serviço a clientes e suporte de primeira classe.
+
+[quote]
+Acreditamos que o código aberto é do melhor interesse para os nossos
+clientes e continuaremos a criar, inovar, evangelizar e fornecer 
+modelos das melhores práticas para a comunidade de código aberto.
+
+== O que é este Guia de Utilizador?
+
+
+O Guia de Utilizador do SuiteCRM foi escrito para os utilizadores. Este
+guia acompanha o utilizador de SuiteCRM do princípio ao fim. Iremos
+explorar todas as áreas, do básico sobre registos até à criação de 
+sistemas complexos de relatórios e workflows automáticos.
+
+O Guia de Utilizador do SuiteCRM está divido em vários capítulos. Estes
+capítulos estão ordenados de acordo com a progressão lógica do trabalho
+diário com um CRM. Os capítulos contém sub-secções que ajudam a ultrapassar
+barreiras, explicando como optimizar o uso do sistema CRM para gerir
+com eficácia dados de vendas.
+
+Os leitores do Guia de Utilizador do SuiteCRM não precisam de ter 
+conhecimentos de programação ou de já conhecer o SuiteCRM. É
+aconselhado que esteja à vontade com a operação de computadores, que
+seja familiar com o seu navegador web e que o SuiteCRM já esteja
+instalado e configurado.

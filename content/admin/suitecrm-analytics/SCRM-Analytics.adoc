@@ -159,7 +159,7 @@ to the hostname or IP address of the server in your web browser.
 By default the web application is listening on port `8080` so for example, your server may be 
 available on `http://localhost:8080/suitecrmanalytics`.
 
-Check out the link:../../../user/suitecrm-analytics/getting-started/[SuiteCRM Analytics User Guide] for 
+Check out the link:../../../user/suitecrm-analytics/1.1/scrm-analytics-getting-started[SuiteCRM Analytics User Guide] for 
 more information on the application.
 
 

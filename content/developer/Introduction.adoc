@@ -49,17 +49,13 @@ as `Accounts` or `MyNewFile`).
 
 == Setting up SuiteCRM
 
-In this guide we’ll be using SuiteCRM v7.1.5 which is the latest at time
-of writing. For up to date versions of the installation instructions see
-the SuiteCRM wiki at
-https://suitecrm.com/wiki/index.php/Installation[suitecrm.com/wiki/index.php/Installation].
-
 [discrete]
-==== Website
+==== Downloading and Installing
 
-The SuiteCRM installer can be found at
-https://suitecrm.com/[SuiteCRM.com]. I would recommend SuiteCRM MAX as I
-prefer to start with a full interface and customise it as needed.
+Visit the product's website to download the 
+https://suitecrm.com/download/[SuiteCRM installer].
+
+In the Administration guide you will find link:../../admin/installation-guide/downloading-installing/[Installation instructions].
 
 [discrete]
 ==== GitHub

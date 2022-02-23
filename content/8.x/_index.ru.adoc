@@ -1,0 +1,13 @@
+---
+title: "SuiteCRM 8 - Руководство"
+weight: 50
+pre: "<b>5. </b>"
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+=== Оглавление
+{{% children depth="3" showhidden="false" %}}
+
+

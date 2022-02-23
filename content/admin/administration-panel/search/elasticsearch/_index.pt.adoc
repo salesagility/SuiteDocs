@@ -1,0 +1,14 @@
+---
+title: Elasticsearch
+weight: 10
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+{{% notice info %}}
+Esta funcionalidade só está disponível para versões do SuiteCRM posteriores a 7.11.
+{{% /notice %}}
+
+== Índice
+{{% children depth="3" showhidden="true" %}}

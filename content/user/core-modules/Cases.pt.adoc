@@ -1,0 +1,77 @@
+---
+Title: Ocorrências
+Weight: 200
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+
+= Ocorrências
+
+No SuiteCRM, Ocorrências são usadas para registar interacções com Clientes
+quando estes pedem ajuda ou conselho, por exemplo, numa função de Suporte ou
+Vendas. Uma Ocorrência pode ser criada, actualizada quando um Utilizador está a
+trabalhar no problema, atribuída a outro Utilizador ou fechada quando ficar
+resolvida. A cada etapa da Ocorrência, o Utilizador pode acompanhar e actualizar
+a conversação de modo a que se crie um registo claro do que ocorreu. As
+Ocorrências podem ser associadas a outros registos como Contas, Contactos e
+Bugs.
+
+== Acções de Ocorrências
+
+Pode aceder as acções de Ocorrências a partir do menu pendente do módulo ou
+através do menu lateral. As acções são:
+
+* *Criar Ocorrência* – É apresentado um novo formulário na Vista de Edição para
+permitir a criação de um novo registo.
+* *Ver Ocorrências* – Mostra a Vista de Lista do módulo Ocorrências. Esta vista
+permite-lhe pesquisar e elencar registos de Ocorrência.
+* *Importar Ocorrências* – Apresenta o Assistente de Importação para o módulo de
+Ocorrências. Para mais informação, ver
+link:./../../introduction/user-interface/record-management/#_importing_records[Importar
+Registos].
+
+Para ver a lista completa de campos disponíveis ao criar uma Ocorrência, ver
+link:./../../appendix-a/#_cases_field_list[Lista de Campos de Ocorrências].
+
+Funcionalidade avançada para Ocorrências pode ser consultada na secção
+link:./../../advanced-modules/cases-with-portal/[Ocorrências com o Portal] deste
+Guia de Utilizador.
+
+== Getão de Ocorrências
+
+* Para ordernar os registos na Vista de Lista, clique no titulo de uma coluna
+que seja ordenável. Irá ordenar de modo ascendente ou descendente.
+* Para procurar uma Ocorrência, veja a secção de
+link:./../../introduction/user-interface/search[Pesquisa] deste guia.
+* Para actualizar algumas ou todas as Ocorrências da Vista de Lista, use o
+painel de Actualização em Massa como descrito na secção
+link:./../../introduction/user-interface/record-management/#_mass_updating_records[Actualização
+em Massa de Registos] deste guia.
+* Para duplicar uma Ocorrência, pode clicar no botão Duplicar na Vista de
+Detalhe e depois guarde o registo duplicado.
+* Para juntar Ocorrências, seleccione os registos na Vista de Lista das
+Ocorrências, clique no link para Juntar no menu pendente de Acções, e siga o
+processo de união de registos. Para mais informação na União de Duplicados, veja
+a secção
+link:./../../introduction/user-interface/record-management/#_merging_records[União
+de Registos] deste guia.
+* Para apagar uma ou mais Ocorrências, pode seleccionar vários registos na Vista
+de Lista e clique em Apagar. Pode também eliminar uma Ocorrência a partir da
+Vista de Detalhe através do botão Apagar. Para um guia mais detalhe sobre a
+eliminação de registos, veja a secção
+link:./../../introduction/user-interface/record-management/#_deleting_records[Eliminar
+Registos] deste guia.
+* Para ver os detalhes de uma Ocorrência, clique no Assunto da Ocorrência na
+Vista de Lista. Isto irá mostrar o registo na Vista de Detalhe.
+* Para editar os detalhes da Ocorrência, clique no ícone Editar na Vista de
+Lista, faça as alterações desejadas, e clique em Guardar.
+* Para um guia detalhado sobre a importação e exportaçãod e Ocorrências, veja as
+secções
+link:./../../introduction/user-interface/record-management/#_importing_records[Importar
+Registos] e
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exportar
+Registos] neste guia.
+* Para acompanhar todas as alterações aos campos auditados, pode clicar em Ver
+Registo de Alterações na Vista de Detalhes ou Vista de Edição.

@@ -1,0 +1,32 @@
+---
+Title: Calendário
+Weight: 110
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+= Calendário
+
+O módulo de Calendário no SuiteCRM permite-lhe gerir o seu tempo ao permitir
+marcar Reuniões, Chamadas e Tarefas. Os Calendários podem ser partilhados de
+modo a que outros utilizadores possam ver as suas actvidades planeadas. Se o
+utilizador for um participante destas actividades ou tiver uma Tarefa atribuída,
+estas serão mostradas no seu Calendário.
+
+== Acçoes de Calendário
+
+Pode aceder às acções de Calendário a partir do menu pendente do módulo de
+Calendário ou a partir da Sidebar. As seguintes acções estão disponíveis:
+
+* *Marcar Reuniões* – É apresentado um novo formulário na Vista de Edição do
+módulo de Reuniões para permitir a criação de um novo registo de Reunião. Este
+registo irá aparecer no Calendário.
+* *Marcar Chamadas* – É apresentado um novo formulário na Vista de Edição do
+módulo de Chamadas para permitir a criação de um novo registo de Chamada. Este
+registo irá aparecer no Calendário.
+* *Criar Tarefa* – É apresentado um novo formulário na Vista de Edição do
+módulo de Tarefas para permitir a criação de um novo registo de Tarefa. Este
+registo irá aparecer no Calendário.
+* *Hoje* – Redirecciona a vista para o formato de Dia, no dia actual.
+

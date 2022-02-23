@@ -44,9 +44,8 @@ You can also close a Meeting by clicking the Close button on the Detail
 View of a Meeting. You can also click the Close and Create New button.
 This will close the Meeting you are viewing and redirect you to the Edit
 View to create a new record.
-* To Reschedule a Meeting, you can click the Reschedule button on the
-Detail View of a Meeting. For a detailed guide on rescheduling Meetings,
-see the link:./../../advanced-modules/reschedule/[Reschedule] section of this user guide.
+* To Reschedule a Meeting, you can edit its `Start Date & Time` field. A practical way to do it
+is to double-click to inline-edit the directly from the Detail View of a Meeting.
 * To delete one or multiple Meetings, you can select multiple records
 from the List View and click delete. You can also delete a Meeting from
 the Detail View by clicking the Delete button. For a more detailed guide

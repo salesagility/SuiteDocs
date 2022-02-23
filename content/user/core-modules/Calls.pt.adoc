@@ -1,0 +1,70 @@
+---
+Title: Chamadas
+Weight: 120
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental:
+
+= Chamadas
+
+O módulo de Chamadas do SuiteCRM permite que os utilizadores programem e
+registem chamdas efectuadas e recebidas nas quais tenham participado.
+
+== Açções de Chamadas
+
+Pode aceder às acções de Chamadas a partir do menu pendente do módulo de
+Chamadas ou através da Sidebar. As acções de chamadas são:
+
+* *Registar Chamada* – É apresentado um novo formulário na Vista de Edição
+para permitir a criação de um novo registo de chamada.
+* *Ver Chamadas* – Apresenta a Vista de Lista para o módulo de Chamadas. Isto
+permite-lhe pesquisar e apresentar registos de Chamadas.
+* *Import Calls* – Apresenta o Assistente de Importação para o módulo de
+Chamadas. Para mais informação, ver link:./../../introduction/user-interface/record-management/#_importing_records[Importar Registos].
+
+Para ver a lista completa dos campos disponíveis ao registar uma Chamada, Ver
+link:./../../appendix-a/#_calls_field_list[Lista de Campos de Chamadas].
+
+== Gerir Chamadas
+
+* Para ordenar os registos de Chamadas na Vista de Lista, clique em qualquer
+título de coluna ordenável. Irá ordenar a coluna de modo ascendente ou
+descendente.
+* Para procurar por uma Chamada, veja a secção
+link:./../../introduction/user-interface/search[Pesquisa] deste guia.
+* Para actualizar algumas ou todas as Chamadas na Vista de Lista, use o Painel
+de Actualização em Massa tal como descrito na secção
+link:./../../introduction/user-interface/record-management/#_mass_updating_records[Actualização
+em Massa de Registos] deste guia.
+* Para duplicar uma Chamada, pode clicar no botão Duplicar na Vista de Detalhe e
+em seguida guardar o regiso duplicado.
+* Para encerrar uma Chamada, clique no ícone 'x' na Vista de Lista de Chamadas.
+Pode também clicar no botão Encerrar na Vista de Detalhe de uma Chamada. Pode
+ainda clicar no botão Encerrar e Criar Nova. Esta acção irá encerrar a Chamada
+que estiver a consultar e apresentar a Vista de Edição onde poderá criar um novo
+registo.
+* Para Reagendar uma chamada, pode clicar no botão Reagendar na Vista de
+Detalhes da Chamada. Para um guia detalhado em reagendamento de chamadas, veja a
+secção link:./../../advanced-modules/reschedule/[Reagendar] deste guia.
+* Para eliminar uma ou mais Chamadas, pode seleccionar vários registos na Vista
+de Lista e clicar em Eliminar. Pode também eliminar uma chamada clicando no
+botão Eliminar na Vista de Detalhe. Para um guia mais detahado sobre a
+eliminação de chamadas, veja a secção
+link:./../../introduction/user-interface/record-management/#_deleting_records[Eliminar
+Registos] deste guia.
+* Para ver os detalhes de uma Chamada, clique no Assunto da Chamada na Vista de
+Lista. Irá abrir a Vista de Detalhe do registo.
+* Para editar os detalhes da Chamada, clique no ícone Editar na Vista d eLista
+ou no botão Editar na Vista de Detalhe, faça as alterações necessárias e clique
+em Guardar.
+* Para um guia detalhado sobre a importação e exportação de Chamadas, veja as
+secções
+link:./../../introduction/user-interface/record-management/#_importing_records[Importar
+Registos] e
+link:./../../introduction/user-interface/record-management/#_exporting_records[Exportar
+Registos] deste guia.
+* Para acompanhar todas as alterações aos campos auditados, clique no botão Ver
+Alterações na vista de Detalhe ou Vista de Edição do registo de Chamada.

@@ -1,0 +1,242 @@
+---
+Title: Security Suite (Groups)
+Weight: 280
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:imagesdir: ./../../images/en/user
+
+= Security Suite (Groups)
+
+O Security Suite permite controlar o acesso dos utilizadores. Permite
+retringir dados sensíveis presentes no SuiteCRM a equipas específicas 
+(grupos).
+O SecuritySuite tem imensas opções de confirguração para se ajustar às
+suas necessidades. Escolha um dos modos de atribuição automática para
+garantir que os utilizadores acedem sempre aos dados que precisam.
+
+== Criação de Grupos
+
+Os Administradores do Sistema podem acresentar grupos e roles ou 
+definir as preferências de Grupos de Segurança nas Definições do 
+Security Suite no topo da página de administração.
+
+image:167Create_groups.png[title="Criação de Grupos"]
+
+== Permitir a criação de grupos por não administradores
+
+Os Administradores do Sistema podem permitir que utilizadores 
+não-administradores adicionem grupos a registos. Isto consegue-se do
+seguinte modo:
+
+1.  Navegue para Configurar Tabs. Acrescente Security Groups às tabs a mostrar.
+2.  Corra o Reparar Roles, dentro do Admin->Reparar, para poder atribuir 
+permissões aos Grupos de Segurança.
+3.  Edite o(s) role(s) para Permitir Gestão de Grupos de Segurança.
+4.  Edite o(s) role(s) para definir Todos ou Grupo na permissão de Listar da
+Gestão de Grupos de Segurança, como desejado.
+
+== Configurar definições do SecuritySuite
+
+O SecuritySuite é muito configurável e suporta quase todas as situações. 
+Devido a esta característica a curva de aprendizagem pode ser mais íngreme e 
+necessitar de algum tempo para compreender o que cada opção faz e como pode
+ser usada para os seus propósitos. Pode encontrar a página de configuração
+através da página de Administração: Admin->SecuritySuite Settings.
+
+== Definição de Grupos
+
+Há 3 passos essenciais para definir Grupos de modo a que funcionem 
+correctamente.
+
+1.  Criar um grupo para cada equipa de utilizadores e atribuir os utilizadores
+ao grupo apropriado.
+2.  Criar um role e seleccionar Grupo como nível de acesso nas células apropriadas, 
+na grelha. Atribuir esse role a cada grupo
+3.  Acrescentar os grupos aos registos na sua instância do SuiteCRM. Pode usar a
+opção "Atribuição em Massa" da vista de Lista para o conseguir. A partir daqui os 
+grupos serão herdados automaticamente de acordo com as definições do SecuritySuite. 
+Pode também usar logic hooks, workflow, ou fazer um insert directo à tabela
+securitygroups_records da base de dados se o fizer na instalação.
+
+Se os seus utilizadores devem ver apenas os seus registos, o role atribuído ao 
+grupo deverá ser configurado para ter direitos de Apenas Dono. Um gestor que 
+faça parte do grupo, mas que também deverá ter permissões para ver todos os 
+registos além dos seus deve ter um role directamente atribuído ao registo que 
+permita acesso de Grupo.
+
+Para mais ajuda, veja este 
+https://www.youtube.com/watch?v=yJ-BzM3GTgA[Vídeo de Introdução^].
+
+Os roles determinam o que um utilizador pode fazer com um registo a que tenham acesso.
+
+1.  Criar os roles
+2.  Editar o(s) role(s) para permitr Gestão de Grupos de Segurança
+3.  Editar o(s) role(s) para definir Listar para Todos ou Grupo na Gestão de Grupos de Segurança conforme desejado
+
+== Uma definição hierárquica típica
+
+Apesar do SecuritySuite poder tratar de qualquer estrutura organizacional, o
+cenário mais comum é quando existe um utilizador com permissões para 
+consultar todos os registos, gestores que podem ver todos os registos
+da sua equipa e membros de equipa que podem apenas ver os seus registos.
+
+=== O Cenário
+
+Esta empresa tem duas equipas de vendas: Este e Oeste. A dona, Joana, deve
+poder consultar todos os registos. A equipa Este é liderada pelo Guilherme
+e a Oeste pela Sara. Ambos devem poder consultar todos os registos da sua
+equipa, o Guilherme vê tudo sobre a equipa Este e a Sara tudo o que é
+relacionado com a equipa Oeste. Os restantes membros das equipas só podem 
+ver os seus próprios registos.
+
+=== Definir os Grupos
+
+1.  Criar um grupo chamado "Vendas Este"
+2.  Acrescentar a este grupo o Guilherme e os membros da equipa
+3.  Criar um grupo chamado "Vendas Oeste"
+4.  Acrescentar a este grupo a Sara e os membros da equipa
+
+=== Definir os Roles
+
+1.  Criar um role chamado "Todos" e definir permissões para "Tudo"._Dica: 
+Clicar no cabeçalho de qualquer coluna na grelha de roles para poder
+definir as permissões para toda a coluna ao mesmo tempo_
+2.  Atribuir o role "Todos" directamente à conta do utilizador Joana
+3.  Criar um role chamado "Só Grupo" com permissões "Grupo" para todos
+os módulos
+4.  Atribuir o role "Só Grupo" directamente aos utilizadores Guilherme e Sara
+5.  Criar um role chamado "Só Meus" com permissões "Dono" para todos os 
+módulos
+6.  Atribuir o role "Só Meus" aos grupos "Vendas Este" e "Vendas Oeste"
+
+=== Atribuir os Grupos
+
+Esta instância já tem algumas Leads por isso vamos associá-las aos grupos
+apropriados.
+
+1.  Vá à vista de lista de Leads e pesquise Leads que devam pertencer ao
+grupo "Vendas Este"
+2.  Marque as Leads apropriadas e no painel de "Atribuição em Massa" 
+escolha "Vendas Este" e clique em "Atribuir"
+3.  Repetir para equipa de "Vendas Oeste"
+
+{{% notice note %}}
+A partir daqui os grupos serão automaticamente herdados pelos novos 
+registos de Chamadas, Contactos, Notas, etc baseado nas definições
+configuradas do SecuritySuite. Se, quando começar a usar o 
+SecuritySuite, a instância de SuiteCRM já incluir muitos registos 
+poderá necessitar de algum trabalho inicial para atribuir os grupos
+aos registos relevantes. 
+Pode usar a funcionalidade de "Atribuição em Massa" da Vista de Lista
+ou inserções directas na tabela securitygroups_records da base de 
+dados. Confira os dados existentes nessa tabela para entender a 
+formatação necessária. Esta última opção requer conhecimentos de SQL.
+{{% /notice %}}
+
+=== Verificar as Definições
+
+Estas definições determinam como funciona o SecuritySuite. No painel de
+"Regras de Herança de Grupos" os valores pré-definidos de
+"Herdar do utilzador que criou", "Herdar do utilizador atribuído" e de
+"Herdar de registo pai" servem perfeitamente para este cenário.
+
+Qualquer Lead que seja criada irá ter automaticamente atribuídos os 
+grupos baseado em quem a criou e a quem é atribuída. Se, posteriormente,
+for criada uma Chamada para essa Lead, a Chamada irá herdar os grupos
+atribuídos à Lead (registo pai) bem como os grupos do utilizador que a 
+criou e do que lhe for atribuído.
+
+Outra definição impostante é "Direitos Rigorosos". No cenário apresentado,
+os valores pré-definidos irão fazer com que, na vista de Lista, os gestores
+da equipa não consigam clicar nos links das Leads dos grupos. Em muitos
+casos irá querer desmarcar esta opção para que a atribuição de grupos
+funcione efectivamente como mostrado.
+
+=== É isso!
+
+A parte mais complicada é sempre a definição inicial. Após ter as
+configurações definidas irá correr sem problemas.
+
+Tem uma estrutura mais complicada? Aplique os mesmos princípios aqui
+enunciados para cada nível de hierarquia. O truque é criar os grupos
+no nível mais baixo da estrutura e criar o resto de baixo para cima.
+
+== Opções Avançadas
+
+Os administradores de sistema do SuiteCRM podem configurar muitas opções
+avançadas para o Security Suite. Isto permite controlar os diversos 
+acessos e permissões, herança de registos, filtros e mais.
+
+image:168Security_group_management.png[title="Advanced Options"]
+
+=== Direitos Aditivos
+
+O utilizador obtém os direitos mais abrangentes de todos os roles
+atribuídos ao utilizador ou grupos a que pertence
+
+=== Direitos Rigorosos
+
+Se um utilizador for membro de diversos grupos, apenas as permissões do
+grupo a que pertence o registo são relevantes.
+
+=== Popup Grupo de Novo utilizador
+
+Ao criar um novo utilizador mostrar um popup com os Grupos de Segurança
+para atribuir o utilizador a um ou mais grupos.
+
+=== Precedência de Role de Utilizador
+
+Indica se os roles atribuídos directamente aos utilizadores têm 
+precedência sobre roles atribuídos a grupos.
+
+=== Filtrar Lista de Utilizadores
+
+Utilizadores não-administadores podem atribuir registos apenas a 
+utilizadores do(s) mesmo(s) grupo(s)
+
+=== Popup de Selecção de Grupo
+
+Quando um registo é criado por um utilizador que pertence a mais que um
+grupo, apresentar um popup de selecção de grupo, ou, pelo contrário, 
+herda do grupo. As regras de herança só serão usadas para registos
+criados pelo sistema (p.e. Workflows, etc).
+
+=== Usar Selecção de Grupo do Criador
+
+Acrescenta um painel ao écran de criação de registos se o utilizador
+pertencer a mais que um grupo, para que o utilizador possa escolher a
+que grupo pertence o registo a ser criado. Se um utilizador pertencer
+apenas a um grupo, aplicam-se as regras normais de herança.
+
+{{% notice note %}}
+O novo registo irá na mesma herdar do utilizador atribuído ou do 
+registo pai se estas opções estiverem definidas. Esta definição 
+apenas se sobrepõe a definição de utilizador criador.
+{{% /notice %}}
+
+=== Herda do utilizador criador
+
+O registo irá herdar todos os grupos atribuídos ao utilizador que o criou.
+
+=== Herdar do utilizador atribuído
+
+O registo irá herdar todos os grupo do utilizador atribuído ao registo.
+Outros grupos atribuídos ao registo NÃO serão removidos.
+
+=== Herda do Registo Pai
+
+p.e. Se um caso for aberto para um contacto, o caso irá herdar os grupos
+associados ao contacto.
+
+=== Grupos padrão para Novos Registos
+
+Define grupos que terão que ser sempre atribuídos sempre que um 
+novo registo seja criado.
+
+=== Conta de recepção de email
+
+Apenas permite acesso a contas de recepção de email que pertençam ao 
+mesmo grupo que o utilizador.

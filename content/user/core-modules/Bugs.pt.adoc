@@ -1,0 +1,107 @@
+---
+Title: Bugs
+Weight: 195
+---
+
+:author: pribeiro42
+:email: p.m42.ribeiro@gmail.com
+
+:experimental: //// this is here to allow btn:[] syntax used below
+
+:imagesdir: /images/en/user
+
+
+= Bugs
+
+Use este módulo para descrever e acompanhar Bugs. Ao criar um registo de Bug,
+pode descrever em maior detalhe o problema que causou
+link:../cases[ocorrências], e descreva possíveis soluções na 
+link:../../advanced-modules/knowledgebase[Base de Conhecimento].
+
+image:Bugs(Errors).png[Bugs]
+
+O que é descrito como Bug pode ser qualquer coisa:
+podem estar associados a uma versão (ou modelo) de um produto tangível e a uma
+versão de lançamento de um software.
+Um utilizador com acesso administrativo pode alterar a lista de versões
+disponíveis.
+Após descrever o Bug, pode associá-lo a um pedido (na Vista de Detalhe, no
+subpainel *da Aplicação*), e com a versão do produto (directamente no formulário
+de Edição do Bug).
+
+{{% notice note %}}
+Por padrão, este módulo está escondido, para o mostrar deverá contactar alguém
+com acesso administrativo.
+{{% /notice %}}
+
+Pode criar a descrição do Bug directamene no sistema ou importar a descrição a
+partir de um ficheiro de texto, encontra mais informação sobre este tópico veja
+a secção.
+link:../../introduction/user-interface/record-management/#_importing_records[Importação
+de Dados].
+
+== Descrição do Bug
+ .  No menu do módulo, seleccione *Reportar Bug*	.
+ .	Na página de descrição do Bug, complete os seguintes campos.:
+
+Assunto:: Indique o nome (curta descrição) do Bug.
+Prioridade:: Escolha uma das prioridades apresentdas, da lista pendente, que
+reflita a urgência da resolução do problema.
+Estado:: Escolha o estado, da lista pendente.
+Tipo:: Escolha o tipo da lista pendente: Bug ou Funcionalidade.
+Fonte:: Da lista pendente, escolha a fonte da detecção do Bug.
+Categoria:: Da lista pendente, seleccione a categoria com que este Bug pode
+estar relacionado.
+
+{{% notice tip %}}
+Todos os valores ​​das listas pendentes podem ser alterados se
+necessário. Portanto, se houver necessidade de algum valor que lá não se
+encontre, pode ser adicionado no Estúdio. Para mais informações sobre como
+modificar as listas de opções, veja
+link:../../../admin/administration-panel/developer-tools/[Editor de opções].
+{{% /notice %}}
+
+Detectado na versão :: Escolha a versão do produto em que este Bug foi detectado
+a partir da lista pendente.
+
+image:Bugs Description.png[Descrição do Bug]
+
+Resolução:: Da lista pendente, escolha a resolução.
+Resolvido na versão:: Escolha, da lista pendente, a versão do produto onde foi
+resolvido este Bug..
+Nota:: A lista de versões pode ser confoigurada por utilizadores com acesso
+administrativo. Para informações detalhadas, veja a secção 
+link:../../../developer/best-practices/[Controlo de Versões].
+Descrição :: Escreva uma descrição completa do problema.
+Registo :: Indique as medidas tomadas para a resolução do problema.
+
+Atribuído a :: Indique a pessoa atribuída ao Bug. Por padrão, é-lhe atribuído.
+
+[start=3]
+ .	Clique no botão btn:[Guardar] para guardar as informações recolhidas;
+ clique no botão btn:[Cancelar] para voltar à lista de sem guardar a informação.
+Depois de guardar as informações do Bug, pode associá-lo com ocorrências novas
+ou antigas, Contactos ou Contas.
+
+== Gestão de Bugs
+
+No módulo pode realizar as seguintes acções :
+
+*	Ordenar a lista de registos. Para isto, clique no ícone no cabeçalho da coluna a ordenar. Para ordenar em ordem inversa, clique no ícone novamente.
+*	Editar ou eliminar informação relativa a vários Bugs ao mesmo tempo, através do link:../../introduction/user-interface/record-management/#_mass_updating_records[painel
+de actualização em massa].
+*	link:../../introduction/user-interface/record-management/#_importing_records[Importar] informação de Bugs, para o conseguir, clique no botão btn:[Importar], localizado
+no menu do módulo.
+*	link:../../introduction/user-interface/record-management/#_merging_records[Juntar Duplicados], Para isto, seleccione os registos relevantes na Vista de Lista e
+seleccione a opção *Combinar*.
+*	Ver informação detalhada acerca do Bug, para isso, clique no nome do Bug na Vista de Lista
+*	Editar dados, para isto clique no botão btn:[Corrigir], ou na Vista de Edição ou na Vista de Lista. Pode também executar a
+link:../../introduction/user-interface/in-line-editing/[Edição rápida].
+*	Duplicação da informação do Bug, para isto, seleccione btn:[Duplicar]. A duplicação é um modo conveniente de criar registos semelhantes, pode depois alterar a informação duplicada para criar a descrição de um novo Bug.
+*	Para eliminar um registo, clique no botão btn:[Eliminar].
+*	Acompanhar as alterações à informação inserida. Para isso, clique no botão btn:[Ver Registo de Alterações] na vista de Detalhes. Se for necessário alterar os campos a acompanhar - fazer essa alteração no Estúdio alterando o parâmetro link:../../../admin/administration-panel/developer-tools/[*Аuditar*] do campo correspondente.
+*	link:../../introduction/user-interface/record-management/#_exporting_records[Exportar] informação de erros, para isso, seleccionar os registos necessários na vista de lista e seleccionar a opção *Exportar* no menu acima dos registos seleccionados.
+*	Ver e editar informação relaccionada com Bug, através dos link:../../introduction/user-interface/views/[Sub-panéis].
+*	Arquivar os emails relacionados com o Bug actual. Para isto, use o botão btn:[Enviar o email para o arquivo] no sub-painel *História* .
+*	Procurar informação acerca dos Bugs - use os link:../../introduction/user-interface/search[Filtros ou Filtros Avançados] no formulário de lista do módulo. Para pesquisar apenas os seus registos, seleccione a opção *Os Meus registos*, para pesquisar Bugs activos (novos, atribuídos, à espera de decisão) marque a opção *Activos*.
+

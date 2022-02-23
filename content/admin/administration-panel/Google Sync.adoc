@@ -47,7 +47,7 @@ Go to https://console.developers.google.com/apis/dashboard[Google Developers Con
 
 |Click on the drop-down at the top of the screen.|image:cred_1.png[float=left]
 
-|Click on the 'New Project' Button.|image:cred_2.png[float=left] 
+|Click on the 'New Project' Button.|image:cred_2.png[float=left]
 |Give the project a descriptive name, like 'SuiteCRM Google Sync', and click 'Create'.|image:cred_3.png[float=left]
 
 |At the top of the page, click on the 'Select a project' dropdown...|image:cred_4.png[float=left]
@@ -71,7 +71,7 @@ For example, if you reach your SuiteCRM install at the URI 'http://crm.yourdomai
 `http://crm.yourdomain.com/index.php?entryPoint=saveGoogleApiKey` +
 If your SuiteCRM install is under a subdirectory, you'll need to include that. For instance +
 `http://crm.yourdomain.com/SuiteCRM/index.php?entryPoint=saveGoogleApiKey` +
- 
+
 Note that this does not need to be a public URL. It only needs to be accessible to the user who is enabling the calendar sync. It is strongly recommend having an https enabled site for production on a publicly accessible site. +
  +
 Then click on ‘Create OAuth client ID’.|image:cred_11.png[float=left]
@@ -124,7 +124,13 @@ Check the ‘Enable Calendar Sync’ checkbox, and then click the ‘Save’ but
 
 That’s it! By default, the sync happens every quarter hour. That can be changed by the Administrator in the Scheduler configuration.
 
+=== Known Issues
 
+If the value of "google_calendar_sync_name" is changed then this will cause ALL Meetings to re-sync.
+This is due to the fact that if the value changes then Google detects all current meetings as new, unique Calendar items.
+
+The best way to avoid this from happening is to not edit/change the "google_calendar_sync_name" that is located
+in your config.php file.
 
 
 
