@@ -101,6 +101,7 @@ _Released 27/01/2022_
 ==== icon:lock[] Security
 
 * CVE: Pending - SQL Injection
+* CVE: Pending - Improper Access Control
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45898[CVE-2021-45898] - Local File Inclusion
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45899[CVE-2021-45899] - PHAR Deserialization Vulnerability / RCE
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45897[CVE-2021-45897] - RCE Vulnerability
@@ -160,7 +161,7 @@ Please link:https://suitecrm.com/download[visit the official website] to find th
 
 _Special thanks to everyone who reporting the security issues addressed in this release!_
 
-Ihor Bliumental, Manuel Zametter
+Ihor Bliumental, Manuel Zametter, Cristóbal Leiva
 
 To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
 
