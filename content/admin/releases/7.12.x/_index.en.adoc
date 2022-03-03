@@ -8,6 +8,215 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+== 7.12.5
+
+_Released 02/03/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:warning[] Important Upgrade Notes
+
+* This release adds a new index to help improve performance in emails, instances with significantly
+large volume of emails may wish to run `ALTER TABLE emails ADD INDEX idx_email_uid (uid);` directly on their database prior to the upgrade
+to help avoid a potential timeout / long upgrade.
+
+==== icon:lock[] Security
+
+* CVE: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23840[CVE-2022-23840] - Remote Code Execution
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0754[CVE-2022-0754] - SQL Injection
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0755[CVE-2022-0755] - Improper Access Control
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0756[CVE-2022-0756] - Improper Authorisation
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9478[9478] - Update Github Templates
+* PR: https://github.com/salesagility/SuiteCRM/pull/9507[9507] - Add getters to SearchResultsController
+* PR: https://github.com/salesagility/SuiteCRM/pull/9479[9479] - Fix https://github.com/salesagility/SuiteCRM/issues/2857[2857] - No Dynamic Refreshing in Dashboards
+* PR: https://github.com/salesagility/SuiteCRM/pull/9509[9509] - Fix https://github.com/salesagility/SuiteCRM/issues/9508[9508] - Legacy Search Fields are incorrect size.
+* PR: https://github.com/salesagility/SuiteCRM/pull/9481[9481] - Fix https://github.com/salesagility/SuiteCRM/issues/9480[9480] - Slow to get Imap Mailbox with Mass Record Amounts
+* PR: https://github.com/salesagility/SuiteCRM/pull/9518[9518] - Fix https://github.com/salesagility/SuiteCRM/issues/4075[4075] - No way to add Email Signature after adding Email Template
+* PR: https://github.com/salesagility/SuiteCRM/pull/9521[9521] - Fix https://github.com/salesagility/SuiteCRM/issues/9427[9427] - Adding missing help popup help strings in Studio
+* PR: https://github.com/salesagility/SuiteCRM/pull/9525[9525] - Fix https://github.com/salesagility/SuiteCRM/issues/9468[9468] - Adding Security Suite subpanels to new custom modules
+* PR: https://github.com/salesagility/SuiteCRM/pull/9452[9452] - Fix https://github.com/salesagility/SuiteCRM/issues/9451[9451] - Missing duplicate merge filter options in Studio
+* PR: https://github.com/salesagility/SuiteCRM/pull/9446[9446] - Fix https://github.com/salesagility/SuiteCRM/issues/9445[9445] - More than 10 tabs in a views enters in a loop
+* PR: https://github.com/salesagility/SuiteCRM/pull/8492[8492] - Fix https://github.com/salesagility/SuiteCRM/issues/8366[8366] - V8 API Filtering W/ OR Operator Chained Conditions
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+{{% ghcontributors faisalfs10x %}} NetbyteSEC www.netbytesec.com,  Manuel Zametter
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM marcoblancas jobvector serfreeman1337 %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+== 7.12.4
+
+_Released 10/02/2022_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.12.4.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.12.4.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+{{% notice note %}}
+Important: We have now updated UTF-8 repair tool to fix a critical issue where it would mark valid email addresses as deleted in 7.12.3. We would recommend updating to 7.12.4+ to access the fix for this functionality.
+We would again like to thank the community for their assistance in identifying and highlighting this issue.
+{{% /notice %}}
+
+{{% notice note %}}
+Please note that the UTF-8 Repair will not function for user passwords. Therefore, we would advise any users who could be experiencing issues logging in to reset their password accordingly.
+{{% /notice %}}
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9483[9483] - Fix https://github.com/salesagility/SuiteCRM/issues/9482[9482] - Only save update fields on utf encoding repair
+* PR: https://github.com/salesagility/SuiteCRM/pull/9391[9391] - Fix https://github.com/salesagility/SuiteCRM/issues/7842[7842] - Do not reset email addresses list upon saving
+* PR: https://github.com/salesagility/SuiteCRM/pull/9496[9496] - Fix 9496 - Cannot save dropdown values
+* PR: https://github.com/salesagility/SuiteCRM/pull/9454[9495] - Fix 9495 - Fix duplicate results in basic search
+* PR: https://github.com/salesagility/SuiteCRM/pull/8476[8476] - Statically Compile EXT Files & Studio Override Precedence
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors holdusback deuks %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
+== 7.12.3
+
+_Released 27/01/2022_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.12.3.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.12.3.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+Important - This release resolves an important issue with UTF-8 encoding. Data created from 7.10.30 and 7.11.19 onwards may be wrongly encoded on your database and could therefore result in search issues.
+To resolve these issues please run the new 'Repair utf encoding' option on the Repair actions via the Admin Tools menu or through Robo CLI.
+
+==== Repairing utf8 data
+
+{{% notice warning %}}
+Important: We have verified an issue with the UTF-8 repair tool marking valid email addresses as deleted.  As such, we would discourage users from using the 'Repair utf encoding' option on the Repair actions via the Admin Tools menu or related Robo CLI commands on this version. Please note this is resolved from 7.12.4, please upgrade to this version or above to make use of this feature.
+{{% /notice %}}
+
+===== Intro
+
+Before running the utf8 data repair command, please have the following into account:
+
+* Please make sure to backup your database before you run this action
+* The data on your tables is going to be updated
+
+====== Execution modes
+The data repair can be executed in two modes: `asynchronous` and `synchronous`
+
+*Asynchronous*
+
+* Default execution mode
+* It adds a job to the job queue.
+* It will normalize records in batches.
+* It requires cron to be configured.
+
+
+*Synchronous*
+
+* Optional. Can be used in `Robo CLI` and in the `Repair administration menu`
+* It will repair data on all records in one pass.
+* Both `Robo CLI` and `UI page` will only end after all records are repaired
+
+
+===== Running using Robo CLI
+
+To run using robo, use the following command:
+
+`./vendor/bin/robo repair:normalize-record-encoding`
+
+To run run using robo in `synchronous` run the command with the `--sync-run`
+
+`./vendor/bin/robo repair:normalize-record-encoding --sync-run`
+
+For information on more options run:
+
+`./vendor/bin/robo repair:normalize-record-encoding --help`
+
+
+===== Running using the UI
+
+* Login as admin user
+* Go to `Administration` page
+* Go to `Repair`
+* Go to `Repair utf encoding`
+* Please read the warning messages
+* Optional: Change the settings on the page
+* Click Submit
+* You'll see different output depending on the execution mode you've selected
+
+==== icon:lock[] Security
+
+* CVE: Pending - SQL Injection
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45898[CVE-2021-45898] - Local File Inclusion
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45899[CVE-2021-45899] - PHAR Deserialization Vulnerability / RCE
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45897[CVE-2021-45897] - RCE Vulnerability
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9416[9416] - Fix https://github.com/salesagility/SuiteCRM/issues/9191[#9191] - Update antixss lib dependency
+* PR: https://github.com/salesagility/SuiteCRM/pull/9434[9434] - Fix #9434 - Cron notion unit tests fails
+* PR: https://github.com/salesagility/SuiteCRM/pull/9420[9420] - Fix https://github.com/salesagility/SuiteCRM/issues/8525[#8525], https://github.com/salesagility/SuiteCRM/issues/8309[#8309] Bulk Action button missing and delete button showing for users with no delete access
+* PR: https://github.com/salesagility/SuiteCRM/pull/9398[9398] - Fix #9398 - Consistently store dropdowns in $app_list_strings
+* PR: https://github.com/salesagility/SuiteCRM/pull/9407[9407] - Fix https://github.com/salesagility/SuiteCRM/issues/9406[#9406] - Validation displayed static message isn't correct
+* PR: https://github.com/salesagility/SuiteCRM/pull/9353[9353] - Fix https://github.com/salesagility/SuiteCRM/issues/9271[#9271] - Primary Email property is kept after adding an Email address field
+* PR: https://github.com/salesagility/SuiteCRM/pull/9410[9410] - Fix https://github.com/salesagility/SuiteCRM/issues/9378[#9378] - Filter by Email1 Field Through the API
+* PR: https://github.com/salesagility/SuiteCRM/pull/9312[9312] - Fix #9312 - Declaring object within StudioClass to remove Strict Warnings
+* PR: https://github.com/salesagility/SuiteCRM/pull/9387[9387] - Fix #9387 - Clean Historic and Failed Schedulers
+* PR: https://github.com/salesagility/SuiteCRM/pull/9401[9401] - Fix https://github.com/salesagility/SuiteCRM/issues/9380[#9380] - Date action in workflow fails to save
+* PR: https://github.com/salesagility/SuiteCRM/pull/9409[9409] - Fix https://github.com/salesagility/SuiteCRM/issues/9408[#9408] - Emails can't be deleted from inline edit
+* PR: https://github.com/salesagility/SuiteCRM/pull/9418[9418] - Fix https://github.com/salesagility/SuiteCRM/issues/8948[#8948] - Make Project Tasks Importable.
+* PR: https://github.com/salesagility/SuiteCRM/pull/8428[8428] - Fix https://github.com/salesagility/SuiteCRM/issues/8155[#8155] - Remove Unused PDF Settings
+* PR: https://github.com/salesagility/SuiteCRM/pull/9455[9455] - Fix #9455 - Popup metadata override removed when filtered
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+Ihor Bliumental, Manuel Zametter
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors gody01 dursuntosun marin-h xpico SinergiaCRM timo-ecm2 daheile pstevens71 tfreier %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.12.2
 
 _Released 17/12/2021_
