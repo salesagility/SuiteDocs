@@ -10,6 +10,70 @@ aliases:
 :toclevels: 1
 :icons: font
 
+== 8.0.4
+
+_Released 02/03/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:warning[] Important Upgrade Notes
+
+* This release adds a new index to help improve performance in emails, instances with significantly
+large volume of emails may wish to run `ALTER TABLE emails ADD INDEX idx_email_uid (uid);` directly on their database prior to the upgrade
+to help avoid a potential timeout / long upgrade.
+
+==== icon:lock[] Security
+
+* CVE: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23840[CVE-2022-23840] - Remote Code Execution
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0754[CVE-2022-0754] - SQL Injection
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0755[CVE-2022-0755] - Improper Access Control
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0756[CVE-2022-0756] - Improper Authorisation
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9478[9478] - Update Github Templates
+* PR: https://github.com/salesagility/SuiteCRM/pull/9507[9507] - Add getters to SearchResultsController
+* PR: https://github.com/salesagility/SuiteCRM/pull/9479[9479] - Fix https://github.com/salesagility/SuiteCRM/issues/2857[2857] - No Dynamic Refreshing in Dashboards
+* PR: https://github.com/salesagility/SuiteCRM/pull/9509[9509] - Fix https://github.com/salesagility/SuiteCRM/issues/9508[9508] - Legacy Search Fields are incorrect size.
+* PR: https://github.com/salesagility/SuiteCRM/pull/9481[9481] - Fix https://github.com/salesagility/SuiteCRM/issues/9480[9480] - Slow to get Imap Mailbox with Mass Record Amounts
+* PR: https://github.com/salesagility/SuiteCRM/pull/9518[9518] - Fix https://github.com/salesagility/SuiteCRM/issues/4075[4075] - No way to add Email Signature after adding Email Template
+* PR: https://github.com/salesagility/SuiteCRM/pull/9521[9521] - Fix https://github.com/salesagility/SuiteCRM/issues/9427[9427] - Adding missing help popup help strings in Studio
+* PR: https://github.com/salesagility/SuiteCRM/pull/9525[9525] - Fix https://github.com/salesagility/SuiteCRM/issues/9468[9468] - Adding Security Suite subpanels to new custom modules
+* PR: https://github.com/salesagility/SuiteCRM/pull/9452[9452] - Fix https://github.com/salesagility/SuiteCRM/issues/9451[9451] - Missing duplicate merge filter options in Studio
+* PR: https://github.com/salesagility/SuiteCRM/pull/9446[9446] - Fix https://github.com/salesagility/SuiteCRM/issues/9445[9445] - More than 10 tabs in a views enters in a loop
+* PR: https://github.com/salesagility/SuiteCRM/pull/8492[8492] - Fix https://github.com/salesagility/SuiteCRM/issues/8366[8366] - V8 API Filtering W/ OR Operator Chained Conditions
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM marcoblancas jobvector serfreeman1337 %}}
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+{{% ghcontributors faisalfs10x %}} NetbyteSEC www.netbytesec.com,  Manuel Zametter
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 8.0.3
 
 _Released 28/01/2022_
