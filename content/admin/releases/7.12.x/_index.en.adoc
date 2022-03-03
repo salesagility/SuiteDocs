@@ -178,6 +178,7 @@ For information on more options run:
 ==== icon:lock[] Security
 
 * CVE: Pending - SQL Injection
+* CVE: Pending - Improper Access Control
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45898[CVE-2021-45898] - Local File Inclusion
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45899[CVE-2021-45899] - PHAR Deserialization Vulnerability / RCE
 * CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45897[CVE-2021-45897] - RCE Vulnerability
@@ -205,7 +206,7 @@ For information on more options run:
 
 _Special thanks to everyone who reporting the security issues addressed in this release!_
 
-Ihor Bliumental, Manuel Zametter
+Ihor Bliumental, Manuel Zametter, Cristóbal Leiva
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
