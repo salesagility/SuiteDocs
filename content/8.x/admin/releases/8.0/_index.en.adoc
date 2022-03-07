@@ -29,7 +29,7 @@ to help avoid a potential timeout / long upgrade.
 
 ==== icon:lock[] Security
 
-* CVE: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23840[CVE-2022-23840] - Remote Code Execution
+* CVE: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23940[CVE-2022-23940] - Remote Code Execution
 * CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0754[CVE-2022-0754] - SQL Injection
 * CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0755[CVE-2022-0755] - Improper Access Control
 * CVE: https://nvd.nist.gov/vuln/detail/CVE-2022-0756[CVE-2022-0756] - Improper Authorisation
