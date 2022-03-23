@@ -1,0 +1,104 @@
+---
+title: "8.1 Releases"
+weight: 9870
+aliases:
+  - /8.x/admin/releases/8.1/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+
+== 8.1.0
+
+_Released 24/03/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Enhancements & Bug Fixes
+
+* Add Recently Viewed Functionality
+- Display Recently Viewed in the Navbar
+
+* Add Favourites Functionality
+- Display Favourites in the Navbar
+- Add Favourite Flag to RecordView
+
+* Disable Legacy Actions
+- Alerts
+- Recently Viewed
+- Favourites Loading
+- LDAP Settings
+- SAML Settings
+
+* Add HTML field to RecordView
+
+* Permanently store User's Preferences for ListView UI changes
+- Table Sort Preferences
+- Column Chooser Preferences
+- Insight Preferences
+- Filter Preferences
+
+* Permanently store User's Preferences for RecordView UI changes
+- Subpanel Open/Close Preferences
+- Subpanel Insights Open/Close Preferences
+- Subpanel Order Preferences
+
+* Performance Enhancements
+- Delay splash screen for quicker performance
+
+* Trim event invite links
+
+==== icon:star[] Styling
+
+* Favourite Star Styling
+* Update styling for User Wizard on mobile devices
+* Style Merge Records classic view
+
+* Update Admin Settings Styling
+- Locale updated on mobile devices
+- ElasticSearch updated on mobile devices
+- Search updated on mobile devices
+- Sales updated on mobile devices
+- Currency updated on mobile devices
+- System Settings updated on mobile devices
+- PDF Settings styling updated
+
+* General Styling Changes
+- Print PDF Settings popup
+- Email Confirmation popup
+- Campaigns
+- Calendar Popup
+** Invitee Panel updated to SuiteCRM8 Styling
+- Email Templates
+- Workflow
+** Fix Actions, Email & Calendar Styling
+- Projects
+** Resource Panel Buttons & Fields Updated to SuiteCRM8 View
+- Maps Config
+- Event Delegate Subpanel
+
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/developer/installation-guide/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''
