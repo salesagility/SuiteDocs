@@ -21,23 +21,67 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Upgrad
 
 ifdef::env-github[:btn:]  
 
-{{% notice note %}}
-Описание обновления для SuiteCRM 8 ещё в процессе создания, наберитесь терпения. 
- {{% /notice %}}
+== Подготовка к обновлению системы
 
+Перед обновлением системы сверьтесь с link:../../compatibility-matrix[таблицей совместимости] и убедитесь, что у вас установлены все необходимые компоненты.
 
-== Обновление системы
-
-В данном разделе описывается процесс обновления системы при помощи мастера обновления. 
-
-Прежде всего, необходимо скачать необходимый https://suitecrm.com/upgrade-suitecrm[пакет обновления^].
- 
 {{% notice warning %}}
-Перед выполнением обновления настоятельно рекомендуется сделать резервную копию системы!
+Обновление системы ещё находится в стадии разработки. Перед выполнением обновления настоятельно рекомендуется сделать резервную копию системы!
 {{% /notice %}}
 
-=== Таблица совместимости 
+{{% notice note %}}
+Рекомендуем сначала запустить процесс обновления в отдельном экземпляре системы и протестировать полученый результат. После успешного тестирования повторите процесс обновления на рабочем экземпляре SuiteCRM.
+{{% /notice %}}
+ 
+== Обновление до 8 версии
+ 
+. Скачайте необходимый https://suitecrm.com/upgrade-suitecrm[пакет обновления^].
+. В установленном экземпляре ситемы создайте  папку `<your-suitecrm-8-root-folder>/tmp/package/upgrade` и скопируйте в неё скачанный пакет обновления. При необходимости задайте соответствующие права доступа на скопированный файл.
+. Запустите процесс обновления, выполнив из корневой папки системы команду `./bin/console suitecrm:app:upgrade -t "<version>"`, где +
+*<version>* - название скачаннного пакета обновления.
 
-SuiteCRM может быть запущена в различных операционных системах, с использованием различных браузеров. Все детали указаны в link:../../compatibility-matrix[этой] таблице совместимости.
+В результате выполнения обновления вы увидите приблизительно следующее:
 
-Продолжение обязательно будет...
+{{% notice info %}}
+В этой версии обновления сообщения, начинающиеся с `libpng warning`, можно игнорировать.
+{{% /notice %}}
+
+[source,bash]
+----
+SuiteCRM Upgrade
+============
+
+Running: check-package
+step: check-package | status: done
+Package found in path
+Running: extract-package
+step: extract-package | status: done
+Package extracted
+Running: check-permissions
+step: check-permissions | status: done
+Permissions checked
+Running: install-upgrade-package
+step: install-upgrade-package | status: done
+Successfully installed package
+Running: run-migrations
+step: run-migrations | status: done
+Successfully run migrations
+Running: legacy-post-upgrade
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+step: legacy-post-upgrade | status: done
+Post Upgrade process complete
+Running: clear-symfony-cache
+----
+
+[start=4]
+. При необходимости установите необходимые link:../downloading-installing/#_установка_прав[права доступа].
+
+. Заново войдите в систему.
