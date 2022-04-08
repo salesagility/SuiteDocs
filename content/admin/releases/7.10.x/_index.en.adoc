@@ -8,6 +8,57 @@ weight: 9890
 :toclevels: 1
 :icons: font
 
+== 7.10.36
+
+_Released 27/01/2022_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.36.zip[*Source code* (zip)]
+* https://github.com/salesagility/SuiteCRM/archive/v7.10.36.tar.gz[*Source code* (tar.gz)]
+
+===  icon:check[] Release Notes
+
+Important - Extended Support for 7.10.x ends on the 31st of January. We would therefore suggest you upgrade to the latest version before then so that you can continue to receive security and maintenance releases provided by the team. For more information regarding upgrading to the latest version please see https://suitecrm.com/upgrade-suitecrm[here].
+
+==== icon:lock[] Security
+
+* CVE: Pending - SQL Injection
+* CVE: Pending - Improper Access Control
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45898[CVE-2021-45898] - Local File Inclusion
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45899[CVE-2021-45899] - PHAR Deserialization Vulnerability / RCE
+* CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45897[CVE-2021-45897] - RCE Vulnerability
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9434[9434] - Fix #9434 - Cron notion unit tests fails
+* PR: https://github.com/salesagility/SuiteCRM/pull/9420[9420] - Fix https://github.com/salesagility/SuiteCRM/issues/8525[#8525], https://github.com/salesagility/SuiteCRM/issues/8309[#8309] Bulk Action button missing and delete button showing for users with no delete access
+* PR: https://github.com/salesagility/SuiteCRM/pull/9398[9398] - Fix #9398 - Consistently store dropdowns in $app_list_strings
+* PR: https://github.com/salesagility/SuiteCRM/pull/9407[9407] - Fix https://github.com/salesagility/SuiteCRM/issues/9406[#9406] - Validation displayed static message isn't correct
+* PR: https://github.com/salesagility/SuiteCRM/pull/9353[9353] - Fix https://github.com/salesagility/SuiteCRM/issues/9271[#9271] - Primary Email property is kept after adding an Email address field
+* PR: https://github.com/salesagility/SuiteCRM/pull/9410[9410] - Fix https://github.com/salesagility/SuiteCRM/issues/9378[#9378] - Filter by Email1 Field Through the API
+* PR: https://github.com/salesagility/SuiteCRM/pull/9409[9409] - Fix https://github.com/salesagility/SuiteCRM/issues/9408[#9408] - Emails can't be deleted from inline edit
+* PR: https://github.com/salesagility/SuiteCRM/pull/9418[9418] - Fix https://github.com/salesagility/SuiteCRM/issues/8948[#8948] - Make Project Tasks Importable.
+* PR: https://github.com/salesagility/SuiteCRM/pull/8428[8428] - Fix https://github.com/salesagility/SuiteCRM/issues/8155[#8155] - Removed Unused PDF Settings
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+Ihor Bliumental, Manuel Zametter, Cristóbal Leiva
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors gody01 dursuntosun marin-h xpico SinergiaCRM timo-ecm2 daheile pstevens71 likhobory tfreier %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.10.35
 
 _Released 17/12/2021_
