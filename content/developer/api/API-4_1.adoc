@@ -4,12 +4,12 @@ title: "API v4.1"
 ---
 
 {{% notice warning %}}
-This documentation pertains to SuiteCRM versions up to v.7.9.x. 
+This documentation pertains to SuiteCRM versions up to v.7.9.x.
 Since SuiteCRM version 7.10, a link:../[brand new v8 REST API] is available.
 {{% /notice %}}
 
 The SuiteCRM API allows third party code to access and edit SuiteCRM
-data and functionality. 
+data and functionality.
 
 == Using the API
 
@@ -108,7 +108,7 @@ a post argument.
 The arguments to the REST API calls are:
 
 `method`::
-  The method which will be called, i.e. `login` or `get_entry_list`. See the 
+  The method which will be called, i.e. `login` or `get_entry_list`. See the
   link:../api-v4.1-methods[list of API v4.1 methods].
 `input_type`::
   The input type of the rest_data. This is usually `JSON` but can also
@@ -130,9 +130,9 @@ not the name.
 [source,php]
 ----
 <?php
- 
+
 $url = "http://example.com/suitecrm/service/v4_1/rest.php";
- 
+
 function restRequest($method, $arguments){
  global $url;
  $curl = curl_init($url);
@@ -143,30 +143,30 @@ function restRequest($method, $arguments){
          "response_type" => "JSON",
          "rest_data" => json_encode($arguments),
  );
- 
+
  curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
- 
+
  $result = curl_exec($curl);
  curl_close($curl);
  return json_decode($result,1);
 }
- 
- 
+
+
 $userAuth = array(
         'user_name' => 'suitecrmuser',
         'password' => md5('suitecrmpassword'),
 );
 $appName = 'My SuiteCRM REST Client';
 $nameValueList = array();
- 
+
 $args = array(
             'user_auth' => $userAuth,
             'application_name' => $appName,
             'name_value_list' => $nameValueList);
- 
+
 $result = restRequest('login',$args);
 $sessId = $result['id'];
- 
+
 $entryArgs = array(
  //Session id - retrieved from login call
 	'session' => $sessId,
@@ -197,7 +197,7 @@ $entryArgs = array(
   		'deleted' => 0,
  );
  $result = restRequest('get_entry_list',$entryArgs);
- 
+
 print_r($result);
 ----
 
@@ -205,13 +205,33 @@ print_r($result);
 For a full list of API methods and their arguments see
 link:../api-v4.1-methods[here].
 
+== Formatting JSON REST
+
+Arguments for the JSON API must be provided in the order of the example format shown below.
+
+Example format:
+```
+// Works correctly
+$params = array();
+$params['session'] = $this->sessionToken;
+$params['module_name'] = 'Accounts';
+$params['query'] = "accounts.id IS NOT NULL");
+$params['order_by'] = '';
+$params['offset'] = 0;
+$params['select_fields'] = array();
+$params['link_name_to_fields_array'] = array(array('name'=>'accounts', 'value'=>array('id', 'name')));
+$params['max_results'] = 5;
+$params['deleted'] = false;
+$jsonEncodedData = json_encode($params);
+```
+
 == Adding custom API methods
 
 Sometimes the existing API methods are not sufficient or using them for
 a task would be overly complex. SuiteCRM allows the web services to be
 extended with additional methods or overriding existing methods.
 
-The recommended path for custom entry points is the following `custom/service/<version>_custom/`. 
+The recommended path for custom entry points is the following `custom/service/<version>_custom/`.
 For web service version `v4_1` this would be `custom/service/v4_1_custom/`.
 
 Next we create the implementing class. This will create our new method.
@@ -231,18 +251,18 @@ if(!defined('sugarEntry')){
 require_once 'service/v4_1/SugarWebServiceImplv4_1.php';
 class SugarWebServiceImplv4_1_custom extends SugarWebServiceImplv4_1
 {
- 
+
   function write_log_message($session, $message)
   {
     $GLOBALS['log']->info('Begin: write_log_message');
 
     //Here we check that $session represents a valid session
     if (!self::$helperObject->checkSessionAndModuleAccess(
-                                                    $session, 
-                                                    'invalid_session', 
-                                                    '', 
-                                                    '', 
-                                                    '',  
+                                                    $session,
+                                                    'invalid_session',
+                                                    '',
+                                                    '',
+                                                    '',
                                                     new SoapError()))
     {
       $GLOBALS['log']->info('End: write_log_message.');
@@ -267,10 +287,10 @@ Next we create the registry file which will register our new method.
         protected function registerFunction()
         {
             parent::registerFunction();
-            $this->serviceClass->registerFunction('write_log_message', 
+            $this->serviceClass->registerFunction('write_log_message',
                                                   array(
                                                     'session'=>'xsd:string',
-                                                    'message'=>'xsd:string'), 
+                                                    'message'=>'xsd:string'),
                                                   array(
                                                     'return'=>'xsd:boolean')
                                                   );
@@ -288,16 +308,16 @@ have created and will call the webservice implementation with our files.
 ----
 <?php
 chdir('../../..');
- 
+
 require_once 'SugarWebServiceImplv4_1_custom.php';
- 
+
 $webservice_path = 'service/core/SugarRestService.php';
 $webservice_class = 'SugarRestService';
 $webservice_impl_class = 'SugarWebServiceImplv4_1_custom';
 $registry_path = 'custom/service/v4_1_custom/registry.php';
 $registry_class = 'registry_v4_1_custom';
 $location = 'custom/service/v4_1_custom/rest.php';
- 
+
 require_once 'service/core/webservice.php';
 ----
 
