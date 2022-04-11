@@ -34,13 +34,51 @@ SuiteCRM.
 
 == Module Builder
 
-This section is to be completed.
+Use the Module Builder to create custom modules in SuiteCRM. The process of creating a custom module is as follows:
+
+. Create a package to house the new module(s).
+. Create a module using one of the following templates that SuiteCRM provides for you:
++
+[cols = "20, 80", frame = "none", grid = "none"]
+|===
+| *Basic* | This template provides basic fields such as ID, Date Entered, and Created By. Use this template to create a module from scratch.
+| *Company* | This template provides organization-specific fields such as Company Name, Industry, and Billing Address. Use this template to create a module that is similar to the Accounts module.
+| *File* | This template provides document-specific fields such as File Name and Document Type. Use this template to create a module that is similar to the Documents module.
+| *Issue* | This template provides case and bug-specific fields such as ID, Description, and Created By. Use this template to create a module that is similar to the Cases module or Bug Tracker module.
+| *Person* | This template provides individual-specific fields such as salutation, title, name, address, and phone number. Use this template to create a module that is similar to the Contacts module or the Leads module.
+| *Sale* | This template provides opportunity-specific fields such as Lead-Source and Probability. Use this template to create a module that is similar to the Opportunities module.
+|===
+Furthermore, you can configure the following options:
+* *Importing:* Selecting this option to allow data import into the module.
+* *Navigation Tab:* By default, this option is enabled to create a tab for the module on the top navigation bar. 
++
+{{%notice note %}} If you want to hide modules temporarily, use <<display_modules_subpanels>> after deployment. Disable this option only for backend modules which will never be shown in the user interface. {{% /notice %}}
+
+. Create new data fields. You can also rename default fields from the template.
+. Customize page layouts for List View, Edit View, Detail View, Sub-panels, Search form, and SuiteCRM Dashlets.
+. Create relationships between the new module and other modules. 
+. Save the package and distribute it. 
+
+{{%notice tip %}} Steps 3-5 are optional and can be done in Studio after deployment. {{% /notice %}}
+
+=== Distribute a Package
+
+You can choose one of the following options to distribute the package:
+
+[cols = "20, 80", frame = "none", grid = "none"]
+
+|===
+| *Deploy* | This option is designed to install the custom module on your local SuiteCRM instance and make it available to users in your organization. After deployment, if needed, you can make further changes to the module in Module Builder and deploy it again to update the installed module. However, note that if you change a deployed custom module in Studio and then re-deploy it from Module Builder, all changes made prior in Studio will be lost. 
+| *Publish* | This option is designed for distribution to specific users or customers. The system creates a zip file, which you can save on your local machine. You can then email it to one or more individuals who can use the Module Loader to upload the zip file into their SuiteCRM instance. After the module is installed through Studio, you can add or remove fields and make other changes to a published module.
+| *Export* | This option is designed for distribution to developers. The system creates a zip file, which you can save on your local machine and share with others. Using the Module Loader, developers can install it on their SuiteCRM instance and customize it further in Module Builder if necessary. The package is visible only in Module Builder and, hence, only administrators can access it until it has been deployed. 
+|===
+
 
 == History Subpanel
 
 image:HistorySubpanel.png["History subpanel settings"]
 
-== Display Modules and Subpanels
+== Display Modules and Subpanels [[display_modules_subpanels]]
 
 Control which modules and subpanels are visible in *SuiteCRM* by dragging
  and dropping modules or subpanels between the Displayed and Hidden columns.
