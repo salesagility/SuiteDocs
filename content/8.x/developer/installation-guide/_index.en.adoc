@@ -102,12 +102,16 @@ Depending on the changes you are working on you may also need to run the followi
 
 From the suite 8 root folder
 
-* Run `yarn run build-dev:common`
-* Run `yarn run build-dev:core`
-* Run `yarn run build-dev:shell`
+* Run `yarn run build-dev:common --watch`
+* Run `yarn run build-dev:core --watch`
+* Run `yarn run build-dev:shell --watch`
 
 {{% notice note %}}
 When building common, core and shell you need to build all in prod mode or all in non-prod mode.
+{{% /notice %}}
+
+{{% notice note %}}
+Building in non-prod mode with `--watch` will detect changes and rebuild on-the-fly
 {{% /notice %}}
 
 ==== Run frontend unit tests
