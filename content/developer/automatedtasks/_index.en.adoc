@@ -11,7 +11,7 @@ SuiteCRM utilises https://robo.li[Robo tasks] to provide automation for common t
 
 {{% notice info %}}
 
-Robo <3.0.7 falls to call autoload.php relative to the vendor/bin. This may cause errors when trying to run any of SuiteCRM's robo commands. Recommdation is to update the instance's robo composer libraries to 3.0.7+. Alternatively replace the following commands pathname reference of `./vendor/bin/robo` to `./vendor/consolidation/robo/robo`
+Robo <3.0.7 fails to call autoload.php relative to the vendor/bin. This may cause errors when trying to run any of SuiteCRM's robo commands. Recommdation is to update the instance's robo composer libraries to 3.0.7+. Alternatively replace the following commands pathname reference of `./vendor/bin/robo` to `./vendor/consolidation/robo/robo`
 
 {{% /notice %}}
 
