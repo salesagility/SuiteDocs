@@ -8,6 +8,77 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+== 7.12.6
+
+_Released 24/05/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+{{% notice warning %}}
+Important: This release includes critical security fixes, we strongly recommend users of older versions to update as soon as possible
+{{% /notice %}}
+
+==== icon:warning[] Important Upgrade Notes
+
+* New entries were added to the config. Please make sure to run `Rebuild Config File` located in the Administration > Repair menu
+* Php session_gc is now force enabled by default.
+** This option can be disabled by setting enable within the session_gc array to false in config.php
+** The values for session.gc_probability and session.gc_divisor can be changed in the following config.php entries within the session_gc array
+*** gc_probability
+*** gc_divisor
+** Check php documentation for more information on these settings https://www.php.net/manual/en/session.configuration.php
+** If you are using a session_dir other than the default, please make sure to have session_gc enabled. Otherwise session files won't be cleaned.
+** If you are using debian or ubuntu based systems, and you have the default session_dir (which fallsback to the system default),
+You may want to set enable within session_gc array to false, as that is the default value for these systems.
+They have replacements for the php session_gc. Please review your system’s defaults before making any changes.
+
+==== icon:lock[] Security
+
+* CVE: Pending - SQL Injection Vulnerability
+* CVE: Pending - SQL Injection Vulnerability
+* CVE: Pending - SQL Injection Vulnerability
+* CVE: Pending - Improper Access Control
+* CVE: Pending - RCE and CSRF Vulnerability
+* CVE: Pending - Authenticated Bypass Vulnerability
+
+[discrete]
+
+==== icon:bug[] Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9577[9577] - Update TinyMCE
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9583[9583] - Fix AOR_Report Unit Tests
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9578[9578] - Update Jquery JS Libraries
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/8599[8599] - Auto-close success message boxes in ModuleBuilder
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9584[9584] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/87[SCRM-Core#87] - Prevent disabling the default language
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9523[9523] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9438[#9438] - Adding Action keyword to fieldname exception
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9495[9495] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9494[#9494] - Force displaying line breaks to textarea fields
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9580[9580] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9435[#9435] - Dropdown doesn't return empty selected value
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9522[9522] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9435[#9435] - Dropdown doesn't return empty selected value
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9589[9589] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9530[#9530] - Fallback to allowed_preview defaults
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9581[9581] - Fix link:https://github.com/salesagility/SuiteCRM/issues/3157[#3157] - Add default option to enable session_gc
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9582[9582] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9437[#9437] - Default cookie path
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+mounta1n, Exodus Intelligence, Lekhang123lc
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM tsitle anothermouse dalers %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.12.5
 
 _Released 02/03/2022_
