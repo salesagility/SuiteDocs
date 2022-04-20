@@ -10,6 +10,117 @@ aliases:
 :toclevels: 1
 :icons: font
 
+== 8.1.1
+
+_Released 24/05/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+{{% notice warning %}}
+Important: This release includes critical security fixes, we strongly recommend users of older versions to update as soon as possible
+{{% /notice %}}
+
+==== icon:warning[] Important Upgrade Notes
+
+* New entries were added to the config. Please make sure to run `Rebuild Config File` located in the Administration > Repair menu
+* Php session_gc is now force enabled by default.
+** This option can be disabled by setting enable within the session_gc array to false in config.php
+** The values for session.gc_probability and session.gc_divisor can be changed in the following config.php entries within the session_gc array
+*** gc_probability
+*** gc_divisor
+** Check php documentation for more information on these settings https://www.php.net/manual/en/session.configuration.php
+** If you are using a session_dir other than the default, please make sure to have session_gc enabled. Otherwise session files won't be cleaned.
+** If you are using debian or ubuntu based systems, and you have the default session_dir (which fallsback to the system default),
+you may want to set enable within session_gc array to false, as that is the default value for these systems.
+They have replacements for the php session_gc. Please review your system’s defaults before making any changes.
+
+{{% notice note %}}
+In-app configuration for `session save-path` is not supported yet in SuiteCRM 8. It is scheduled to be added on a future release.
+{{% /notice %}}
+
+
+==== icon:lock[] Security
+
+* CVE: Pending - SQL Injection Vulnerability
+* CVE: Pending - SQL Injection Vulnerability
+* CVE: Pending - SQL Injection Vulnerability
+* CVE: Pending - Improper Access Control
+* CVE: Pending - RCE and CSRF Vulnerability
+* CVE: Pending - Authenticated Bypass Vulnerability
+
+==== icon:star[] Enhancements & Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/95[95] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/53[#53] - Remove hardcoded dependency to en_us language. Fix error when en_us is disabled
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/91[91] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/90[#90] - Fix logout. Fix need to refresh after logout
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/89[89] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/86[#86] - Fix date filter operator mapping. Fix date filter operators
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/88[88] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/87[#87] - Fix language selection. Fix language selection being reset after login
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/84[84] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/30[#30] - Fix ApiBeanMapper id and link mapping. Fix custom relationship links
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/80[80] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/78[#78] - Subpanel close button issues. Fix subpanel close button that was leading to duplicate subpanels
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9577[9577] - Update TinyMCE
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9583[9583] - Fix AOR_Report Unit Tests
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9578[9578] - Update Jquery JS Libraries
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/8599[8599] - Auto-close success message boxes in ModuleBuilder
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9584[9584] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/87[SCRM-Core#87] - Prevent disabling the default language
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9523[9523] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9438[#9438] - Adding Action keyword to fieldname exception
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9495[9495] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9494[#9494] - Force displaying line breaks to textarea fields
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9580[9580] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9435[#9435] - Dropdown doesn't return empty selected value
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9522[9522] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9435[#9435] - Dropdown doesn't return empty selected value
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9589[9589] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9530[#9530] - Fallback to allowed_preview defaults
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9581[9581] - Fix link:https://github.com/salesagility/SuiteCRM/issues/3157[#3157] - Add default option to enable session_gc
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9582[9582] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9437[#9437] - Default cookie path
+
+==== icon:star[] Styling
+
+* General Styling Fixes
+** Accounts Duplicate Screen
+** Surveys
+** Outbound Dialog and Editview
+** Password Management
+** Case Settings
+** Language Desktop
+** Roles Dropdown
+** Maps QuickRadius
+
+* Mobile Styling Fixes
+** History Subpanel
+** Activity Stream
+** Business Hours
+** Connector Settings
+** Admin Language
+** System Settings
+** Display Modules Settings
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM tsitle shrikantg-packt scicali anothermouse dalers RodolfoPichardo veggydawson %}}
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+mounta1n, Exodus Intelligence, Lekhang123lc
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''
+
 == 8.1.0
 
 _Released 24/03/2022_
