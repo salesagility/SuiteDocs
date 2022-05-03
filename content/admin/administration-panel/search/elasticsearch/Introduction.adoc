@@ -16,7 +16,9 @@ To achieve this, search-enabled modules are indexed on the Elasticsearch server.
 When a search query is received by SuiteCRM it is redirected to the Elasticsearch server,
 which will perform an optimised search and return the results back to the CRM.
 
-SuiteCRM currently supports only `Elasticsearch 5.6`.
+{{% notice note %}}
+SuiteCRM 7.11 requires Elasticsearch 5.6. SuiteCRM 7.12 requires Elasticsearch 7.
+{{% /notice %}}
 
 Synchronisation between the database and the Elasticsearch index happens in three main ways:
 
