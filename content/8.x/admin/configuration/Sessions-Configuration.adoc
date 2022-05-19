@@ -1,0 +1,82 @@
+---
+Title: Session Directory configuration
+weight: 30
+---
+
+:imagesdir: /images/en/user
+
+== Option 1. Changing session dir in php.ini
+
+It is possible to update the global session dir by changing php's link:session.save-path[https://www.php.net/manual/en/session.configuration.php#ini.session.save-path] directive on your php.ini file.
+
+
+== Option 2. Changing session dir in SuiteCRM configuration
+
+=== Change the session directory
+
+{{% notice note %}}
+This only applies to file based sessions
+{{% /notice %}}
+
+This guide explains how to configure SuiteCRM 8.x versions to store the sessions on a different folder
+
+==== 1. Change the session_dir in legacy
+
+On `public/legacy/config.php` or `public/legacy/config_override.php` change the `session_dir` to the new path.
+
+Through the rest of this guide we are going to assume that we want to have our session files being stored in a `var/sessions` folder within your SuiteCRM 8 instance folder, like:
+* `/<path-to-your-project>/var/sessions`
+
+[source,php]
+----
+<?php
+...
+$sugar_config = array (
+...
+
+  'session_dir' => '/<path-to-your-suite8-project>/var/sessions',
+  'session_gc' =>
+  array (
+    'enable' => true,
+    'gc_probability' => 1,
+    'gc_divisor' => 100,
+  ),
+
+----
+
+==== 2. Change session save_path in SuiteCRM 8 configuration
+
+Now we need to change the SuiteCRM 8 symfony configuration.
+To add it to SuiteCRM 8 configuration in an extensible way you can add it to:
+`extensions/<your-extension>/config/services/framework.yaml`
+
+If you name your extension `custom` it would look something like.
+`extensions/custom/config/services/framework.yaml`
+
+[source,yaml]
+----
+framework:
+  session:
+    cookie_lifetime: null
+    cookie_secure: auto
+    cookie_samesite: lax
+    gc_probability : 1
+    gc_divisor : 100
+    handler_id: session.handler.native_file
+    save_path: '%kernel.project_dir%/var/sessions'
+
+----
+
+==== 3. Clear symfony cache
+
+From your instance root folder run `bin/console cache:clear`
+
+[source,bash]
+----
+bin/console cache:clear
+----
+
+If you don't have access to the terminal you can also delete the contents of: `/<path-to-your-project>/cache`
+
+* Please make sure that `apache / php` **have access to write** to the `cache` folder
+* **The above is not** the legacy cache folder. **Do not** delete the `/<path-to-your-project>/public/legacy/cache`

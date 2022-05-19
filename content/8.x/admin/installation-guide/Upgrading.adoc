@@ -5,6 +5,10 @@ weight: 30
 
 :imagesdir: /images/en/user
 
+{{% notice note %}}
+**If you run into issue when upgrading, please check the Possible Issues when Upgrading section**.
+{{% /notice %}}
+
 == Before upgrading
 
 . Before running the upgrade, please make sure your system **complies with the new version compatibility matrix**.
@@ -269,6 +273,6 @@ This issue is a result of Symfony cache clearing but then being called right aft
 
 === Resolution
 
-This issue can be resolved by re-setting permissions and `./bin/console/ clear:cache` within the SuiteCRM 8 root directory.
+This issue can be resolved by **re-setting permissions** and `./bin/console/ clear:cache` within the SuiteCRM 8 root directory.
 
 You should then be able to navigate to your application.
