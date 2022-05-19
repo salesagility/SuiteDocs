@@ -5,26 +5,100 @@ weight: 30
 
 :imagesdir: /images/en/user
 
-== Compatibility matrix for upgrade
+== Before upgrading
+
+. Before running the upgrade, please make sure your system **complies with the new version compatibility matrix**.
+** Check the link:../../compatibility-matrix[Compatibility Matrix] for complete information on compatible versions.
+
+. It is recommended that you run the **upgrade process in a development instance and test**. Only after testing, deploying the upgraded version on to a production instance
+
+. Before upgrading please make sure to create a **backup** of your instance code and database.
+
+
+== Upgrading between SuiteCRM 8.x versions
 
 {{% notice note %}}
-Before running the upgrade, please make sure your system complies with the new version compatibility matrix.
+This section only applies for versions greater than 8.0.0-rc
 {{% /notice %}}
 
-Check the link:../../compatibility-matrix[Compatibility Matrix] for complete
-information on compatible versions.
 
-== Upgrading SuiteCRM
+=== 1. Download the new version package
 
 {{% notice info %}}
-It is recommend that you run the upgrade process in a development instance and test. Only after testing, deploying the upgraded version on to a production instance
+For upgrading between SuiteCRM 8.x versions there aren't any upgrade specific packages. The upgrade is done using the installation package of the version we want to upgrade to.
 {{% /notice %}}
 
-{{% notice note %}}
-Before upgrading please make sure to create a backup of your instance code and database.
-{{% /notice %}}
+*1* - Create the following folder on you current instance:
 
-=== Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
+* `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+*2* - Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
+
+*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+
+*4* - If needed re-set the correct permissions.
+
+=== 3. Run the upgrade command
+
+*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.1.1`
+* **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.1.1`
+
+The output should be something like:
+
+*Note*: please ignore the `libpng warning`
+
+[source,bash]
+----
+SuiteCRM Upgrade
+============
+
+Running: check-package
+step: check-package | status: done
+Package found in path
+Running: extract-package
+step: extract-package | status: done
+Package extracted
+Running: check-permissions
+step: check-permissions | status: done
+Permissions checked
+Running: install-upgrade-package
+step: install-upgrade-package | status: done
+Successfully installed package
+Running: run-migrations
+step: run-migrations | status: done
+Successfully run migrations
+Running: legacy-post-upgrade
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+step: legacy-post-upgrade | status: done
+Post Upgrade process complete
+Running: clear-symfony-cache
+----
+
+
+*2* - Re-set permissions, if needed
+
+=== 4. Open your instance
+
+*1* -  If all the above steps went as expected, you should now be able to login into your instance.
+
+---
+---
+
+== Upgrade for pre release-candidate versions
+
+{{% notice info %}}
+Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
+{{% /notice %}}
 
 {{% notice info %}}
 Some bugs were found while testing the upgrade from Beta 3 to RC.
@@ -33,7 +107,7 @@ These issues have been fixed on the RC version.
 {{% /notice %}}
 
 
-==== 1. Prepare for upgrade.
+=== 1. Prepare for upgrade.
 
 To overcome the issues mentioned above, you need to apply the following change on your code base.
 
@@ -67,7 +141,7 @@ parameters:
       - '.env.local.php'
       - 'tmp'
     toExpand:
-    
+
     ...
 ----
 
@@ -76,9 +150,9 @@ parameters:
 * For dev mode run: `composer install`
 * For prod mode run: `composer install --no-dev --prefer-dist --optimize-autoloader`
 
-==== 2. Download the RC package
+=== 2. Download the RC package
 
-*1* - Create the following folder on you current instance: 
+*1* - Create the following folder on you current instance:
 
 * `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
 
@@ -88,7 +162,7 @@ parameters:
 
 *4* - If needed re-set the correct permissions.
 
-==== 3. Run the upgrade command
+=== 3. Run the upgrade command
 
 *1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
 
@@ -173,79 +247,6 @@ Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
 
 *3* - Re-set permissions, if needed
 
-==== 4. Open your instance
+=== 4. Open your instance
 
 *1* - If all the above steps went as expected, you should now be able to login into your instance.
-
-
-
-
-
-
-=== Upgrading to a new SuiteCRM 8 version greated that RC
-
-
-==== 1. Download the new version package
-
-*1* - Create the following folder on you current instance: 
-
-* `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
-
-*2* - Download the SuiteCRM 8 target version pre-built / installable package
-
-*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
-
-*4* - If needed re-set the correct permissions.
-
-==== 3. Run the upgrade command
-
-*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
-
-* Where `<version>` is the name on the SuiteCRM 8 package you've downloaded
-
-The output should be something like:
-
-*Note*: please ignore the `libpng warning`
-
-[source,bash]
-----
-SuiteCRM Upgrade
-============
-
-Running: check-package
-step: check-package | status: done
-Package found in path
-Running: extract-package
-step: extract-package | status: done
-Package extracted
-Running: check-permissions
-step: check-permissions | status: done
-Permissions checked
-Running: install-upgrade-package
-step: install-upgrade-package | status: done
-Successfully installed package
-Running: run-migrations
-step: run-migrations | status: done
-Successfully run migrations
-Running: legacy-post-upgrade
-libpng warning: Interlace handling should be turned on when using png_read_image
-libpng warning: Interlace handling should be turned on when using png_read_image
-libpng warning: Interlace handling should be turned on when using png_read_image
-libpng warning: iCCP: known incorrect sRGB profile
-libpng warning: Interlace handling should be turned on when using png_read_image
-libpng warning: iCCP: known incorrect sRGB profile
-libpng warning: iCCP: known incorrect sRGB profile
-libpng warning: iCCP: known incorrect sRGB profile
-libpng warning: Interlace handling should be turned on when using png_read_image
-step: legacy-post-upgrade | status: done
-Post Upgrade process complete
-Running: clear-symfony-cache
-----
-
-
-*2* - Re-set permissions, if needed
-
-==== 4. Open your instance
-
-*1* -  If all the above steps went as expected, you should now be able to login into your instance.
-
