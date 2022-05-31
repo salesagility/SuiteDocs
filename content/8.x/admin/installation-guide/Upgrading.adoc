@@ -250,3 +250,25 @@ Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
 === 4. Open your instance
 
 *1* - If all the above steps went as expected, you should now be able to login into your instance.
+
+== Possible Issues when Upgrading
+
+An issue was found on the implementation of the upgrade command between the versions `8.1.0` -> `8.1.1`.
+
+The issue is that when upgrading SuiteCRM 8 for a second time (i.e if you had upgraded from `8.0.2` -> `8.0.4` -> `8.1.1`),
+then you will have come across the following error after having ran:
+`./bin/console suitecrm:app:upgrade -t "<version>"`
+
+```
+CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<pathtoSuiteCRM8>/cache/prod/ContainerZatgzYy/getConsole_ErrorListenerService.php'
+(include_path='/<pathtoSuiteCRM8>/public/legacy/include/..:.:/usr/share/php')
+["exception" => Symfony\Component\ErrorHandler\Error\FatalError^ { …}]
+```
+
+This issue is a result of Symfony cache clearing but then being called right after.
+
+=== Resolution
+
+This issue can be resolved by re-setting permissions and `./bin/console/ clear:cache` within the SuiteCRM 8 root directory.
+
+You should then be able to navigate to your application.
