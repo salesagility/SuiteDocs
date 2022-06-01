@@ -10,6 +10,53 @@ aliases:
 :toclevels: 1
 :icons: font
 
+== 8.1.2
+
+_Released 06/06/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-8/#SCRM8_download[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:warning[] Important Upgrade Notes
+
+An issue was found on the current implementation of the upgrade command. Please see the following page for more details:
+link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/#_possible_issues_when_upgrading[Upgrading SuiteCRM 8 - Section Possible Issues when Upgrading]
+
+Documentation added on how to configure sessions in SuiteCRM 8. See link:https://docs.suitecrm.com/8.x/admin/configuration/Sessions-Configuration[here.]
+
+==== icon:star[] Enhancements & Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/110[110] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/109[#109] - Add force exit to upgrade process
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/108[108] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/98[#98] - Fix install error
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/107[107] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/106[#106] - Add session_dir init check
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/102[102] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/101[#101] - Parsing Error in UserHandler
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors phil8900 prbt2016 %}}
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''
+
 == 8.1.1
 
 _Released 24/05/2022_
