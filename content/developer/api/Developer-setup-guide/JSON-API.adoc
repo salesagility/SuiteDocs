@@ -363,7 +363,7 @@ Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accoun
 === Create relationship
 
 [source,php]
-POST {{suitecrm.url}}/Api/V8/module/{moduleName}/relationships
+POST {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships
 
 Example body:
 
