@@ -1,0 +1,125 @@
+---
+Title: SuiteCRM 7.12.x migration to SuiteCRM 8.x
+weight: 30
+---
+
+:imagesdir: /images/en/user
+
+== 1. Before migrating
+
+. Before running the migration, please make sure your system **complies with the new version compatibility matrix**.
+** Check the link:../../compatibility-matrix[Compatibility Matrix] for complete information on compatible versions.
+
+. It is recommended that you run the **migration process in a development instance and test**. Only after testing, deploying the upgraded version on to a production instance
+
+. Before migrating please make sure to create a **backup** of your instance code and database.
+
+. **Upgrade your SuiteCRM 7.x instance to the latest 7.12.x version**
+.. Make sure to go over any manual upgrade steps described on the release notes for each version
+
+. By default, the upgrade commands will set the `error_reporting` to a less strict mode to suppress warnings.
+** The error_reporting value set is `E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING`
+** If you want to apply a stricter mode you can specify the `-vvv` on each of the commands. This will set `E_ALL` on `error_reporting`
+
+. Please note that the migration process may **remove any non core file/directories** you have on your project under the `public/legacy/` folder
+
+== 2. Migrating from 7.12.x to SuiteCRM 8.x versions
+
+
+{{% notice note %}}
+Only run the migration if you have already upgraded your SuiteCRM 7.x instance to the latest 7.12.x version.
+{{% /notice %}}
+
+
+=== 2.1. Download the new version migration package
+
+*1* - Download the SuiteCRM 8.x target version **migration** package from link:https://suitecrm.com/upgrade-suitecrm/[SuiteCRM Releases]
+
+*2* - Unzip the package contents to your SuiteCRM 8.x destination folder
+
+*3* - If needed re-set the correct permissions.
+
+=== 2.2. Copy your SuiteCRM 7.12.x instance
+
+*1* - Copy your SuiteCRM 7.12.x instance folder to the public folder on the SuiteCRM 8.x destination folder `/path-to-suitecrm-8/public`
+
+*2* - Rename the SuiteCRM 7.12.x copied folder to `legacy`
+
+*3* - If needed re-set the correct permissions.
+
+=== 2.3. Set Permissions
+
+Set the permissions on the files in a way that the command line user enough privileges to read and write
+
+=== 2.4. Run the migration prepare command
+
+*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:setup-legacy-migration`
+
+*2* - You should be prompted to do the manual step for checking and updating values on legacy config
+
+* `session_dir`: you should update your session dir to `''`. After migration you can re-configure the system to use a different `session_dir`
+** Please note that the SuiteCRM 8 configuration for the `session_dir` is different.
+** See the link:../configuration/sessions-configuration[Session Configuration] for more details.
+
+* `site_url`: you should update your site_url
+** You should update this value to be the address you are currently using to migrate and test the SuiteCRM 8.x migration
+** Please note that if you don't have your vhost pointing to the `public` dir within your SuiteCRM 8 root folder, you should append `/public`
+*** e.g. if your address is something like `https://your-host/crm/public`,
+
+*3* - You should be prompted to do the manual step for checking and updating values on the legacy .htaccess
+
+* `RewriteBase`
+** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then you should set `RewriteBase /legacy`
+** Otherwise, you should prepend the path until the `public` folder.
+*** e.g. if your address is something like `https://your-host/crm/public`, then you should set `RewriteBase /crm/public/public`
+
+=== 2.5. Run the upgrade command
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.2.0`
+* **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.2.0`
+
+=== 2.6. Run the post upgrade command
+
+{{% notice note %}}
+**When upgrading highly customized instances you may hit issues during this step. Make sure your customization's code is php 7.4 compliant as a minimum**.
+{{% /notice %}}
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finalize`
+
+==== 2.6.1 Metadata merge modes
+
+In this finalize command you can specify the merge mode you want to use for merging metadata.
+This can be changed by specifying the `-m` option on the `suitecrm:app:upgrade-finalize` command.
+The `keep` mode is used by default.
+
+Next you can find a description of each mode and how to use it.
+
+*1.* **Keep mode**
+
+* This mode will keep the existing view metadata customizations. It will simply skip the metadata merge process.
+* This is the default mode
+* If you want to specify on the command you can run: `./bin/console suitecrm:app:upgrade-finalize -m keep`
+
+*2.* **Merge mode**
+
+* This mode will attempt to merge your current view metadata customizations with the new core view metadata for each module
+* The merged metadata is placed in the custom folder for the corresponding module `public/legacy/custom/<Module>/metadata`
+* A backup file of the previous version of the customizations is added to the same folder
+* You can use the merge mode by running `./bin/console suitecrm:app:upgrade-finalize -m merge`
+
+*3.* **Override mode**
+
+* This mode will override your current customizations with the new version of the core metadata.
+* **Please note** that this will **delete** your current customizations files in `public/legacy/custom/<Module>/metadata`
+* You can use the merge override mode by running `./bin/console suitecrm:app:upgrade-finalize -m override`
+
+
+=== 2.7. Re-set permissions
+
+If during the migration you used a user/group that is not the same as the ones used by apache (or other webserver) you should re-set the correct permissions
+
+=== 2.8. Open your instance and test
+
+If all the above steps went as expected, you should now be able to login into your instance.
