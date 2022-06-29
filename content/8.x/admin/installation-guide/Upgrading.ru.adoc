@@ -21,24 +21,200 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Upgrad
 
 ifdef::env-github[:btn:]  
 
+////
+:sectnums:
+:sectnumlevels: 2
+////
+
+{{% notice note %}}
+Если в процессе обновления возникли проблемы - обратитесь к разделу 
+link:./#_Возможные_проблемы[Возможные проблемы].
+{{% /notice %}}
+
 == Подготовка к обновлению системы
 
-Перед обновлением системы сверьтесь с link:../../compatibility-matrix[таблицей совместимости^] и убедитесь, что у вас установлены все необходимые компоненты.
+Перед обновлением системы сверьтесь с 
+link:../../compatibility-matrix[таблицей совместимости^] и убедитесь, что у вас установлены все необходимые компоненты.
 
 {{% notice warning %}}
-Обновление системы ещё находится в стадии разработки. Перед выполнением обновления настоятельно рекомендуется сделать резервную копию системы!
+Перед выполнением обновления настоятельно рекомендуется сделать резервную копию как файлов системы, так и базы данных.
 {{% /notice %}}
 
 {{% notice note %}}
-Рекомендуем сначала запустить процесс обновления в отдельном экземпляре системы и протестировать полученый результат. После успешного тестирования повторите процесс обновления на рабочем экземпляре SuiteCRM.
+Рекомендуем сначала запустить процесс обновления в отдельном экземпляре системы и протестировать полученный результат. 
+После успешного тестирования повторите процесс обновления на рабочем экземпляре SuiteCRM.
 {{% /notice %}}
+
+. По умолчанию команды обновления устанавливают для директивы `error_reporting` менее строгий режим для подавления предупреждений,
+ присваивая ей значение `E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING`. +
+Если вы хотите установить более строгий режим, укажите `-vvv` для каждой из команд.
+Этот ключ присвоит директиве `error_reporting` значение `E_ALL`.
  
-== Обновление до 8 версии
- 
-. Скачайте необходимый https://suitecrm.com/upgrade-suitecrm[пакет обновления^].
-. В установленном экземпляре ситемы создайте  папку `<your-suitecrm-8-root-folder>/tmp/package/upgrade` и скопируйте в неё скачанный пакет обновления. При необходимости задайте соответствующие права доступа на скопированный файл.
-. Запустите процесс обновления, выполнив из корневой папки системы команду `./bin/console suitecrm:app:upgrade -t "<version>"`, где +
-*<version>* - название скачаннного пакета обновления.
+== Обновление до версии 8.2 и более поздних
+
+{{% notice note %}}
+В этом разделе рассматривается обновление SuiteCRM до версий 8.2 и более поздних. 
+Процесс обновления с версии 8.0 до версии 8.1 рассматривается в 
+link:./#_Обновление_с_версии_8_0_до_версии_8_1[этом] разделе.
+{{% /notice %}}
+
+
+{{% notice info %}}
+При обновлении между версиями SuiteCRM 8.x нет необходимости в каком-либо специальном пакете обновления. 
+Для этого используется обычный установочный пакет той версии, до которой вы планируете произвести обновление.
+{{% /notice %}}
+
+. Скачайте необходимый https://suitecrm.com/https://suitecrm.com/download/[пакет ^].
+. В установленном экземпляре системы создайте  папку `<your-suitecrm-8-root-folder>/tmp/package/upgrade` и скопируйте в неё скачанный пакет. При необходимости задайте соответствующие права доступа на скопированный файл.
+. Из корневой папки SuiteCRM 8 запустите: `./bin/console suitecrm:app:upgrade -t "<версия>"`, +
+
+где `<версия>` - название пакета  с устанавливаемой SuiteCRM 8, например: `SuiteCRM-8.3.0`
+
+*Пример:* 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade -t SuiteCRM-8.3.0
+-----
+
+В результате выполнения обновления вы увидите приблизительно следующее:
+
+{{% notice info %}}
+В этой версии обновления сообщения, начинающиеся с `libpng warning`, можно игнорировать.
+{{% /notice %}}
+
+[source,bash]
+----
+SuiteCRM Upgrade
+============
+
+Running: check-package
+step: check-package | status: done
+Package found in path
+Running: extract-package
+step: extract-package | status: done
+Package extracted
+Running: check-permissions
+step: check-permissions | status: done
+Permissions checked
+Running: install-upgrade-package
+step: install-upgrade-package | status: done
+Successfully installed package
+Running: run-migrations
+step: run-migrations | status: done
+Successfully run migrations
+Running: legacy-post-upgrade
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+step: legacy-post-upgrade | status: done
+Post Upgrade process complete
+Running: clear-symfony-cache
+----
+
+=== Выполнение команды финализации
+
+{{% notice note %}}
+Если обновляемый экземпляр системы был значительно кастомизирован, на этом этапе могут возникнуть проблемы.
+Убедитесь, что изменённый код совместим как минимум с php версии 7.4.
+{{% /notice %}}
+
+Из корневой папки SuiteCRM 8 запустите: 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade-finalize
+-----
+
+==== Режимы слияния метаданных
+
+В этой команде вы можете указать режим слияния, который вы хотите использовать при объединении метаданных,
+ указав необходимый режим после ключа `-m`.
+
+По умолчанию используется режим `keep`.
+
+. Режим *_KEEP_*
+
+* Этот режим сохранит все существующие ранее метаданные, слияние выполняться не будет.
+* Этот режим используется по умолчанию.
+
+В консоли выполните: 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade-finalize -m keep
+-----
+
+[start=2]
+. Режим *_MERGE_*
+
+* Этот режим попытается объединить все существующие ранее метаданные с новыми метаданными. Объединение будет выполнено для каждого модуля.
+* Объединенные метаданные помещаются в папку *custom* соответствующего модуля:  `public/legacy/custom/<Module>/metadata`
+* В эту же папку добавляется файл резервной копии предыдущей версии метаданных
+
+В консоли выполните: 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade-finalize -m merge
+-----
+
+[start=3]
+. Режим *_OVERRIDE_*
+
+* Этот режим заменит все текущие настройки новой версией  метаданных.
+
+{{% notice warning %}}
+В результате будут удалены все текущие файлы настроек из папки `public/legacy/custom/<Module>/metadata`!
+{{% /notice %}}
+
+В консоли выполните: 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade-finalize -m override
+-----
+
+=== Переустановка прав
+
+Если во время процесса миграции вы использовали пользователя/группу, которые не совпадают с теми, которые используются веб-сервером,
+ вам следует переустановить соответствующие права.
+
+Если все вышеперечисленные шаги были выполнены правильно,  вы сможете войти в обновленный экземпляр SuiteCRM 8.
+
+== Обновление с версии 8.0 до версии 8.1
+
+{{% notice note %}}
+В этом разделе рассматривается обновление SuiteCRM с версии 8.0.0 до версий 8.1.x.
+{{% /notice %}}
+
+{{% notice info %}}
+При обновлении между версиями SuiteCRM 8.x нет необходимости в каком-либо специальном пакете обновления. Для этого используется обычный установочный пакет той версии, до которой вы планируете произвести обновление.
+{{% /notice %}}
+
+. Скачайте необходимый https://suitecrm.com/https://suitecrm.com/download/[пакет ^].
+. В установленном экземпляре системы создайте  папку `<your-suitecrm-8-root-folder>/tmp/package/upgrade` и скопируйте в неё скачанный пакет. При необходимости задайте соответствующие права доступа на скопированный файл.
+. Из корневой папки SuiteCRM 8 запустите: 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade -t "<версия>"
+-----
+
+где `<версия>` - название пакета  с устанавливаемой SuiteCRM 8, например: `SuiteCRM-8.1.1`
+
+*Пример:* 
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade -t SuiteCRM-8.1.1
+-----
 
 В результате выполнения обновления вы увидите приблизительно следующее:
 
@@ -85,3 +261,33 @@ Running: clear-symfony-cache
 . При необходимости установите необходимые link:../downloading-installing/#_установка_прав[права доступа^].
 
 . Заново войдите в систему.
+
+== Возможные проблемы
+
+Обнаружена проблема при выполнении обновления между версиями `8.1.0` -> `8.1.1`.
+
+Проблема состоит в том, что при обновлении SuiteCRM 8 во второй раз (например, в такой последовательности: 8.0.2 -> 8.0.4 -> 8.1.1),
+то после запуска команды
+
+[source,bash]
+-----
+./bin/console suitecrm:app:upgrade -t "<версия>"
+-----
+
+будет отображена следующая ошибка:
+
+[bash]
+-----
+CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<pathtoSuiteCRM8>/cache/prod/ContainerZatgzYy/getConsole_ErrorListenerService.php'
+(include_path='/<pathtoSuiteCRM8>/public/legacy/include/..:.:/usr/share/php')
+["exception" => Symfony\Component\ErrorHandler\Error\FatalError^ { …}]
+-----
+
+*Решение:* Переустановите link:../downloading-installing/#_установка_прав[права доступа^] и из корневой папки SuiteCRM 8 выполните команду:
+
+[source,bash]
+-----
+./bin/console/ clear:cache
+-----
+
+
