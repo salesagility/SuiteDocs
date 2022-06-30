@@ -3,7 +3,20 @@ Title: Переход с версий SuiteCRM 7.x на версию SuiteCRM 8.
 weight: 40
 ---
 
-:imagesdir: /images/en/user
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 1
+
+:experimental:
+
+:btn: btn:
+
+ifdef::env-github[:btn:]  
+
 
 ==  Предварительная подготовка
 
@@ -68,9 +81,9 @@ link:../../compatibility-matrix[Таблице совместимости^].
 
  . Вам будет предложено вручную выполнить ряд действий по изменению некоторых директив в файле конфигурации, расположенном в папке `legacy`:
 
-* Установите директиву `session_dir` в пустое значение (''). По окончании переходы вы можете  установить необходимое значение `session_dir`. +
-Обратите внимание, что конфигурация SuiteCRM 8 для `session_dir` отличается,  детали описаны в разделе
- link:../configuration/sessions-configuration[Настройка сессий^].
+* Установите директиву `session_dir` в пустое значение (''). По окончании перехода вы можете  установить необходимое значение `session_dir`. +
+Обратите внимание, что настройка `session_dir` в SuiteCRM 8 отличается от SuiteCRM 7,  детали описаны в разделе
+link:../configuration/sessions-configuration[Настройка сессий^].
 
 * Измените значение директивы `site_url` на адрес, по которому будет доступна SuiteCRM 8.x.
 
