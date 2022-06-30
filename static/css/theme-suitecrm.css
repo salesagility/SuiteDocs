@@ -436,7 +436,8 @@ nav.webnav ul li a {
 	display:block;
 	color:#fff;
 	text-decoration:none;
-	padding:27px 15px;
+	padding:27px 12px;
+	font-weight: 700;
 }
 
 nav.webnav ul li.current-menu-item {
@@ -495,10 +496,10 @@ nav.webnav ul ul ul {
 }
 
 nav.webnav li.download a {
-	background-color:#dc6254;
+	background-color:#F08377;
 	text-transform: uppercase;
-	border-radius:5px;
-	padding:5px 10px;
+	border-radius:2px;
+	padding:6px 13px 2px 13px;
 	font-size:13px;
 }
 
@@ -508,8 +509,8 @@ nav.webnav li.download:hover {
 }
 
 nav.webnav li.download:hover a {
-	color:#dc6254;
-	background-color: #fff;
+	color:#fff;
+	background-color: #dc6254;
 }
 
 div.sidebar-announcement { 
