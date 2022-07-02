@@ -83,7 +83,7 @@ link:../../compatibility-matrix[Таблице совместимости^].
 
 * Установите директиву `session_dir` в пустое значение (''). По окончании перехода вы можете  установить необходимое значение `session_dir`. +
 Обратите внимание, что настройка `session_dir` в SuiteCRM 8 отличается от SuiteCRM 7,  детали описаны в разделе
-link:../configuration/sessions-configuration[Настройка сессий^].
+link:../../configuration/sessions-configuration[Настройка сессий^].
 
 * Измените значение директивы `site_url` на адрес, по которому будет доступна SuiteCRM 8.x.
 
