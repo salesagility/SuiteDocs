@@ -1,0 +1,23 @@
+---
+Title: Login throttling configuration
+weight: 30
+---
+
+:imagesdir: /images/en/user
+
+== Defaults
+
+By default SuiteCRM has login throttling enabled to trigger after `3` failed attempts.
+
+If the user fails to login that number times in a row, a message will be displayed explaining that the max number of attempts has been reached.
+The user will have to wait at least a minute before they can try to login again.
+
+== Configuring the max number of attempts
+
+The number of attempts is configured on the `LOGIN_THROTTLING_MAX_ATTEMPTS` .env property, which can be changed on the .env.local.
+
+== More configurations and customizations
+
+SuiteCRM is using Symfony's login throttling mechanism.
+For more options and ways to configure see link:https://symfony.com/doc/current/security.html#limiting-login-attempts[Symfony Security - Limiting Login Attempts] section
+
