@@ -1243,7 +1243,7 @@ a|Пример
  
 Для включения режима отладчика в файл *_config_override.php_* необходимо добавить следующие строки: 
 
-[source]
+[source, php]
 $sugar_config['SweeterCalc']['DebugEnabled'] = 1; 
 $sugar_config['SweeterCalc']['DebugFileName'] = 'SweeterSyncDebug.log'; 
 
