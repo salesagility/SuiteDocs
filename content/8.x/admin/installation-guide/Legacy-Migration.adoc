@@ -120,7 +120,11 @@ Next you can find a description of each mode and how to use it.
 
 If during the migration you used a user/group that is not the same as the ones used by apache (or other webserver) you should re-set the correct permissions
 
-=== 2.8. Open your instance and test
+=== 2.8. (Optional) Restart server to reset/clear php level cache
+
+If you are using `opcache`, `apcu` or other php caches, you may need to restart your webserver for the new code to take effect.
+
+=== 2.9. Open your instance and test
 
 If all the above steps went as expected, you should now be able to login into your instance.
 

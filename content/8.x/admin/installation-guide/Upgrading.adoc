@@ -98,7 +98,7 @@ Running: clear-symfony-cache
 
 === 2.3. Run the post upgrade command
 
-On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finalize`
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finalize -t "<version>"`
 
 ==== 2.3.1 Metadata merge modes
 
@@ -132,7 +132,12 @@ Next you can find a description of each mode and how to use it.
 
 If during the migration you used a user/group that is not the same as the ones used by apache (or other webserver) you should re-set the correct permissions
 
-=== 2.5. Open your instance
+=== 2.5. (Optional) Restart server to reset/clear php level cache
+
+If you are using `opcache`, `apcu` or other php caches, you may need to restart your webserver for the new code to take effect.
+
+
+=== 2.6. Open your instance
 
 If all the above steps went as expected, you should now be able to login into your instance.
 
