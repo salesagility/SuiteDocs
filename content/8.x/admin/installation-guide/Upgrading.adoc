@@ -6,7 +6,7 @@ weight: 30
 :imagesdir: /images/en/user
 
 {{% notice note %}}
-**If you run into issue when upgrading, please check the Possible Issues when Upgrading section**.
+**If you run into any issue when upgrading, please check the 'Possible Issues when Upgrading section'**.
 {{% /notice %}}
 
 == 1. Before upgrading
@@ -14,7 +14,7 @@ weight: 30
 . Before running the upgrade, please make sure your system **complies with the new version compatibility matrix**.
 ** Check the link:../../compatibility-matrix[Compatibility Matrix] for complete information on compatible versions.
 
-. It is recommended that you run the **upgrade process in a development instance and test**. Only after testing, deploying the upgraded version on to a production instance
+. It is recommended that you run the **upgrade process in a development instance and test**. Only after testing, deploy the upgraded version on to a production instance
 
 . Before upgrading please make sure to create a **backup** of your instance code and database.
 
@@ -28,10 +28,10 @@ weight: 30
 == 2. Upgrading between SuiteCRM 8.x versions
 
 {{% notice note %}}
-This section only applies when upgrading to a version equal or greater to 8.2.x. **This version introduced a new step in the upgrade process.**
+This section only applies when upgrading to a version equal or greater to 8.2.x.
 {{% /notice %}}
 
-For upgrades to with version previous to 8.2.x see section #3. Upgrading between SuiteCRM 8.0.x to 8.1.x versions
+For upgrades to versions prior to 8.2.x see section *#3. Upgrading between SuiteCRM 8.0.x to 8.1.x versions*
 
 
 === 2.1. Download the new version package
@@ -40,19 +40,19 @@ For upgrades to with version previous to 8.2.x see section #3. Upgrading between
 For upgrading between SuiteCRM 8.x versions there aren't any upgrade specific packages. The upgrade is done using the installation package of the version we want to upgrade to.
 {{% /notice %}}
 
-*1* - Create the following folder on you current instance:
+*1.* Create the following folder on you current instance:
 
 * `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
 
-*2* - Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
+*2.* Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
 
-*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+*3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
 
-*4* - If needed re-set the correct permissions.
+*4.* If needed re-set the correct permissions.
 
 === 2.2. Run the upgrade command
 
-*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+*1.* On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
 
 * Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.2.0`
 * **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.2.0`
@@ -102,7 +102,7 @@ On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finali
 
 ==== 2.3.1 Metadata merge modes
 
-In this finalize command you can specify the merge mode you want to use for merging metadata.
+In the finalize command you can specify the merge mode you want to use for merging metadata.
 This can be changed by specifying the `-m` option on the `suitecrm:app:upgrade-finalize` command.
 The `keep` mode is used by default.
 
@@ -110,8 +110,7 @@ Next you can find a description of each mode and how to use it.
 
 *1.* **Keep mode**
 
-* This mode will keep the existing view metadata customizations. It will simply skip the metadata merge process.
-* This is the default mode
+* The default mode is to keep the existing view metadata customizations and will simply skip the metadata merge process.
 * If you want to specify on the command you can run: `./bin/console suitecrm:app:upgrade-finalize -m keep`
 
 *2.* **Merge mode**
@@ -162,19 +161,19 @@ This section only applies for versions greater than 8.0.0-rc to 8.1.x
 For upgrading between SuiteCRM 8.x versions there aren't any upgrade specific packages. The upgrade is done using the installation package of the version we want to upgrade to.
 {{% /notice %}}
 
-*1* - Create the following folder on you current instance:
+*1.* Create the following folder on you current instance:
 
 * `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
 
-*2* - Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
+*2.* Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
 
-*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+*3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
 
-*4* - If needed re-set the correct permissions.
+*4.* If needed re-set the correct permissions.
 
 === 3.2. Run the upgrade command
 
-*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+*1.* On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
 
 * Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.1.1`
 * **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.1.1`
@@ -219,11 +218,11 @@ Running: clear-symfony-cache
 ----
 
 
-*2* - Re-set permissions, if needed
+*2.* Re-set permissions, if needed
 
 === 3.3. Open your instance
 
-If all the above steps went as expected, you should now be able to login into your instance.
+Once all the above steps are complete, you should now be able to log into your instance of SuiteCRM.
 
 ---
 ---
@@ -231,23 +230,21 @@ If all the above steps went as expected, you should now be able to login into yo
 == 4. Upgrade for pre release-candidate versions
 
 {{% notice info %}}
-Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
-{{% /notice %}}
-
-{{% notice info %}}
 Some bugs were found while testing the upgrade from Beta 3 to RC.
 The steps on this section explain how to workaround those problems.
 These issues have been fixed on the RC version.
 {{% /notice %}}
+
+Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
 
 
 === 4.1. Prepare for upgrade.
 
 To overcome the issues mentioned above, you need to apply the following change on your code base.
 
-*1* - Open the `config/services/system/upgrades.yaml` config file.
+*1.* Open the `config/services/system/upgrades.yaml` config file.
 
-*2* - Add a `tmp` entry to the `toKeep` section.
+*2.* Add a `tmp` entry to the `toKeep` section.
 
 It should look like this:
 
@@ -279,32 +276,32 @@ parameters:
     ...
 ----
 
-*3* - Run:
+*3.* Run:
 
 * For dev mode run: `composer install`
 * For prod mode run: `composer install --no-dev --prefer-dist --optimize-autoloader`
 
 === 4.2. Download the RC package
 
-*1* - Create the following folder on you current instance:
+*1.* Create the following folder on you current instance:
 
 * `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
 
-*2* - Download the SuiteCRM 8 RC pre-built / installable package
+*2.* Download the SuiteCRM 8 RC pre-built / installable package
 
-*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+*3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
 
-*4* - If needed re-set the correct permissions.
+*4.* If needed re-set the correct permissions.
 
 === 4.3. Run the upgrade command
 
-*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+{{% notice info %}}
+There is a known issue when running the upgrade command from Beta 3 to the RC version. The step to overcome this issue is explained next.
+{{% /notice %}}
+
+*1.* On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
 
 * Where `<version>` is the name on the SuiteCRM 8 RC package
-
-{{% notice info %}}
-There is a known issue when running the upgrade command from Beta 3 to the RC version. The step to overcome that issue are explained next.
-{{% /notice %}}
 
 The output of the command should be something like:
 
@@ -373,11 +370,11 @@ Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
 }
 ----
 
-*2* - To overcome the above error you need to clear symfony cache
+*2.*  To overcome the above error you need to clear symfony cache
 
 * On your SuiteCRM 8 instance root, please run: `./bin/console cache:clear`
 
-*3* - Re-set permissions, if needed
+*3.* Re-set permissions, if needed
 
 === 4.4. Open your instance
 

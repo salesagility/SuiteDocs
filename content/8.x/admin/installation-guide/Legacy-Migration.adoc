@@ -23,6 +23,8 @@ weight: 30
 
 . Please note that the migration process may **remove any non core file/directories** you have on your project under the `public/legacy/` folder
 
+. Before running any of the commands described next, please make sure your SuiteCRM 8 instance `APP_ENV` is set to `APP_ENV=prod` mode (check `.env` and '.env.local' files)
+
 == 2. Migrating from 7.12.x to SuiteCRM 8.x versions
 
 
@@ -33,19 +35,19 @@ Only run the migration if you have already upgraded your SuiteCRM 7.x instance t
 
 === 2.1. Download the new version migration package
 
-*1* - Download the SuiteCRM 8.x target version **migration** package from link:https://suitecrm.com/upgrade-suitecrm/[SuiteCRM Releases]
+- Download the SuiteCRM 8.x target version **migration** package from link:https://suitecrm.com/upgrade-suitecrm/[SuiteCRM Releases]
 
-*2* - Unzip the package contents to your SuiteCRM 8.x destination folder
+- Unzip the package contents to your SuiteCRM 8.x destination folder
 
-*3* - If needed re-set the correct permissions.
+- If needed re-set the correct permissions.
 
 === 2.2. Copy your SuiteCRM 7.12.x instance
 
-*1* - Copy your SuiteCRM 7.12.x instance folder to the public folder on the SuiteCRM 8.x destination folder `/path-to-suitecrm-8/public`
+- Copy your SuiteCRM 7.12.x instance folder to the public folder on the SuiteCRM 8.x destination folder `/path-to-suitecrm-8/public`
 
-*2* - Rename the SuiteCRM 7.12.x copied folder to `legacy`
+- Rename the SuiteCRM 7.12.x copied folder to `legacy`
 
-*3* - If needed re-set the correct permissions.
+- If needed re-set the correct permissions.
 
 === 2.3. Set Permissions
 
@@ -98,8 +100,7 @@ Next you can find a description of each mode and how to use it.
 
 *1.* **Keep mode**
 
-* This mode will keep the existing view metadata customizations. It will simply skip the metadata merge process.
-* This is the default mode
+* The default mode is to keep the existing view metadata customizations and will simply skip the metadata merge process.
 * If you want to specify on the command you can run: `./bin/console suitecrm:app:upgrade-finalize -m keep`
 
 *2.* **Merge mode**
@@ -126,7 +127,7 @@ If you are using `opcache`, `apcu` or other php caches, you may need to restart 
 
 === 2.9. Open your instance and test
 
-If all the above steps went as expected, you should now be able to login into your instance.
+Once all the above steps are complete, you should now be able to log into your instance of SuiteCRM.
 
 == 3. Logs and debugging
 
@@ -165,3 +166,12 @@ One way to get more logs is to change `APP_ENV` to `qa` (this mode should only b
 
 After the `APP_ENV` you may have to clear the symfony cache.
 
+== 4. Common issues
+
+=== 4.1. CSRF token issues
+
+During our internal tests, we've done several re-installs and upgrades. These tests were usually done on the same url / instance.
+
+It can happen that in this process the cookies are not updated or refreshed, which could prevent the user from using the app.
+
+If you are getting a `Invalid CSRF token` error, one thing to try is to refresh the page and clear the cookies. That will allow the server to generate new ones, for a new session.
