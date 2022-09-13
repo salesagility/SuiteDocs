@@ -175,3 +175,30 @@ During our internal tests, we've done several re-installs and upgrades. These te
 It can happen that in this process the cookies are not updated or refreshed, which could prevent the user from using the app.
 
 If you are getting a `Invalid CSRF token` error, one thing to try is to refresh the page and clear the cookies. That will allow the server to generate new ones, for a new session.
+
+=== 4.2. Forgetting to reset permissions after running upgrade command
+
+Please make sure that after running the upgrade commands you re-set permissions.
+
+Re-setting permissions is required when you are running the command with a user different from the one that is used by apache.
+Have in mind that when you run the commands with another user (the root user for instance) that is the user that php will use, which will impact file creation. Files created by php will be set to that user and group.
+Which may prevent the app from working, as Apache web server user may (and most likely) not have the privileges to read/write files assigned to that user.
+
+=== 4.3. Missing suitecrm:app:setup-legacy-migration command or errors at the start of the execution
+
+We have noticed that usually these errors occur when the wrong migration package is being used.
+
+Please make sure you are using a migration package and not the SuiteCRM 8 installation package. The migration package is a special package built specifically for the 7.x to 8.x migration.
+
+The name of the migration package follows the name pattern: 'SuiteCRM-8.x-7.x-migration', where 8.x and 7.x are the versions.
+
+=== 4.4. Not knowing where to place the SuiteCRM 7 or the SuiteCRM 8 folder/instances
+
+When doing the upgrade you will need a new instance on your webserver for SuiteCRM 8.
+The migration package does not apply the migration on top of an existing instance, in other words, you don't upload the migration package to your SuiteCRM 7 instance.
+
+The process works the other way around, the SuiteCRM 7 instance will be moved/copied to a SuiteCRM 8 instance.
+
+The migration package is similar to a SuiteCRM 8 installation package without the `public/legacy` folder. After extracting the migration package, your SuiteCRM 7 folder should be copied to inside the `public` folder that exists on the SuiteCRM 8 root folder, and then renamed to `legacy`.
+Later on in the process, when running the upgrade commands, your SuiteCRM 7 code that is now on `public/legacy` will be updated with all the "legacy" changes that SuiteCRM 8 includes.
+
