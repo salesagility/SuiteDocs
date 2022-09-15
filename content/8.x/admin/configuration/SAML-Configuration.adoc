@@ -363,10 +363,74 @@ On the other hand, if a user has  `external_auth_only` set to 0 (or false) the u
 
 == Configuring user auto creation
 
-{{% notice note %}}
-For the moment user auto creation is not available. This will be done as part of future work. Thus, all users using SAML need to be created in SuiteCRM before they are able to login.
-{{% /notice %}}
+By default, user auto creation is disabled for SAML.
 
+**When disabled** you will only be able to authenticate a user using SAML **if you first create them on SuiteCRM.**
+
+The auto-create option will auto create the user from SAML if they do not exist on SuiteCRM yet.
+
+Please note that **this user will not have any password set on SuiteCRM** and the `external_auth_only` **is set to 1 (or true) by default**.
+
+To enable SAML user auto creation change your `.env.local` and set:
+
+[source,bash]
+----
+SAML_AUTO_CREATE=enabled
+----
+
+When enabling the user auto creation you also need to define how the user information from SAML should be mapped to the user in SuiteCRM
+
+The default configuration for this mapping is defined on `config/services/saml/saml.yaml`.
+
+To override the configurations you need to copy the file over to the `extensions` folder on a path like `extensions/<your-package>/config/services/saml/saml.yaml`
+
+[source,yaml]
+----
+parameters:
+  saml.autocreate.attributes_map:
+
+----
+
+Option description:
+
+*saml.autocreate.attributes_map*
+
+Defines how to map the SAML fields to the fields in the user.
+The keys are the field names in SAML and the values the field names in SuiteCRM.
+See example on next section.
+
+=== Example
+
+*SAML saml.yaml*
+
+File: `extensions/<your-package>/config/services/saml/saml.yaml`
+
+[source,yaml]
+----
+parameters:
+  saml.autocreate.attributes_map:
+    email: email1
+    'urn:oid:2.5.4.4': last_name
+    'urn:oid:2.5.4.42': first_name
+----
+
+To check the values sent from SAML IDP you can open `logs/auth.log`, which will have logs from the user creation process. This log is populated when you try to login. So, first try to login with a user that does not exist on the CRM and only then check the logs.
+
+You should find an entry with the message `App\Security\Saml\AppSamlUserFactory | createUser attributes`. This entry should also contain a json with the attributes that SuiteCRM receives from the IDP.
+
+By having a look at the following snippet from the log you can see that:
+
+- The last name `Doe` is sent on an attribute with key `urn:oid:2.5.4.4`
+- The first name `Jeremy` is sent on an attribute with key `urn:oid:2.5.4.42`
+- The email `jeremy.doe@example.com` is sent on an attribute with key `email`
+
+Exactly like the ones used on the example given before.
+
+[source,log]
+----
+[2022-09-15 09:23:53] auth.INFO: App\Security\Saml\AppSamlUserFactory | createUser username: jeremy.doe [] []
+[2022-09-15 09:23:53] auth.INFO: App\Security\Saml\AppSamlUserFactory | createUser attributes | {"urn:oid:2.5.4.4":["Doe"],"urn:oid:2.5.4.42":["Jeremy"],"username":["jeremy.doe"],"email":["jeremy.doe@example.com"],"Role":["view-profile","offline_access","manage-account","manage-account-links","uma_authorization","default-roles-master"]} [] []
+----
 
 
 == Clear symfony cache
