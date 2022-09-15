@@ -1,0 +1,233 @@
+---
+Title: LDAP configuration
+weight: 40
+---
+
+:imagesdir: /images/en/user
+
+== Intro
+
+LDAP authentication is based on the Symfony Security component authenticators for LDAP.
+SuiteCRM extends some of Symfony's services. Thus, most of the configuration will be similar to the one on core Symfony.
+
+{{% notice note %}}
+For the moment the legacy LDAP configurations are not taken into account. Reading legacy configuration will be done as part of future work.
+{{% /notice %}}
+
+== Enabling LDAP authentication
+
+To enable LDAP authentication change your `.env.local` and set:
+
+[source,bash]
+----
+AUTH_TYPE=ldap
+----
+
+== Configuring authentication
+
+SuiteCRM exposes some of Symfony's LDAP configuration as `env` variables.
+The `.env` file has the default value for all the available variables. When configuring an instance add the variables you want to override to `.env.local` file.
+
+[source,bash]
+----
+###> LDAP CONFIG ###
+LDAP_HOST=''
+LDAP_PORT=389
+LDAP_ENCRYPTION=tls
+LDAP_PROTOCOL_VERSION=3
+LDAP_REFERRALS=false
+LDAP_DN_STRING=''
+LDAP_QUERY_STRING=''
+LDAP_SEARCH_DN=''
+LDAP_SEARCH_PASSWORD=''
+###< LDAP CONFIG ###
+----
+
+=== Option description
+
+*LDAP_HOST*
+
+The host for the LDAP instance
+
+*LDAP_PORT*
+
+The port for the LDAP instance
+
+*LDAP_ENCRYPTION*
+
+The type of encryption used to connect to LDAP, either: *none*, *tls* or *ssl*
+
+*LDAP_DN_STRING*
+
+The `DN` string used to identify the user in LDAP. It can have the `username` set as a variable, e.g.:
+`'cn={username},dc=example,dc=org'`
+
+*LDAP_QUERY_STRING*
+
+Allows to set a search string to search for a user. The found `DN` will be the one used to validate the credentials.
+
+*LDAP_SEARCH_DN*
+
+A DN of another user that is going to be used to search for the `DN`.
+
+*LDAP_SEARCH_PASSWORD*
+
+Password for the user used in LDAP_SEARCH_DN
+
+=== Example
+[source,bash]
+----
+###> LDAP CONFIG ###
+LDAP_HOST=ldap
+LDAP_ENCRYPTION=none
+LDAP_DN_STRING='cn={username},dc=example,dc=org'
+###< LDAP CONFIG ###
+----
+
+== Allowing fallback to native authentication
+
+SuiteCRM allows to fallback to native authentication using the password set on the SuiteCRM instance for that user.
+
+If a user has `external_auth_only` set to 1 (or true), the login will fail if the provided password does not match the one on LDAP or there is any other problem with the authentication against LDAP.
+
+On the other hand, if a user has  `external_auth_only` set to 0 (or false) and the authentication against LDAP fails, the system will immediately try to authenticate against SuiteCRM's native authentication.
+
+== Configuring user auto creation
+
+By default user auto creation is disabled for LDAP.
+
+**When disabled** you will only be able to authenticate a user using LDAP **if you first create them on SuiteCRM.**
+
+The auto-create option will auto create the user from LDAP if they do not exist on SuiteCRM yet.
+
+Please note that **this user will not have any password set on SuiteCRM** and the `external_auth_only` **is set to 1 (or true) by default**.
+
+To enable LDAP user auto creation change your `.env.local` and set:
+
+[source,bash]
+----
+LDAP_AUTO_CREATE=enabled
+----
+
+When enabling the user auto creation you also need to specify the configurations required to find the user in LDAP.
+
+Like the other LDAP configuration already covered, for the user auto creation the `.env` file also contains the default values that you can override:
+
+[source,bash]
+----
+###> LDAP AUTO CREATE CONFIG ###
+LDAP_AUTO_CREATE=disabled
+LDAP_PROVIDER_BASE_DN=''
+LDAP_PROVIDER_SEARCH_DN=''
+LDAP_PROVIDER_SEARCH_PASSWORD=''
+LDAP_PROVIDER_DEFAULT_ROLES=ROLE_USER
+LDAP_PROVIDER_UID_KEY=''
+LDAP_PROVIDER_FILTER=''
+###< LDAP AUTO CREATE CONFIG ###
+----
+
+=== Option description
+
+*LDAP_PROVIDER_BASE_DN*
+
+The base `DN` used to search for the users
+
+*LDAP_PROVIDER_UID_KEY*
+
+The attribute on your LDAP entry to use as `uid. This is used to but build a query like `({uid_key}={username})`
+
+*LDAP_PROVIDER_FILTER*
+
+Optional. Allows to specify a query search for the user in LDAP. The default filter is `({uid_key}={username})`
+
+*LDAP_PROVIDER_SEARCH_DN*
+
+A `DN` of another user that is going to be used to search the user we are currently trying to authenticate with.
+
+*LDAP_PROVIDER_SEARCH_PASSWORD*
+
+Password for the user used in LDAP_PROVIDER_SEARCH_DN
+
+*LDAP extra fields*
+
+Extra fields' configuration will be used to fetch extra attributes/fields from LDAP. These can then be used to populate the user record that is created.
+
+The configuration for extra fields is **not** done through `.env`. It needs to be done by overriding container parameters.
+This means that this configuration is not as easily configurable per environment.
+
+The default configuration for extra fields is defined on `config/services/ldap/ldap.yaml`.
+
+To override the configurations you need to copy the file over to the `extensions` folder on a path like `extensions/<your-package>/config/services/ldap/ldap.yaml`
+
+[source,yaml]
+----
+parameters:
+  ldap.autocreate.extra_fields_map:
+
+  ldap.extra_fields: [ ]
+
+----
+
+From the above please note that there are two configuration entries:
+
+*ldap.extra_fields*
+
+An array of strings with the key of the LDAP entry attributes/fields to retrieve. See example on next section.
+
+*ldap.autocreate.extra_fields_map*
+
+Defines how to map the LDAP fields to the fields in the user. See example on next section.
+
+
+
+=== Example
+
+*LDAP .env.local*
+
+[source,bash]
+----
+###> LDAP AUTO CREATE CONFIG ###
+LDAP_PROVIDER_BASE_DN='dc=example,dc=org'
+LDAP_PROVIDER_UID_KEY='cn'
+LDAP_PROVIDER_SEARCH_DN='cn=admin,dc=example,dc=org'
+LDAP_PROVIDER_SEARCH_PASSWORD='admin'
+###< LDAP AUTO CREATE CONFIG ###
+----
+
+*LDAP ldap.yaml*
+File: `extensions/<your-package>/config/services/ldap/ldap.yaml
+
+[source,yaml]
+----
+parameters:
+  ldap.extra_fields: [ 'name', 'sn', 'email' ]
+  ldap.autocreate.extra_fields_map:
+    name: first_name
+    sn: last_name
+    email: email1
+----
+
+
+== Clear symfony cache
+
+After doing any changes to `.env` or `ldap.yaml` you need to clear cache.
+
+From your instance root folder run `bin/console cache:clear`
+
+[source,bash]
+----
+bin/console cache:clear
+----
+
+If you don't have access to the terminal you can also delete the contents of: `/<path-to-your-project>/cache`
+
+* Please make sure that `apache / php` **has access to write** to the `cache` folder
+* **The above is not** the legacy cache folder. **Do not** delete the `/<path-to-your-project>/public/legacy/cache`
+
+
+== More information
+
+For more information about options on LDAP see the link:https://symfony.com/doc/current/security/ldap.html[Symfony's Security Component documentation]
+
+Please make sure to read the documentation of the **Symfony version used on your version of SuiteCRM**
+

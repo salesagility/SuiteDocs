@@ -1,0 +1,176 @@
+---
+title: "8.2 Releases"
+weight: 9860
+aliases:
+  - /8.x/admin/releases/8.2/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+
+== 8.2-beta.2
+
+_Released 15/09/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-pre-release[Downloads]
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.0-beta.2[Github Release]
+
+===  icon:check[] Release Notes
+
+==== icon:warning[] Important Upgrade Notes
+
+This is a pre-release and NOT recommended for Production use.
+
+==== icon:star[] Documentation
+
+* Add 7.12.x to 8.x migration documentation (with some updated log documentation) - https://pre-release.docs.suitecrm.com/8.x/admin/installation-guide/legacy-migration[7.12 Migration Documentation]
+* link:../../../../8.x/admin/configuration/ldap-configuration/[LDAP Setup and Configuration]
+* link:../../../../8.x/admin/configuration/saml-configuration/[SAML Setup and Configuration]
+
+==== icon:star[] Enhancements
+
+Following on from the previous SuiteCRM 8.2 beta release, we have continued to work on new features and improved functionality which you will find to follow;
+
+==== LDAP and SAML Authentication
+Authentication with LDAP and SAML has been added, to make it easier to access SuiteCRM by using the same credentials that you may use to access other applications.
+
+To see how to setup and configure the authentication methods, please see the following documentation:
+
+** link:../../../../8.x/admin/configuration/ldap-configuration/[LDAP Setup and Configuration]
+** link:../../../../8.x/admin/configuration/saml-configuration/[SAML Setup and Configuration]
+
+==== History Timeline
+When viewing the History timeline, you are now able to click on an entry to view the related record’s detail:
+
+image:history-timeline.png[History Timeline]
+
+==== History and Activity Subpanel Icons
+Icons have been added to both the History and Activity subpanels to show which module a record is associated with:
+
+image:icons.png[Icons]
+
+==== Duplicate View
+When duplicating a record, you will now see the ‘Create’ page for that module:
+
+image:duplicate-view.png[Duplicate View]
+
+==== Top Widget Changes`
+Previously when viewing the top widgets, if there is no information the ‘-’ character would be displayed.  This has now been changed to make it clear there is no  information to display, e.g.
+
+image:top-widgets.png[Top Widgets]
+
+==== Graphql API
+Previously when navigating to ‘http://myhost/index.php#/accounts’ or ‘http://myhost/#/accounts’, the API calls always pointed to ‘http://myhost/api/graphql’ incorrectly.
+We have therefore updated this to ensure the Graphql calls point to the correct location pathname instead.
+
+==== Bulk Select Subpanel
+When viewing a subpanel, the Link option has replaced the Select option from the actions drop down. Similar to the Select option, this option will display a pop-up window where one or more records can be selected, to associate with the parent record.
+
+image:BulkSelect.png[Bulk Select]
+
+==== icon:star[] Styling
+
+* Legacy Styling Changes
+** Campaign Mobile Styling Fixes
+** Email Settings Mobile Fixes
+** Inbound Email Mobile Styling Fixes
+** Email Queue Mobile Styling Fixes
+** Save & Cancel Button Overlapping Styling Fixes
+** ListView Styling Changes - Column Chooser & Filter Fixes
+** Document iframe page styling fixes
+** Email Compose Field Width Styling Fixes
+** Resource Calendar Styling Fixes
+** Upload File Btn Styling Fixes
+** Group User Page Styling Fixes
+** Fix Roles Labels
+
+* Other Styling Changes
+** UserWizard Final Page Styling Fixes
+** Subpanel Icons Styling Fixes
+** Subpanel Dropdown Styling Fixes
+** User Wizard Mobile Styling Fixes
+** Update Security Group labels
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors eojedapilchik jyotiraghav93 %}}
+
+We hope you find these enhancements and improvements useful and we look forward to any feedback you may have.
+
+We will continue to enhance SuiteCRM 8 with new features and fixes and have outlined our short term link:https://suitecrm.com/suitecrm-roadmap/[Road Map], which will provide an overview of things to come.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''
+
+== 8.2-beta
+
+_Released 30/06/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-pre-release[Downloads]
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.0-beta[Github Release]
+
+===  icon:check[] Release Notes
+
+==== icon:warning[] Important Upgrade Notes
+
+This is a pre-release and NOT recommended for Production use.
+
+==== icon:star[] Documentation
+* Add 7.12.x to 8.x migration documentation - https://pre-release.docs.suitecrm.com/8.x/admin/installation-guide/legacy-migration[7.12 Migration Documentation]
+* Add step to check config and htaccess to install documentation - https://pre-release.docs.suitecrm.com/8.x/admin/installation-guide/downloading-installing[Installation Documentation]
+* Update 8.x upgrade guide with new upgrade steps - https://pre-release.docs.suitecrm.com/8.x/admin/installation-guide/upgrading[Upgrade Documentation]
+
+==== icon:star[] Enhancements
+
+* New 7.12 Migration Process - see pre-release https://pre-release.docs.suitecrm.com/8.x/admin/installation-guide/legacy-migration[Migration Documentation]
+* Upgrade Improvements - see updated pre-release https://pre-release.docs.suitecrm.com/8.x/admin/installation-guide/upgrading[Upgrade Documentation]
+* Login enhancements - Reimplement login to use Symfony json login
+  - Legacy login process is no longer used
+  - XSRF token has been Reconfigured
+  - `before_login`, `after_login`, `login_error` hooks have yet to be ported to SuiteCRM 8 and are disabled for the moment
+
+==== icon:star[] Styling
+
+* Legacy Timezone Modal Changes
+* Legacy ActionDropdown Label Suite8 styling updates
+* Legacy Import VCard Suite8 styling updates
+* Legacy Outbound Email Mobile Suite8 styling updates
+
+
+=== icon:heart[] Community
+
+We would love to have you feedback and input to help make SuiteCRM 8 Great for everyone.
+
+
+SuiteCRM 8 marks our biggest SuiteCRM upgrade to date and we are very excited to be sharing it with you. In the coming months, we will continue to enhance SuiteCRM 8 with new features and issue fixes. For more information regarding this, please see our link:https://suitecrm.com/suitecrm-roadmap/[Road Map] which will provide further information on what can be expected from future releases.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''

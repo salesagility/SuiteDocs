@@ -6,45 +6,174 @@ weight: 30
 :imagesdir: /images/en/user
 
 {{% notice note %}}
-**If you run into issue when upgrading, please check the Possible Issues when Upgrading section**.
+**If you run into any issue when upgrading, please check the 'Possible Issues when Upgrading section'**.
 {{% /notice %}}
 
-== Before upgrading
+== 1. Before upgrading
 
 . Before running the upgrade, please make sure your system **complies with the new version compatibility matrix**.
 ** Check the link:../../compatibility-matrix[Compatibility Matrix] for complete information on compatible versions.
 
-. It is recommended that you run the **upgrade process in a development instance and test**. Only after testing, deploying the upgraded version on to a production instance
+. It is recommended that you run the **upgrade process in a development instance and test**. Only after testing, deploy the upgraded version on to a production instance
 
 . Before upgrading please make sure to create a **backup** of your instance code and database.
 
+. By default, the upgrade commands will set the `error_reporting` to a less strict mode to suppress warnings.
+** The error_reporting value set is `E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING`
+** If you want to apply a stricter mode you can specify the `-vvv` on each of the commands. This will set `E_ALL` on `error_reporting`
 
-== Upgrading between SuiteCRM 8.x versions
+. Please note that the upgrade process may **remove any non core file/directories** you have on your project under the `root` folder or the `public/legacy/` folder
+
+
+== 2. Upgrading between SuiteCRM 8.x versions
 
 {{% notice note %}}
-This section only applies for versions greater than 8.0.0-rc
+This section only applies when upgrading to a version equal or greater to 8.2.x.
 {{% /notice %}}
 
+For upgrades to versions prior to 8.2.x see section *#3. Upgrading between SuiteCRM 8.0.x to 8.1.x versions*
 
-=== 1. Download the new version package
+
+=== 2.1. Download the new version package
 
 {{% notice info %}}
 For upgrading between SuiteCRM 8.x versions there aren't any upgrade specific packages. The upgrade is done using the installation package of the version we want to upgrade to.
 {{% /notice %}}
 
-*1* - Create the following folder on you current instance:
+*1.* Create the following folder on you current instance:
 
 * `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
 
-*2* - Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
+*2.* Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
 
-*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+*3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
 
-*4* - If needed re-set the correct permissions.
+*4.* If needed re-set the correct permissions.
 
-=== 3. Run the upgrade command
+=== 2.2. Run the upgrade command
 
-*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+*1.* On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.2.0`
+* **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.2.0`
+
+The output should be something like:
+
+*Note*: please ignore the `libpng warning`
+
+[source,bash]
+----
+SuiteCRM Upgrade
+============
+
+Running: check-package
+step: check-package | status: done
+Package found in path
+Running: extract-package
+step: extract-package | status: done
+Package extracted
+Running: check-permissions
+step: check-permissions | status: done
+Permissions checked
+Running: install-upgrade-package
+step: install-upgrade-package | status: done
+Successfully installed package
+Running: run-migrations
+step: run-migrations | status: done
+Successfully run migrations
+Running: legacy-post-upgrade
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: Interlace handling should be turned on when using png_read_image
+step: legacy-post-upgrade | status: done
+Post Upgrade process complete
+Running: clear-symfony-cache
+----
+
+=== 2.3. Run the post upgrade command
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finalize -t "<version>"`
+
+==== 2.3.1 Metadata merge modes
+
+In the finalize command you can specify the merge mode you want to use for merging metadata.
+This can be changed by specifying the `-m` option on the `suitecrm:app:upgrade-finalize` command.
+The `keep` mode is used by default.
+
+Next you can find a description of each mode and how to use it.
+
+*1.* **Keep mode**
+
+* The default mode is to keep the existing view metadata customizations and will simply skip the metadata merge process.
+* If you want to specify on the command you can run: `./bin/console suitecrm:app:upgrade-finalize -m keep`
+
+*2.* **Merge mode**
+
+* This mode will attempt to merge your current view metadata customizations with the new core view metadata for each module
+* The merged metadata is placed in the custom folder for the corresponding module `public/legacy/custom/<Module>/metadata`
+* A backup file of the previous version of the customizations is added to the same folder
+* You can use the merge mode by running `./bin/console suitecrm:app:upgrade-finalize -m merge`
+
+*3.* **Override mode**
+
+* This mode will override your current customizations with the new version of the core metadata.
+* **Please note** that this will **delete** your current customizations files in `public/legacy/custom/<Module>/metadata`
+* You can use the merge override mode by running `./bin/console suitecrm:app:upgrade-finalize -m override`
+
+
+=== 2.4. Re-set permissions
+
+If during the migration you used a user/group that is not the same as the ones used by apache (or other webserver) you should re-set the correct permissions
+
+=== 2.5. (Optional) Restart server to reset/clear php level cache
+
+If you are using `opcache`, `apcu` or other php caches, you may need to restart your webserver for the new code to take effect.
+
+
+=== 2.6. Open your instance
+
+If all the above steps went as expected, you should now be able to login into your instance.
+
+=== 2.6. Debugging
+
+Check link:#_5_1_logs[5. Logs and debugging section] for information on how to debug.
+
+
+---
+---
+
+== 3. Upgrading from SuiteCRM 8.0.x to 8.1.x versions
+
+{{% notice note %}}
+This section only applies for versions greater than 8.0.0-rc to 8.1.x
+{{% /notice %}}
+
+
+=== 3.1. Download the new version package
+
+{{% notice info %}}
+For upgrading between SuiteCRM 8.x versions there aren't any upgrade specific packages. The upgrade is done using the installation package of the version we want to upgrade to.
+{{% /notice %}}
+
+*1.* Create the following folder on you current instance:
+
+* `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+*2.* Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
+
+*3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+
+*4.* If needed re-set the correct permissions.
+
+=== 3.2. Run the upgrade command
+
+*1.* On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
 
 * Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.1.1`
 * **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.1.1`
@@ -89,20 +218,16 @@ Running: clear-symfony-cache
 ----
 
 
-*2* - Re-set permissions, if needed
+*2.* Re-set permissions, if needed
 
-=== 4. Open your instance
+=== 3.3. Open your instance
 
-*1* -  If all the above steps went as expected, you should now be able to login into your instance.
+Once all the above steps are complete, you should now be able to log into your instance of SuiteCRM.
 
 ---
 ---
 
-== Upgrade for pre release-candidate versions
-
-{{% notice info %}}
-Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
-{{% /notice %}}
+== 4. Upgrade for pre release-candidate versions
 
 {{% notice info %}}
 Some bugs were found while testing the upgrade from Beta 3 to RC.
@@ -110,14 +235,16 @@ The steps on this section explain how to workaround those problems.
 These issues have been fixed on the RC version.
 {{% /notice %}}
 
+Upgrading from SuiteCRM 8 Beta 3 to SuiteCRM 8 RC
 
-=== 1. Prepare for upgrade.
+
+=== 4.1. Prepare for upgrade.
 
 To overcome the issues mentioned above, you need to apply the following change on your code base.
 
-*1* - Open the `config/services/system/upgrades.yaml` config file.
+*1.* Open the `config/services/system/upgrades.yaml` config file.
 
-*2* - Add a `tmp` entry to the `toKeep` section.
+*2.* Add a `tmp` entry to the `toKeep` section.
 
 It should look like this:
 
@@ -149,34 +276,32 @@ parameters:
     ...
 ----
 
-*3* - Run:
+*3.* Run:
 
 * For dev mode run: `composer install`
 * For prod mode run: `composer install --no-dev --prefer-dist --optimize-autoloader`
 
-=== 2. Download the RC package
+=== 4.2. Download the RC package
 
-*1* - Create the following folder on you current instance:
+*1.* Create the following folder on you current instance:
 
 * `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
 
-*2* - Download the SuiteCRM 8 RC pre-built / installable package
+*2.* Download the SuiteCRM 8 RC pre-built / installable package
 
-*3* - Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+*3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
 
-*4* - If needed re-set the correct permissions.
+*4.* If needed re-set the correct permissions.
 
-=== 3. Run the upgrade command
-
-*1* - On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
-
-* Where `<version>` is the name on the SuiteCRM 8 RC package
+=== 4.3. Run the upgrade command
 
 {{% notice info %}}
-There is a known issue when running the upgrade command from Beta 3 to the RC version.
-
-The step to overcome that issue are explained next
+There is a known issue when running the upgrade command from Beta 3 to the RC version. The step to overcome this issue is explained next.
 {{% /notice %}}
+
+*1.* On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 RC package
 
 The output of the command should be something like:
 
@@ -245,17 +370,54 @@ Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
 }
 ----
 
-*2* - To overcome the above error you need to clear symfony cache
+*2.*  To overcome the above error you need to clear symfony cache
 
 * On your SuiteCRM 8 instance root, please run: `./bin/console cache:clear`
 
-*3* - Re-set permissions, if needed
+*3.* Re-set permissions, if needed
 
-=== 4. Open your instance
+=== 4.4. Open your instance
 
-*1* - If all the above steps went as expected, you should now be able to login into your instance.
+If all the above steps went as expected, you should now be able to login into your instance.
 
-== Possible Issues when Upgrading
+== 5. Logs and debugging
+
+=== 5.1 Logs
+
+The commands used during the upgrade provide some information of the steps and their execution result. However, this information is insufficient when errors occur.
+
+There are some logs that may provide more information:
+
+*logs/upgrade.log*
+
+These are the logs that are generated by the upgrade log on SuiteCRM 8 side.
+
+
+*public/legacy/upgradeWizard.log*
+
+These are upgrade specific logs that are generated by the legacy part of the app. This file is generated during the `legacy-post-upgrade` step.
+
+
+*logs/<app-env-mode>/<app-env-mode>.log*
+
+The main app log. Its file path and name changes according to the value set on your `APP_ENV`.  E.g. if it is set to `prod` the path will be `logs/prod/prod.log`
+
+Most likely, this log will not have much upgrade information.
+
+
+*public/legacy/suitecrm.log*
+
+This is the main log location for the legacy part of the app. It may contain upgrade related logs, as well as other logs.
+
+=== 5.2 APP_ENV mode
+
+When running the app in a production environment the `APP_ENV` in `.env` or in `.env.local` should be set to `prod`. However this mode has a high log level, meaning that not all the debug information will be logged.
+
+One way to get more logs is to change `APP_ENV` to `qa` (this mode should only be used temporarily).
+
+After the `APP_ENV` you may have to clear the symfony cache.
+
+== 6. Possible Issues when Upgrading
 
 An issue was found on the implementation of the upgrade command between the versions `8.1.0` -> `8.1.1`.
 
@@ -271,7 +433,7 @@ CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<patht
 
 This issue is a result of Symfony cache clearing but then being called right after.
 
-=== Resolution
+=== 6.1 Resolution
 
 This issue can be resolved by **re-setting permissions** and `./bin/console/ clear:cache` within the SuiteCRM 8 root directory.
 

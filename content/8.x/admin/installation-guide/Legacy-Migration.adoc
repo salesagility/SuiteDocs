@@ -1,0 +1,210 @@
+---
+Title: SuiteCRM 7.12.x migration to SuiteCRM 8.x
+weight: 30
+---
+
+:imagesdir: /images/en/user
+
+== 1. Before migrating
+
+. Before running the migration, please make sure your system **complies with the new version compatibility matrix**.
+** Check the link:../../compatibility-matrix[Compatibility Matrix] for complete information on compatible versions.
+
+. It is recommended that you run the **migration process in a development instance and test**. Only after testing, deploying the upgraded version on to a production instance
+
+. Before migrating please make sure to create a **backup** of your instance code and database.
+
+. **Upgrade your SuiteCRM 7.x instance to the latest 7.12.x version**
+.. Make sure to go over any manual upgrade steps described on the release notes for each version
+
+. By default, the upgrade commands will set the `error_reporting` to a less strict mode to suppress warnings.
+** The error_reporting value set is `E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING`
+** If you want to apply a stricter mode you can specify the `-vvv` on each of the commands. This will set `E_ALL` on `error_reporting`
+
+. Please note that the migration process may **remove any non core file/directories** you have on your project under the `public/legacy/` folder
+
+. Before running any of the commands described next, please make sure your SuiteCRM 8 instance `APP_ENV` is set to `APP_ENV=prod` mode (check `.env` and '.env.local' files)
+
+== 2. Migrating from 7.12.x to SuiteCRM 8.x versions
+
+
+{{% notice note %}}
+Only run the migration if you have already upgraded your SuiteCRM 7.x instance to the latest 7.12.x version.
+{{% /notice %}}
+
+
+=== 2.1. Download the new version migration package
+
+*1* - Download the SuiteCRM 8.x target version migration package (e.g. 8.x 7.12.x Migration) from link:https://suitecrm.com/suitecrm-pre-release/[SuiteCRM Pre Release]
+
+*2* - Unzip the package contents to your SuiteCRM 8.x destination folder
+
+* *2.1* - For Example: You would unzip the package to a newly created folder like `/var/www/<SuiteCRM8-folder>`
+
+*3* - If needed re-set the correct permissions.
+
+=== 2.2. Copy your SuiteCRM 7.12.x instance
+
+*1* - Copy your SuiteCRM 7.12.x instance folder to the public folder on the SuiteCRM 8.x destination folder `/path-to-suitecrm-8/public`
+
+* *1.1* - Following the example above this would be `/var/www/<SuiteCRM8-folder>/public/>`.
+
+* *1.2* - With your new folder added: `/var/www/<SuiteCRM8-folder>/public/<SuiteCRM 7 Instance>`.
+
+*2* - Rename the SuiteCRM 7.12.x copied folder to `legacy`
+
+*3* - If needed re-set the correct permissions.
+
+=== 2.3. Set Permissions
+
+Set the permissions on the files in a way that the command line user has enough privileges to read and write
+
+=== 2.4. Run the migration prepare command
+
+*1* - On your SuiteCRM 8 instance root (For example: `/var/www/<SuiteCRM8>`) run: `./bin/console suitecrm:app:setup-legacy-migration`
+
+*2* - You should be prompted to do the manual step for checking and updating values on legacy config
+
+* `session_dir`: you should update your session dir to `''`. After migration you can re-configure the system to use a different `session_dir`
+** Please note that the SuiteCRM 8 configuration for the `session_dir` is different.
+** See the link:../configuration/sessions-configuration[Session Configuration] for more details.
+
+* `site_url`: you should update your site_url
+** You should update this value to be the address you are currently using to migrate and test the SuiteCRM 8.x migration
+** Please note that if you don't have your vhost pointing to the `public` dir within your SuiteCRM 8 root folder, you should append `/public`
+*** e.g. if your address is something like `https://your-host/crm/public`,
+
+*3* - You should be prompted to do the manual step for checking and updating values on the legacy .htaccess
+
+* `RewriteBase`
+** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then you should set `RewriteBase /legacy`
+** Otherwise, you should prepend the path until the `public` folder.
+*** e.g. if your address is something like `https://your-host/crm/public`, then you should set `RewriteBase /crm/public/public`
+
+=== 2.5. Run the upgrade command
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`
+
+* Where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.2.0`
+* **Example:** `./bin/console suitecrm:app:upgrade -t SuiteCRM-8.2.0`
+
+=== 2.6. Run the post upgrade command
+
+{{% notice note %}}
+**When upgrading highly customized instances you may hit issues during this step. Make sure your customization's code is php 7.4 compliant as a minimum**.
+{{% /notice %}}
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finalize`
+
+==== 2.6.1 Metadata merge modes
+
+In this finalize command you can specify the merge mode you want to use for merging metadata.
+This can be changed by specifying the `-m` option on the `suitecrm:app:upgrade-finalize` command.
+The `keep` mode is used by default.
+
+Next you can find a description of each mode and how to use it.
+
+*1.* **Keep mode**
+
+* The default mode is to keep the existing view metadata customizations and will simply skip the metadata merge process.
+* If you want to specify on the command you can run: `./bin/console suitecrm:app:upgrade-finalize -m keep`
+
+*2.* **Merge mode**
+
+* This mode will attempt to merge your current view metadata customizations with the new core view metadata for each module
+* The merged metadata is placed in the custom folder for the corresponding module `public/legacy/custom/<Module>/metadata`
+* A backup file of the previous version of the customizations is added to the same folder
+* You can use the merge mode by running `./bin/console suitecrm:app:upgrade-finalize -m merge`
+
+*3.* **Override mode**
+
+* This mode will override your current customizations with the new version of the core metadata.
+* **Please note** that this will **delete** your current customizations files in `public/legacy/custom/<Module>/metadata`
+* You can use the merge override mode by running `./bin/console suitecrm:app:upgrade-finalize -m override`
+
+
+=== 2.7. Re-set permissions
+
+If during the migration you used a user/group that is not the same as the ones used by apache (or other webserver) you should re-set the correct permissions
+
+=== 2.8. (Optional) Restart server to reset/clear php level cache
+
+If you are using `opcache`, `apcu` or other php caches, you may need to restart your webserver for the new code to take effect.
+
+=== 2.9. Open your instance and test
+
+Once all the above steps are complete, you should now be able to log into your instance of SuiteCRM.
+
+== 3. Logs and debugging
+
+=== 3.1 Logs
+
+The commands used during the upgrade provide some information of the steps and their execution result. However, this information is insufficient when errors occur.
+
+There are some logs that may provide more information:
+
+*logs/upgrade.log*
+
+These are the logs that are generated by the upgrade log on SuiteCRM 8 side.
+
+
+*public/legacy/upgradeWizard.log*
+
+These are upgrade specific logs that are generated by the legacy part of the app. This file is generated during the `legacy-post-upgrade` step.
+
+
+*logs/<app-env-mode>/<app-env-mode>.log*
+
+The main app log. Its file path and name changes according to the value set on your `APP_ENV`.  E.g. if it is set to `prod` the path will be `logs/prod/prod.log`
+
+Most likely, this log will not have much upgrade information.
+
+
+*public/legacy/suitecrm.log*
+
+This is the main log location for the legacy part of the app. It may contain upgrade related logs, as well as other logs.
+
+=== 3.2 APP_ENV mode
+
+When running the app in a production environment the `APP_ENV` in `.env` or in `.env.local` should be set to `prod`. However this mode has a high log level, meaning that not all the debug information will be logged.
+
+One way to get more logs is to change `APP_ENV` to `qa` (this mode should only be used temporarily).
+
+After the `APP_ENV` you may have to clear the symfony cache.
+
+== 4. Common issues
+
+=== 4.1. CSRF token issues
+
+During our internal tests, we've done several re-installs and upgrades. These tests were usually done on the same url / instance.
+
+It can happen that in this process the cookies are not updated or refreshed, which could prevent the user from using the app.
+
+If you are getting a `Invalid CSRF token` error, one thing to try is to refresh the page and clear the cookies. That will allow the server to generate new ones, for a new session.
+
+=== 4.2. Forgetting to reset permissions after running upgrade command
+
+Please make sure that after running the upgrade commands you re-set permissions.
+
+Re-setting permissions is required when you are running the command with a user different from the one that is used by apache.
+Have in mind that when you run the commands with another user (the root user for instance) that is the user that php will use, which will impact file creation. Files created by php will be set to that user and group.
+Which may prevent the app from working, as Apache web server user may (and most likely) not have the privileges to read/write files assigned to that user.
+
+=== 4.3. Missing suitecrm:app:setup-legacy-migration command or errors at the start of the execution
+
+We have noticed that usually these errors occur when the wrong migration package is being used.
+
+Please make sure you are using a migration package and not the SuiteCRM 8 installation package. The migration package is a special package built specifically for the 7.x to 8.x migration.
+
+The name of the migration package follows the name pattern: 'SuiteCRM-8.x-7.x-migration', where 8.x and 7.x are the versions.
+
+=== 4.4. Not knowing where to place the SuiteCRM 7 or the SuiteCRM 8 folder/instances
+
+When doing the upgrade you will need a new instance on your webserver for SuiteCRM 8.
+The migration package does not apply the migration on top of an existing instance, in other words, you don't upload the migration package to your SuiteCRM 7 instance.
+
+The process works the other way around, the SuiteCRM 7 instance will be moved/copied to a SuiteCRM 8 instance.
+
+The migration package is similar to a SuiteCRM 8 installation package without the `public/legacy` folder. After extracting the migration package, your SuiteCRM 7 folder should be copied to inside the `public` folder that exists on the SuiteCRM 8 root folder, and then renamed to `legacy`.
+Later on in the process, when running the upgrade commands, your SuiteCRM 7 code that is now on `public/legacy` will be updated with all the "legacy" changes that SuiteCRM 8 includes.
+
