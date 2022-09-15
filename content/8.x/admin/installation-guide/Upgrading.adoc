@@ -24,6 +24,7 @@ weight: 30
 
 . Please note that the upgrade process may **remove any non core file/directories** you have on your project under the `root` folder or the `public/legacy/` folder
 
+. Before running any of the commands described next, please make sure your SuiteCRM 8 instance `APP_ENV` is set to `APP_ENV=prod` mode (check `.env` and '.env.local' files)
 
 == 2. Upgrading between SuiteCRM 8.x versions
 
