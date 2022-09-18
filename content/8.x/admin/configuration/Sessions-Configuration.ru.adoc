@@ -11,6 +11,11 @@ weight: 42
 :toc-title: Оглавление
 :toclevels: 1
 
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
 :experimental:
 
 :btn: btn:
