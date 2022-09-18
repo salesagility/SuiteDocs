@@ -10,6 +10,11 @@ weight: 20
 :toc-title: Оглавление
 :toclevels: 3
 
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
 :experimental:
 
 :imagesdir: /images/ru/8.x/admin/Installing
