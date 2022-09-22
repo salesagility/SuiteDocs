@@ -1,0 +1,220 @@
+---
+Title: Настройка LDAP 
+weight: 40
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 1
+
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
+== Введение
+
+Аутентификация LDAP использует  Symfony Security component authenticators for LDAP.
+SuiteCRM расширяет некоторые сервисы Symfony. Таким образом, большая часть настроек будет аналогична настройкам Symfony.
+
+{{% notice note %}}
+На данный момент устаревшие настройки LDAP игнорируются. Поддержка устаревших настроек планируется в будущем.
+{{% /notice %}}
+
+== Включение аутентификации LDAP
+
+Для включения аутентификации LDAP в файле `.env.local` пропишите следующее:
+
+[source,bash]
+----
+AUTH_TYPE=ldap
+----
+
+== Настройка аутентификации
+
+SuiteCRM предоставляет доступ к некоторым параметрам Symfony LDAP, указывая стандартные значения этих параметров в файле `.env`.
+Файл `.env` содержит значения по умолчанию для всех доступных переменных системы. Если вы хотите переопределить те или иные значения - укажите новые значения параметров в файле `.env.local`.
+
+[source,bash]
+----
+###> LDAP CONFIG ###
+LDAP_HOST=''
+LDAP_PORT=389
+LDAP_ENCRYPTION=tls
+LDAP_PROTOCOL_VERSION=3
+LDAP_REFERRALS=false
+LDAP_DN_STRING=''
+LDAP_QUERY_STRING=''
+LDAP_SEARCH_DN=''
+LDAP_SEARCH_PASSWORD=''
+###< LDAP CONFIG ###
+----
+
+=== Описание параметров
+
+LDAP_HOST:: Название сервера LDAP.
+
+LDAP_PORT:: Порт сервера LDAP.
+
+LDAP_ENCRYPTION:: Тип шифрования, используемый для подключения к LDAP: `none`, `tls` или `ssl`.
+
+LDAP_DN_STRING:: Параметр `DN` (Distinguished Name)  используется для идентификации пользователя в LDAP. Имя пользователя может быть указано как переменная, например:
+`'cn={username},dc=example,dc=org'`.
+
+LDAP_QUERY_STRING:: Строка для поиска пользователя. Найденное `DN` будет использоваться для проверки учётных данных.
+
+LDAP_SEARCH_DN:: DN пользователя, которое будет использоваться для поиска `DN`.
+
+LDAP_SEARCH_PASSWORD:: Пароль пользователя, используемого в LDAP_SEARCH_DN.
+
+[discrete]
+=== Пример:
+
+[source,bash]
+----
+###> LDAP CONFIG ###
+LDAP_HOST=ldap
+LDAP_ENCRYPTION=none
+LDAP_DN_STRING='cn={username},dc=example,dc=org'
+###< LDAP CONFIG ###
+----
+
+== Использование собственной аутентификации
+
+Даже при использовании LDAP система позволяет использовать собственную аутентификацию с использованием пароля, установленного в SuiteCRM для указанного пользователя.
+
+Если в настройках пользователя параметр `external_auth_only` (см. соответствующее поле таблицы `users` в базе данных) установлен в значение *1* (или *true*), вход в систему завершится ошибкой, если указанный пароль не совпадает с паролем в LDAP, или если возникнут какие-либо другие проблемы с аутентификацией по LDAP.
+
+С другой стороны, если у пользователя параметр `external_auth_only` установлен в значение *0* (или *false*) и аутентификация по LDAP не удалась, система попытается пройти аутентификацию, используя учётные данные  SuiteCRM.
+
+== Настройка автоматического создания пользователя
+
+По умолчанию автоматическое создание пользователей для LDAP отключено.
+
+*Если этот параметр отключён*, то вы сможете аутентифицировать пользователя с помощью LDAP только в том случае, *если он перед этим был создан в SuiteCRM.*
+
+Включённый параметр *LDAP_AUTO_CREATE* автоматически создаст пользователя из LDAP, если он ещё не существует в SuiteCRM.
+
+{{% notice note %}}
+Обратите внимание, что у созданного таким образом пользователя не будет установлен пароль в SuiteCRM, а параметр `external_auth_only` будет установлен в значение *1* (или true).
+{{% /notice %}}
+
+Для включения автоматического создания пользователя LDAP в файле `.env.local` пропишите следующее:
+
+[source,bash]
+----
+LDAP_AUTO_CREATE=enabled
+----
+
+При включении автоматического создания пользователя вам также необходимо прописать параметры, необходимые для поиска пользователя в LDAP.
+
+Как и для других уже рассмотренных параметров, для автоматического создания пользователя файл `.env` содержит значения по умолчанию, которые вы можете переопределить:
+
+[source,bash]
+----
+###> LDAP AUTO CREATE CONFIG ###
+LDAP_AUTO_CREATE=disabled
+LDAP_PROVIDER_BASE_DN=''
+LDAP_PROVIDER_SEARCH_DN=''
+LDAP_PROVIDER_SEARCH_PASSWORD=''
+LDAP_PROVIDER_DEFAULT_ROLES=ROLE_USER
+LDAP_PROVIDER_UID_KEY=''
+LDAP_PROVIDER_FILTER=''
+###< LDAP AUTO CREATE CONFIG ###
+----
+
+=== Описание параметров
+
+LDAP_PROVIDER_BASE_DN:: Базовое (корневая) `DN`, используемое для поиска пользователей.
+
+LDAP_PROVIDER_UID_KEY:: Атрибут вашей записи в LDAP для использования в качестве `uid`. Используется для создания запроса типа  `({uid_key}={username})`.
+
+LDAP_PROVIDER_FILTER:: Необязательный параметр. Позволяет указать запрос для поиска пользователя в LDAP. Фильтр по умолчанию: `({uid_key}={username})`.
+
+LDAP_PROVIDER_SEARCH_DN:: `DN` другого пользователя, который будет использоваться для поиска пользователя, с которым мы в данный момент пытаемся пройти аутентификацию.
+
+LDAP_PROVIDER_SEARCH_PASSWORD:: Пароль для пользователя, используемого в параметре *LDAP_PROVIDER_SEARCH_DN*.
+
+== Дополнительные поля LDAP
+
+Настройки дополнительных полей используются для получения дополнительных атрибутов/полей из LDAP. Полученные значения могут быть использованы для заполнения параметров создаваемой записи нового пользователя.
+
+Настройки дополнительных полей НЕ прописываются в файле `.env`. Это делается через переопределение параметров  контейнера.
+
+Настройки  для дополнительных полей по умолчанию прописываются в файле `config/services/ldap/ldap.yaml`.
+
+Для переопределения настроек необходимо скопировать указанный выше файл в папку `extensions`, прописав аналогичный путь до файла, например: `extensions/<your-package>/config/services/ldap/ldap.yaml`.
+
+[source,yaml]
+----
+parameters:
+  ldap.autocreate.extra_fields_map:
+
+  ldap.extra_fields: [ ]
+
+----
+
+где:
+
+ldap.extra_fields:: Массив строк с ключом атрибутов/полей записи LDAP для извлечения (см. пример ниже).
+
+ldap.autocreate.extra_fields_map:: Способ сопоставления полей LDAP с полями пользователя (см. пример ниже).
+
+[discrete]
+=== Пример:
+
+Настройки в файле *.env.local*
+
+[source,bash]
+----
+###> LDAP AUTO CREATE CONFIG ###
+LDAP_PROVIDER_BASE_DN='dc=example,dc=org'
+LDAP_PROVIDER_UID_KEY='cn'
+LDAP_PROVIDER_SEARCH_DN='cn=admin,dc=example,dc=org'
+LDAP_PROVIDER_SEARCH_PASSWORD='admin'
+###< LDAP AUTO CREATE CONFIG ###
+----
+
+Настройки в файле *extensions/<your-package>/config/services/ldap/ldap.yaml*
+
+[source,yaml]
+----
+parameters:
+  ldap.extra_fields: [ 'name', 'sn', 'email' ]
+  ldap.autocreate.extra_fields_map:
+    name: first_name
+    sn: last_name
+    email: email1
+----
+
+
+== Очистка кеша Symfony 
+
+После внесения любых изменений в файлы `.env` и `ldap.yaml`  необходимо очистить кеш Symfony.
+
+Из корневой папки системы выполните: 
+
+[source,bash]
+----
+bin/console cache:clear
+----
+
+Либо удалите содержимое папки `/<path-to-your-suite8-project>/cache`.
+
+{{% notice note %}}
+Apache / php должны иметь доступ на чтение и запись в папку `/<path-to-your-suite8-project>/cache`. +
+Это не относится к папке `/<path-to-your-suite8-project>/public/legacy/cache` - не удаляйте её содержимое.
+{{% /notice %}}
+
+
+== Дополнительная информация
+
+Дополнительная информация о настройке LDAP находится на странице https://symfony.com/doc/current/security/ldap.html[Symfony's Security Component documentation^].
+
+{{% notice info %}}
+Обязательно убедитесь, что информация, указанная по ссылке, актуальна для версии Symfony, используемой в установленной версии SuiteCRM.
+{{% /notice %}}

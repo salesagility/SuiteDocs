@@ -88,7 +88,7 @@ framework:
 bin/console cache:clear
 ----
 
-Либо удалите содержимое папки `/<path-to-your-suite8-project>/cache`
+Либо удалите содержимое папки `/<path-to-your-suite8-project>/cache`.
 
 {{% notice note %}}
 Apache / php должны иметь доступ на чтение и запись в папку `/<path-to-your-suite8-project>/cache`. +
