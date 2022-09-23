@@ -1,0 +1,409 @@
+---
+Title: Настройка SAML
+weight: 40
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 2
+
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
+
+== Введение
+
+Аутентификация SAML основана на OneloginSamlBundle для Symfony.
+SuiteCRM поддерживает базовую конфигурацию пакета. Таким образом, большая часть настроек будет аналогична настройкам пакета OneloginSamlBundle.
+
+{{% notice note %}}
+На данный момент устаревшие настройки SAML игнорируются. Поддержка устаревших настроек планируется в будущем.
+{{% /notice %}}
+
+== Ограничения
+
+Текущая версия SuiteCRM не поддерживает выход из системы, инициируемый IDP.
+Таким образом, выход пользователя из системы непосредственно в IDP не приведёт в автоматическому выходу из SuiteCRM, и пользователю потребуется выйти из системы самостоятельно.
+
+Кроме того, привязка сообщений к службе выхода в настоящее время не поддерживается.
+
+== Известные проблемы
+
+По истечении сессии пользователь может быть перенаправлен на стандартную страницу ввода логина/пароля SuiteCRM, вместо приглашения ввода учётных данных SAML.
+Для решения проблемы пользователю необходимо очистить файлы cookie и снова перейти по URL-адресу SuiteCRM.
+
+Проблема будет устранена в будущих версиях системы.
+
+== Включение аутентификации SAML
+
+Для включения аутентификации SAML в файле `.env.local` пропишите следующее:
+
+[source,bash]
+----
+AUTH_TYPE=saml
+----
+
+== Настройка аутентификации
+
+SuiteCRM предоставляет доступ к некоторым параметрам OneloginSamlBundle, указывая стандартные значения этих параметров в файле `.env`.
+Файл `.env` содержит значения по умолчанию для всех доступных переменных системы. Если вы хотите переопределить те или иные значения - укажите новые значения параметров в файле `.env.local`.
+
+[source,bash]
+----
+###> SAML CONFIG ###
+SAML_USERNAME_ATTRIBUTE=uid
+SAML_USE_ATTRIBUTE_FRIENDLY_NAME=true
+###< SAML CONFIG ###
+----
+
+=== Описание параметров
+
+SAML_USERNAME_ATTRIBUTE:: Атрибут SAML, используемый в качестве логина в SuiteCRM. Значение, полученное в запросе SAML для `SAML_USERNAME_ATTRIBUTE`, должно совпадать со значением поля *user_name* таблицы *users* используемого экземпляра SuiteCRM.
+
+[discrete]
+==== Пример:
+
+* Вы хотите войти в систему как пользователь `jane.doe`
+* Поле `user_name` в таблице пользователей SuiteCRM содержит значение `jane.doe`
+
+Значение, установленное для `SAML_USERNAME_ATTRIBUTE`, должно быть любым свойством из запроса SAML, который предоставляет имя пользователя `jane.doe`.
+
+SAML_USE_ATTRIBUTE_FRIENDLY_NAME:: Следует ли использовать понятное имя, отправленное в запросе SAML.
+
+[discrete]
+==== Пример:
+
+[source,bash]
+----
+###> SAML CONFIG ###
+SAML_USERNAME_ATTRIBUTE=username
+SAML_USE_ATTRIBUTE_FRIENDLY_NAME=false
+###< SAML CONFIG ###
+----
+
+=== Настройка SAML
+
+Как уже упоминалось выше, SuiteCRM использует пакет OneloginSamlBundle. Следовательно, используемые системой настройки точно такие же, как и в OneloginSamlBundle.
+
+За более детальной информацией обратитесь к следующим документам:
+
+* https://github.com/hslavich/OneloginSamlBundle#configuration[OneloginSamlBundle configuration^]
+* https://github.com/onelogin/php-saml#how-it-works[Onelogin php-saml How it works^]
+
+При добавлении настроек в SuiteCRM их необходимо поместить в папку `/extensions/<your-extensions>/config`.
+Лучше всего взять за основу и скопировать стандартный файл настроек, находящийся в одной из подпапок корневой папки `config`. Например, файл  
+`config/packages/hslavich_onelogin_saml.yaml` копируем в `extensions/custom/config/packages/hslavich_onelogin_saml.yaml`
+
+==== Пример c описанием параметров
+
+Следующий пример настроек был взят из системы, которая использовала ссылку https://www.keycloak.org/[keycloak^] в качестве IDP. Некоторые из значений IDP взяты из этого примера, что НЕ означает, что все IDP используют подобные значения.
+
+Следующий пример сопровождается комментариями с описанием соответствующего параметра.
+
+[source,yaml]
+----
+hslavich_onelogin_saml:
+  # Basic settings
+
+  idp:
+    # entity id of your idp
+    entityId: '<idp-entity-id>'  # e.g.: 'http://saml-idp-host/realms/master'
+
+
+    singleSignOnService:
+      # single sign on url your IDP
+      url: '<idp-sso-url>' # e.g.: 'http://saml-idp-host/realms/master/protocol/saml'
+      binding: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect'
+
+    singleLogoutService:
+      # single logout service url of your IDP
+      url: '<idp-slo-url>' # e.g.: 'http://saml-idp-host/realms/master/protocol/saml'
+      binding: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect'
+
+    # IDP certificate
+    x509cert: '<idp-certificate-string> # e.g. 'MIICmzCCAYMCBgGC1LTnr ... ='
+
+
+  # The SP in this case is your SuiteCRM instance
+  sp:
+
+    # SP entity id. Use your SuiteCRM instance url
+    entityId: '<sp-entity-id-use-suitecrm-url> # e.g. 'https://<your-suitecrm-instance>'
+
+    assertionConsumerService:
+      # The path to SuiteCRM's acs service
+      url: 'https://<your-suitecrm-instance>/saml/acs'
+      binding: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST'
+
+    singleLogoutService:
+      # The path to SuiteCRM's SAML logout service
+      url: 'https://<your-suitecrm-instance>/saml/logout'
+      binding: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect'
+
+    # SuiteCRM's private key for SAML (sp)
+    privateKey: '<sp-private-key>' # e.g. 'MIIEoAIBAAKCAQEAx ...'
+
+    # SuiteCRM's certificate for SAML (sp)
+    x509cert: '<sp-cert>' # e.g. 'MIIC1zCCAb8CBgGC1awPM ... ='
+
+
+  # Optional settings
+
+  # SuiteCRM's base url for SAML
+  baseurl: 'https://<your-suitecrm-instance>/saml'
+
+  ######
+  # NOTE : The values for the following settings will depend on how the IDP is setup
+  ######
+  strict: true
+  debug: true
+  security:
+    nameIdEncrypted: false
+    authnRequestsSigned: true
+    logoutRequestSigned: true
+    logoutResponseSigned: false
+    wantMessagesSigned: false
+    wantAssertionsSigned: false
+    wantNameIdEncrypted: false
+    requestedAuthnContext: false
+    signMetadata: false
+    wantXMLValidation: true
+    signatureAlgorithm: 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'
+    digestAlgorithm: 'http://www.w3.org/2001/04/xmlenc#sha256'
+  contactPerson:
+    technical:
+      givenName: 'Tech User'
+      emailAddress: 'techuser@example.com'
+    support:
+      givenName: 'Support User'
+      emailAddress: 'supportuser@example.com'
+  organization:
+    en:
+      name: 'Example'
+      displayname: 'Example'
+      url: 'http://example.com'
+----
+
+В указанном примере не прописаны все возможные параметры. Полное описание всех параметров доступно по следующим ссылкам:
+
+* https://github.com/hslavich/OneloginSamlBundle#configuration[OneloginSamlBundle configuration^]
+* https://github.com/onelogin/php-saml#how-it-works[Onelogin php-saml How it works^]
+
+=== Использование секретов в Symfony
+
+Одна из замечательных особенностей использования пакетов и настроек Symfony заключается в том, что мы можем использовать весь потенциал возможностей, предлагаемых фреймфорком Symfony.
+Одна из таких возможностей - *secrets* (см. https://symfony.com/doc/current/configuration/secrets.html[описание^] в официальной документации)
+
+Секреты Symfony позволяют нам безопасно хранить все *конфиденциальные* значения, зашифрованные в хранилище (vault). Кроме того, эти значения также могут быть определены для отдельного окружения.
+
+В нашем случае это может быть использовано для хранения сертификатов и закрытых ключей, к которым мы бы не хотели иметь легкий доступ.
+
+Для добавления секретов сначала выполните действия, описанные в документе link:https://symfony.com/doc/current/configuration/secrets.html[Symfony's documentation: How to Keep Sensitive Information Secret^]
+
+[discrete]
+==== Пример:
+
+После выполнения действий, необходимых для добавления секретов, вы можете изменить конфигурацию SAML таким образом, чтобы некоторые настройки сохранялись в секретах. Следующие шаги послужат примером:
+
+ . *Добавьте секрет для закрытого ключа поставщика услуг (SP)*
+
+Из корневой папки системы выполните команду `php bin/console secrets:set SAML_SP_PRIVATE_KEY` и после приглашения укажите ключ.
+
+[start=2]
+ . *Добавьте секрет для сертификата SP*
+
+Из корневой папки системы выполните команду `php bin/console secrets:set SAML_SP_CERT` и после приглашения укажите сертификат.
+
+[start=3]
+ . *Отредактируйте файл `hslavich_onelogin_saml.yaml`*
+
+Наконец, измените  *пользовательскую* копию файла
+ `hslavich_onelogin_saml.yaml`, прописав в нём необходимые значения.
+
+Следующий пример — всего лишь фрагмент вышеуказанного файла:
+
+[source,yaml]
+----
+hslavich_onelogin_saml:
+
+  # ...
+
+  # The sp in this case is your SuiteCRM instance
+  sp:
+
+     ...
+
+    # SuiteCRM's private key for SAML (sp)
+    privateKey: '%env(SAML_SP_PRIVATE_KEY)%'
+
+    # SuiteCRM's certificate for SAML (sp)
+    x509cert: '%env(SAML_SP_CERT)%'
+
+    # ...
+----
+
+[start=4]
+ . *При необходимости добавьте другие настройки в секреты*
+
+Есть и другие значения, которые вы можете добавить к секретам, такие как *сертификат IDP* или *fingerprint*.
+
+[start=5]
+ . <<Очистка кеша Symfony,Очистите кеш  Symfony>>
+
+
+
+=== Альтернативы секретам Symfony
+
+Если вы не хотите использовать секреты Symfony и предпочитаете более простую альтернативу, можно использовать следующую ссылку: https://symfony.com/doc/current/configuration/env_var_processors.html[env variables^].
+
+Возьмём тот же пример, что мы рассматривали выше в разделе <<Использование секретов Symfony>>.
+
+[source,yaml]
+----
+hslavich_onelogin_saml:
+
+  # ...
+
+  # The sp in this case is your SuiteCRM instance
+  sp:
+
+    # ...
+
+    # SuiteCRM's private key for SAML (sp)
+    privateKey: '%env(SAML_SP_PRIVATE_KEY)%'
+
+    # SuiteCRM's certificate for SAML (sp)
+    x509cert: '%env(SAML_SP_CERT)%'
+
+    # ...
+----
+
+==== Использование значений из `.env.local`
+
+В вышеприведённом примере  *privateKey* и *x509cert* уже указывают на переменные *SAML_SP_PRIVATE_KEY* и *SAML_SP_CERT* соответственно.
+
+Вместо использования секретов вы можете просто указать необходимые значения в файле `.env.local`
+
+[discrete]
+==== Пример:
+
+----
+
+# ...
+
+SAML_SP_PRIVATE_KEY='MIIEoAIBAAKCAQEAx ...'
+SAML_SP_CERT='MIIC1zCCAb8CBgGC1awPM ... ='
+
+# ...
+
+----
+
+После внесения изменений не забудьте <<Очистка кеша Symfony,очистить кеш  Symfony>>.
+
+==== Чтение значений из файлов
+
+Также возможно чтение значений из файлов:
+https://symfony.com/doc/current/configuration/env_var_processors.html[Symfony documentation: env variables^].
+
+В качестве примера изменим настройки таким образом, чтобы читать сертификат *x509cert* из файла. Следующие шаги описывают изменения, которые необходимо сделать: 
+
+ . *Отредактируйте пользовательский файл настроек*
+
+Отредактируйте *пользовательскую* копию файла  `hslavich_onelogin_saml.yaml` для чтения сертификата *x509cert* из файла:
+
+[source,yaml]
+----
+hslavich_onelogin_saml:
+
+  # ...
+
+  # The sp in this case is your SuiteCRM instance
+  sp:
+
+    # ...
+
+    # SuiteCRM's certificate for SAML (sp)
+    x509cert: '%env(file:SAML_SP_CERT_FILE)%'
+
+    # ...
+----
+
+[start=2]
+ . *Укажите путь до сертификата в файле `.env.local`*:
+
+[source,bash]
+----
+
+# ...
+
+SAML_SP_CERT_FILE='extensions/custom/config/packages/sp_cert.crt'
+
+# ...
+
+----
+
+[start=3]
+ . <<Очистка кеша Symfony,Очистите кеш  Symfony>>
+
+== Использование собственной аутентификации
+
+Даже при использовании SAML система позволяет использовать собственную аутентификацию с использованием пароля, установленного в SuiteCRM для указанного пользователя.
+
+Для этого войдите в систему, используя следующий URL: `https://<your-suitecrm-instance>/auth`.
+
+После успешного входа в систему пользователь будет перенаправлен на `https://<your-suitecrm-instance>/`.
+
+{{% notice note %}}
+Обратите внимание, что при выходе из системы вы будете перенаправлены на страницу входа SAML, а не на собственную страницу ввода логина/пароля SuiteCRM.
+{{% /notice %}}
+
+=== Параметр external_auth_only config
+
+Возможность входа в SuiteCRM с использованием собственного логина будет зависеть от значения параметра `external_auth_only`, прописанного в профиле пользователя:
+
+Если в настройках пользователя параметр `external_auth_only` (см. соответствующее поле таблицы `users` в базе данных) установлен в значение *1* (или *true*), пользователь не сможет войти в систему, используя учётные данные SuiteCRM.
+
+С другой стороны, если для `external_auth_only` установлено значение *0* (или *false*), пользователь сможет попытаться войти в систему, при условии, что у него установлен пароль в SuiteCRM.
+
+== Настройка автоматического создания пользователя
+
+{{% notice info %}}
+В данный момент автоматическое создание пользователей не поддерживается. Функционал будет реализован в будущих версиях системы. Таким образом, учётные записи пользователей, использующих SAML, должны быть созданы *до того* как они попытаются войти в систему.
+{{% /notice %}}
+
+== Очистка кеша Symfony 
+
+После внесения любых изменений в файлы `.env` и `ldap.yaml`  необходимо очистить кеш Symfony.
+
+Из корневой папки системы выполните: 
+
+[source,bash]
+----
+bin/console cache:clear
+----
+
+Либо удалите содержимое папки `/<path-to-your-suite8-project>/cache`.
+
+{{% notice note %}}
+Apache / php должны иметь доступ на чтение и запись в папку `/<path-to-your-suite8-project>/cache`. +
+Это не относится к папке `/<path-to-your-suite8-project>/public/legacy/cache` - не удаляйте её содержимое.
+{{% /notice %}}
+
+== Дополнительная информация
+
+Дополнительная информация о настройке SAML находится на страницах: 
+
+* https://github.com/hslavich/OneloginSamlBundle[OneloginSamlBundle^]
+* https://github.com/onelogin/php-saml[Onelogin php-saml^]
+
+{{% notice info %}}
+Обязательно убедитесь, что информация, указанная по ссылке, актуальна для версии Symfony, используемой в установленной версии SuiteCRM.
+{{% /notice %}}
+
+
