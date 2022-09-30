@@ -1698,10 +1698,10 @@ In total, we have merged a **MASSIVE 69 PULL REQUESTS** with **24** of these fro
 {{% /notice %}}
 
 
-Special thanks to LEAP-nishit and the following members for their contributions and participation in this release
+Special thanks to LEAP-nishit,jsamelko and the following members for their contributions and participation in this release
 (in order of most Pull Requests contributed). +
 
-{{% ghcontributors lazka Abuelodelanada urdhvatech gmblake machinecha g-fantini Jorilx QuickCRM connorshea LionelBino hieuhoanghd jsamelko %}}
+{{% ghcontributors lazka Abuelodelanada urdhvatech gmblake machinecha g-fantini Jorilx QuickCRM connorshea LionelBino hieuhoanghd %}}
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade.
 
@@ -1771,9 +1771,9 @@ via email security@suitecrm.com.
 
 Please https://suitecrm.com/download-latest-pre-release-suitecrm/[visit the official website] to find the pre-production appropriate upgrade.
 
-_Special thanks to LEAP-nishit and the following members for their contributions and participation in this release!_
+_Special thanks to LEAP-nishit, jsamelko and the following members for their contributions and participation in this release!_
 
-{{% ghcontributors Abuelodelanada adriangibanelbtactic ApatheticCosmos SohanTirpude hieuhoanghd horus68 JanSiero Jorilx jsamelko lazka  likhobory LionelBino Mausino pribeiro42 urdhvatech %}}
+{{% ghcontributors Abuelodelanada adriangibanelbtactic ApatheticCosmos SohanTirpude hieuhoanghd horus68 JanSiero Jorilx lazka  likhobory LionelBino Mausino pribeiro42 urdhvatech %}}
 
 To report any security issues please follow our Security Process and send them directly to us
 via email security@suitecrm.com
