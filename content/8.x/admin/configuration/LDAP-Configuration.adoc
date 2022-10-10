@@ -216,6 +216,29 @@ parameters:
     email: email1
 ----
 
+== Using Symfony Secrets
+
+One of the great things about using symfony bundles and configuration is that we can take full potential of the features Symfony provides.
+One of those features is **secrets** (see the following link to the documentation)
+
+- link:https://symfony.com/doc/current/configuration/secrets.html[Symfony Secrets]
+
+Symfony secrets allows us to safely store *sensitive* values encrypted in a "vault". Plus these values can also be defined per environment.
+
+In our SAML configuration this could be used to store the certificates and the private keys, which we don't want to be easily accessible.
+
+To add secrets, first start by following the setup steps on link:https://symfony.com/doc/current/configuration/secrets.html[Symfony's documentation: How to Keep Sensitive Information Secret]
+
+=== Example
+After setting up all that is required to add secrets, you can change your LDAP config to store some settings in secrets. The following steps will provide an example.
+
+*1. Add a secret for your LDAP private key*
+
+Run `php bin/console secrets:set LDAP_SEARCH_PASSWORD` (the console should show a prompt to set the value)
+
+*2. Clear Symfony cache*
+
+See link:#_clear_symfony_cache[Clear Symfony Cache]
 
 == Clear symfony cache
 
