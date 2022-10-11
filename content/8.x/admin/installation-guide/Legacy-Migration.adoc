@@ -35,7 +35,7 @@ Only run the migration if you have already upgraded your SuiteCRM 7.x instance t
 
 === 2.1. Download the new version migration package
 
-*1* - Download the SuiteCRM 8.x target version migration package (e.g. 8.x 7.12.x Migration) from link:https://suitecrm.com/suitecrm-pre-release/[SuiteCRM Pre Release]
+*1* - Download the SuiteCRM 8.x target version migration package (e.g. 8.x 7.12.x Migration) from link:https://suitecrm.com/upgrade-suitecrm/[SuiteCRM Release page.]
 
 *2* - Unzip the package contents to your SuiteCRM 8.x destination folder
 
