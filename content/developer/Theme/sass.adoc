@@ -83,13 +83,22 @@ composer install
 ./vendor/bin/pscss -f compressed themes/SuiteP/css/style.scss >  themes/SuiteP/css/style.css
 ----
 
-*7.10 and above*
+*7.10 to 7.12*
 [source,bash]
 ----
 ./vendor/bin/pscss -f compressed themes/SuiteP/css/Dawn/style.scss >  themes/SuiteP/css/Dawn/style.css
 ./vendor/bin/pscss -f compressed themes/SuiteP/css/Day/style.scss >  themes/SuiteP/css/Day/style.css
 ./vendor/bin/pscss -f compressed themes/SuiteP/css/Dusk/style.scss >  themes/SuiteP/css/Dusk/style.css
 ./vendor/bin/pscss -f compressed themes/SuiteP/css/Night/style.scss >  themes/SuiteP/css/Night/style.css
+----
+
+*7.12 and above*
+[source,bash]
+----
+./vendor/bin/pscss -s compressed themes/SuiteP/css/Dawn/style.scss >  themes/SuiteP/css/Dawn/style.css
+./vendor/bin/pscss -s compressed themes/SuiteP/css/Day/style.scss >  themes/SuiteP/css/Day/style.css
+./vendor/bin/pscss -s compressed themes/SuiteP/css/Dusk/style.scss >  themes/SuiteP/css/Dusk/style.css
+./vendor/bin/pscss -s compressed themes/SuiteP/css/Night/style.scss >  themes/SuiteP/css/Night/style.css
 ----
 
 
