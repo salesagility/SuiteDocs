@@ -147,7 +147,7 @@ For a package to be uninstallable it needs to be defined as uninstallable in the
  package manifest file. For more information regarding the manifest file 
 see the link:../../../developer/module-installer[Developer Guide] 
 
-Unistall a package by clicking the buttons next to the 
+Uninstall a package by clicking the buttons next to the
 package name. 
 
 As with the install procedure, you will be asked 
