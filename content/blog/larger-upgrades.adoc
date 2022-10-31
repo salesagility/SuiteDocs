@@ -87,7 +87,7 @@ Processes Designs, test cases?
 - Do any *add-ons* need updating? Are they compatible with the new SuiteCRM?
 - Did you use any *custom changes* done in a non-upgrade-safe way, editing files in core, instead of using established
 customization mechanisms? These will need to be redone.
-- Any SuiteR-specifc *Theme customizations* will need to be redone for SuiteP Theme.
+- Any SuiteR-specific *Theme customizations* will need to be redone for SuiteP Theme.
 
 === Align with your organization 
 

@@ -40,7 +40,7 @@ sudo chown www-data:www-data p*.key
 
 === OAUTH2 encryption key
 OAuth2’s AuthorizationServer needs to set an encryption key for security reasons.
-This key has been gererated during the SuiteCRM installation and stored in the config.php under "oauth2_encryption_key".
+This key has been generated during the SuiteCRM installation and stored in the config.php under "oauth2_encryption_key".
 If you would like to change its value you may generate a new one by running
 [source,php]
 php -r 'echo base64_encode(random_bytes(32)), PHP_EOL;'
