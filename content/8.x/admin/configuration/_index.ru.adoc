@@ -1,8 +1,10 @@
 ---
 title: "Настройка конфигурации"
 weight: 20
-pre: "<b>2. </b>"
 ---
+
+:author: likhobory
+:email: likhobory@mail.ru
 
 === Содержание
 {{% children depth="4" showhidden="false" %}}
