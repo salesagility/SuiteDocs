@@ -57,7 +57,7 @@ link:../../compatibility-matrix[Таблице совместимости^].
 
 === Загрузка пакета
 
- . Загрузите необходимый пакет (migration package) с  link:https://suitecrm.com/suitecrm-pre-release/[этой страницы^].
+ . Загрузите необходимый пакет (migration package) с  link:https://suitecrm.com/upgrade-suitecrm/[этой страницы^].
 
  . Распакуйте скачанный архив в папку, в которой должна быть установлена SuiteCRM 8.x, например, в папку `/var/www/<SuiteCRM8-folder>` 
 
