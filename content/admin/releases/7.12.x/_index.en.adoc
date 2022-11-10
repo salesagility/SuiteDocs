@@ -8,6 +8,57 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+== 7.12.8
+
+_Released 17/11/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:bug[] Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9795[9795] - Fix link:https://github.com/salesagility/SuiteCRM/issues/6756[#6756] - Add Label to Dynamic Fields
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9803[9803] - Fix #9803 - Workflow test returns boolean
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9804[9804] - Update jquery-ui to 1.13.2
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9566[9566] - Turn privates to protecteds to fix Emailtemplate overrides
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9567[9567] - Turn private to protected to fix SendMail AOW_Action overrides
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9557[9557] - fix escapeField where $cell string is empty
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9801[9801] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9800[#9800] Fix issue with send as system being hidden
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9614[9614] - Fix link:https://github.com/salesagility/SuiteCRM/issues/7030[#7030] - Errors in Workflow operators Contains, Starts with and Ends with
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9651[9651] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9650[#9650] - Deprecated constructor method is being called in Calendar
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9659[9659] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9658[#9658] - SuiteCRM add duplicate dashlet when filter is used
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9669[9669] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9668[#9668] - It is not possible to use a custom template for password change
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9673[9673] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9672[#9672] - Bug in CSS class causes bad button display
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9675[9675] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9674[#9674] - Error when importing (creating and updating) a record with ID already deleted in the database
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9689[9689] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9688[#9688]: Use the same browser title for the regular views
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9699[9699] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9698[#9698] - Do not delete the subject when editing a tracking url from the campaign assistant
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9705[9705] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9704[#9704] - Missing relationship definition in SurveysQuestionResponses
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9707[9707] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9706[#9706] - ModuleBuilder doesn't save language files in the correct
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9712[9712] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9711[#9711] - Update date_modified field when deleting a Target List
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9722[9722] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9721[#9721] - Adding Years option to aow_date_type_list in Workflow conditions
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9729[9729] - Fix #9728 - cron.php fails with "must be compatible" error
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9731[9731] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9730[#9730] - cron.php fails with fatal TypeError using PHP 8
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9754[9754] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9753[#9753] - Do not save white spaces in SMTP data
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9785[9785] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9781[#9781] Fetch existing Call/Meeting Reminder data in quickeditview
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9791[9791] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9588[#9588] -  search were ignored if searchQuery was not set in user's preference
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9790[9790] - Fix link:https://github.com/salesagility/SuiteCRM/issues/7827[#7827] - Error resetting modules
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors likhobory pgorod mattkeenan SinergiaCRM pavithra-selvam kgaillot abuzarfaris urdhvatech jonatanestam %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.12.7
 
 _Released 16/08/2022_
