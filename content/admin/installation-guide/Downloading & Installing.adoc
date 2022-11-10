@@ -3,6 +3,12 @@ title: Downloading & Installing
 weight: 20
 ---
 
+:toc:
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 7.x; to see documentation on the same topic for Version 8+, click link:../../../8.x/admin/installation-guide/downloading-installing[here].
+{{% /notice %}}
+
 == Downloading and installing SuiteCRM
 
 If you are installing SuiteCRM for the first time, follow the
