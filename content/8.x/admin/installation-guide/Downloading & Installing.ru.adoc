@@ -26,14 +26,14 @@ ifdef::env-github[:imagesdir: ./../../../../static/images/ru/8.x/admin/Installin
 ifdef::env-github[:btn:]
 
 {{% notice info %}}
-Это страница содержит описание для SuiteCRM Версии 8. Описание для SuiteCRM версии 7 находится link:../../../../admin/installation-guide/downloading-installing[здесь].
+Это страница содержит описание для SuiteCRM 8.x. Описание для SuiteCRM 7.x. находится link:../../../../admin/installation-guide/downloading-installing[здесь].
 {{% /notice %}}
 
 Если вы впервые устанавливаете SuiteCRM, следуйте этому описанию. Если вы обновляете ранее установленную вервию, обратитесь к разделу link:../upgrading[Обновление системы].
 
 == Подготовка к установке
 
- . Установите версию PHP, веб-сервер, и базу данных, руководствуясь информацией, указанной в link:../../compatibility-matrix[Таблице совместимости^].
+ . Установите версию PHP, веб-сервер и базу данных, руководствуясь информацией, указанной в link:../../compatibility-matrix[Таблице совместимости^].
  
  . Установите следующие php-модули:
  * cli
@@ -56,7 +56,7 @@ ifdef::env-github[:btn:]
 *Полезные ссылки*:: link:https://www.digitalocean.com/community/tutorials/how-to-install-php-7-4-and-set-up-a-local-development-environment-on-ubuntu-20-04[DigitalOcean - Установка программного окружения^]
 
 [start=3]
- . Загрузите SuiteCRM со страницы https://suitecrm.com/download
+ . Загрузите SuiteCRM со страницы https://suitecrm.com/download[https://suitecrm.com/download^].
  . Скопируйте загруженные файлы из архива в соответствующую папку веб-сервера и установите необходимые права (см. ниже).
 
 {{% notice note %}}
