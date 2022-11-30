@@ -10,7 +10,7 @@ Weight: 10
 == The SuiteCRM Team and Community
  
 
-It is safe to say without the constant work from the SuiteCRM Team and
+It is safe to say that without the constant work from the SuiteCRM Team and
 Community, I would not have had the drive and commitment to sit down and
 write this user guide. New functionality and improvements to the core
 product are constantly added to make SuiteCRM the best Open Source CRM
@@ -20,7 +20,7 @@ as SugarCRM, Salesforce and Microsoft.
 As for The SuiteCRM Community - they provide bug reports, bug fixes and
 bug testing. The Community is at the heart of any Open Source project
 and this is no different with SuiteCRM. With each new release the
-community grows and with it grow the benefits of the Open Source
+community grows and with it, grow the benefits of the Open Source
 ecosystem.
 
 == What is SuiteCRM?
@@ -33,15 +33,15 @@ https://en.wikipedia.org/wiki/SugarCRM[SugarCRM], developed and
 maintained by SalesAgility. It is a free and open source alternative
 application. It was released on October 21, 2013 as version 7.0. The
 latest production version at the time of publishing this User Guide is
-SuiteCRM 7.6.3.
+SuiteCRM 7.12.8.
 
 SuiteCRM has been downloaded more than 500,000 times since the original
 release. It has been adopted by NHS (National Health Service) England's
 Code for Health programme which seeks to foster open source in the NHS
 in England.
 
-The SuiteCRM project has stated that the every line of code released by
-the project will be open source. SuiteCRM project is intended to be an
+The SuiteCRM project has stated that every line of code released by
+the project will be open source and is intended to be an
 enterprise-class open source alternative to proprietary products.
 
 A project Roadmap is available that details planned enhancements.
@@ -58,7 +58,7 @@ a Software As A Service facility for users who seek a rapid deployment
 and maintenance free service.
 
 There will be no licensed software as part of the project managed by
-SalesAgility. All the code is free. All the code is available for free
+SalesAgility. All the code is free and available for free
 download. There is no hidden agenda to charge for access to the code. It
 is and always will be free and open source. There will be no paid-for
 versions.
@@ -97,7 +97,7 @@ areas from the basics of logging into the system to creating complex
 automated workflows and reports.
 
 The SuiteCRM User Guide is split into various chapters. These chapters
-are ordered so that you progress through you guide as you would
+are ordered so that you progress through each as you would
 logically in day to day CRM use. The chapters contain sub-sections which
 break down barriers for you, explaining how to optimise the use of the
 customer relationship management system to effectively manage sales
