@@ -13,14 +13,14 @@ Weight: 40
 
 There are many configuration options available to users once logged into
 the system. You can view/modify your preferences by clicking on your
-name in the top right section of the navigation menu.
+name in the top right section of the navigation menu and choosing the Profile option.
 
 image:11User_select.png[title="Manage Account"]
 
 == User Profile Tab
 
 Once you have clicked to access your preferences, you will be taken to
-the 'User Profile' tab which gives an overview of you credentials such
+the 'User Profile' tab, which gives an overview of your credentials such
 as Username, First Name, Last Name, Title etc.
 
 image:12User_profile.png[title="User Profile"]
@@ -110,9 +110,9 @@ You should now be able to view your emails in the link:../../core-modules/emails
 
 == Password Tab
 
-Clicking on the '*Password*' tab will navigate you to allow you to change
-your user account password. To change your password, specify a new
-password and confirm the new password. It is recommended that passwords
+Clicking on the '*Password*' tab will give you the opportunity to change
+your user account password, if required. To change your password, enter your current password first and then specify a new
+password and confirm it. It is recommended that passwords
 are secure. The recommended minimum requirement is one upper case
 character, one lower case character, one numerical character and a
 minimum password length of 8 characters.
@@ -135,7 +135,7 @@ image:14Advanced_tab.png[title="Advanced Tab"]
 == Resetting a Users Preferences
 
 You can reset your user preferences to the system default by clicking
-the btn:[Reset User Preferences] button on your profile.
+the btn:[Reset User Preferences] button at the bottom of the page. 
 
 image:15User_preference.png[title="Reset User Preferences"]
 
@@ -153,7 +153,7 @@ to re-login to SuiteCRM application.
 == Resetting a Users home page
 
 You can reset your home page to the system default by clicking the
-btn:[Reset home page] button on your profile. This will reset both dashlet
+btn:[Reset home page] button at the bottom of the page. This will reset both dashlet
 and dashboard preferences/layouts to the system default.
 
 image:16Reset_homepage.png[title="Reset Homepage"]
