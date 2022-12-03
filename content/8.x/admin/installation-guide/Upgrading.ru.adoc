@@ -26,6 +26,10 @@ ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Upgrad
 
 ifdef::env-github[:btn:]  
 
+{{% notice info %}}
+Это страница содержит описание для SuiteCRM 8.x. Описание для SuiteCRM 7.x. находится link:../../../../admin/installation-guide/upgrading[здесь].
+{{% /notice %}}
+
 {{% notice note %}}
 Если в процессе обновления возникли проблемы - обратитесь к разделу 
 link:./#_возможные_проблемы[Возможные проблемы].
