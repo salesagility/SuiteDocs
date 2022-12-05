@@ -23,27 +23,27 @@ Subpanels. The top navigation menu has six elements. These are:
 
 * *CRM Name* – This is the name for the CRM which is specified on
 installation. This defaults to SuiteCRM.
-* *Module Menu* – This lists or groups the modules, dependent on the user
-preference. This provides the ability for users to navigate to modules
-within the CRM.
+* *Module Menu* – Depending on the user preference, a list of the modules or pre-defined groups of modules, 
+will be displayed. This provides the ability for users to navigate to modules within the CRM.
+* *Quick Create* – Quick create allows the quick creation of key module
+records globally within the CRM.
+* *Global/Full Text Search* – Allows users to search the CRM globally for
+records/data.
 * *Desktop Notification Count* – This shows the number of desktop
 notifications the user has not yet read. These can be managed by the
 user. For full details on Desktop Notifications, see the
 link:../desktop-notifications/[Desktop Notifications] section within this
 user guide.
-* *Quick Create* – Quick create allows the quick creation of key module
-records globally within the CRM.
-* *Global/Full Text Search* – Allows users to search the CRM globally for
-records/data.
 * *User menu* – This displays the user name for the user currently logged
 in. There is a drop down menu which gives users access to Employees,
 their profile, the about page and a link to logout.
 
 image:17Navigation_menu.png[title="Top Navigation Menu"]
 
-To view a module, you can click on the module name. This will take you
-to the List View of that module. For full details on views, read the
-link:../views/[Views] section of this user guide.
+To view a module, you can click on the module name. If you have chosen to group the modules, 
+then you first need to hover over the group name and select the module from the list. 
+After selecting the module, you will be taken to the List View of that module. 
+For full details on views, read the link:../views/[Views] section of this user guide.
 
 Hovering over a module name will produce a drop down menu. This drop
 down menu displays the Actions and Recently Viewed records for that
