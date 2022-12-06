@@ -11,6 +11,70 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
+== 8.2.1
+
+_Released 17/11/2022_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:bug[] Bug Fixes
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/160[160] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/61[#61] and https://github.com/salesagility/SuiteCRM-Core/issues/81[#81] - Allow user to see dates in their time and format
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/164[164] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/59[#59] - "Bad data passed in;" When trying to forward reply to emails
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/159[159] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/117[#117] - Disappearing Main Menu for Users With Multiple Inboxes
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/158[158] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/155[#155] - Dynamic Dropdown in Suitecrm 8 using parent enum Labels instead of values
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/140[140] - Fix #140 - Resolve MySQL error
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/132[132] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/131[#131] - Cannot login if username is associated with deleted user
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9795[9795] - Fix link:https://github.com/salesagility/SuiteCRM/issues/6756[#6756] - Add Label to Dynamic Fields
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9803[9803] - Fix #9803 - Workflow test returns boolean
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9804[9804] - Update jquery-ui to 1.13.2
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9566[9566] - Turn privates to protecteds to fix Emailtemplate overrides
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9567[9567] - Turn private to protected to fix SendMail AOW_Action overrides
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9557[9557] - fix escapeField where $cell string is empty
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9801[9801] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9800[#9800] Fix issue with send as system being hidden
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9614[9614] - Fix link:https://github.com/salesagility/SuiteCRM/issues/7030[#7030] - Errors in Workflow operators Contains, Starts with and Ends with
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9651[9651] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9650[#9650] - Deprecated constructor method is being called in Calendar
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9659[9659] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9658[#9658] - SuiteCRM add duplicate dashlet when filter is used
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9669[9669] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9668[#9668] - It is not possible to use a custom template for password change
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9673[9673] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9672[#9672] - Bug in CSS class causes bad button display
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9675[9675] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9674[#9674] - Error when importing (creating and updating) a record with ID already deleted in the database
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9689[9689] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9688[#9688]: Use the same browser title for the regular views
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9699[9699] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9698[#9698] - Do not delete the subject when editing a tracking url from the campaign assistant
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9705[9705] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9704[#9704] - Missing relationship definition in SurveysQuestionResponses
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9707[9707] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9706[#9706] - ModuleBuilder doesn't save language files in the correct
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9712[9712] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9711[#9711] - Update date_modified field when deleting a Target List
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9722[9722] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9721[#9721] - Adding Years option to aow_date_type_list in Workflow conditions
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9729[9729] - Fix #9728 - cron.php fails with "must be compatible" error
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9731[9731] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9730[#9730] - cron.php fails with fatal TypeError using PHP 8
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9754[9754] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9753[#9753] - Do not save white spaces in SMTP data
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9785[9785] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9781[#9781] Fetch existing Call/Meeting Reminder data in quickeditview
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9791[9791] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9588[#9588] -  search were ignored if searchQuery was not set in user's preference
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9790[9790] - Fix link:https://github.com/salesagility/SuiteCRM/issues/7827[#7827] - Error resetting modules
+
+=== icon:heart[] Community
+
+We would like to take this opportunity to thank the following members for their contributions and participation in this release:
+
+{{% ghcontributors abuzarfaris eggsurplus FR-JS pgorod mattkeenan SinergiaCRM kgaillot urdhvatech likhobory pavithra-selvam jonatanestam %}}
+
+We will continue to enhance SuiteCRM 8 with new features and improvements, the latest of which can be found on our link:https://suitecrm.com/suitecrm-roadmap/[Road Map].
+
+In the meantime, if you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''
+
 == 8.2.0
 
 _Released 11/10/2022_
