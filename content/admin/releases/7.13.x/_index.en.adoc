@@ -9,9 +9,9 @@ weight: 9860
 :icons: font
 :imagesdir: /images/en/admin/release
 
-== 7.13.0-beta
+== 7.13.0
 
-_Released 12/12/2022_
+_Released 20/12/2022_
 
 === icon:box-open[] Assets
 
@@ -20,53 +20,54 @@ _Released 12/12/2022_
 
 ==== icon:star[] Enhancements
 
-* PR: https://github.com/salesagility/SuiteCRM/pull/9839[9839] - Close #9839 - Add OAuth connection to Inbound emails
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9839[9839] - Close #9839 - Add OAuth connection to Inbound emails
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9848[9848] - Close #9848 - Add OAuth external providers module
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9846[9846] - Close #9846 - Add ACL Access Logic Hook
+
+==== icon:bug[] Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9802[9802] - Close #9802 - Diagnostic Checkbox
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9718[9718] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9717[#9717] - Security Suite Group Selector doesn't appear when duplicating records
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9648[9648] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9646[#9646] - Display TinyMCE in Campaigns Form Wizard
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9643[9643] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9574[#9574] - Update method to static for module renaming
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9500[9500] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9499[9499] - Add View Survey Responses Menu item
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9638[9638] - Close #9683 - Elasticsearch indexing and searching using accented characters
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9474[9474] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9473[#9473] - Missing item "Survey" in campainglog_activity_type_dom
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9844[9844] - Close #9844 - ElasticSearch Indexing batch error handling
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9770[9770] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9568[#9568] - Ignore int len when comparing vardefs in newer MySQL versions
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9786[9786] - Close #9786 - Clear caches used by Inline Edition
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9671[9671] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9670[#9670] - Disabling the user profile option about notification of assignments does not work
+
 
 In this release there has been an incredible update to Emails including the following;
 
 === Update External OAuth Connection Module
 
-- Add `config.php` entry to allow adding oauth external providers.
 - Add `ExternalOAuthConnection` module to allow getting access through OAuth from external providers.
 - Allow setting up Security groups for `ExternalOuthConnections` Emails.
 
-image:Externaloauth1.png[External OAuth 1]
+- Configure Microsoft connection provider using a configuration similar to the following:
 
-image:Externaloauth2.png[External OAuth 2]
-
-image:Externaloauth3.png[External OAuth 3]
+image:OAuthMicrosoftConnection.png[OAuth Microsoft Connection]
 
 === Updates to Inbound Emails Module
 
 - Update Inbound Email Views are now identical to other modules.
 
-image:InboundEmail1.png[Inbound Email 1]
-
 - Allow the creation of Personal, Group and Bounce mail accounts through create/edit views.
-
-image:InboundEmail2.png[Inbound Email 2]
 
 - Allow Security Groups to be set for Inbound Emails.
 - Allow the select between `basic` and `oauth connection` on Inbound Email create/edit views.
 
-image:InboundEmail3.png[Inbound Email 3]
-
 - Allow selecting an external oauth connection as the connection to use for authenticating in Inbound Emails.
 
-image:InboundEmail4.png[Inbound Email 4]
+image:InboundOAuthConfiguration.png[Inbound OAuth Configuration]
 
 - Remove Inbound Email configuration from profile view.
-
-image:InboundEmail5.png[Inbound Email 5]
 
 === Update Outbound Emails Module
 
 - Allow creating personal Outbound email accounts through Outbound Email module views.
-
-image:Outbound1.png[Outbound Email 1]
-
-image:Outbound2.png[Outbound Email 2]
-
 
 - Allow Security Groups to be set for Outbound Emails.
 - Remove Outbond Email configuration from profile view.
@@ -76,7 +77,21 @@ image:Outbound2.png[Outbound Email 2]
 - Add imap2 lib to handle in order to support xoauth login in imap.
 - Add Imap2Handler to be used to connect to IMAP for Oauth connections.
 
+=== icon:bug[] Known Issues
+
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9852[#9852] - New "Move to trash" toggle causing Case Updates to not import
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9853[#9853] - Case Macro not populated on Upgrade
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9855[#9855] - When a personal oauth connection is used for a group inbound email, the emails break
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9856[#9856] - Email listview filtering shows blank result if a criteria with multiple words and spaces is added
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9857[#9857] - Email listview filtering shows blank result for IMAP keywords criteria
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9854[#9854] - Test settings issue after switching between OAuth and Basic Auth
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9858[#9858] - Group Inbound Emails distribution_method field is reset when Editing the record again
+
 === icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM QuickCRM pgorod 2xaronl th-adavidson bitnamiNoob %}}
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
 
