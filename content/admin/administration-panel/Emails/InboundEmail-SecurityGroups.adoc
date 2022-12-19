@@ -1,0 +1,50 @@
+---
+Title: Configuring Security Groups for Inbound Email
+weight: 50
+---
+
+:imagesdir: /images/en/admin/email/microsoft
+
+== 1. Intro
+
+This guide will explain how to configure the visibility defaults that are applied to Inbound Email and related records, as well as the way you can configure Security Groups.
+
+
+== 2. Personal Records Default visibility
+
+`Inbound Emails`, `External OAuth Connection` and `External OAuth Provider` allow to create personal records.
+
+This types of records are only visible to the owner of the record and to admin users.
+
+== 3. Group Records Default visibility
+
+=== 3.1 Inbound Emails and External OAuth Connection
+
+Like on personal records, administrator users are able to see all group records.
+
+Non-admin users, by default, cannot see any group record. They will only be able to see the records if:
+
+. They have a Role with ACLs defined for the module, i.e. Inbound Emails or External OAuth Connection
+. They belong to the Security Group that the Group record is also assigned to.
+
+This behaviour differs from the default SuiteCRM behaviour for SecurityGroups, in the sense that by default SuiteCRM records are visible to everyone, and the admin needs to add Security Groups to restrain record visibility.
+These two modules work the other way around, because their records are hidden by default.
+
+=== 3.2 External OAuth Provider
+
+Unlike `Inbound Emails` and `External OAuth Connection`, `External OAuth Provider` group records are visible by default. To restrict visibility you need to define Security Groups and Roles.
+
+`External OAuth Provider` is using an "open" visibility because the group provider configurations are meant to be used by all users that have an account for the same domain.
+E.g. when configuring a Microsoft Provider for `@exampleinc.onmicrosoft.com` any user that has an account on this domain can use the same provider.
+
+In the `Inbound Emails` and `External OAuth Connection` the same does not happen. These are email account specific configurations, like for `sales@exampleinc.onmicrosoft.com`. Where we just want to give access to reading emails from this account to users that should have access to it.
+
+
+== 4. Security Group Role Configuration
+
+From a Role perspective, the Security Groups records are visible and changeable by default.
+
+On `Inbound Emails`, `External OAuth Connection` record detail view, there is a subpanel for the Security Groups. Where a user can change the groups the record belongs to.
+
+Since `Inbound Emails`, `External OAuth Connection` are hidden by default and they depend on the Security Group they belong to. It may be a good idea to restrain the visibility on Security Group so that the subpanel only shows for admin users.
+
