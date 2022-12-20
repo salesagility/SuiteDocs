@@ -77,6 +77,13 @@ image:InboundOAuthConfiguration.png[Inbound OAuth Configuration]
 - Add imap2 lib to handle in order to support xoauth login in imap.
 - Add Imap2Handler to be used to connect to IMAP for Oauth connections.
 
+==== icon:star[] Documentation
+
+* Configure Security Groups for Inbound Email link:../../administration-panel/Emails/InboundEmail-SecurityGroups.adoc[here].
+* Setup a Microsoft OAuth Provider link:../../administration-panel/Emails/Microsoft-OAuth-Provider-HowTo.adoc[here].
+* Configure Inbound Email with OAuth link:../../administration-panel/Emails/InboundEmail-OAuth-HowTo.adoc[here].
+* External OAuth Provider Overview link:../../administration-panel/Emails/OAuth-Provider-Overview.adoc[here].
+
 === icon:bug[] Known Issues
 
 - Issue: link:https://github.com/salesagility/SuiteCRM/issues/9852[#9852] - New "Move to trash" toggle causing Case Updates to not import
