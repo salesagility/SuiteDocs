@@ -79,10 +79,10 @@ image:InboundOAuthConfiguration.png[Inbound OAuth Configuration]
 
 ==== icon:star[] Documentation
 
-* Configure Security Groups for Inbound Email link:../../administration-panel/Emails/InboundEmail-SecurityGroups.adoc[here].
-* Setup a Microsoft OAuth Provider link:../../administration-panel/Emails/Microsoft-OAuth-Provider-HowTo.adoc[here].
-* Configure Inbound Email with OAuth link:../../administration-panel/Emails/InboundEmail-OAuth-HowTo.adoc[here].
-* External OAuth Provider Overview link:../../administration-panel/Emails/OAuth-Provider-Overview.adoc[here].
+* Configure Security Groups for Inbound Email link:../../administration-panel/emails/inboundemail-securitygroups[here].
+* Setup a Microsoft OAuth Provider link:../../administration-panel/emails/microsoft-oauth-provider-howto[here].
+* Configure Inbound Email with OAuth link:../../administration-panel/emails/inboundemail-oauth-howto[here].
+* External OAuth Provider Overview link:../../administration-panel/emails/oauth-provider-overview[here].
 
 === icon:bug[] Known Issues
 
@@ -93,6 +93,7 @@ image:InboundOAuthConfiguration.png[Inbound OAuth Configuration]
 - Issue: link:https://github.com/salesagility/SuiteCRM/issues/9857[#9857] - Email listview filtering shows blank result for IMAP keywords criteria
 - Issue: link:https://github.com/salesagility/SuiteCRM/issues/9854[#9854] - Test settings issue after switching between OAuth and Basic Auth
 - Issue: link:https://github.com/salesagility/SuiteCRM/issues/9858[#9858] - Group Inbound Emails distribution_method field is reset when Editing the record again
+- Issue: link:https://github.com/salesagility/SuiteCRM/issues/9867[#9867] - Inbound Email's "SSL" checkbox does not retain Checked status after Upgrade
 
 === icon:heart[] Community
 
