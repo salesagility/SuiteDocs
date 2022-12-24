@@ -1,0 +1,224 @@
+---
+Title: How to configure Inbound Email with OAuth
+weight: 30
+---
+
+:imagesdir: /images/en/admin/email/microsoft
+
+== 1. Intro
+
+This guide will explain how to configure an inbound email connections using a previously configured OAuth Provider.
+
+As example we will use a Microsoft account, however the steps should be similar for other providers
+
+In this guide we will be configuring a personal account using a group OAuth Provider. Group OAuth providers are meant to be used by many users in the system.
+
+As an admin you can create three types of records:
+
+. Personal
+.. These are only accessible by the user that created them
+.. Personal records are meant to be used when configuring access to personal accounts, like 'john.doe@example-inc.onmicrosoft.com'.
+.. These accounts configuration is only accessible by the account owner and system administrators
+. Group
+.. Records that will be used by many users
+.. Group records are meant to be use by accounts in a domain that are meant to be used by several users, e.g. all members of the support team would have access to `support@example-inc.onmicrosoft.com`.
+. Bounce
+.. Records meant to be used just for reading Campaings bounce emails
+
+
+{{% notice note %}}
+If you haven't yet configure the OAuth Provider or don't know how to, please have a look at link:../microsoft-oauth-provider-howto[How to configure a Microsoft OAuth Provider Guide]
+{{% /notice %}}
+
+
+== 2. Create an OAuth Connection
+
+Login into you SuiteCRM instance
+
+On the navbar global menu click on "Profile"
+image:suitecrm-profile-link.png[suitecrm-profile-link.png]
+
+On your "Profile" click on the "External OAuth Connection" sidebar menu entry.
+image:suitecrm-oauth-connection-menu-link.png[suitecrm-oauth-connection-menu-link.png]
+
+That should take you to the "External OAuth Connections" module list view
+
+image:suitecrm-external-oauth-connection-list-view.png[suitecrm-external-oauth-connection-list-view.png]
+
+This module is the one that will keep the reference of all the existing OAuth Connections. It stores the tokens generated after the authentication.
+
+Lets create a new Personal OAuth Connection. click on "Personal OAuth Connection"
+
+image:suitecrm-new-personal-oauth-connection-link.png[suitecrm-new-personal-oauth-connection-link.png]
+
+This should take you to the creation view.
+
+image:suitecrm-oauth-connection-create-blank.png[suitecrm-oauth-connection-create-blank.png]
+
+Add a meaningful name to your connection, it can be the username of your account, or something that helps you identify and differentiate the connection from other existing connections.
+
+image:suitecrm-oauth-connection-name-field.png[suitecrm-oauth-connection-name-field.png]
+
+Now select on the "Provider" field, select the Microsoft OAuth Provider that you previously created.
+
+image:suitecrm-oauth-connection-provider-field.png[suitecrm-oauth-connection-provider-field.png]
+
+After selecting the provider it is time to authenticate, click on the "Authenticate" button.
+
+image:suitecrm-oauth-connection-authenticate.png[suitecrm-oauth-connection-authenticate.png]
+
+When clicking the button a popup window should display with the Microsoft page for Authentication.
+
+image:microsoft-authenticate-popup.png[microsoft-authenticate-popup.png]
+
+After going through all the authentication popup steps, the popup should close and the fields on the External OAuth Connection record should be populated.
+
+{{% notice warning %}}
+Do not store or share any of the tokens. These work almost as passwords. They are sensitive information.
+{{% /notice %}}
+
+
+image:suitecrm-oauth-connection-configured.png[suitecrm-oauth-connection-configured.png]
+
+
+Go ahead and *save* your record.
+
+image:suitecrm-save-button.png[suitecrm-save-button.png]
+
+
+== 3. Configure an Inbound Email Account
+
+Now it is time to create an Inbound Email Account. Click on the "Inbound Email Accounts" sidebar menu link.
+
+image:suitecrm-inbound-email-accounts-menu-link.png[suitecrm-inbound-email-accounts-menu-link.png]
+
+This should take you to the Inbound Emails module list view.
+
+image:suitecrm-inbound-email-accounts-listview.png[suitecrm-inbound-email-accounts-listview.png]
+
+Lets create a new Personal Inbound Email Account. click on "New Personal Inbound Email Account"
+
+
+image:suitecrm-new-inbound-email-account-link.png[suitecrm-new-inbound-email-account-link.png]
+
+This should take you to the create view
+
+image:suitecrm-inbound-email-create-blank.png[suitecrm-inbound-email-create-blank.png]
+
+Add a meaningful name to your inbound, it can be the username of your account, or something that helps you identify and differentiate this inbound email account from other existing accounts.
+
+image:suitecrm-oauth-connection-name-field.png[suitecrm-oauth-connection-name-field.png]
+
+Select the "OAuth" type on the Auth Type field.
+
+image:suitecrm-inbound-email-auth-type-field.png[suitecrm-inbound-email-auth-type-field.png]
+
+By selecting the OAuth type, the "External OAuth Connection" field should now display. Click on the arrow to select the OAuth Connection you created before.
+
+{{% notice warning %}}
+Group Inbound Emails should be linked to Group External OAuth Connection records. If they are linked Personal External OAuth Connection records errors may occur
+{{% /notice %}}
+
+image:suitecrm-inbound-email-external-oauth-connection-field.png[suitecrm-inbound-email-external-oauth-connection-field.png]
+
+Click on the arrow button should open a popup where you can select the OAuth Connection we've created before.
+
+image:suitecrm-oauth-connection-select-popup.png[suitecrm-oauth-connection-select-popup.png]
+
+Enter the username for your account. It should be the same you've used to create the OAuth Connection.
+
+image:suitecrm-inbound-email-username-field.png[suitecrm-inbound-email-username-field.png]
+
+Enter server address for your account. E.g. for Microsoft it would be `outlook.office365.com`.
+
+{{% notice note %}}
+Here we are using a Microsoft account as example. Though you should set the address of the server you are using
+{{% /notice %}}
+
+image:suitecrm-inbound-email-server-field.png[suitecrm-inbound-email-server-field.png]
+
+Depending on your server configurations enable the ssl and set the port. E.g. for Microsoft you should enable the "Use SSL" checkbox which is going to change the port to "993" which is the default.
+
+{{% notice note %}}
+Here we are using a Microsoft account as example. Though you should set the port of the server you are using
+{{% /notice %}}
+
+image:suitecrm-inbound-email-port-field.png[suitecrm-inbound-email-port-field.png]
+
+Now set the values for the folders. Click the "Select" button next to each folder to open the popup that will show you the available values.
+
+{{% notice warning %}}
+Do not try to fill these fields before setting the following fields: `External OAuth Connection`, `User Name`, `Mail Server Address`, `Mail Server Port`, `Use SSL`. Otherwise you will just see an empty dropdown on the popup.
+{{% /notice %}}
+
+image:suitecrm-inbound-email-monitored-folders.png[suitecrm-inbound-email-monitored-folders.png]
+
+*For Microsoft*: the following is an example of how the fields should look after being configured:
+
+image:suitecrm-inbound-email-folders-configured.png[suitecrm-inbound-email-folders-configured.png]
+
+Next, set the value for the other fields. The following is an example of a fully configure account, except for the "Outbound Email Account" field which is not in the scope of this guide to explain how to configure
+
+image:suitecrm-inbound-email-fully-configured.png[suitecrm-inbound-email-fully-configured.png]
+
+Go ahead and *save* your record.
+
+image:suitecrm-save-button.png[suitecrm-save-button.png]
+
+== 4. Configure the Inbound Email to display on the Emails module
+
+For the configured account to show on the emails module, you need must go to your profile and select it as one of the accounts to show.
+
+On the navbar global menu click on "Profile"
+image:suitecrm-profile-link.png[suitecrm-profile-link.png]
+
+This should take you to the profile page.
+
+image:suitecrm-user-profile.png[suitecrm-user-profile.png]
+
+Scroll to the end of the page a click on the "Settings" button
+
+image:suitecrm-settings-button.png[suitecrm-settings-button.png]
+
+This should open a modal with a "Folder Management" section at the end. On this section select the accounts that should display on your Emails module.
+
+It is possible to select multiple accounts.
+
+image:suitecrm-profile-folder-management.png[suitecrm-profile-folder-management.png]
+
+Click "Done"
+
+image:suitecrm-done-button.png[suitecrm-done-button.png]
+
+Go ahead and *save* your profile.
+
+image:suitecrm-save-button.png[suitecrm-save-button.png]
+
+That should be your Inbound Email account configured.
+
+== 5. Access the configured account on Emails module
+
+
+On the menu click on the "Emails" module link
+
+image:suitecrm-navbar-emails-link.png[suitecrm-navbar-emails-link.png]
+
+On the menu click on the "Emails" module link.
+
+image:suitecrm-email-list-example-1.png[suitecrm-email-list-example-1.png]
+
+Depending on the number of Inbound Emails you have configured, the inbound you have just configured may not be the one to display by default.
+
+To change to the Inbound Email account you have just configured click on the current inbox button, located on the top right.
+
+image:suitecrm-emails-current-inbox-button.png[suitecrm-emails-current-inbox-button.png]
+
+A modal should show with the Inbound Email accounts you have configured on the Folder Management within your profile
+
+image:suitecrm-current-inbox-selection.png[suitecrm-current-inbox-selection.png]
+
+Within the modal, click on the Inbound Email Account you have just configured. That should reload the page and show the Inbound Email that you configured
+
+image:suitecrm-configured-email-list-example.png[suitecrm-configured-email-list-example.png]
+
+
