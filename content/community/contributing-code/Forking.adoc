@@ -35,7 +35,7 @@ stay up to date with the changes to the parent repository
 upstream remote as well. Here's how: 
 
 `cd SuiteCRM` + 
-`git remote add upstream git://github.com/salesagility/SuiteCRM` + 
+`git remote add upstream git@github.com:salesagility/SuiteCRM.git` + 
 `git fetch upstream` + 
 
 Now anytime you want to update your forked branch it's a simple process.
