@@ -26,7 +26,7 @@ ifdef::env-github[:btn:]
 
 * при добавлении данных
 * при изменении данных
-* при link:../../introduction/user-interface/record-management/#_Импорт_данных[импорте] записей
+* при link:../../introduction/user-interface/record-management/#_импорт_данных[импорте] записей
 * по расписанию 
 link:../../../admin/administration-panel/system/#_планировщик[планировщика], настроенному в панели Администрирования.
 
