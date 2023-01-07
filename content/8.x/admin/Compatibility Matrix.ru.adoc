@@ -17,7 +17,7 @@ weight: 60
 2+^h| Платформа
 
 | Linux, Unix, Mac OS | Любая версия с поддержкой PHP
-| PHP | 7.3, 7.4, 8.0
+| PHP | 7.4, 8.0
 
 2+^| Дополнительные требования для разработчиков
 
@@ -27,23 +27,23 @@ weight: 60
 
 2+^h| Веб-сервер
 
-| Apache |2.2, 2.4
+| Apache | 2.4
 
 2+^h| Базы данных
 
-| MariaDB |10.3 - 10.9
+| MariaDB | 10.3 - 10.9
 
-| MySQL |5.7, 8.0
+| MySQL | 5.7, 8.0
 
 2+^h| Браузеры
 
-| Chrome |90+
+| Chrome | 109+
 
-| Firefox |90+
+| Firefox | 109+
 
-| Edge (Chromium) |89+
+| Edge (Chromium) | 109+
 
-| Safari |14+
+| Safari | 16+
 |========
 
 === SuiteCRM 8.1.x
