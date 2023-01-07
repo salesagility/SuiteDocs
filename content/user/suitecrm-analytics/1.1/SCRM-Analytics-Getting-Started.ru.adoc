@@ -43,7 +43,7 @@ link:../../../../admin/suitecrm-analytics[этом] разделе.
 image:IMAGE1.png[Вход в SuiteCRM Web Analytics]
 
 [start=2]
-. Введите имя пользователя, пароль и нажмите на кнопку {btn}[Login]
+. Введите имя пользователя, пароль и нажмите на кнопку {btn}[Login].
 
 {{% notice info %}}
 По умолчанию используется имя пользователя `admin`, пароль - `password`.
