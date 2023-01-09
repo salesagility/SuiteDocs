@@ -12,76 +12,69 @@ Weight: 55
 
 = Record Management
 
-We have covered the several views that you are presented with so we will
-now move onto record management. In this section we will cover all areas
+In this section we will cover all areas
 of record management so that you can efficiently store and manage
 customer data.
 
 == Creating Records
 
-You can create records within modules from various different areas of
-your Interface. Detailed below are screen shots of record creation
-points.
+You can create records within each module from various different locations of your CRM;
 
+Top Navigation Bar, using the Create button:
 image:43Create_record1.png[title="Create Record method 1"]
 
+Top Navigation Bar, using the Module name:
 image:44Create_record2.png[title="Create Record method 2"]
 
+Side Bar, using the Create option:
 image:45Create_record_3.png[title="Create Record method 3"]
 
-Once you click the create button, you will be taken to the creation
-screen. This is essentially the link:../views/[Edit View] that we have covered
-previously. This allows you to fill in the appropriate data for that record. Fields with
+Once you click the create option, you will be presented with a screen similar to the link:../views/[Edit View] that we have covered
+previously. 
+
+This screen allows you to enter the appropriate data for the record. Fields with
 the red star `*` are required fields. Validation is performed so that a
 record cannot be saved within the CRM unless data is valid for required
 fields.
 
 image:46Create_contact.png[title="Record creation"]
 
-Once you have populated all data for the record, you can save the record
-which will create the record within the module in the CRM. Once saved,
-you will be redirected to the Detail View of the record you have
-created.
+Once you have populated all data for the record, choose the Save button, where you will be redirected to the Detail View of the record you have
+just created.
 
 == Editing Records
 
-You can edit records within modules from various different areas of your
-Interface. Detailed below are screen shots of record editing points.
+You can edit records from various different areas of your CRM, as per the following;
 
+When in Detail View, from the Actions drop down:
 image:47Edit_contact.png[title="Edit Record method 1"]
 
+From a List View, using the pencil at the left hand side;
 image:48Edit_contact.png[title="Edir Record method 2"]
 
-Once you click the *edit* button(or pencil), you will be taken to the Edit
-View. This allows you to edit/populate the appropriate data for that
-record. Fields with the red star(*) are required fields. Validation is
+Once you click the *edit* option, you will be taken to the Edit
+View. Fields with the red star(*) are required fields. Validation is
 performed so that a record cannot be saved within the CRM unless data is
 valid for required fields.
 
-Once you have edited/populated the record data, you can save the record
-which will update the existing record with the new data populated when
-editing. Once saved, you will be redirected to the Detail View of the
-record you have edited.
+Once you have edited/populated the record data, you can save the record and will be redirected to the Detail View of the record you have edited.
 
 == Deleting Records
 
 You can delete records within modules from both the List View and Detail
-View. Detailed below are screen shots of record editing points:
+View.
 
 === Detail View Deletion method
 
-Deleting records from the Detail View is a simple process. You simply
-have to click the *'Delete'* button.
-
+To delete a record  from the Detail View screen, choose the Delete option from the Actions drop down menu; 
 image:49Delete_contact.png[title="Delete Records"]
 
-When you click the delete button on a record, you will receive a popup
+When you click the delete option, you will receive a popup
 which will ask you to confirm that you want to delete the record.
 
 image:50Delete_contact.png[title="Confirm deletion"]
 
-You can either click *Cancel* or *OK*. Clicking Cancel will revert you back
-to the Detail View of the record and will not delete it. Clicking OK
+Clicking Cancel will revert you back to the Detail View of the record and will not delete it. Clicking OK
 will action the record deletion. If you choose to delete the record, the
 record will be deleted and you will be redirected to the module List
 View.
@@ -90,36 +83,35 @@ View.
 
 To delete records from the List View, you can select records using the
 checkbox option on the left hand side of the view. It is possible to
-select single records or use the 'Select this Page' or 'Select All'
+select individual records or using the checkbox column header, choose the 'Select this Page' or 'Select All'
 options, to select all records from the page or all records within the
 module.
 
 image:51ListView_deletion.png[title="List View deletion method"]
 
-Once the records are selected to delete, you can click the *'Delete'*
-button. When you click the delete button on a record, you will receive a
-popup which will display the number of records being deleted and ask you
-to confirm that you want to delete the record.
+Once the records are selected to delete, click the *'Delete'*
+button which will display a popup showing the number of records being deleted. You will be asked to confirm that you want to delete the record(s).
 
 image:image59.png[title="Confirm Deletion"]
 
-You can either click *Cancel* or *OK*. Clicking Cancel will revert you back
-to the Detail View of the record and will not delete it. Clicking OK
+Clicking Cancel will revert you back
+to the List View and will not delete them. Clicking OK
 will action the record deletion. If you choose to delete the record, the
-record will be deleted and you will be redirected to the module List
-View.
+record will be deleted.
 
 == Mass Updating Records
 
 You can mass update records from the List View of any module, given this
-option is made available to you. To mass update records, you have to
-check the records in the List View and then select the 'Mass Update'
-option from the dropdown menu (next to the delete link).
+option is made available to you. 
+
+To mass update records, you have to
+select the records in the List View by using the checkbox to the left hand side, and then from the Bulk Action drop down menu, select the 'Mass Update'
+option.
 
 image:52Mass_update_records.png[title="Mass Updating Records"]
 
 Clicking the mass update option will display a screen at the bottom of
-the List View. This will list all fields that can be mass updated by
+the List View, which will list all fields that can be mass updated by
 you.
 
 image:53Mass_update.png[title="Mass update"]
@@ -139,8 +131,7 @@ option is made available to you, or via the Detail View if you follow
 the 'Find Duplicates' process.
 
 To merge records, you have to check the records in the List View and
-then select the *'Merge'* option from the dropdown menu (next to the
-delete link).
+then select the *'Merge'* option from the Bulk Action dropdown menu.
 
 image:55Merge.png[title="Merge"]
 
@@ -161,8 +152,7 @@ image:183Merging_records.png[title="Merge fields"]
 Once you have made the required changes on the merge screen, you can
 click btn:[Save Merge] or btn:[Cancel]. Clicking cancel will discard the merge
 changes and will revert you to the List View for that module. Clicking
-'Save Merge' will continue the Merge process and will prompt you to
-inform you that the duplicate record will be deleted.
+'Save Merge' will continue the Merge process and will prompt you that the duplicate record will be deleted.
 
 image:184Save_merge.png[title="Confirm merge"]
 
@@ -266,7 +256,7 @@ you imported your records into.
 
 == Exporting Records
 
-You can export SuiteCRM records in .csv format. When you exports records
+You can export SuiteCRM records in .csv format. When you export records
 from the CRM, you will be provided with the .csv file to download when
 the export has finished executing. You can save and open this file in
 applications such as Libre Office Calc or Microsoft Office Excel.
