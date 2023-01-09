@@ -33,13 +33,12 @@ set.
 
 == Managing Desktop Notifications
 
-If you have no notifications, the notification count will show '0' to
-tell you you currently have no notifications to check.
+If you have no notifications, there will be no notification count.
 
 image:65Managing_notifications.png[title="Notifications"]
 
 If you do not click on a desktop notification when it is displayed in
-the browser, for example you are AFK(Away From Keyboard) your
+the browser, for example if you are away from keyboard, your
 notifications will be added to the notification list which shows as a
 count on the main navigation bar.
 
