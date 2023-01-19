@@ -35,15 +35,15 @@ weight: 60
 
 2+^h| Browsers
 
-| Chrome |90+
+| Chrome |109+
 
-| Firefox |90+
+| Firefox |109+
 
 | IE | 11 (compatibility mode not supported)
 
-| Edge |88+
+| Edge |109+
 
-| Safari |12+
+| Safari |16+
 |========
 
 === SuiteCRM 7.12.x
