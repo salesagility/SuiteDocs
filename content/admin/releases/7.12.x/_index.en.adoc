@@ -8,6 +8,58 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+
+== 7.12.9
+
+_Released 25/01/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:lock[] Security
+
+* CVE: link:https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45185[2022-45185] - Improper Access Control
+* CVE: Pending - SQL Injection
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Bypass Vulnerability
+* CVE: Pending - Vulnerability: Cross Site Scripting
+
+==== icon:bug[] Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9718[9718] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9717[#9717] - Security Suite Record Group selector doesn't appear when duplicating records
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9648[9648] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9646[#9646] - Display TinyMCE in step 4 of the campaigns form wizard
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9643[9643] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9574[#9574] - Update method to static for module renaming
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9500[9500] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9499[#9499] - Add View Survey Responses Menu item
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9638[9638] - Fix Elasticsearch indexing and searching using accented characters
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9474[9474] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9473[#9473] - Missing item "Survey" in campainglog_activity_type_dom
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9844[9844] - ElasticSearch Indexing batch error handling
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9770[9770] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9568[#9568] - Ignore int len when comparing vardefs in newer MySQL versions
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9786[9786] - Clear caches used by Inline Edition
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9671[9671] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9670[#9670] - Disabling the user profile option about notification of assignments does not work
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9813[9813] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9344[#9344] - Error in Browsers console after adding tabs to Quickcreate: function selectTabOnError
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM bitnamiNoob th-adavidson QuickCRM lukio 2xaronl pgorod %}}
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+RIOUX Guilhem, Mark Hupperichs, Vautia, Benoit Luquet, crackcat
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.12.8
 
 _Released 17/11/2022_
@@ -156,7 +208,7 @@ They have replacements for the php session_gc. Please review your system’s def
 * CVE: Pending - SQL Injection Vulnerability
 * CVE: Pending - Improper Access Control
 * CVE: Pending - RCE and CSRF Vulnerability
-* CVE: Pending - Authenticated Bypass Vulnerability
+* CVE: Pending - Bypass Vulnerability
 
 [discrete]
 

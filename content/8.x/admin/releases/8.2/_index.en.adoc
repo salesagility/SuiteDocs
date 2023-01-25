@@ -11,6 +11,55 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
+== 8.2.3
+
+_Released 25/01/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+* SuiteCRM 8.2.3 now has an updated Email Compose From dropdown. This includes some styling and functionality changes.
+For more information see link:../../../../admin/administration-panel/emails/email-compose-from-list[here.]
+
+==== icon:lock[] Security
+
+* CVE: link:https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45185[2022-45185] - Improper Access Control
+* CVE: Pending - SQL Injection
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Bypass Vulnerability
+* CVE: Pending - Vulnerability: Cross Site Scripting
+
+==== icon:bug[] Bug Fixes
+
+* PR: link:https://github.com/salesagility/SuiteCRM-Core/pull/200[200] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/180[#180] - Fix invalid token
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9906[9906] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9870[#9870] - Fix log level in ImapHandlerFactory
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9905[9905] - Close #9905 - Update email compose from dropdown
+* PR: link:https://github.com/salesagility/SuiteCRM/pull/9904[9904] - Fix link:https://github.com/salesagility/SuiteCRM/issues/9878[9879] - Fix inbound email errors on php 8
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reporting the security issues addressed in this release!_
+
+RIOUX Guilhem, Mark Hupperichs, Vautia, Benoit Luquet, crackcat
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors maurizioaiello kingfisher77 %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 8.2.2
 
 _Released 22/12/2022_

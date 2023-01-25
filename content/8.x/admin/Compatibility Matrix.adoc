@@ -18,7 +18,7 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 2+^h| Platform
 
 | Linux, Unix, Mac OS | Any version supporting PHP
-| PHP | 7.3, 7.4, 8.0
+| PHP | 7.4, 8.0
 
 2+^| Additional requirements for Development
 
@@ -28,7 +28,7 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 
 2+^h| Web Server
 
-| Apache |2.2, 2.4
+| Apache | 2.4
 
 2+^h| Database
 
@@ -38,13 +38,13 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 
 2+^h| Browsers
 
-| Chrome |90+
+| Chrome |109+
 
-| Firefox |90+
+| Firefox |109+
 
-| Edge (Chromium) |89+
+| Edge (Chromium) |109+
 
-| Safari |14+
+| Safari |16+
 |========
 
 === SuiteCRM 8.1.x
