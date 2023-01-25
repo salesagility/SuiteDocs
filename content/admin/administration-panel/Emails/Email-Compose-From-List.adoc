@@ -1,5 +1,5 @@
 ---
-Title: Email Compose 'From Dropdown' Behaviour
+Title: Compose Email 'From' Dropdown Behaviour
 weight: 30
 ---
 
@@ -7,21 +7,22 @@ weight: 30
 
 == 1. Intro
 
-On SuiteCRM 7.13.1 and 8.2.3 versions the Email Compose view "from" dropdown, depicted on the following image, has been updated.
+On SuiteCRM 7.13.1 and 8.2.3 versions, the “From” dropdown list, depicted on the following image, has been updated.
 
 image:suitecrm-compose-from.png[suitecrm-compose-from.png]
 
-Apart from the new styling it behaves differently.
+As well as the new styling, the field behaves differently.
 
-By default, it now shows the list of all Outbound Email Accounts the user has access to. This includes the personal accounts and group accounts that the user has access to.
+By default, it now shows the list of all Outbound Email Accounts the user has access to, which includes the personal accounts and group accounts.
+
 In addition to the above it will also show the System Email if the `Users may send as this account's identity` option is enabled in the `Administration > Email Settings` page.
 
 
 == 2. legacy_email_behaviour config option
 
-=== 2.2 Option description
+=== 2.1 Option description
 
-A new `legacy_email_behaviour` config options has been added. This option allows to keep some of th legacy compose from behaviour.
+A new `legacy_email_behaviour` config option has been added, which allows you to keep some of the legacy Compose “From” behaviour.
 
 It will get the list of 'from email addresses' that was generated in previous versions of SuiteCRM and add it to the new list that is generated based on the Outbound Email Accounts.
 
@@ -30,9 +31,9 @@ As you might know, the previous behaviour was to generate the list from addresse
 
 === 2.2 Note on upgraded versions
 
-This behaviour will be applied to all newly installed instances.
+Newly installed instances will have the `legacy_email_behaviour` option disabled by default.
 
-Instances that have been upgraded from a previous SuiteCRM version will have the newly added `legacy_email_behaviour` `config.php` option enabled in order to keep legacy behaviour
+Instances that have been upgraded from a previous SuiteCRM version will have the newly added `legacy_email_behaviour` `config.php` option enabled in order to keep legacy behaviour.
 
 
 == 3. Email signatures
@@ -42,7 +43,7 @@ This signature can be defined both for Personal and Group Outbound Email Account
 
 The group signatures will be accessible by any user that has access to the Outbound Email Account record.
 
-Please note that signatures do not support embedded images, only images that available in a public url.
+Please note that signatures do not support embedded images, only images that are available in a public url.
 
 image:suitecrm-outbound-email-signature.png[suitecrm-outbound-email-signature.png]
 
