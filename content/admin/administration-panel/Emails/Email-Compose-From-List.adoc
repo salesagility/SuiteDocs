@@ -1,0 +1,48 @@
+---
+Title: Email Compose 'From Dropdown' Behaviour
+weight: 30
+---
+
+:imagesdir: /images/en/admin/email/
+
+== 1. Intro
+
+On SuiteCRM 7.13.1 and 8.2.3 versions the Email Compose view "from" dropdown, depicted on the following image, has been updated.
+
+image:suitecrm-compose-from.png[suitecrm-compose-from.png]
+
+Apart from the new styling it behaves differently.
+
+By default, it now shows the list of all Outbound Email Accounts the user has access to. This includes the personal accounts and group accounts that the user has access to.
+In addition to the above it will also show the System Email if the `Users may send as this account's identity` option is enabled in the `Administration > Email Settings` page.
+
+
+== 2. legacy_email_behaviour config option
+
+=== 2.2 Option description
+
+A new `legacy_email_behaviour` config options has been added. This option allows to keep some of th legacy compose from behaviour.
+
+It will get the list of 'from email addresses' that was generated in previous versions of SuiteCRM and add it to the new list that is generated based on the Outbound Email Accounts.
+
+As you might know, the previous behaviour was to generate the list from addresses based on the Inbound Email Accounts.
+
+
+=== 2.2 Note on upgraded versions
+
+This behaviour will be applied to all newly installed instances.
+
+Instances that have been upgraded from a previous SuiteCRM version will have the newly added `legacy_email_behaviour` `config.php` option enabled in order to keep legacy behaviour
+
+
+== 3. Email signatures
+
+The Outbound Email Account configuration has been updated to allow configuring an email signature per outbound email account, as depicted in the image below.
+This signature can be defined both for Personal and Group Outbound Email Accounts.
+
+The group signatures will be accessible by any user that has access to the Outbound Email Account record.
+
+Please note that signatures do not support embedded images, only images that available in a public url.
+
+image:suitecrm-outbound-email-signature.png[suitecrm-outbound-email-signature.png]
+
