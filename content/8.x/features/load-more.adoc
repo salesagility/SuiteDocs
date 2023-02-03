@@ -1,0 +1,122 @@
+---
+title: "Load More"
+weight: 80
+---
+
+:imagesdir: /images/en/8.x/user/features
+
+== What is Load More?
+
+If switched on, Load More will allow a user to load records into the list table that is displayed for Listview, Subpanel
+and Pop up Record List, without the need for the pagination options. This means the user can scroll through the list of
+records, without paging back and forth.
+
+image:Load-More-Full.png[Load-More-Full.png]
+
+image:Load-More-Scroll.png[Load-More-Scroll.png]
+
+Please be aware that after clicking `load-more`, the number of records is not "memorized" (saved to user preferences).
+Therefore, after refreshing the page, the table will return to the initial number of records.  To see how to set the
+default number of records, click link:#_configure_the_amount_of_records_loaded[here.]
+
+== Load More Configuration
+
+=== Where can you set load more?
+
+On the System Settings page in Admin panel and the Layout Options tab on the User Profile page, a new dropdown list has
+been added for Listview, Subpanel and Pop up Record List, to define whether Pagination or Load more is to be used.
+
+You can see how the dropdown looks on both the System Settings and User Profile below:
+
+image:Load-More-System-Settings.png[Load-More-System-Settings.png]
+
+image:Load-More-User-Pref.png[Load-More-User-Pref.png]
+
+The User Profile setting will override the System Settings option.
+
+The system default is `Pagination`.
+
+=== Configure the amount of Records Loaded
+The number of records that will be loaded, when clicking 'Load More' is defined using the following fields on the System
+Settings page.
+
+* Listview Items Per Page - Listview
+* Pop up Record List - Record List Pop-up
+* Subpanel Items Per Page - Subpanels
+
+image:Per-Page-Settings.png[Per-Page-Settings.png]
+
+=== Configure table max height
+You are able to configure the maximum height of the tables.
+
+* Subpanel - add `maxHeight` to the subpanel definition within the metadatafiles.
+** In the example below the `maxHeight` has been changed within the `public/legacy/custom/modules/Accounts/metadata/subpaneldefs.php`
+
+[source, php]
+```php
+        'contacts' => array(
+            'order' => 30,
+            'module' => 'Contacts',
+            'sort_order' => 'asc',
+            'maxHeight' => 1000,
+            'sort_by' => 'last_name, first_name',
+            'subpanel_name' => 'ForAccounts',
+            'get_subpanel_data' => 'contacts',
+            'add_subpanel_data' => 'contact_id',
+            'title_key' => 'LBL_CONTACTS_SUBPANEL_TITLE',
+            'top_buttons' => array(
+                array('widget_class' => 'SubPanelTopCreateAccountNameButton'),
+                array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
+            ),
+        ),
+```
+
+* Listview & Pop up Record List - add `maxHeight` to the `public/legacy/custom/modules/<Module>/listviewdefs.php` of the module
+you would like to update.
+** In the example below `Accounts` Listview `maxHeight` has been updated.
+
+[source, php]
+```php
+'ListView' =>  [
+        'maxHeight' => 3000,
+        'sidebarWidgets' => [
+            'accounts-new-by-month' => [
+                'type' => 'chart',
+                'labelKey' => 'LBL_QUICK_CHARTS',
+                'options' => [
+                    'toggle' => true,
+                    'headerTitle' => false,
+                    'charts' => [
+                        [
+                            'chartKey' => 'accounts-new-by-month',
+                            'chartType' => 'line-chart',
+                            'statisticsType' => 'accounts-new-by-month',
+                            'labelKey' => 'ACCOUNT_TYPES_PER_MONTH',
+                            'chartOptions' => [
+                            ]
+                        ] ...
+```
+
+The default for each table is:
+
+* Subpanel & Pop up Record List - 10 Records.
+* Listview - No Set Default.
+
+=== Config Settings
+
+If you would like to change any value directly on your `config_override.php` you can do so by using:
+
+* `'{view}_pagination_type'` - (e.g. `'listview_pagination_type'`)
+** This will change the pagination type for that view.
+* `'list_max_entries_per_{type}'` - (e.g. `'list_max_entries_per_subpanel'`)
+** This will change the amount of records shown when each view is loaded in addition to the number of new records loaded when clicking `load-more`.
+
+Please note that changing a value directly on your config_override.php, it will change for everyone on your system that does not have a preference already set on their User Profile.
+
+To change subpanels to `load-more` and show/load 10 records for example:
+
+```php
+'subpanel_pagination_type' => 'load-more',
+'list_max_entries_per_subpanel' => 10,
+```
+
