@@ -1,0 +1,55 @@
+---
+title: "Subpanel Filtering"
+weight: 80
+---
+
+:imagesdir: /images/en/8.x/user/features/subpanels
+
+=== How to Configure Filtering on Subpanels?
+
+To allow filtering on a subpanel, the following statement needs to be added to the `subpaneldefs.php` file:
+```php
+['widget_class' => 'SubPanelTopFilterButton'],
+```
+The following example shows where this has been added to the `Accounts` -> `Contacts` Subpanel within the
+`public/legacy/Accounts/metadata/subpaneldefs.php` file:
+
+```php
+        'contacts' => array(
+            'order' => 30,
+            'module' => 'Contacts',
+            'sort_order' => 'asc',
+            'sort_by' => 'last_name, first_name',
+            'subpanel_name' => 'ForAccounts',
+            'get_subpanel_data' => 'contacts',
+            'add_subpanel_data' => 'contact_id',
+            'title_key' => 'LBL_CONTACTS_SUBPANEL_TITLE',
+            'top_buttons' => array(
+                array('widget_class' => 'SubPanelTopCreateAccountNameButton'),
+                ['widget_class' => 'SubPanelTopFilterButton'],
+                array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
+            ),
+        ),
+```
+
+Once this has been added, run `Repair and Rebuild` within the `Admin`->`Repair` menu.
+
+=== What does the filter look like?
+
+Once enabled, a new Filter button will be displayed on the subpanel.
+
+image:Filter-Full-Panel.png[Filter-Full-Panel.png]
+
+After selecting the Filter button, a list of filter options for the specific subpanel will be displayed:
+
+image:Filter-Expanded.png[Filter-Expanded.png]
+
+Once the required filter options have been completed, click the Search button where only the filtered records will be displayed:
+
+image:Filter-Searched.png[Filter-Searched.png]
+
+To edit or update your current filter just select `Filter` and update.
+To close or remove the filter select `Clear Filter`.
+
+Please be aware that filters are not "memorized" (saved to user preferences). Therefore, after refreshing the filter
+*will* reset.
