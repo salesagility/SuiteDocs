@@ -359,7 +359,7 @@ Please double-check that the following configurations are correct
 * `RewriteBase`
 ** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then the correct value is `RewriteBase /legacy`
 ** Otherwise, you should prepend the path until the `public` folder.
-*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/public`
+*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/legacy`
 
 
 ==== 2.1.6  Access the app
@@ -477,7 +477,7 @@ Please double-check that the following configurations are correct
 * `RewriteBase`
 ** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then the correct value is `RewriteBase /legacy`
 ** Otherwise, you should prepend the path until the `public` folder.
-*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/public`
+*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/legacy`
 
 
 ==== 3.2.4  Access the app
