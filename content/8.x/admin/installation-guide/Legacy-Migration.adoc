@@ -79,7 +79,7 @@ Set the permissions on the files in a way that the command line user has enough 
 * `RewriteBase`
 ** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then you should set `RewriteBase /legacy`
 ** Otherwise, you should prepend the path until the `public` folder.
-*** e.g. if your address is something like `https://your-host/crm/public`, then you should set `RewriteBase /crm/public/public`
+*** e.g. if your address is something like `https://your-host/crm/public`, then you should set `RewriteBase /crm/public/legacy`
 
 === 2.5. Run the upgrade command
 
