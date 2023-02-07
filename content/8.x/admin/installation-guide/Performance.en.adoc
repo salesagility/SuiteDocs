@@ -1,0 +1,59 @@
+---
+Title: Performance
+weight: 40
+---
+
+=== (optional) (recommended for production) Enabling op cache
+
+Enabling op cache will greatly improve performance. Though it's only recommended for production environments.
+
+To enable op cache you have to enable and configure it on php.ini.
+
+* The following example is based on the Symfony documentation that you will find in the `Helpful resources`
+
+[source,ini]
+----
+
+[opcache]
+; Determines if Zend OPCache is enabled
+zend_extension=opcache.so
+opcache.enable=1
+
+; The OPcache shared memory storage size.
+opcache.memory_consumption=256
+
+; The maximum number of keys (scripts) in the OPcache hash table.
+; Only numbers between 200 and 100000 are allowed.
+opcache.max_accelerated_files=20000
+
+; When disabled, you must reset the OPcache manually or restart the
+; webserver for changes to the filesystem to take effect.
+opcache.validate_timestamps=0
+----
+
+==== Helpful resources:
+
+For a deeper understanding of the above we recommend reading the following:
+
+* link:https://symfony.com/doc/current/performance.html[Symfony documentation - Performance,window=_blank]
+* link:https://api-platform.com/docs/core/performance/#enabling-the-metadata-cache[ApiPlatform documentation - Performance,window=_blank]
+** From the ApiPlatform documentation have have a look at `Enabling the Metadata Cache`
+
+=== (optional) (recommended for production) Enable APCu
+
+{{% notice warning %}}
+Please ensure before enabling you have read all warnings within the links in the `Helpful resources` section.
+{{% /notice %}}
+
+Enabling APCu will greatly improve performance. Though its only recommended for production environments.
+
+Be aware that, when enabled, APCu will consume extra memory from your system.
+
+Before enabling APCu please ensure you have the APCu extension installed.
+
+==== Helpful resources:
+
+For a deeper understanding of the above we recommend reading the following:
+
+* link:https://symfony.com/doc/current/components/cache/adapters/apcu_adapter.html[Symfony APCu adapter documentation - Performance,window=_blank]
+* link:https://symfony.com/doc/current/performance.html#performance-install-apcu-polyfill[Install APCu - Performance,window=_blank]
