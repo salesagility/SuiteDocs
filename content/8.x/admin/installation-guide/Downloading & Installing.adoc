@@ -122,44 +122,9 @@ error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
 Please check the `Helpfull Resources` section from link:#_1_1_install_required_software[Install required software] for instructions on where to find `php.ini`
 
 
-=== 1.5 (optional) (recommended for production) Enable op cache
+=== 1.5 (optional) Performance
 
-Enabling op cache will greatly improve performance. Though its only recommended for production environments.
-
-To enable op cache you have to enable and configure it on php.ini.
-
-* The following example is based on the Symfony documentation that you will find in the `Helpfull resources`
-
-[source,ini]
-----
-
-[opcache]
-; Determines if Zend OPCache is enabled
-zend_extension=opcache.so
-opcache.enable=1
-
-; The OPcache shared memory storage size.
-opcache.memory_consumption=256
-
-; The maximum number of keys (scripts) in the OPcache hash table.
-; Only numbers between 200 and 100000 are allowed.
-opcache.max_accelerated_files=20000
-
-; When disabled, you must reset the OPcache manually or restart the
-; webserver for changes to the filesystem to take effect.
-opcache.validate_timestamps=0
-----
-
-==== Helpfull resources:
-
-For a deeper understanding of the above we recommend reading the following:
-
-* link:https://symfony.com/doc/current/performance.html[Symfony documentation - Performance,window=_blank]
-* link:https://api-platform.com/docs/core/performance/#enabling-the-metadata-cache[ApiPlatform documentation - Performance,window=_blank]
-** From the ApiPlatform documentation have have a look at `Enabling the Metadata Cache`
-
-
-'''
+For more information regarding performance optimization see link:../performance/[here.]
 
 == 2. Downloading and Setting up SuiteCRM
 
@@ -359,7 +324,7 @@ Please double-check that the following configurations are correct
 * `RewriteBase`
 ** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then the correct value is `RewriteBase /legacy`
 ** Otherwise, you should prepend the path until the `public` folder.
-*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/public`
+*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/legacy`
 
 
 ==== 2.1.6  Access the app
@@ -477,7 +442,7 @@ Please double-check that the following configurations are correct
 * `RewriteBase`
 ** If you have your vhost pointing to `legacy` dir within the SuiteCRM 8 root folder. Then the correct value is `RewriteBase /legacy`
 ** Otherwise, you should prepend the path until the `public` folder.
-*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/public`
+*** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/legacy`
 
 
 ==== 3.2.4  Access the app

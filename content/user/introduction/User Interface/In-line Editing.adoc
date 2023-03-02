@@ -9,16 +9,12 @@ Weight: 56
 
 = In-line Editing
 
-In-line editing gives you the ability to change values “on the fly”.
-In-line editing has been implemented on both List View and Detail View,
-providing an advantage to users wishing to change field values quickly,
-reducing the number of clicks/processes that would normally be taken to
-edit the full record.
+In-line editing gives you the ability to change values “on the fly” and has been implemented on both List View and Detail View,
+providing an advantage to users wishing to change field values quickly.
 
 {{% notice note %}}
 In-line editing can be enabled/disabled for both List View and
-Detail View. This can be done in the main System Settings for the CRM,
-by the System Administrator.
+Detail View, via the main System Settings for the CRM by the System Administrator.
 {{% /notice %}}
 
 image:186In-line_editing.png[title="Enable In-line Editing"]
@@ -26,17 +22,14 @@ image:186In-line_editing.png[title="Enable In-line Editing"]
 == List View In-line Editing
 
 You can edit record information on the List View of a module using
-in-line editing by clicking on a field where the pencil icon is shown.
+in-line editing by double clicking on a field where the pencil icon is shown.
 
 image:60ListView_editing.png[title="List View In-line Editing"]
 
-You can either click on the pencil icon, or double click on the field to
-edit the value.
-
 image:61ListView_editing.png[title="List View edit field"]
 
-Once you have made the required change to the field value, you can
-either press Return or click on the 'tick'. This will save your changes.
+Once you have made the required change, you can
+either press Return or click on the 'tick' to save your changes.
 If you navigate away without saving any changes, you will see a prompt
 warning you that you have made unsaved changes to the field being
 edited.
@@ -49,18 +42,15 @@ or you can click *OK* which will discard the changes made.
 == Detail View In-line Editing
 
 Similar to List View, you can edit record information on the Detail View
-of a module using in-line editing by clicking on a field where the
+of a module using in-line editing by double clicking on a field where the
 pencil icon is shown.
 
 image:62DetailView_Editing.png[title="Detail View In-line Editing"]
 
-You can either click on the pencil icon, or double click on the field to
-edit the value.
-
 image:63DetailView_editing.png[title="Detail View edit field"]
 
 Once you have made the required change to the field value, you can
-either press Return or click on the 'tick'. This will save user changes.
+either press Return or click on the 'tick', which will save your changes.
 If you navigate away without saving any changes, you will see a prompt
 warning you that you have made unsaved changes to the field being
 edited.

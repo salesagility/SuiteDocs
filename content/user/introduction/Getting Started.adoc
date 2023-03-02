@@ -11,8 +11,8 @@ Weight: 20
 
 == Logging Into SuiteCRM
 
-SuiteCRM allows users to log in using your Username and Password,
-provided to you by the System Administrator.
+SuiteCRM allows you to log in using your Username and Password,
+provided by your own System Administrator.
 
 image:190Home_screen.png[title="Home Screen"]
 
@@ -43,7 +43,7 @@ image:179Forgot_password.png[title="Forgotten Password"]
 
 In this chapter we have demonstrated how to access SuiteCRM using the
 login form. We have also established how to use the forgotten password
-functionality to retrieve a users password in the event of the password
+functionality to retrieve a user's password in the event of the password
 being lost or forgotten.
 
 In the next chapter we will cover the User Wizard, which allows you to

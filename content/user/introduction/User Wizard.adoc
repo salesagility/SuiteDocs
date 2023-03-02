@@ -11,12 +11,11 @@ Weight: 30
 
 The User Wizard guides you through the configuration options available
 to you post login. This allows you to select many formats for data that
-will display in SuiteCRM, and these are specific to your user.
+will display in SuiteCRM, and these are specific to your user account.
 
 == Welcome to SuiteCRM
 
-The first step you will see is a simple welcome page that displays once
-you have logged in. Click btn:[Next] on this page to progress to configure
+Once logged in, a simple welcome page will be displayed. Click btn:[Next] on this page to start to configure
 your user preferences.
 
 image:04SuiteCRM_welcome.png[title="Welcome to SuiteCRM!"]
@@ -24,14 +23,14 @@ image:04SuiteCRM_welcome.png[title="Welcome to SuiteCRM!"]
 == Your Information
 
 On this screen you are able to provide information about yourself. When
-you provide this information, other users can view this information such
+you provide this information, other users can view it, such
 as your Full Name, Email Address and Contact details. Fields marked with
 a red star(*) are required fields, and as such need to be filled in with
 valid data before you can progress.
 
 image:05Welcome_info.png[title="User Information"]
 
-Once you have filled in all information on this page, click btn:[Next] to
+Once you have completed all the information on this page, click btn:[Next] to
 progress to the next step in the wizard.
 
 == Your Locale
@@ -43,15 +42,14 @@ image:06SuiteCRM_Locale.png[title="Locale Settings"]
 == Currency Selection
 
 Select the Currency you wish to be displayed for all Currency fields
-within SuiteCRM. The Currency options are populated from the options
-added by the System Administrator. If there are Currency options you
-require but do not see, please contact your System Administrator.
+within SuiteCRM. The Currency options are populated by the System Administrator. If there are Currency options you
+require but are not available, please contact your System Administrator.
 
 image:180Currency_selection.png[title="Currency Selection"]
 
 == Date Format
 
-Select the Date Format you wish to be displayed for all Date fields
+Select the Date Format you wish to use for all Date fields
 within SuiteCRM. There are many different date format options to select
 from, all of which are specific to your user. This date format will also
 apply to Date Time fields.
@@ -63,17 +61,13 @@ image:08Date_format.png[title="Date Format"]
 Select the Time Zone you wish to use within SuiteCRM. This allows you to
 tailor your use of SuiteCRM specific to where you are located globally.
 If you are travelling between various countries, you can change the Time
-Zone at any time in your User Preferences after you Wizard set-up, to
-allow you to view records in that Time Zone.
+Zone at any time in your User Preferences after you complete the Wizard set-up.
 
 image:09Time_zone.png[title="Time Zone"]
 
 == Name Format
 
-Select the Name Format you wish to be displayed for all Name fields
-within SuiteCRM. This is applicable to the various 'Person' modules
-within SuiteCRM, and allows you to set your preferred name format
-dependent on your requirement.
+Select your preferred Name Format which all Name fields are to be displayed. This is applicable to the various 'Person' modules within SuiteCRM.
 
 image:181Name_format.png[title="Name Format"]
 
