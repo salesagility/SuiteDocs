@@ -14,7 +14,7 @@ providing an advantage to users wishing to change field values quickly.
 
 {{% notice note %}}
 In-line editing can be enabled/disabled for both List View and
-Detail View., via the main System Settings for the CRM by the System Administrator.
+Detail View, via the main System Settings for the CRM by the System Administrator.
 {{% /notice %}}
 
 image:186In-line_editing.png[title="Enable In-line Editing"]
