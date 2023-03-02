@@ -212,7 +212,7 @@ image:conf.png[SuiteCRM 8 - Настройка основных параметр
 
 Если виртуальный сервер указывает на каталог *legacy*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
 В противном случае необходимо указать путь до папки *public*.
-Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/public`.
+Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/legacy`.
 
 
 === Установка из командной строки
@@ -272,7 +272,7 @@ image:conf.png[SuiteCRM 8 - Настройка основных параметр
 
 Если виртуальный сервер указывает на каталог *legacy*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
 В противном случае необходимо указать путь до папки *public*.
-Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/public`.
+Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/legacy`.
 
 == Включение кеширования (опционально)
 
