@@ -1,0 +1,58 @@
+---
+Title: Производительность
+weight: 40
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+== Включение кеширования (опционально)
+
+Если система не используется в целях разработки и полностью готова к использованию, то рекомендуется включить OPCache для повышения производительности PHP на веб-сервере, указав в файле php.ini следующие параметры:
+
+[source,ini]
+----
+
+[opcache]
+; Determines if Zend OPCache is enabled
+zend_extension=opcache.so
+opcache.enable=1
+
+; The OPcache shared memory storage size.
+opcache.memory_consumption=256
+
+; The maximum number of keys (scripts) in the OPcache hash table.
+; Only numbers between 200 and 100000 are allowed.
+opcache.max_accelerated_files=20000
+
+; When disabled, you must reset the OPcache manually or restart the
+; webserver for changes to the filesystem to take effect.
+opcache.validate_timestamps=0
+----
+
+[cols="1s,3a"]
+|===
+|Полезные ссылки
+| * https://symfony.com/doc/current/performance.html[Symfony documentation - Performance^]
+  * https://api-platform.com/docs/core/performance/#enabling-the-metadata-cache[ApiPlatform documentation - Enabling the Metadata Cache^]
+|===
+
+
+== Включение APCu (опционально)
+
+{{% notice warning %}}
+Перед включением убедитесь, что вы прочитали все предупреждения по ссылкам ниже.
+{{% /notice %}}
+
+Включение APCu значительно улучшает производительность. Рекомендуется использовать только в рабочей среде.
+
+Имейте в виду, что при включении APCu будет потреблять дополнительную память системы.
+
+Перед включением APCu убедитесь, что у вас установлено расширение APCu.
+
+[cols="1s,3a"]
+|===
+|Полезные ссылки
+| * https://symfony.com/doc/current/components/cache/adapters/apcu_adapter.html[Symfony APCu adapter documentation - Performance^]
+  * https://symfony.com/doc/current/performance.html#performance-install-apcu-polyfill[Install APCu - Performance^]
+|===
