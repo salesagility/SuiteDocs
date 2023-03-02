@@ -105,7 +105,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 
 Если виртуальный сервер указывает на каталог *legacy*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
 В противном случае необходимо указать путь до папки *public*.
-Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/public`.
+Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/legacy`.
 
 === Выполнение команды обновления
 
