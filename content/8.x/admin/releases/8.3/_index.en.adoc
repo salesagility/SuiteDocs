@@ -1,0 +1,196 @@
+---
+title: "8.3 Releases"
+weight: 9850
+aliases:
+  - /8.x/admin/releases/8.3/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.3.0
+
+_Released 16/05/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-pre-release/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== System Requirement Changes
+
+{{% notice warning %}}
+The minimum php version has been updated to php 7.4.
+{{% /notice %}}
+
+To visit the SuiteCRM 8.3.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
+
+==== Backward Incompatible Changes
+
+{{% notice warning %}}
+There has been a BREAKING change update to the `Process Handler Interface`.
+{{% /notice %}}
+
+The `Process Handler Interface` now has the additional function `getRequiredACls` and thus any extension using this interface
+will need to be updated accordingly.
+
+==== New Dev Package
+
+This release includes a new `SuiteCRM-8.3.0-dev.zip` dev package, which is available via https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.3.0[Github.]
+
+This package is meant to help in the development of frontend extensions.
+
+The only difference between the base package and the dev package, is that the dev package includes the `dist` folder.
+
+Including the `dist` folder should remove the need to rebuild the core frontend code.
+
+==== icon:star[] Documentation
+
+===== Upgrading
+
+{{% notice info %}}
+If you wish to upgrade from 8.0.x / 8.1.x to a more current release, please read the following
+link:../../installation-guide/upgrading[Upgrade Documentation.]
+{{% /notice %}}
+
+
+
+==== icon:lock[] Security
+
+* CVE: Pending - Stored XSS Vulnerability
+* CVE: Pending - Improper Access Control
+* CVE: Pending - Improper Access Control
+
+==== icon:star[] Enhancements
+
+===== Notifications
+
+Notifications are now available in SuiteCRM 8, for the following activities:
+
+* Meetings
+* Calls
+
+Therefore, if you are invited/assigned to one of the above, you will receive the notification and any subsequent reminders.
+For more information on using the Notification features, please see link:../../../features/notifications[here.]
+
+image:Notifications-Open.png[Notifications]
+
+===== Subpanel Filters
+
+When viewing Subpanels, you are now able to filter the results to locate the records you are interested in.
+To enable the Filter option, you need to add it via the 'subpaneldefs.php'.  For further information on how to do this,
+please see link:../../../features/subpanel-filtering[here.]
+
+image:Filter-Full-Panel.png[Subpanel Filter]
+
+===== Load More
+
+Previously in SuiteCRM 8, to view additional records on Listview, Subpanels and Pop up Record List you would need to use the paging options.
+
+However, you can now choose to 'Load More' meaning the records all display on the one page, making it easier to scroll up
+and down the list of records, rather than paging back and forth.
+
+To find out how to switch this on and configure the settings, please see link:../../../features/load-more[here.]
+
+image:Load-More-Full.png[Load More]
+
+===== Admin Page
+
+SuiteCRM 8.3 now has a new administration page.
+
+image:Admin-Panel-Top.png[Admin Panel]
+
+image:Admin-Panel-Highlighted.png[Admin Panel Highlighted]
+
+SuiteCRM 8.3 now has the ability to select any admin option from the NEW multi-menu.
+
+image:Admin-Panel-Scheduler.png[Admin Panel Scheduler]
+
+To see more information or to read more about the options within the admin panel please see link:../../administration-panel/administration-panel/[here.]
+
+===== Hidden Column Display Button
+
+SuiteCRM 8 now has the ability to see selected columns that do not appear on listview.
+
+image:ListView.png[ListView.png]
+
+After Selecting the `Columns` action we see:
+
+image:Date-Create-CC.png[Date-Create-CC.png]
+
+We have the `Date Created` selected, however it's not shown on the listview.
+
+Any fields that are not shown on the list can be seen by selecting the three dots to the left of the record on the view.
+
+image:Date-Create-List.png[Date-Create-List.png]
+
+==== icon:star[] Styling List
+
+* Legacy Styling Fixes
+** Document Select Button Styling
+** Dashlet Modal Styling
+** Studio Export Customisation Styling
+** Column Chooser Bottom Button
+** Column Chooser Modal Styling
+** User Management Styling
+** Activity Stream Html Structure Styling
+
+* Other Styling Changes
+** Record Thread Button Styling
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/231[231] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/219[#219] - enum required field validation
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/240[240] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/195[#195] - Initialize bean in app controller
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/246[246] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/245[#245] - [Legacy] Sugar_html onclick action issues
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/247[247] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/216[#216] - Filtering null values
+* PR: https://github.com/salesagility/SuiteCRM/pull/9542[9542] - Fix #9542 - PHP8 null values
+* PR: https://github.com/salesagility/SuiteCRM/pull/9812[9812] - Fix #9812 - Decimal number calculations
+* PR: https://github.com/salesagility/SuiteCRM/pull/9817[9817] - Fix #9817 - A typo in Campaign Trackers
+* PR: https://github.com/salesagility/SuiteCRM/pull/9828[9828] - Fix #9828 - $mod_strings was not initiated
+* PR: https://github.com/salesagility/SuiteCRM/pull/9849[9849] - Fix #9849 - Email OAuth Saving with no type
+* PR: https://github.com/salesagility/SuiteCRM/pull/9974[9974] - Fix #9974 - allowed_preview is defined twice
+* PR: https://github.com/salesagility/SuiteCRM/pull/9965[9965] - Fix #9965 - Upgrade league/oauth2-server to latest version
+* PR: https://github.com/salesagility/SuiteCRM/pull/9642[9642] - Fix https://github.com/salesagility/SuiteCRM/issues/9602[#9602] - ProspectLists save function has a duplication issue
+* PR: https://github.com/salesagility/SuiteCRM/pull/9559[9559] - Fix https://github.com/salesagility/SuiteCRM/issues/7759[#7759], https://github.com/salesagility/SuiteCRM/issues/8273[#8273] - Double Compose button in subpanels
+* PR: https://github.com/salesagility/SuiteCRM/pull/10010[10010] - Fix https://github.com/salesagility/SuiteCRM/issues/10009[#10009] - Cannot configure Module Menu Filters on PHP8+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9325[9325] - Fix https://github.com/salesagility/SuiteCRM/issues/9153[#9153] - Adding dynamicenum case option for export
+* PR: https://github.com/salesagility/SuiteCRM/pull/9329[9329] - Fix https://github.com/salesagility/SuiteCRM/issues/8897[#8897] - Adding missing relationship for SurveyResponses module
+* PR: https://github.com/salesagility/SuiteCRM/pull/9471[9471] - Fix https://github.com/salesagility/SuiteCRM/issues/9470[#9470] - Set fdow in Calendar popup date selector for range search and MassUpdate
+* PR: https://github.com/salesagility/SuiteCRM/pull/9520[9520] - Fix https://github.com/salesagility/SuiteCRM/issues/9326[#9326] - Adding decimal and float case option for export
+* PR: https://github.com/salesagility/SuiteCRM/pull/9528[9528] - Fix https://github.com/salesagility/SuiteCRM/issues/9476[#9476] - Mass assign security groups only assigns selected on current page
+* PR: https://github.com/salesagility/SuiteCRM/pull/9622[9622] - Fix https://github.com/salesagility/SuiteCRM/issues/9621[#9621] - Workflows Calculate Field Actions don't translate dynamicenum fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/9765[9765] - Fix https://github.com/salesagility/SuiteCRM/issues/9764[#9764] - Add extra To addresses to CC field
+* PR: https://github.com/salesagility/SuiteCRM/pull/9777[9777] - Fix https://github.com/salesagility/SuiteCRM/issues/9768[#9768] - Do not convert link URLs in TinyMCE
+* PR: https://github.com/salesagility/SuiteCRM/pull/9784[9784] - Fix https://github.com/salesagility/SuiteCRM/issues/9783[#9783] - Compose view quick search for email templates
+* PR: https://github.com/salesagility/SuiteCRM/pull/9787[9787] - Fix https://github.com/salesagility/SuiteCRM/issues/9780[#9780] - New User Group Popup. Popup does not show after creating a user
+* PR: https://github.com/salesagility/SuiteCRM/pull/9876[9876] - Fix https://github.com/salesagility/SuiteCRM/issues/9875[#9875] - SugarFeed shows 0 seconds ago and negative interval for certain datetime formats
+* PR: https://github.com/salesagility/SuiteCRM/pull/9903[9903] - Fix https://github.com/salesagility/SuiteCRM/issues/9902[#9902] - Workflow - Some Date calculations fail with certain formats
+
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+_Special thanks to everyone who reported security issues addressed in this release!_
+
+H4ck3r Khoỏng, VNCS GLOBAL, vncsglobal.vn {{% ghcontributors chucsse %}}
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors pgorod gunnicom ebogaard SinergiaCRM AlbertoSTIC JanSiero urdhvatech QuickCRM tiefwasserreede abuzarfaris PlamenVasilev Glen407 %}}
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
