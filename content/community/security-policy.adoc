@@ -1,0 +1,42 @@
+---
+Title:  Security Policy
+Weight: 2
+---
+
+== Supported Versions
+
+Please check the link:../supported-versions[Supported Versions] page for more information about the actively supported versions
+
+== Raising Issues
+
+As we take security seriously, any reported issue will be reviewed by our Security Team. If you have discovered a security risk within SuiteCRM, email your report to the Security Team at security@suitecrm.com.
+
+*Please don't disclose security bugs publicly* until they have been handled by the security team.
+
+=== Valid security report criteria
+
+A valid Security Report should meet the following criteria:
+
+- Should contain 1 issue per report or a maximum of 3 issues if they are related
+- The reported issues must have been previously verified by the reporter
+- Should contain the steps to reproduce the issue or a POC script
+- Should specify the affected versions
+- The specified affected versions should be among the actively supported versions
+
+== Response time
+
+=== First response
+
+Your email will be acknowledged within 72 hours during the business week (Mon - Fri) Excluding UK National holidays.
+
+=== Assessment
+Security Reports will be assessed based on priority following an initial assessment of the severity of the report. The time to fully assess a report may vary depending on multiple factors, including the volume and quality of the report in question.
+
+Once a Security Report has been fully assessed it will be assigned a severity and priority grading, this information will be emailed to the reporter along with the anticipated plan for fix to be released.
+If a Security Report is found to be invalid, the reporter will be notified and given the option to create a public issue.
+
+=== Resolution
+
+Security issues are then prioritised and worked on based on priority/severity. The time to fix them may vary depending on priority/severity and complexity of the fix required.
+
+Once the security issue is fixed the reporter will be notified.
