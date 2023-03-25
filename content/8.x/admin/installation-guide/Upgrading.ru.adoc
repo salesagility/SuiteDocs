@@ -342,7 +342,7 @@ link:../../../../../8.x/admin/installation-guide/upgrading/#_4_upgrade_for_pre_r
 
 будет отображена следующая ошибка:
 
-[bash]
+[source,bash]
 -----
 CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<pathtoSuiteCRM8>/cache/prod/ContainerZatgzYy/getConsole_ErrorListenerService.php'
 (include_path='/<pathtoSuiteCRM8>/public/legacy/include/..:.:/usr/share/php')
@@ -353,7 +353,7 @@ CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<patht
 
 [source,bash]
 -----
-./bin/console/ clear:cache
+./bin/console clear:cache
 -----
 
 
