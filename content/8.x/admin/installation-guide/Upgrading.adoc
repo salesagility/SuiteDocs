@@ -436,6 +436,6 @@ This issue is a result of Symfony cache clearing but then being called right aft
 
 === 6.1 Resolution
 
-This issue can be resolved by **re-setting permissions** and `./bin/console/ clear:cache` within the SuiteCRM 8 root directory.
+This issue can be resolved by **re-setting permissions** and `./bin/console clear:cache` within the SuiteCRM 8 root directory.
 
 You should then be able to navigate to your application.
