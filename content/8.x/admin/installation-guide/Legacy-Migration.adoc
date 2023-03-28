@@ -1,11 +1,15 @@
 ---
-Title: SuiteCRM 7.12.x migration to SuiteCRM 8.x
+Title: SuiteCRM 7.12.x+ migration to SuiteCRM 8.x
 weight: 30
 ---
 
 :imagesdir: /images/en/user
 
 == 1. Before migrating
+
+{{% notice note %}}
+On this page, when it is stated 7.12.x+ it refers to any version greater or equal to 7.12.x (i.e. 7.12.x, 7.13.x, etc).
+{{% /notice %}}
 
 . Before running the migration, please make sure your system **complies with the new version compatibility matrix**.
 ** Check the link:../../compatibility-matrix[Compatibility Matrix] for complete information on compatible versions.
@@ -14,7 +18,7 @@ weight: 30
 
 . Before migrating please make sure to create a **backup** of your instance code and database.
 
-. **Upgrade your SuiteCRM 7.x instance to the latest 7.12.x version**
+. **Upgrade your SuiteCRM 7.x instance to the latest 7.12.x version or greater (i.e. 7.12.x, 7.13.x, etc)**
 .. Make sure to go over any manual upgrade steps described on the release notes for each version
 
 . By default, the upgrade commands will set the `error_reporting` to a less strict mode to suppress warnings.
@@ -25,17 +29,17 @@ weight: 30
 
 . Before running any of the commands described next, please make sure your SuiteCRM 8 instance `APP_ENV` is set to `APP_ENV=prod` mode (check `.env` and '.env.local' files)
 
-== 2. Migrating from 7.12.x to SuiteCRM 8.x versions
+== 2. Migrating from 7.12.x+ to SuiteCRM 8.x versions
 
 
 {{% notice note %}}
-Only run the migration if you have already upgraded your SuiteCRM 7.x instance to the latest 7.12.x version.
+Only run the migration if you have already upgraded your SuiteCRM 7.x instance to the latest 7.12.x version or greater (i.e. 7.12.x, 7.13.x, etc).
 {{% /notice %}}
 
 
 === 2.1. Download the new version migration package
 
-*1* - Download the SuiteCRM 8.x target version migration package (e.g. 8.x 7.12.x Migration) from link:https://suitecrm.com/upgrade-suitecrm/[SuiteCRM Release page.]
+*1* - Download the SuiteCRM 8.x target version migration package (e.g. `8.2.4 Upgrade from 7.13.x`) from link:https://suitecrm.com/upgrade-suitecrm/[SuiteCRM Release page.]
 
 *2* - Unzip the package contents to your SuiteCRM 8.x destination folder
 
@@ -43,15 +47,15 @@ Only run the migration if you have already upgraded your SuiteCRM 7.x instance t
 
 *3* - If needed re-set the correct permissions.
 
-=== 2.2. Copy your SuiteCRM 7.12.x instance
+=== 2.2. Copy your SuiteCRM 7.12.x+ instance
 
-*1* - Copy your SuiteCRM 7.12.x instance folder to the public folder on the SuiteCRM 8.x destination folder `/path-to-suitecrm-8/public`
+*1* - Copy your SuiteCRM 7.12.x+ instance folder to the public folder on the SuiteCRM 8.x destination folder `/path-to-suitecrm-8/public`
 
 * *1.1* - Following the example above this would be `/var/www/<SuiteCRM8-folder>/public/>`.
 
 * *1.2* - With your new folder added: `/var/www/<SuiteCRM8-folder>/public/<SuiteCRM 7 Instance>`.
 
-*2* - Rename the SuiteCRM 7.12.x copied folder to `legacy`
+*2* - Rename the SuiteCRM 7.12.x+ copied folder to `legacy`
 
 *3* - If needed re-set the correct permissions.
 
