@@ -1,0 +1,102 @@
+---
+title: "Notifications"
+weight: 50
+---
+
+:imagesdir: /images/en/8.x/user/features/
+
+=== How can I see my notifications?
+
+Notifications can be found on most pages by clicking on the 🔔 icon.
+
+image:Notifications-Open.png[Notifications-Open.png]
+
+=== What will my notifications show?
+
+You will receive a notification if you are invited to one of the following:
+
+* Meetings
+* Calls
+
+A notification will also be sent for any reminders for the above activities.
+
+=== How will I know if I have new notifications?
+
+If you have new notifications you will receive a pop-up at the top of the  screen, similar to the following:
+
+image:Notification-Pop-up.png[Notification-Pop-up.png]
+
+You will also see the number of notifications beside the 🔔 icon.
+
+image:Notifications-Bell-Update.png[Notifications-Bell-Update.png]
+
+=== How quickly will my notifications update?
+
+By default, the notifications are configured to be checked every minute.
+
+You can define how often, in minutes, the notifications are to refresh by setting the 'autoRefreshFrequency' option,
+within the 'config/services/ui/notifications.yaml' configuration file. See the following snippet.
+
+For performance purposes a random deviation is added to the auto refresh period. This prevents having a request done for every active user at exactly the same time every minute. The default deviation is a random number between -15 and +15 seconds.
+
+[souce, yaml]
+```yaml
+parameters:
+  notifications:
+    module: 'alerts'
+    class: 'notifications'
+    maxListHeight: 350
+    ...
+    autoRefreshFrequency: 1 #minutes
+    autoRefreshDeviationMin: -15 #seconds. set 0 for no deviation
+    autoRefreshDeviationMax: 15 #seconds. set 0 for no deviation
+    ...
+```
+
+=== Configure the height of the notifications table
+
+From the code block above you can see that `maxHeightList` is also set. Changing the value here will update the size of
+the table.
+
+=== Snoozing and Dismissing Notifications
+
+As shown below, on each notification there are 2 icons: Snooze and Dismiss.
+
+image:Single-Notification.png[Single-Notification.png]
+
+==== Snoozing Notifications
+
+You can configure how long the snooze on notifications is by setting it in either `System Settings`:
+
+image:Notifications-System-Settings.png[Notifications-System-Settings.png]
+
+or `User Profile` via the `Advanced` tab.
+
+image:Notifications-User-Pref.png[Notifications-User-Pref.png]
+
+==== Dismissing Notifications
+
+Notifications can be dismissed if not required. There are two ways in which to dismiss a notification and the following
+sections will explain both.
+
+===== Dismiss
+
+image:Single-Notification.png[Single-Notification.png]
+
+The first way is to select the ☒ on the single notification and Dismiss it.
+
+===== Dismiss All
+
+The other way is at the bottom of the shown notifications there will be a `dismiss all`.
+
+image:Notifications-Dismiss-All.png[Notifications-Dismiss-All.png]
+
+`Dismiss all` will dismiss all notifications that are currently showing within the notification popup.
+
+=== Load More
+
+At the bottom of your current list of notifications you will see a `load-more` button.
+
+image:Notifications-Dismiss-All.png[Notifications-Load-More.png]
+
+After clicking `load-more`, 10 more notifications will appear in your list.

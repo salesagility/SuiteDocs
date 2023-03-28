@@ -26,13 +26,25 @@ weight: 30
 
 . Before running any of the commands described next, please make sure your SuiteCRM 8 instance `APP_ENV` is set to `APP_ENV=prod` mode (check `.env` and '.env.local' files)
 
-== 2. Upgrading between SuiteCRM 8.x versions
+=== 1.2. Upgrade restrictions
 
-{{% notice note %}}
-This section only applies when upgrading to a version equal or greater to 8.2.x.
+{{% notice warning %}}
+The following section(s) contains the restrictions there are when upgrading between versions
 {{% /notice %}}
 
-For upgrades to versions prior to 8.2.x see section *#3. Upgrading between SuiteCRM 8.0.x to 8.1.x versions*
+==== 1.2.1. Upgrading from versions between 8.0.x - 8.1.x to version 8.3.x or greater
+
+If you are on any version between 8.0.x - 8.1.x and you wish to upgrade to a version greater or equal to 8.3.x, you will first need to upgrade to 8.2.x and only after that can you upgrade to your target version (8.3.x or greater)
+
+== 2. Upgrading to SuiteCRM 8.2.x+ versions
+
+{{% notice note %}}
+This section only applies when upgrading to a version 8.2.x or greater, i.e, 8.2.x, 8.3.x, etc
+{{% /notice %}}
+
+If you are currently on a 8.0.x/8.1.x release, please ensure you upgrade to the latest 8.2.x release, before continuing on to future versions. (ie: 8.3.x or greater)
+
+For upgrades to versions prior to 8.2.x see section link:./#_3_upgrading_from_suitecrm_8_0_x_to_8_1_x_versions[#3. Upgrading from SuiteCRM 8.0.x to 8.1.x versions]
 
 
 === 2.1. Download the new version package

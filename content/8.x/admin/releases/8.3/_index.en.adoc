@@ -1,0 +1,90 @@
+---
+title: "8.3 Releases"
+weight: 9850
+aliases:
+  - /8.x/admin/releases/8.3/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.3-beta
+
+_Released 28/03/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-pre-release/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+{{% notice info %}}
+If you wish to upgrade from 8.0.x / 8.1.x to a more current release, please read the following link:../../installation-guide/upgrading[Upgrade Documentation.]
+{{% /notice %}}
+
+==== icon:star[] Enhancements
+
+===== Notifications
+
+Notifications are now available in SuiteCRM 8, for the following activities:
+
+* Meetings
+* Calls
+
+Therefore, if you are invited/assigned to one of the above, you will receive the notification and any subsequent reminders.
+For more information on using the Notification features, please see link:../../../features/notifications[here.]
+
+image:Notifications-Open.png[Notifications]
+
+===== Subpanel Filters
+
+When viewing Subpanels, you are now able to filter the results to locate the records you are interested in.
+To enable the Filter option, you need to add it via the 'subpaneldefs.php'.  For further information on how to do this,
+please see link:../../../features/subpanel-filtering[here.]
+
+image:Filter-Full-Panel.png[Subpanel Filter]
+
+===== Load More
+
+Previously in SuiteCRM 8, to view additional records on Listview, Subpanels and Record Modals you would need to use the paging options.
+
+However, you can now choose to 'Load More' meaning the records all display on the one page, making it easier to scroll up
+and down the list of records, rather than paging back and forth.
+
+To find out how to switch this on and configure the settings, please see link:../../../features/load-more[here.]
+
+image:Load-More-Full.png[Load More]
+
+==== icon:star[] Styling List
+
+* Legacy Styling Fixes
+** Document Select Button Styling
+** Dashlet Modal Styling
+** Studio Export Customisation Styling
+** Column Chooser Bottom Button
+** Column Chooser Modal Styling
+** User Management Styling
+** Activity Stream Html Structure Styling
+
+* Other Styling Changes
+** Record Thread Button Styling
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+If you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/development-install-guide/[here].
+
+Please link:https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''

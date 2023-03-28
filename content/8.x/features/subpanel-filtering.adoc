@@ -1,0 +1,130 @@
+---
+title: "Subpanel Filtering"
+weight: 80
+---
+
+:imagesdir: /images/en/8.x/user/features/subpanels
+
+=== How to Configure Filtering on Subpanels?
+
+To allow filtering on a subpanel, the following statement needs to be added to the `subpaneldefs.php` file:
+```php
+['widget_class' => 'SubPanelTopFilterButton'],
+```
+The following example shows where this has been added to the `Accounts` -> `Contacts` Subpanel within the
+`public/legacy/Accounts/metadata/subpaneldefs.php` file:
+
+```php
+        'contacts' => array(
+            'order' => 30,
+            'module' => 'Contacts',
+            'sort_order' => 'asc',
+            'sort_by' => 'last_name, first_name',
+            'subpanel_name' => 'ForAccounts',
+            'get_subpanel_data' => 'contacts',
+            'add_subpanel_data' => 'contact_id',
+            'title_key' => 'LBL_CONTACTS_SUBPANEL_TITLE',
+            'top_buttons' => array(
+                array('widget_class' => 'SubPanelTopCreateAccountNameButton'),
+                ['widget_class' => 'SubPanelTopFilterButton'],
+                array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
+            ),
+        ),
+```
+
+Once this has been added, run `Repair and Rebuild` within the `Admin`->`Repair` menu.
+
+=== What does the filter look like?
+
+Once enabled, a new Filter button will be displayed on the subpanel.
+
+image:Filter-Full-Panel.png[Filter-Full-Panel.png]
+
+After selecting the Filter button, a list of filter options for the specific subpanel will be displayed:
+
+image:Filter-Expanded.png[Filter-Expanded.png]
+
+Once the required filter options have been completed, click the Search button where only the filtered records will be displayed:
+
+image:Filter-Searched.png[Filter-Searched.png]
+
+To edit or update your current filter just select `Filter` and update.
+To close or remove the filter select `Clear Filter`.
+
+Please be aware that filters are not "memorized" (saved to user preferences). Therefore, after refreshing the filter
+*will* reset.
+
+=== Adding Search Vardefs to Subpanels
+
+There are some Subpanels across the CRM that don't have a standard Listview / Listview Filter setup, and thus won't have any searchable fields defined (Such as: Activities / Campaign Log / etc).
+
+As a result you might run into issues when trying to filter or see no fields to filter.
+
+If you would like to add a filter, you can do so in the following ways (be sure to Repair and Rebuild after changes):
+
+==== Adding via `subpaneldefs.php`
+
+You can add searchdefs/ filter fields to a subpanel directly. We can see an example of this within the `public/legacy/modules/Accounts/metadata/subpaneldefs.php`
+
+[source,php]
+----
+            'searchdefs' => array(
+                'collection' =>
+                    array(
+                        'name' => 'collection',
+                        'label' => 'LBL_COLLECTION_TYPE',
+                        'type' => 'enum',
+                        'options' => 'collection_temp_list',
+                        'default' => true,
+                        'width' => '10%',
+                    ), ...
+
+----
+
+==== Add a searchdefs.php file
+
+Adding a `searchdefs.php` within the module directory. For example, we can see one used in the Accounts module `public/legacy/modules/Accounts/metadata/searchdefs.php`:
+
+[source,php]
+----
+$searchdefs ['Accounts'] =
+    array(
+        'templateMeta' =>
+            array(
+                'maxColumns' => '3',
+                'maxColumnsBasic' => '4',
+                'widths' =>
+                    array(
+                        'label' => '10',
+                        'field' => '30',
+                    ),
+            ),
+        'layout' =>
+            array(
+                'basic_search' =>
+                    array(
+                        'name' =>
+                            array(
+                                'name' => 'name',
+                                'default' => true,
+                                'width' => '10%',
+                            ),
+                        'current_user_only' =>
+                            array(
+                                'name' => 'current_user_only',
+                                'label' => 'LBL_CURRENT_USER_FILTER',
+                                'type' => 'bool',
+                                'default' => true,
+                                'width' => '10%',
+                            ),
+                        'favorites_only' => array(
+                            'name' => 'favorites_only',
+                            'label' => 'LBL_FAVORITES_FILTER',
+                            'type' => 'bool',
+                        ),
+                    ),
+                'advanced_search' =>
+                    array(
+                        'name' => ...
+
+----
