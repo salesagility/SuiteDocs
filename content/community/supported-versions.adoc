@@ -1,0 +1,41 @@
+---
+Title:  Supported Versions
+Weight: 1
+---
+
+:experimental:
+
+== Supported Versions
+
+Each release of SuiteCRM is supported for a pre-defined period of time after its initial stable release. During this period, bugs and security issues that have been reported are fixed and are released in regular maintenance releases.
+
+After the support period ends, for ESR (Extended Support Release) releases, there is a security support period. Releases during this period are made on an as-needed basis: there can be several security fix releases, or none, depending on the number of reports.
+
+
+== Currently Supported Versions
+
+
+[cols="1,1,1,1"]
+|===
+| Version | Initial Release | Active Support Until | Security Support Until
+
+| 7.12 ESR
+| October 2021
+| July 2023
+| October 2023
+
+| 7.13
+| December 2022
+| May 2023
+| -
+
+| 8.2
+| October 2022
+| March 2023
+| -
+
+|===
+
+== Roadmap
+
+Please check the link:https://suitecrm.com/suitecrm-roadmap/[Roadmap page] on the suitecrm.com website for more information about the release calendar.

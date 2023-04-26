@@ -9,6 +9,54 @@ weight: 9860
 :icons: font
 :imagesdir: /images/en/admin/release
 
+== 7.13.3
+
+_Released 24/04/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9965[9965] - Fix #9965 - Upgrade league/oauth2-server to latest version
+* PR: https://github.com/salesagility/SuiteCRM/pull/9974[9974] - Fix #9974 - Email OAuth Saving with no type
+* PR: https://github.com/salesagility/SuiteCRM/pull/9542[9542] - Fix #9542 - PHP8 null values
+* PR: https://github.com/salesagility/SuiteCRM/pull/9812[9812] - Fix #9812 - Decimal number calculations
+* PR: https://github.com/salesagility/SuiteCRM/pull/9817[9817] - Fix #9817 - A typo in Campaign Trackers
+* PR: https://github.com/salesagility/SuiteCRM/pull/9828[9828] - Fix #9828 - $mod_strings was not initiated
+* PR: https://github.com/salesagility/SuiteCRM/pull/9849[9849] - Fix #9849 - allowed_preview is defined twice
+* PR: https://github.com/salesagility/SuiteCRM/pull/9642[9642] - Fix https://github.com/salesagility/SuiteCRM/issues/9602[#9602] - ProspectLists save function has a duplication issue
+* PR: https://github.com/salesagility/SuiteCRM/pull/9559[9559] - Fix https://github.com/salesagility/SuiteCRM/issues/7759[#7759], https://github.com/salesagility/SuiteCRM/issues/8273[#8273] - Double Compose button in subpanels
+* PR: https://github.com/salesagility/SuiteCRM/pull/10010[10010] - Fix https://github.com/salesagility/SuiteCRM/issues/10009[#10009] - Cannot configure Module Menu Filters on PHP8+
+* PR: https://github.com/salesagility/SuiteCRM/pull/9325[9325] - Fix https://github.com/salesagility/SuiteCRM/issues/9153[#9153] - Adding dynamicenum case option for export
+* PR: https://github.com/salesagility/SuiteCRM/pull/9329[9329] - Fix https://github.com/salesagility/SuiteCRM/issues/8897[#8897] - Adding missing relationship for SurveyResponses module
+* PR: https://github.com/salesagility/SuiteCRM/pull/9471[9471] - Fix https://github.com/salesagility/SuiteCRM/issues/9470[#9470] - Set fdow in Calendar popup date selector for range search and MassUpdate
+* PR: https://github.com/salesagility/SuiteCRM/pull/9520[9520] - Fix https://github.com/salesagility/SuiteCRM/issues/9326[#9326] - Adding decimal and float case option for export
+* PR: https://github.com/salesagility/SuiteCRM/pull/9528[9528] - Fix https://github.com/salesagility/SuiteCRM/issues/9476[#9476] - Mass assign security groups only assigns selected on current page
+* PR: https://github.com/salesagility/SuiteCRM/pull/9622[9622] - Fix https://github.com/salesagility/SuiteCRM/issues/9621[#9621] - Workflows Calculate Field Actions don't translate dynamicenum fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/9765[9765] - Fix https://github.com/salesagility/SuiteCRM/issues/9764[#9764] - Add extra To addresses to CC field
+* PR: https://github.com/salesagility/SuiteCRM/pull/9777[9777] - Fix https://github.com/salesagility/SuiteCRM/issues/9768[#9768] - Do not convert link URLs in TinyMCE
+* PR: https://github.com/salesagility/SuiteCRM/pull/9784[9784] - Fix https://github.com/salesagility/SuiteCRM/issues/9783[#9783] - Compose view quick search for email templates
+* PR: https://github.com/salesagility/SuiteCRM/pull/9787[9787] - Fix https://github.com/salesagility/SuiteCRM/issues/9780[#9780] - New User Group Popup. Popup does not show after creating a user
+* PR: https://github.com/salesagility/SuiteCRM/pull/9876[9876] - Fix https://github.com/salesagility/SuiteCRM/issues/9875[#9875] - SugarFeed shows 0 seconds ago and negative interval for certain datetime formats
+* PR: https://github.com/salesagility/SuiteCRM/pull/9903[9903] - Fix https://github.com/salesagility/SuiteCRM/issues/9902[#9902] - Workflow - Some Date calculations fail with certain formats
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors pgorod gunnicom ebogaard SinergiaCRM AlbertoSTIC JanSiero urdhvatech QuickCRM tiefwasserreede abuzarfaris PlamenVasilev %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.13.2
 
 _Released 02/03/2023_
