@@ -1,0 +1,140 @@
+---
+title: Administration Panel
+weight: 10
+---
+
+:imagesdir: /images/en/8.x/admin/administration-panel
+
+=== Administration Panel
+
+The Admin Panel lists all the various configuration options and settings that a client may with to update to personalise
+their own CRM system.
+
+When selecting an option to visit, it will highlight in purple and show you a small description of what each setting is for
+
+image:Admin-Panel-Highlighted.png[Admin-Panel-Highlighted.png]
+
+Below you will find links to pages that describe each aspect of the following settings:
+
+image:Admin-Panel-Top.png[Admin-Panel-Top.png]
+
+image:Admin-Panel-Bottom.png[Admin-Panel-Bottom.png]
+
+==== Users & Authentication
+
+* link:../../../../admin/administration-panel/users[Users]
+** User Management
+** Role Management
+** Password Management
+* link:../../../../admin/administration-panel/roles-and-security-groups/[Roles & Security Groups]
+** Role Management
+** Security Suite Group Management
+** Security Suite Settings
+* link:../../../../developer/api/developer-setup-guide/managing-tokens/[OAuth2 Clients and Tokens]
+** OAuth Tokens and Clients
+
+==== System
+
+* link:../../../../admin/administration-panel/system/[System]
+** System Settings
+** Locale
+** Currencies
+** Languages
+** Themes
+** Scheduler
+
+* link:../../../../admin/administration-panel/search/elasticsearch/[Elasticsearch]
+** Elasticsearch
+
+* PDF Settings
+* Search Settings
+
+==== Module Settings
+
+* link:../../../../admin/administration-panel/system/#_activity_streams[Activity Stream]
+** Activity Stream Settings
+
+* link:../../../../admin/administration-panel/advanced-openadmin/#_business_hours[Business Hours]
+** Business Hours
+
+* link:../../../../admin/administration-panel/advanced-openadmin/#_aop_settings[Cases]
+** Case Module Settings
+
+* link:../../../../admin/administration-panel/developer-tools/#_configure_module_menu_filters[Module Menu Filters]
+** Configure Module Menu Filters
+
+* Connectors
+
+* link:../../../../admin/administration-panel/developer-tools/#_display_modules_and_subpanels[Display Modules and Subpanels]
+** Display Modules and Subpanels
+
+* link:../../../../admin/administration-panel/developer-tools/#_history_subpanel[Hisotry Subpanel]
+** History Subpanel
+
+* link:../../../../admin/administration-panel/advanced-openadmin/#_aos_settings[Sales Module Settings]
+** Sales Module Settings
+
+* link:../../../../admin/administration-panel/release[Releases]
+** Releases
+
+==== Emails
+
+* link:../../../../admin/administration-panel/emails/email[Emails]
+** Email Settings
+** Inbound Email
+** Outbound Email
+** Campaign Email Settings
+** Email Queue
+
+* link:../../../../admin/administration-panel/emails/inboundemail-oauth-howto/[How to configure Inbound Email with OAuth]
+** External OAuth Connections
+
+* link:../../../../admin/administration-panel/emails/oauth-provider-overview/[External OAuth Provider Overview]
+** External OAuth Providers
+
+==== Admin Tools
+
+* link:../../../admin/administration-panel/system[System]
+** Repair
+** Backups
+** Diagnostic Tool
+
+* link:../../../user/introduction/user-interface/record-management/#_importing_records[Importing Records]
+** Import Wizard
+
+* link:../../../admin/administration-panel/developer-tools/#_module_loader[Module Loader]
+** Module Loader
+
+==== Developer Tools
+
+* link:../../../admin/administration-panel/studio[Studio]
+** Studio
+
+* link:../../../admin/administration-panel/developer-tools/#_rename_modules[Developer Tools]
+** Rename Modules
+** Module Builder
+** Dropdown Editor
+
+* link:../../../user/advanced-modules/workflow[Workflows]
+** Workflow Manager
+
+==== Google Suite
+
+* link:../../../admin/administration-panel/google-sync/#_overview[Google Credentials and Syncing]
+** Google Calendar Settings
+
+* link:../../../admin/administration-panel/google-maps/#_google_map_setup[Google Maps]
+** Google Maps Settings
+** Geocoding Test
+** Geocode Addresses
+** Address Cache
+
+== Admin Multi-Menu
+
+You can now visit any menu in the admin page via the Admin Multi-menu.
+
+image:Admin-Panel-Extended.png[Admin-Panel-Extended.png]
+
+image:Admin-Panel-Scheduler.png[Admin-Panel-Extended.png]
+
+image:Scheduler-View.png[Scheduler-View.png]
