@@ -8,7 +8,7 @@ weight: 80
 == What is Load More?
 
 If switched on, Load More will allow a user to load records into the list table that is displayed for Listview, Subpanel
-and Record Modal, without the need for the pagination options. This means the user can scroll through the list of
+and Pop up Record List, without the need for the pagination options. This means the user can scroll through the list of
 records, without paging back and forth.
 
 image:Load-More-Full.png[Load-More-Full.png]
@@ -24,7 +24,7 @@ default number of records, click link:#_configure_the_amount_of_records_loaded[h
 === Where can you set load more?
 
 On the System Settings page in Admin panel and the Layout Options tab on the User Profile page, a new dropdown list has
-been added for Listview, Subpanel and Record modal, to define whether Pagination or Load more is to be used.
+been added for Listview, Subpanel and Pop up Record List, to define whether Pagination or Load more is to be used.
 
 You can see how the dropdown looks on both the System Settings and User Profile below:
 
@@ -41,7 +41,7 @@ The number of records that will be loaded, when clicking 'Load More' is defined 
 Settings page.
 
 * Listview Items Per Page - Listview
-* Records Per Modal Page - Record Modal Pop-up
+* Pop up Record List - Record List Pop-up
 * Subpanel Items Per Page - Subpanels
 
 image:Per-Page-Settings.png[Per-Page-Settings.png]
@@ -71,7 +71,7 @@ You are able to configure the maximum height of the tables.
         ),
 ```
 
-* Listview & Record Modal - add `maxHeight` to the `public/legacy/custom/modules/<Module>/listviewdefs.php` of the module
+* Listview & Pop up Record List - add `maxHeight` to the `public/legacy/custom/modules/<Module>/listviewdefs.php` of the module
 you would like to update.
 ** In the example below `Accounts` Listview `maxHeight` has been updated.
 
@@ -99,7 +99,7 @@ you would like to update.
 
 The default for each table is:
 
-* Subpanel & Record Modal - 10 Records.
+* Subpanel & Pop up Record List - 10 Records.
 * Listview - No Set Default.
 
 === Config Settings
