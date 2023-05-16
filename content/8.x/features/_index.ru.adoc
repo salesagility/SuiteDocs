@@ -1,0 +1,10 @@
+﻿---
+title: "Элементы интерфейса"
+weight: 10  
+---   
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+== Оглавление
+{{% children depth="2" showhidden="false" %}}
