@@ -1,0 +1,196 @@
+---
+title: "Фильтрация записей в субпанелях"
+weight: 80
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 1
+
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
+:experimental:
+
+:imagesdir: /images/ru/8.x/features/subpanels
+
+ifdef::env-github[:imagesdir: ./../../../../../master/static/images/ru/8.x/features/subpanels]
+
+:btn: btn:
+
+ifdef::env-github[:btn:]
+
+== Включение фильтрации в субпанели
+
+По умолчанию фильтровать записи можно в субпанели link:../../../user/introduction/user-interface/views/#_мероприятия[ИСТОРИЯ^], что может быть удобно для быстрого нахождения необходимой информации в случае большого количества записей.
+
+При необходимости можно настроить фильтрацию и для других субпанелей.
+
+Для этого в файл `subpaneldefs.php` соответствующего модуля добавляется строка:
+
+[source,php]
+-----
+['widget_class' => 'SubPanelTopFilterButton'],
+-----
+
+В следующем примере фильтрация добавляется в субпанель *Контакты* модуля *Контрагенты*.
+
+Для этого добавьте указанную выше строку в файл `public/legacy/Accounts/metadata/subpaneldefs.php` 
+
+[source,php]
+-----
+        'contacts' => array(
+            'order' => 30,
+            'module' => 'Contacts',
+            'sort_order' => 'asc',
+            'sort_by' => 'last_name, first_name',
+            'subpanel_name' => 'ForAccounts',
+            'get_subpanel_data' => 'contacts',
+            'add_subpanel_data' => 'contact_id',
+            'title_key' => 'LBL_CONTACTS_SUBPANEL_TITLE',
+            'top_buttons' => array(
+                array('widget_class' => 'SubPanelTopCreateAccountNameButton'),
+                ['widget_class' => 'SubPanelTopFilterButton'], // добавление кнопки фильтра
+                array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
+            ),
+        ),
+-----
+
+В панели администратора выполните link:../../../admin/administration-panel/system/#_восстановление[быстрое восстановление^].
+
+После чего в субпанели появится кнопка {btn}[Фильтр]:
+
+image:image1.png[Добавление фильтра в субпанель]
+
+По умолчанию для фильтрации используются поля link:../../../user/introduction/user-interface/search/#_расширенный_фильтр[Расширенного фильтра^].
+
+image:image2.png[Стандартные поля расширенного фильтра]
+
+Для фильтрации заполните необходимы поля и нажмите на кнопку {btn}[Найти]. +
+Для сброса фильтра нажмите на кнопку {btn}[Очистить].
+
+{{% notice note %}}
+Значения установленного фильтра не сохраняются: после обновление страницы фильтр очистится и субпанель отобразит полный перечень записей.
+{{% /notice %}}
+
+
+== Настройка полей для фильтрации
+
+Некоторые субпанели не могут быть настроены через интерфейс системы и не имеют настроенных полей для фильтрации (например - Мероприятия, Журнал маркетинговой кампании и т. д.), поэтому при попытке фильтрации вы можете получить ошибку, либо не увидите полей фильтрации при включении фильтра.
+
+{{% notice tip %}}
+Если субпанель можно настроить через интерфейс системы, то для настройки фильтров воспользуйтесь link:../../../admin/administration-panel/developer-tools/#_редактирование_форм_фильтров_модуля_и_формы_фильтра_дашлета[Студией^].
+{{% /notice %}}
+
+Настройку полей для фильтрации через редактирование кода можно сделать следующими способами (после настройки не забудьте выполнить быстрое восстановление):
+
+=== Добавление файла searchdefs.php
+
+Настаиваемые в файле `searchdefs.php` поля для фильтрации будут отображаться по умолчанию во всех аналогичных субпанелях модулей, если иные настройки не прописаны в файле <<Изменение файла subpaneldefs.php,subpaneldefs.php>> конкретного модуля. Например, субпанель *Контрагенты*  во всех модулях будет содержать поля для фильтрации, указанные в массиве `advanced_search`. В данном примере для модуля *Контрагенты* используется файл `public/legacy/modules/Accounts/metadata/searchdefs.php`:
+
+[source,php]
+-----
+$searchdefs ['Accounts'] =
+    array(
+        'templateMeta' =>
+            array(
+                'maxColumns' => '3',
+                'maxColumnsBasic' => '4',
+                'widths' =>
+                    array(
+                        'label' => '10',
+                        'field' => '30',
+                    ),
+            ),
+        'layout' =>
+            array(
+                'basic_search' =>
+                    array(
+                        'name' =>
+                            array(
+                                'name' => 'name',
+                                'default' => true,
+                                'width' => '10%',
+                            ),
+                        'current_user_only' =>
+                            array(
+                                'name' => 'current_user_only',
+                                'label' => 'LBL_CURRENT_USER_FILTER',
+                                'type' => 'bool',
+                                'default' => true,
+                                'width' => '10%',
+                            ),
+                        'favorites_only' => array(
+                            'name' => 'favorites_only',
+                            'label' => 'LBL_FAVORITES_FILTER',
+                            'type' => 'bool',
+                        ),
+                    ),
+                'advanced_search' => // поля расширенного фильтра
+                    array(
+                        'name' =>
+                            array(
+                                'name' => 'name',
+                                'default' => true,
+                                'width' => '10%',
+                            ),
+                        'website' =>
+                            array(
+                                'name' => 'website',
+                                'default' => true,
+                                'width' => '10%',
+                            ),...
+
+-----
+
+=== Изменение файла subpaneldefs.php
+
+В этом случае поля фильтрации настраиваются для конкретной субпанели выбранного модуля. Например,  для настройки фильтрации в субпанели *Мероприятия* модуля *Контрагенты* измените файл `public/legacy/modules/Accounts/metadata/subpaneldefs.php`
+
+[source,php]
+-----
+$layout_defs['Accounts'] = array(
+    // list of what Subpanels to show in the DetailView
+    'subpanel_setup' => array(
+
+        'activities' => array(
+            'order' => 10,
+            'sort_order' => 'desc',
+            'sort_by' => 'date_due',
+            'title_key' => 'LBL_ACTIVITIES_SUBPANEL_TITLE',
+            'type' => 'collection',
+            'subpanel_name' => 'activities',   
+            'header_definition_from_subpanel' => 'meetings',
+            'module' => 'Activities',
+
+            'top_buttons' => array(
+                array('widget_class' => 'SubPanelTopCreateTaskButton'),
+                array('widget_class' => 'SubPanelTopScheduleMeetingButton'),
+                array('widget_class' => 'SubPanelTopScheduleCallButton'),
+                array('widget_class' => 'SubPanelTopFilterButton'), // добавление кнопки фильтра
+                array('widget_class' => 'SubPanelTopComposeEmailButton'),
+            ),
+               
+               'searchdefs' => array(
+                'collection' => // фильтр по типу мероприятия
+                    array(
+                        'name' => 'collection',
+                        'label' => 'LBL_COLLECTION_TYPE',
+                        'type' => 'enum',
+                        'options' => 'collection_temp_list',
+                        'default' => true,
+                        'width' => '10%',
+                    ),...
+
+-----
+
+После чего в субпанели будет доступна фильтрация по типу мероприятия:
+
+image:image3.png[Фильтрация по типу мероприятия]
+
