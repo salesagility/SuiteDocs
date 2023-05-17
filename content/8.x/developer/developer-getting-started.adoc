@@ -1,0 +1,41 @@
+---
+title: "Getting started"
+weight: 1
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/fe-extensions-setup
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../developer/introduction[here].
+{{% /notice %}}
+
+== 1. Intro
+
+Before starting to develop your extensions you first need to setup a development environment. Since version 8.3.0 there are two ways to do this setup.
+
+We recommend using the dev package that is available since version 8.3.0.
+
+Alternatively you can setup an environment directly from the source code, without using any package.
+
+=== 1.1 (recommended) Setting up using the development package
+
+. Download the dev package from github, e.g.: `SuiteCRM-8.3.0-dev.zip`, see the dev package in the link:https://github.com/salesagility/SuiteCRM-Core/releases/latest[Latest GitHub Release]
+. Install SuiteCRM using the link:../../admin/installation-guide/downloading-installing/[Downloading & Installing] guide from the admin section
+. Setup the frontend extension using the link:../extensions/frontend/fe-extensions-getting-started[Getting started with frontend extension development]
+
+
+=== 1.2 (alternative) Setting up using the source code
+
+Install from source using the link:../installation-guide/backend-end-installation-guide[Backend-end Developer Install Guide]
+
+== 2. Understand how extensions work
+
+The link:../extensions/extension-structure[Extension Structure] provide information about the extension structure and guidelines on how to build them.
+
+== 3. Understand how the application is structured
+
+The pages in the link:../architecture/[Architecture] section provide information on how the application is structured and how it works.
+
+== 4. Examples
+
+If you would like more documentation on building specific extensions. Please see the guides in link:../extensions/frontend/examples/[Front-end extension examples]

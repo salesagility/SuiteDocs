@@ -29,11 +29,11 @@ This guide assumes that you have already setup the front extension on your local
 {{% /notice %}}
 
 
-For information on how to setup the frontend extension framework see the Setup guide link:../fe-extensions-setup/[here]
+For information on how to setup the frontend extension framework see the Setup guide link:../../fe-extensions-getting-started[here]
 
 == General concepts
 
-As described on the link:../fe-extensions-setup/[Front end extension general concepts]. Front end extensions are built using registries.
+Front end extensions are built using registries.
 There is a registry for each of the key areas in the application. By registering new components or services you can override existing ones.
 
 == 1. Hello World example

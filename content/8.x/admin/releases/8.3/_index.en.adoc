@@ -49,6 +49,11 @@ The only difference between the base package and the dev package, is that the de
 
 Including the `dist` folder should remove the need to rebuild the core frontend code.
 
+Please check the following pages for more information:
+
+* link:../../../developer/front-end-architecture/fe-extensions-getting-started[Getting started with frontend extension development]
+* link:../../../developer/front-end-architecture/default-extension-structure[Default Extension Structure]
+
 ==== icon:star[] Documentation
 
 ===== Upgrading
