@@ -1,124 +1,16 @@
 ---
 title: "Developer Install Guide"
-weight: 10
+weight: 30
 ---
 
 {{% notice info %}}
 The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../developer/introduction[here].
 {{% /notice %}}
 
-== Quick Start Guide
-For System Requirements see the compatibility matrix link:../../admin/compatibility-matrix[here]
+== Before you start
 
-=== Pre-Installation
+Please consider going through the link:../developer-getting-started[Developer Getting started] guide. It may simplify part of the process described on the guides listed next.
 
-. Setup php, mysql and apache
-
-{{% notice note %}}
-Please make sure that your `apache` has `mod_rewrite` enabled and that it is properly configured to allow for re-writes.
-All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrites are not allowed you will get a `404` when calling the api.
-{{% /notice %}}
-
-. Install composer
-. Install node and npm
-. Install angular cli
-. Install yarn: (https://yarnpkg.com/getting-started/install)
-
-=== Installation
-
-. Run `composer install` in the root directory
-. Run `yarn install` in the root directory
-. Run legacy theme compile in the root directory
-    - *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
-+
-[source,bash]
-----
-./vendor/bin/pscss -s compressed ./public/legacy/themes/suite8/css/Dawn/style.scss > ./public/legacy/themes/suite8/css/Dawn/style.css
-----
-
-    - *NOTE:* Pre beta 2 steps
-    ** On SuiteCRM 8 Beta 2 version the legacy composer.json file has been aligned and unified into the Suite 8 composer.json file.
-    ** Hence, from Beta 2 onwards there is only one composer file under `{Suite 8 Root}/composer.json`.
-    ** For SuiteCRM 8 versions prior to Beta 2 you need to:
-    *** Run `composer install` in legacy directory (`/public/legacy`)
-    *** Run legacy theme compile in the legacy directory (`/public/legacy`)
-    **** *NOTE:* the `./vendor/bin/pscss` is added as a composer dev dependency, so you need to run `composer install` *without* `--no-dev`
-    ****`./vendor/bin/pscss -s compressed themes/suite8/css/Dawn/style.scss > themes/suite8/css/Dawn/style.css`
-
-. Set permissions (though these may need to be different depending on your setup)
-+
-[source,bash]
-----
-find . -type d -not -perm 2775 -exec chmod 2775 {} \;
-
-find . -type f -not -perm 0644 -exec chmod 0644 {} \;
-
-find . \! -user www-data -exec chown www-data:www-data {} \;
-
-chmod +x bin/console
-----
-
-. Run `yarn run build:common` or `yarn run build-dev:common` (for dev environment)
-. Run `yarn run build:core` or `yarn run build-dev:core` (for dev environment)
-. Run `yarn run build:shell` or `yarn run build-dev:shell` (for dev environment)
-
-. Run `composer dumpautoload`
-
-. Go back to suite8 root folder
-. Run `./bin/console suitecrm:app:install` (or pass on the options, e.g. -u <admin_username>)
-    - **Note:** before running the command make sure to create the database (the command will create the needed tables)
-
-. Re-set permissions on Suite 8 root folder
-
-+
-[source,bash]
-----
-find . -type d -not -perm 2775 -exec chmod 2775 {} \;
-
-find . -type f -not -perm 0644 -exec chmod 0644 {} \;
-
-find . \! -user www-data -exec chown www-data:www-data {} \;
-
-chmod +x bin/console
-----
-
-. Set your web server `DocumentRoot` to `/{root}/{suitecrm-8}/public.` This is normally found in `/etc/apache2/sites-available/applications.conf`
-
-
-== Developer working guide
-
-=== Backend
-From the suite 8 root folder
-
-. Run `composer install`
-+
-
-Depending on the changes you are working on you may also need to run the following
-
-. Run `composer dumpautoload`
-. Run `./bin/console cache:clear`
-
-=== Frontend
-
-From the suite 8 root folder
-
-* Run `yarn run build-dev:common`
-* Run `yarn run build-dev:core`
-* Run `yarn run build-dev:shell`
-
-{{% notice note %}}
-When building common, core and shell you need to build all in prod mode or all in non-prod mode.
-{{% /notice %}}
-
-==== Run frontend unit tests
-
-* Run `yarn run test:core`
-
-==== Run backend unit tests
-
-The backend unit tests use codeception. You can install codeception
-
-To run the tests do;
-
-* Run `codecept run unit`
+== Table of Contents
+{{% children depth="3" showhidden="false" %}}
 

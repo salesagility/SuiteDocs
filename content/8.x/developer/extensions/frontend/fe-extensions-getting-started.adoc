@@ -1,0 +1,184 @@
+---
+title: "Getting started with frontend extension development"
+weight: 10
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/fe-extensions-setup
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../../../developer/introduction[here].
+{{% /notice %}}
+
+{{% notice note %}}
+The following documentation assumes that you have good understanding of angular framework
+{{% /notice %}}
+
+
+== 1. Intro
+
+The following guide provides an explanation on how to get started with frontend extensions using the `default` extension that comes with SuiteCRM since version 8.3.0.
+
+This base extension should have everything you need to get started and also provides a base structure for your frontend customizations.
+
+If you do not want to use a default extension you can create one from scratch by copying and renaming the default extension. To find out what you need to replace please look into the link:../fe-extensions-setup/[Frontend Extension Setup] guide, which explains how to setup a frontend extension from scratch
+
+{{% notice note %}}
+The following steps assume that you have a SuiteCRM-8.3.0 or greater installed and have an intact default extension under `extensions/default`
+{{% /notice %}}
+
+
+=== 1.1 Development package
+
+{{% notice note %}}
+The following steps assume that you have used the dev package, e.g. SuiteCRM-8.3.0-dev.zip, to install your crm. This dev package can be found on the github release, please check the release notes.
+{{% /notice %}}
+
+This package is meant to help in the development of frontend extensions.
+
+The only difference between the base package and the dev package, is that the dev package includes the `dist` folder.
+
+Including the `dist` folder should remove the need to rebuild the core frontend code.
+
+Please have a look at the  link:../../../installation-guide/front-end-installation-guide[Developer Install Guide] you want to rebuild the full core frontend.
+
+== 2. Setup
+
+=== 2.1 System requirements
+
+{{% notice note %}}
+Please make sure you have the same versions as the ones described on this section
+{{% /notice %}}
+
+Before you can start building extensions you first need to install the following software:
+
+* npm
+* yarn
+* ng cli
+
+Go to the link:../../../../admin/compatibility-matrix/[Compatibility Matrix] page and check the specific versions under the `Additional requirements for Development` section for the SuiteCRM version you are using.
+
+After installing everything, open a terminal on the SuiteCRM folder and run:
+
+[source,bash]
+----
+ng --version
+----
+
+You should have an output similar to the following (except for the versions, that may change depending on the SuiteCRM version you are using):
+
+image:ng-cli-version-output.png[ng-cli-version-output.png]
+
+
+=== 2.2. Install dependencies
+
+{{% notice note %}}
+You only need to do this step once. After the dependencies are installed you should only need to run it again after upgrading to a new SuiteCRM version
+{{% /notice %}}
+
+Now that the base system requirements are setup, you need to install the needed dependencies (node modules).
+
+Go to your SuiteCRM folder on the terminal and run:
+
+[source,bash]
+----
+yarn install
+----
+
+=== 2.3. Build the default extension
+
+Let's try a first build of our extension to make sure everything is working.
+
+Go to your SuiteCRM folder on the terminal and run:
+
+[source,bash]
+----
+yarn run build-dev:default
+----
+
+After the command ends some files should have been generated to `public/extensions/default`.
+
+=== 2.4. Enable your extension
+
+On the base package the default extension is disabled by default. You need to enable it for it to be known to the frontend as an extension that is available to load.
+
+To enable the default extension open the following file on any code editor:
+
+[source]
+----
+extensions/default/config/extension.php
+----
+
+Then change `enabled` to true `'enabled' => true,`. The file should look something like the following:
+
+[source,php]
+----
+<?php
+
+use Symfony\Component\DependencyInjection\Container;
+
+if (!isset($container)) {
+    return;
+}
+
+/** @var Container $container */
+$extensions = $container->getParameter('extensions') ?? [];
+
+$extensions['default'] = [
+    'remoteEntry' => './extensions/default/remoteEntry.js',
+    'remoteName' => 'default',
+    'enabled' => true,
+    'extension_name' => 'Default',
+    'extension_uri' =>  'https://suitecrm.com',
+    'description' => 'An example Extension template or for simple instance customisations',
+    'version' =>  '1.0.0',
+    'author' =>  'SalesAgility',
+    'author_uri' =>  'https://www.salesagility.com',
+    'license' =>  'GPL3'
+];
+
+$container->setParameter('extensions', $extensions);
+----
+
+=== 2.5. Extension ready for development
+
+With the above steps you are now ready to start developing frontend extensions
+
+
+== 3. Development and production builds
+
+
+=== 3.1 Development build
+
+To run a dev build you can run:
+
+[source,bash]
+----
+yarn run build-dev:default
+----
+
+This command will build the default extension in a non-production mode.
+
+Plus it will generate the files directly to the `public/extensions/default` folder. Which allows you to also use the `--watch` option.
+
+Thus when developing it is best to run:
+
+[source,json]
+----
+yarn run build-dev:default --watch
+----
+
+The command will stay on "watch" for changes to the files in the extension. It will automatically re-rebuild after code changes.
+
+See link:../../extension-structure#_4_2_1_development_build[Default package dev build setup] for more info on how it works.
+
+=== 3.2 Production build
+
+To run a production build you can run:
+[source,json]
+----
+yarn run build:default
+----
+
+This command will build the default extension in a production mode.
+
+See link:../../extension-structure#_4_2_2_production_build[Default package production build setup] for more info on how it works.
