@@ -1,0 +1,124 @@
+---
+title: Панель администратора
+weight: 10
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+//
+//:sectnums:
+//:sectnumlevels: 2
+//
+
+:experimental:
+
+:imagesdir: /images/ru/8.x/admin/administration-panel
+
+ifdef::env-github[:imagesdir: ./../../../../static/images/ru/8.x/admin/administration-panel]
+
+:adm-users: link:../../../../admin/administration-panel/users/
+:adm-system: link:../../../../admin/administration-panel/system/
+:adm-search: link:../../../../admin/administration-panel/search/
+:adm-openadmin: link:../../../../admin/administration-panel/advanced-openadmin/
+:adm-dev-tools: link:../../../../admin/administration-panel/developer-tools/
+:adm-email: link:../../../../admin/administration-panel/emails/email/
+:usr-workflow: link:../../../../user/advanced-modules/workflow/
+:adm-google-cal: link:../../../../admin/administration-panel/google-sync/
+:adm-google-maps: link:../../../../admin/administration-panel/google-maps/
+
+// == Панель администратора
+
+В панели администратора перечислены различные параметры конфигурации и настройки, которые при необходимости можно изменить для персонализации установленного экземпляра SuiteCRM.
+
+При наведении мыши на элемент панели она будет подсвечена и в подсказке отобразится краткое описание выбранной настройки.
+
+image:image1.png[Панель администратора SuiteCRM]
+
+Ниже перечислены все элементы панели со ссылками на более детальное описание настроек:
+
+[discrete]
+=== Пользователи / Аутентификация
+
+* {adm-users}[Пользователи]
+** {adm-users}#_управление_пользователями[Управление пользователями]
+** {adm-users}#_роли_и_группы_пользователей[Управление ролями]
+** {adm-users}#_управление_паролями[Управление паролями]
+** {adm-users}#_группы[Создание Групп пользователей]
+** {adm-users}#_управление_группами_пользователей[Управление Группами пользователей]
+** link:../../../../../developer/api/developer-setup-guide/managing-tokens/[OAuth2-клиенты и токены]
+** {adm-system}#_ключи_oauth[Ключи OAuth]
+
+[discrete]
+=== Система
+
+* {adm-system}[Система]
+** {adm-system}#_настройка_конфигурации[Настройка конфигурации]
+** {adm-system}#_валюта[Валюта]
+** {adm-system}#_языковые_пакеты[Языковые пакеты]
+** {adm-system}#_региональные_настройки[Региональные настройки]
+** Настройки PDF
+** {adm-search}[Выбор поискового движка]
+** {adm-search}elasticsearch[Настройка Elasticsearch]
+
+** {adm-system}#_планировщик[Планировщик]
+** {adm-system}#_темы[Темы]
+
+[discrete]
+=== Настройка модулей
+
+** {adm-system}#_лента_событий[Лента событий]
+** {adm-openadmin}#_настройка_графика_работы[Настройка графика работы организации]
+** {adm-openadmin}#_настройка_портала[Настройка портала]
+** {adm-dev-tools}#_настройка_сгруппированных_модулей[Настройка сгруппированных модулей]
+** {adm-system}#_подключения[Подключения]
+** {adm-dev-tools}#_настройка_отображения_закладок_и_субпанелей[Настройка отображения закладок и субпанелей]
+** {adm-dev-tools}#_настройка_субпанели_история[Настройка субпанели "История"]
+** {adm-openadmin}#_настройка_модулей_продаж[Настройка модулей продаж]
+** {adm-system}../release[Версии]
+
+[discrete]
+=== E-mail
+
+* {adm-email}[Emails]
+** {adm-email}#_настройка_e_mail[Настройка основных параметров E-mail]
+** {adm-email}#_входящие_e_mail[Входящие E-mail]
+** {adm-email}#_исходящие_e_mail[Исходящие E-mail]
+** {adm-email}../inboundemail-oauth-howto/#_создание_подключения_oauth[Внешние подключения OAuth]
+** {adm-email}../oauth-provider-overview[Внешние провайдеры OAuth]
+** {adm-email}#_параметры_рассылки_e_mail[Параметры рассылки E-mail]
+** {adm-email}#_управление_очередью_e_mail[Управление очередью]
+
+[discrete]
+=== Инструменты администратора
+
+** {adm-system}#_восстановление[Восстановление]
+** {adm-system}#_резервные_копии[Резервные копии]
+** {adm-system}#_диагностика[Диагностика]
+** {adm-system}#_мастер_импорта[Мастер импорта]
+** {adm-dev-tools}#_загрузчик_модулей[Загрузчик модулей]
+
+[discrete]
+=== Инструменты разработчика
+
+** {adm-dev-tools}#_студия[Студия]
+** {adm-dev-tools}#_переименование_закладок_модулей[Переименование закладок модулей]
+** {adm-dev-tools}#_конструктор_модулей[Конструктор модулей]
+** {adm-dev-tools}#_редактор_комбобоксов[Редактор комбобоксов]
+** {usr-workflow}[Управление процессами]
+
+[discrete]
+=== Сервисы Google
+
+** {adm-google-cal}[Настройка Google календарь]
+** {adm-google-maps}[Настройка карт Google]
+** {adm-google-maps}#_результаты_геокодирования[Результаты геокодирования]
+** {adm-google-maps}[Тестирование геокодирования]
+** {adm-google-maps}#_геокодирование_адресов[Геокодирование адресов]
+** {adm-google-maps}#_кэш_адресов[Кеш адресов]
+
+== Выпадающее меню панели администратора
+
+Начиная с версии 8.3 возможен быстрый доступ к элементам панели администратора через выпадающее меню:
+
+image:image2.png[Выпадающее меню панели администратора]
