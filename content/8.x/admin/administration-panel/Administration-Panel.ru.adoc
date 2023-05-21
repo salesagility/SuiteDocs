@@ -60,7 +60,6 @@ image:image1.png[Панель администратора SuiteCRM]
 ** Настройки PDF
 ** {adm-search}[Выбор поискового движка]
 ** {adm-search}elasticsearch[Настройка Elasticsearch]
-
 ** {adm-system}#_планировщик[Планировщик]
 ** {adm-system}#_темы[Темы]
 
@@ -113,7 +112,7 @@ image:image1.png[Панель администратора SuiteCRM]
 ** {adm-google-cal}[Настройка Google календарь]
 ** {adm-google-maps}[Настройка карт Google]
 ** {adm-google-maps}#_результаты_геокодирования[Результаты геокодирования]
-** {adm-google-maps}[Тестирование геокодирования]
+** {adm-google-maps}#_тестирование_геокодирования[Тестирование геокодирования]
 ** {adm-google-maps}#_геокодирование_адресов[Геокодирование адресов]
 ** {adm-google-maps}#_кэш_адресов[Кеш адресов]
 
