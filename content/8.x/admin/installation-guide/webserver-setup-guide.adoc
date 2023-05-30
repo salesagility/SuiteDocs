@@ -1,0 +1,123 @@
+---
+title: "Webserver Setup Guide"
+weight: 21
+---
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../../developer/introduction[here].
+{{% /notice %}}
+
+== 1. Intro
+
+This guide contains the steps required to setup a webserver for installing SuiteCRM 8+
+
+{{% notice note %}}
+The following documentation will use as base setup a LAMP stack: Linux, Apache, MySql and php. However, most of the steps may apply to other webservers and databases
+{{% /notice %}}
+
+== 2. Install required software
+
+Install the platform-appropriate version of the following:
+
+* webserver: `apache`
+* `php`
+* database: `mysql` or `mariadb`
+
+See the link:../../compatibility-matrix/[Compatibility matrix] to ensure you have the correct versions of the required softwares.
+
+{{% notice note %}}
+There are other software dependencies on the link:../../compatibility-matrix/[Compatibility matrix] under the `Additional requirements for Development` section, however those are the ones required for a development environment.
+{{% /notice %}}
+
+When installing SuiteCRM from pre-build installable package zip you **do not** need to install the dependencies that are for development, namely: node, angular cli, yarn/npm.
+
+The SuiteCRM 8 pre-built installable package zip comes with the pre-built front end files under `public/dist` and all the required libs on vendors.
+
+=== Helpfull Resources
+
+On how to install a development LAMP stack on Ubuntu:
+
+* link:https://www.digitalocean.com/community/tutorials/how-to-install-php-7-4-and-set-up-a-local-development-environment-on-ubuntu-20-04[DigitalOcean - Tutorial on how to install LAMP development environment,window=_blank]
+
+
+== 3. Install required php modules
+
+Install on your server the required php modules:
+
+* cli
+* curl
+* common
+* intl
+* json
+* gd
+* mbstring
+* mysqli
+* pdo_mysql
+* openssl
+* soap
+* xml
+* zip
+* imap (optional)
+* ldap (optional)
+
+=== Helpfull Resources
+
+Please check the `Helpfull Resources` section from link:#_2_install_required_software[Install required software] for instructions on how to install php modules
+
+== 4. Configuring URL re-writes
+
+In order for api routes to work you need allow url re-writes.
+
+* All SuiteCRM-Core api calls depend on this (calls to `api/graphql`) if re-rewrites are not allowed you will get a `404` when calling the api.
+
+In `apache` webserver this can be achieved by enabling mod-rewrite and configuring the vhost.
+
+{{% notice note %}}
+It is highly recommended that you update the webroot or configure vhost to point to the `public` folder inside SuiteCRM folder. If the webroot is pointing to SuiteCRM folder instead of the public folder, all the files under SuiteCRM folder maybe be exposed to the web.
+{{% /notice %}}
+
+
+On your vhost configuration you need something like:
+
+[source,xml]
+----
+<VirtualHost *:80>
+    ...
+
+    DocumentRoot /<path-to-suite>/public
+    <Directory /<path-to-suite>/public>
+        AllowOverride All
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+
+</VirtualHost>
+----
+
+
+=== Helpfull resources:
+
+* link:https://symfony.com/doc/current/setup/web_server_configuration.html#apache-with-mod-php-php-cgi[Symfony documentation on how to setup webserver (apache and others),window=_blank]
+* link:https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite[DigitalOcean - Tutorial on how to setup mod_write (apache),window=_blank]
+** Note from the above you would only need:
+*** Section 1—How to Activate Mod_Rewrites
+*** How to permit changes in the .htaccess file:
+
+== 5. Configure php error_reporting
+
+Please make sure that notices aren't considered on `error_handling`. For that you can update the error handling entry in `php.ini`
+
+[source,ini]
+----
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+----
+
+
+=== Helpfull Resources
+
+Please check the `Helpfull Resources` section from link:#_2_install_required_software[Install required software] for instructions on where to find `php.ini`
+
+
+== 6. (optional) Performance
+
+For more information regarding performance optimization see the link:../performance/[Performance configuration guide]
