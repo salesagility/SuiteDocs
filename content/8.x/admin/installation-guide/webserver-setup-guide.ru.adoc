@@ -1,0 +1,100 @@
+---
+title: Настройка веб-сервера
+weight: 21
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 3
+
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
+{{% notice info %}}
+Это страница содержит описание для SuiteCRM 8.x. Описание для SuiteCRM 7.x. находится link:../../../../admin/installation-guide/downloading-installing[здесь].
+{{% /notice %}}
+
+
+== Подготовка к установке
+
+Установите версию PHP, веб-сервер и базу данных, руководствуясь информацией, указанной в link:../../compatibility-matrix[Таблице совместимости^].
+ 
+{{% notice note %}}
+Обратите внимание, что часть программного обеспечения, указанного в таблице совместимости,  необходима только для разработчиков, и при установке пакета, предлагаемого на официальной странице загрузки, *нет необходимости* в установке node, angular и yarn/npm. Загружаемый пакет уже содержит все необходимые файлы в папке *public/dist*.
+{{% /notice %}}
+
+[horizontal]
+*Полезные ссылки*:: link:https://www.digitalocean.com/community/tutorials/how-to-install-php-7-4-and-set-up-a-local-development-environment-on-ubuntu-20-04[DigitalOcean - Установка программного окружения^]
+
+== Установка необходимых модулей
+ 
+Установите на сервере следующие php-модули:
+
+ * cli
+ * curl
+ * common
+ * intl
+ * json
+ * gd
+ * mbstring
+ * mysqli
+ * pdo_mysql
+ * openssl
+ * soap
+ * xml
+ * zip
+ * imap (необязательно)
+ * ldap (необязательно)
+ 
+{{% notice note %}}
+Если вы используете веб-сервер *apache*, убедитесь, что модуль `mod_rewrite` включён и корректно настроен. Модуль используется при вызове SuiteCRM-Core API, и, если перенаправление отключено, вы получите ошибку `404`.
+{{% /notice %}}
+
+
+[cols="1s,3a"]
+|===
+|Полезные ссылки |link:https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite[DigitalOcean - настройка mod_rewrite^] (см. разделы *_How to Activate Mod_Rewrites_* и *_How to permit changes in the .htaccess file_*)
+|===
+
+Настройте корневую папку веб-сервера таким образом, чтобы она указывала на папку *public*, в этом случае другие файлы и папки не будут доступны из внешней сети.
+
+Если используется виртуальный хост, то настройка может выглядеть следующим образом: 
+
+[source,xml]
+----
+<VirtualHost *:80>
+    ...
+
+    DocumentRoot /<path-to-suite>/public
+    <Directory /<path-to-suite>/public>
+        AllowOverride All
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+
+</VirtualHost>
+----
+
+[cols="1s,3a"]
+|===
+|Полезные ссылки |link:https://symfony.com/doc/current/setup/web_server_configuration.html#apache-with-mod-php-php-cgi[Symfony  - настройка веб-сервера^]
+|===
+
+== Настройка директивы error_reporting
+
+Убедитесь, что при обработке ошибок не учитываются нефатальные уведомления. Для этого настройте директиву `error_reporting` в файле `php.ini`
+
+[source,ini]
+----
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+----
+
+[cols="1s,3a"]
+|===
+|Полезные ссылки |link:../performance/[Настройка производительности системы]
+|===
