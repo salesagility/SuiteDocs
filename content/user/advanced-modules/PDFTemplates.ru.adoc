@@ -13,7 +13,7 @@ Weight: 85
 
 :imagesdir: /images/ru/user/advanced-modules/PDFTemplates
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/advanced-modules/PDFTemplates]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/advanced-modules/PDFTemplates]
 
 :btn: btn:
 

@@ -13,7 +13,7 @@ Weight: 40
 
 :imagesdir: /images/ru/user/ManagingUserAccounts
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/ManagingUserAccounts]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/ManagingUserAccounts]
 
 :btn: btn:
 
