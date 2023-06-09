@@ -12,7 +12,7 @@ Weight: 140
 
 :imagesdir: /images/ru/user/core-modules/EmailTemplates
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/core-modules/EmailTemplates]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/core-modules/EmailTemplates]
 
 :btn: btn:
 

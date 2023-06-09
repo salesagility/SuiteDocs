@@ -13,7 +13,7 @@ Weight: 180
 
 :imagesdir: /images/ru/user/core-modules/Targets
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/core-modules/Targets]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/core-modules/Targets]
 
 :btn: btn:
 

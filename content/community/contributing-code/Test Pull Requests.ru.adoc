@@ -10,7 +10,7 @@ Weight: 40
 
 :imagesdir: /images/ru/community
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/community]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/community]
 
 
 Перейдите по 

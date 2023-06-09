@@ -15,9 +15,6 @@ weight: 22
 :sectnumlevels: 2
 //
 
-:imagesdir: /images/ru/8.x/admin/Installing
-
-ifdef::env-github[:imagesdir: ../../../../static/images/ru/8.x/admin/Installing]
 
 {{% notice info %}}
 Это страница содержит описание для SuiteCRM 8.x. Описание для SuiteCRM 7.x. находится link:../../../../admin/installation-guide/downloading-installing[здесь].
@@ -105,9 +102,6 @@ chmod +x bin/console
 Если виртуальный сервер указывает на каталог *legacy*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
 В противном случае необходимо указать путь до папки *public*.
 Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/legacy`.
-
-
-
 
 == Вход в систему
 
