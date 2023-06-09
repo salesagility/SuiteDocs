@@ -13,7 +13,7 @@ Weight: 110
 
 :imagesdir: /images/ru/user/core-modules/Calendar
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/core-modules/Calendar]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/core-modules/Calendar]
 
 :btn: btn:
 

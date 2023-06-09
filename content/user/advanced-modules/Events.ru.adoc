@@ -13,7 +13,7 @@ Weight: 260
 
 :imagesdir: /images/ru/user/advanced-modules/Events
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/advanced-modules/Events]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/advanced-modules/Events]
 
 :btn: btn:
 

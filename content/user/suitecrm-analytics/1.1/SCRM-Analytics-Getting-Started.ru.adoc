@@ -13,7 +13,7 @@ weight: 25
 
 :imagesdir: /images/en/user/Analytics-Gettingstarted
 
-ifdef::env-github[:imagesdir: ./../../../static/images/en/user/Analytics-Gettingstarted]
+ifdef::env-github[:imagesdir: ../../../static/images/en/user/Analytics-Gettingstarted]
 
 :btn: btn:
 
