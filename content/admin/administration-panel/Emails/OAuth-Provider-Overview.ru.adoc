@@ -13,7 +13,7 @@ weight: 40
 
 :imagesdir: /images/ru/admin/Email/OAuth-Provider
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Email/OAuth-Provider]
+ifdef::env-github[:imagesdir: ./../../../../../master/static/images/ru/admin/Email/OAuth-Provider]
 
 :btn: btn:
 
