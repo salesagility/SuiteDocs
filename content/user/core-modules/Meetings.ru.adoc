@@ -10,7 +10,7 @@ Weight: 130
 
 :imagesdir: /images/ru/user/core-modules/Meetings
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/core-modules/Meetings]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/core-modules/Meetings]
 
 :btn: btn:
 

@@ -11,15 +11,6 @@ Weight: 30
 :toc-title: Оглавление
 :toclevels: 1
 
-:experimental:
-
-:imagesdir: /images/ru/admin/Upgrading
-
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/admin/Upgrading]
-
-:btn: btn:
-
-ifdef::env-github[:btn:]
 
 = Обновление системы
 

@@ -10,7 +10,7 @@ weight: 20
 
 :imagesdir: /images/en/user
 
-ifdef::env-github[:imagesdir: ./../../../static/images/en/user]
+ifdef::env-github[:imagesdir: ../../../static/images/en/user]
 
 :btn: btn:
 

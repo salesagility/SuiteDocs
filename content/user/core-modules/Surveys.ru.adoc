@@ -14,7 +14,7 @@ Weight: 190
 
 :imagesdir: /images/ru/user/core-modules/Surveys
 
-ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/core-modules/Surveys]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/user/core-modules/Surveys]
 
 :btn: btn:
 
