@@ -14,7 +14,7 @@ Weight: 40
 
 :imagesdir: /images/ru/admin/UpgradeWizard
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/UpgradeWizard]
+ifdef::env-github[:imagesdir: ./../../../static/images/ru/admin/UpgradeWizard]
 
 :btn: btn:
 

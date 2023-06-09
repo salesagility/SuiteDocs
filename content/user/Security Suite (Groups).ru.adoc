@@ -8,7 +8,7 @@ Weight: 280
 
 :imagesdir: /images/ru/admin/Users
 
-ifdef::env-github[:imagesdir: ./../../../master/static/images/ru/admin/Users]
+ifdef::env-github[:imagesdir: ./../../static/images/ru/admin/Users]
 
 = Группы пользователей
 

@@ -11,7 +11,7 @@ Weight: 195
 
 :imagesdir: /images/ru/user/core-modules/Errors
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/core-modules/Errors]
+ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/core-modules/Errors]
 
 :btn: btn:
 

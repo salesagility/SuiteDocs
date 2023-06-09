@@ -13,7 +13,7 @@ Weight: 65
 
 :imagesdir: /images/ru/admin/GoogleAPI
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/GoogleAPI]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/admin/GoogleAPI]
 
 :btn: btn:
 

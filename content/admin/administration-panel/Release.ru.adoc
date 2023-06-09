@@ -11,7 +11,7 @@ Weight: 80
 
 :imagesdir: /images/ru/admin/ReleasesSettings
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/ReleasesSettings]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/admin/ReleasesSettings]
 
 :btn: btn:
 
