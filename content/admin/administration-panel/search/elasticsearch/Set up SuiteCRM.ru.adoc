@@ -10,7 +10,7 @@ Weight: 3
 
 :imagesdir: /images/ru/admin/ElasticSearch
 
-ifdef::env-github[:imagesdir: ./../../../../../../master/static/images/ru/admin/ElasticSearch]
+ifdef::env-github[:imagesdir: ../../../../../static/images/ru/admin/ElasticSearch]
 
 :btn: btn:
 

@@ -14,7 +14,7 @@ Weight: 250
 
 :imagesdir: /images/ru/user/advanced-modules/CasesWithPortal
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/CasesWithPortal]
+ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/advanced-modules/CasesWithPortal]
 
 
 = Интеграция Обращений с внешним порталом
