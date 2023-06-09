@@ -20,7 +20,7 @@ weight: 80
 
 :imagesdir: /images/ru/8.x/features/subpanels
 
-ifdef::env-github[:imagesdir: ./../../../../../master/static/images/ru/8.x/features/subpanels]
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/8.x/features/subpanels]
 
 :btn: btn:
 

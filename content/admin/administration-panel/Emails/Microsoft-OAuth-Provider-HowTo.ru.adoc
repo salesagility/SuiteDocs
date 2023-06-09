@@ -13,7 +13,7 @@ weight: 20
 
 :imagesdir: /images/ru/admin/Email/microsoft
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Email/microsoft]
+ifdef::env-github[:imagesdir: ./../../../../../master/static/images/ru/admin/Email/microsoft]
 
 :btn: btn:
 
@@ -21,7 +21,7 @@ ifdef::env-github[:btn:]
 
 :en-img: ../../../../../images/en/admin/email/microsoft/
 
-ifdef::env-github[:en-img: ./../../../../../images/en/admin/email/microsoft/]
+ifdef::env-github[:en-img: ./../../../../../../static/images/en/admin/email/microsoft/]
 
 //
 :sectnums:
