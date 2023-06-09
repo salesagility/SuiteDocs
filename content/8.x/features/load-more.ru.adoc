@@ -15,7 +15,7 @@ weight: 80
 
 :imagesdir: /images/ru/8.x/features/loadmore
 
-ifdef::env-github[:imagesdir: ./../../../../../master/static/images/ru/8.x/features/loadmore]
+ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/8.x/features/loadmore]
 
 :btn: btn:
 

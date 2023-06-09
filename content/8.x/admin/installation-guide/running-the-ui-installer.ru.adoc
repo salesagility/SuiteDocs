@@ -16,10 +16,6 @@ weight: 23
 //
 
 
-:imagesdir: /images/ru/8.x/admin/Installing
-
-ifdef::env-github[:imagesdir: ./../../../../static/images/ru/8.x/admin/Installing]
-
 {{% notice info %}}
 Это страница содержит описание для SuiteCRM 8.x. Описание для SuiteCRM 7.x. находится link:../../../../admin/installation-guide/downloading-installing[здесь].
 {{% /notice %}}
