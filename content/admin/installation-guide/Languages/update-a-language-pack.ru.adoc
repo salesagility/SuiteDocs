@@ -8,7 +8,7 @@ Weight: 60
 
 :imagesdir: /images/ru/admin/Installing/Languages
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Installing/Languages]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/admin/Installing/Languages]
 
 
  . Перед установкой обновлённого языкового пакета удалите ранее установленный пакет, как это описано в разделе 

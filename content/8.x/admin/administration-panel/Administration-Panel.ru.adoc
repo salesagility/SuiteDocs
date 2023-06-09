@@ -15,7 +15,7 @@ weight: 10
 
 :imagesdir: /images/ru/8.x/admin/administration-panel
 
-ifdef::env-github[:imagesdir: ./../../../../static/images/ru/8.x/admin/administration-panel]
+ifdef::env-github[:imagesdir: ../../../../static/images/ru/8.x/admin/administration-panel]
 
 :adm-users: link:../../../../admin/administration-panel/users/
 :adm-system: link:../../../../admin/administration-panel/system/
