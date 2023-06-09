@@ -16,15 +16,6 @@ Weight: 30
 :sectnumlevels: 3
 //
 
-:experimental:
-
-:imagesdir: /images/ru/admin/Upgrading
-
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Upgrading]
-
-:btn: btn:
-
-ifdef::env-github[:btn:]  
 
 {{% notice info %}}
 Это страница содержит описание для SuiteCRM 8.x. Описание для SuiteCRM 7.x. находится link:../../../../admin/installation-guide/upgrading[здесь].
