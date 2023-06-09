@@ -14,7 +14,7 @@ Weight: 265
 
 :imagesdir: /images/ru/user/advanced-modules/Reports
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/user/advanced-modules/Reports]
+ifdef::env-github[:imagesdir: ./../../../static/images/ru/user/advanced-modules/Reports]
 
 :btn: btn:
 

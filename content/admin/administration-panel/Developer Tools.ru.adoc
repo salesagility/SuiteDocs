@@ -14,7 +14,7 @@ Weight: 50
 
 :imagesdir: /images/ru/admin/DeveloperTools
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/DeveloperTools]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/admin/DeveloperTools]
 
 :btn: btn:
 

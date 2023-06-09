@@ -8,7 +8,7 @@ Weight: 50
 
 :imagesdir: /images/ru/admin/Installing/Languages
 
-ifdef::env-github[:imagesdir: ./../../../../master/static/images/ru/admin/Installing/Languages]
+ifdef::env-github[:imagesdir: ../../../static/images/ru/admin/Installing/Languages]
 
 В разделе описано изменение языка интерфейса SuiteCRM на примере установки русскоязычного пакета.
 

@@ -11,7 +11,7 @@ Weight: 52
 
 :imagesdir: /images/ru/admin/AdvancedConfigurationOptions
 
-ifdef::env-github[:imagesdir: ./../../../master/static/images/ru/admin/AdvancedConfigurationOptions]
+ifdef::env-github[:imagesdir: ../../static/images/ru/admin/AdvancedConfigurationOptions]
 
 = Настройка дополнительных параметров 
 
