@@ -145,6 +145,10 @@ Here we are using a Microsoft account as example. Though you should set the port
 
 image:suitecrm-inbound-email-port-field.png[suitecrm-inbound-email-port-field.png]
 
+The `Email Body Filtering Search Type` allows the user to choose to search using 1 word or a multiword search.
+
+image:suitecrm-inbound-email-filter-type.png[suitecrm-inbound-email-filter-type.png]
+
 Now set the values for the folders. Click the "Select" button next to each folder to open the popup that will show you the available values.
 
 {{% notice warning %}}
