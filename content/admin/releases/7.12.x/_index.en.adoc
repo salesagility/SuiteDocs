@@ -8,6 +8,41 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+== 7.12.12
+
+_Released 11/07/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10051[10051] - Add better description of what is being removed during module installation for ACLs
+* PR: https://github.com/salesagility/SuiteCRM/pull/10050[10050] - Add missing language definitions for the module loader
+* PR: https://github.com/salesagility/SuiteCRM/pull/9816[#9816] - Item element getting called incorrectly
+* PR: https://github.com/salesagility/SuiteCRM/pull/10024[10024] - Fix https://github.com/salesagility/SuiteCRM/issues/9601[#9601] - Fix bug where report conditions parenthesis pairs would not save correctly
+* PR: https://github.com/salesagility/SuiteCRM/pull/10044[10044] - Fix https://github.com/salesagility/SuiteCRM/issues/10029[10029] - Issues changing dashlets name
+* PR: https://github.com/salesagility/SuiteCRM/pull/10057[10057] - Fix https://github.com/salesagility/SuiteCRM/issues/10056[#10056] - User bean value is_admin is unset on save()
+* PR: https://github.com/salesagility/SuiteCRM/pull/9983[9983] - Fix https://github.com/salesagility/SuiteCRM/issues/9516[#9516] - getRelatedId returns null instead of a string
+* PR: https://github.com/salesagility/SuiteCRM/pull/9657[9657] - Fix https://github.com/salesagility/SuiteCRM/issues/9654[9654] - different date formats being compared for change log
+* PR: https://github.com/salesagility/SuiteCRM/pull/10036[10036] - Fix https://github.com/salesagility/SuiteCRM/issues/10033[#10033] - PHP Fatal error Uncaught TypeError PHP8
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors gunnicom isleshocky77 QuickCRM dtosun61 chris001 %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.12.11
 
 _Released 24/04/2023_
