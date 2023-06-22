@@ -52,7 +52,6 @@ You are able to configure the maximum height of the tables.
 * Subpanel - add `maxHeight` to the subpanel definition within the metadatafiles.
 ** In the example below the `maxHeight` has been changed within the `public/legacy/custom/modules/Accounts/metadata/subpaneldefs.php`
 
-[source, php]
 ```php
         'contacts' => array(
             'order' => 30,
@@ -75,7 +74,6 @@ You are able to configure the maximum height of the tables.
 you would like to update.
 ** In the example below `Accounts` Listview `maxHeight` has been updated.
 
-[source, php]
 ```php
 'ListView' =>  [
         'maxHeight' => 3000,
