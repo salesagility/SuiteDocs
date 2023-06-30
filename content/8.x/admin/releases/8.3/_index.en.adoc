@@ -11,6 +11,82 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
+== 8.3.1
+
+_Released 11/07/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== Upgrading
+
+{{% notice info %}}
+If your system is on a version lower than 8.3.0, you first need to upgrade to 8.3.0. For more information about upgrades please see the link:../../installation-guide/upgrading[Upgrade Documentation.]
+{{% /notice %}}
+
+==== icon:lock[] Security
+
+* CVE: Pending - CSRF Vulnerability
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/268[268] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/267[#267] - Show activities dropdown labels with regular user
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/239/[239] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/154[#154] - MySQL Error 1054: missing config.deleted columns
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/265[265] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/196[#196], https://github.com/salesagility/SuiteCRM-Core/issues/251[#251] - Fix parent_type relate
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/260[260] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/209[#209], https://github.com/salesagility/SuiteCRM-Core/issues/258[#258] - Update WebToPersonCapture.php
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/244[244] - Fix query limit check for queries without limit on ListView record list
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/243[243] - Adds extending option for the api bean mapper
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10045[10045] - Codeception testing compatibility changes
+* PR: https://github.com/salesagility/SuiteCRM/pull/10097[10097] - Fix AOP Config not saving
+* PR: https://github.com/salesagility/SuiteCRM/pull/10055[10055] - Fix https://github.com/salesagility/SuiteCRM/issues/9548[#9548] - Wrong decimal precision returned in a Modify Record workflow action
+* PR: https://github.com/salesagility/SuiteCRM/pull/9938[9938] - Fix https://github.com/salesagility/SuiteCRM/issues/9937[#9937] - Resolve high memory usage when performing bulk relationship changes
+* PR: https://github.com/salesagility/SuiteCRM/pull/10072[10072] - Fix https://github.com/salesagility/SuiteCRM/issues/10034[#10034] - Email Listview doesn't render, so no Emails are visible
+* PR: https://github.com/salesagility/SuiteCRM/pull/8683[8683] - Fix https://github.com/salesagility/SuiteCRM/issues/8682[#8682] - Workflow fails with relationship condition
+* PR: https://github.com/salesagility/SuiteCRM/pull/10067[10067] - Fix https://github.com/salesagility/SuiteCRM/issues/10047[#10047] - Tasks due date not saving
+* PR: https://github.com/salesagility/SuiteCRM/pull/10098[10098] - Fix https://github.com/salesagility/SuiteCRM/issues/10091[#10091] - login parameter failing
+* PR: https://github.com/salesagility/SuiteCRM/pull/10071[10071] - Fix https://github.com/salesagility/SuiteCRM/issues/10035[#10035] - Monitered Folders are not selectable for Basic Auth Accounts
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10051[10051] - Add better description of what is being removed during module installation for ACLs
+* PR: https://github.com/salesagility/SuiteCRM/pull/10050[10050] - Add missing language definitions for the module loader
+* PR: https://github.com/salesagility/SuiteCRM/pull/9816[#9816] - Item element getting called incorrectly
+* PR: https://github.com/salesagility/SuiteCRM/pull/10024[10024] - Fix https://github.com/salesagility/SuiteCRM/issues/9601[#9601] - Fix bug where report conditions parenthesis pairs would not save correctly
+* PR: https://github.com/salesagility/SuiteCRM/pull/10044[10044] - Fix https://github.com/salesagility/SuiteCRM/issues/10029[10029] - Issues changing dashlets name
+* PR: https://github.com/salesagility/SuiteCRM/pull/9983[9983] - Fix https://github.com/salesagility/SuiteCRM/issues/9516[#9516] - getRelatedId returns null instead of a string
+* PR: https://github.com/salesagility/SuiteCRM/pull/9657[9657] - Fix https://github.com/salesagility/SuiteCRM/issues/9654[9654] - different date formats being compared for change log
+* PR: https://github.com/salesagility/SuiteCRM/pull/10036[10036] - Fix https://github.com/salesagility/SuiteCRM/issues/10033[#10033] - PHP Fatal error Uncaught TypeError PHP8
+
+
+=== icon:heart[] Community
+
+We would like to take this opportunity to thank the following members for their contributions and participation in this release:
+
+_Special thanks to everyone who reported security issues addressed in this release!_
+
+srivallikusumba
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors gunnicom isleshocky77 dtosun61 ibanvaqe QuickCRM abuzarfaris eggsurplus FR-JS pgorod mattkeenan SinergiaCRM kgaillot urdhvatech likhobory pavithra-selvam jonatanestam azzy9 lukio chris001 rtcare J-Wick4 %}}
+
+We will continue to enhance SuiteCRM 8 with new features and improvements, the latest of which can be found on our link:https://suitecrm.com/suitecrm-roadmap/[Road Map].
+
+In the meantime, if you have found an issue you think we should know about, or have a suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue]. Before raising an issue please be sure to check the link:https://docs.suitecrm.com/8.x/admin/releases/[Release Notes and list of Known Issues].
+
+If you want to get involved or submit a Fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit An PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Check the following documentation page for more information on how to upgrade between SuiteCRM 8 versions link:https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/[Upgrading documentation]
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+More information regarding our Security Process can be found https://docs.suitecrm.com/community/raising-issues/#_security[here].
+
+'''
+
 == 8.3.0
 
 _Released 16/05/2023_

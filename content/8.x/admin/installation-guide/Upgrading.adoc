@@ -36,6 +36,11 @@ The following section(s) contains the restrictions there are when upgrading betw
 
 If you are on any version between 8.0.x - 8.1.x and you wish to upgrade to a version greater or equal to 8.3.x, you will first need to upgrade to 8.2.x and only after that can you upgrade to your target version (8.3.x or greater)
 
+==== 1.2.2. Upgrading to version 8.3.1 or greater
+
+If you are on a version lower than 8.3.0 and you wish to upgrade to a version greater or equal to 8.3.1 (8.3.1+), you will first need to upgrade to 8.3.0 and only after that can you upgrade to your target version (8.3.1 or greater)
+
+
 == 2. Upgrading to SuiteCRM 8.2.x+ versions
 
 {{% notice note %}}
@@ -46,6 +51,9 @@ If you are currently on a 8.0.x/8.1.x release, please ensure you upgrade to the 
 
 For upgrades to versions prior to 8.2.x see section link:./#_3_upgrading_from_suitecrm_8_0_x_to_8_1_x_versions[#3. Upgrading from SuiteCRM 8.0.x to 8.1.x versions]
 
+{{% notice warning %}}
+Before moving forward, please make sure you've read the restrictions on the link:./#_1_2_upgrade_restrictions[#1.2. Upgrade restrictions] section
+{{% /notice %}}
 
 === 2.1. Download the new version package
 
