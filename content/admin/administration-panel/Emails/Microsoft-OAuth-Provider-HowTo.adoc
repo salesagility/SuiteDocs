@@ -100,6 +100,15 @@ The secret will be required on the SuiteCRM documentation.
 
 image:azure-secret-value.png[azure-secret-value.png]
 
+{{% notice warning %}}
+We recommend noting the expiry date for your Client Secret and replacing the secret on a regular basis.
+Once the secret expires, your email connections will fail with an error message in the logs similar to
+`OAuthAuthorizationService::hasConnectionTokenExpired | Access token has expired`
+If you see this error, generate a new secret in Azure and update it within SuiteCRM to ensure continued access.
+{{% /notice %}}
+
+
+
 Now go back to your App Registration main page, by clicking "Overview" on the sidebar.
 
 image:azure-link-to-app-registration-overview.png[azure-link-to-app-registration-overview.png]
