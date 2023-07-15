@@ -3,8 +3,17 @@
 
 = Russian RAPIRA application guide for SuiteCRM (7.10+)
 
-Русскоязычный вариант документации для https://docs.suitecrm.com[SuiteCRM] в формате AsciiDoc.
+
+*Русскоязычная документация к SuiteCRM (7.10+)*
+
+https://docs.suitecrm.com/ru[Официальная] русскоязычная документация не обновляется с 2022 года, актуальная информация по установке,
+ настройке и использованию SuiteCRM сейчас располагается https://russian-rapira-suitecrm-docs.netlify.app/ru[здесь].
+ 
+Разница между актуальной и официальной версией описана в https://github.com/salesagility/SuiteDocs/pull/582[этом] запросе на слияние.
 
 В документации используется та же терминология, что и в языковом пакете https://github.com/likhobory/SuiteCRM7RU[RAPIRA].
+
+
+
 
 
