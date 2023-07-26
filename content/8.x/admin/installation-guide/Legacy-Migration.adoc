@@ -71,7 +71,7 @@ Set the permissions on the files in a way that the command line user has enough 
 
 * `session_dir`: you should update your session dir to `''`. After migration you can re-configure the system to use a different `session_dir`
 ** Please note that the SuiteCRM 8 configuration for the `session_dir` is different.
-** See the link:../configuration/sessions-configuration[Session Configuration] for more details.
+** See the link:../../configuration/sessions-configuration[Session Configuration] for more details.
 
 * `site_url`: you should update your site_url
 ** You should update this value to be the address you are currently using to migrate and test the SuiteCRM 8.x migration
