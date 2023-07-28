@@ -1,0 +1,258 @@
+---
+title: "Adding Field Display Logic "
+weight: 40
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/logic/field-logic/
+
+{{% notice note %}}
+When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
+{{% /notice %}}
+
+== 1. Example of Display Field Logic
+
+In this example we are going to see how to add field logic in order to show how to hide fields based on another field's values.
+
+**How to hide a field**
+
+As an example of how to hide a field, we are going to add configurations to the `phone_office` field on the Accounts Module.
+The configuration we add will set the field to hide when the Account Name is `Example`.
+
+image:Account-EditView-Empty.png[Blank Account]
+
+image:Hidden-Phone-Field-Example.png[Hidden Phone Field]
+
+== 2. How does this look as Code?
+
+The following code block shows an example of the above configuration
+
+----
+<?php
+
+...
+'name' => 'phone_office',
+'comment' => 'The office phone number',
+'label' => 'LBL_PHONE_OFFICE',
+'displayLogic' => [
+        'hide_on_name' =>
+            [
+                'key' => 'displayType',
+                'modes' => [
+                    'detail',
+                    'edit',
+                    'create',
+                ],
+                'params' => [
+                    'fieldDependencies' => [
+                        'name',
+                    ],
+                    'targetDisplayType' => 'none',
+                    'activeOnFields' => [
+                        'name' => ['Example'],
+                    ],
+                ],
+            ],
+
+...
+----
+
+When adding this configuration, it can be added to the `vardefs.php` or the `detailviewdefs.php`.
+
+When adding this code be sure to add it below the field name and label as shown above.
+
+=== Display Logic
+
+Within `displayLogic` for specific fields you can set multiple definitions. Each definition will work like an `OR`.
+For example:
+
+----
+<?php
+...
+
+    'hide_on_name' => [
+        'key' => 'displayType',
+        'modes' => ['detail', 'edit', 'create'],
+        'params' => [
+            'fieldDependencies' => [
+                'name',
+            ],
+            'targetDisplayType' => 'none',
+            'activeOnFields' => [
+                'name' => ['Example']
+            ]
+        ]
+    ],
+    // OR
+    'hide_on_website' => [
+        'key' => 'displayType',
+        'modes' => ['detail', 'edit', 'create'],
+        'params' => [
+            'fieldDependencies' => [
+                'website',
+            ],
+            'targetDisplayType' => 'none',
+            'activeOnFields' => [
+                'website' => [ ['operator' => 'is-empty' ] ]
+            ]
+        ]
+    ],
+...
+----
+
+This means that if `Name` is `Example` the field will hide or if `Website` is empty then the field will also hide.
+
+=== Properties description
+
+* Key
+- The `key` within the named `hide_on_name` array is stating which logic type will be used for the following.
+In this case it's `displayType`.
+
+* Modes
+- Modes are views you would like your `displayLogic` to take effect on, as shown above it will be `detail`, `edit` and `create`.
+Another example of a `mode` that could be selected could be `list` for example.
+
+==== Params
+
+===== Field Dependencies
+`fieldDependencies` is where you declare the field(s) that you would like your logic to depend on.
+
+----
+
+<?php
+
+...
+'fieldDependencies' => [
+    'name',
+    'website'
+]
+
+...
+
+----
+
+==== Active on Fields
+
+`activeOnFields` is where you declare the field/values that trigger the change of the field to a shown/hidden field.
+
+In the example above we have the field `phone_office` hide when name is `Example`.
+
+If we wanted it to hide if it was either `Example` or another value such as `User` then a new value would be added like so:
+
+----
+<?php
+...
+'activeOnFields' => [
+  'name' => ['Example', 'User'],
+],
+...
+----
+
+image:Hidden-Phone-Field-User.png[Hidden Phone Field]
+
+===== Multiple Fields
+
+Within the `activeonFields` you can add more than one field such as:
+
+----
+<?php
+...
+
+'activeOnFields' => [
+  'name' => ['Example'],
+  'website' => ['www.google.com', 'www.yahoo.com' ]
+],
+
+...
+----
+
+This works like an AND. If Name is `Example` AND Website is either `www.google.com` or `www.yahoo.com`.
+
+image:Shown-Phone-Field-Example.png[Name Example Shown]
+
+image:Hidden-Phone-Field-N-W.png[Name and Website Example]
+
+When adding more fields to `activeOnFields` be sure to also add them to `fieldDependencies`
+
+===== With operators
+
+When using operators on `activeonFields` you can use the operator once, or multiple times within the same field to meet specific criteria.
+
+----
+<?php
+
+...
+'activeonFields' => [
+    'website' => [ ['operator' => 'is-empty'] ]
+]
+
+...
+----
+
+====== Multiple Operators
+
+----
+<?php
+...
+
+'activeonFields' => [
+    'employees' => [
+    //AND
+    [
+        'operator' => 'greater-than',
+        'value' => 5
+    ],
+    [
+        'operator' => 'less-than',
+        'value' => 25
+    ],
+    [
+        'operator' => 'not-equal',
+        //OR
+        'values' => [15, 20]
+    ],
+    ['operator' => 'not-empty'],
+]
+
+...
+----
+
+In the example above if `employees` is:
+
+* Greater than 5
+* Less than 25
+* Not equal to 15 or 20
+* Has a value
+
+Then the field will hide from the view.
+
+An example using the code above on the Accounts `Industry` Field:
+
+image:Shown-Field-Industry-Employees.png[Industry Example Shown]
+
+image:Hidden-Field-Industry-Employees.png[Industry Example Hidden]
+
+====== Using Fields as Comparison
+
+When using operators you can use another field for the comparison. For example (within Opportunities):
+
+----
+<?php
+
+'activeonFields' => [
+    'amount' => [ ['operator' => 'less-than', 'field' => 'probability'] ]
+]
+
+...
+----
+
+If `amount` is less than `probability` then the chosen field will hide from display.
+
+You can find more information on the different operators link:../../operators/[here.]
+
+==== Target Display Type
+
+`targetDisplayType` will either be `none` or `show`.
+
+`None` will hide the field if conditions are met and `Show` will display the field.
+
+For more information on different field logic see link:../[here.]
