@@ -1,0 +1,87 @@
+---
+title: "8.4 Releases"
+weight: 9840
+aliases:
+  - /8.x/admin/releases/8.4/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.4.0
+
+_Released 29/08/2023_
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+* We have updated the Field Logic page. This is now split into different link:../../../developer/extensions/frontend/logic/[pages.]
+** We have added a new page explaining operators with examples here also.
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/299[299] -
+Fix https://github.com/salesagility/SuiteCRM-Core/issues/215[#215] - Cant Create records from custom modules
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/286[286] - Fix #286 - Field Layout
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/285[285] - Fix #285 - Readonly Field on Field Logic
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/269[269] - Fix #296 - Fix case update notes
+* PR: https://github.com/salesagility/SuiteCRM/pull/10116[10116] - Fix https://github.com/salesagility/SuiteCRM/issues/10053[#10053] - Issue when creating new tabs on Dashlets
+* PR: https://github.com/salesagility/SuiteCRM/pull/10106[10106] - Fix https://github.com/salesagility/SuiteCRM/issues/10105[#10105] - Fix 500 error when saving audited numeric field
+* PR: https://github.com/salesagility/SuiteCRM/pull/10108[10108] - Fix https://github.com/salesagility/SuiteCRM/issues/10107[#10107] - Function getRelatedId is unable to return NULL values
+
+==== icon:star[] Enhancements
+
+===== Nav Bar Redesign
+
+The Nav Bar within Suite has went through some changes:
+
+image:Nav-Bar.png[Nav Bar]
+
+The `+` will now show you actions relating to the module you are on, as well as Quick Actions to create a record
+in another module:
+
+image:Contacts-Action.png[Contact Actions]
+
+===== Floating Save
+
+SuiteCRM now has a floating save meaning no matter where you are on a record you can save:
+
+image:Floating-Save-Example.png[Nav Bar]
+
+===== Smarty Upgrade
+
+Smarty, the templating engine used in SuiteCRM 7.x, has been upgraded to v4 which brings some minor performance improvements
+and better compatibility going forward.
+
+===== PHP 8.2 Support
+
+This release brings a number of adjustments and updates in order to support PHP 8.2.
+
+This includes:
+
+* Removal of deprecated functions/ features.
+* Update functions to PHP 8.2 standard.
+* Fixed Unit & Acceptance Tests
+* Executed Rector to clean up code.
+* Fixed code to eliminate warnings from logs.
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
