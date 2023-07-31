@@ -1,0 +1,179 @@
+---
+title: "Update Field Value Based on Another Field"
+weight: 40
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/logic/field-logic/
+
+{{% notice note %}}
+When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
+{{% /notice %}}
+
+== 1. Update Field Value Based on Another Field
+
+In this exmaple we are going to use field logic to:
+
+**Update the value of a field based on another field**
+
+In this example we will be updating the value of Accounts Employees depending on the values of Industry.
+
+image:Updated-Employees-Field-Industry.png[Update Employees Value]
+
+== 2. How does this look as Code?
+
+----
+<?php
+...
+
+    'name' => 'employees',
+    'comment' => 'Number of employees, varchar to accomodate for both number (100) or range (50-100)',
+    'label' => 'LBL_EMPLOYEES',
+    'logic' => [
+        'update-value' => [
+            'key' => 'updateValue',
+            'modes' => ['detail', 'edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'industry',
+                ],
+                'targetValue' => '450',
+                'activeOnFields' => [
+                    'industry' => ['Banking'],
+                ]
+            ]
+        ],
+    ]
+
+...
+----
+
+When adding this configuration, it can be added to the `vardefs.php` or the `detailviewdefs.php`.
+
+When adding this code be sure to add it below the field name and label as shown above.
+
+=== Update Field Value Logic
+
+Within `logic` for specific fields you can set multiple definitions for `update-value`. Each definition will work like an `OR`.
+For example:
+
+----
+<?php
+...
+
+    'name' => 'employees',
+    'comment' => 'Number of employees, varchar to accomodate for both number (100) or range (50-100)',
+    'label' => 'LBL_EMPLOYEES',
+    'logic' => [
+        'update-value' => [
+            'key' => 'updateValue',
+            'modes' => ['detail', 'edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'industry',
+                ],
+                'targetValue' => '450',
+                'activeOnFields' => [
+                    'industry' => ['Banking'],
+                ]
+            ]
+        ],
+        // OR
+        'update-value2' => [
+            'key' => 'updateValue',
+            'modes' => ['detail', 'edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'industry',
+                ],
+                'targetValue' => '5000',
+                'activeOnFields' => [
+                    'industry' => ['Media'],
+                ]
+            ]
+        ],
+    ]
+
+...
+----
+
+Now, Employees will update to 450 if the Industry is `Banking` OR 5000 if Industry is `Media`.
+
+image:Updated-Employees-Field-Industry-Media.png[Update Employees Value Media]
+
+=== Properties description
+
+* Key
+- The `key` within the named `logic` array is stating which logic type will be used for the following.
+In this case it's `updateValue`.
+
+* Modes
+- Modes are views you would like your `updateValue` logic to take effect on, as shown above it will be `detail`, `edit` and `create`.
+Another example of a `mode` that could be selected could be `list` for example.
+
+==== Params
+
+===== Field Dependencies
+
+`fieldDependencies` is where you declare the field(s) that you would like your logic to depend on.
+
+----
+
+<?php
+
+...
+'fieldDependencies' => [
+    'industry',
+]
+
+...
+
+----
+
+==== Active on Fields
+
+`activeOnFields` is where you declare the field/values that trigger the change of the field to a required field.
+
+In the example above we have the field `employees` set to 450 when Industry is Banking.
+
+If we wanted it to set it to 450 if it was either Banking or another value such as Media, then a new value would be added like so:
+
+----
+<?php
+...
+'activeOnFields' => [
+  'industry' => ['Banking', 'Media'],
+],
+...
+----
+
+===== Multiple Fields
+
+Within the `activeonFields` you can add more than one field such as:
+
+----
+<?php
+...
+
+'activeOnFields' => [
+    'industry' => ['Banking'],
+    'name' => ['Example'],
+],
+
+...
+----
+
+This works like an AND. If Name is `Example` AND Industry is `Banking`.
+
+When adding more fields to `activeOnFields` be sure to also add them to `fieldDependencies`.
+
+image:Name-Filled-Example.png[Name Filled Example]
+
+image:Updated-Employees-Field-Industry.png[Updated Employees Field]
+
+==== Target Value
+
+`targetValue` will be the value you want the field to have if criteria is met.
+
+In the example above it was `450`.
+
+For more information on different field logic see link:../[here.]
