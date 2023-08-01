@@ -46,7 +46,7 @@ Next we need to enable module-federation on our extension.
 
 Now we need to clean the sample code that was added by the generator
 
-Clean you your configuration so that it looks like the following:
+Clean your `webpack.config.js` configuration file so that it looks like the following:
 
 [source,javascript]
 ----
