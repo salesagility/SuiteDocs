@@ -24,9 +24,9 @@ Please go through the link:../webserver-setup-guide/[Webserver Setup Guide].
 
 === 2.1 Downloading the latest SuiteCRM files
 
-Unless you want to setup a development environment, you should download the pre-built installable packages available for download on link:https://suitecrm.com[suitecrm.com,window=_blank]
+Unless you want to setup a development environment, you should download the pre-built installable packages available for download on link:https://suitecrm.com/download/[suitecrm.com,window=_blank].
 
-See the link:../../releases/8.0/[SuiteCRM 8 releases page]
+See the link:../../releases/[SuiteCRM 8 Releases page]
 
 === 2.2 Copy the files to your webserver root
 
