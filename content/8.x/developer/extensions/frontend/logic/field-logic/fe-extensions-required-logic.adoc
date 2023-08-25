@@ -97,7 +97,7 @@ For example:
 ...
 ----
 
-Now the Annual Leave field will be `required` if the Name is example OR Employees is 10-50.
+Now the Annual Revenue field will be `required` if the Name is example OR Employees is 10-50.
 
 === Properties description
 
