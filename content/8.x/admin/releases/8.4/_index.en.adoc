@@ -20,10 +20,39 @@ _Released 29/08/2023_
 
 ===  icon:check[] Release Notes
 
+==== System Requirement Changes
+
+{{% notice warning %}}
+The minimum php version has been updated to php 8.1. The supported versions are now php 8.1 and 8.2.
+{{% /notice %}}
+
+To visit the SuiteCRM 8.4.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
+
+==== Backward Incompatible Changes
+
+{{% notice warning %}}
+The 'extensions/default' package has been renamed to 'extensions/defaultExt'.
+{{% /notice %}}
+
+The upgrade process does not remove the old `extensions/default` package. Any changes on it should be manually moved to the `extensions/defaultExt`.
+
+The `extensions/default` is going to be removed in a future version.
+
+==== Upgrading
+
+{{% notice info %}}
+It is no longer required to stop on 8.3.1 before upgrading to the following versions.
+{{% /notice %}}
+
+The code that caused this issue has been reverted.
+It is again possible to upgrade from 8.2.0 (or 8.3) directly to 8.4+,
+For more information about upgrades please see the link:../../installation-guide/upgrading[Upgrade Documentation.]
+
 ==== icon:star[] Documentation
 
 * We have updated the Field Logic page. This is now split into different link:../../../developer/extensions/frontend/logic/[pages.]
 ** We have added a new page explaining operators with examples here also.
+* We have added documentation about the link:../../../developer/extensions/backend/process-api[Process Api].
 
 ==== icon:bug[] Bug Fixes
 
