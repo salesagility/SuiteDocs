@@ -1,0 +1,498 @@
+---
+title: "Adding a Process Handler"
+weight: 20
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/backed-end/process-api/
+
+
+
+== 1. Introduction
+
+{{% notice info %}}
+Before reading this page, please make sure to read the link:../process-api[Process Api] guide.
+{{% /notice %}}
+
+The link:../process-api[Process Api] guide describes the reason and purpose of having Process Handlers.
+
+This page will try to provide a step-by-step guide on how to add a Process Handler.
+
+As an implementation example we will use a ProcessHandler used for the `updateValueBackend` logic, as described on the link:../../../frontend/logic/field-logic/fe-extensions-update-value-backend[Update Field Value Based on a backend calculation] guide.
+
+
+== 3. Adding a Backend Process Handler
+
+
+{{% notice note %}}
+When making these changes be sure to make them within an extension on the 'extensions' directory, e.g.: 'extensions/<my-extension>/...'
+{{% /notice %}}
+
+In the following example we are going to use the existing `extensions/defaultExt` to add our custom code.
+
+
+=== 3.1 Steps to add a new process handler to extensions
+
+{{% notice info %}}
+As a best practice extension backend code should be added to `extensions/<your-extension>/backend/` or `extensions/<your-extension>/modules/`. For `extensions/<your-extension>/backend/` the subfolder should follow the same structure as used in `core/backend`
+{{% /notice %}}
+
+
+. Create the folder `extensions/defaultExt/modules/Cases/Service/Fields`
+.. This is a best practice not a hard requirement
+.. As long as you add under the `extensions/<your-ext>/backend` or `extensions/<your-ext>/modules` it should work.
+. Within that folder create the `CaseCalculatePriority.php`, i.e. `extensions/defaultExt/modules/Cases/Service/Fields/CaseCalculatePriority.php`
+.. If you are not using the recommended path, make sure that the `namespace` follows the one you are using
+.. On our example the namespace is `namespace App\Extension\defaultExt\modules\Cases\Service\Fields;`
+. On `CaseCalculatePriority.php`, add the code on the snippet on link:./#_3_2_process_handler_implementation[3.2 Process handler implementation] section
+. Run `php bin/console cache:clear` or delete the contents of the cache folder under the root of the project
+. Re-set the correct file permissions if you need to (This will depend on your setup and the user you are using to make changes)
+
+
+
+=== 3.2 Process handler implementation
+
+To add a `ProcessHandler` the class needs to implement the `ProcessHandlerInterface`. Plus for it to be matched with a request, it needs the following:
+
+- Set the `ProcessType` to be the same as the value that was defined on the metadata (or other), in this example it is `case-calculate-priority`
+
+The following snippet has sample implementation of the process handler:
+
+[source,php]
+----
+<?php
+
+namespace App\Extension\defaultExt\modules\Cases\Service\Fields;
+
+use ApiPlatform\Core\Exception\InvalidArgumentException;
+use App\Process\Entity\Process;
+use App\Process\Service\ProcessHandlerInterface;
+
+class CaseCalculatePriority implements ProcessHandlerInterface
+{
+    protected const MSG_OPTIONS_NOT_FOUND = 'Process options are not defined';
+    public const PROCESS_TYPE = 'case-calculate-priority';
+
+    /**
+     * CaseCalculatePriority constructor.
+     */
+    public function __construct()
+    {
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getProcessType(): string
+    {
+        return self::PROCESS_TYPE;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function requiredAuthRole(): string
+    {
+        return 'ROLE_USER';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRequiredACLs(Process $process): array
+    {
+        $options = $process->getOptions();
+        $module = $options['module'] ?? '';
+        $id = $options['id'] ?? '';
+
+        $editACLCheck =  [
+            'action' => 'edit',
+        ];
+
+        if ($id !== '') {
+            $editACLCheck['record'] = $id;
+        }
+
+        return [
+            $module => [
+                $editACLCheck
+            ],
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function configure(Process $process): void
+    {
+        //This process is synchronous
+        //We aren't going to store a record on db
+        //thus we will use process type as the id
+        $process->setId(self::PROCESS_TYPE);
+        $process->setAsync(false);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function validate(Process $process): void
+    {
+
+        $options = $process->getOptions();
+        $type = $options['record']['attributes']['type'] ?? '';
+        if (empty($type)) {
+            throw new InvalidArgumentException(self::MSG_OPTIONS_NOT_FOUND);
+        }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function run(Process $process)
+    {
+        $options = $process->getOptions();
+
+        $type = $options['record']['attributes']['type'] ?? '';
+
+        if ($type !== 'User') {
+            $priority = $options['record']['attributes']['priority'] ?? '';
+
+            $responseData = [
+                'value' => $priority
+            ];
+
+            $process->setStatus('success');
+            $process->setMessages([]);
+            $process->setData($responseData);
+
+            return;
+        }
+
+        $name = $options['record']['attributes']['name'] ?? '';
+
+        $value = 'P3';
+        if (strpos(strtolower($name), 'warning') !== false) {
+            $value = 'P2';
+        }
+
+        if (strpos(strtolower($name), 'error') !== false) {
+            $value = 'P1';
+        }
+
+        $responseData = [
+            'value' => $value
+        ];
+
+        $process->setStatus('success');
+        $process->setMessages([]);
+        $process->setData($responseData);
+    }
+}
+----
+
+==== 3.2.1 Process Handler implementation
+
+
+===== 3.2.1.1 getProcessType()
+
+This method should return the identifier of the process the handler implements. The same that is defined on the metadata logic `key` entry. In our example: `case-calculate-priority`
+
+===== 3.2.1.2 requiredAuthRole()
+
+This method defines if the auth role that is required to have access to the process.
+
+- `'ROLE_USER'` means that the user needs to be logged in to have access to this process.
+- `'ROLE_ADMIN'` means that the user needs to be logged in as an admin user to have access to this process.
+- `''` means that a non-authenticated user can access the process.
+
+===== 3.2.1.3 getRequiredACLs()
+
+This method defines the SuiteCRM ACLs that are required to have access to the process.
+
+====== Structure
+
+The `getRequiredACLs` returns an array where we can define the modules, actions and record(s) that should be checked for ACLs.
+This supports a very wide combination of checks.
+
+The structure of the response array is the following:
+
+**Module level**
+
+We can define multiple modules to checked
+
+[source,php]
+----
+        return [
+            '<module-a>' => [],
+            '<module-b>' => [],
+        ];
+----
+
+**Action Level**
+
+We can also define multiple actions to be checked per module
+
+[source,php]
+----
+        return [
+            '<module-a>' => [
+                [
+                    'action' => 'view',
+                ],
+                [
+                    'action' => 'edit',
+                    'record' => 'e1bd1...' // id to be checked
+                ]
+                [
+                    'action' => 'delete',
+                    'ids' => [ 'e1bd1...', ...] // array if ids
+                ],
+            ],
+        ];
+----
+
+**Module Action Level Check**
+
+We can check if the given module has access to a given action.
+
+[source,php]
+----
+        return [
+            '<module-a>' => [
+                [
+                    'action' => 'view',
+                ],
+            ],
+        ];
+----
+
+**Module Record Action Level Check**
+
+We can check if we have access to a record and to do a specific action on that record.
+
+[source,php]
+----
+        return [
+            '<module-a>' => [
+                [
+                    'action' => 'edit',
+                    'record' => 'e1bd1...' // id to be checked
+                ]
+            ],
+        ];
+----
+
+**Module Multi-Record Action Level Check**
+
+We can check if we have access to several records and to do a specific action on those records.
+
+{{% notice info %}}
+This should be used carefully as this can have a big impact on performance. Each record ACLs is going to be checked individually.
+{{% /notice %}}
+
+[source,php]
+----
+        return [
+            '<module-a>' => [
+                [
+                    'action' => 'delete',
+                    'ids' => [ 'e1bd1...', ...] // array if ids
+                ],
+            ],
+        ];
+----
+
+
+====== Examples
+
+The following examples are taken from the existing core code.
+
+**Skip ACL Check**
+
+[source,php]
+----
+    public function getRequiredACLs(Process $process): array
+    {
+        return [];
+    }
+----
+
+**Check Record Level ACLs For Single Record**
+
+[source,php]
+----
+    /**
+     * @inheritDoc
+     */
+    public function getRequiredACLs(Process $process): array
+    {
+        ['recentlyViewed' => $recentlyViewed] = $process->getOptions();
+        $itemId = $recentlyViewed['attributes']['item_id'] ?? '';
+        $itemModule = $recentlyViewed['attributes']['module_name'] ?? '';
+
+        return [
+            $itemModule => [
+                [
+                    'action' => 'view',
+                    'record' => $itemId
+                ]
+            ]
+        ];
+    }
+----
+
+**Check Record Level ACLs For Record List**
+
+[source,php]
+----
+    public function getRequiredACLs(Process $process): array
+    {
+        $options = $process->getOptions();
+        $module = $options['module'] ?? '';
+        $ids = $options['ids'] ?? [];
+
+        return [
+            $module => [
+                [
+                    'action' => 'export',
+                    'ids' => $ids
+                ]
+            ]
+        ];
+    }
+----
+
+**Multiple ACL Checks Per Module**
+[source,php]
+----
+    /**
+     * @inheritDoc
+     */
+    public function getRequiredACLs(Process $process): array
+    {
+        $options = $process->getOptions();
+        $module = $options['module'] ?? '';
+        $ids = $options['ids'] ?? [];
+
+
+        return [
+            $module => [
+                [
+                    'action' => 'view'
+                ],
+                [
+                    'action' => 'export',
+                    'ids' => $ids
+                ]
+            ]
+        ];
+    }
+----
+
+**Multiple Module ACL Checks**
+
+[source,php]
+----
+    /**
+     * @inheritDoc
+     */
+    public function getRequiredACLs(Process $process): array
+    {
+        $options = $process->getOptions();
+        $baseModule = $options['module'] ?? '';
+        $baseIds = $options['ids'] ?? [];
+        $modalRecord = $options['modalRecord'] ?? [];
+        $modalModule = $modalRecord['module'] ?? '';
+        $modalRecordId = $modalRecord['id'] ?? '';
+
+        return [
+            $baseModule => [
+                [
+                    'action' => 'view',
+                    'ids' => $baseIds
+                ]
+            ],
+            $modalModule => [
+                [
+                    'action' => 'view',
+                    'record' => $modalRecordId,
+                ]
+            ],
+        ];
+    }
+----
+
+
+
+
+===== 3.2.1.4 validate()
+
+This method is where we should add the code to validate the process inputs.
+
+If the inputs aren't valid it should throw a `InvalidArgumentException`
+
+===== 3.2.1.4 run()
+
+This method is where we add the code to run the logic that our ProcessHandler is supposed to do.
+
+This method **does not** return anything. Instead, it should update the `$process` argument that is passed by reference.
+
+
+====== Setting response result and message
+
+The following are some examples of how to set the feedback for the response.
+
+**Success with no message**
+[source,php]
+----
+        $process->setStatus('success');
+        $process->setMessages([]);
+----
+
+**Success with no message**
+[source,php]
+----
+        $process->setStatus('success');
+        $process->setMessages(['LBL_BULK_ACTION_DELETE_SUCCESS']);
+----
+
+
+**Error with an error message**
+[source,php]
+----
+            $process->setStatus('error');
+            $process->setMessages(['LBL_ACTION_ERROR']);
+----
+
+====== Setting response data
+The following are some examples of how to set the data on the respose.
+
+The format on the response will vary depending on the type of ProcessHandler.
+
+
+**Record Action, Line Action, Bulk Action process handlers**
+[source,php]
+----
+        $responseData = [
+            'handler' => 'redirect',
+            'params' => [
+                'route' => $options['module'] . '/duplicate/' . $options['id'],
+                'queryParams' => [
+                    'isDuplicate' => true,
+                ]
+            ]
+        ];
+
+        $process->setStatus('success');
+        $process->setMessages([]);
+        $process->setData($responseData);
+----
+
+Another example from `UpdateFavorite` process handler
+
+
+[source,php]
+----
+            $process->setData([
+                'favorite' => $savedFavorite
+            ]);
+----
