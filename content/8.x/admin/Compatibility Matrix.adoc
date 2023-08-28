@@ -19,23 +19,17 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 
 | Linux, Unix, Mac OS | Any version supporting PHP
 
-| Windows | Windows Server 2012+
-
-| PHP | 7.4, 8.0, 8.1, 8.2
+| PHP | 8.1, 8.2
 
 2+^h| Web Server
 
 | Apache | 2.4
 
-| IIS |8, 8.5, 10
-
 2+^h| Database
 
-| MariaDB | 10.3, 10.4, 10.5, 10.6
+| MariaDB | 10.4+
 
-| MySQL |5.7, 8.0, 8.1
-
-| SQL Server |SQL Server 2012+
+| MySQL |5.7, 8.0
 
 2+^h| Browsers
 
@@ -48,6 +42,13 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 | Edge |109+
 
 | Safari |16+
+
+2+^h| Additional requirements for front-end Development (not required for production)
+
+| Angular CLI | ^12
+| Node.js | ^14.15.1
+| yarn | ^1.22.10
+
 |========
 
 === SuiteCRM 8.3.x
@@ -59,7 +60,7 @@ The following documentation is for SuiteCRM Version 8+; to see documentation on 
 2+^h| Platform
 
 | Linux, Unix, Mac OS | Any version supporting PHP
-| PHP | 7.4, 8.0,
+| PHP | 7.4, 8.0
 
 2+^| Additional requirements for Development
 
