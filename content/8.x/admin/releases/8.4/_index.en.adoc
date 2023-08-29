@@ -84,6 +84,18 @@ SuiteCRM now has a floating save meaning no matter where you are on a record you
 
 image:Floating-Save-Example.png[Nav Bar]
 
+===== Developer improvements
+
+
+* Add support for more operators in field logic. See link:../../../developer/extensions/frontend/logic/operators/[Logic 8 Operators] guide
+* New field display logic configuration. See link:../../../developer/extensions/frontend/logic/field-logic/fe-extensions-display-logic/[Field Display Logic] guide
+* New record view panel display logic configuration. See link:../../../developer/extensions/frontend/logic/panel-logic/fe-extensions-dynamic-panels/[Panel Display Logic] guide
+* New field logic for updating field with pre-defined value. See link:../../../developer/extensions/frontend/logic/field-logic/fe-extensions-update-value/[Update Field Value] guide
+* New field logic for calculating value in the backend. See link:../../../developer/extensions/frontend/logic/field-logic/fe-extensions-update-value-backend/[Update Field Value Based on a backend calculation] guide
+
+
+
+
 ===== Smarty Upgrade
 
 Smarty, the templating engine used in SuiteCRM 7.x, has been upgraded to v4 which brings some minor performance improvements
@@ -104,6 +116,10 @@ This includes:
 === icon:heart[] Community
 
 We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors ibanvaqe %}}
 
 If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
 
