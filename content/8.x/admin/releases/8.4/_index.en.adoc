@@ -20,7 +20,7 @@ _Released 29/08/2023_
 
 ===  icon:check[] Release Notes
 
-==== System Requirement Changes
+==== icon:server[] System Requirement Changes
 
 {{% notice warning %}}
 The minimum php version has been updated to php 8.1. The supported versions are now php 8.1 and 8.2.
@@ -28,8 +28,10 @@ The minimum php version has been updated to php 8.1. The supported versions are 
 
 To visit the SuiteCRM 8.4.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
 
-==== Backward Incompatible Changes
+==== icon:code[] Backward Incompatible Changes
 
+
+===== 1. Default extension renamed to defaultExt
 {{% notice warning %}}
 The 'extensions/default' package has been renamed to 'extensions/defaultExt'.
 {{% /notice %}}
@@ -38,7 +40,13 @@ The upgrade process does not remove the old `extensions/default` package. Any ch
 
 The `extensions/default` is going to be removed in a future version.
 
-==== Upgrading
+===== 2. DisplayType logic moved to displayLogic
+
+The `displayType` logic within the metadata `logic` entry has been deprecated. This will be removed in a future version.
+
+There is a now a more flexible metadata entry that should be used, named `displayLogic`. See link:../../../developer/extensions/frontend/logic/field-logic/fe-extensions-display-logic/[Field Display Logic] guide for more information.
+
+==== icon:arrow-up[] Upgrading
 
 {{% notice info %}}
 It is no longer required to stop on 8.3.1 before upgrading to the following versions.
@@ -87,7 +95,7 @@ image:Floating-Save-Example.png[Nav Bar]
 ===== Developer improvements
 
 
-* Add support for more operators in field logic. See link:../../../developer/extensions/frontend/logic/operators/[Logic 8 Operators] guide
+* Add support for more operators in field logic. See link:../../../developer/extensions/frontend/logic/operators/[Logic Operators] guide
 * New field display logic configuration. See link:../../../developer/extensions/frontend/logic/field-logic/fe-extensions-display-logic/[Field Display Logic] guide
 * New record view panel display logic configuration. See link:../../../developer/extensions/frontend/logic/panel-logic/fe-extensions-dynamic-panels/[Panel Display Logic] guide
 * New field logic for updating field with pre-defined value. See link:../../../developer/extensions/frontend/logic/field-logic/fe-extensions-update-value/[Update Field Value] guide
