@@ -22,7 +22,7 @@ _Released 29/08/2023_
 
 ==== icon:star[] Enhancements
 
-==== System Requirement Changes
+==== icon:server[] System Requirement Changes
 
 {{% notice warning %}}
 The minimum php version has been updated to php 8.1. The supported versions are now php 8.1 and 8.2.
@@ -30,6 +30,7 @@ The minimum php version has been updated to php 8.1. The supported versions are 
 
 To visit the SuiteCRM 7.14.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
 
+==== icon:star[] Enhancements
 
 ===== Smarty Upgrade
 
