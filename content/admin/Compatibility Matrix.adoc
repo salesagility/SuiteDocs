@@ -23,13 +23,13 @@ weight: 60
 
 | Apache | 2.4
 
-| IIS |8, 8.5, 10
+| IIS | 10
 
 2+^h| Database
 
 | MariaDB | 10.4, 10.5, 10.6, 10.10, 10.11
 
-| MySQL |5.7, 8.0, 8.1
+| MySQL |5.7, 8.0
 
 | SQL Server |SQL Server 2019+
 
