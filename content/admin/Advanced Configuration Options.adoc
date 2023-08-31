@@ -59,21 +59,23 @@ desired by specifying values ​​for variables
 == Setting file system permissions in Linux
 
 If the system is running on a computer running Linux,
-in the ```config.php``` you can change the owner of the system files, as well as
+in the `config.php` you can change the owner of the system files, as well as
 control access to all files and folders on the system, by setting user and group rights.
 
 The following example shows the read, write and execute permissions for the user and group Apache:
 
 [source,php]
+----
 'default_permissions' => array(
 'dir_mode' => 02770,
 'file_mode' => 0660,
 'chown' => 'apache',
 'chgrp' => 'apache',),
+----
 
-For the parameter `dir_mode` you can set the value to ```1528```,
-which is the decimal equivalent of the octal value ```02770```. For the parameter
-`file_mode` you can set the value to ```432```, which is the decimal equivalent of the octal value ```0660```.
+For the parameter `dir_mode` you can set the value to `1528`,
+which is the decimal equivalent of the octal value `02770`. For the parameter
+`file_mode` you can set the value to `432`, which is the decimal equivalent of the octal value `0660`.
 
 == Changing the location of the download folder
 

@@ -52,7 +52,8 @@ You are able to configure the maximum height of the tables.
 * Subpanel - add `maxHeight` to the subpanel definition within the metadatafiles.
 ** In the example below the `maxHeight` has been changed within the `public/legacy/custom/modules/Accounts/metadata/subpaneldefs.php`
 
-```php
+[source,php]
+----
         'contacts' => array(
             'order' => 30,
             'module' => 'Contacts',
@@ -68,13 +69,14 @@ You are able to configure the maximum height of the tables.
                 array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
             ),
         ),
-```
+----
 
 * Listview & Pop up Record List - add `maxHeight` to the `public/legacy/custom/modules/<Module>/listviewdefs.php` of the module
 you would like to update.
 ** In the example below `Accounts` Listview `maxHeight` has been updated.
 
-```php
+[source,php]
+----
 'ListView' =>  [
         'maxHeight' => 3000,
         'sidebarWidgets' => [
@@ -93,7 +95,7 @@ you would like to update.
                             'chartOptions' => [
                             ]
                         ] ...
-```
+----
 
 The default for each table is:
 
@@ -113,8 +115,9 @@ Please note that changing a value directly on your config_override.php, it will 
 
 To change subpanels to `load-more` and show/load 10 records for example:
 
-```php
+[source,php]
+----
 'subpanel_pagination_type' => 'load-more',
 'list_max_entries_per_subpanel' => 10,
-```
+----
 

@@ -633,13 +633,17 @@ Within this release, we have also resolved a few known issues with the upgrade p
 If you maintain a CRM utilising container-interop for API extension, you should note that this release may require some small changes to routing as seen below:
 
 Instead of `Interop`
-```
+
+[source]
+----
 use Interop\Container\ContainerInterface;
-```
+----
 Make use of `Psr`
-```
+
+[source]
+----
 use Psr\Container\ContainerInterface;
-```
+----
 
 
 
