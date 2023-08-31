@@ -438,30 +438,30 @@ The first and most important thing we need in order to our logic is the data in 
 To get the data sent in the request you can call the `getOptions` method of the process
 
 [source,php]
-```
+----
 $options = $process->getOptions();
-```
+----
 
 The `updateValueBackend` logic, besides other data, sends the current data on the record.
 It sends a `record` entry that follows the standard format for records, the same one that is used on the api to get a record.
 The field values of the record are located within the `attributes` entry:
 
 [source,php]
-```
+----
 $options = $process->getOptions();
 $record = $options['record'];
 $attributes = $record['attributes'];
-```
+----
 
 To get a field on the record we could do (in this example we are getting the 'type'):
 
 [source,php]
-```
+----
 $options = $process->getOptions();
 $record = $options['record'];
 $attributes = $record['attributes'];
 $type = $attributes['type'];
-```
+----
 
 
 **Calculate the priority according to the name**
@@ -470,7 +470,7 @@ The rules in our example define that the priority is going to change depending o
 For that we get the value of the name field from the record, then according to its contents we calculate the priority to set.
 
 [source,php]
-```
+----
 $name = $options['record']['attributes']['name'] ?? '';
 
 $value = 'P3';
@@ -481,14 +481,14 @@ if (strpos(strtolower($name), 'warning') !== false) {
 if (strpos(strtolower($name), 'error') !== false) {
     $value = 'P1';
 }
-```
+----
 
 **Set the priority value**
 
 Finally, for all of this to work we set the value that we want to use for the priority on the reponse data.
 
 [source,php]
-```
+----
 $responseData = [
     'value' => $value
 ];
@@ -497,7 +497,7 @@ $process->setStatus('success');
 $process->setMessages([]);
 $process->setData($responseData);
 
-```
+----
 
 === 3. More Info on ProcessHandlers
 

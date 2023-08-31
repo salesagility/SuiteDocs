@@ -210,7 +210,9 @@ link:../api-v4.1-methods[here].
 Arguments for the JSON API must be provided in the order of the example format shown below.
 
 Example format:
-```
+
+[source]
+----
 // Works correctly
 $params = array();
 $params['session'] = $this->sessionToken;
@@ -223,7 +225,7 @@ $params['link_name_to_fields_array'] = array(array('name'=>'accounts', 'value'=>
 $params['max_results'] = 5;
 $params['deleted'] = false;
 $jsonEncodedData = json_encode($params);
-```
+----
 
 == Adding custom API methods
 

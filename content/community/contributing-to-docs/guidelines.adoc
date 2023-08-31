@@ -40,11 +40,12 @@ translated versions of the same thing) but add a language code before the `.adoc
 
 So these are all translations of the same file (English, Spanish, Russian):
 
-```
+[source]
+----
 requirements.adoc
 requirements.es.adoc
 requirements.ru.adoc
-```
+----
 Note that we could have used `requirements.en.adoc` for the English version, but we don't do that. 
 We keep the default language (English) without any language code at all.
 
@@ -52,12 +53,13 @@ We keep the default language (English) without any language code at all.
 
 Each Asciidoc content file will start with a section called *Front-matter*:
 
-```
+[source]
+----
 ---
-title: Documentation Guidelines 
+title: Documentation Guidelines
 weight: 50
 ---
-```
+----
 Although there are link:https://gohugo.io/content-management/front-matter/[many things] that can 
 be defined here, we require only the `title` and `weight` properties. 
 
@@ -69,37 +71,46 @@ instead of just 1, 2, 3, etc.
 Some of the *Special Codes* that can be used at the beginning of the file, after the front-matter:
 
 - Drawing buttons with a special graphic look:
-```
-:experimental:   ////this is here to allow btn:[]syntax used below 
+
+[source]
+----
+:experimental:   ////this is here to allow btn:[]syntax used below
 
 Example sentence indicating you can press a btn:[Save] on the user interface.
-```
+----
 
 - Setting the images base directory that will be used throughout the file:
-```
+
+[source]
+----
 :imagesdir: /images/en/admin
-```
+----
 For images, this directory should be specified as an absolute path (starting 
 with a `/`), not relative like `../../images`. Note that this guideline is just for images, 
 it doesn't apply for links to pages, which should be relative.
 
 - Including an automatically generated *Table of Contents* of the sections inside this file:https://learn.netlify.com/en/shortcodes/children/
-```
+
+[source]
+----
 :toc:
-```
+----
 - Including an automatically generated *Table of Contents* of the pages in directory levels below the current page, 
 to be used in pages that have a sub-directory. (This is a shorcode provided by link:https://learn.netlify.com/en/shortcodes/children/[our Theme^]).
 
-```
+[source]
+----
 {{%/* children depth="3" showhidden="true" */%}}
-```
+----
 - Including an automatically generated *List of GitHub Contributors* (for the *Release Notes* pages). You can 
 list an indefinte number of contributors. (This is a shortcode 
 link:https://github.com/salesagility/SuiteDocs/blob/master/layouts/shortcodes/ghcontributors.html[defined in our own site^]), 
 and can serve as an example if you want to create others).
-```
+
+[source]
+----
 {{%/* ghcontributors username1 username2 */%}}
-```
+----
 
 == Content
 
@@ -111,9 +122,11 @@ editing the source code on a typical 80 character wide console.
 - surround paths, file names, variable names and other expressions that might be useful to copy-paste 
 with backticks:
  
-```text
+
+[source]
+----text
 Source mark-up to allow easy copy of a path `/some/path` into your editor.
-```
+----
 
 == References
 
@@ -122,9 +135,10 @@ Source mark-up to allow easy copy of a path `/some/path` into your editor.
 - For pages, always use relative links where possible. This is essential for translated pages to be able to use
 the same navigation as English pages. So your links will look like this:
 
-```text
+[source]
+----text
 Here is a link:../../admin/my-page.adoc[link for you to click!].
-```
+----
 Use the minimum amount of `..` necessary, and when backtracking through directories with `..`, 
 never go above the `content` directory, this is never necessary.
 

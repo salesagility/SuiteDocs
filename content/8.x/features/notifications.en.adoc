@@ -39,7 +39,8 @@ within the 'config/services/ui/notifications.yaml' configuration file. See the f
 
 For performance purposes a random deviation is added to the auto refresh period. This prevents having a request done for every active user at exactly the same time every minute. The default deviation is a random number between -15 and +15 seconds.
 
-```yaml
+[source,yaml]
+----
 parameters:
   notifications:
     module: 'alerts'
@@ -50,7 +51,7 @@ parameters:
     autoRefreshDeviationMin: -15 #seconds. set 0 for no deviation
     autoRefreshDeviationMax: 15 #seconds. set 0 for no deviation
     ...
-```
+----
 
 === Configure the height of the notifications table
 
