@@ -1,0 +1,168 @@
+---
+title: "Adding Required Field Logic "
+weight: 40
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/logic/field-logic/
+
+{{% notice note %}}
+When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
+{{% /notice %}}
+
+== 1. Example of Required Field Logic
+
+In this example we are going to see how to add field logic in order to mark a field as required depending on another field value
+
+In this example, using the Accounts module, we are going to require the field Annual Revenue if the Employees field is
+between 10-50.
+
+image:Non-Required-Annual-Revenue-Field-Employees.png[Non Required Annual Leave]
+
+image:Required-Annual-Revenue-Field-Employees.png[Required Annual Leave]
+
+== 2. How does this look as Code?
+
+----
+<?php
+...
+
+    'name' => 'annual_revenue',
+    'comment' => 'Annual revenue for this company',
+    'label' => 'LBL_ANNUAL_REVENUE',
+    'logic' => [
+        'required' => [
+            'key' => 'required',
+            'modes' => ['edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'employees'
+                ],
+                'activeOnFields' => [
+                    'employees' => [
+                        '10-50'
+                    ],
+                ],
+            ],
+        ]
+    ],
+
+...
+----
+
+When adding this configuration, it can be added to the `vardefs.php` or the `detailviewdefs.php`.
+
+When adding this code be sure to add it below the field name and label as shown above.
+
+=== Required Logic
+
+Within `logic` for specific fields you can set multiple definitions for `required`. Each definition will work like an `OR`.
+For example:
+
+----
+<?php
+...
+
+    'logic' => [
+        'required' => [
+            'key' => 'required',
+            'modes' => ['edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'employees'
+                ],
+                'activeOnFields' => [
+                    'employees' => [
+                        '10-50'
+                    ],
+                ],
+            ],
+        ],
+        // OR
+        'required1' => [
+            'key' => 'required',
+            'modes' => ['edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'name'
+                ],
+                'activeOnFields' => [
+                    'name' => [
+                        'Example'
+                    ],
+                ],
+            ],
+        ],
+    ],
+
+...
+----
+
+Now the Annual Revenue field will be `required` if the Name is example OR Employees is 10-50.
+
+=== Properties description
+
+* Key
+- The `key` within the named `logic` array is stating which logic type will be used for the following.
+In this case it's `required`.
+
+* Modes
+- Modes are views you would like your `required` logic to take effect on, as shown above it will be `detail`, `edit` and `create`.
+Another example of a `mode` that could be selected could be `list` for example.
+
+==== Params
+
+===== Field Dependencies
+`fieldDependencies` is where you declare the field(s) that you would like your logic to depend on.
+
+----
+
+<?php
+
+...
+'fieldDependencies' => [
+    'employees',
+]
+
+...
+
+----
+
+==== Active on Fields
+
+`activeOnFields` is where you declare the field/values that trigger the change of the field to a required field.
+
+In the example above we have the field `annual_revenue` set to required when Employees is `10-50`.
+
+If we wanted it to set it to required if it was either `10-50` or another value such as `50-100` then a new value would be added like so:
+
+----
+<?php
+...
+'activeOnFields' => [
+  'employees' => ['10-50', '50-100'],
+],
+...
+----
+
+image:Required-Annual-Revenue-Field-Employees50-100.png[50-100 Employees]
+
+===== Multiple Fields
+
+Within the `activeonFields` you can add more than one field such as:
+
+----
+<?php
+...
+
+'activeOnFields' => [
+    'employees' => ['10-50', '50-100'],
+    'name' => ['Example'],
+],
+
+...
+----
+
+This works like an OR. If Name is `Example` OR Website is either `www.google.com` or `www.yahoo.com`.
+When adding more fields to `activeOnFields` be sure to also add them to `fieldDependencies`
+
+For more information on different field logic see link:../[here.]

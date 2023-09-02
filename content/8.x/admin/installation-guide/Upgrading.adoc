@@ -36,6 +36,10 @@ The following section(s) contains the restrictions there are when upgrading betw
 
 If you are on any version between 8.0.x - 8.1.x and you wish to upgrade to a version greater or equal to 8.3.x, you will first need to upgrade to 8.2.x and only after that can you upgrade to your target version (8.3.x or greater)
 
+==== 1.2.2. Upgrading to version 8.3.1
+
+There was a bug when upgrading to version 8.3.1, which has been resolved on 8.4.0. For more info see the subsection link:./#_6_2_upgrading_to_version_8_3_1[6.2 Upgrading to version 8.3.1] at the end of the page.
+
 == 2. Upgrading to SuiteCRM 8.2.x+ versions
 
 {{% notice note %}}
@@ -46,6 +50,9 @@ If you are currently on a 8.0.x/8.1.x release, please ensure you upgrade to the 
 
 For upgrades to versions prior to 8.2.x see section link:./#_3_upgrading_from_suitecrm_8_0_x_to_8_1_x_versions[#3. Upgrading from SuiteCRM 8.0.x to 8.1.x versions]
 
+{{% notice warning %}}
+Before moving forward, please make sure you've read the restrictions on the link:./#_1_2_upgrade_restrictions[#1.2. Upgrade restrictions] section
+{{% /notice %}}
 
 === 2.1. Download the new version package
 
@@ -432,6 +439,7 @@ After the `APP_ENV` you may have to clear the symfony cache.
 
 == 6. Possible Issues when Upgrading
 
+=== 6.1 Upgrade between the versions `8.1.0` -> `8.1.1`
 An issue was found on the implementation of the upgrade command between the versions `8.1.0` -> `8.1.1`.
 
 The issue is that when upgrading SuiteCRM 8 for a second time (i.e if you had upgraded from `8.0.2` -> `8.0.4` -> `8.1.1`),
@@ -446,8 +454,18 @@ CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<patht
 
 This issue is a result of Symfony cache clearing but then being called right after.
 
-=== 6.1 Resolution
+==== 6.1.1 Resolution
 
 This issue can be resolved by **re-setting permissions** and `./bin/console clear:cache` within the SuiteCRM 8 root directory.
 
 You should then be able to navigate to your application.
+
+
+=== 6.2 Upgrading to version 8.3.1
+
+There was a bug with version 8.3.1 that caused the upgrade process to fail.
+
+If you are on a version lower than 8.3.0, and you wish to upgrade to version 8.3.1, you will first need to upgrade to 8.3.0 and only after that can you upgrade to 8.3.1.
+
+This issue has been resolved in version 8.4. Thus, if you want to go from 8.2.0 (or any version lower than 8.3.1) to 8.4.0+ you can do it directly.
+

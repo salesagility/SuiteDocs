@@ -5,6 +5,47 @@ weight: 60
 
 == Versions
 
+=== SuiteCRM 7.14.x
+
+[[smaller-table-spacing-11]]
+[cols="1s,2" ]
+|========
+
+2+^h| Platform
+
+| Linux, Unix, Mac OS | Any version supporting PHP
+
+| Windows | Windows Server 2019+
+
+| PHP | 8.1, 8.2
+
+2+^h| Web Server
+
+| Apache | 2.4
+
+| IIS | 10
+
+2+^h| Database
+
+| MariaDB | 10.4, 10.5, 10.6, 10.10, 10.11
+
+| MySQL |5.7, 8.0
+
+| SQL Server |SQL Server 2019+
+
+2+^h| Browsers
+
+| Chrome |109+
+
+| Firefox |109+
+
+| IE | 11 (compatibility mode not supported)
+
+| Edge |109+
+
+| Safari |16+
+|========
+
 === SuiteCRM 7.13.x
 
 [[smaller-table-spacing-10]]

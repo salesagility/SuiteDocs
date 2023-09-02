@@ -1,0 +1,71 @@
+---
+title: "7.14.x Releases"
+weight: 9850
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/admin/release
+
+== 7.14.0
+
+_Released 29/08/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Enhancements
+
+==== icon:server[] System Requirement Changes
+
+{{% notice warning %}}
+The minimum php version has been updated to php 8.1. The supported versions are now php 8.1 and 8.2.
+{{% /notice %}}
+
+To visit the SuiteCRM 7.14.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
+
+==== icon:star[] Enhancements
+
+===== Smarty Upgrade
+
+Smarty, the templating engine used in SuiteCRM 7.x, has been upgraded to v4 which brings some minor performance improvements
+and better compatibility going forward.
+
+===== PHP 8.2 Support
+
+This release brings a number of adjustments and updates in order to support PHP 8.2.
+
+This includes:
+
+* Removal of deprecated functions/ features
+* Updated missing labels
+* Update functions to PHP 8.2 standard
+* Fixed Unit & Acceptance Tests
+* Executed Rector to clean up code
+* Fixed code to eliminate warnings from logs
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10116[10116] - Fix https://github.com/salesagility/SuiteCRM/issues/10053[#10053] - Issue when creating new tabs on Dashlets
+* PR: https://github.com/salesagility/SuiteCRM/pull/10106[10106] - Fix https://github.com/salesagility/SuiteCRM/issues/10105[#10105] - Fix 500 error when saving audited numeric field
+* PR: https://github.com/salesagility/SuiteCRM/pull/10108[10108] - Fix https://github.com/salesagility/SuiteCRM/issues/10107[#10107] - Function getRelatedId is unable to return NULL values
+
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors ibanvaqe %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
