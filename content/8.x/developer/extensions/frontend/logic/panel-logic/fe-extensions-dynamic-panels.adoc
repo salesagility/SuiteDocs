@@ -1,5 +1,5 @@
 ---
-title: "Adding Custom Tab Logic "
+title: "Adding Panel/Tab Display Logic "
 weight: 40
 ---
 
@@ -9,9 +9,11 @@ weight: 40
 When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
 {{% /notice %}}
 
-== 1. Example of Custom Tab Logic
+== 1. Introduction
 
-In this example we are going to see how to add custom tab logic in order to hide a tab based on a field's value.
+Display logic allows you to define rules to hide and show panels/tabs depending on field values.
+
+=== 1.1 Example scenario
 
 As an example we will hide the `More Information` tab on Accounts if the Name is `Example`.
 
@@ -19,12 +21,30 @@ image:Shown-Tab-Name-Example.png[Shown Tab - Name Example]
 
 image:Hidden-Tab-Name-Example.png[Hidden Tab - Name Example]
 
-== 2. How does this look as Code?
+== 2.Logic Metadata definition
 
 
+The first thing to define is the `displayLogic` entry in the metadata. This is where we are going to define the triggers for hide/display our panel.
+
+The configuration for the logic can be added only to `detailviewdefs.php`.
+
+When adding this code be sure to add it below `newTab` within the `tabDefs`.
+
+In the following example we are going to add them to the `Accounts` module `detailviewdefs.php`.
+
+
+=== 2.1 Steps to add the logic on the custom detailviewdefs.php
+
+. Copy the core Accounts `detailviewdefs.php` to the custom folder:
+.. From: `public/legacy/modules/Accounts/metadata/detailviewdefs.php`
+.. To: `public/legacy/custom/modules/Accounts/metadata/detailviewdefs.php`
+. Replace the `LBL_PANEL_ADVANCED` entry on the custom `detailviewdefs.php` with the code on the snippet below
+** Re-set permissions if needed (will depend on your setup)
+. Run `Repair and Rebuild` on Admin menu
+
+
+[source,php]
 ----
-<?php
-...
     'LBL_PANEL_ADVANCED' =>
         [
             'newTab' => true,
@@ -51,15 +71,10 @@ image:Hidden-Tab-Name-Example.png[Hidden Tab - Name Example]
                 ],
             ],
         ],
-
-...
 ----
 
-When adding this configuration, it can either be added to the `vardefs.php` or the `detailviewdefs.php`.
 
-When adding this code be sure to add it below `newTab` within the `tabDefs`.
-
-=== Properties Description
+=== 3. Properties Description
 
 * Key
 - The `key` within the named `displayLogic` array is stating which logic type will be used for the following.
@@ -73,17 +88,11 @@ Another example of a `mode` that could be selected could be `list` for example.
 
 `fieldDependencies` is where you declare the field(s) that you would like your logic to depend on.
 
+[source,php]
 ----
-
-<?php
-
-...
 'fieldDependencies' => [
     'name',
 ]
-
-...
-
 ----
 
 ==== Active on Fields
@@ -94,13 +103,11 @@ In the example above we have the tab `More Information` to hide when name is `Ex
 
 If we wanted it to hide if it was either `Example` or another value such as `User` then a new value would be added like so:
 
+[source,php]
 ----
-<?php
-...
 'activeOnFields' => [
   'name' => ['Example', 'User'],
 ],
-...
 ----
 
 image:Hidden-Tab-Name-User.png[Hidden Tab - Name User]
@@ -111,9 +118,8 @@ image:Hidden-Tab-Name-User.png[Hidden Tab - Name User]
 
 If you have a tab you would like to hide until a field has a certain value, you can add `'display' => 'hide'`:
 
+[source,php]
 ----
-<?php
-...
     'LBL_PANEL_ADVANCED' =>
         [
             'newTab' => true,
@@ -141,6 +147,4 @@ If you have a tab you would like to hide until a field has a certain value, you 
                 ],
             ],
         ],
-
-...
 ----

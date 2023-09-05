@@ -1,5 +1,5 @@
 ---
-title: SuiteCRM 8 Operators
+title: Logic Operators
 weight: 10
 ---
 
@@ -11,17 +11,17 @@ When adding this configuration, it can be added to the `vardefs.php` or the `det
 
 SuiteCRM 8 has 6 operators that can be used in configuration.
 
-== Greater than
+== Available Operators
 
+=== Greater than
+
+[source,php]
 ----
-<?php
-...
-
     'name' => 'annual_revenue',
     'comment' => 'Annual revenue for this company',
     'label' => 'LBL_ANNUAL_REVENUE',
     'logic' => [
-        'display' => [
+        'update-when-more-than-10-employees' => [
             'key' => 'updateValue',
             'modes' => ['detail', 'edit', 'create'],
             'params' => [
@@ -38,18 +38,14 @@ SuiteCRM 8 has 6 operators that can be used in configuration.
             ]
         ],
     ]
-
-...
 ----
 
 In the example above, the Annual Revenue updated to 1000 if Employees is greater than 10.
 
-== Is Empty
+=== Is Empty
 
+[source,php]
 ----
-<?php
-...
-
     'name' => 'description',
     'comment' => 'Full text of the note',
     'label' => 'LBL_DESCRIPTION',
@@ -68,23 +64,19 @@ In the example above, the Annual Revenue updated to 1000 if Employees is greater
             ]
         ],
     ]
-
-...
 ----
 
 In the example above we are hiding the description field if the website field is empty.
 
-== Is Equal
+=== Is Equal
 
+[source,php]
 ----
-<?php
-...
-
     'name' => 'annual_revenue',
     'comment' => 'Annual revenue for this company',
     'label' => 'LBL_ANNUAL_REVENUE',
     'logic' => [
-        'display' => [
+        'update-when-10-employees' => [
             'key' => 'updateValue',
             'modes' => ['detail', 'edit', 'create'],
             'params' => [
@@ -101,18 +93,14 @@ In the example above we are hiding the description field if the website field is
             ]
         ],
     ]
-
-...
 ----
 
 In the example above when employees is 10, update Annual Revenue to 1000.
 
-== Less Than
+=== Less Than
 
+[source,php]
 ----
-<?php
-...
-
     'name' => 'annual_revenue',
     'comment' => 'Annual revenue for this company',
     'label' => 'LBL_ANNUAL_REVENUE',
@@ -134,23 +122,19 @@ In the example above when employees is 10, update Annual Revenue to 1000.
             ]
         ],
     ]
-
-...
 ----
 
 In the example above, the Annual Revenue updated to 1000 if Employees is less than 10.
 
-== Not Empty
+=== Not Empty
 
+[source,php]
 ----
-<?php
-...
-
     'name' => 'annual_revenue',
     'comment' => 'Annual revenue for this company',
     'label' => 'LBL_ANNUAL_REVENUE',
     'logic' => [
-        'display' => [
+        'update-when-employee-set' => [
             'key' => 'updateValue',
             'modes' => ['detail', 'edit', 'create'],
             'params' => [
@@ -166,23 +150,19 @@ In the example above, the Annual Revenue updated to 1000 if Employees is less th
             ]
         ],
     ]
-
-...
 ----
 
 In the example above if the Employee field has any value, then Annual Revenue will update to have the value 1.
 
-== Not Equal
+=== Not Equal
 
+[source,php]
 ----
-<?php
-...
-
     'name' => 'annual_revenue',
     'comment' => 'Annual revenue for this company',
     'label' => 'LBL_ANNUAL_REVENUE',
     'logic' => [
-        'display' => [
+        'update-not-10-employees' => [
             'key' => 'updateValue',
             'modes' => ['detail', 'edit', 'create'],
             'params' => [
@@ -199,31 +179,26 @@ In the example above if the Employee field has any value, then Annual Revenue wi
             ]
         ],
     ]
-
-...
 ----
 
 In the example above, if the employees field is not equal to 10 then the value will be updated to 50000.
 
 You can add the check to more than one value by adding more values:
 
+[source,php]
 ----
-
     'employees' => [
         'operator' => 'not-equal',
         'values' => ['10', '15', '25']
     ],
-
 ----
 
-=== Other Information
+== Multiple operators on the same field
 
 You can also use multiple operators on the same field:
 
+[source,php]
 ----
-<?php
-...
-
     'name' => 'industry',
     'comment' => 'The company belongs in this industry',
     'label' => 'LBL_INDUSTRY',
@@ -262,7 +237,41 @@ You can also use multiple operators on the same field:
             ],
         ],
     ],
+----
 
 
-...
+== Comparing to a field instead of a value
+
+For operators where you compare with a single value using `'value' => <some-value>`, it is possible to instead compare with another field's value, by using `'field' => '<field-name>'`
+
+Field comparison is available on the following operators:
+
+* less-than
+* greater-than
+* is-equal
+* not-equal
+
+The following snippet provides an example of how to use the `field` instead of the `value`
+
+[source,php]
+----
+    'name' => 'prefered_contact',
+    'displayLogic' => [
+        'hide_on_single_phone' => [
+            'key' => 'displayLogic',
+            'modes' => ['detail', 'edit', 'create'],
+            'params' => [
+                'fieldDependencies' => [
+                    'phone_office',
+                ],
+                'targetDisplayType' => 'none',
+                'activeOnFields' => [
+                    'phone_office' => [
+                        'operator' => 'is-equal',
+                        'field' => 'phone_fax'
+                    ],
+                ]
+            ]
+        ],
+    ]
 ----
