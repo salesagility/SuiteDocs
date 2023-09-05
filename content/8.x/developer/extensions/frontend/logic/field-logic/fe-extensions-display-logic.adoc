@@ -9,11 +9,11 @@ weight: 40
 When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
 {{% /notice %}}
 
-== 1. Example of Display Field Logic
+== 1. Introduction
 
-In this example we are going to see how to add field logic in order to show how to hide fields based on another field's values.
+Display logic allows you to define rules to hide and show fields depending on other fields values.
 
-**How to hide a field**
+=== 1.1 Example scenario
 
 As an example of how to hide a field, we are going to add configurations to the `phone_office` field on the Accounts Module.
 The configuration we add will set the field to hide when the Account Name is `Example`.
@@ -22,53 +22,68 @@ image:Account-EditView-Empty.png[Blank Account]
 
 image:Hidden-Phone-Field-Example.png[Hidden Phone Field]
 
-== 2. How does this look as Code?
+== 2.Logic Metadata definition
 
-The following code block shows an example of the above configuration
+The first thing to define is the `displayLogic` entry in the metadata. This is where we are going to define the triggers to hide/show our field.
 
+The configuration for the logic can be added to the `vardefs.php` or the `detailviewdefs.php`.
+
+In the following example we are going to add them to the `Accounts` module field vardefs.
+
+=== 2.1 Steps to add the logic on the custom vardefs
+
+. Create a new field in custom extensions for Accounts module:
+.. Example:  `public/legacy/custom/Extension/modules/Accounts/Ext/Vardefs/annual_revenue.php`
+. Copy the 'phone_office' definition from `public/legacy/include/SugarObjects/templates/company/vardefs.php`
+. Replace the `logic` entry to the  `phone_office` definition with the code on the snippet below.
+** Re-set permissions if needed (will depend on your setup)
+. Run `Repair and Rebuild` on Admin menu
+
+
+[source,php]
 ----
 <?php
 
-...
-'name' => 'phone_office',
-'comment' => 'The office phone number',
-'label' => 'LBL_PHONE_OFFICE',
-'displayLogic' => [
-        'hide_on_name' =>
-            [
-                'key' => 'displayType',
-                'modes' => [
-                    'detail',
-                    'edit',
-                    'create',
-                ],
-                'params' => [
-                    'fieldDependencies' => [
-                        'name',
-                    ],
-                    'targetDisplayType' => 'none',
-                    'activeOnFields' => [
-                        'name' => ['Example'],
-                    ],
-                ],
+$dictionary['Account']['fields']['phone_office'] = array(
+    'name' => 'phone_office',
+    'vname' => 'LBL_PHONE_OFFICE',
+    'type' => 'phone',
+    'dbType' => 'varchar',
+    'len' => 100,
+    'audited' => true,
+    'unified_search' => true,
+    'full_text_search' => array('boost' => 1),
+    'comment' => 'The office phone number',
+    'merge_filter' => 'enabled',
+    'displayLogic' => [
+        'hide_on_name' => [
+            'key' => 'displayType',
+            'modes' => [
+                'detail',
+                'edit',
+                'create',
             ],
-
-...
+            'params' => [
+                'fieldDependencies' => [
+                    'name',
+                ],
+                'targetDisplayType' => 'none',
+                'activeOnFields' => [
+                    'name' => ['Example'],
+                ]
+            ]
+        ]
+    ]
+);
 ----
 
-When adding this configuration, it can be added to the `vardefs.php` or the `detailviewdefs.php`.
-
-When adding this code be sure to add it below the field name and label as shown above.
-
-=== Display Logic
+=== 3. Display Logic
 
 Within `displayLogic` for specific fields you can set multiple definitions. Each definition will work like an `OR`.
 For example:
 
+[source,php]
 ----
-<?php
-...
-
     'hide_on_name' => [
         'key' => 'displayType',
         'modes' => ['detail', 'edit', 'create'],
@@ -96,12 +111,11 @@ For example:
             ]
         ]
     ],
-...
 ----
 
 This means that if `Name` is `Example` the field will hide or if `Website` is empty then the field will also hide.
 
-=== Properties description
+=== 4. Properties description
 
 * Key
 - The `key` within the named `hide_on_name` array is stating which logic type will be used for the following.
@@ -116,18 +130,12 @@ Another example of a `mode` that could be selected could be `list` for example.
 ===== Field Dependencies
 `fieldDependencies` is where you declare the field(s) that you would like your logic to depend on.
 
+[source,php]
 ----
-
-<?php
-
-...
 'fieldDependencies' => [
     'name',
     'website'
 ]
-
-...
-
 ----
 
 ==== Active on Fields
@@ -138,31 +146,25 @@ In the example above we have the field `phone_office` hide when name is `Example
 
 If we wanted it to hide if it was either `Example` or another value such as `User` then a new value would be added like so:
 
+[source,php]
 ----
-<?php
-...
 'activeOnFields' => [
   'name' => ['Example', 'User'],
 ],
-...
 ----
 
 image:Hidden-Phone-Field-User.png[Hidden Phone Field]
 
 ===== Multiple Fields
 
-Within the `activeonFields` you can add more than one field such as:
+Within the `activeOnFields` you can add more than one field such as:
 
+[source,php]
 ----
-<?php
-...
-
 'activeOnFields' => [
   'name' => ['Example'],
   'website' => ['www.google.com', 'www.yahoo.com' ]
 ],
-
-...
 ----
 
 This works like an AND. If Name is `Example` AND Website is either `www.google.com` or `www.yahoo.com`.
@@ -177,24 +179,18 @@ When adding more fields to `activeOnFields` be sure to also add them to `fieldDe
 
 When using operators on `activeonFields` you can use the operator once, or multiple times within the same field to meet specific criteria.
 
+[source,php]
 ----
-<?php
-
-...
-'activeonFields' => [
+'activeOnFields' => [
     'website' => [ ['operator' => 'is-empty'] ]
 ]
-
-...
 ----
 
 ====== Multiple Operators
 
+[source,php]
 ----
-<?php
-...
-
-'activeonFields' => [
+'activeOnFields' => [
     'employees' => [
     //AND
     [
@@ -212,8 +208,6 @@ When using operators on `activeonFields` you can use the operator once, or multi
     ],
     ['operator' => 'not-empty'],
 ]
-
-...
 ----
 
 In the example above if `employees` is:
@@ -235,14 +229,11 @@ image:Hidden-Field-Industry-Employees.png[Industry Example Hidden]
 
 When using operators you can use another field for the comparison. For example (within Opportunities):
 
+[source,php]
 ----
-<?php
-
-'activeonFields' => [
+'activeOnFields' => [
     'amount' => [ ['operator' => 'less-than', 'field' => 'probability'] ]
 ]
-
-...
 ----
 
 If `amount` is less than `probability` then the chosen field will hide from display.

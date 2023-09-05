@@ -1,0 +1,350 @@
+---
+title: "Add process driven module menu links"
+weight: 40
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/logic/field-logic/
+
+
+
+== 1. Introduction
+
+SuiteCRM 8.4.0 introduced the mechanisms to add backend process handlers for module menu items.
+
+With this new feature, after clicking a link in the menu, it is possible to have a call being done to the backend:
+
+. To do some action
+. Then:
+** Show a result
+** Redirect somewhere
+
+This makes the menu links a lot more customizable and flexible, since you can do whatever you want on the backend.
+
+=== 1.1 Example scenario
+
+As an example this guide is going to use the following scenario.
+
+We are going to add a special menu link for adding a Critical Error Case. Which can be created through a "Create Critical Error Case" entry on the menu
+
+When clicking the link we want to:
+
+* Create a new case
+* Set the type to `User`
+* Set the priority value as `High`
+* Set the name to `Critical Error`
+* Re-direct to that newly created case
+
+
+The following gif shows an example of what we want:
+
+image:module-menu-process-example.gif[Custom Process Driven Module Menu Action Example]
+
+== 2. Menu Metadata definition
+
+{{% notice note %}}
+When making these changes be sure to make them in the custom directory, e.g.: 'public/legacy/custom/modules/<module>/...'
+{{% /notice %}}
+
+The first thing to define is the new `menu` entry in the metadata. This is where we are going to define the triggers for our backend calculation.
+
+
+=== 2.1 Steps to add the new menu entry on custom
+
+. Create a `Menus` folder in `public/legacy/custom/Extension/modules/Cases/Ext/Menus`
+. Add a new file `create-critical-error.php`
+** final path: `public/legacy/custom/Extension/modules/Cases/Ext/Menus/create-critical-error.php`
+. Add the menu configuration as exemplified on the snippet link:./#_2_2_menu_definition[2.2 Menu definition] section
+. Create a new `Language` folder in `public/legacy/custom/Extension/modules/Cases/Ext/Language`
+. Add a new `en_us.create-critical-error.php` where we will define the label for our menu entry
+** final path: `public/legacy/custom/Extension/modules/Cases/Ext/Language/en_us.create-critical-error.php`
+. Add the menu configuration as exemplified on the snippet link:./#_2_3_menu_label_definition[2.3 Menu label definition] section
+. Re-set permissions (may not be needed, this will depend on your configuration)
+. Run `Repair and Rebuild` on Admin menu
+. (optional) If you have some kind of php cache like opcache or APCu, you will need to re-start apache.
+
+=== 2.2 Menu definition
+
+The menu definition now accepts an extra configuration array, where we can set the `process` like we have on the following example
+
+[source,php]
+----
+<?php
+
+global $mod_strings, $app_strings;
+
+if (ACLController::checkAccess('Cases', 'edit', true)) {
+    $module_menu[] = [
+        'index.php?module=Cases&action=EditView',
+        $mod_strings['LBL_CREATE_CRITICAL_ERROR_CASE'],
+        "Create",
+        "Cases",
+        null,
+        '',
+        ['process' => 'cases-create-critical-error']
+    ];
+}
+
+----
+
+=== 2.3 Menu label definition
+
+For our menu entry do display properly we need to add the label for it, like we have on the following example:
+
+[source,php]
+----
+<?php
+$mod_strings['LBL_CREATE_CRITICAL_ERROR_CASE'] = 'Create Critical Error Case';
+
+----
+
+== 3. Backend Handler
+
+
+{{% notice note %}}
+When making these changes be sure to make them within an extension on the 'extensions' directory, e.g.: 'extensions/<my-extension>/...'
+{{% /notice %}}
+
+After defining the menu entry metadata we need to work on the backend code that is going to handle the requests done.
+
+The menu `process` configuration uses the `Process` api. The requests done to the `Process` api are handler by php classes implementing the `ProcessHandlerInterface`
+
+In the following example we are going to use the existing `extensions/defaultExt` to add our custom code.
+
+
+=== 3.1 Steps to add a new process handler to extensions
+
+. Create the folder `extensions/defaultExt/modules/Cases/Service/Create`
+.. This is a best practice not a hard requirement
+.. As long as you add under the `extensions/<your-ext>/backend` or `extensions/<your-ext>/modules` it should work.
+. Within that folder create the `CaseCreateCriticalError.php`, i.e. `extensions/defaultExt/modules/Cases/Service/Create/CaseCreateCriticalError.php`
+.. If you are not using the recommended path, make sure that the `namespace` follows the one you are using
+.. On our example the namespace is `namespace App\Extension\defaultExt\modules\Cases\Service\Create;`
+. On `CaseCreateCriticalError.php` add the code on the snippet on link:./#_3_2_process_handler_implementation[3.2 Process handler implementation] section
+. Re-set permissions (may not be needed, this will depend on your configuration)
+. Run `php bin/console cache:clear` or delete the contents of the cache folder under the root of the project
+. (optional) If you have some kind of php cache like opcache or APCu, you will need to re-start apache.
+
+=== 3.2 Process handler implementation
+
+A class is recognized as a `ProcessHandler` if it implements the `ProcessHandlerInterface`.
+
+Furthermore, for it to be matched with request made by the logic metadata we've defined, it needs the following:
+
+- Set the `ProcessType` to be the same as the value that was defined on the menu metadata, in this example it is `cases-create-critical-error`
+
+The following snippet contains a sample implementation of the process handler for our scenario:
+
+[source,php]
+----
+<?php
+
+namespace App\Extension\defaultExt\modules\Cases\Service\Create;
+
+use App\Process\Entity\Process;
+use App\Process\Service\ProcessHandlerInterface;
+use ApiPlatform\Core\Exception\InvalidArgumentException;
+use App\Engine\LegacyHandler\LegacyHandler;
+
+class CaseCreateCriticalError extends LegacyHandler implements ProcessHandlerInterface
+{
+    protected const MSG_OPTIONS_NOT_FOUND = 'Process options are not defined';
+    protected const MSG_INVALID_MODULE = 'Invalid Module';
+    public const PROCESS_TYPE = 'cases-create-critical-error';
+
+    /**
+     * @inheritDoc
+     */
+    public function getProcessType(): string
+    {
+        return self::PROCESS_TYPE;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getHandlerKey(): string
+    {
+        return self::PROCESS_TYPE;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function requiredAuthRole(): string
+    {
+        return 'ROLE_USER';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRequiredACLs(Process $process): array
+    {
+        $options = $process->getOptions();
+        $module = $options['module'] ?? '';
+
+        return [
+            $module => [
+                [
+                    'action' => 'edit',
+                ]
+            ],
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function configure(Process $process): void
+    {
+        //This process is synchronous
+        //We aren't going to store a record on db
+        //thus we will use process type as the id
+        $process->setId(self::PROCESS_TYPE);
+        $process->setAsync(false);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function validate(Process $process): void
+    {
+        if (empty($process->getOptions())) {
+            throw new InvalidArgumentException(self::MSG_OPTIONS_NOT_FOUND);
+        }
+
+        $options = $process->getOptions();
+
+        if (empty($options['module']) || $options['module'] !== 'cases') {
+            throw new InvalidArgumentException(self::MSG_INVALID_MODULE);
+        }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function run(Process $process)
+    {
+        $this->init();
+
+        $options = $process->getOptions();
+
+        /** @var \aCase $newCase */
+        $newCase = \BeanFactory::newBean('Cases');
+        $newCase->priority = 'P1';
+        $newCase->name = 'Critical Error:';
+        $newCase->type = 'User';
+        $newCase->save();
+
+        //called module
+        $module = 'cases';
+        $action = 'edit';
+        $recordId = $newCase->id;
+
+        $responseData = [
+            'handler' => 'redirect',
+            'params' => [
+                'route' => $module . '/'. $action. '/' . $recordId,
+                'queryParams' => []
+            ]
+        ];
+
+        $process->setStatus('success');
+        $process->setMessages([]);
+        $process->setData($responseData);
+
+        $this->close();
+    }
+}
+----
+
+==== 3.2.1 Process handler interface methods
+
+
+**getProcessType()**
+
+In this we need to return the id of our process, the same that is defined on the metadata logic `key` entry. In our example: `cases-create-critical-error`
+
+**requiredAuthRole()**
+
+Our process should only be accessed by logged-in users, thus we return `ROLE_USER`;
+
+**getRequiredACLs()**
+
+For new cases, we only want users with `edit` access to the Cases module to be able to call our ProcessHandler. Thus, we defined:
+
+[source,php]
+----
+            $module => [
+                [
+                    'action' => 'edit',
+                ]
+            ],
+----
+
+**validate()**
+
+Since this logic is specific to Cases module, we need to check if the `module` is set on our options and if the value is `case`
+
+The ProcessHandler won't be able to do any calculations if the Case `type` is not set. If that happens we should throw an exception:
+
+[source,php]
+----
+        $options = $process->getOptions();
+
+        if (empty($options['module']) || $options['module'] !== 'cases') {
+            throw new InvalidArgumentException(self::MSG_INVALID_MODULE);
+        }
+----
+
+**run()**
+
+This is the method that actually does what the process is supposed to do and returns the appropriate response.
+
+
+==== 3.2.2 Process handler implementation description
+
+In order to fulfill our requirements we first need to create a new Case with the pre-defined defaults.
+
+[source,php]
+----
+        /** @var \aCase $newCase */
+        $newCase = \BeanFactory::newBean('Cases');
+        $newCase->priority = 'P1';
+        $newCase->name = 'Critical Error:';
+        $newCase->type = 'User';
+        $newCase->save();
+----
+
+**Note: ** to be able to use legacy code like the `BeanFactory` our class needs to extend `LegacyHandler` and call the `init()` and `close()` method at the start and end of the methods where we want to call legacy.
+
+
+Then we want the front end to redirect to our newly create record.
+
+For that we can use the redirect handler by setting `'handler' => 'redirect'` that is going to be read by the process handler on the frontend.
+
+This redirect handler accepts a `route` and `queryParams`, though in this example we just need the `route`
+
+[source,php]
+----
+        //called module
+        $module = 'cases';
+        $action = 'edit';
+        $recordId = $newCase->id;
+
+        $responseData = [
+            'handler' => 'redirect',
+            'params' => [
+                'route' => $module . '/'. $action. '/' . $recordId,
+                'queryParams' => []
+            ]
+        ];
+
+        $process->setStatus('success');
+        $process->setMessages([]);
+        $process->setData($responseData);
+----
+
+=== 3. More Info on ProcessHandlers
+
+For more information how to create a process handler see the link:../../../../backend/process-api/process-handler[Adding a Process Handler] guide.
