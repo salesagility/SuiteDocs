@@ -1,0 +1,179 @@
+---
+Title: Azure SAML SSO
+weight: 60
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+:toc:
+:toc-title: Оглавление
+
+:experimental:
+
+:imagesdir: /images/ru/admin/SSO
+
+ifdef::env-github[:imagesdir: ../../../../static/images/ru/admin/SSO]
+
+:btn: btn:
+
+ifdef::env-github[:btn:]
+
+:en-img: ../../../../../images/en/admin/sso/
+
+ifdef::env-github[:en-img: ./../../../../../../static/images/en/admin/sso/]
+
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
+
+{{% notice info %}}
+Это страница содержит описание для SuiteCRM 7.x. Описание для SuiteCRM 8.x. находится
+link:../../../../8.x/admin/configuration/saml-configuration[здесь].
+{{% /notice %}}
+
+[discrete]
+== Единый вход в систему
+
+SuiteCRM может использовать стороннего поставщика управления доступом, например Microsoft Azure Active Directory и протокол SAML для обеспечения аутентификации при едином входе. Вы можете использовать Azure AD для контроля доступа в SuiteCRM и автоматического входа в систему.
+
+{{% notice note %}}
+Мы рекомендуем использовать последнюю версию SuiteCRM 7.x, с последними улучшениями и исправлениями.
+{{% /notice %}}
+
+{{% notice note %}}
+Для успешного входа в систему пользователь должен существовать как в Azure AD, так и в SuiteCRM.
+{{% /notice %}}
+
+{{% notice note %}}
+Имена пользователей в SuiteCRM 7.x должны совпадать с адресом электронной почты в Azure. Если вы использовали обычные имена пользователей, их следует заранее изменить на соответствующие адреса электронной почты.
+{{% /notice %}}
+
+== Настройка приложения в Azure
+
+Прежде всего зарегистрируйте новое приложение в Azure.
+Это приложение определяет, каким образом Azure в качестве поставщика удостоверений (IDP) будет взаимодействовать с экземпляром SuiteCRM.
+
+В результате вы получите необходимые данные и сертификат для настройки SuiteCRM.
+
+Приложения SAML в Azure уникальны для каждого экземпляра системы, поскольку URL-адрес SuiteCRM проверяется в процессе входа.
+Если SAML необходим для тестового или рабочего окружения, то для каждого окружения потребуется новое приложение.
+
+=== Регистрация нового приложения
+
+Войдите в Microsoft Azure и выберите службу *Azure Active Directory*.
+
+В левом меню выберите *Enterprise applications*.
+
+image:{en-img}suitecrm-sso-azure-side-menu.png[SuiteCRM SSO Azure side menu]
+
+В верхнем меню выберите *New Application*.
+
+image:{en-img}suitecrm-sso-azure-top-menu.png[SuiteCRM SSO Azure top menu]
+
+В верхнем меню выберите *Create your own application*.
+
+. Введите описательное имя, например *SuiteCRM SAML Authentication*.
+
+. Выберите *Integrate any other application you don't find in the gallery (Non-gallery)*.
+
+. Нажмите *Create*, после чего вы попадете в на страницу *Application Overview*.
+
+image:{en-img}suitecrm-sso-azure-create-new-application.png[SuiteCRM SSO Azure new application side window]
+
+=== Настройка приложения
+
+В разделе *Manage* выберите *Single sign-on*.
+
+image:{en-img}suitecrm-sso-azure-application-side-menu.png[SuiteCRM SSO Azure Application side menu]
+
+Из предложеных параметров выберите *SAML*.
+
+image:{en-img}suitecrm-sso-azure-application-protocol-select.png[SuiteCRM SSO Azure Application protocol select]
+
+В правом верхнем углу нажмите на иконку для изменения базовой конфигурации SAML.
+
+image:{en-img}suitecrm-sso-azure-application-saml-configuration.png[SuiteCRM SSO Azure Application SAML configuration]
+
+SuiteCRM использует одинаковое значение для Entity ID, ACS URL и Sign On URL.
+
+URL-адрес SuiteCRM  должен быть прописан в следующем формате:
+
+*{CRM URL}/index.php?action=Login&module=Users*
+
+Например: `*_\https://demo.suiteondemand.com/index.php?action=Login&module=Users_*`
+
+* Для *Entity ID* введите URL-адрес SuiteCRM, подготовленный на предыдущем шаге.
+
+* Для *Reply URL (Assertion Consumer Service URL)* введите URL-адрес SuiteCRM, подготовленный на предыдущем шаге.
+
+* Для *Sign on URL* (необязательный параметр) введите URL-адрес SuiteCRM, подготовленный на предыдущем шаге.
+
+* Убедитесь, что во всех трех полях присутствует один и тот же URL-адрес, затем нажмите *Save*.
+
+=== Сохранение настроек для дальнейшего использования
+
+Прокрутите страницу вниз до раздела *SAML Certificates*, загрузите сертификат *(Base64)* и сохраните его для дальнейшего использования.
+
+Прокрутите страницу вниз и сохраните *Login URL* и *Logout URL* для дальнейшего использования.
+
+image:{en-img}suitecrm-sso-azure-application-saml-settings.png[SuiteCRM SSO Azure Application SAML settings]
+
+
+== Добавление пользователей в приложение 
+
+Прежде чем пользователи смогут войти в SuiteCRM с помощью единого входа (SSO), их необходимо добавить в  зарегистрированное приложение.
+
+Пользователей можно добавлять индивидуально или в группах, в зависимости от того, как настроена служба Azure Active Directory.
+
+В систему смогут войти только пользователи, добавленные в зарегистрированное приложение *SuiteCRM SAML Authentication*.
+
+В только что зарегистрированном корпоративном приложении:
+
+. В меню слева выберите *Users and Groups*.
+
+image:{en-img}suitecrm-sso-azure-application-users-groups.png[SuiteCRM SSO Azure Application Users and Groups]
+
+В верхнем меню выберите *add user/group*.
+
+Теперь вы можете назначать пользователей или группы для зарегистрированного приложения *SuiteCRM SAML Authentication*.
+
+== Настройка SAML в SuiteCRM
+
+Прежде чем завершить настройку пользователей в SuiteCRM, вам необходимо включить SAML. +
+Как только этот шаг будет выполнен, пользователи SuiteCRM больше не смогут входить в систему обычным способом - необходимо использовать единый вход.
+
+=== Включение SAML в SuiteCRM
+
+Войдите в систему под учётной записью администратора.
+
+В панели Администратора откройте раздел *Управление паролями* и включите SAML-аутентификацию:
+
+image:image9.png[SuiteCRM SSO Enable SAML]
+
+
+Пропишите следующие параметры:
+
+Login URL:: Вставьте значение Login URL, полученное в Azure.
+SLO URL:: Вставьте значение Logout URL, полученное в Azure.
+Сертификат X.509:: Вставьте содержимое сертификата *Base64*, полученного в Azure.
+
+Нажмите на кнопку {btn}[Сохранить].
+
+=== Включение SAML для пользователей
+
+После того как SuiteCRM настроен на использование SAML, вы можете настроить отдельных пользователей на использование SAML для входа в систему.
+
+Этот шаг необходимо выполнить для каждого пользователя, который будет входить в систему с использованием единого входа.
+
+. Создайте или отредактируйте существующего пользователя SuiteCRM, чтобы его имя соответствовало адресу электронной почты в Azure.
+. Включите вход SAML для этого пользователя, перейдя в профиле пользователя на вкладку *Дополнительно* и отметив параметр *SAML2Authenticate*:
+
+image:image10.png[SuiteCRM SSO Users enable SAML]
+
+[start=3]
+. Возможно, вы захотите настроить роли и группы пользователей, прежде чем пользователь впервые войдет в систему.
+
+
