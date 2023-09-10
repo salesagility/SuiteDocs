@@ -64,6 +64,64 @@ image:image2.png[Настройка способа навигации]
 
 image:image3.png[Максимальное количество одновременно отображаемых записей]
 
+////
+Не отображаем раздел в руководстве.
+
+=== Configure table max height
+You are able to configure the maximum height of the tables.
+
+* Subpanel - add `maxHeight` to the subpanel definition within the metadatafiles.
+** In the example below the `maxHeight` has been changed within the `public/legacy/custom/modules/Accounts/metadata/subpaneldefs.php`
+
+```php
+        'contacts' => array(
+            'order' => 30,
+            'module' => 'Contacts',
+            'sort_order' => 'asc',
+            'maxHeight' => 1000,
+            'sort_by' => 'last_name, first_name',
+            'subpanel_name' => 'ForAccounts',
+            'get_subpanel_data' => 'contacts',
+            'add_subpanel_data' => 'contact_id',
+            'title_key' => 'LBL_CONTACTS_SUBPANEL_TITLE',
+            'top_buttons' => array(
+                array('widget_class' => 'SubPanelTopCreateAccountNameButton'),
+                array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
+            ),
+        ),
+```
+
+* Listview & Pop up Record List - add `maxHeight` to the `public/legacy/custom/modules/<Module>/listviewdefs.php` of the module
+you would like to update.
+** In the example below `Accounts` Listview `maxHeight` has been updated.
+
+```php
+'ListView' =>  [
+        'maxHeight' => 3000,
+        'sidebarWidgets' => [
+            'accounts-new-by-month' => [
+                'type' => 'chart',
+                'labelKey' => 'LBL_QUICK_CHARTS',
+                'options' => [
+                    'toggle' => true,
+                    'headerTitle' => false,
+                    'charts' => [
+                        [
+                            'chartKey' => 'accounts-new-by-month',
+                            'chartType' => 'line-chart',
+                            'statisticsType' => 'accounts-new-by-month',
+                            'labelKey' => 'ACCOUNT_TYPES_PER_MONTH',
+                            'chartOptions' => [
+                            ]
+                        ] ...
+```
+
+The default for each table is:
+
+* Subpanel & Pop up Record List - 10 Records.
+* Listview - No Set Default.
+//// 
+
 === Настройка параметров навигации напрямую в файле конфигурации
 
 Вы можете прописать любой из вышеуказанных параметров напрямую в файле `config_override.php`:
