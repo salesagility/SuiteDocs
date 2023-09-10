@@ -1,0 +1,10 @@
+---
+title: Единый вход в систему (SSO)
+weight: 60
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+=== Оглавление
+{{% children depth="3" showhidden="true" %}}
