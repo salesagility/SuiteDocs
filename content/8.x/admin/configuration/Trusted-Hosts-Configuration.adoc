@@ -1,0 +1,37 @@
+---
+Title: Trusted Hosts configuration
+weight: 50
+---
+
+:imagesdir: /images/en/user
+
+== Introduction
+
+Starting with version 8.4.2 there is a new security check to see if the host header of the request is a valid one.
+This check is performed at the start of every request to the backend.
+
+=== Configuration
+This check uses a new entry `trusted_hosts` on `public/legacy/config.php` or `public/legacy/config_override.php`, where you can define an array of regex strings for the trusted hosts, like the following:
+
+[source,php]
+----
+<?php
+...
+$sugar_config = array (
+...
+
+$sugar_config['trusted_hosts'] = ['^dev\.local$', '^localhost$'];
+
+...
+
+----
+
+=== Default/Fallback
+If no `trusted_hosts` entry is defined on `public/legacy/config.php` or `public/legacy/config_override.php`, the system will:
+
+* Parse and use the `site_url` config as one of the entries.
+* Add an entry for `localhost`
+
+
+
+
