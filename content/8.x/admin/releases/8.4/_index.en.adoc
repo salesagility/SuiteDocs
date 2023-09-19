@@ -11,6 +11,87 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
+
+
+== 8.4.2
+
+_Released 14/11/2023_
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+* We have added documentation on how to configure link:../configuration/trusted-hosts-configuration[trusted hosts].
+
+==== icon:lock[] Security
+
+* CVE: Pending - LFI to RCE Vulnerability
+* CVE: Pending - Reflected XSS Vulnerability
+* CVE: Pending - Arbitrary File Upload to RCE
+* CVE: Pending - Import XSS Vulnerability
+* CVE: Pending - Dashlet HTML Injection Vulnerability
+* CVE: Pending - PDF XSS Vulnerability
+* CVE: Pending - PDF Template Vulnerability
+* CVE: Pending - SSRF Vulnerability
+* CVE: Pending - API Introspection Vulnerability
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/367[367] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/184[#184] - Bulk Action buttons not functioning
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/359[359] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/301[#301] - Contact not showing in Activities & history subpanel
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/357[357] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/347[#347] - Validation on empty date fields
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/356[356] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/305[#305] - Issue with dropdowns not displaying correctly in listviews/dashlets
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/337[337] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/336[#336] - Lines fix for Crowdin
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/360[360] - Fix #360 - admin panel when grouping modules
+* PR: https://github.com/salesagility/SuiteCRM/pull/10253[10253] - Fix https://github.com/salesagility/SuiteCRM/issues/10252[#10252] - Google Maps Geocoded Counts not displaying properly
+* PR: https://github.com/salesagility/SuiteCRM/pull/10248[10248] - Fix https://github.com/salesagility/SuiteCRM/issues/9537[#9537] - Activity subpanel isn't working in a module with a parent_type / flex relate field
+* PR: https://github.com/salesagility/SuiteCRM/pull/10241[10241] - Fix https://github.com/salesagility/SuiteCRM/issues/9898[#9898] - Invalid cookie domain when using non-standard HTTP Port
+* PR: https://github.com/salesagility/SuiteCRM/pull/9522[9522] - Fix https://github.com/salesagility/SuiteCRM/issues/9435[#9435] - Dropdown doesn't return empty selected value
+* PR: https://github.com/salesagility/SuiteCRM/pull/10246[10246] - Fix #10246 - non-admin's outbound email link not showing
+* PR: https://github.com/salesagility/SuiteCRM/pull/10220[10220] - Fix #10220 - Add Email Body Filtering Selection
+* PR: https://github.com/salesagility/SuiteCRM/pull/10212[10212] - Fix https://github.com/salesagility/SuiteCRM/issues/10199[#10199] - PHP Fatal error: Uncaught Error: Non-static method SugarWidgetReportField::_get_column_select()
+* PR: https://github.com/salesagility/SuiteCRM/pull/10206[10206] - Fix https://github.com/salesagility/SuiteCRM/issues/10205[#10205] - Compatibility hotfix for PHP 8 in ActivitiesRelationship.php
+* PR: https://github.com/salesagility/SuiteCRM/pull/10201[10201] - Fix https://github.com/salesagility/SuiteCRM/issues/9950[#9950] editing Email settings drops TLS SSL selection
+* PR: https://github.com/salesagility/SuiteCRM/pull/10160[10160] - Fix https://github.com/salesagility/SuiteCRM/issues/10159[#10159] - Accounts - Not able to search by fax on 'Any Phone' search field
+* PR: https://github.com/salesagility/SuiteCRM/pull/10143[10143] - Fix #10143 - Update ready.php change checking of upload max filesize from > to >=
+* PR: https://github.com/salesagility/SuiteCRM/pull/10142[10142] - Fix https://github.com/salesagility/SuiteCRM/issues/10141[#10141] - Orphaned Case Attachments bug
+* PR: https://github.com/salesagility/SuiteCRM/pull/10122[10122] - Fix https://github.com/salesagility/SuiteCRM/issues/10115[#10115] - Wokflow Calculate Action broken under PHP8
+* PR: https://github.com/salesagility/SuiteCRM/pull/10114[10114] - Fix https://github.com/salesagility/SuiteCRM/pull/10114[#10114] - parameter userTime method in class TimeDate
+* PR: https://github.com/salesagility/SuiteCRM/pull/10049[10049] - Fix #10049 - Relationship::delete expects a string
+* PR: https://github.com/salesagility/SuiteCRM/pull/10028[10028] - Fix #10028 - Allow workflow to send plain text emails
+* PR: https://github.com/salesagility/SuiteCRM/pull/10027[10027] - Fix #10027 - Respect wildcard in front when searching a full name in basic search
+* PR: https://github.com/salesagility/SuiteCRM/pull/9964[9964] - Fix https://github.com/salesagility/SuiteCRM/issues/8980[#8980] - Check beanFiles for class path
+* PR: https://github.com/salesagility/SuiteCRM/pull/9881[9881] - Fix https://github.com/salesagility/SuiteCRM/issues/9880[#9880] - Error when importing currency fields with a decimal separator
+* PR: https://github.com/salesagility/SuiteCRM/pull/9524[9524] - Fix https://github.com/salesagility/SuiteCRM/issues/9440[#9440] - Forcing default null value for numeric core fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/9459[9459] - Fix https://github.com/salesagility/SuiteCRM/issues/9456[#9456] - choose email provider does not populate SMTP settings
+* PR: https://github.com/salesagility/SuiteCRM/pull/9413[9413] - Fix https://github.com/salesagility/SuiteCRM/issues/9412[#9412] - Wrong email value displayed when aborting an inline edition
+* Unify jquery versions
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+_Special thanks to everyone who reported security issues addressed in this release!_
+
+Tanish Mahajan, navsec, Christoph Timm, nam-no, Shahzaib Ali Khan, Alex Bernier
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors abuzarfaris gunnicom SinergiaCRM chris001 TwizzX17 pablonr11 pgorod cripton gpibarra markbond1007 isleshocky77 cyb456 sweettbug3 TimmiORG lionfaris sasotech dkeso horus68 %}}
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 8.4.1
 
 _Released 03/10/2023_
