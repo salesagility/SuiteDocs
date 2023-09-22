@@ -77,12 +77,11 @@ It is highly recommended that you update the webroot or configure vhost to point
 {{% /notice %}}
 
 
-On your vhost configuration you need something like:
+Update your vhost configuration to add the following:
 
 [source,xml]
 ----
 <VirtualHost *:80>
-    ...
 
     DocumentRoot /<path-to-suite>/public
     <Directory /<path-to-suite>/public>
