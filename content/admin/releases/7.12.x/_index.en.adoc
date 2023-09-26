@@ -8,6 +8,34 @@ weight: 9870
 :toclevels: 1
 :icons: font
 
+== 7.12.13
+
+_Released 03/10/2023_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:lock[] Security
+
+* CVE: Pending XSS Vulnerability
+* CVE: https://cwe.mitre.org/data/definitions/284.html[ CWE-284: Improper Access Control]
+* CVE: Pending SQL Injection Vulnerability
+
+=== icon:heart[] Community
+
+_Special thanks to everyone who reported security issues addressed in this release!_
+
+Josh Lees & Robert Stokes(Illume Security), Zilio Nicolas from CrowdStrike
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+
 == 7.12.12
 
 _Released 11/07/2023_
