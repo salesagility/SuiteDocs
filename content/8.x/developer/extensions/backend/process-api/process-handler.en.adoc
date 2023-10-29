@@ -20,7 +20,7 @@ This page will try to provide a step-by-step guide on how to add a Process Handl
 As an implementation example we will use a ProcessHandler used for the `updateValueBackend` logic, as described on the link:../../../frontend/logic/field-logic/fe-extensions-update-value-backend[Update Field Value Based on a backend calculation] guide.
 
 
-== 3. Adding a Backend Process Handler
+== 2. Adding a Backend Process Handler
 
 
 {{% notice note %}}
@@ -30,7 +30,7 @@ When making these changes be sure to make them within an extension on the 'exten
 In the following example we are going to use the existing `extensions/defaultExt` to add our custom code.
 
 
-=== 3.1 Steps to add a new process handler to extensions
+=== 2.1 Steps to add a new process handler to extensions
 
 {{% notice info %}}
 As a best practice extension backend code should be added to `extensions/<your-extension>/backend/` or `extensions/<your-extension>/modules/`. For `extensions/<your-extension>/backend/` the subfolder should follow the same structure as used in `core/backend`
@@ -49,7 +49,7 @@ As a best practice extension backend code should be added to `extensions/<your-e
 
 
 
-=== 3.2 Process handler implementation
+=== 2.2 Process handler implementation
 
 To add a `ProcessHandler` the class needs to implement the `ProcessHandlerInterface`. Plus for it to be matched with a request, it needs the following:
 
@@ -189,14 +189,14 @@ class CaseCalculatePriority implements ProcessHandlerInterface
 }
 ----
 
-==== 3.2.1 Process Handler implementation
+==== 2.2.1 Process Handler implementation
 
 
-===== 3.2.1.1 getProcessType()
+===== 2.2.1.1 getProcessType()
 
 This method should return the identifier of the process the handler implements. The same that is defined on the metadata logic `key` entry. In our example: `case-calculate-priority`
 
-===== 3.2.1.2 requiredAuthRole()
+===== 2.2.1.2 requiredAuthRole()
 
 This method defines if the auth role that is required to have access to the process.
 
@@ -204,7 +204,7 @@ This method defines if the auth role that is required to have access to the proc
 - `'ROLE_ADMIN'` means that the user needs to be logged in as an admin user to have access to this process.
 - `''` means that a non-authenticated user can access the process.
 
-===== 3.2.1.3 getRequiredACLs()
+===== 2.2.1.3 getRequiredACLs()
 
 This method defines the SuiteCRM ACLs that are required to have access to the process.
 
@@ -424,13 +424,13 @@ The following examples are taken from the existing core code.
 
 
 
-===== 3.2.1.4 validate()
+===== 2.2.1.4 validate()
 
 This method is where we should add the code to validate the process inputs.
 
 If the inputs aren't valid it should throw a `InvalidArgumentException`
 
-===== 3.2.1.4 run()
+===== 2.2.1.4 run()
 
 This method is where we add the code to run the logic that our ProcessHandler is supposed to do.
 
