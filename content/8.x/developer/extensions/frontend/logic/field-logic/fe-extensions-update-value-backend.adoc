@@ -506,10 +506,10 @@ $process->setData($responseData);
 
 ----
 
-=== 3. More Info on ProcessHandlers
+=== 3.3 More Info on ProcessHandlers
 
 For more information how to create a process handler see the link:../../../../backend/process-api/process-handler[Adding a Process Handler] guide.
 
-== 4. More examples
+=== 3.4 More examples
 
 For more information on different field logic see link:../[here.]
