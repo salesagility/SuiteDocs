@@ -22,14 +22,13 @@ _Released 14/11/2023_
 
 ==== icon:lock[] Security
 
-* CVE: Pending - LFI to RCE Vulnerability
-* CVE: Pending - Reflected XSS Vulnerability
-* CVE: Pending - Arbitrary File Upload to RCE
-* CVE: Pending - Import XSS Vulnerability
-* CVE: Pending - Dashlet HTML Injection Vulnerability
-* CVE: Pending - PDF XSS Vulnerability
-* CVE: Pending - PDF Template Vulnerability
-* CVE: Pending - SSRF Vulnerability
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6130[CVE-2023-6130] - LFI to RCE Vulnerability
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6128[CVE-2023-6128] - Reflected XSS Vulnerability
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6131[CVE-2023-6131] - Arbitrary File Upload to RCE
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6127[CVE-2023-6127] - Import XSS Vulnerability
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6126[CVE-2023-6126] - Dashlet HTML Injection Vulnerability
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6125[CVE-2023-6125] - PDF XSS Vulnerability
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6124[CVE-2023-6124] - SSRF Vulnerability
 
 ==== icon:star[] Enhancements
 
