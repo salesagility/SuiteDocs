@@ -1,5 +1,5 @@
 ---
-title: "Update field value based on a backend calculation"
+title: "Show/hide field based on a backend calculation"
 weight: 40
 ---
 
@@ -9,44 +9,40 @@ weight: 40
 
 == 1. Introduction
 
-The `updateValueBackend` field logic allows field values to be calculated on the backend.
+The `displayTypeBackend` field logic allows to have the show/hide logic done on the backend.
 
-When the conditions for the dependencies on other fields are met, a request is sent to the backend. The value resulting from that backend call is going to be set on the field.
+When the conditions for the dependencies on other fields are met, a request is sent to the backend. The value resulting from that backend call is going to be user to hide / show the field.
 
 This allows for more complex calculations. Like calculations where you need values from multiple modules or from external sources.
 
-This guide describes the steps to setup a backend calculation for a field.
-
-{{% notice info %}}
-At the moment this does not work for relate fields
-{{% /notice %}}
+This guide describes the steps to setup a backend calculation to show/hide a field.
 
 === 1.1 Example scenario
 
 As an example this guide is going to use the following scenario.
 
-On the `Cases` module we want to set the `priority` field based on the values from the `type` and the `subject` (name) fields.
+On the `Cases` module we want to show/hide the `priority` field based on the values from the `type` and the `subject` (name) fields.
 
-The rules for setting the `priority` are the following:
+The rules for showing/hiding are the `priority` are the following:
 
-. High Priority - Set priority to High Priority when:
-** When the `type` field has value `User`
+. Show priority on Error
+** When the `type` field has the value `User`
 ** and the `name` field contains `Error`. (the `Subject` is the same as `name`)
-** set the `priority` to `High`
+** Show `priority`
 
-. Medium Priority - Set priority to Medium Priority when:
-** When the `type` field has value `User`
+. Show priority on Warning
+** When the `type` field has the value `User`
 ** and the `name` field contains `Warning`. (the `Subject` is the same as `name`)
-** set the `priority` to `Medium`
+** Show `priority`
 
-. Low Priority - Set priority to Low Priority when:
-.. When the `type` field has value `User`
+. Hide priority otherwise:
+.. When the `type` field has the value `User`
 .. and the `name` field does not contain `Warning` nor `Error`. (the `Subject` is the same as `name`)
-.. set the `priority` to `Low`
+.. Hide `priority`
 
 The following gif shows an example of what we want:
 
-image:Logic-updateValueBackend-example.gif[Backend Value Update Example]
+image:displayTypeBackend-default-hide-example.gif[Backend Calculated Display Type Example]
 
 == 2. Logic Metadata definition
 
@@ -75,6 +71,8 @@ In the following example we are going to add them to the `Cases` module `detailv
 
 The following were the changes applied in order to have the logic triggering when we want.
 
+One thing to note on the following definition is that the field is configured to be hidden by default, which is archived by setting the `'display' => 'none'`.
+
 From:
 [source,php]
 ----
@@ -101,42 +99,40 @@ To:
           ),
           1 =>
           [
-              'name' => 'priority',
-              'logic' => [
-                  'case-calculate-priority' => [
-                      'key' => 'updateValueBackend',
-                      'modes' => ['edit', 'create'],
-                      'params' => [
-                          'fieldDependencies' => [
-                              'type',
-                              'name',
-                          ],
-                          'process' => 'case-calculate-priority',
-                          'activeOnFields' => [
-                              'type' => ['User'],
-                              'name' => [
-                                  ['operator' => 'not-empty' ]
-                              ]
-                          ]
-                      ]
-                  ],
-              ]
+            'name' => 'priority',
+            'display' => 'none',
+            'logic' => [
+                'calculate-priority-display' => [
+                    'key' => 'displayTypeBackend',
+                    'modes' => ['detail', 'edit', 'create'],
+                    'params' => [
+                        'fieldDependencies' => [
+                            'type',
+                            'name',
+                        ],
+                        'process' => 'calculate-priority-display',
+                        'activeOnFields' => [
+                            'type' => ['User'],
+                            'name' => [
+                                ['operator' => 'not-empty' ]
+                            ]
+                        ]
+                    ]
+                ],
           ],
         ),
 
 ----
 
 
-
-
 ==== 2.2.1 Logic Properties description
 
 * Key
-. The `key` within the named `logic` array is stating which logic type will be used. To use backend logic calculations we need to set `updateValueBackend`.
+. The `key` within the named `logic` array is stating which logic type will be used. To use backend logic calculations we need to set `displayTypeBackend`.
 
 * Modes
-- Modes are view modes we want our `updateValueBackend` logic to take effect on, in this example we just want on `edit` and `create`.
-Another example of a `mode` that could be selected could be `list` or `detail` for example.
+- Modes are view modes we want our `displayTypeBackend` logic to take effect on, in this example we want on `detail`, `edit` and `create`.
+Another example of a `mode` that could be selected could be `list` for example.
 
 ===== Params
 
@@ -161,7 +157,7 @@ In this example we depend on `type` and `name` as they are the two fields that t
 
 ===== Active on Fields
 
-`activeOnFields` is where you declare the field/value conditions that trigger the logic to run. In this case call to the backend to calculate the value.
+`activeOnFields` is where you declare the field/value conditions that trigger the logic to run. In this case call to the backend to determine whether to show or hide the field.
 
 As stated on the scenario conditions we want:
 
@@ -202,7 +198,7 @@ Otherwise, nothing will happen, i.e. no request is going to be made to the backe
 
 The following gif shows the requests that are done and when.
 
-image:Logic-updateValueBackend-backend-requests-example.gif[Backend Value Update backend requestsExample]
+image:displayTypeBackend-calls-example.gif[Backend Value Update backend requestsExample]
 
 
 == 3. Backend Handler
@@ -212,9 +208,9 @@ image:Logic-updateValueBackend-backend-requests-example.gif[Backend Value Update
 When making these changes be sure to make them within an extension on the 'extensions' directory, e.g.: 'extensions/<my-extension>/...'
 {{% /notice %}}
 
-After defining the logic metadata we need to work on the backend code that is going to handle the requests done to calculate the value.
+After defining the logic metadata we need to work on the backend code that is going to handle the requests done.
 
-The `updateValueBackend` logic uses the `Process` api. The requests done to the `Process` api are handler by php classes implementing the `ProcessHandlerInterface`
+The `displayTypeBackend` logic uses the `Process` api. The requests done to the `Process` api are handler by php classes implementing the `ProcessHandlerInterface`
 
 In the following example we are going to use the existing `extensions/defaultExt` to add our custom code.
 
@@ -224,13 +220,13 @@ In the following example we are going to use the existing `extensions/defaultExt
 . Create the folder `extensions/defaultExt/modules/Cases/Service/Fields`
 .. This is a best practice not a hard requirement
 .. As long as you add under the `extensions/<your-ext>/backend` or `extensions/<your-ext>/modules` it should work.
-. Within that folder create the `CaseCalculatePriority.php`, i.e. `extensions/defaultExt/modules/Cases/Service/Fields/CaseCalculatePriority.php`
+. Within that folder create the `CaseCalculatePriorityDisplay.php`, i.e. `extensions/defaultExt/modules/Cases/Service/Fields/CaseCalculatePriorityDisplay.php`
 .. If you are not using the recommended path, make sure that the `namespace` follows the one you are using
 .. On our example the namespace is `namespace App\Extension\defaultExt\modules\Cases\Service\Fields;`
-. On `CaseCalculatePriority.php` add the code on the snippet on link:./#_3_2_process_handler_implementation[3.2 Process handler implementation] section
+. On `CaseCalculatePriorityDisplay.php` add the code on the snippet on link:./#_3_2_process_handler_implementation[3.2 Process handler implementation] section
 . Re-set permissions (may not be needed, this will depend on your configuration)
 . Run `php bin/console cache:clear` or delete the contents of the cache folder under the root of the project
-(optional) If you have some kind of php cache like opcache or APCu, you will need to re-start apache.
+. (optional) If you have some kind of php cache like opcache or APCu, you will need to re-start apache.
 
 === 3.2 Process handler implementation
 
@@ -238,7 +234,7 @@ A class is recognized as a `ProcessHandler` if it implements the `ProcessHandler
 
 Furthermore, for it to be matched with request made by the logic metadata we've defined, it needs the following:
 
-- Set the `ProcessType` to be the same as the value that was defined on the metadata, in this example it is `case-calculate-priority`
+- Set the `ProcessType` to be the same as the value that was defined on the metadata, in this example it is `calculate-priority-display`
 - On the response data include a `value` entry that is the value that is going to be used to update the field value on the frontend
 
 The following snippet contains a sample implementation of the process handler for our scenario:
@@ -253,11 +249,11 @@ use ApiPlatform\Core\Exception\InvalidArgumentException;
 use App\Process\Entity\Process;
 use App\Process\Service\ProcessHandlerInterface;
 
-class CaseCalculatePriority implements ProcessHandlerInterface
+class CaseCalculatePriorityDisplay implements ProcessHandlerInterface
 {
     protected const MSG_OPTIONS_NOT_FOUND = 'Process options are not defined';
     protected const MSG_INVALID_TYPE = 'Invalid type';
-    public const PROCESS_TYPE = 'case-calculate-priority';
+    public const PROCESS_TYPE = 'calculate-priority-display';
 
     /**
      * CaseCalculatePriority constructor.
@@ -333,6 +329,7 @@ class CaseCalculatePriority implements ProcessHandlerInterface
         if ($type !== 'User') {
             throw new InvalidArgumentException(self::MSG_INVALID_TYPE);
         }
+
     }
 
     /**
@@ -345,13 +342,13 @@ class CaseCalculatePriority implements ProcessHandlerInterface
         $type = $options['record']['attributes']['type'] ?? '';
         $name = $options['record']['attributes']['name'] ?? '';
 
-        $value = 'P3';
+        $value = 'none';
         if (strpos(strtolower($name), 'warning') !== false) {
-            $value = 'P2';
+            $value = 'show';
         }
 
         if (strpos(strtolower($name), 'error') !== false) {
-            $value = 'P1';
+            $value = 'show';
         }
 
         $responseData = [
@@ -370,7 +367,7 @@ class CaseCalculatePriority implements ProcessHandlerInterface
 
 **getProcessType()**
 
-In this we need to return the id of our process, the same that is defined on the metadata logic `key` entry. In our example: `case-calculate-priority`
+In this we need to return the id of our process, the same that is defined on the metadata logic `key` entry. In our example: `calculate-priority-display`
 
 **requiredAuthRole()**
 
@@ -421,7 +418,7 @@ And since our business logic states that this should only run if the `type` is `
 
 This is the method that actually does what the process is supposed to do and returns the appropriate response.
 
-Please have in mind that for the `updateValueBackend` logic, the response always needs to contain `value` entry like the following:
+Please have in mind that for the `displayTypeBackend` logic, the response always needs to contain `value` entry like the following:
 
 [source,php]
 ----
@@ -449,7 +446,7 @@ To get the data sent in the request you can call the `getOptions` method of the 
 $options = $process->getOptions();
 ----
 
-The `updateValueBackend` logic, besides other data, sends the current data on the record.
+The `displayTypeBackend` logic, besides other data, sends the current data on the record.
 It sends a `record` entry that follows the standard format for records, the same one that is used on the api to get a record.
 The field values of the record are located within the `attributes` entry:
 
@@ -471,28 +468,28 @@ $type = $attributes['type'];
 ----
 
 
-**Calculate the priority according to the name**
+**Calculate the priority display type according to the name**
 
 The rules in our example define that the priority is going to change depending on the value of the name field.
-For that we get the value of the name field from the record, then according to its contents we calculate the priority to set.
+For that we get the value of the name field from the record, then according to its contents we calculate if priority should show or hide.
 
 [source,php]
 ----
 $name = $options['record']['attributes']['name'] ?? '';
 
-$value = 'P3';
+$value = 'none';
 if (strpos(strtolower($name), 'warning') !== false) {
-    $value = 'P2';
+    $value = 'show';
 }
 
 if (strpos(strtolower($name), 'error') !== false) {
-    $value = 'P1';
+    $value = 'show';
 }
 ----
 
-**Set the priority value**
+**Set the priority display type**
 
-Finally, for all of this to work we set the value that we want to use for the priority on the response data.
+Finally, for all of this to work we set the display type for the priority on the response data.
 
 [source,php]
 ----
@@ -506,10 +503,10 @@ $process->setData($responseData);
 
 ----
 
-=== 3.3 More Info on ProcessHandlers
+=== 3. More Info on ProcessHandlers
 
 For more information how to create a process handler see the link:../../../../backend/process-api/process-handler[Adding a Process Handler] guide.
 
-=== 3.4 More examples
+== 4. More examples
 
 For more information on different field logic see link:../[here.]

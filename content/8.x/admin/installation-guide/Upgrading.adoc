@@ -446,11 +446,12 @@ The issue is that when upgrading SuiteCRM 8 for a second time (i.e if you had up
 then you will have come across the following error after having ran:
 `./bin/console suitecrm:app:upgrade -t "<version>"`
 
-```
+[source]
+----
 CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<pathtoSuiteCRM8>/cache/prod/ContainerZatgzYy/getConsole_ErrorListenerService.php'
 (include_path='/<pathtoSuiteCRM8>/public/legacy/include/..:.:/usr/share/php')
 ["exception" => Symfony\Component\ErrorHandler\Error\FatalError^ { …}]
-```
+----
 
 This issue is a result of Symfony cache clearing but then being called right after.
 

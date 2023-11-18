@@ -8,13 +8,16 @@ weight: 80
 === How to Configure Filtering on Subpanels?
 
 To allow filtering on a subpanel, the following statement needs to be added to the `subpaneldefs.php` file:
-```php
+
+[source,php]
+----
 ['widget_class' => 'SubPanelTopFilterButton'],
-```
+----
 The following example shows where this has been added to the `Accounts` -> `Contacts` Subpanel within the
 `public/legacy/Accounts/metadata/subpaneldefs.php` file:
 
-```php
+[source,php]
+----
         'contacts' => array(
             'order' => 30,
             'module' => 'Contacts',
@@ -30,7 +33,7 @@ The following example shows where this has been added to the `Accounts` -> `Cont
                 array('widget_class' => 'SubPanelTopSelectButton', 'mode' => 'MultiSelect')
             ),
         ),
-```
+----
 
 Once this has been added, run `Repair and Rebuild` within the `Admin`->`Repair` menu.
 
