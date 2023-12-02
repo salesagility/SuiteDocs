@@ -10,7 +10,9 @@ This enhancement is only available in SuiteCRM from version 7.11 onwards.
 :imagesdir: /images/en/admin/ElasticSearch
 :experimental:
 
-Go to to admin panel, scroll down to the Search settings, and open the Elasticsearch setting page.
+== Configure the Elasticsearch connection
+
+Go to the admin panel, scroll down to the Search settings, and open the Elasticsearch setting page.
 Enable Elasticsearch from the checkbox and fill the host, user and password fields.
 Simply leave user and password blank if you have anonymous access enabled.
 
@@ -24,7 +26,23 @@ You can use btn:[Test connection] to see if the current configuration is working
 
 Once you are satisfied with your settings hit btn:[Save].
 
-After having saved, perform a full indexing by pressing btn:[Schedule full indexing].
+== Setup the scheduled task
+
+Go to the admin panel, open Scheduler. On the side panel click "Create Scheduler". 
+In the Jobs dropdown, select "Elasticsearch indexer". In Job Name, enter a self chosen title, for example "Elasticsearch", hit btn:[Save].
+
+As AOD Lucene Indexing will no longer be used, edit the following entries in the Scheduler list, set status to "inactive", hit btn:[Save]:
+
+* Perform Lucene Index
+* Optimise AOD Index
+
+Make sure that you have correctly configured the crontab configuration, as described at the bottom of the Schedulers page.
+
+== Initial indexing
+
+After having setup the scheduled task, perform a full indexing by pressing btn:[Schedule full indexing].
+
+== Switch the search engine to Elasticsearch
 
 Now go to the Search Settings, and set `Elasticsearch Engine` as the search engine.
 You can customize the modules that are used for indexing in the modules section.
