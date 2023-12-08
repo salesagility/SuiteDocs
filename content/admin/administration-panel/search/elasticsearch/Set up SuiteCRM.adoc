@@ -28,8 +28,14 @@ Once you are satisfied with your settings hit btn:[Save].
 
 == Setup the scheduled task
 
+The Elasticsearch data is updated each time a record is created, changed, deleted and imported. Nevertheless a scheduled task is required to enable the initial indexing and maintenance of the search engine.
+
 Go to the admin panel, open Scheduler. On the side panel click "Create Scheduler". 
-In the Jobs dropdown, select "Elasticsearch indexer". In Job Name, enter a self chosen title, for example "Elasticsearch", hit btn:[Save].
+In the Jobs dropdown, select "Elasticsearch indexer". 
+
+* At Job Name, enter a self chosen title, for example "Elasticsearch"
+* At Interval you spefify the frequency at which the job should run. A frequency of about once a day should be sufficient. To have the task run at 4 o'clock at night, click "Advanced Options" and enter 0 at min and 4 at hrs, leave date, mo, day as they are.
+* hit btn:[Save].
 
 As AOD Lucene Indexing will no longer be used, edit the following entries in the Scheduler list, set status to "inactive", hit btn:[Save]:
 
@@ -40,7 +46,7 @@ Make sure that you have correctly configured the crontab configuration, as descr
 
 == Initial indexing
 
-After having setup the scheduled task, perform a full indexing by pressing btn:[Schedule full indexing].
+After having setup the scheduled task, perform a full indexing by going back to the Elastisearch setting page and pressing btn:[Schedule full indexing]. Independently to the configured frequency for the Elasticsearch Job, this task starts running within a minute, provided that the crontab has been configured correctly.
 
 == Switch the search engine to Elasticsearch
 
