@@ -1,0 +1,100 @@
+---
+title: "8.5 Releases"
+weight: 9850
+aliases:
+  - /8.x/admin/releases/8.5/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.5.0
+
+_Released 13/12/2023_
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:server[] System Requirement Changes
+
+{{% notice warning %}}
+For development requirements we have upgraded Angular and all dependencies to 16.
+{{% /notice %}}
+
+Extensions will have to be rebuilt and updated.
+
+==== icon:code[] Backward Incompatible Changes
+
+`defaultExt` will be updated on upgrade but a `Repair and Rebuild` must be run as per the warnings in the console.
+
+To visit the SuiteCRM 8.5.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
+
+==== icon:star[] Enhancements
+
+===== Cache Upgrade
+
+We have added Symfony caching to backend metadata calls. On average this reduces the app metadata graphql calls from 429ms to 323ms.
+
+We have applied several actions that reset the cache these include:
+
+* Saving in User Profile
+* Applying Menu Configuration changes
+* Saving Password Management changes
+* etc...
+
+If there is any reason this might not be working, cache can also be reset by running a `Repair and Rebuild` from within
+the `Admin`->`Repair` menu.
+
+===== Quick Filters
+
+Quick Filters have now been added to SuiteCRM 8! Quick Filters can be added to a modules ListView to allow easy access
+of switching between frequently used filters.
+
+To add a Quick Filter, go to a module listview and select the `Filter` button.
+
+Then fill in all the relevant criteria for the filter. In the example below we want to show every account from Denver.
+
+image:CityDenverFilter.png[City of Denver Filter]
+
+After setting the criteria, select a name for the filter, then select the `Quick Filters` checkbox and then click `Save`.
+
+image:DenverListView.png[Denver Listview]
+
+Your new filter will now display beside the filter button with other created quick filters.
+
+To swap between filters just select that button.
+
+image:SanJoseFilter.png[San Jose Filter]
+
+To see more about Quick Filters see link:../../../features/quick-filters.adoc[here.]
+
+===== Mobile Adjustments
+
+We have made some minor adjustments to the mobile view, where Insights are now disabled by default.
+
+image:mobile-adjustments.png[Mobile Adjustments]
+
+When Insights are selected it will now show instead of the listview.
+
+image:Mobile-Insights.png[Mobile Insights]
+
+To return to listview, you can disable insights.
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
