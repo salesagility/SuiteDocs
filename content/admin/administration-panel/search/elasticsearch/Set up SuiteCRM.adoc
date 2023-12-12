@@ -26,9 +26,20 @@ You can use btn:[Test connection] to see if the current configuration is working
 
 Once you are satisfied with your settings hit btn:[Save].
 
+== Initial indexing
+
+After having saved, perform a full indexing by opening the Elastisearch setting page again and now pressing btn:[Schedule full indexing]. This task starts running within a minute, provided that the crontab has been configured correctly.
+
+== Switch the search engine to Elasticsearch
+
+Now go to the Search Settings, and set `Elasticsearch Engine` as the search engine.
+You can customize the modules that are used for indexing in the modules section.
+
+image:SearchSettingsForElasticsearch.png["Configure the search Settings"]
+
 == Setup the scheduled task
 
-The Elasticsearch data is updated each time a record is created, changed, deleted and imported. Nevertheless a scheduled task is required to enable the initial indexing and maintenance of the search engine.
+The Elasticsearch data is updated each time a record is created, changed, deleted and imported. Nevertheless a scheduled task keeps the elastic data in sync with the SuiteCRM database.
 
 Go to the admin panel, open Scheduler. On the side panel click "Create Scheduler". 
 In the Jobs dropdown, select "Elasticsearch indexer". 
@@ -43,14 +54,3 @@ As AOD Lucene Indexing will no longer be used, edit the following entries in the
 * Optimise AOD Index
 
 Make sure that you have correctly configured the crontab configuration, as described at the bottom of the Schedulers page.
-
-== Initial indexing
-
-After having setup the scheduled task, perform a full indexing by going back to the Elastisearch setting page and pressing btn:[Schedule full indexing]. Independently to the configured frequency for the Elasticsearch Job, this task starts running within a minute, provided that the crontab has been configured correctly.
-
-== Switch the search engine to Elasticsearch
-
-Now go to the Search Settings, and set `Elasticsearch Engine` as the search engine.
-You can customize the modules that are used for indexing in the modules section.
-
-image:SearchSettingsForElasticsearch.png["Configure the search Settings"]
