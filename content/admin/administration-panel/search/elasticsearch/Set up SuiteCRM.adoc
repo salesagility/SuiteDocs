@@ -43,8 +43,9 @@ The Elasticsearch data is updated each time a record is created, changed, delete
 
 Go to the admin panel, open Scheduler. Check if a Task with a name like "Perform Elasticsearch index" already exists.
 
-If no such tusk exists, then on the side panel click "Create Scheduler". In the Jobs dropdown, select "Elasticsearch indexer". 
+If no such task exists, then on the side panel click "Create Scheduler". 
 
+* In the Jobs dropdown, select "Elasticsearch indexer"
 * At Job Name, enter a self chosen title, for example "Perform Elasticsearch index"
 * At Interval you spefify the frequency at which the job should run. A frequency of about once a day should be sufficient. To have the task run at 4 o'clock at night, click "Advanced Options" and enter 0 at min and 4 at hrs, leave date, mo, day as they are.
 * hit btn:[Save].
