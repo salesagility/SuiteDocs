@@ -1,0 +1,122 @@
+---
+title: "Frontend extension - Migrate to SuiteCRM 8.5+"
+weight: 10
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/migration
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../../../developer/introduction[here].
+{{% /notice %}}
+
+
+== 1. Intro
+
+The following guide explains how to migrate extensions created in a version prior to SuiteCRM 8.5. So they can work on SuiteCRM 8.5+.
+
+== 2. Updated angular-architects/module-federation lib
+
+With the upgrade to angular v16 the version of the `@angular-architects/module-federation` lib has also been updated. This is the main lib required for front end extensions to work.
+
+This new version of `@angular-architects/module-federation` requires a configuration update. Which also means that the previously built extensions will have to be re-built, i.e. by running `yarn run build:defaultExt` (for the defaultExt, or something similar for other custom extensions).
+
+
+== 3. Updating defaultExt extension
+
+For `defaultExt` the configuration update is done automatically upon upgrading to SuiteCRM 8.5+. The only steps missing after that are:
+
+- Run `yarn run build:defaultExt`
+- Re-enable the extension in `extensions/defaultExt/config/extension.php`
+
+
+== 4. Updating custom extensions (other than defaultExt)
+
+To update a custom extension 3 files need to be updated:
+
+- extensions/your-extension/config/extension.php
+- extensions/your-extension/app/tsconfig.app.json
+- extensions/your-extension/app/webpack.config.js
+
+{{% notice info %}}
+If you have doubts on any of the following updates look at the same files under the `extensions/defaultExt` as an example.
+{{% /notice %}}
+
+
+=== 4.1 Update extensions/your-extension/config/extension.php
+
+In `remoteEntry` replace `./` with `../`. example:
+
+From `'remoteEntry' => './extensions/your-extension/remoteEntry.js',`
+
+to `'remoteEntry' => '../extensions/your-extension/remoteEntry.js',`
+
+
+=== 4.2 Update extensions/your-extension/app/tsconfig.app.json
+
+In the `target` entry replace `es2018` with `es2022`. In the end the file should look something similar to:
+
+[source,json]
+----
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/app",
+    "target": "es2022",
+    "types": []
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}
+----
+
+=== 4.3 Update extensions/your-extension/app/webpack.config.js
+
+*4.3.1 Add `experiments` entry*
+
+Before `plugins` add:
+
+[source,json]
+----
+  experiments: {
+    outputModule: true
+  },
+  plugins: [
+----
+
+*4.3.2 Update `library` entry*
+
+Replace:
+[source,json]
+----
+      library: {
+        type: 'window',
+        name: 'defaultExt',
+      },
+----
+
+with:
+
+[source,json]
+----
+      library: {
+        type: "module",
+      },
+----
+
+
+*4.3.3 Update libraries under `shared` entry*
+
+Update library versions in `shared`. Copy or use the `shared` entry in `extensions/defaultExt/app/webpack.config.js` as an example.
+
+=== 4.4 Re-build extension
+
+After updating the configuration run the build command which, depending on your configuration, could be similar to `yarn run build:<yourExtension>`.
+
+Your code may need to be updated, depending on the dependencies you have on core code.
+
