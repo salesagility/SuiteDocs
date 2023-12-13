@@ -23,7 +23,7 @@ _Released 13/12/2023_
 ==== icon:server[] System Requirement Changes
 
 {{% notice warning %}}
-Angular version has been updated to v16. For development purposes you need to update your dependencies See the SuiteCRM 8.5.x Compatibility Matrix please see link:../../compatibility-matrix/[here.]
+Angular version has been updated to v16. For development purposes you will need to update your dependencies. Please see the SuiteCRM 8.5.x Compatibility Matrix link:../../compatibility-matrix/[here.]
 {{% /notice %}}
 
 
@@ -33,7 +33,7 @@ Angular version has been updated to v16. For development purposes you need to up
 
 With the upgrade to angular v16 the version of the `@angular-architects/module-federation` lib has also been updated.
 
-Previously built extensions will need to be updated please read the link:../../../developer/extensions/frontend/migration/8.5[Frontend extension - Migrate to SuiteCRM 8.5+] guide for information on how to upgrade.
+Previously built extensions will need to be updated. Please read the link:../../../developer/extensions/frontend/migration/8.5[Frontend extension - Migrate to SuiteCRM 8.5+] guide for information on how to upgrade.
 
 
 ==== icon:star[] Enhancements
@@ -42,7 +42,7 @@ Previously built extensions will need to be updated please read the link:../../.
 
 We have added Symfony caching to backend metadata calls. On average this reduces the app metadata graphql calls from 429ms to 323ms.
 
-We have applied several actions that reset the cache these include:
+We have applied several actions that reset the cache which include:
 
 * Saving in User Profile
 * Applying Menu Configuration changes
@@ -56,26 +56,12 @@ the `Admin`->`Repair` menu.
 
 Quick Filters have now been added to SuiteCRM 8!
 
-Quick Filters can be added to a modules ListView to allow easy access
-of switching between frequently used filters.
-
-To add a Quick Filter, go to a module listview and select the `Filter` button.
-
-Then fill in all the relevant criteria for the filter. In the example below we want to show every account from Denver.
-
-image:CityDenverFilter.png[City of Denver Filter]
-
-After setting the criteria, select a name for the filter, then select the `Quick Filters` checkbox and then click `Save`.
-
-image:DenverListView.png[Denver Listview]
-
-Your new filter will now display beside the filter button with other created quick filters.
-
-To swap between filters just select that button.
-
-image:SanJoseFilter.png[San Jose Filter]
+Quick Filters are new option on list view saved filters. They allow easy access to filters and easy switching between frequently used filters (as depicted on the following gif).
 
 To learn more about see the link:../../../features/quick-filters[Quick Filters documentation]
+
+image:quick-filter-demo-docs.gif[Quick Filters Demo]
+
 
 ===== Mobile Adjustments
 
