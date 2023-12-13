@@ -5,6 +5,16 @@ weight: 50
 
 :imagesdir: /images/en/8.x/user/features/
 
+=== Intro
+
+{{% notice info %}}
+This feature is available from version SuiteCRM 8.5 onwards
+{{% /notice %}}
+
+Quick Filters are new option on list view saved filters. They allow easy access to filters and easy switching between frequently used filters (as depicted on the following gif).
+
+image:quick-filter-demo-docs.gif[Quick Filters Demo]
+
 === How to add Quick Filters
 
 To add a new Quick Filter, go to the module's listview and select the `Filter` Button.
@@ -20,6 +30,8 @@ Then add a name for the filter, check the `Quick Filter` checkbox and save.
 It will then return the results of the search.
 
 image:Trait-Opp-Search.png[Trait Search]
+
+Your new filter will now display beside the filter button with other created quick filters.
 
 You can remove the filter by either selecting the `x` on the filter button or re-selecting the new filter button created.
 
