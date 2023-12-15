@@ -17,10 +17,10 @@ available to you.
 
 == Global Search
 
-The global search functionality in SuiteCRM is a powerful tool that allows 
-you to search for records across all modules available in your CRM system. 
-This means that you can easily find information related to your customers, 
-leads, opportunities, and other records in a single search, without having 
+The global search functionality in SuiteCRM is a powerful tool that allows
+you to search for records across all modules available in your CRM system.
+This means that you can easily find information related to your customers,
+leads, opportunities, and other records in a single search, without having
 to navigate through each module individually.
 
 image:38Search.png[title="Global Search"]
@@ -29,9 +29,9 @@ Once you have entered your search term, you can press the return key or
 click the magnifying glass/search icon. This will return records that
 match the search criteria and categorise them by the modules available.
 
-For example, if you're searching for a specific customer, the search results 
-will show all records related to that customer, such as their contact 
-information, account details, opportunities, cases, and more. You can then 
+For example, if you're searching for a specific customer, the search results
+will show all records related to that customer, such as their contact
+information, account details, opportunities, cases, and more. You can then
 click on the relevant record to view its details or take further action.
 
 image:39Search.png[title="Global Search results"]
@@ -112,25 +112,26 @@ specified in the saved search.
 image:198Saved_search.png[title="Saved searches"]
 
 {{% notice note %}}
-SuiteCRM also provides System Administrators with the ability to modify 
-which fields are searchable in Advanced Search within Studio. Advanced 
-Search allows users to perform more complex searches by filtering records 
+SuiteCRM also provides System Administrators with the ability to modify
+which fields are searchable in Advanced Search within Studio.
+{{% /notice %}}
+
+Advanced Search allows users to perform more complex searches by filtering records
 based on multiple criteria and specific fields.
 
-By default, SuiteCRM includes a set of searchable fields for each module. 
-However, the System Administrator can modify this list and add or remove 
-fields based on the specific needs of your business. For example, you may 
-want to add custom fields to the list so that users can search for records 
+By default, SuiteCRM includes a set of searchable fields for each module.
+However, the System Administrator can modify this list and add or remove
+fields based on the specific needs of your business. For example, you may
+want to add custom fields to the list so that users can search for records
 based on unique criteria that are not included in the default set.
 
-To modify which fields are searchable in Advanced Search, the System Administrator 
-can navigate to Studio and access the module's Layouts section. From there, 
-they can select the Search layout and add or remove fields as needed. Changes 
-made to the Search layout will affect the search options available to users 
+To modify which fields are searchable in Advanced Search, the System Administrator
+can navigate to Studio and access the module's Layouts section. From there,
+they can select the Search layout and add or remove fields as needed. Changes
+made to the Search layout will affect the search options available to users
 when performing Advanced Searches.
 
-By customizing the fields that are searchable in Advanced Search, the System 
-Administrator can improve the accuracy and efficiency of searches for users, 
+By customizing the fields that are searchable in Advanced Search, the System
+Administrator can improve the accuracy and efficiency of searches for users,
 ultimately leading to better productivity and customer satisfaction.
-{{% /notice %}}
 
