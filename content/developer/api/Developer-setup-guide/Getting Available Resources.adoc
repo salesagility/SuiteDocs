@@ -12,12 +12,12 @@ retrieve the https://swagger.io/specification/[swagger documentation] via 2 rout
 On the server the documentation is located at
 
 [source]
-pathtoserver/Api/docs/swagger/swagger.json
+{{suitecrm.url}}/Api/docs/swagger/swagger.json
 
 You can also retrieve the documentation via an API call:
 
 [source]
-GET pathtoserver/Api/V8/meta/swagger.json
+GET {{suitecrm.url}}/Api/V8/meta/swagger.json
 
 The swagger documentation is a JSON file that includes information on what the default API is capable of and how to structure an API call.
 
@@ -83,7 +83,7 @@ This will tell you everything you need to know about how to structure the API Re
 
 === path
 
-The path or URI of this api request i.e. "pathtoserver/module/{moduleName}/{id}"
+The path or URI of this api request i.e. "{{suitecrm.url}}/module/{moduleName}/{id}"
 
 === get
 

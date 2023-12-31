@@ -88,6 +88,10 @@ permissions on your SuiteCRM instance, visit our support forums.
 * Upload File Size
 * Sprite Support
 
+==== Notes about PHP configuration
+
+SuiteCRM up until at least version 8.4.0 assumes that the name of the PHP session identifier (`session.name`) is `PHPSESSID`. If you run into troubles with 403 errors on `/api/graphql` calls, you may want to make sure that you either omit `session.name` in your `php.ini` file, or set it to `PHPSESSID`
+
 === Installing SuiteCRM
 
 Once you have successfully copied the SuiteCRM files to your web server,

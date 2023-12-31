@@ -1,0 +1,90 @@
+---
+title: "8.5 Releases"
+weight: 9830
+aliases:
+  - /8.x/admin/releases/8.5/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.5.0
+
+_Released 13/12/2023_
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:server[] System Requirement Changes
+
+{{% notice warning %}}
+Angular version has been updated to v16. For development purposes you will need to update your dependencies. Please see the SuiteCRM 8.5.x Compatibility Matrix link:../../compatibility-matrix/[here.]
+{{% /notice %}}
+
+
+==== icon:code[] Backward Incompatible Changes
+
+===== Frontend Extension Updates
+
+With the upgrade to angular v16 the version of the `@angular-architects/module-federation` lib has also been updated.
+
+Previously built extensions will need to be updated. Please read the link:../../../developer/extensions/frontend/migration/8.5[Frontend extension - Migrate to SuiteCRM 8.5+] guide for information on how to upgrade.
+
+
+==== icon:star[] Enhancements
+
+===== Cache Upgrade
+
+We have added Symfony caching to backend metadata calls. On average this reduces the app metadata graphql calls from 429ms to 323ms.
+
+We have applied several actions that reset the cache which include:
+
+* Saving in User Profile
+* Applying Menu Configuration changes
+* Saving Password Management changes
+* etc...
+
+If there is any reason this might not be working, cache can also be reset by running a `Repair and Rebuild` from within
+the `Admin`->`Repair` menu.
+
+===== Quick Filters
+
+Quick Filters have now been added to SuiteCRM 8!
+
+Quick Filters are new option on list view saved filters. They allow easy access to filters and easy switching between frequently used filters (as depicted on the following gif).
+
+To learn more about see the link:../../../features/quick-filters[Quick Filters documentation]
+
+image:quick-filter-demo-docs.gif[Quick Filters Demo]
+
+
+===== Mobile Adjustments
+
+We have made some minor adjustments to the mobile view, where Insights are now disabled by default.
+
+image:mobile-adjustments.png[Mobile Adjustments]
+
+When Insights are selected it will now show instead of the listview.
+
+image:Mobile-Insights.png[Mobile Insights]
+
+To return to listview, you can disable insights.
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''

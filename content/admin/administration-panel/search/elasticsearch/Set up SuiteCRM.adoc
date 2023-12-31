@@ -10,7 +10,9 @@ This enhancement is only available in SuiteCRM from version 7.11 onwards.
 :imagesdir: /images/en/admin/ElasticSearch
 :experimental:
 
-Go to to admin panel, scroll down to the Search settings, and open the Elasticsearch setting page.
+== Configure the Elasticsearch connection
+
+Go to the admin panel, scroll down to the Search settings, and open the Elasticsearch setting page.
 Enable Elasticsearch from the checkbox and fill the host, user and password fields.
 Simply leave user and password blank if you have anonymous access enabled.
 
@@ -24,9 +26,33 @@ You can use btn:[Test connection] to see if the current configuration is working
 
 Once you are satisfied with your settings hit btn:[Save].
 
-After having saved, perform a full indexing by pressing btn:[Schedule full indexing].
+== Initial indexing
+
+After having saved, perform a full indexing by opening the Elastisearch setting page again and now pressing btn:[Schedule full indexing]. This task starts running within a minute, provided that the crontab has been configured correctly.
+
+== Switch the search engine to Elasticsearch
 
 Now go to the Search Settings, and set `Elasticsearch Engine` as the search engine.
 You can customize the modules that are used for indexing in the modules section.
 
 image:SearchSettingsForElasticsearch.png["Configure the search Settings"]
+
+== Setup the scheduled task
+
+The Elasticsearch data is updated each time a record is created, changed, deleted and imported. Nevertheless a scheduled task keeps the elastic data in sync with the SuiteCRM database.
+
+Go to the admin panel, open Scheduler. Check if a Task with a name like "Perform Elasticsearch index" already exists.
+
+If no such task exists, then on the side panel click "Create Scheduler". 
+
+* In the Jobs dropdown, select "Elasticsearch indexer"
+* At Job Name, enter a self chosen title, for example "Perform Elasticsearch index"
+* At Interval you spefify the frequency at which the job should run. A frequency of about once a day should be sufficient. To have the task run at 4 o'clock at night, click "Advanced Options" and enter 0 at min and 4 at hrs, leave date, mo, day as they are.
+* hit btn:[Save].
+
+As AOD Lucene Indexing will no longer be used, edit the following entries in the Scheduler list, set status to "inactive", hit btn:[Save]:
+
+* Perform Lucene Index
+* Optimise AOD Index
+
+Make sure that you have correctly configured the crontab configuration, as described at the bottom of the Schedulers page.

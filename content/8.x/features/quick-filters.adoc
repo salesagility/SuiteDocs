@@ -1,0 +1,94 @@
+---
+title: "Quick Filters"
+weight: 50
+---
+
+:imagesdir: /images/en/8.x/user/features/
+
+=== Intro
+
+{{% notice info %}}
+This feature is available from version SuiteCRM 8.5 onwards
+{{% /notice %}}
+
+Quick Filters are new option on list view saved filters. They allow easy access to filters and easy switching between frequently used filters (as depicted on the following gif).
+
+image:quick-filter-demo-docs.gif[Quick Filters Demo]
+
+=== How to add Quick Filters
+
+To add a new Quick Filter, go to the module's listview and select the `Filter` Button.
+
+image:EmptyFilter.png[Empty Filter]
+
+Then fill out the criteria for the filter.
+
+image:Trait-Opp.png[Trait Inc Opportunities]
+
+Then add a name for the filter, check the `Quick Filter` checkbox and save.
+
+It will then return the results of the search.
+
+image:Trait-Opp-Search.png[Trait Search]
+
+Your new filter will now display beside the filter button with other created quick filters.
+
+You can remove the filter by either selecting the `x` on the filter button or re-selecting the new filter button created.
+
+=== When selecting a Quick Filter
+
+When a Quick Filter is selected it will be filled in:
+
+image:Will-Selected.png[Trait Selected]
+
+When there are too many filters added to show on the page (more about configuration for that link:#_quick_filter_configurations[here]).
+Then there will be a dropdown added with the rest of the created `Quick Filters`. When selecting a filter from here it
+will instead show the `My Filters` button filled in:
+
+image:My-Filters-Highlighted.png[My Filters Highlighted]
+
+To swap between filters just select the filter you wish to change to it will update.
+
+=== Quick Filter Configurations
+
+There are various different configurations for Quick Filters that can be changed.
+
+The default configuration for extra fields is defined on `config/services/ui/ui.yaml`.
+
+To override the configurations you need to copy the file over to the `extensions` folder on a path like
+`extensions/<your-package>/config/services/ui/ui.yaml`.
+
+You can define each of the following:
+
+* displayed_quick_filters
+** This will configure the amount of filters that will display before creating a dropdown (My Filters) of the rest.
+
+image:My-Filters-Highlighted.png[My Filters Highlighted]
+
+* quick_filters_breakdown_threshold
+** The configuration changes the breakdown of the filters, so changing this will update the amount of filters before
+going to a new line
+** If `displayed_quick_filters` is higher than the value set here the filters will go to a new line before breaking into
+a dropdown.
+
+image:SmallFilters.png[Small Filters]
+
+* enable_quick_filters
+** This will enable or disable quick filters based on screen size.
+
+* quick_filters_breakdown_screen_sizes
+** This configuration sets whether the Quick Filters will show on a separate line to filters
+
+[source,yaml]
+----
+parameters:
+  ui:
+     enable_quick_filters:
+      XSmall: true
+      Small: false
+      Medium: true
+      Large: true
+      XLarge: true
+
+----
+

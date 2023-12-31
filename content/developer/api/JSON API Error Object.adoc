@@ -34,14 +34,14 @@ $error = new JsonApiErrorObject(
     // status: the HTTP status code applicable to this problem, expressed as a string value.
     STATUS,                                     
     // links: a links object
-    ['about' => 'Descrioption about the problem'],          
+    ['about' => 'Description about the problem'],
     // source: an object containing references to the source of the error
     ['pointer' => '/test/foo/bar', 'parameter' => 'wrong'], 
     // meta: a meta object containing non-standard meta-information about the error.
     ['some' => 'meta info']                     
 );
 
-// retriving Error Object from an Exception:
+// retrieving Error Object from an Exception:
 try {
   // ...do stuff
 } catch (Exception $e) {
