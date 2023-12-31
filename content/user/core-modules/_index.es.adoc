@@ -7,4 +7,4 @@ chapter: true
 == Módulos Centrales
 
 === Table of Contents
-{{% children depth="3" showhidden="true" %}}
+{{% children depth="3" showhidden="true" /%}}

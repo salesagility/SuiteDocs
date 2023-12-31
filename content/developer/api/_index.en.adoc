@@ -4,4 +4,4 @@ weight: 16
 ---
 
 === Table of Contents
-{{% children depth="3" showhidden="true" %}}
+{{% children depth="3" showhidden="true" /%}}

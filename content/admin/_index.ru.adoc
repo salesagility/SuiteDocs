@@ -8,4 +8,4 @@ pre: "<b>2. </b>"
 :email: likhobory@mail.ru
 
 === Оглавление
-{{% children depth="3" showhidden="false" %}}
+{{% children depth="3" showhidden="false" /%}}

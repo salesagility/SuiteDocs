@@ -11,4 +11,4 @@ Weight: 10
 {{% /notice %}}
 
 == Содержание
-{{% children depth="3" showhidden="true" %}}
+{{% children depth="3" showhidden="true" /%}}

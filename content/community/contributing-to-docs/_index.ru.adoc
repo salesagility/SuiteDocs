@@ -9,7 +9,7 @@ chapter: true
 
 == Вклад в создание документации
 
-{{% children depth="3" showhidden="false" %}}
+{{% children depth="3" showhidden="false" /%}}
 
 
 

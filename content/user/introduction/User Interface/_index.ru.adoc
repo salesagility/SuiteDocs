@@ -8,4 +8,4 @@ chapter: true
 :email: likhobory@mail.ru
 
 == Оглавление
-{{% children depth="4" showhidden="false" %}}
+{{% children depth="4" showhidden="false" /%}}
