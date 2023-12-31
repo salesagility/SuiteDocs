@@ -115,3 +115,6 @@ weight = 3
 languageName = "Русский"
 languageDir = "/ru/"
 
+
+[security.exec]
+allow = [ "^dart-sass-embedded$", "^go$", "^npx$", "^postcss$", "^asciidoctor$" ]
