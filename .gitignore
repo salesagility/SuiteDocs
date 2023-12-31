@@ -1,5 +1,6 @@
 # hugo destination build
 public/
+.hugo_build.lock
 
 # Microsoft Visual Studio exclusions
 *.sln
