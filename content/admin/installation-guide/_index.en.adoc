@@ -6,9 +6,9 @@ weight: 10
 == Introduction
 
 SuiteCRM is SugarCRM, Supercharged! SuiteCRM is a fork of the popular
-open source SugarCRM Community Edition. This release features a host of
-additional open source modules, along with the standard features and
-functionality found within SugarCRM CE.
+open source SugarCRM Community Edition (which was discontinued in 2017).
+This release features a host of additional open source modules, along 
+with the standard features and functionality found within SugarCRM CE.
 
 == Release Notes
 
