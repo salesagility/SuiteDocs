@@ -108,7 +108,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 [start=3]
 .  Вам будет предложено вручную выполнить ряд действий по изменению директивы *RewriteBase* в файле `.htaccess`, расположенном в папке `legacy`: 
 
-Если виртуальный сервер указывает на каталог *legacy*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
+Если виртуальный сервер указывает на каталог *public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
 В противном случае необходимо указать путь до папки *public*.
 Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/legacy`.
 
