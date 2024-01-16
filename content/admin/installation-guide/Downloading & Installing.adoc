@@ -87,6 +87,7 @@ permissions on your SuiteCRM instance, visit our support forums.
 * cURL Module
 * Upload File Size
 * Sprite Support
+* auth-sasl (for connecting to Inbound email inboxes)
 
 ==== Notes about PHP configuration
 
