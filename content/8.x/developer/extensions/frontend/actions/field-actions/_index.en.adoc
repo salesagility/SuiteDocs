@@ -5,10 +5,6 @@ weight: 40
 
 :imagesdir: /images/en/8.x/developer/extensions/front-end/actions/field-actions/
 
-{{% notice note %}}
-When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
-{{% /notice %}}
-
 == 1. Introduction
 
 Field actions allow you to add custom action buttons next to fields in SugarCRM.
@@ -29,6 +25,9 @@ image:Custom-Action-Button.png[Custom Field Action Example]
 
 == 2.Logic Metadata definition
 
+{{% notice note %}}
+When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
+{{% /notice %}}
 
 The first thing to define is the `fieldActions` entry in the metadata. This is where the action buttons for fields are defined.
 
@@ -49,15 +48,18 @@ In the following example we are going to add them to the `Accounts` module `deta
 
 [source,php]
 ----
-    'name' => 'phone_office',
-    'comment' => 'The office phone number',
-    'label' => 'LBL_PHONE_OFFICE',
+    'name' => 'website',
+    'type' => 'link',
+    'label' => 'LBL_WEBSITE',
+    'displayParams' =>
+        array(
+            'link_target' => '_blank',
+        ),
     'fieldActions' => [
         'actions' => [
             'clear-field' => [
                 'key' => 'clear',
                 'labelKey' => 'LBL_CLEAR_BUTTON_LABEL',
-                'asyncProcess' => false,
                 'modes' => ['edit'],
                 'klass' =>['btn btn-sm modal-button-save'],
                 'params' => [
@@ -67,27 +69,26 @@ In the following example we are going to add them to the `Accounts` module `deta
             'copy-field' => [
                 'key' => 'copy',
                 'labelKey' => 'LBL_COPY',
-                'asyncProcess' => false,
-                'modes' => ['edit', 'detail'],
-                'klass' =>['btn btn-sm action-button'],
+                'modes' => ['detail', 'edit'],
+                'klass' =>['btn btn-sm modal-button-save'],
                 'params' => [
                     'expanded' => true
                 ]
             ],
-            'do-backend-action' => [
-                'key' => 'get-some-values',
-                'icon' => 'fire',
-                'asyncProcess' => true,
-                'modes' => ['detail'],
-                'klass' =>['record-action-button'],
+            'calculate-website' => [
+                'key' => 'calculateValueBackend',
+                'labelKey' => 'LBL_UPDATE',
+                'modes' => ['edit'],
+                'klass' =>['btn btn-sm modal-button-save'],
                 'params' => [
-                    'expanded' => true
+                    'expanded' => true,
+                    'process' => 'calculate-website-value',
                 ]
             ],
         ],
         'klass' => '',
-        'containerKlass' => '',
-        'position' => 'vertical'
+        'containerKlass' => 'd-flex align-items-start',
+        'position' => 'inline'
     ],
 ----
 
@@ -105,14 +106,14 @@ In this case it's `clear` and `copy`.
 * Icon
 - If desired to have a icon button instead of a labelled-key button, this option can be used.
 
-* Async Process
-- 'asyncProcess' is the place to put whether your action will fire a backend request.
-
 * Klass
 - 'klass' can be customized to style the action button. The 'klass' where the out of action object is to customize buttons as a whole.
 
 * Param
 - 'params' can configure the action button.
+
+* Process
+- 'process' is the place where your action will fire a backend request. Simply, write backend class key where your action is supposed to run.
 
 * Container Klass
 - 'containerKlass' can be customized to style for all action buttons.
@@ -120,4 +121,410 @@ In this case it's `clear` and `copy`.
 * Position
 - 'position' can customize the position of the action button in respect to it respective field. (e.g. position: inline or vertical)
 
-image:Custom-Action-Button-Position.png[Custom Action Buttons Position Example]
+
+== 3. Available Field Actions
+
+=== Clear
+
+[source,php]
+----
+    'name' => 'phone_office',
+    'comment' => 'The office phone number',
+    'label' => 'LBL_PHONE_OFFICE',
+    'fieldActions' => [
+        'actions' => [
+            'clear-field' => [
+                'key' => 'clear',
+                'icon' => 'reset',
+                'modes' => ['edit'],
+                'klass' =>['btn btn-sm record-action-button'],
+                'params' => [
+                    'expanded' => true
+                ]
+            ]
+        ],
+        'klass' => '',
+        'containerKlass' => 'd-flex align-items-start',
+        'position' => 'vertical'
+    ]
+----
+
+In the example above, the Phone Office field has a CLEAR BUTTON that clears the field value.
+
+=== Copy
+
+[source,php]
+----
+    'name' => 'phone_office',
+    'comment' => 'The office phone number',
+    'label' => 'LBL_PHONE_OFFICE',
+    'fieldActions' => [
+        'actions' => [
+            'copy-field' => [
+                'key' => 'copy',
+                'labelKey' => 'LBL_COPY',
+                'modes' => ['edit', 'detail'],
+                'klass' =>['record-action-button'],
+                'params' => [
+                    'expanded' => true
+                ]
+            ],
+
+        ],
+        'klass' => '',
+        'containerKlass' => '',
+        'position' => 'inline'
+    ]
+----
+
+In the example above, the Phone Office field has a COPY BUTTON that copies the field value.
+
+=== calculateValueBackend
+
+
+[source,php]
+----
+    'name' => 'website',
+    'type' => 'link',
+    'label' => 'LBL_WEBSITE',
+    'displayParams' =>
+        array(
+            'link_target' => '_blank',
+        ),
+    'fieldActions' => [
+        'actions' => [
+            'calculate-website' => [
+                'key' => 'calculateValueBackend',
+                'labelKey' => 'LBL_UPDATE',
+                'modes' => ['edit'],
+                'klass' =>['btn btn-sm modal-button-save'],
+                'params' => [
+                    'expanded' => true,
+                    'process' => 'calculate-website-value',
+                ]
+            ],
+        ],
+        'klass' => '',
+        'containerKlass' => 'd-flex align-items-start',
+        'position' => 'inline'
+    ],
+----
+
+In the example above, the Website field has a UPDATE BUTTON that fires a backend request and setting the returned value.
+
+The `calculateValueBackend` field logic allows field values to be calculated on the backend.
+
+This allows for more complex calculations where you need values from multiple modules or from external sources.
+
+== 4. Backend Handler
+
+{{% notice note %}}
+When making these changes be sure to make them within an extension on the 'extensions' directory, e.g.: 'extensions/<my-extension>/...'
+{{% /notice %}}
+
+After defining the action metadata we need to work on the backend code that is going to handle the requests done to calculate the value.
+
+The `calculateValueBackend` action uses the `Process` api. The requests done to the `Process` api are handler by php classes implementing the `ProcessHandlerInterface`
+
+In the following example we are going to use the existing `extensions/defaultExt` to add our custom code.
+
+=== 4.1 Steps to add a new process handler to extensions
+
+. Create the folder `extensions/defaultExt/modules/Accounts/Service/Fields`
+.. This is a best practice not a hard requirement
+.. As long as you add under the `extensions/<your-ext>/backend` or `extensions/<your-ext>/modules` it should work.
+. Within that folder create the `CalculateWebsiteValue.php`, i.e. `extensions/defaultExt/modules/Accounts/Service/Fields/CalculateWebsiteValue.php`
+.. If you are not using the recommended path, make sure that the `namespace` follows the one you are using
+.. On our example the namespace is `namespace App\Extension\defaultExt\modules\Accounts\Service\Fields;`
+. On `CalculateWebsiteValue.php` add the code on the snippet on link:./#_3_2_process_handler_implementation[3.2 Process handler implementation] section
+. Re-set permissions (may not be needed, this will depend on your configuration)
+. Run `php bin/console cache:clear` or delete the contents of the cache folder under the root of the project
+(optional) If you have some kind of php cache like opcache or APCu, you will need to re-start apache.
+
+=== 4.2 Process handler implementation
+
+A class is recognized as a `ProcessHandler` if it implements the `ProcessHandlerInterface`.
+
+Furthermore, for it to be matched with request made by the logic metadata we've defined, it needs the following:
+
+- Set the `ProcessType` to be the same as the value that was defined on the metadata, in this example it is `calculate-website-value`
+- On the response data include a `value` entry that is the value that is going to be used to update the field value on the frontend
+
+The following snippet contains a sample implementation of the process handler for our scenario:
+
+
+[source,php]
+----
+<?php
+
+namespace App\Extension\defaultExt\modules\Accounts\Service\Fields;
+
+use ApiPlatform\Core\Exception\InvalidArgumentException;
+use App\Process\Entity\Process;
+use App\Process\Service\ProcessHandlerInterface;
+
+class CalculateWebsiteValue implements ProcessHandlerInterface
+{
+    protected const MSG_OPTIONS_NOT_FOUND = 'Process options are not defined';
+    protected const PROCESS_TYPE = 'calculate-website-value';
+
+    /**
+     * CalculateWebsiteValue constructor.
+     */
+    public function __construct()
+    {
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getProcessType(): string
+    {
+        return self::PROCESS_TYPE;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function requiredAuthRole(): string
+    {
+        return 'ROLE_USER';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRequiredACLs(Process $process): array
+    {
+        $options = $process->getOptions();
+        $module = $options['module'] ?? '';
+        $id = $options['id'] ?? '';
+
+        $editACLCheck =  [
+            'action' => 'edit',
+        ];
+
+        if ($id !== '') {
+            $editACLCheck['record'] = $id;
+        }
+
+        return [
+            $module => [
+                $editACLCheck
+            ],
+        ];
+
+        return $acls;
+
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function configure(Process $process): void
+    {
+        //This process is synchronous
+        //We aren't going to store a record on db
+        //thus we will use process type as the id
+        $process->setId(self::PROCESS_TYPE);
+        $process->setAsync(false);
+    }
+
+    /**
+     * @inheritDoc
+     *
+     */
+    public function validate(Process $process): void
+    {
+        if (empty($process->getOptions())) {
+            throw new InvalidArgumentException(self::MSG_OPTIONS_NOT_FOUND);
+        }
+
+        $options = $process->getOptions();
+        [
+            'record' => $record,
+        ] = $options;
+
+        if (empty($record)) {
+            throw new InvalidArgumentException(self::MSG_OPTIONS_NOT_FOUND);
+        }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function run(Process $process)
+    {
+        $options = $process->getOptions();
+
+        $type = $options['record']['attributes']['type'] ?? '';
+        $name = $options['record']['attributes']['name'] ?? '';
+
+        $value = 'www.salesagility.com';
+
+        /*if(condition) {
+            $value = 'www.suitecrm.com';
+        }*/
+
+        $responseData = ["value" => $value];
+
+        $process->setStatus('success');
+        $process->setMessages([]);
+        $process->setData($responseData);
+    }
+
+}
+----
+
+==== 4.2.1 Process handler interface methods
+
+
+**getProcessType()**
+
+In this we need to return the id of our process, the same that is defined on the metadata logic `key` entry. In our example: `calculate-website-value`
+
+**requiredAuthRole()**
+
+Our process should only be accessed by logged-in users, thus we return `ROLE_USER`;
+
+**getRequiredACLs()**
+
+For new accounts, we only want users with `edit` access to the Accounts module to be able to call our ProcessHandler. Thus, we defined:
+
+[source,php]
+----
+        $editACLCheck =  [
+            'action' => 'edit',
+        ];
+----
+
+For already existing accounts we need an extra check to make sure that the users has access to that specific record. Therefore, we conditionally add a check for the record id:
+
+[source,php]
+----
+        if ($id !== '') {
+            $editACLCheck['record'] = $id;
+        }
+----
+
+**validate()**
+
+The ProcessHandler won't be able to do any calculations if the record doesn't exist. If that happens we should throw an exception:
+
+[source,php]
+----
+        $options = $process->getOptions();
+                [
+                    'record' => $record,
+                ] = $options;
+
+                if (empty($record)) {
+                    throw new InvalidArgumentException(self::MSG_OPTIONS_NOT_FOUND);
+                }
+----
+
+And since our business logic states that this should only run if the `type` is `User` we've added another check:
+
+[source,php]
+----
+        if ($type !== 'User') {
+            throw new InvalidArgumentException(self::MSG_INVALID_TYPE);
+        }
+----
+
+**run()**
+
+This is the method that actually does what the process is supposed to do and returns the appropriate response.
+
+Please have in mind that for the `calculateValueBackend` action, the response always needs to contain `value` entry like the following:
+
+[source,php]
+----
+        $responseData = [
+            'value' => $value
+        ];
+
+        ...
+
+        $process->setData($responseData);
+----
+
+==== 4.2.2 Process handler implementation description
+
+Let's take an in depth look at the implementation of our logic, located in the `run()` method.
+
+**Get the input record**
+
+One of the inputs we need for our logic to work is the data in the record.
+
+To get the data sent in the request you can call the `getOptions` method of the process
+
+[source,php]
+----
+$options = $process->getOptions();
+----
+
+The `calculateValueBackend` logic, besides other data, sends the current data on the record.
+It sends a `record` entry that follows the standard format for records, the same one that is used on the api to get a record.
+The field values of the record are located within the `attributes` entry:
+
+[source,php]
+----
+$options = $process->getOptions();
+$record = $options['record'];
+$attributes = $record['attributes'];
+----
+
+To get a field on the record we could do (in this example we are getting the 'type'):
+
+[source,php]
+----
+$options = $process->getOptions();
+$record = $options['record'];
+$attributes = $record['attributes'];
+$type = $attributes['type'];
+----
+
+
+**Calculate value*
+
+In "if condition" which is commented below, we can set our rule and calculate the value.
+
+[source,php]
+----
+$options = $process->getOptions();
+
+$type = $options['record']['attributes']['type'] ?? '';
+$name = $options['record']['attributes']['name'] ?? '';
+
+$value = 'www.salesagility.com';
+
+/*if(condition) {
+    $value = 'www.suitecrm.com';
+}*/
+----
+
+**Set the value**
+
+Finally, for all of this to work we set the value that we want to use for the our calculation on the response data.
+
+[source,php]
+----
+$responseData = [
+    'value' => $value
+];
+
+$process->setStatus('success');
+$process->setMessages([]);
+$process->setData($responseData);
+
+----
+
+=== 4.3 More Info on ProcessHandlers
+
+For more information how to create a process handler see the link:../../../backend/process-api/process-handler[Adding a Process Handler] guide.
+
+
+
+
+
