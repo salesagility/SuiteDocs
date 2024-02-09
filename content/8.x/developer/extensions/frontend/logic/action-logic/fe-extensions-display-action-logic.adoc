@@ -1,0 +1,161 @@
+---
+title: "Adding Action Display Logic "
+weight: 40
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/logic/action-logic/
+
+
+== 1. Introduction
+
+Display logic allows you to define rules to hide and show buttons depending on other fields values.
+
+=== 1.1 Example Scenario
+
+As an example of how to hide / show a button, we are going to create a new button on the Contacts module and hide/show
+the button depending on another fields value.
+
+== 2. Logic Metadata definition
+
+The first thing to define is the new button that is being used.
+
+Then we are going to define the "displayLogic" entry which will define the triggers to hide/ show the button.
+
+In the following example we are going to add the button to the Contacts module `detailviewdefs.php`.
+
+=== 2.1 Steps to add the logic on the custom viewdef
+
+To set up adding the button to your view. First:
+
+* Create a new `metadata` folder within the `public/legacy/custom/modules/Contacts` directory.
+* Create a new file within the `metadata` folder called `detailviewdefs.php`.
+* Copy the contents of `/modules/Contacts/metadata/detailviewdefs.php` and paste in the newly created file.
+
+Within the `recordActions`->`actions` array, add your custom button here. for example:
+
+[source,php]
+----
+        "recordActions" => [
+            "actions" => [
+                "print-as-pdf" => [
+                    "key" => "print-as-pdf",
+                    "labelKey" => "LBL_PRINT_AS_PDF",
+                    "asyncProcess" => true,
+                    "modes" => ["detail"],
+                    "acl" => ["view"],
+                    "aclModule" => "AOS_PDF_Templates",
+                    "params" => [
+                        "selectModal" => ["module" => "AOS_PDF_Templates"],
+                    ],
+                ],
+                "send_fax" => [
+                    "key" => "send_fax",
+                    "display" => "hide",
+                    "asyncProcess" => true,
+                    "labelKey" => "LBL_SEND_FAX",
+                    "modes" => ["detail"],
+                    "acl" => ["view"],
+                    "displayLogic" => [
+                        "send_fax_visibility" => [
+                            "modes" => [
+                                0 => "detail",
+                                1 => "edit",
+                                2 => "create",
+                            ],
+                            "params" => [
+                                "activeOnFields" => [
+                                    "phone_fax" => ["01234 999999"],
+                                ],
+                            ],
+                        ],
+
+                    ],
+                ],
+            ],
+        ],
+----
+
+In the example above we have the button to show if the `Phone Fax` field is the number shown then the button will show
+on the frontend to `Send a Fax` to the contact.
+
+In this example you can see the key `modes` is used. This is used to set the views where the button will show/ hide.
+
+== 3. Display Logic
+
+When setting "displayLogic" on a button. All Logic Operators will work here as they do with action logic.
+
+=== 3.1 Display Logic Examples
+
+Below are some examples using different operators to hide/show the button.
+
+==== OR
+
+When defining display logic you can set the button to show based on one fields value, that field with another value or a
+new field with its own value.
+
+[source,php]
+----
+                    "displayLogic" => [
+                        "custom_action_visibility" => [
+                            "modes" => [
+                                0 => "detail",
+                                1 => "edit",
+                                2 => "create",
+                            ],
+                            "params" => [
+                                "activeOnFields" => [
+                                    "phone_fax" => ["01234 999999"],
+                                ],
+                            ],
+                        ],
+                        "send_fax_visibility" => [
+                            "modes" => [
+                                0 => "detail",
+                                1 => "edit",
+                                2 => "create",
+                            ],
+                            "params" => [
+                                "activeOnFields" => [
+                                    "phone_fax" => ["01234 5555555"],
+                                ],
+                            ],
+                        ],
+                    ],
+----
+
+Adding the above code your button will now show if the `phone_fax` field is set to "01234 5555555" OR "01234 999999".
+
+==== AND
+
+You can also use multiple criteria for the same field. For example if you wanted to add your button to show if the
+employees is greater than 5 and less than 100 then your code should look something like this:
+
+[source,php]
+----
+                    "displayLogic" => [
+                        "my_custom_button" => [
+                            "modes" => [
+                                0 => "detail",
+                                1 => "edit",
+                                2 => "create",
+                            ],
+                            "params" => [
+                                'activeOnFields' => [
+                                    'employees' => [
+                                        [
+                                            'operator' => 'greater-than',
+                                            'value' => 5
+                                        ],
+                                        // AND
+                                        [
+                                            'operator' => 'less-than',
+                                            'value' => 100
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+----
+
+For more information on operators see link:../operators/_index.en.adoc[here.]

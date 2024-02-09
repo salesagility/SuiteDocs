@@ -19,15 +19,10 @@ After the support period ends, for ESR (Extended Support Release) releases, ther
 |===
 | Version | Initial Release | Active Support Until | Security Support Until
 
-| 7.12 ESR
-| October 2021
-| August 2023
-| November 2023
-
 | 7.14 ESR
 | August 2023
-| January 2025
 | June 2025
+| December 2025
 
 | 8.5
 | December 2023
@@ -42,6 +37,11 @@ After the support period ends, for ESR (Extended Support Release) releases, ther
 [cols="1,1,1,1"]
 |===
 | Version | Initial Release | Active Support Until | Security Support Until
+
+| 7.12 ESR
+| October 2021
+| August 2023
+| November 2023
 
 | 7.13
 | December 2022

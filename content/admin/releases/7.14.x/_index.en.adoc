@@ -9,6 +9,60 @@ weight: 9850
 :icons: font
 :imagesdir: /images/en/admin/release
 
+== 7.14.3
+
+_Released 05/02/2024_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:info[] Updates in Scheduler
+
+From this release forward there is a now an out of the box ElasticSearch Scheduler Job. The purpose of this job is to run an ElasticSearch Index.
+This will not be automatically added on upgrade due to backwards compatibility, however can be enabled via Admin page -> Repair ->
+Repair Schedulers.
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10265[10265] - Fix https://github.com/salesagility/SuiteCRM/issues/5392[#5392] - My Filters doesn`t show up on Project Tasks
+* PR: https://github.com/salesagility/SuiteCRM/pull/10266[10266] - Fix https://github.com/salesagility/SuiteCRM/issues/9563[#9563] - HTML Type field doesn't populate
+* PR: https://github.com/salesagility/SuiteCRM/pull/10271[10271] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/373[#373] - Google API Token not working
+* PR: https://github.com/salesagility/SuiteCRM/pull/10295[10295] - Fix https://github.com/salesagility/SuiteCRM/issues/10242[#10242] - Mass Security Group Assignment fails when multiple items from the same page are chosen
+* PR: https://github.com/salesagility/SuiteCRM/pull/10296[10296] - Fix #10296 - Add duplication logic check on run_when Always
+* PR: https://github.com/salesagility/SuiteCRM/pull/10297[10297] - Fix https://github.com/salesagility/SuiteCRM/issues/9453[#9453] - User 'delete' option missing from menu
+* PR: https://github.com/salesagility/SuiteCRM/pull/10306[10306] - Fix https://github.com/salesagility/SuiteCRM/issues/5906[5906] -  Currency symbol for currency field in popup is always default
+* PR: https://github.com/salesagility/SuiteCRM/pull/10301[10301] - Fix https://github.com/salesagility/SuiteCRM/issues/10234[10234] - Enum-type fields may have their values reset to their defaults, if they have non-blank defaults
+* PR: https://github.com/salesagility/SuiteCRM/pull/10300[10300] - Fix https://github.com/salesagility/SuiteCRM/issues/10302[#10302] - IMAP INBOUND EMAIL error
+* PR: https://github.com/salesagility/SuiteCRM/pull/10299[10299] - Fix https://github.com/salesagility/SuiteCRM/issues/9853[#9853] - The "Case Macro" field now appears empty by Default
+* PR: https://github.com/salesagility/SuiteCRM/pull/10312[10312] - Fix #10312 - Group External Connection Changing type on edit
+* PR: https://github.com/salesagility/SuiteCRM/pull/10313[10313] - Fix #10313 - Remove unused line in repair
+* PR: https://github.com/salesagility/SuiteCRM/pull/10294[10294] - Fix https://github.com/salesagility/SuiteCRM/issues/9144[#9144] - Popup error messages
+* PR: https://github.com/salesagility/SuiteCRM/pull/10293[10293] - Fix https://github.com/salesagility/SuiteCRM/issues/9858[9858] -  "Distribution Method" is not retained on Editview Load
+* PR: https://github.com/salesagility/SuiteCRM/pull/10292[10292] - Fix https://github.com/salesagility/SuiteCRM/issues/2833[#2833] - Process Audit Advanced Search
+* PR: https://github.com/salesagility/SuiteCRM/pull/10281[10281] - Fix https://github.com/salesagility/SuiteCRM/issues/10093[#10093] - Results are not filtered in the Targets Module popup
+* PR: https://github.com/salesagility/SuiteCRM/pull/10278[10278] - Fix https://github.com/salesagility/SuiteCRM/issues/6397[#6397] - Studio: Reset Module: Remove Custom Fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/10314[10314] - Fix #10314 - disabling active languages
+* PR: https://github.com/salesagility/SuiteCRM/pull/10283[10283] - Fix #10283 - When selecting an Outbound Email Account, From/Reply Information should autopopulate for user convenience
+* PR: https://github.com/salesagility/SuiteCRM/pull/10308[10308] - Fix https://github.com/salesagility/SuiteCRM/issues/10307[#10307] - Retrieve object name via beanfactory
+* PR: https://github.com/salesagility/SuiteCRM/pull/10311[10311] - Fix https://github.com/salesagility/SuiteCRM/issues/10310[#10310] - Survey reports ui improvements
+* PR: https://github.com/salesagility/SuiteCRM/pull/10275[10275] - Fix https://github.com/salesagility/SuiteCRM/issues/10207[#10207], https://github.com/salesagility/SuiteCRM/issues/10209[#10209] - Multiple Elasticsearch indexing issues
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors artjomsmorscakovs dtosun61 abuzarfaris FR-JS gboban smokenik Yousuf-Said kunanSA ghost JanSiero cartbar %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our link:../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.14.2
 
 _Released 14/11/2023_
