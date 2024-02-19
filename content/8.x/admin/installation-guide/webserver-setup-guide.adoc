@@ -33,7 +33,7 @@ When installing SuiteCRM from pre-build installable package zip you **do not** n
 
 The SuiteCRM 8 pre-built installable package zip comes with the pre-built front end files under `public/dist` and all the required libs on vendors.
 
-=== Helpfull Resources
+=== Helpful Resources
 
 On how to install a development LAMP stack on Ubuntu:
 
@@ -60,9 +60,9 @@ Install on your server the required php modules:
 * imap (optional)
 * ldap (optional)
 
-=== Helpfull Resources
+=== Helpful Resources
 
-Please check the `Helpfull Resources` section from link:#_2_install_required_software[Install required software] for instructions on how to install php modules
+Please check the `Helpful Resources` section from link:#_2_install_required_software[Install required software] for instructions on how to install php modules
 
 == 4. Configuring URL re-writes
 
@@ -94,7 +94,7 @@ Update your vhost configuration to add the following:
 ----
 
 
-=== Helpfull resources:
+=== Helpful resources:
 
 * link:https://symfony.com/doc/current/setup/web_server_configuration.html#apache-with-mod-php-php-cgi[Symfony documentation on how to setup webserver (apache and others),window=_blank]
 * link:https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite[DigitalOcean - Tutorial on how to setup mod_write (apache),window=_blank]
@@ -112,9 +112,9 @@ error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
 ----
 
 
-=== Helpfull Resources
+=== Helpful Resources
 
-Please check the `Helpfull Resources` section from link:#_2_install_required_software[Install required software] for instructions on where to find `php.ini`
+Please check the `Helpful Resources` section from link:#_2_install_required_software[Install required software] for instructions on where to find `php.ini`
 
 
 == 6. (optional) Performance
