@@ -110,9 +110,7 @@ branch!
 
 === CLA Check
 
-If you have not signed our
-https://www.clahub.com/agreements/salesagility/SuiteCRM[CLA]
-(Contributor License Agreement) then your Pull Request will fail a check
+If you have not signed our https://cla.suitecrm.com/salesagility/SuiteCRM[CLA] (Contributor License Agreement) then your Pull Request will fail a check
 and won't be able to be merged into the project. You will only be required to sign
 this once.
 
