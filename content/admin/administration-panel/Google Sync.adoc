@@ -132,7 +132,17 @@ This is due to the fact that if the value changes then Google detects all curren
 The best way to avoid this from happening is to not edit/change the "google_calendar_sync_name" that is located
 in your config.php file.
 
+== Disabling Google Calendar Sync
+If you want to disable the Google Calendar sync completely or re-add its token from scratch, perform these actions:
 
+|===
 
+| Disable the ‘Google Sync Calendars’ task(s) from Admin/Scheduler.|image:disable-1.png[float=left]
 
+| Delete the Google Cloud token line in `config_override.php`|image:disable-2.png[float=left]
+
+|===
+
+In order to reset Google authorisation, user can reset their personal settings.
+It might be excessive if the token is already deleted from the admin config and the scheduler task is not active.
 
