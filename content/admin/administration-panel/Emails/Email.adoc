@@ -15,12 +15,12 @@ weight: 10
 
 Configuring email for *SuiteCRM* provides a wide range of features, including sending personal emails to
 contacts, automatic creation of cases, sending notifications for events using
-link:../../../user/advanced-modules/workflow/[workflows] and sending email marketing
-link:../../../user/core-modules/campaigns/[campaigns].
+link:../../../../user/advanced-modules/workflow/[workflows] and sending email marketing
+link:../../../../user/core-modules/campaigns/[campaigns].
 
 This document explains the different types of mail accounts and how to set them up. For information
 on reading and sending email in SuiteCRM using the Emails module, see the
-link:../../../user/core-modules/emails[Emails module guide].
+link:../../../../user/core-modules/emails[Emails module guide].
 
 Several different types of account can be configured within *SuiteCRM* for different purposes.
 These are:
@@ -28,7 +28,7 @@ These are:
 *Outgoing Mail*
 
 The outgoing mail server is used to send automatic email notifications (such as record
-assignment notifications) and emails sent as link:../../../user/advanced-modules/workflow/[workflows]
+assignment notifications) and emails sent as link:../../../../user/advanced-modules/workflow/[workflows]
  actions.
 
 The outgoing mail configuration will need to be set up by an Administrator.
@@ -37,7 +37,7 @@ See <<Outgoing Mail Configuration>> for instructions on setting up the default o
 configuration.
 
 Other outbound accounts can be configured in addition to the default account for specific purposes,
-such as sending link:../../../user/core-modules/campaigns/[Campaigns]. These can be set up from the
+such as sending link:../../../../user/core-modules/campaigns/[Campaigns]. These can be set up from the
 Admin panel, under outbound accounts. If no other outbound accounts are configured, the default
 outgoing mail server account will be used.
 
@@ -50,14 +50,14 @@ Emails from personal accounts are not stored in *SuiteCRM* unless manually impor
 Personal accounts can be configured by the user from their user profile. Administrators can configure
 personal accounts for other users.
 
-See link:../../../user/introduction/managing-user-accounts[Managing User Accounts] for instructions on
+See link:../../../../user/introduction/managing-user-accounts[Managing User Accounts] for instructions on
 setting up a personal account.
 
 *Group Accounts*
 
 Group accounts are used when you need several users to be able to view and send email from one mail
 account, for example a support or sales mailbox. Group accounts can be set up to automatically import
-emails and create link:../../../user/core-modules/cases[Cases] from incoming email.
+emails and create link:../../../../user/core-modules/cases[Cases] from incoming email.
 
 Group accounts must be set up by an Administrator. Access to a group account must be granted by an
 Administrator.
@@ -66,7 +66,7 @@ Set up a group account from the <<Inbound Email>> page.
 
 *Bounce Handling Accounts*
 
-A Bounce Handling account is used with link:../../../user/core-modules/campaigns/[Campaigns] to handle bounced
+A Bounce Handling account is used with link:../../../../user/core-modules/campaigns/[Campaigns] to handle bounced
 mail notifications when emails are undelivered. You will need to set up a Bounce Handling account in
 order to send a Campaign.
 
@@ -81,7 +81,7 @@ Set up a Bounce Handling account from the <<Inbound Email>> page.
 
 The outgoing mail configuration settings are used to send system notification emails such as
 password reset emails, record assignment notifications and
-link:../../../user/advanced-modules/workflow/[workflow] email notifications.
+link:../../../../user/advanced-modules/workflow/[workflow] email notifications.
 
 image:StandardEmailSettings.png[Outgoing Mail Configuration]
 
@@ -138,7 +138,7 @@ account.
 *SuiteCRM 7.10* introduces a new *Confirmed Opt In* feature which provides two opt in settings for
 email addresses: *Opt In* and *Confirmed Opt In*.
 
-See the link:../../../user/modules/confirmed-opt-in-settings[Confirmed Opt In] documentation for further
+See the link:../../../../user/modules/confirmed-opt-in-settings[Confirmed Opt In] documentation for further
 information on these settings.
 
 ==== Email Security Settings
@@ -168,7 +168,7 @@ A personal email account is an internal or external email account used to view a
 
 A group email account allows more than one user to access a particular mail account. This can be useful
 for sales or support email accounts for example. In addition, group accounts are also used for sending
-email campaigns. See the link:../../../user/core-modules/campaigns/[Campaigns] documentation for more
+email campaigns. See the link:../../../../user/core-modules/campaigns/[Campaigns] documentation for more
 information.
 
 *SuiteCRM* can also be configured to automatically import emails and to automatically
@@ -208,7 +208,7 @@ all incoming emails. These associated emails can then be viewed via the History 
 This setting is selected by default in *SuiteCRM*.
 
 ==== Create Case From Email
-Check this box to set up *SuiteCRM* to create a link:../../../user/core-modules/cases[Case] record from an incoming email.
+Check this box to set up *SuiteCRM* to create a link:../../../../user/core-modules/cases[Case] record from an incoming email.
 
 image:EmailCaseConfiguration.png[Create Case]
 
@@ -216,7 +216,7 @@ Select a *Distribution Method* to specify how cases created from incoming email 
 
 [cols="20,80"]
 |===
-|*System default*|This will use the link:../../../user/advanced-modules/cases-with-portal[default settings],
+|*System default*|This will use the link:../../../../user/advanced-modules/cases-with-portal[default settings],
 configurable via the Admin panel.
 |*Single User*| Enter a username or click the select arrow to search for a user.
 Every automatically created case will be assigned to the specified user. image:EmailDistrubutionSU.png[Single User]
@@ -231,7 +231,7 @@ Cases will be assigned randomly to members of the specified group or role.
 *Auto-Reply configuration*
 
 If *SuiteCRM* has been configured to auto-create cases, you can select or create an
-link:../../../user/core-modules/emailtemplates[email template] to use as an automated response to
+link:../../../../user/core-modules/emailtemplates[email template] to use as an automated response to
 notify the sender that a case has been created. If no template is specified here, this automated
 response will not be sent. image:EmailAutoReplyConfiguration.png[New Case Auto-Reply template]
 
@@ -263,7 +263,7 @@ from where they can be edited or removed.
 === Bounce Handling Account
 
 A Bounce Handling Account is used to manage bounce notifications for an email
-link:../../../user/core-modules/campaigns/[campaign]. Bounced email addresses are recorded
+link:../../../../user/core-modules/campaigns/[campaign]. Bounced email addresses are recorded
 in the campaign status.
 
 Once created, the bounce handling account can be selected by users when setting up a
@@ -339,7 +339,7 @@ image:EmailTestNotification.png[Test Email connection]
 
 == Campaign Email Settings
 _
-Configure the following additional settings for link:../../../user/core-modules/campaigns/[Campaigns] here:
+Configure the following additional settings for link:../../../../user/core-modules/campaigns/[Campaigns] here:
 
 * The batch size for sending campaign emails
 * Where campaign tracking files are located
