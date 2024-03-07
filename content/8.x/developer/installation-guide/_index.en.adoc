@@ -12,5 +12,5 @@ The following documentation is for SuiteCRM Version 8+; to see documentation for
 Please consider going through the link:../developer-getting-started[Developer Getting started] guide. It may simplify part of the process described on the guides listed next.
 
 == Table of Contents
-{{% children depth="3" showhidden="false" %}}
+{{% children depth="3" showhidden="false" /%}}
 

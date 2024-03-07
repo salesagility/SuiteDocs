@@ -2,16 +2,17 @@
 
 {{ range .Data.Pages }}
 
-  <h2><a href="{{ .URL }}">{{ .Params.title }}</a></h2>
+<h2><a href="{{ .Permalink }}">{{ .Params.title }}</a></h2>
 
-  <p>
-    {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" . }}
-  </p>
+<p>
+  {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}{{ partial "tags.html" .
+  }}
+</p>
 
-    {{ .Summary }}
+{{ .Summary }}
 
-    {{ if .Truncated }}
-      <p><a href="{{ .RelPermalink }}">Read More ></a></p>
-    {{ end }}
+{{ if .Truncated }}
+<p><a href="{{ .RelPermalink }}">Read More ></a></p>
+{{ end }}
 
 {{ end }}

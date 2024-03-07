@@ -1,5 +1,6 @@
 # hugo destination build
 public/
+.hugo_build.lock
 
 # Microsoft Visual Studio exclusions
 *.sln
@@ -19,3 +20,4 @@ node_modules/
 /nbproject/
 
 /tmp/
+.direnv

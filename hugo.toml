@@ -7,7 +7,6 @@ theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 enableGitInfo = true
-timeout = 37000
 ignoreErrors = ["error-remote-getjson"]
 
 [params]
@@ -115,3 +114,6 @@ weight = 3
 languageName = "Русский"
 languageDir = "/ru/"
 
+
+[security.exec]
+allow = [ "^dart-sass-embedded$", "^go$", "^npx$", "^postcss$", "^asciidoctor$" ]

@@ -7,4 +7,4 @@ Weight: 70
 :email: likhobory@mail.ru
 
 === Оглавление
-{{% children depth="3" showhidden="true" %}}
+{{% children depth="3" showhidden="true" /%}}

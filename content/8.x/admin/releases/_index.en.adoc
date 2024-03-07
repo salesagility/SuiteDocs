@@ -3,7 +3,7 @@ title: "Releases"
 weight: 10000
 ---
 
-{{% children depth="1" %}}
+{{% children depth="1" /%}}
 
 
 
