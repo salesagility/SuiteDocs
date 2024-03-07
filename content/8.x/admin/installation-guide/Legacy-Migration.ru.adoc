@@ -88,7 +88,7 @@ link:../../compatibility-matrix[Таблице совместимости^].
 
  . Из корневой папки SuiteCRM 8 запустите: 
 + 
-[source,bash]
+[source,console]
 -----
 ./bin/console suitecrm:app:setup-legacy-migration
 -----
@@ -102,7 +102,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 * Измените значение директивы `site_url` на адрес, по которому будет доступна SuiteCRM 8.x.
 +
 {{% notice note %}}
-Если виртуальный сервер не указывает на каталог  *public* в корневой папке SuiteCRM 8, то необходимо добавить */public*  к значению параметра *site_url*, например `'site_url' => '\https://your-host/crm/public',`.
+Если виртуальный сервер не указывает на каталог  *public* в корневой папке SuiteCRM 8, то необходимо добавить */public*  к значению параметра *site_url*, например `'site_url' => 'https://your-host/crm/public',`.
 {{% /notice %}}
 +
 .  Вам будет предложено вручную выполнить ряд действий по изменению директивы *RewriteBase* в файле `.htaccess`, расположенном в папке `legacy`: 
@@ -119,7 +119,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 
 *Пример:* 
 
-[source,bash]
+[source,console]
 -----
 ./bin/console suitecrm:app:upgrade -t SuiteCRM-8.3.0
 -----
@@ -133,7 +133,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 
 Из корневой папки SuiteCRM 8 запустите: 
 
-[source,bash]
+[source,console]
 -----
 ./bin/console suitecrm:app:upgrade-finalize
 -----
@@ -152,7 +152,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 
 В консоли выполните: 
 
-[source,bash]
+[source,console]
 -----
 ./bin/console suitecrm:app:upgrade-finalize -m keep
 -----
@@ -166,7 +166,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 
 В консоли выполните: 
 
-[source,bash]
+[source,console]
 -----
 ./bin/console suitecrm:app:upgrade-finalize -m merge
 -----
@@ -182,7 +182,7 @@ link:../../configuration/sessions-configuration[Настройка сессий^
 
 В консоли выполните: 
 
-[source,bash]
+[source,console]
 -----
 ./bin/console suitecrm:app:upgrade-finalize -m override
 -----
