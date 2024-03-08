@@ -76,7 +76,7 @@ If you want to get involved and submit a fix, fork the repo and when ready pleas
 
 Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
 
-To report any security issues please follow our link:../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+To report any security issues please follow our link:../../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
 
 '''
 
@@ -102,7 +102,7 @@ Angular version has been updated to v16. For development purposes you will need 
 
 With the upgrade to angular v16 the version of the `@angular-architects/module-federation` lib has also been updated.
 
-Previously built extensions will need to be updated. Please read the link:../../../developer/extensions/frontend/migration/8.5[Frontend extension - Migrate to SuiteCRM 8.5+] guide for information on how to upgrade.
+Previously built extensions will need to be updated. Please read the link:../../../developer/extensions/frontend/migration/migration-8.5/[Frontend extension - Migrate to SuiteCRM 8.5+] guide for information on how to upgrade.
 
 
 ==== icon:star[] Enhancements

@@ -113,8 +113,7 @@ Once the settings have been verified, click btn:[SAVE] so that
 these settings are retained before leaving the settings page.
 
 ==== Troubleshooting
-If the test message was not sent successfully, check the log file in
-link:../system#_system_settings[system settings] for any further error messages
+If the test message was not sent successfully, check the log file for any further error messages
 which may assist with resolving the issue.
 
 Verify that all port/protocol settings are correct and that the username/password entered is correct and
@@ -195,7 +194,7 @@ image:OAuthServerConfiguration.png[OAuth Server Configuration]
 
 When setting up with OAuth, you will need the username(email), password and mail server address for the account.
 
-The other required field is `External OAuth Connection`, you can see how to configure this link:InboundEmail-OAuth-HowTo.adoc[here].
+The other required field is `External OAuth Connection`, you can see how to configure this link:../inboundemail-oauth-howto[here].
 
 ==== Email Handling Options
 
@@ -352,7 +351,7 @@ image:EmailCampaignSettings.png[Campaign Settings]
 Scheduled campaign emails are queued here until the scheduled job
 runs to send them out. By default this is the *Run Nightly Mass Email Campaigns* scheduled job.
 
-See the link:../system/#_scheduler[Scheduler] section for
+See the link:../../system/#_scheduler[Scheduler] section for
 further information on scheduled jobs.
 
 Click btn:[SEND QUEUED CAMPAIGN EMAILS] to send them immediately without waiting for the scheduler to do so.
