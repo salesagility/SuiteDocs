@@ -9,7 +9,7 @@ title: "Config"
 == The config files
 
 There are two main config files in SuiteCRM, both of which are in the
-root SuiteCRM folder. These are `config.php` and `config_override.php`.
+root SuiteCRM folder (public/legacy/). These are `config.php` and `config_override.php`.
 The definitions in here provide various configuration options for
 SuiteCRM. All the way from the details used to access the database to
 how many entries to show per page in the list view. Most of these
