@@ -80,7 +80,7 @@ image:image1.png[Панель администратора SuiteCRM]
 === E-mail
 
 * {adm-email}[Emails]
-** {adm-email}#_настройка_e_mail[Настройка основных параметров E-mail]
+** {adm-email}#_параметры_e_mail[Настройка основных параметров E-mail]
 ** {adm-email}#_входящие_e_mail[Входящие E-mail]
 ** {adm-email}#_исходящие_e_mail[Исходящие E-mail]
 ** {adm-email}../inboundemail-oauth-howto/#_создание_подключения_oauth[Внешние подключения OAuth]
