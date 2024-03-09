@@ -156,7 +156,7 @@ $searchdefs ['Accounts'] =
 [source,php]
 -----
 $layout_defs['Accounts'] = array(
-    // list of what Subpanels to show in the DetailView
+    // перечень субпанелей, отображаемых в Форме просмотра
     'subpanel_setup' => array(
 
         'activities' => array(
