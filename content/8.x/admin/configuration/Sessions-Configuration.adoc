@@ -7,7 +7,7 @@ weight: 30
 
 == Option 1. Changing session dir in php.ini
 
-It is possible to update the global session dir by changing php's link:session.save-path[https://www.php.net/manual/en/session.configuration.php#ini.session.save-path] directive on your php.ini file.
+It is possible to update the global session dir by changing php's link:https://www.php.net/manual/en/session.configuration.php#ini.session.save-path[session.save_path] directive on your php.ini file.
 
 
 == Option 2. Changing session dir in SuiteCRM configuration

@@ -43,7 +43,7 @@ As a best practice extension backend code should be added to `extensions/<your-e
 . Within that folder create the `CaseCalculatePriority.php`, i.e. `extensions/defaultExt/modules/Cases/Service/Fields/CaseCalculatePriority.php`
 .. If you are not using the recommended path, make sure that the `namespace` follows the one you are using
 .. On our example the namespace is `namespace App\Extension\defaultExt\modules\Cases\Service\Fields;`
-. On `CaseCalculatePriority.php`, add the code on the snippet on link:./#_3_2_process_handler_implementation[3.2 Process handler implementation] section
+. On `CaseCalculatePriority.php`, add the code on the snippet on link:./#_2_2_process_handler_implementation[2.2 Process handler implementation] section
 . Run `php bin/console cache:clear` or delete the contents of the cache folder under the root of the project
 . Re-set the correct file permissions if you need to (This will depend on your setup and the user you are using to make changes)
 
