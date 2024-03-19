@@ -13,29 +13,40 @@ The following documentation is for SuiteCRM Version 8+; to see documentation for
 
 This page explains how to use the UI installer for SuiteCRM.
 
-
-
 {{% notice note %}}
 Before going through the steps on this page, please go through the link:../downloading-installing/[Downloading & Installing] guide.
 {{% /notice %}}
 
+== 2. Pre-Install Page
 
+Here you will see the Pre Install Check page.
 
-== 2. Installing using the install page
+image:SuiteCRM8-PreInstall-1.png[SuiteCRM 8 Pre Install Page - 1]
 
-To run the web installer go to `https://<your-suite-crm-instance-path>/`
+image:SuiteCRM8-PreInstall-2.png[SuiteCRM 8 Pre Install Page - 2]
 
-Since you are not installed this should re-direct you to `https://<your-suite-crm-instance-path>/#/install`
+=== 2.1 Pre-Install Warnings/Errors
 
-Where you should see a view like the following
+Each check will either display `OK` if there are no issues or the following:
 
-image:web-ui-install-license.png[web-ui-install-license.png]
+image:SuiteCRM8-PreInstall-Error.png[SuiteCRM8-PreInstall-Error]
 
-=== 2.1. Accept the license
+If a check that is required fails, a small error label will show as well as information on why the check didn't pass.
 
-In order to be able to install you'll have to accept the license by checking the `I ACCEPT` checkbox.
+Once the changes have been made to meet the requirements of the check, select the `RECHECK' button shown to re-run.
 
-=== 2.2 Setup basic system configuration
+=== 2.2 Cron Configuration
+
+image:SuiteCRM8-PreInstall-2.png[SuiteCRM 8 Pre Install Page - 2]
+
+There is also instructions on how to setup crontab. **These steps should ONLY be followed AFTER installation is complete**
+
+== 3. Installing using the install page
+
+If all checks passed on the Pre-Install page then select the `Proceed` button and you will be redirected to
+`https://<your-suite-crm-instance-path>/#/install`
+
+=== 3.1 Setup basic system configuration
 
 The next step is to add the base system configuration in order for your system to work.
 
@@ -47,19 +58,20 @@ On this page apart from `Ignore system check warnings` all fields are required a
 
 In this tab you will find the following configurations:
 
-==== 2.2.1 URL OF SUITECRM INSTANCE
+==== 3.1.1 URL OF SUITECRM INSTANCE
 
 image:web-ui-install-url.png[web-ui-install-url.png]
 
-In the above field you should set the url where your SuiteCRM instance is located. A few example:
+In the above field, the url you have currently will be pre-filled. However, if this is not correct, you should set the url
+where your SuiteCRM instance is located. A few example:
 
 * `https://example-domain.com`
 * `https://localhost`
 * `https://crm.example-domain.com`
 
-**Tip: ** you can simply copy the url from you browser's address bar
+**Tip: ** you can simply copy the url from your browser's address bar
 
-==== 2.2.2 SuiteCRM Database User
+==== 3.1.2 SuiteCRM Database User
 
 image:web-ui-install-db-user.png[web-ui-install-db-user.png]
 
@@ -69,61 +81,62 @@ In the above field you should set the user name for accessing your database.
 Ensure that the Database User you specify has the permissions to create and write to the SuiteCRM database.
 {{% /notice %}}
 
-==== 2.2.3 SuiteCRM Database User Password
+==== 3.1.3 SuiteCRM Database User Password
 
 image:web-ui-install-db-user-password.png[web-ui-install-db-user-password.png]
 
 In the above field you should set the password for accessing your database.
 
 
-==== 2.2.4 Host Name
+==== 3.1.4 Host Name
 
 image:web-ui-install-db-host.png[web-ui-install-db-host.png]
 
 In the above field you should set the host of your database.
 
 {{% notice note %}}
-In some systems when using `localhost` doctrine will try to use socket connection. However, socket connection is not supported at the moment, so in such cases, its maybe best to try with the ip, e.g. `127.0.0.1`
+In some systems when using `localhost` doctrine will try to use socket connection. However, socket connection is not supported at the moment, so in such cases, it may be best to try with the ip, e.g. `127.0.0.1`
 {{% /notice %}}
 
-==== 2.2.5 Database Name
+==== 3.1.5 Database Name
 
 image:web-ui-install-db-name.png[web-ui-install-db-name.png]
 
 In the above field you should set the name you want for the databases that will be created on your host during the install process, e.g. `suite` or `suitecrm` or another valid db name.
 
-==== 2.2.6 Database Port
+==== 3.1.6 Database Port
 
 image:web-ui-install-db-port.png[web-ui-install-db-port.png]
 
-In the above field is set to the default port user in `mysql` and `mariadb` database engines. You should only change it in case your database host is using a different port.
+The above field is set to the default port user in `mysql` and `mariadb` database engines. You should only change it in case your database host is using a different port.
 
-==== 2.2.7 POPULATE DATABASE WITH DEMO DATA
+==== 3.1.7 POPULATE DATABASE WITH DEMO DATA
 
 image:web-ui-install-demo-data.png[web-ui-install-demo-data.png]
 
 In the above field you can set if, during the install process, you want to pre-populate your database with demo data.
 
-==== 2.2.8 SuiteCRM Application Admin Name
+==== 3.1.8 SuiteCRM Application Admin Name
 
 image:web-ui-install-admin-username.png[web-ui-install-admin-username.png]
 
-In the above field you can set the username for your SuiteCRM instance's administrator user, e.g. `admin` or any other username you want to give.
+In the above field you can set the username for your SuiteCRM instance's administrator user, e.g. `admin` (this value
+will be prefilled) or any other username you want to give.
 
-==== 2.2.9 SuiteCRM Admin User Password
+==== 3.1.9 SuiteCRM Admin User Password
 
 image:web-ui-install-admin-password.png[web-ui-install-admin-password.png]
 
 In the above field you can set the password for your SuiteCRM instance's administrator user.
 
-=== 2.3 Ignoring install warnings
+=== 3.2 Ignoring install warnings
 
 image:web-ui-install-ignore-warnings.png[web-ui-install-ignore-warnings.png]
 
 Before running the install process, SuiteCRM is going to check for some system requirements, like `max upload file size` or `memory limit`. Some of these checks are optional, meaning that you can install the system without those.
 In case you want to proceed with the installation even if there are warnings you can check the `Ignore System Check Warnings` checkbox
 
-=== 2.4 Run the install
+=== 3.3 Run the install
 
 After you have accepted the license and set correct values for all the configurations you can click on `Proceed`.
 
@@ -137,7 +150,7 @@ If all the checks passed the system will continue on to the install process. Dur
 After the install process finishes you will be re-directed to the login page.
 
 
-=== 2.5 Double-checking configurations
+=== 3.4 Double-checking configurations
 
 Please double-check that the following configurations are correct
 
@@ -155,6 +168,6 @@ Please double-check that the following configurations are correct
 *** e.g. if your address is something like `https://your-host/crm/public`, then the correct value is `RewriteBase /crm/public/legacy`
 
 
-=== 2.6  Access the app
+=== 3.5  Access the app
 
 Try to login into your instance
