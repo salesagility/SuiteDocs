@@ -30,7 +30,7 @@ You will need to set up and have access to at least one *personal* or *group* em
 the *Emails* module. See link:../../introduction/managing-user-accounts#_personal_email_account_settings[Personal Email Settings] 
 for information on setting up a personal email account. For information on configuring group, 
 bounce handling and the system outbound mail accounts, please see 
-the link:../../../admin/administration-panel/email[Emails] section of the Administrator Guide.
+the link:../../../admin/administration-panel/emails[Emails] section of the Administrator Guide.
 {{% /notice %}}
 
 The *Emails* Module can be found on the *ALL* menu on the top navigation bar. 
