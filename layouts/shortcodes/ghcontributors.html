@@ -23,13 +23,12 @@ Shortcode usage:
 <div class="ghContributors">
 {{ range .Params }}
   {{ $git_user := . }}
-  {{ $u := getJSON "https://api.github.com/users/" $git_user }}
   <div>
     <div style="float:top;">
-      <a href="{{$u.avatar_url}}" data-featherlight="image">
-      <img src="{{$u.avatar_url}}" class="inline" style="width: 50px;height: 50px;margin-bottom:.25em; vertical-align:middle;" alt="{{ $git_user }} Avatar">
-    </a>
-    <div><a href="{{$u.html_url}}"  class="highlight">{{$u.login}}</a></div>
+      <a href="https://avatars.githubusercontent.com/{{$git_user}}" data-featherlight="image">
+        <img src="https://avatars.githubusercontent.com/{{$git_user}}" class="inline" style="width: 50px;height: 50px;margin-bottom:.25em; vertical-align:middle;" alt="{{ $git_user }} Avatar">
+      </a>
+      <div><a href="https://github.com/{{$git_user}}"  class="highlight">{{$git_user}}</a></div>
     </div>
   </div>
 {{ end }}

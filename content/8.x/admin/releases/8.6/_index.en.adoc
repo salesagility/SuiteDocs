@@ -1,0 +1,131 @@
+---
+title: "8.6 Releases"
+weight: 9820
+aliases:
+  - /8.x/admin/releases/8.6/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.6.0
+
+_Released 03/04/2024_
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM-Core[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+* The install via UI documentation has been updated see link:../../installation-guide/running-the-ui-installer[here.]
+
+==== icon:star[] Enhancements
+
+===== Pre-Install Check Page
+
+A Pre-Install Check Page has been added. This page will show any system requirements that aren't met before you proceed to the install process. More information can be found on the link:../../installation-guide/running-the-ui-installer[Install via UI documentation]
+
+===== Usability improvements
+
+====== 1. Quick Save / Search
+
+* *On ListView Filter Panel:*
+** Hitting `Enter` will apply the currently defined criteria and the search.
+** When saving a filter, hitting `Enter` will save the filter and search.
+* **On Record View: ** When creating/ editing records, hitting `ctrl`+`Enter` calls the record save.
+
+====== 2. Date fields will now show the pop-up calendar when click on the input like they do when the calendar icon is clicked.
+
+====== 3. Listview Column Resizing
+
+* In order to show more rows on the screen, the ListView column padding has been reduced and the column width has been set to dynamically adjust.
+
+====== 4. Enum component is now using regular dropdowns instead of the chips component
+
+====== 5. Relate field component has been re-implemented
+
+image:SuiteCRM8-Relate-Field-Detailview-New.gif[SuiteCRM8 New Relate Field]
+
+====== 6. MultiSelect field component has been re-implemented
+
+image:SuiteCRM8-MultiSelect-Field-Detailview-New.gif[SuiteCRM8 New MultiSelect Field]
+
+====== 7. Recently Viewed added to navbar
+
+image:Recently-Viewed.gif[Recently Viewed]
+
+====== 8. Back to ListView button added to Record View
+
+* To make navigation easier SuiteCRM now includes a back to list view button. It redirects back to the module list view on the page the user was before.
+
+image:Back-Button.gif[Back Button]
+
+
+
+
+===== Mobile improvements
+
+
+* Navbar
+** New module navigation menu
+** Active module always displayed
+** Collapsible global search input
+** Better touch device support
+** Support for swapping between touch and click/hover
+* ListView
+** Bulk action menu dynamically re-adjusted according to screen-size
+** Table pagination dynamically re-adjusted according to screen-size
+** Bigger and collapsible line actions for touch support
+** Show Single column on small devices
+** Column sizes/padding adjusted for better display
+** Useful bar button dynamically re-adjusted according to screen-size
+
+image:8-6-mobile-improvements.gif[Mobile improvements]
+
+
+==== icon:bug[] Bug Fixes
+
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/433[#433] - Password Expired after N logins not working
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/384[#384] - Street Address Single Line Only
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/434[#434] - Allow minus ints and floats
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/332[#332] - Bugs not creating from contacts subpanel
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/418[#418] - Undefined Index: post_install
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/426[#426] - Case Status Not Saving
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/385[#385] - Error Messages When Filtering Date Fields
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/399[#399] - Error on Date Component in Filter Mode
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/412[#412] - Opportunities filerting - Custom field (date) does not work in filter
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/409[#409] - Exporting a Workflow Doesn't work
+* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/381[#381] - Dynamic Dropdowns don't appear to save
+
+===== Known Issues
+
+* Usability adjustments on mobile devices still to be improved:
+** Click/touch swapping
+** Auto menu item closing after navigation
+** Improve support for long module names
+* MultiSelect fields with defaults values don't save correctly
+* Load More Pagination keeps page index if changing from regular pagination mode to load more pagination
+
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors ps-ohanel AndrewC3W TimmiORG abuzarfaris %}}
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our link:../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+
+'''
