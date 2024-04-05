@@ -9,7 +9,20 @@ Please check the link:../supported-versions[Supported Versions] page for more in
 
 == Raising Issues
 
-As we take security seriously, any reported issue will be reviewed by our Security Team. If you have discovered a security risk within SuiteCRM, email your report to the Security Team at security@suitecrm.com.
+As we take security seriously, any reported issue will be reviewed by our Security Team.
+If you have discovered a security risk within SuiteCRM, we would advise that you report it,
+in the first instance, via the Github Security Advisories section
+on the relevant repository:
+
+* if the issue exists in both - SuiteCRM 7 and SuiteCRM 8+ as well, please raise this issue https://github.com/salesagility/SuiteCRM/security[here].
+* If the issue exists only within SuiteCRM 8+  then raise the issue https://github.com/salesagility/SuiteCRM-Core/security[here].
+
+{{% notice info %}}
+When reporting the issue on the Github Security Advisories section, supply the description of security flaws
+and other proof of concept-related materials (POC) in a comment after adding the security advisory.
+{{% /notice %}}
+
+Alternatively, you can email your report to the Security Team at security@suitecrm.com.
 
 *Please don't disclose security bugs publicly* until they have been handled by the security team.
 
