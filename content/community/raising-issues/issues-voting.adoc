@@ -1,0 +1,23 @@
+---
+Title:  GitHub Issue Voting
+Weight: 20
+---
+
+:imagesdir: /images/en/community
+
+== Voting for Issues on GitHub
+
+Voting on issues will help to determine which ones are more important and as such, require consideration into future releases.
+
+To vote for an issue:
+
+* Locate the issue in the specific GitHub repository
+* Click the issue title to edit/view the issue
+* At the bottom left hand corner on the original description, click on the 'smiley' face
+* Choose the 'thumbs up' icon
+
+{{% notice note %}}
+Any 'thumbs up' recorded on any other comments/notes will be disregarded and not counted.
+{{% /notice %}}
+
+image:32Issue-Voting.gif[Issue Voting Demo]

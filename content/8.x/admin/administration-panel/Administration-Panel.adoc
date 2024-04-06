@@ -68,7 +68,7 @@ image:Admin-Panel-Bottom.png[Admin-Panel-Bottom.png]
 * link:../../../../admin/administration-panel/developer-tools/#_display_modules_and_subpanels[Display Modules and Subpanels]
 ** Display Modules and Subpanels
 
-* link:../../../../admin/administration-panel/developer-tools/#_history_subpanel[Hisotry Subpanel]
+* link:../../../../admin/administration-panel/developer-tools/#_history_subpanel[History Subpanel]
 ** History Subpanel
 
 * link:../../../../admin/administration-panel/advanced-openadmin/#_aos_settings[Sales Module Settings]
@@ -94,36 +94,36 @@ image:Admin-Panel-Bottom.png[Admin-Panel-Bottom.png]
 
 ==== Admin Tools
 
-* link:../../../admin/administration-panel/system[System]
+* link:../../../../admin/administration-panel/system/[System]
 ** Repair
 ** Backups
 ** Diagnostic Tool
 
-* link:../../../user/introduction/user-interface/record-management/#_importing_records[Importing Records]
+* link:../../../../user/introduction/user-interface/record-management/#_importing_records[Importing Records]
 ** Import Wizard
 
-* link:../../../admin/administration-panel/developer-tools/#_module_loader[Module Loader]
+* link:../../../../admin/administration-panel/developer-tools/#_module_loader[Module Loader]
 ** Module Loader
 
 ==== Developer Tools
 
-* link:../../../admin/administration-panel/studio[Studio]
+* link:../../../../admin/administration-panel/studio[Studio]
 ** Studio
 
-* link:../../../admin/administration-panel/developer-tools/#_rename_modules[Developer Tools]
+* link:../../../../admin/administration-panel/developer-tools[Developer Tools]
 ** Rename Modules
 ** Module Builder
 ** Dropdown Editor
 
-* link:../../../user/advanced-modules/workflow[Workflows]
+* link:../../../../user/advanced-modules/workflow[Workflows]
 ** Workflow Manager
 
 ==== Google Suite
 
-* link:../../../admin/administration-panel/google-sync/#_overview[Google Credentials and Syncing]
+* link:../../../../admin/administration-panel/google-sync/#_overview[Google Credentials and Syncing]
 ** Google Calendar Settings
 
-* link:../../../admin/administration-panel/google-maps/#_google_map_setup[Google Maps]
+* link:../../../../admin/administration-panel/google-maps/#_google_map_setup[Google Maps]
 ** Google Maps Settings
 ** Geocoding Test
 ** Geocode Addresses
