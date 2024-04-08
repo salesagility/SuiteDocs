@@ -33,7 +33,7 @@ image:SuiteCRM8-PreInstall-Error.png[SuiteCRM8-PreInstall-Error]
 
 If a check that is required fails, a small error label will show as well as information on why the check didn't pass.
 
-Once the changes have been made to meet the requirements of the check, select the `RECHECK' button shown to re-run.
+Once the changes have been made to meet the requirements of the check, select the `RECHECK` button shown to re-run.
 
 === 2.2 Cron Configuration
 
