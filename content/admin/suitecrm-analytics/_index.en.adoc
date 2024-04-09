@@ -12,7 +12,7 @@ free-to-download solution which was built using Pentaho BI Suite Community Editi
 SuiteCRM users the ability to launch, administrate and customise their own BI platform and is 
 completely extendable. SuiteCRM Analytics is comprised of two major components:
 
-{{% children depth="4" showhidden="true" %}}
+{{% children depth="4" showhidden="true" /%}}
 
 
 

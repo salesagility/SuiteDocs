@@ -10,4 +10,4 @@ chapter: true
 == Основные модули
 
 === Оглавление
-{{% children depth="3" showhidden="true" %}}
+{{% children depth="3" showhidden="true" /%}}

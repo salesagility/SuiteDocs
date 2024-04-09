@@ -2,9 +2,9 @@
 <h4 class="hd">{{ T "FromTechnicalBlog" }}</h4>
 
 <div class="blog_wrap">
-{{ range first 3 ( sort (where .Site.RegularPages "Section" "blog") "Date" "desc" ) }} 
+  {{ range first 3 ( sort (where .Site.RegularPages "Section" "blog") "Date" "desc" ) }}
 
-  <h3><a href="{{ .URL }}">{{ .Params.title }}</a></h3>{{ partial "tags.html" . }}
+  <h3><a href="{{ .Permalink }}">{{ .Params.title }}</a></h3>{{ partial "tags.html" . }}
   <p class="author">
     {{ if .Params.Author }}By {{ .Params.Author }} | {{ end }}{{ .Date.Format "January 2, 2006" }}
   </p>
@@ -14,5 +14,5 @@
     <a class="more" href="{{ .RelPermalink }}">Read More ></a>
   </p>
   {{ end }}
-{{ end }}
+  {{ end }}
 </div>

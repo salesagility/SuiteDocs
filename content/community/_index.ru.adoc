@@ -9,7 +9,7 @@ pre: "<b>3. </b>"
 :email: likhobory@mail.ru
 
 === Содержание
-{{% children depth="3" showhidden="true" %}}
+{{% children depth="3" showhidden="true" /%}}
 
 
 
