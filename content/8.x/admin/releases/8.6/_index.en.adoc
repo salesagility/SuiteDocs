@@ -98,7 +98,6 @@ image:8-6-mobile-improvements.gif[Mobile improvements]
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/426[#426] - Case Status Not Saving
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/385[#385] - Error Messages When Filtering Date Fields
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/399[#399] - Error on Date Component in Filter Mode
-* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/412[#412] - Opportunities filerting - Custom field (date) does not work in filter
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/409[#409] - Exporting a Workflow Doesn't work
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/381[#381] - Dynamic Dropdowns don't appear to save
 
