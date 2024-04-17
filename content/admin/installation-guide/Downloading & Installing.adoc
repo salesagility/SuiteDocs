@@ -99,7 +99,7 @@ you need to install SuiteCRM by following the on-screen installation
 wizard. You can navigate to the wizard by entering the following in your
 web browser:
 
-`http://<yourServer>/<yourSuiteCRMDirectory>/install.php` 
+ http://<yourServer>/<yourSuiteCRMDirectory>/install.php
 
 You can perform a typical installation or a custom installation. Typical
 installation is recommended, but you can choose custom installation for
@@ -111,7 +111,7 @@ specified during installation instead of after logging into SuiteCRM
 
 .  Launch your browser and enter the following URL:
 
-`http://<yourServer>/<yourSuiteCRMDirectory>/install.php`
+ http://<yourServer>/<yourSuiteCRMDirectory>/install.php
 
 * This displays the Welcome page.
 .  Click Next.
@@ -186,8 +186,9 @@ installation.
 === Performing a custom installation of SuiteCRM
 
 .  Launch your browser and go to your new SuiteCRM installation. The URL should be similar to the following:
-`http://crm.yourserver.com/Suite-CRM-Directory/install.php`
- 
+
+ http://crm.yourserver.com/Suite-CRM-Directory/install.php
+
 .  The _Welcome to the SuiteCRM Setup Wizard_ screen
 You need to accept the license agreement first. To do so:
 ..  Click the _I Accept_ checkbox.
@@ -234,7 +235,9 @@ This is the password of the administrator account. Please re-enter it
 in the _Re-enter SuiteCRM Admin User Password_ section for validation.
 ....  _URL of SuiteCRM Instance_
 The URL to the CRM. Ex:
-http://crm.yourserver.com/Suite-CRM-Directory
+
+ http://crm.yourserver.com/Suite-CRM-Directory
+
 ....  _Email Address_
 This is the administrator's email address. Ex:
 `john.smith@yourserver.com`
