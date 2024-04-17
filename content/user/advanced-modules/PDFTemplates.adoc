@@ -36,7 +36,7 @@ Quotes, Invoices, Contracts, Contacts or a Lead.
 a|{{% notice note %}}
 When adding a new item to the combo box list *_pdf_template_type_dom_*, the name of the
 key to be added must match the module name. In the following example,
-the item *Addresses* is added to the list. +
+the item *Prospects* is added to the list. +
 Detailed information on adding a new element to the combo box is described in the
 Developer Tools page.
 {{% /notice %}}
