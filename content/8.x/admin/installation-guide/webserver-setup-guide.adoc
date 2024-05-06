@@ -23,10 +23,10 @@ Install the platform-appropriate version of the following:
 * `php`
 * database: `mysql` or `mariadb`
 
-See the link:../../compatibility-matrix/[Compatibility matrix] to ensure you have the correct versions of the required softwares.
-
-{{% notice note %}}
-There are other software dependencies on the link:../../compatibility-matrix/[Compatibility matrix] under the `Additional requirements for Development` section, however those are the ones required for a development environment.
+{{% notice info %}}
+See the link:../../compatibility-matrix/[Compatibility matrix] to ensure you have the correct versions of the required software.
+There are other software dependencies on the Compatibility matrix under the `Additional requirements for Development` section,
+however those are the ones required for a development environment.
 {{% /notice %}}
 
 When installing SuiteCRM from pre-build installable package zip you **do not** need to install the dependencies that are for development, namely: node, angular cli, yarn/npm.

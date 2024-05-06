@@ -1,0 +1,29 @@
+---
+Title: Metadata merge modes
+weight: 80
+---
+
+In the finalize command you can specify the merge mode you want to use for merging metadata.
+This can be changed by specifying the `-m` option on the `suitecrm:app:upgrade-finalize` command.
+The `keep` mode is used by default.
+
+Next you can find a description of each mode and how to use it.
+
+== 1. Keep mode
+
+* The default mode is to keep the existing view metadata customizations and will simply skip the metadata merge process.
+* If you want to specify on the command you can run: `./bin/console suitecrm:app:upgrade-finalize -m keep`
+
+== 2. Merge mode
+
+* This mode will attempt to merge your current view metadata customizations with the new core view metadata for each module
+* The merged metadata is placed in the custom folder for the corresponding module `public/legacy/custom/<Module>/metadata`
+* A backup file of the previous version of the customizations is added to the same folder
+* You can use the merge mode by running `./bin/console suitecrm:app:upgrade-finalize -m merge`
+
+== 3. Override mode
+
+* This mode will override your current customizations with the new version of the core metadata.
+* **Please note** that this will **delete** your current customizations files in `public/legacy/custom/<Module>/metadata`
+* You can use the merge override mode by running `./bin/console suitecrm:app:upgrade-finalize -m override`
+
