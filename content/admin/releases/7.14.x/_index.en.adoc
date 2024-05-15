@@ -9,6 +9,44 @@ weight: 9850
 :icons: font
 :imagesdir: /images/en/admin/release
 
+== 7.14.4
+
+_Released date_
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/download/[Download]
+* https://github.com/salesagility/SuiteCRM[Github]
+
+===  icon:check[] Release Notes
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10411[10411] - Fix https://github.com/salesagility/SuiteCRM/issues/10410[#10410] - Check report has been loaded before setting user params
+* PR: https://github.com/salesagility/SuiteCRM/pull/9896[9896] - Fix https://github.com/salesagility/SuiteCRM/issues/9895[#9895] - Workflow - Copying Formatted values of a multienum to another field
+* PR: https://github.com/salesagility/SuiteCRM/pull/9988[9988] - Fix https://github.com/salesagility/SuiteCRM/issues/9985[#9985] - Date end not stored correctly in Calls
+* PR: https://github.com/salesagility/SuiteCRM/pull/10186[10186] - Fix https://github.com/salesagility/SuiteCRM/issues/10182[#10182] - Graphic Issue search view after 7.14 upgrade
+* PR: https://github.com/salesagility/SuiteCRM/pull/9972[9972] - Fix https://github.com/salesagility/SuiteCRM/issues/9971[#9971] - Workflow - Add filters to quick and advanced search view in AOW Processed module
+* PR: https://github.com/salesagility/SuiteCRM/pull/10322[10322] - Fix https://github.com/salesagility/SuiteCRM/issues/10321[#10321] - Creation of Project with Template Causes 500 Error
+* PR: https://github.com/salesagility/SuiteCRM/pull/10328[10328] - Fix https://github.com/salesagility/SuiteCRM/issues/10327[#10327] - Survey Responses doesn't get assigned_user after sending Survey
+* PR: https://github.com/salesagility/SuiteCRM/pull/10375[10375] - Fix #10375 - Upgradewizard double commit
+* PR: https://github.com/salesagility/SuiteCRM/pull/10402[10402] - Fix https://github.com/salesagility/SuiteCRM/issues/10401[#10401], https://github.com/salesagility/SuiteCRM/issues/10376[#10376]  - PDF rendering issues
+* PR: https://github.com/salesagility/SuiteCRM/pull/10409[10409] - Fix #10409 - skip to last page if disable_count_query=true
+* PR: https://github.com/salesagility/SuiteCRM/pull/10323[10323] - Fix https://github.com/salesagility/SuiteCRM/issues/10172[#10172] - Emails don't show subject MIME headers
+* PR: https://github.com/salesagility/SuiteCRM/pull/10389[10389] - Fix https://github.com/salesagility/SuiteCRM/issues/1872[#1872] - Admin - Install Module - "Back to Module Loader" shows page with header only
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM QuickCRM holdusback pstevens71 JanSiero CommuniG8 cyb456 chris001 DBRenny rsyrnicki Mausino leonardobandini kengelbr %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our link:../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.14.3
 
 _Released 05/02/2024_
