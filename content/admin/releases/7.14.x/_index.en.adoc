@@ -11,14 +11,41 @@ weight: 9850
 
 == 7.14.4
 
-_Released date_
+_Released 10/06/2024_
 
 === icon:box-open[] Assets
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM[Github]
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.4[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
 
 ===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+* We have updated our documentation regarding raising security issues, see more on that link:../../../community/security-policy[here.]
+* We have updated recent SuiteCRM Version Release Notes with the Install and Upgrade Guide to both 7 and 8 as well as the Migration Guide for SuiteCRM 8.
+
+==== icon:lock[] Security
+
+{{% notice warning %}}
+Important: This release includes critical security fixes, we strongly recommend users of older versions to update as soon as possible
+{{% /notice %}}
+
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36416[CVE-2024-36416:  Excessive log data DOS Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-jrpp-22g3-2j77[GitHub Advisory] | Reporter: Elysee Franchuk
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36415[CVE-2024-36415:  Improper Access Control Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-c82f-58jv-jfrh[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36414[CVE-2024-36414:  SSRF Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-wg74-772c-8gr7[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36413[CVE-2024-36413:  XSS Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-ph2c-hvvf-r273[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36412[CVE-2024-36412:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-xjx2-38hv-5hh8[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36411[CVE-2024-36411:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-9rvr-mcrf-p4p7[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36410[CVE-2024-36410:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-7jj8-m2wj-m6xq[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36409[CVE-2024-36409:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-pxq4-vw23-v73f[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36408[CVE-2024-36408:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-2g8f-gjrr-x5cg[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36407[CVE-2024-36407:  Improper Access Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-6p2f-wwx9-952r[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36406[CVE-2024-36406:  Open Redirect Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-hcw8-p37h-8hrv[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36418[CVE-2024-36418:  RCE Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-mfj5-37v4-vh5w[GitHub Advisory] | Reporter: Andrius Oželis
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6537[CVE-2023-6537:  SSRF Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-2674-4gq4-j4f4[GitHub Advisory] | Reporter: Carlos Bello
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36419[CVE-2024-36419:  Host Injection Vulnerability] | https://github.com/salesagility/SuiteCRM-Core/security/advisories/GHSA-3323-hjq3-c6vc[GitHub Advisory] | Reporter: Tanish Mahajan
 
 ==== icon:bug[] Bug Fixes
 
@@ -34,12 +61,18 @@ _Released date_
 * PR: https://github.com/salesagility/SuiteCRM/pull/10409[10409] - Fix #10409 - skip to last page if disable_count_query=true
 * PR: https://github.com/salesagility/SuiteCRM/pull/10323[10323] - Fix https://github.com/salesagility/SuiteCRM/issues/10172[#10172] - Emails don't show subject MIME headers
 * PR: https://github.com/salesagility/SuiteCRM/pull/10389[10389] - Fix https://github.com/salesagility/SuiteCRM/issues/1872[#1872] - Admin - Install Module - "Back to Module Loader" shows page with header only
+* PR: https://github.com/salesagility/SuiteCRM/pull/10424[10424] - Fix https://github.com/salesagility/SuiteCRM/issues/9213[#9213] - $discount_amount corrupted
+* PR: https://github.com/salesagility/SuiteCRM/pull/10426[10426] - Feature #10426 - new issue menu templates
 
 === icon:heart[] Community
 
 _Special thanks to the following members for their contributions and participation in this release!_
 
 {{% ghcontributors SinergiaCRM QuickCRM holdusback pstevens71 JanSiero CommuniG8 cyb456 chris001 DBRenny rsyrnicki Mausino leonardobandini kengelbr %}}
+
+_Special thanks to everyone who reported the security issues addressed in this release!_
+
+{{% ghcontributors ElSicarius kva55 Retr02332 %}} https://www.linkedin.com/in/emrehampolat/[Emre Hampolat],  Andrius Oželis
 
 Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
 
@@ -53,8 +86,9 @@ _Released 05/02/2024_
 
 === icon:box-open[] Assets
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM[Github]
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.3[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
 
 ===  icon:check[] Release Notes
 
@@ -107,8 +141,9 @@ _Released 14/11/2023_
 
 === icon:box-open[] Assets
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM[Github]
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.2[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
 
 ===  icon:check[] Release Notes
 
@@ -172,8 +207,9 @@ _Released 03/10/2023_
 
 === icon:box-open[] Assets
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM[Github]
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.1[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
 
 ===  icon:check[] Release Notes
 
@@ -235,8 +271,9 @@ _Released 29/08/2023_
 
 === icon:box-open[] Assets
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM[Github]
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.0[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
 
 ===  icon:check[] Release Notes
 
