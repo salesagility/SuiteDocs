@@ -1,0 +1,60 @@
+---
+Title: Upgrading to SuiteCRM 8.2.x+ versions
+weight: 30
+---
+
+{{% notice note %}}
+This section only applies when upgrading to a version 8.2.x or greater.
+{{% /notice %}}
+
+{{% notice warning %}}
+If your SuiteCRM version is lower than 8.2.x please read the following guide link:../general-info#_version_steps[Upgrade Version Steps]
+{{% /notice %}}
+
+== 1. Download the new version package
+
+
+*1.1.* Download the SuiteCRM 8 target version installable package from https://suitecrm.com/download/
+
+* The upgrade between two 8.x versions is **done using the package of the version you want to upgrade to**, e.g. to upgrade from *8.2.x to 8.6.0* use the *SuiteCRM-8.6.0.zip* as the upgrade package.
+
+*1.2.* Create the following folder on you current instance:
+
+* `<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+*1.3.* Place the package on the `<your-suitecrm-8-root-folder>/tmp/package/upgrade` folder
+
+== 2. Run Upgrade
+
+*2.1.* ⚠️ Re-set the correct permissions.
+
+*2.2.* Run the upgrade command
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade -t "<version>"`,
+where `<version>` is the name on the SuiteCRM 8 package you've downloaded, i.e. `SuiteCRM-8.6.0`:
+
+[source, bash]
+----
+./bin/console suitecrm:app:upgrade -t SuiteCRM-8.6.0
+----
+
+*2.3.* ⚠️ Re-set the correct permissions.
+
+*2.4.* Run the post upgrade command
+
+On your SuiteCRM 8 instance root run: `./bin/console suitecrm:app:upgrade-finalize -t "<version>"`, i.e.:
+
+[source, bash]
+----
+./bin/console suitecrm:app:upgrade-finalize -t SuiteCRM-8.6.0
+----
+
+*2.5.* ⚠️ Re-set the correct permissions.
+
+== 3. (Optional) Restart server to reset/clear php level cache
+
+If you are using `opcache`, `apcu` or other php caches, you may need to restart your webserver for the new code to take effect.
+
+== 4. Open your instance
+
+If all the above steps went as expected, you should now be able to login into your instance.

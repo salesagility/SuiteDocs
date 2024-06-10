@@ -1,0 +1,62 @@
+---
+title: "General Information"
+weight: 10
+---
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../admin/installation-guide/upgrading[here].
+{{% /notice %}}
+
+:imagesdir: /images/en/8.x/admin/upgrading/
+
+== Before starting the upgrade
+
+Please consider going through the link:../before-start[preparation steps],
+this will ensure your environment will be compatible with SuiteCRM 8.
+
+== Version Steps
+
+When upgrading, please take into consideration your current SuiteCRM version and your targeted version.
+The steps you follow will differ depending on this.
+Please note, that some paths will have mandatory upgrade steps.
+As a guide:
+
+- Upgrading from 8.2.x to the latest version: 8.2.x => Current
+
+- Upgrading from Release Candidate / 8.0.x / 8.1.x to the latest version: RC/8.0/8.1 => 8.2.x => Current
+
+- Upgrading from BETA to the latest version: BETA => RC/8.0.x/8.1.x => 8.2.x => Current
+
+== Guide for each Version Step
+The following table lists the documentation page for each distinct step of the upgrade,
+as noted in the above section
+|===
+|Starting version |Upgrade Guide
+|Upgrade from:
+
+*RC/8.0.x/8.1.x => 8.2.x*
+
+*8.2.x => current*
+
+|link:../upgrading-82x-versions[Upgrading to SuiteCRM 8.2.x+ versions]
+
+|Upgrade from *RC/8.0.x => 8.1.x*
+|link:../older-versions/upgrading-80-to-81-versions[Upgrading from SuiteCRM 8.0.x to 8.1.x versions]
+
+|Upgrade from *Beta to RC version*
+| link:../older-versions/upgrading-rc-versions[Upgrade for pre release-candidate versions]
+
+
+|===
+
+== Upgrade restrictions
+
+{{% notice warning %}}
+The following section(s) contains the restrictions there are when upgrading between versions
+{{% /notice %}}
+
+- If you are on any version between 8.0.x - 8.1.x and you wish to upgrade to a version greater or equal to 8.3.x, you will first need to upgrade to 8.2.x and only after that can you upgrade to your target version (8.3.x or greater)
+
+- There was a bug when upgrading to version 8.3.1,
+which has been resolved on 8.4.0. For more info see the section
+link:../additional-materials/upgrading-issues#_3_upgrading_to_version_8_3_1[Upgrading to version 8.3.1] of the Upgrading issues page.

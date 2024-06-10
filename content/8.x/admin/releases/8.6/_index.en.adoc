@@ -11,12 +11,108 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
+== 8.6.1
+
+_Released 10/06/2024_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.6.1[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
+* link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Documentation
+
+* We have updated our documentation regarding raising security issues, see more on that link:../../../../community/security-policy[here.]
+* We have updated recent SuiteCRM Version Release Notes with the Install and Upgrade Guide to both 7 and 8 as well as the Migration Guide for SuiteCRM 8.
+
+==== icon:lock[] Security
+
+{{% notice warning %}}
+Important: This release includes critical security fixes, we strongly recommend users of older versions to update as soon as possible
+{{% /notice %}}
+
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36416[CVE-2024-36416:  Excessive log data DOS Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-jrpp-22g3-2j77[GitHub Advisory] | Reporter: Elysee Franchuk
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36415[CVE-2024-36415:  Improper Access Control Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-c82f-58jv-jfrh[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36414[CVE-2024-36414:  SSRF Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-wg74-772c-8gr7[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36413[CVE-2024-36413:  XSS Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-ph2c-hvvf-r273[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36412[CVE-2024-36412:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-xjx2-38hv-5hh8[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36411[CVE-2024-36411:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-9rvr-mcrf-p4p7[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36410[CVE-2024-36410:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-7jj8-m2wj-m6xq[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36409[CVE-2024-36409:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-pxq4-vw23-v73f[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36408[CVE-2024-36408:  SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-2g8f-gjrr-x5cg[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36407[CVE-2024-36407:  Improper Access Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-6p2f-wwx9-952r[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36406[CVE-2024-36406:  Open Redirect Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-hcw8-p37h-8hrv[GitHub Advisory] | Reporter: Anael MURAT (Fidens) - Sicarius
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36417[CVE-2024-36417:  Stored XSS Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-3www-6rqc-rm7j[GitHub Advisory] | Reporter: Atul RV
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36418[CVE-2024-36418:  RCE Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-mfj5-37v4-vh5w[GitHub Advisory] | Reporter: Andrius Oželis
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6388[CVE-2023-6388:  RCE Vulnerability] | https://github.com/salesagility/SuiteCRM-Core/security/advisories/GHSA-j482-m46g-v8r2[GitHub Advisory] | Reporter: Carlos Bello
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2023-6537[CVE-2023-6537:  SSRF Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-2674-4gq4-j4f4[GitHub Advisory] | Reporter: Carlos Bello
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-36419[CVE-2024-36419:  Host Injection Vulnerability] | https://github.com/salesagility/SuiteCRM-Core/security/advisories/GHSA-3323-hjq3-c6vc[GitHub Advisory] | Reporter: Tanish Mahajan
+
+==== icon:bug[] Bug Fixes
+
+* Fix https://github.com/salesagility/SuiteCRM-Core/issues/298[#298] - Add support for multi-module definitions
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/494[494] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/493[#493] - Improve Cache Clear Speed
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/489[489] - Fix #489 - Fix custom relate
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/488[488] - Fix #488 - Fix Some Search Styling
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/487[487] - Fix #487 - Overlapping Names on Relate Fields
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/486[486] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/458[#458] - Fix hard coded labels
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/485[485] - Fix #485 - Tasks Contact Relate Field Filtering by last name
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/461[461] - Fix link:https://github.com/salesagility/SuiteCRM-Core/issues/442[#442] - Export not working
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/463[463] - Fix #463 - Email Opening new tab in Legacy View
+* PR: https://github.com/salesagility/SuiteCRM-Core/pull/484[484] - Feature #484 - new issue menu templates
+* PR: https://github.com/salesagility/SuiteCRM/pull/10411[10411] - Fix https://github.com/salesagility/SuiteCRM/issues/10410[#10410] - Check report has been loaded before setting user params
+* PR: https://github.com/salesagility/SuiteCRM/pull/9896[9896] - Fix https://github.com/salesagility/SuiteCRM/issues/9895[#9895] - Workflow - Copying Formatted values of a multienum to another field
+* PR: https://github.com/salesagility/SuiteCRM/pull/9988[9988] - Fix https://github.com/salesagility/SuiteCRM/issues/9985[#9985] - Date end not stored correctly in Calls
+* PR: https://github.com/salesagility/SuiteCRM/pull/10186[10186] - Fix https://github.com/salesagility/SuiteCRM/issues/10182[#10182] - Graphic Issue search view after 7.14 upgrade
+* PR: https://github.com/salesagility/SuiteCRM/pull/9972[9972] - Fix https://github.com/salesagility/SuiteCRM/issues/9971[#9971] - Workflow - Add filters to quick and advanced search view in AOW Processed module
+* PR: https://github.com/salesagility/SuiteCRM/pull/10322[10322] - Fix https://github.com/salesagility/SuiteCRM/issues/10321[#10321] - Creation of Project with Template Causes 500 Error
+* PR: https://github.com/salesagility/SuiteCRM/pull/10328[10328] - Fix https://github.com/salesagility/SuiteCRM/issues/10327[#10327] - Survey Responses doesn't get assigned_user after sending Survey
+* PR: https://github.com/salesagility/SuiteCRM/pull/10375[10375] - Fix #10375 - Upgradewizard double commit
+* PR: https://github.com/salesagility/SuiteCRM/pull/10402[10402] - Fix https://github.com/salesagility/SuiteCRM/issues/10401[#10401], https://github.com/salesagility/SuiteCRM/issues/10376[#10376]  - PDF rendering issues
+* PR: https://github.com/salesagility/SuiteCRM/pull/10409[10409] - Fix #10409 - skip to last page if disable_count_query=true
+* PR: https://github.com/salesagility/SuiteCRM/pull/10323[10323] - Fix https://github.com/salesagility/SuiteCRM/issues/10172[#10172] - Emails don't show subject MIME headers
+* PR: https://github.com/salesagility/SuiteCRM/pull/10389[10389] - Fix https://github.com/salesagility/SuiteCRM/issues/1872[#1872] - Admin - Install Module - "Back to Module Loader" shows page with header only
+* PR: https://github.com/salesagility/SuiteCRM/pull/10424[10424] - Fix https://github.com/salesagility/SuiteCRM/issues/9213[#9213] - $discount_amount corrupted
+* PR: https://github.com/salesagility/SuiteCRM/pull/10426[10426] - Feature #10426 - new issue menu templates
+* Fix Default value not setting correctly on some fields.
+* Fix z-index on the useful bar.
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM QuickCRM holdusback pstevens71 JanSiero CommuniG8 cyb456 chris001 DBRenny rsyrnicki Mausino leonardobandini kengelbr likhobory ggraynoth %}}
+
+_Special thanks to everyone who reported the security issues addressed in this release!_
+
+{{% ghcontributors ElSicarius kva55 47hxl-53r Retr02332 %}} https://www.linkedin.com/in/emrehampolat/[Emre Hampolat],  Andrius Oželis
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our link:../../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 8.6.0
 
 _Released 03/04/2024_
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM-Core[Github]
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.6.0[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
+* link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -98,7 +194,6 @@ image:8-6-mobile-improvements.gif[Mobile improvements]
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/426[#426] - Case Status Not Saving
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/385[#385] - Error Messages When Filtering Date Fields
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/399[#399] - Error on Date Component in Filter Mode
-* PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/412[#412] - Opportunities filerting - Custom field (date) does not work in filter
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/409[#409] - Exporting a Workflow Doesn't work
 * PR: Fix https://github.com/salesagility/SuiteCRM-Core/issues/381[#381] - Dynamic Dropdowns don't appear to save
 

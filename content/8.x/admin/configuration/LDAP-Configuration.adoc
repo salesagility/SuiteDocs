@@ -10,6 +10,10 @@ weight: 40
 LDAP authentication is based on the Symfony Security component authenticators for LDAP.
 SuiteCRM extends some of Symfony's services. Thus, most of the configuration will be similar to the one on core Symfony.
 
+{{% notice note %}}
+The configuration shown to users below will vary a lot, depending on both the ldap provider being used and the way it is configured.
+{{% /notice %}}
+
 == Administration > Password Management menu LDAP configuration
 
 Before starting to configure LDAP, please take into account the following:
@@ -22,6 +26,9 @@ Before starting to configure LDAP, please take into account the following:
 
 This means that you may have to configure LDAP using `.env.local` (as described on the following sections) and , if you want to use v4 with LDAP, also configure LDAP using the `Administration > Password Management` menu of your instance.
 
+{{% notice note %}}
+After making a change to your `.env.local` please ensure to run `./bin/console cache:clear` from root or `Repair and Rebuild` from the Admin Menu.
+{{% /notice %}}
 
 == Enabling LDAP authentication
 
@@ -33,6 +40,10 @@ AUTH_TYPE=ldap
 ----
 
 == Configuring authentication
+
+{{% notice note %}}
+This documentation is to describe the LDAP options available. It is NOT a guide on not to configure ldap across all environments.
+{{% /notice %}}
 
 SuiteCRM exposes some of Symfony's LDAP configuration as `env` variables.
 The `.env` file has the default value for all the available variables. When configuring an instance add the variables you want to override to `.env.local` file.
@@ -60,7 +71,7 @@ The host for the LDAP instance
 
 *LDAP_PORT*
 
-The port for the LDAP instance
+The port for the LDAP instance (e.g. 389)
 
 *LDAP_ENCRYPTION*
 

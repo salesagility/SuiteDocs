@@ -11,6 +11,18 @@ Our vision is to be the most adopted open source enterprise CRM in the world, gi
 
 Find out more about SuiteCRM 8 and checkout the online demo link:https://suitecrm.com/suitecrm-8-public-demo/[here]
 
+== Installation & Upgrade
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7:
+click link:../../../admin/installation-guide/downloading-installing[here] for the Installation
+and link:../../../admin/installation-guide/upgrading[here] for the Upgrade.
+{{% /notice %}}
+
+Installing SuiteCRM 8 start link:../../admin/installation-guide/downloading-installing[here]
+
+Upgrading SuiteCRM 8 start link:../../admin/upgrading/general-info[here]
+
 == Release Notes
 
 See the latest release notes for SuiteCRM link:../releases[here].

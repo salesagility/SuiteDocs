@@ -22,13 +22,17 @@ Please go through the link:../webserver-setup-guide/[Webserver Setup Guide].
 
 == 2. Downloading and Setting up SuiteCRM
 
-=== 2.1 Downloading the latest SuiteCRM files
+=== 2.1 Checking Compatibility Matrix
+
+Make sure your environment meets system requirements listed in link:../../compatibility-matrix/[Compatibility matrix]
+
+=== 2.2 Downloading the latest SuiteCRM files
 
 Unless you want to setup a development environment, you should download the pre-built installable packages available for download on link:https://suitecrm.com/download/[suitecrm.com,window=_blank].
 
 See the link:../../releases/[SuiteCRM 8 Releases page]
 
-=== 2.2 Copy the files to your webserver root
+=== 2.3 Copy the files to your webserver root
 
 After you download the package
 
@@ -45,9 +49,7 @@ Please consider the `DocumentRoot` you have set on your vhost (if using apache).
 Adding the files to the web root is the most typical install method, but you can have different setups, like subdomains and others.
 {{% /notice %}}
 
-
-
-=== 2.3 Set permissions
+=== 2.4 Set permissions
 
 Set the required permissions
 
@@ -70,7 +72,7 @@ operating system. Common web server users are as follows:
 
 * If the group name differs from the username apache is running with, you may need `0664` instead of `0644`, and `2775` instead of `2755`
 
-=== 2.4 (optional) Creating the database
+=== 2.5 (optional) Creating the database
 
 Depending on your setup, you maybe required to create the database before you go through the install process.
 

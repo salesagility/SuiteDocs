@@ -1,0 +1,98 @@
+---
+Title: Possible Issues when Upgrading
+weight: 80
+---
+
+== 1. Upgrade between the versions `8.0.x` -> `8.1.x`
+After running the upgrade command you may encounter an error:
+
+[source, bash]
+----
+Error running migrations
+
+============
+
+In ClassLoader.php line 576:
+
+  Warning: include(<pathtoSuiteCRM8>/vendor/composer/../symfony/maker-bundle/src/Event/Cons
+  oleErrorSubscriber.php): failed to open stream: No such file or directory
+
+----
+=== Resolution:
+
+This issue can be resolved by re-running next command within the SuiteCRM 8 root directory:
+[source, bash]
+----
+composer install
+----
+
+
+== 2. Upgrade between the versions `8.1.0` -> `8.1.1`
+An issue was found on the implementation of the upgrade command between the versions `8.1.0` -> `8.1.1`.
+
+The issue is that when upgrading SuiteCRM 8 for a second time (i.e if you had upgraded from `8.0.2` -> `8.0.4` -> `8.1.1`),
+then you will have come across the following error after having ran:
+`./bin/console suitecrm:app:upgrade -t "<version>"`
+
+[source]
+----
+CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<pathtoSuiteCRM8>/cache/prod/ContainerZatgzYy/getConsole_ErrorListenerService.php'
+(include_path='/<pathtoSuiteCRM8>/public/legacy/include/..:.:/usr/share/php')
+["exception" => Symfony\Component\ErrorHandler\Error\FatalError^ { …}]
+----
+
+This issue is a result of Symfony cache clearing but then being called right after.
+
+=== Resolution
+
+This issue can be resolved by **re-setting permissions** and running `./bin/console clear:cache` within the SuiteCRM 8 root directory.
+
+You should then be able to navigate to your application.
+
+
+== 3. Upgrading to version 8.3.1
+
+There was a bug with version 8.3.1 that caused the upgrade process to fail.
+
+If you are on a version lower than 8.3.0, and you wish to upgrade to version 8.3.1, you will first need to upgrade to 8.3.0 and only after that can you upgrade to 8.3.1.
+
+This issue has been resolved in version 8.4. Thus, if you want to go from 8.2.0 (or any version lower than 8.3.1) to 8.4.0+ you can do it directly.
+
+== 4. Upgrading from Beta 3 to the RC version
+
+After running the upgrade command in the last step you should get the following error:
+
+[source,bash]
+----
+Running: clear-symfony-cache
+PHP Fatal error:  Interface 'Stringable' not found in /<your-suitecr-8-path>/vendor/symfony/string/AbstractString.php on line 30
+
+Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
+  #message: """
+    Attempted to load class "UnicodeString" from namespace "Symfony\Component\String".\n
+    Did you forget a "use" statement for another namespace?
+    """
+  #code: 0
+  #file: "./vendor/symfony/console/Helper/Helper.php"
+  #line: 63
+  trace: {
+    ./vendor/symfony/console/Helper/Helper.php:63 { …}
+    ./vendor/symfony/console/Helper/Helper.php:49 { …}
+    ./vendor/symfony/console/Application.php:826 { …}
+    ./vendor/symfony/console/Application.php:795 { …}
+    ./vendor/symfony/http-kernel/EventListener/DebugHandlersListener.php:136 { …}
+    ./vendor/symfony/error-handler/ErrorHandler.php:607 { …}
+    ./vendor/symfony/error-handler/ErrorHandler.php:695 { …}
+    Symfony\Component\ErrorHandler\ErrorHandler::handleFatalError() {}
+  }
+}
+----
+
+=== Resolution
+
+To overcome the above error you need to clear symfony cache by running next command on your SuiteCRM 8 instance root:
+
+[source,bash]
+----
+./bin/console cache:clear
+----

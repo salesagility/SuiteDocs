@@ -15,8 +15,12 @@ aliases:
 
 _Released 05/02/2024_
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM-Core[Github]
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.5.1[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
+* link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -84,8 +88,12 @@ To report any security issues please follow our link:../../../../community/secur
 
 _Released 13/12/2023_
 
-* https://suitecrm.com/download/[Download]
-* https://github.com/salesagility/SuiteCRM-Core[Github]
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.5.0[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
+* link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
