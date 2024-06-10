@@ -97,7 +97,7 @@ chmod +x bin/console
 +
  . Файл `public/legacy/.htaccess`
 +
-Если виртуальный сервер указывает на каталог *legacy*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
+Если виртуальный сервер указывает на каталог *public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /legacy`. +
 В противном случае необходимо указать путь до папки *public*.
 Например, если адрес сайта -  *\https://your-host/crm/public*, то директива *RewriteBase* должна выглядеть как `RewriteBase /crm/public/legacy`.
 
