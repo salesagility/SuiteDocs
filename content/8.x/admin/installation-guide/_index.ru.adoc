@@ -14,6 +14,22 @@ link:https://suitecrm.com[SuiteCRM] - это отмеченное награда
 
 Узнать больше о SuiteCRM 8 вы можете посетив страницу link:https://suitecrm.com/suitecrm-8-public-demo/[онлайн-демонстрации^].
 
+== Установка и обновление SuiteCRM 8+
+
+{{% notice info %}}
+Этот раздел документации относится к SuiteCRM 8+. +
+Описание установки SuiteCRM 7+ находится
+link:../../../admin/installation-guide/downloading-installing[здесь]. +
+Описание обновления SuiteCRM 7+ находится 
+and link:../../../admin/installation-guide/upgrading[здесь].
+{{% /notice %}}
+
+[discrete]
+=== link:downloading-installing[Описание установки SuiteCRM 8]
+
+[discrete]
+=== link:../upgrading/general-info[Описание обновления SuiteCRM 8]
+
 == Примечания к релизу
 
 Самые последние нововведения link:../../../../8.x/admin/releases/[описаны^] в англоязычном разделе документации.
