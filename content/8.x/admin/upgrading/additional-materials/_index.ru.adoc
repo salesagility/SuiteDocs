@@ -1,0 +1,10 @@
+---
+title: "Дополнительная информация"
+weight: 80
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+=== Table of Contents
+{{% children depth="2" showhidden="false" %}}

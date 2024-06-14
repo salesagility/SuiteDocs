@@ -1,0 +1,43 @@
+---
+Title: Обновление с версии 8.0.x до версии 8.1.x
+weight: 30
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+{{% notice info %}}
+При обновлении между версиями SuiteCRM 8.x нет необходимости в каком-либо специальном пакете обновления.
+Для этого используется обычный установочный пакет той версии, до которой вы планируете произвести обновление.
+{{% /notice %}}
+
+. В установленном экземпляре системы создайте  папку
+`<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+. Скачайте необходимый 
+https://sourceforge.net/projects/suitecrm/files/[пакет^].
+
+. Скопируйте скачанный пакет в созданную папку.
+
+. Установите необходимые link:../../../installation-guide/downloading-installing/#_установка_прав[права доступа^].
+
+. Из корневой папки SuiteCRM 8 запустите: 
++
+[source,console]
+-----
+./bin/console suitecrm:app:upgrade -t "<версия>"
+-----
++
+где `<версия>` - название пакета  с устанавливаемой SuiteCRM 8, например: `SuiteCRM-8.1.3`
++
+*Пример:* 
++
+[source,console]
+-----
+./bin/console suitecrm:app:upgrade -t SuiteCRM-8.1.3
+-----
+
+. Установите ещё раз необходимые права доступа.
+
+. Заново войдите в систему.

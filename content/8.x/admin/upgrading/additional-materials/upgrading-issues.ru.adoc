@@ -1,0 +1,124 @@
+---
+Title: Возможные проблемы при обновлении
+weight: 86
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 1
+
+//
+:sectnums:
+:sectnumlevels: 1
+//
+
+== Обновление между версиями `8.0.x` -> `8.1.x`
+После запуска команды обновления вы можете столкнуться со следующей ошибкой:
+
+[source,console]
+----
+Error running migrations
+
+============
+
+In ClassLoader.php line 576:
+
+  Warning: include(<pathtoSuiteCRM8>/vendor/composer/../symfony/maker-bundle/src/Event/Cons
+  oleErrorSubscriber.php): failed to open stream: No such file or directory
+
+----
+
+[discrete]
+=== Решение:
+
+Эту проблему можно решить, повторно выполнив следующую команду из корневой папки SuiteCRM 8:
+
+[source,console]
+----
+composer install
+----
+
+
+== Обновление между версиями `8.1.0` -> `8.1.1`
+
+Обнаружена проблема при выполнении обновления между версиями `8.1.0` -> `8.1.1`.
+
+Проблема состоит в том, что при обновлении SuiteCRM 8 во второй раз (например, в такой последовательности: 8.0.2 -> 8.0.4 -> 8.1.1) после запуска команды
+
+[source,console]
+-----
+./bin/console suitecrm:app:upgrade -t "<версия>"
+-----
+
+будет отображена следующая ошибка:
+
+[source,console]
+-----
+CRITICAL  [php] Fatal Compile Error: require(): Failed opening required '/<pathtoSuiteCRM8>/cache/prod/ContainerZatgzYy/getConsole_ErrorListenerService.php'
+(include_path='/<pathtoSuiteCRM8>/public/legacy/include/..:.:/usr/share/php')
+["exception" => Symfony\Component\ErrorHandler\Error\FatalError^ { …}]
+-----
+
+[discrete]
+=== Решение:
+
+Переустановите link:../downloading-installing/#_установка_прав[права доступа^] и из корневой папки SuiteCRM 8 выполните команду очистки кеша:
+
+[source,console]
+-----
+./bin/console clear:cache
+-----
+
+
+== Обновление до версии 8.3.1
+
+В версии 8.3.1 появилась ошибка, которая привела к сбою процесса обновления.
+
+Если вы используете версию ниже 8.3.0 и хотите выполнить обновление до версии 8.3.1, то сначала вам необходимо выполнить обновление до версии 8.3.0, и только после этого вы сможете обновиться до версии 8.3.1.
+
+Эта проблема впоследствии решена в версии 8.4. Таким образом, если вы хотите перейти с версии 8.2.0 (или любой версии ниже 8.3.1) на версию 8.4.0+, вы можете сделать это напрямую.
+
+
+== Обновление с версии 8.0-beta 3 до версии 8.0RC 
+
+После запуска команды обновления на последнем этапе вы получите следующую ошибку:
+
+[source,console]
+----
+Running: clear-symfony-cache
+PHP Fatal error:  Interface 'Stringable' not found in /<your-suitecr-8-path>/vendor/symfony/string/AbstractString.php on line 30
+
+Symfony\Component\ErrorHandler\Error\ClassNotFoundError^ {#3095
+  #message: """
+    Attempted to load class "UnicodeString" from namespace "Symfony\Component\String".\n
+    Did you forget a "use" statement for another namespace?
+    """
+  #code: 0
+  #file: "./vendor/symfony/console/Helper/Helper.php"
+  #line: 63
+  trace: {
+    ./vendor/symfony/console/Helper/Helper.php:63 { …}
+    ./vendor/symfony/console/Helper/Helper.php:49 { …}
+    ./vendor/symfony/console/Application.php:826 { …}
+    ./vendor/symfony/console/Application.php:795 { …}
+    ./vendor/symfony/http-kernel/EventListener/DebugHandlersListener.php:136 { …}
+    ./vendor/symfony/error-handler/ErrorHandler.php:607 { …}
+    ./vendor/symfony/error-handler/ErrorHandler.php:695 { …}
+    Symfony\Component\ErrorHandler\ErrorHandler::handleFatalError() {}
+  }
+}
+----
+
+[discrete]
+=== Решение:
+
+Очистите кеш Symfony, выполнив следующую команду из корневой папки SuiteCRM 8:
+
+[source,console]
+----
+./bin/console cache:clear
+----

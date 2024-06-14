@@ -1,0 +1,88 @@
+---
+Title: Обновление до версии Release Candidate (RC)
+weight: 30
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+. Откройте файл `config/services/system/upgrades.yaml`.
+
+. В раздел *toKeep* добавьте значение *tmp*.
++
+Описываемая часть файла должна выглядеть следующим образом:
++
+[source,yaml]
+----
+parameters:
+  upgrades:
+    toKeep:
+      - 'cache'
+      - 'extensions'
+      - 'public/extensions'
+      - 'public/legacy/modules'
+      - 'public/legacy/custom'
+      - 'public/legacy/cache'
+      - 'public/legacy/upload'
+      - 'public/legacy/Api/V8/OAuth2/private.key'
+      - 'public/legacy/Api/V8/OAuth2/public.key'
+      - 'public/legacy/config.php'
+      - 'public/legacy/config_override.php'
+      - 'public/legacy/config_si.php'
+      - 'public/legacy/suitecrm.log'
+      - 'public/legacy/install.log'
+      - 'logs'
+      - '.env.local'
+      - '.env.local.php'
+      - 'tmp'
+    toExpand:
+
+    ...
+----
+
+. Выполните одну из следующих команд:
+
+.. Для режима *dev* выполните команду:
++
+[source,console]
+----
+composer install
+----
+
+.. Для режима *prod* выполните команду:
++
+[source,console]
+----
+composer install --no-dev --prefer-dist --optimize-autoloader
+----
+
+. В установленном экземпляре системы создайте  папку
+`<your-suitecrm-8-root-folder>/tmp/package/upgrade`
+
+. Скачайте необходимый 
+https://sourceforge.net/projects/suitecrm/files/pre-release/[пакет^].
+
+. Скопируйте скачанный пакет в созданную папку.
+
+. Установите необходимые link:../../../installation-guide/downloading-installing/#_установка_прав[права доступа^].
+
+. Из корневой папки SuiteCRM 8 запустите: 
++
+[source,console]
+-----
+./bin/console suitecrm:app:upgrade -t "<версия>"
+-----
++
+где `<версия>` - название пакета  с устанавливаемой SuiteCRM 8, например: `SuiteCRM-8.0.0-rc`
++
+*Пример:* 
++
+[source,console]
+-----
+./bin/console suitecrm:app:upgrade -t SuiteCRM-8.0.0-rc
+-----
+
+. Установите ещё раз необходимые права доступа.
+
+. Заново войдите в систему.
