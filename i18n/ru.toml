@@ -1,7 +1,7 @@
 [suitedocs-title]
 other= "SuiteCRM. Сайт официальной документации."
 
-[navigation] 
+[navigation]
 other="Navigation"
 
 [Search-placeholder]
@@ -138,4 +138,10 @@ other = "Недавно отредактированные"
 
 [DocumentationPages]
 other = "страницы документации"
+
+[Suite7]
+other = "SuiteCRM 7"
+
+[Suite8]
+other = "SuiteCRM 8" 
 
