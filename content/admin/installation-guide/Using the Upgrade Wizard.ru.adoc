@@ -24,7 +24,7 @@ ifdef::env-github[:btn:]
 
 {{% notice info %}}
 Это страница содержит описание для SuiteCRM 7.x. Описание для SuiteCRM 8.x находится
-link:../../../8.x/admin/installation-guide/upgrading[здесь].
+link:../../../8.x/admin/upgrading[здесь].
 {{% /notice %}}
 
 Перед обновлением убедитесь, что файл *_config.php_*, расположенный в корневой папке системы, доступен для записи.

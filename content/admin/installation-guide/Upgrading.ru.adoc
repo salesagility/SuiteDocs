@@ -16,7 +16,7 @@ Weight: 30
 
 {{% notice info %}}
 Это страница содержит описание для SuiteCRM 7.x. Описание для SuiteCRM 8.x находится
-link:../../../8.x/admin/installation-guide/upgrading[здесь].
+link:../../../8.x/admin/upgrading[здесь].
 {{% /notice %}}
 
 В данном разделе описывается процесс обновления системы при помощи мастера обновления. 
