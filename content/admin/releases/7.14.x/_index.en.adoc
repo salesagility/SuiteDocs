@@ -9,6 +9,70 @@ weight: 9850
 :icons: font
 :imagesdir: /images/en/admin/release
 
+== 7.14.5
+
+_Released 14 August 2024_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.5[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
+
+===  icon:check[] Release Notes
+
+==== icon:star[] Configuration Changes
+
+* There is a new configuration added to `config.php` called `login_language`. Setting this to `true` will show the language selector on login.
+
+* There is a new language selector in the User profile and User Wizard! Allowing any user to set their language via profile and setup.
+** This can be found within the `Advanced` tab.
+** Something to note: Logging in with a different language will set your Preference to that language.
+
+==== icon:lock[] Security
+
+* CVE: Pending - Improper Access Control
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10469[10469] - Fix https://github.com/salesagility/SuiteCRM/issues/9177[#9177] - Cant use edit inline in UserType field
+* PR: https://github.com/salesagility/SuiteCRM/pull/10468[10468] - Fix https://github.com/salesagility/SuiteCRM/issues/6376[#6376] - Problem with date start and finish in project task filters
+* PR: https://github.com/salesagility/SuiteCRM/pull/10461[10461] - Fix https://github.com/salesagility/SuiteCRM/issues/10268[#10268] - Access token wil not refresh for Oauth2 password clients
+* PR: https://github.com/salesagility/SuiteCRM/pull/10444[10444] - Fix https://github.com/salesagility/SuiteCRM/issues/10443[#10443] - Incorrect lengths in emails_text vardefs
+* PR: https://github.com/salesagility/SuiteCRM/pull/10442[10442] - Fix https://github.com/salesagility/SuiteCRM/issues/10437[#10437] - Calendar - 'Today' left-hand side bar option loads the week
+* PR: https://github.com/salesagility/SuiteCRM/pull/10434[10434] - Fix https://github.com/salesagility/SuiteCRM/issues/10433[#10433] - Email Address ID being double quoted
+* PR: https://github.com/salesagility/SuiteCRM/pull/10429[10429] - Fix https://github.com/salesagility/SuiteCRM/issues/5653[#5653] - VAT Display in PDF Templates wrong when Currency Significant Digits set to 0
+* PR: https://github.com/salesagility/SuiteCRM/pull/10406[10406] - Fix https://github.com/salesagility/SuiteCRM/issues/10404[#10404] - Compare parentenum_value more precisely
+* PR: https://github.com/salesagility/SuiteCRM/pull/10399[10399] - Fix https://github.com/salesagility/SuiteCRM/issues/2175[#2175] - No gif and shifted text after saving task in gants view
+* PR: https://github.com/salesagility/SuiteCRM/pull/10394[10394] - Fix https://github.com/salesagility/SuiteCRM/issues/2828[#2828] - Not translatable messages in Dashlet parameters
+* PR: https://github.com/salesagility/SuiteCRM/pull/10390[10390] - Fix #10390 - URL is not clickable
+* PR: https://github.com/salesagility/SuiteCRM/pull/10380[10380] - Fix https://github.com/salesagility/SuiteCRM/issues/7150[#7150] - Show subpanels correctly
+* PR: https://github.com/salesagility/SuiteCRM/pull/10373[10373] - Fix https://github.com/salesagility/SuiteCRM/issues/10372[#10372] - Product import fails with fatal error
+* PR: https://github.com/salesagility/SuiteCRM/pull/10362[10362] - Fix https://github.com/salesagility/SuiteCRM/issues/9078[#9078] - Favorites adds record twice to the sidebar and to the db
+* PR: https://github.com/salesagility/SuiteCRM/pull/10341[10341] - Fix https://github.com/salesagility/SuiteCRM/issues/10339[#10339] - Inconsistent application of trim function on name & varchar fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/10336[10336] - Fix https://github.com/salesagility/SuiteCRM/issues/10335[#10335] - Incorrect codification in the names of events displayed in the Calendar
+* PR: https://github.com/salesagility/SuiteCRM/pull/10320[10320] - Fix https://github.com/salesagility/SuiteCRM/issues/10319[#10319] - Json API SQL error when filtering by custom fields
+* PR: https://github.com/salesagility/SuiteCRM/pull/10470[10470] - Fix https://github.com/salesagility/SuiteCRM/issues/9829[#9829] - Fatal error during upgrade to 7.12.8
+* PR: https://github.com/salesagility/SuiteCRM/pull/10471[10471] - Fix https://github.com/salesagility/SuiteCRM/issues/10467[#10467] - Date range not working
+* PR: https://github.com/salesagility/SuiteCRM/pull/10441[10441] - Fix #10441 - VAT Values display incorrectly on Quotes->Service Line Items, if Significant Figures = 0
+* PR: https://github.com/salesagility/SuiteCRM/pull/10473[10473] - Fix https://github.com/salesagility/SuiteCRM/issues/9855[#9855] - Using a "Personal"-type Oauth Connection causes issues with "Group"-type Inbound Accounts
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors SinergiaCRM Spillo89 scottfrancismiller azzy9 triluu-gms tomi798 likhobory ebogaard dtosun61 joshscorpion re8260 gunnicom FR-JS %}}
+
+_Special thanks to everyone who reported the security issues addressed in this release!_
+
+{{% ghcontributors gunnicom %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our link:../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.14.4
 
 _Released 10 June 2024_
