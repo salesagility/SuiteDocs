@@ -1,0 +1,127 @@
+---
+title: "8.7 Releases"
+weight: 9810
+aliases:
+  - /8.x/admin/releases/8.7/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.7.0-beta
+
+_Released 29 August 2024_
+
+
+=== icon:box-open[] Assets
+
+* https://suitecrm.com/suitecrm-pre-release/[Download]
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.7.0-beta[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
+* link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+
+===  icon:check[] Release Notes
+
+==== icon:level-up-alt[] Platform upgrade
+
+SuiteCRM is now using Symfony v6.4 and Api Platform 3.2. This brings some system requirement updates and breaking changes.
+
+
+
+==== icon:server[] System Requirement Changes
+
+**Minimum php version - PHP 8.1**
+
+The minimum php version is now 8.1. PHP 7.4 stopped being supported since version 8.4.0 but the system would still run. From this release onwards PHP 7.4 will not work.
+
+**[development] Composer v2+ required**
+
+Composer 1.x is no longer supported.
+
+
+==== icon:code[] Backward Incompatible Changes
+
+* **APP_SECRET env property is now required**
+** For new installations a random APP_SECRET will be generated during the install process. For upgrades a migration has been added to generate a random APP_SECRET.
+
+* **Move to Symfony runtime**
+** SuiteCRM is now using Symfony runtime, core SuiteCRM code on index.php has been moved to `core/backend/Composer/Runtime/autoload_runtime.template`
+
+* **Migration from annotations to attributes**
+** Annotations have been replaced with attributes. They have been disabled in symfony configuration and the `doctrine/annotations` dependency has been removed.
+
+* **Data Providers and Data Persisters have been deprecated**
+** With Api Platform 3.2, Data Providers and Data Persisters have been replaced with StateProvider and StateProcessor.
+
+* **Graphql Record and RecordList API response structure updated**
+** With Api Platform 3.2 the graphql response structure changed. E.g. response now return `recordList` attribute instead of `getRecordList`-.
+
+* **Graphql resolver interfaces path has changed**
+** All the resolvers have been updated to use the new `QueryItemResolverInterface`.
+
+* **ExtensionAssetCacheWarmupDecorator has been replaced with an extra cache warmer**
+** Symfony now supports adding extra warmers. The decorator has been replaced with an extra cache warmer.
+
+* **Legacy Session swapping removed**
+** Legacy handlers and loading of legacy imports have been updated to remove the need for doing session swapping. Only one session cookie will be used from now on, the `LEGACYSESSID` has been removed.
+
+* **Symfony Commands now require the usage of AsCommand attribute**
+** All core commands have been updated to use the new AsCommand attribute.
+
+* **Session injectable dependency replaced with RequestStack**
+** It is no longer possible to pass the `Session` through Symfony dependency injection, `RequestStack` should be used instead. Core code has been updated to support this.
+
+* **Authentication configuration has been updated**
+
+* **SAML dependency replaced and configuration updated**
+** SAML `Hslavich` dependency has been replaced with `Nbgrp`.
+** Base SAML configurations have been updated.
+** New SAML env options have been added to allow configuring SAML just from the env files.
+
+* **Usages of Doctrine DBAL execute method have been updated**
+** Doctrine DBAL execute method has been deprecated, usages have been updated to use alternatives.
+
+* **Log configurations updates**
+** Log configurations have been re-factored to filter deprecations and split the deprecations and the security logs into separate files.
+
+
+==== icon:star[] Documentation
+
+* link:../../../../8.x/admin/configuration/ldap-configuration/[LDAP Configuration] documentation has been updated
+
+* link:../../../../8.x/admin/configuration/saml/[SAML Configuration] documentation has been updated
+** New docs: link:../../../../8.x/admin/configuration/saml/8.7.0-saml-configuration[SAML configuration reference - 8.7.0+]
+** Old docs: link:../../../../8.x/admin/configuration/saml/8.2.0-saml-configuration[SAML configuration reference - 8.2.0+]
+
+==== icon:star[] Enhancements
+
+==== LDAP and SAML configuration improvements
+Authentication with LDAP and SAML has been updated, there are new configuration options available and most of the configuration can now be done on env files.
+
+To see how to setup and configure the authentication methods, please see the following documentation:
+
+** link:../../../../8.x/admin/configuration/ldap-configuration/[LDAP Configuration Reference]
+** link:../../../../8.x/admin/configuration/saml/8.7.0-saml-configuration[SAML Configuration Reference]
+
+==== Convert target
+
+Convert target was missing and has now been implemented
+
+image:target-convert-brief-demo.gif[Convert Target]
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
