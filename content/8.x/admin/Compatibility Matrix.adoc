@@ -50,7 +50,7 @@ From version 8.7 onwards, SuiteCRM will not run on php 7.4
 2+^h| Additional requirements for front-end Development (not required for production)
 
 | Angular CLI | ^16
-| Node.js | ^18
+| Node.js | ^18.10
 | yarn | ^1.22.10
 
 |========

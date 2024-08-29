@@ -88,7 +88,7 @@ Composer 1.x is no longer supported.
 ** Log configurations have been re-factored to filter deprecations and split the deprecations and the security logs into separate files.
 
 
-==== icon:star[] Documentation
+==== icon:book[] Documentation
 
 * link:../../../../8.x/admin/configuration/ldap-configuration/[LDAP Configuration] documentation has been updated
 
@@ -111,6 +111,13 @@ To see how to setup and configure the authentication methods, please see the fol
 Convert target was missing and has now been implemented
 
 image:target-convert-brief-demo.gif[Convert Target]
+
+=== icon:bug[] Known issues
+
+* Using SAML Authentication when there is no matching CRM account leads to a Login Loop
+* With LDAP enabled, non-LDAP accounts cannot log in
+* If SCRMSESSID / Session Expires or Mismatches, the CRM can lock up until you Hard Refresh
+
 
 === icon:heart[] Community
 
