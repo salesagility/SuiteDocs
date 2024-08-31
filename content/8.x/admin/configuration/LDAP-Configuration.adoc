@@ -1,24 +1,36 @@
 ---
-Title: LDAP configuration
+Title: LDAP configuration reference
 weight: 40
 ---
 
 :imagesdir: /images/en/user
 
-== Intro
 
-LDAP authentication is based on the Symfony Security component authenticators for LDAP.
-SuiteCRM extends some of Symfony's services. Thus, most of the configuration will be similar to the one on core Symfony.
-
-{{% notice note %}}
-The configuration shown to users below will vary a lot, depending on both the ldap provider being used and the way it is configured.
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8+
 {{% /notice %}}
 
-== Administration > Password Management menu LDAP configuration
+
+== 1. Intro
+
+LDAP authentication is based on the Symfony Security component authenticators for LDAP.
+
+SuiteCRM extends some of Symfony's services. Thus, most of the configuration will be similar to the one on core Symfony.
+
+Please have in mind that the configuration to connect SuiteCRM to an LDAP provider will vary depending on:
+
+* The LDAP provider being used
+* How the LDAP provider is configured
+
+This documentation describes the LDAP configuration options available in SuiteCRM. It is **NOT** a guide on how to configure LDAP.
+
+
+
+== 2. Note on legacy configuration
 
 Before starting to configure LDAP, please take into account the following:
 
-- The configuration described on the sections of this page:
+- The configuration described on this page:
 ** Is not used by v4 or v8 API login
 ** Does not read from legacy configuration
 ** Is the way to configure SuiteCRM login screen to use LDAP. Legacy configuration is not taken into account
@@ -26,11 +38,7 @@ Before starting to configure LDAP, please take into account the following:
 
 This means that you may have to configure LDAP using `.env.local` (as described on the following sections) and , if you want to use v4 with LDAP, also configure LDAP using the `Administration > Password Management` menu of your instance.
 
-{{% notice note %}}
-After making a change to your `.env.local` please ensure to run `./bin/console cache:clear` from root or `Repair and Rebuild` from the Admin Menu.
-{{% /notice %}}
-
-== Enabling LDAP authentication
+== 3. Enabling LDAP authentication
 
 To enable LDAP authentication change your `.env.local` and set:
 
@@ -39,19 +47,20 @@ To enable LDAP authentication change your `.env.local` and set:
 AUTH_TYPE=ldap
 ----
 
-== Configuring authentication
+⚠️ After making a change to your `.env.local` please be sure to run `./bin/console cache:clear` from root or `Repair and Rebuild` from the Admin Menu.
 
-{{% notice note %}}
-This documentation is to describe the LDAP options available. It is NOT a guide on not to configure ldap across all environments.
-{{% /notice %}}
+
+== 4. LDAP connection configuration reference
 
 SuiteCRM exposes some of Symfony's LDAP configuration as `env` variables.
 The `.env` file has the default value for all the available variables. When configuring an instance add the variables you want to override to `.env.local` file.
 
+*Default .env LDAP connection config*
 [source,bash]
 ----
 ###> LDAP CONFIG ###
-LDAP_HOST=''
+LDAP_CONNECTION_STRING=~ # available from 8.7.0
+LDAP_HOST=~
 LDAP_PORT=389
 LDAP_ENCRYPTION=tls
 LDAP_PROTOCOL_VERSION=3
@@ -60,10 +69,51 @@ LDAP_DN_STRING=''
 LDAP_QUERY_STRING=''
 LDAP_SEARCH_DN=''
 LDAP_SEARCH_PASSWORD=''
+
+# All the following options are available from 8.7.0
+# ldap debug logs go to php error log
+LDAP_CONNECTION_OPTION_DEBUG_LEVEL=~
+LDAP_CONNECTION_OPTION_API_INFO=~
+LDAP_CONNECTION_OPTION_DEREF=~
+LDAP_CONNECTION_OPTION_SIZELIMIT=~
+LDAP_CONNECTION_OPTION_TIMELIMIT=~
+LDAP_CONNECTION_OPTION_RESTART=~
+LDAP_CONNECTION_OPTION_SERVER_CONTROLS=~
+LDAP_CONNECTION_OPTION_CLIENT_CONTROLS=~
+LDAP_CONNECTION_OPTION_API_FEATURE_INFO=~
+LDAP_CONNECTION_OPTION_HOST_NAME=~
+LDAP_CONNECTION_OPTION_ERROR_NUMBER=~
+LDAP_CONNECTION_OPTION_ERROR_STRING=~
+LDAP_CONNECTION_OPTION_MATCHED_DN=~
+
+LDAP_CONNECTION_OPTION_TIMEOUT=~
+LDAP_CONNECTION_OPTION_NETWORK_TIMEOUT=~
+LDAP_CONNECTION_OPTION_X_TLS_CACERTDIR=~
+LDAP_CONNECTION_OPTION_X_TLS_CACERTFILE=~
+LDAP_CONNECTION_OPTION_X_TLS_CERTFILE=~
+LDAP_CONNECTION_OPTION_X_TLS_CRL_ALL=~
+LDAP_CONNECTION_OPTION_X_TLS_CRL_NONE=~
+LDAP_CONNECTION_OPTION_X_TLS_CRL_PEER=~
+LDAP_CONNECTION_OPTION_X_TLS_KEYFILE=~
+LDAP_CONNECTION_OPTION_X_TLS_REQUIRE_CERT=~
+LDAP_CONNECTION_OPTION_X_TLS_PROTOCOL_MIN=~
+LDAP_CONNECTION_OPTION_X_TLS_CIPHER_SUITE=~
+LDAP_CONNECTION_OPTION_X_TLS_RANDOM_FILE=~
+LDAP_CONNECTION_OPTION_X_TLS_CRLFILE=~
+LDAP_CONNECTION_OPTION_X_TLS_PACKAGE=~
+LDAP_CONNECTION_OPTION_X_TLS_CRLCHECK=~
+LDAP_CONNECTION_OPTION_X_TLS_DHFILE=~
+LDAP_CONNECTION_OPTION_X_SASL_MECH=~
+LDAP_CONNECTION_OPTION_X_SASL_REALM=~
+LDAP_CONNECTION_OPTION_X_SASL_AUTHCID=~
+LDAP_CONNECTION_OPTION_X_SASL_AUTHZID=~
+LDAP_CONNECTION_OPTION_X_KEEPALIVE_IDLE=~
+LDAP_CONNECTION_OPTION_X_KEEPALIVE_PROBES=~
+LDAP_CONNECTION_OPTION_X_KEEPALIVE_INTERVAL=~
 ###< LDAP CONFIG ###
 ----
 
-=== Option description
+=== Base options
 
 *LDAP_HOST*
 
@@ -94,34 +144,67 @@ A DN of another user that is going to be used to search for the `DN`.
 
 Password for the user used in LDAP_SEARCH_DN
 
-=== Example
-[source,bash]
-----
-###> LDAP CONFIG ###
-LDAP_HOST=ldap
-LDAP_ENCRYPTION=none
-LDAP_DN_STRING='cn={username},dc=example,dc=org'
-###< LDAP CONFIG ###
-----
+=== Connection options
 
-== Allowing fallback to native authentication
+**All the following options are available from SuiteCRM 8.7.0**
 
-SuiteCRM allows to fallback to native authentication using the password set on the SuiteCRM instance for that user.
+These options correspond to the options available in PHP's `ldap_set_option`.
 
-If a user has `external_auth_only` set to 1 (or true), the login will fail if the provided password does not match the one on LDAP or there is any other problem with the authentication against LDAP.
 
-On the other hand, if a user has  `external_auth_only` set to 0 (or false) and the authentication against LDAP fails, the system will immediately try to authenticate against SuiteCRM's native authentication.
+Please refer to link:https://www.php.net/manual/en/function.ldap-set-option.php[ldap_set_option documentation] for a description of each of the following options and expected values.
 
-== Configuring user auto creation
+* LDAP_CONNECTION_OPTION_DEBUG_LEVEL
+** Set to `LDAP_CONNECTION_OPTION_DEBUG_LEVEL=7` for max logging level
+** The debug info is logged to the php error log
+* LDAP_CONNECTION_OPTION_API_INFO
+* LDAP_CONNECTION_OPTION_DEREF
+* LDAP_CONNECTION_OPTION_SIZELIMIT
+* LDAP_CONNECTION_OPTION_TIMELIMIT
+* LDAP_CONNECTION_OPTION_RESTART
+* LDAP_CONNECTION_OPTION_SERVER_CONTROLS
+* LDAP_CONNECTION_OPTION_CLIENT_CONTROLS
+* LDAP_CONNECTION_OPTION_API_FEATURE_INFO
+* LDAP_CONNECTION_OPTION_HOST_NAME
+* LDAP_CONNECTION_OPTION_ERROR_NUMBER
+* LDAP_CONNECTION_OPTION_ERROR_STRING
+* LDAP_CONNECTION_OPTION_MATCHED_DN
+* LDAP_CONNECTION_OPTION_TIMEOUT
+* LDAP_CONNECTION_OPTION_NETWORK_TIMEOUT
+* LDAP_CONNECTION_OPTION_X_TLS_CACERTDIR
+* LDAP_CONNECTION_OPTION_X_TLS_CACERTFILE
+* LDAP_CONNECTION_OPTION_X_TLS_CERTFILE
+* LDAP_CONNECTION_OPTION_X_TLS_CRL_ALL
+* LDAP_CONNECTION_OPTION_X_TLS_CRL_NONE
+* LDAP_CONNECTION_OPTION_X_TLS_CRL_PEER
+* LDAP_CONNECTION_OPTION_X_TLS_KEYFILE
+* LDAP_CONNECTION_OPTION_X_TLS_REQUIRE_CERT
+* LDAP_CONNECTION_OPTION_X_TLS_PROTOCOL_MIN
+* LDAP_CONNECTION_OPTION_X_TLS_CIPHER_SUITE
+* LDAP_CONNECTION_OPTION_X_TLS_RANDOM_FILE
+* LDAP_CONNECTION_OPTION_X_TLS_CRLFILE
+* LDAP_CONNECTION_OPTION_X_TLS_PACKAGE
+* LDAP_CONNECTION_OPTION_X_TLS_CRLCHECK
+* LDAP_CONNECTION_OPTION_X_TLS_DHFILE
+* LDAP_CONNECTION_OPTION_X_SASL_MECH
+* LDAP_CONNECTION_OPTION_X_SASL_REALM
+* LDAP_CONNECTION_OPTION_X_SASL_AUTHCID
+* LDAP_CONNECTION_OPTION_X_SASL_AUTHZID
+* LDAP_CONNECTION_OPTION_X_KEEPALIVE_IDLE
+* LDAP_CONNECTION_OPTION_X_KEEPALIVE_PROBES
+* LDAP_CONNECTION_OPTION_X_KEEPALIVE_INTERVAL
 
-By default user auto creation is disabled for LDAP.
+== 5. User auto-creation configuration reference
 
-**When disabled** you will only be able to authenticate a user using LDAP **if you first create them on SuiteCRM.**
+=== Context
+User auto creation is disabled by default for LDAP.
 
-The auto-create option will auto create the user from LDAP if they do not exist on SuiteCRM yet.
+**When disabled** you will only be able to authenticate users using LDAP **if you first create them on SuiteCRM.**
 
-Please note that **this user will not have any password set on SuiteCRM** and the `external_auth_only` **is set to 1 (or true) by default**.
+The auto-create option will auto create users from LDAP if they do not exist on SuiteCRM yet.
 
+Please note that **auto-created users will not have any password set on SuiteCRM** and the `external_auth_only` **is set to 1 (or true) by default**.
+
+=== Enabling user auto-creation
 To enable LDAP user auto creation change your `.env.local` and set:
 
 [source,bash]
@@ -129,10 +212,12 @@ To enable LDAP user auto creation change your `.env.local` and set:
 LDAP_AUTO_CREATE=enabled
 ----
 
-When enabling the user auto creation you also need to specify the configurations required to find the user in LDAP.
+==== Auto-create options
+When enabling user auto-creation you also need to specify the configurations required to find the user in LDAP.
 
-Like the other LDAP configuration already covered, for the user auto creation the `.env` file also contains the default values that you can override:
+Like the other LDAP configuration options already covered, for the user auto-creation the `.env` file also contains the default values that you can override.
 
+*Default .env LDAP auto create config*
 [source,bash]
 ----
 ###> LDAP AUTO CREATE CONFIG ###
@@ -146,15 +231,14 @@ LDAP_PROVIDER_FILTER=''
 ###< LDAP AUTO CREATE CONFIG ###
 ----
 
-=== Option description
-
+===== Options reference
 *LDAP_PROVIDER_BASE_DN*
 
 The base `DN` used to search for the users
 
 *LDAP_PROVIDER_UID_KEY*
 
-The attribute on your LDAP entry to use as `uid. This is used to but build a query like `({uid_key}={username})`
+The attribute on your LDAP entry to use as `uid`. This is used to but build a query like `({uid_key}={username})`
 
 *LDAP_PROVIDER_FILTER*
 
@@ -168,27 +252,13 @@ A `DN` of another user that is going to be used to search the user we are curren
 
 Password for the user used in LDAP_PROVIDER_SEARCH_DN
 
-*LDAP extra fields*
+=== Mapping user fields
 
-Extra fields' configuration will be used to fetch extra attributes/fields from LDAP. These can then be used to populate the user record that is created.
+User auto-creation allows to define fields to be set on the user record based on attributes from LDAP.
 
-The configuration for extra fields is **not** done through `.env`. It needs to be done by overriding container parameters.
-This means that this configuration is not as easily configurable per environment.
+This can be achieved using the following options.
 
-The default configuration for extra fields is defined on `config/services/ldap/ldap.yaml`.
-
-To override the configurations you need to copy the file over to the `extensions` folder on a path like `extensions/<your-package>/config/services/ldap/ldap.yaml`
-
-[source,yaml]
-----
-parameters:
-  ldap.autocreate.extra_fields_map:
-
-  ldap.extra_fields: [ ]
-
-----
-
-From the above please note that there are two configuration entries:
+==== Options
 
 *ldap.extra_fields*
 
@@ -198,25 +268,17 @@ An array of strings with the key of the LDAP entry attributes/fields to retrieve
 
 Defines how to map the LDAP fields to the fields in the user. See example on next section.
 
+==== Configuration file
 
+The configuration for extra fields is **not** done through `.env`. It needs to be done by overriding container parameters.
+This means that this configuration is not as easily configurable per environment.
 
-=== Example
+The default configuration for extra fields is defined on `config/services/ldap/ldap.yaml`.
 
-*LDAP .env.local*
+To override the configurations you need to copy the file over to the `extensions` folder on a path like `extensions/<your-package>/config/services/ldap/ldap.yaml`
 
-[source,bash]
-----
-###> LDAP AUTO CREATE CONFIG ###
-LDAP_PROVIDER_BASE_DN='dc=example,dc=org'
-LDAP_PROVIDER_UID_KEY='cn'
-LDAP_PROVIDER_SEARCH_DN='cn=admin,dc=example,dc=org'
-LDAP_PROVIDER_SEARCH_PASSWORD='admin'
-###< LDAP AUTO CREATE CONFIG ###
-----
-
-*LDAP ldap.yaml*
-File: `extensions/<your-package>/config/services/ldap/ldap.yaml
-
+**Example of extra_fields and extra_fields_map configuration**
+File: `extensions/<your-package>/config/services/ldap/ldap.yaml`
 [source,yaml]
 ----
 parameters:
@@ -227,48 +289,22 @@ parameters:
     email: email1
 ----
 
-== Using Symfony Secrets
 
-One of the great things about using symfony bundles and configuration is that we can take full potential of the features Symfony provides.
-One of those features is **secrets** (see the following link to the documentation)
+== 5. Fallback to native authentication
 
-- link:https://symfony.com/doc/current/configuration/secrets.html[Symfony Secrets]
+SuiteCRM allows to fallback to native authentication using the password set on the SuiteCRM instance for that user.
 
-Symfony secrets allows us to safely store *sensitive* values encrypted in a "vault". Plus these values can also be defined per environment.
+If a user has `external_auth_only` set to 1 (or true), the login will fail if the provided password does not match the one on LDAP or if there are any other problem with the authentication against LDAP.
 
-In our SAML configuration this could be used to store the certificates and the private keys, which we don't want to be easily accessible.
+On the other hand, if a user has  `external_auth_only` set to 0 (or false) and the authentication against LDAP fails, the system will immediately try to authenticate against SuiteCRM's native authentication.
 
-To add secrets, first start by following the setup steps on link:https://symfony.com/doc/current/configuration/secrets.html[Symfony's documentation: How to Keep Sensitive Information Secret]
+== 6. Using Symfony Secrets
 
-=== Example
-After setting up all that is required to add secrets, you can change your LDAP config to store some settings in secrets. The following steps will provide an example.
+Please consider using symfony secrets for storing sensitive information, like passwords, etc.
 
-*1. Add a secret for your LDAP private key*
+See the link:../using-symfony-secrets[Using Symfony Secrets] guide for more information on how to add them.
 
-Run `php bin/console secrets:set LDAP_SEARCH_PASSWORD` (the console should show a prompt to set the value)
-
-*2. Clear Symfony cache*
-
-See link:#_clear_symfony_cache[Clear Symfony Cache]
-
-== Clear symfony cache
-
-After doing any changes to `.env` or `ldap.yaml` you need to clear cache.
-
-From your instance root folder run `bin/console cache:clear`
-
-[source,bash]
-----
-bin/console cache:clear
-----
-
-If you don't have access to the terminal you can also delete the contents of: `/<path-to-your-project>/cache`
-
-* Please make sure that `apache / php` **has access to write** to the `cache` folder
-* **The above is not** the legacy cache folder. **Do not** delete the `/<path-to-your-project>/public/legacy/cache`
-
-
-== More information
+== 7. More information
 
 For more information about options on LDAP see the link:https://symfony.com/doc/current/security/ldap.html[Symfony's Security Component documentation]
 
