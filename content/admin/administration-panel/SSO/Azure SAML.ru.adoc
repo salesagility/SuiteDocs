@@ -31,7 +31,7 @@ ifdef::env-github[:en-img: ./../../../../../../static/images/en/admin/sso/]
 
 {{% notice info %}}
 Это страница содержит описание для SuiteCRM 7.x. Описание для SuiteCRM 8.x. находится
-link:../../../../8.x/admin/configuration/saml-configuration[здесь].
+link:../../../../8.x/admin/configuration/saml[здесь].
 {{% /notice %}}
 
 [discrete]

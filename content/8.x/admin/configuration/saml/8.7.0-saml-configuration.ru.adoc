@@ -1,0 +1,363 @@
+---
+Title: Настройка для версий 8.7.0+ 
+weight: 30
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+
+:toc:
+:toc-title: Оглавление
+:toclevels: 2
+
+//
+:sectnums:
+:sectnumlevels: 2
+//
+
+{{% notice info %}}
+В разделе описываются настройки SAML для SuiteCRM версий 8.7.0+
+{{% /notice %}}
+
+== Введение
+
+. Аутентификация SAML основана на пакете https://github.com/nbgrp/onelogin-saml-bundle для Symfony.
+SuiteCRM поддерживает базовую конфигурацию пакета. Таким образом, большая часть настроек будет аналогична настройкам вышеуказанного пакета.
+
+. На данный момент устаревшие настройки SAML игнорируются.
+
+== Ограничения
+
+. Текущая версия SuiteCRM не поддерживает выход из системы, инициируемый поставщиком удостоверений (IDP) ::
+Выход пользователя из системы через IDP не приведёт в автоматическому выходу из SuiteCRM, и пользователю потребуется выйти из системы самостоятельно.
+
+. Привязка сообщений к службе выхода в настоящее время не поддерживается.
+
+== Известные проблемы
+
+По истечении сессии пользователь может быть перенаправлен на стандартную страницу ввода логина/пароля SuiteCRM, вместо приглашения ввода учётных данных SAML.
+Для решения проблемы пользователю необходимо очистить файлы cookie и снова перейти по URL-адресу SuiteCRM.
+
+Проблема будет устранена в будущих версиях системы.
+
+== Включение аутентификации SAML
+
+Для включения аутентификации SAML в файле `.env.local` пропишите следующее:
+
+[source,bash]
+----
+AUTH_TYPE=saml
+----
+
+⚠️ После внесения изменений в файл `.env.local` обязательно выполните команду `./bin/console cache:clear` с правами пользователя root или
+link:../../../../../admin/administration-panel/system/#_восстановление[быстрое восстановление^] из меню Администратора.
+
+== Настройка аутентификации
+
+SuiteCRM предоставляет доступ к некоторым параметрам *nbgrp/onelogin-saml-bundle*, указывая стандартные значения этих параметров в файле `.env`.
+
+
+* Файл `.env` содержит значения по умолчанию для всех доступных переменных системы.
+* Если вы хотите переопределить те или иные значения - укажите новые значения параметров в файле `.env.local`
+
+*Параметры SAML, указанные в файле .env по умолчанию*
+
+[source,bash]
+----
+###> SAML CONFIG ###
+
+# User mapping options
+SAML_USERNAME_ATTRIBUTE=uid
+SAML_USE_ATTRIBUTE_FRIENDLY_NAME=true
+
+# Auto create options
+SAML_AUTO_CREATE=disabled
+SAML_AUTOCREATE_ATTRIBUTES_MAP='{}'
+
+# Connection options
+SAML_IDP_ENTITY_ID='https://idp.example.com'
+SAML_IDP_SSO_URL='https://idp.example.com/sso'
+SAML_IDP_SLO_URL='https://idp.example.com/slo'
+SAML_IDP_X509CERT='MIIC...'
+SAML_SP_ENTITY_ID=''
+SAML_SP_PRIVATE_KEY=''
+SAML_SP_CERT=''
+SAML_STRICT=''
+SAML_DEBUG=''
+
+# Request options
+SAML_NAME_ID_ENCRYPTED=false
+SAML_AUTHN_REQUESTS_SIGNED=false
+SAML_LOGOUT_REQUEST_SIGNED=false
+SAML_LOGOUT_RESPONSE_SIGNED=false
+SAML_SIGN_METADATA=false
+SAML_WANT_MESSAGES_SIGNED=false
+SAML_WANT_ASSERTIONS_ENCRYPTED=false
+SAML_WANT_ASSERTIONS_SIGNED=false
+SAML_WANT_NAME_ID=false
+SAML_WANT_NAME_ID_ENCRYPTED=false
+SAML_REQUESTED_AUTHN_CONTEXT=false
+SAML_WANT_XML_VALIDATION=false
+SAML_RELAX_DESTINATION_VALIDATION=false
+SAML_DESTINATION_STRICTLY_MATCHES=false
+SAML_ALLOW_REPEAT_ATTRIBUTE_NAME=false
+SAML_REJECT_UNSOLICITED_RESPONSES_WITH_IN_RESPONSE_TO=false
+SAML_LOWERCASE_URL_ENCODING=false
+
+# Compression
+SAML_COMPRESS_REQUESTS=false
+SAML_COMPRESS_RESPONSES=false
+
+# Contact information
+SAML_CONTACT_TECHNICAL_GIVEN_NAME='Tech User'
+SAML_CONTACT_TECHNICAL_EMAIL_ADDRESS='techuser@example.com'
+SAML_CONTACT_SUPPORT_GIVEN_NAME='Support User'
+SAML_CONTACT_SUPPORT_EMAIL_ADDRESS='supportuser@example.com'
+SAML_CONTACT_ADMINISTRATIVE_GIVEN_NAME='Administrative User'
+SAML_CONTACT_ADMINISTRATIVE_EMAIL_ADDRESS='administrativeuser@example.com'
+SAML_ORGANIZATION_NAME='Example'
+SAML_ORGANIZATION_DISPLAY_NAME='Example'
+SAML_ORGANIZATION_URL='http://example.com'
+###< SAML CONFIG ###
+----
+
+
+=== Описание параметров
+
+SAML_USERNAME_ATTRIBUTE:: Атрибут SAML, используемый в качестве логина в SuiteCRM. Значение, полученное в запросе SAML для `SAML_USERNAME_ATTRIBUTE`, должно совпадать со значением поля *user_name* таблицы *users* используемого экземпляра SuiteCRM.
+
+[discrete]
+==== Пример:
+
+* Вы хотите войти в систему как пользователь `jane.doe`
+* Поле `user_name` в таблице пользователей SuiteCRM содержит значение `jane.doe`
+
+Значение, установленное для `SAML_USERNAME_ATTRIBUTE`, должно быть любым свойством из запроса SAML, который предоставляет имя пользователя `jane.doe`.
+
+SAML_USE_ATTRIBUTE_FRIENDLY_NAME:: Следует ли использовать понятное имя, отправленное в запросе SAML.
+
+*SAML_STRICT*
+
+Включить/выключить строгий режим
+
+*SAML_DEBUG*
+
+Включить/выключить режим отладки
+
+=== Параметры подключения
+
+The set of options contains conifgurations
+
+
+*Параметры поставщика удостоверений (IdP)*
+
+SAML_IDP_ENTITY_ID::
+Идентификатор сущности IdP обычно представляет собой URL: «https://idp.example.com».
+
+SAML_IDP_SSO_URL::
+URL-адрес единого входа IdP
+
+SAML_IDP_SLO_URL::
+URL-адрес единого входа-выхода IdP
+
+SAML_IDP_X509CERT::
+Сертификат, предоставленный IdP. Обычно включен в файл дескриптора, предоставленный IdP
+
+
+*Параметры поставщика услуг (SP)* - провайдером в данном случае выступает SuiteCRM
+
+SAML_SP_ENTITY_ID::
+URL экземпляра SuiteCRM. По умолчанию он заполняется автоматически, используя  значение переменной *site_url*.
+
+SAML_SP_PRIVATE_KEY::
+Закрытый ключ для сертификата экземпляра SuiteCRM. 
+
+SAML_SP_CERT::
+Сертификат экземпляра SuiteCRM.
+
+=== Параметры запроса
+
+Параметры определяют, как должно быть отправлено содержимое запроса.
+
+Как уже упоминалось выше, SuiteCRM использует пакет `nbgrp/onelogin-saml-bundle` bundle. Таким образом, большая часть настроек будет аналогична настройкам вышеуказанного пакета.
+
+Детальная информация описывается в следующей документации:
+
+* https://github.com/nbgrp/onelogin-saml-bundle#configuration[onelogin-saml-bundle configuration]
+* https://github.com/onelogin/php-saml#how-it-works[Onelogin php-saml - section: How it works]
+* https://github.com/onelogin/php-saml#settings[Onelogin php-saml - section: settings]
+
+
+Параметры должны соответствовать настройкам, указанным в IDP.
+
+*Параметры, доступные в файлах .env / .env.local*
+
+* SAML_NAME_ID_ENCRYPTED
+* SAML_AUTHN_REQUESTS_SIGNED
+* SAML_LOGOUT_REQUEST_SIGNED
+* SAML_LOGOUT_RESPONSE_SIGNED
+* SAML_SIGN_METADATA
+* SAML_WANT_MESSAGES_SIGNED
+* SAML_WANT_ASSERTIONS_ENCRYPTED
+* SAML_WANT_ASSERTIONS_SIGNED
+* SAML_WANT_NAME_ID
+* SAML_WANT_NAME_ID_ENCRYPTED
+* SAML_REQUESTED_AUTHN_CONTEXT
+* SAML_WANT_XML_VALIDATION
+* SAML_RELAX_DESTINATION_VALIDATION
+* SAML_DESTINATION_STRICTLY_MATCHES
+* SAML_ALLOW_REPEAT_ATTRIBUTE_NAME
+* SAML_REJECT_UNSOLICITED_RESPONSES_WITH_IN_RESPONSE_TO
+* SAML_LOWERCASE_URL_ENCODING
+
+[discrete]
+==== Пример 
+
+Следующий пример настроек был взят из системы, которая использовала ссылку https://www.keycloak.org/[keycloak^] в качестве IDP. Некоторые из значений IDP взяты из этого примера, что НЕ означает, что все IDP используют подобные значения.
+
+В примере указаны не все возможные параметры.
+
+*Пример настройки SAML в файле .env.local*
+
+[source,bash]
+----
+###> SAML CONFIG ###
+SAML_USERNAME_ATTRIBUTE=username
+SAML_USE_ATTRIBUTE_FRIENDLY_NAME=true
+
+# Connection options
+SAML_IDP_ENTITY_ID='http://saml:8090/realms/master'
+SAML_IDP_SSO_URL='http://saml:8090/realms/master/protocol/saml'
+SAML_IDP_SLO_URL='http://saml:8090/realms/master/protocol/saml'
+SAML_IDP_X509CERT='MIIC...'
+
+SAML_SP_PRIVATE_KEY='MIIE..'
+SAML_SP_CERT='../extensions/defaultExt/config/packages/sp_cert.crt' # example of pointing to a file
+
+# Resquest options
+SAML_AUTHN_REQUESTS_SIGNED=true
+SAML_LOGOUT_REQUEST_SIGNED=true
+SAML_WANT_ASSERTIONS_SIGNED=true
+
+# Compression
+SAML_COMPRESS_REQUESTS=true
+SAML_COMPRESS_RESPONSES=true
+
+###< SAML CONFIG ###
+----
+
+
+== Настройка автоматического создания пользователя
+
+По умолчанию при использовании SAML автоматическое создание пользователей отключено.
+
+Если этот параметр отключён, то учётные записи пользователей, использующих SAML, должны быть созданы *до того* как они попытаются войти в систему.
+
+Если параметр включён - он автоматически создаст пользователей из SAML, если они ещё не существуют в SuiteCRM.
+
+{{% notice note %}}
+Обратите внимание, что у созданного таким образом пользователя *не будет установлен пароль*, а параметр `external_auth_only` (см. соответствующее поле таблицы `users` в базе данных) по умолчанию будет установлен в значение *1* (или *true*).
+{{% /notice %}}
+
+=== Включение автоматического создания пользователя
+
+Для автоматического создания пользователя в файле `.env.local` пропишите следующее:
+
+[source,bash]
+----
+SAML_AUTO_CREATE=enabled
+----
+
+=== Сопоставление полей пользователя
+
+Автоматическое создание пользователя позволяет определять учётные данные, которые будут прописаны в БД SuiteCRM на основе атрибутов из SAML.
+
+==== Описание параметров
+
+*SAML_AUTOCREATE_ATTRIBUTES_MAP*
+
+В параметре сопоставляются поля SAML с полями пользователя.
+
+Ключи — это имена полей в SAML, а значения — имена полей в SuiteCRM.
+
+[discrete]
+==== Пример
+
+Начиная с версии 8.7.0 эту настройку можно выполнять непосредственно в файлах .env / .env.local.
+
+*Настройка параметра SAML_AUTOCREATE_ATTRIBUTES_MAP в файле .env.local*
+
+[source,bash]
+----
+# Auto create options
+SAML_AUTO_CREATE=enabled
+
+## Mapping direction: SAML => SuiteCRM User
+SAML_AUTOCREATE_ATTRIBUTES_MAP='
+    {
+        "email": "email1",
+        "surname": "last_name",
+        "givenName": "first_name"
+    }
+'
+----
+
+==== Проверка значений, отправленных из SAML IDP
+
+Чтобы проверить значения, отправленные из SAML IDP, вы можете открыть файл `logs/auth.log`, в котором будет записан процесс  создания пользователя. Этот файл заполняется, когда вы пытаетесь войти в систему. Поэтому, сначала попробуйте войти под пользователем, которого нет в системе, и только потом проверяйте логи.
+
+Запись будет выглядеть следующим образом: `App\Security\Saml\AppSamlUserFactory | createUser attributes`. Эта запись также должна содержать информацию в формате json с атрибутами, которые SuiteCRM получает от IDP.
+
+Взглянув на следующий фрагмент из журнала, можно увидеть, что:
+
+- Фамилия `Doe` соответствует ключу `urn:oid:2.5.4.4`
+- Имя `Jeremy` соответствует ключу `urn:oid:2.5.4.42`
+- Электронная почта `jeremy.doe@example.com` соответствует ключу `email`
+
+[source,shell]
+----
+[2022-09-15 09:23:53] auth.INFO: App\Security\Saml\AppSamlUserFactory | createUser username: jeremy.doe [] []
+[2022-09-15 09:23:53] auth.INFO: App\Security\Saml\AppSamlUserFactory | createUser attributes | {"urn:oid:2.5.4.4":["Doe"],"urn:oid:2.5.4.42":["Jeremy"],"username":["jeremy.doe"],"email":["jeremy.doe@example.com"],"Role":["view-profile","offline_access","manage-account","manage-account-links","uma_authorization","default-roles-master"]} [] []
+----
+
+== Использование собственной аутентификации
+
+Даже при использовании SAML система позволяет использовать собственную аутентификацию с использованием пароля, установленного в SuiteCRM для указанного пользователя.
+
+Для этого войдите в систему, используя следующий URL: `https://<your-suitecrm-instance>/auth`.
+
+После успешного входа в систему пользователь будет перенаправлен на `https://<your-suitecrm-instance>/`.
+
+{{% notice note %}}
+Обратите внимание, что при выходе из системы вы будете перенаправлены на страницу входа SAML, а не на собственную страницу ввода логина/пароля SuiteCRM.
+{{% /notice %}}
+
+=== Параметр external_auth_only config
+
+Возможность входа в SuiteCRM с использованием собственного логина будет зависеть от значения параметра `external_auth_only`, прописанного в профиле пользователя:
+
+Если в настройках пользователя параметр `external_auth_only` установлен в значение *1* (или *true*), пользователь не сможет войти в систему, используя учётные данные SuiteCRM.
+
+С другой стороны, если для `external_auth_only` установлено значение *0* (или *false*), пользователь сможет попытаться войти в систему, при условии, что у него установлен пароль в SuiteCRM.
+
+^_Параметр{sp}должен{sp}отображаться{sp}на{sp}закладке{sp}«Дополнительно»{sp}в{sp}профиле{sp}пользователя{sp}при{sp}условии,{sp}что{sp}настроена{sp}SAML-аутентификация,{sp}см.{sp}также{sp}соответствующее{sp}поле{sp}таблицы{sp}«users»{sp}в{sp}базе{sp}данных._^
+
+== Использование секретов Symfony
+
+Рассмотрите возможность использования секретов Symfony для хранения конфиденциальной информации, такой как сертификаты, открытые/закрытые ключи и т. д.
+
+Дополнительная информация описана в разделе
+link:../../using-symfony-secrets[Использование секретов Symfony].
+
+== Дополнительная информация
+
+Дополнительная информация о настройке SAML находится на страницах: 
+
+* https://github.com/nbgrp/OneloginSamlBundle[OneloginSamlBundle^]
+* https://github.com/onelogin/php-saml[Onelogin php-saml^]
+
+{{% notice info %}}
+Обязательно убедитесь, что информация, указанная по ссылке, актуальна для версии Symfony, используемой в установленной версии SuiteCRM.
+{{% /notice %}}
+
