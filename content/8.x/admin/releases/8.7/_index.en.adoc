@@ -96,6 +96,8 @@ Composer 1.x is no longer supported.
 ** New docs: link:../../../../8.x/admin/configuration/saml/8.7.0-saml-configuration[SAML configuration reference - 8.7.0+]
 ** Old docs: link:../../../../8.x/admin/configuration/saml/8.2.0-saml-configuration[SAML configuration reference - 8.2.0+]
 
+* link:../../../../8.x/admin/legacy-migration/[7.14.x to 8.7.0+ Migration] documentation has been updated
+
 ==== icon:star[] Enhancements
 
 ==== LDAP and SAML configuration improvements
