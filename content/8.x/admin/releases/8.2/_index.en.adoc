@@ -20,7 +20,7 @@ _Released 02/03/2023_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.4[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -82,7 +82,7 @@ _Released 25/01/2023_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.3[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -133,7 +133,7 @@ _Released 22/12/2022_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.2[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ==== icon:star[] Enhancements
 
@@ -266,7 +266,7 @@ _Released 17/11/2022_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.1[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -332,12 +332,12 @@ _Released 11/10/2022_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.2.0[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
 ==== icon:star[] Documentation
-* Add 7.12.x to 8.x migration documentation - link:../../../../8.x/admin/installation-guide/legacy-migration[7.12 Migration Documentation]
+* Add 7.12.x to 8.x migration documentation - link:../../../../8.x/admin/legacy-migration/8.2.0-legacy-migration/[7.12 Migration Documentation]
 * Add step to check config and htaccess to install documentation - link:../../../../8.x/admin/installation-guide/downloading-installing[Installation Documentation]
 * Update 8.x upgrade guide with new upgrade steps - link:../../../../8.x/admin/installation-guide/upgrading[Upgrade Documentation]
 
@@ -345,7 +345,7 @@ _Released 11/10/2022_
 
 ==== SuiteCRM 7.12.x to SuiteCRM 8 Migration
 
-* A migration path from version 7.12+ to 8.x has been added. Please see the following documentation page for instructions on how to upgrade link:../../../../8.x/admin/installation-guide/legacy-migration[here.]
+* A migration path from version 7.12+ to 8.x has been added. Please see the following documentation page for instructions on how to upgrade link:../../../../8.x/admin/legacy-migration/8.2.0-legacy-migration/[here.]
 
 ==== LDAP and SAML Authentication
 Authentication with LDAP and SAML (including SAML's user auto creation) has been added, to make it easier to access SuiteCRM by using the same credentials that you may use to access other applications.
