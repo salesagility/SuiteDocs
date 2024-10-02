@@ -1,0 +1,93 @@
+---
+title: "Add clear field action"
+weight: 10
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/actions/field-actions/
+
+== 1. Introduction
+
+Field actions allow you to add custom action buttons next to fields in SuiteCRM.
+
+The clear field action allows to clear the field value by clicking a button.
+
+This guide will walk you through the process of adding the clear field action to a field.
+
+image:clear-field-action-example.gif[Clear Field Action Functionality Example]
+
+== 2.Logic Metadata definition
+
+{{% notice note %}}
+When making these changes be sure to make them in the custom directory, ie: 'public/legacy/custom/modules/<module>/...'
+{{% /notice %}}
+
+The first thing to define is the `fieldActions` entry in the metadata. This is where the action buttons for fields are defined.
+
+The configuration for the actions can be added only to `detailviewdefs.php`.
+
+In the following example we are going to add them to the `Accounts` module `detailviewdefs.php`.
+
+
+=== 2.1 Steps to add the actions on the custom detailviewdefs.php
+
+. Copy the core Accounts `detailviewdefs.php` to the custom folder:
+.. From: `public/legacy/modules/Accounts/metadata/detailviewdefs.php`
+.. To: `public/legacy/custom/modules/Accounts/metadata/detailviewdefs.php`
+. Add a new entry for your custom action button on the custom `detailviewdefs.php` with the code on the snippet below
+** Re-set permissions if needed (will depend on your setup)
+. Run `Repair and Rebuild` on Admin menu
+
+=== 2.2 Action definition
+
+The following were the changes applied in order to have the field action displaying.
+
+[source,php]
+----
+    'name' => 'website',
+    'type' => 'link',
+    'label' => 'LBL_WEBSITE',
+    'displayParams' => [
+        'link_target' => '_blank',
+    ],
+    'fieldActions' => [
+        'klass' => '',
+        'containerKlass' => 'd-flex align-items-center',
+        'position' => 'inline',
+        'actions' => [
+            'clear-field' => [
+                'key' => 'clear',
+                'labelKey' => 'LBL_CLEAR_BUTTON_LABEL',
+                'modes' => ['edit'],
+                'klass' => ['btn btn-sm btn-secondary p-1 m-0 ml-1'],
+                'params' => [
+                    'expanded' => true
+                ]
+            ]
+        ]
+    ],
+----
+
+
+=== 3. Properties Description
+
+* Key
+- The `key` within the named `actions` array is stating which action type will be used for the following.
+In this case it's `clear`.
+
+* Modes
+- Modes are views you would like your `required` action to take effect on, as shown above it will be `edit`.
+
+* Icon
+- If desired to have a icon button instead of a labelled-key button, this option can be used.
+
+* Klass
+- 'klass' can be customized to style the action button. The 'klass' where the out of action object is to customize buttons as a whole.
+
+* Param
+- 'params' can configure the action button.
+
+* Container Klass
+- 'containerKlass' can be customized to style for all action buttons.
+
+* Position
+- 'position' can customize the position of the action button in respect to it respective field. (e.g. position: inline or vertical)
