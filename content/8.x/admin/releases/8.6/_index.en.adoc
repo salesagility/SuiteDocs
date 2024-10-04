@@ -20,7 +20,7 @@ _Released 14 August 2024_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.6.2[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -34,7 +34,7 @@ _Released 14 August 2024_
 
 ==== icon:lock[] Security
 
-* CVE: Pending - Improper Access Control
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-45392[CVE-2024-45392:  Wrong deletion permission checks on API delete call] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-8qfx-h7pm-2587[GitHub Advisory] | Reporter: gunnicom
 
 ==== icon:bug[] Bug Fixes
 
@@ -128,7 +128,7 @@ _Released 10 June 2024_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.6.1[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
@@ -220,7 +220,7 @@ _Released 03 April 2024_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.6.0[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../installation-guide/legacy-migration[SuiteCRM 8 Migration from SuiteCRM 7]
+* link:../../legacy-migration/8.2.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 

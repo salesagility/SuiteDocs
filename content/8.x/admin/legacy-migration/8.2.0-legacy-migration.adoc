@@ -1,9 +1,14 @@
 ---
-Title: SuiteCRM 7.12.x+ migration to SuiteCRM 8.x
+Title: Migration - 7.12.x+ to 8.2.x+ (old)
 weight: 30
 ---
 
 :imagesdir: /images/en/user
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Versions between 8.2.0 and 8.6.x
+{{% /notice %}}
+
 
 == 1. Before migrating
 

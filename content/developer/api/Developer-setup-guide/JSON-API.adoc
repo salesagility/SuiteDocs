@@ -11,7 +11,7 @@ Please check the following below:
 
 Install composer packages with
 
-[source,php]
+[source,shell]
 composer install
 
 === Generate private and public.key for OAUTH2
@@ -21,28 +21,28 @@ SuiteCRM Api uses OAuth2 protocol, which needs public and private keys.
 First, open a terminal and go to `{{suitecrm.root}}/Api/V8/OAuth2`
 
 Generate a private key:
-[source,php]
+[source,shell]
 openssl genrsa -out private.key 2048
 
 Then a public key:
-[source,php]
+[source,shell]
 openssl rsa -in private.key -pubout -out public.key
 
 If you need more information about generating, https://oauth2.thephpleague.com/installation/[please visit this page].
 
 The permission of the key files must be 600 or 660, so change it.
-[source,php]
+[source,shell]
 sudo chmod 600 private.key public.key
 
 Also, you have to be sure that the config files are owned by PHP.
-[source,php]
+[source,shell]
 sudo chown www-data:www-data p*.key
 
 === OAUTH2 encryption key
 OAuth2’s AuthorizationServer needs to set an encryption key for security reasons.
 This key has been generated during the SuiteCRM installation and stored in the config.php under "oauth2_encryption_key".
 If you would like to change its value you may generate a new one by running
-[source,php]
+[source,shell]
 php -r 'echo base64_encode(random_bytes(32)), PHP_EOL;'
 
 and then store the output in the config.php
@@ -105,7 +105,7 @@ Fields can filter on attribute object. Allowed keys are valid bean properties.
 
 Example:
 
-[source,php]
+[source,html]
 {{suitecrm.url}}/Api/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
 
 Result:
@@ -250,7 +250,7 @@ LTE = '<=';
 
 Example:
 
-[source,php]
+[source,html]
 {{suitecrm.url}}/Api/V8/module/Accounts?fields[Accounts]=name,account_type&filter[operator]=and&filter[account_type][eq]=Customer
 
 Example:
@@ -292,7 +292,7 @@ Available parameters: fields
 
 Example:
 
-[source,php]
+[source,html]
 Api/V8/module/Accounts/11a71596-83e7-624d-c792-5ab9006dd493?fields[Accounts]=name,account_type
 
 === Get collection of modules
@@ -304,7 +304,7 @@ Available parameters: fields, page, sort, filter
 
 Example:
 
-[source,php]
+[source,html]
 Api/V8/module/Accounts?fields[Accounts]=name,account_type&page[size]=4&page[number]=4
 
 === Create a module record
@@ -347,40 +347,42 @@ Example body:
 [source,php]
 DELETE {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}
 
+== Relationship Endpoints
+
 === Get relationship
 
 [source,php]
-GET {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{relatedModuleName}
+GET {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{linkFieldName}
 
 Example:
 
-[source,php]
-Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts
+[source,html]
+Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/members
 
 === Create relationship
 
-[source,php]
-POST {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships
+[source,shell]
+POST {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{linkFieldName}
 
-Example body:
+body:
 
 [source,json]
 ----
 {
   "data": {
-    "type": "Contacts",
-    "id": "129a096c-5983-1d59-5ddf-5d95ec91c144"
+    "type": "{relatedModuleName}",
+    "id": "{relatedBeanId}"
   }
 }
 ----
 
 === Delete relationship
 
-[source,php]
-DELETE {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{relatedModule}/{relatedBeanId}
+[source,html]
+DELETE {{suitecrm.url}}/Api/V8/module/{moduleName}/{id}/relationships/{linkFieldName}/{relatedBeanId}
 
 Example:
 
-[source,php]
-/Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/Accounts/11a71596-83e7-624d-c792-5ab9006dd493
+[source,html]
+/Api/V8/module/Accounts/129a096c-5983-1d59-5ddf-5d95ec91c144/relationships/members/11a71596-83e7-624d-c792-5ab9006dd493
 

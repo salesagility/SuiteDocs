@@ -3,6 +3,8 @@ title: "General Information"
 weight: 10
 ---
 
+:icons: font
+
 {{% notice info %}}
 The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../../admin/installation-guide/upgrading[here].
 {{% /notice %}}
@@ -13,6 +15,20 @@ The following documentation is for SuiteCRM Version 8+; to see documentation for
 
 Please consider going through the link:../before-start[preparation steps],
 this will ensure your environment will be compatible with SuiteCRM 8.
+
+=== icon:exclamation-triangle[] Required Actions
+
+[cols="^7%, 7%, 70%, 16%"]
+|===
+|Version |Type |Blocker | Release notes
+|8.7.0
+|Configuration change
+|**If there is an existing SAML configuration** it will have to be updated.
+|link:../../releases/8.7/[8.7 Release notes]
+
+
+|===
+
 
 == Version Steps
 
