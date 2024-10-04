@@ -11,25 +11,23 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
-== 8.7.0-beta
+== 8.7.0
 
-_Released 29 August 2024_
+_Released 3 October 2024_
 
 
 === icon:box-open[] Assets
 
-* https://suitecrm.com/suitecrm-pre-release/[Download]
-* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.7.0-beta[GitHub - Download]
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.7.0[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+* link:../../legacy-migration/8.7.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
 ==== icon:level-up-alt[] Platform upgrade
 
 SuiteCRM is now using Symfony v6.4 and Api Platform 3.2. This brings some system requirement updates and breaking changes.
-
-
 
 ==== icon:server[] System Requirement Changes
 
@@ -41,6 +39,15 @@ The minimum php version is now 8.1. PHP 7.4 stopped being supported since versio
 
 Composer 1.x is no longer supported.
 
+==== icon:code[] Configuration Changes
+
+**SAML configuration has changed**
+
+Authentication SAML has been updated, there are new configuration options available and most of the configuration can now be done on env files.
+
+To see how to setup and configure the authentication methods, please see the following documentation:
+
+** link:../../../../8.x/admin/configuration/saml/8.7.0-saml-configuration[SAML Configuration Reference]
 
 ==== icon:code[] Backward Incompatible Changes
 
@@ -96,6 +103,10 @@ Composer 1.x is no longer supported.
 ** New docs: link:../../../../8.x/admin/configuration/saml/8.7.0-saml-configuration[SAML configuration reference - 8.7.0+]
 ** Old docs: link:../../../../8.x/admin/configuration/saml/8.2.0-saml-configuration[SAML configuration reference - 8.2.0+]
 
+* link:../../../../8.x/admin/legacy-migration/[7.14.x to 8.7.0+ Migration] documentation has been updated
+
+* link:../../../../8.x/developer/extensions/frontend/actions/field-actions/[Adding Custom Field Actions] documentation added
+
 ==== icon:star[] Enhancements
 
 ==== LDAP and SAML configuration improvements
@@ -108,15 +119,52 @@ To see how to setup and configure the authentication methods, please see the fol
 
 ==== Convert target
 
-Convert target was missing and has now been implemented
+The Convert Target action has now been reimplemented
 
 image:target-convert-brief-demo.gif[Convert Target]
+
+
+==== Record pagination
+
+Record Pagination has been re-implemented on record views, this was previously known as VCR
+
+image:release-notes-record-pagination.gif[Record Pagination]
+
+==== Pre-install page improvements
+
+- Pre-install page has been redesigned
+- Extra validations and checks have been added
+
+image:preinstall-page-re-styled.png[Re-styled Pre-install page]
+
+==== Add action buttons to fields
+
+It is now possible to configure action buttons at the field level
+
+image:release-notes-field-actions-example.gif[Field Actions example]
+
 
 === icon:bug[] Known issues
 
 * Using SAML Authentication when there is no matching CRM account leads to a Login Loop
-* With LDAP enabled, non-LDAP accounts cannot log in
-* If SCRMSESSID / Session Expires or Mismatches, the CRM can lock up until you Hard Refresh
+
+==== icon:bug[] Bug Fixes
+
+* link:https://github.com/salesagility/SuiteCRM-Core/issues/62[Fix #62] Add 'show_fullname' option
+* link:https://github.com/salesagility/SuiteCRM-Core/issues/473[Fix #473]  Document filename(file) not showing in Subpanels
+* link:https://github.com/salesagility/SuiteCRM-Core/issues/436[Fix #436] - Update log configuration
+* link:https://github.com/salesagility/SuiteCRM-Core/issues/504[Fix #504] - Fix required validation in Email line items field
+* Fix validation validation in multienum field
+* Update cache config - Use cache.adapter.system for both app and system cache pools
+* Fix Enums and MultiEnums on Mass Update
+* Fix update logic on create mode
+* Fix display logic when swapped between edit and detail
+* Fix page refresh when entered on saved filter
+* Fix - Close navbar dropdown menu when navigate
+* Fix propagation on enter after click search and save
+* Fix required validation after field touch
+* Fix setting custom datetime
+* Add portal enable/disable buttons to record view
 
 
 === icon:heart[] Community
