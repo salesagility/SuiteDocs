@@ -1,0 +1,10 @@
+---
+title: "Миграция с 7.x на 8.x"
+weight: 20
+---
+
+:author: likhobory
+:email: likhobory@mail.ru
+
+=== Оглавление
+{{% children depth="1" showhidden="false" %}}
