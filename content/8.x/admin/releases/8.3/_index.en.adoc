@@ -161,7 +161,7 @@ Notifications are now available in SuiteCRM 8, for the following activities:
 * Calls
 
 Therefore, if you are invited/assigned to one of the above, you will receive the notification and any subsequent reminders.
-For more information on using the Notification features, please see link:../../../features/notifications[here.]
+For more information on using the Notification features, please see link:../../../features/notifications/notifications[here.]
 
 image:Notifications-Open.png[Notifications]
 
@@ -169,7 +169,7 @@ image:Notifications-Open.png[Notifications]
 
 When viewing Subpanels, you are now able to filter the results to locate the records you are interested in.
 To enable the Filter option, you need to add it via the 'subpaneldefs.php'.  For further information on how to do this,
-please see link:../../../features/subpanel-filtering[here.]
+please see link:../../../features/filters/subpanel-filtering/subpanel-filtering[here.]
 
 image:Filter-Full-Panel.png[Subpanel Filter]
 
@@ -180,7 +180,7 @@ Previously in SuiteCRM 8, to view additional records on Listview, Subpanels and 
 However, you can now choose to 'Load More' meaning the records all display on the one page, making it easier to scroll up
 and down the list of records, rather than paging back and forth.
 
-To find out how to switch this on and configure the settings, please see link:../../../features/load-more[here.]
+To find out how to switch this on and configure the settings, please see link:../../../features/load-more/load-more[here.]
 
 image:Load-More-Full.png[Load More]
 
