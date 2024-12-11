@@ -20,13 +20,26 @@ _Released 12 December 2024_
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.8.0-beta[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
-* link:../../legacy-migration/8.7.0-legacy-migration/[SuiteCRM 8 Migration from SuiteCRM 7]
 
 ===  icon:check[] Release Notes
 
+==== icon:level-up-alt[] Platform upgrade
+
+SuiteCRM is now using angular 18. This brings some system requirement updates and breaking changes.
+
+⚠️ *Important:* SuiteCRM is still using Webpack and Module Federation. We will not be using esbuild and Native Federation for the time being.
+
+See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+
+==== icon:server[] System Requirement Changes - For development
+
+**Minimum yarn version - 4.5.0**
+
+The minimum yarn version is now 4.5.0.
+
 ==== icon:book[] Documentation
 
-* We have added new documentation to set up 2FA on SuiteCRM 8 see more link:../../../../8.x/features/two-factor/two-factor[here.]
+We have added new documentation to set up Two-factor Authentication using TOTP on SuiteCRM 8 see the link:../../../../8.x/features/two-factor/two-factor[Two-factor Authentication] section for more information.
 
 ==== icon:star[] Enhancements
 
@@ -40,173 +53,48 @@ This includes:
 * Fixed code to eliminate warnings/ errors from logs.
 * Update missing labels
 
-===== icon:code[] Angular Upgrade
-
-{{% notice info %}}
-SuiteCRM is still using Webpack and Module Federation. We will not be using esbuild and Native Federation for the time being.
-{{% /notice %}}
-
-Angular version has been updated to v16.
-
-====== Structure Changes
-
-* `core/app/common` is now inside `core/app/src/lib/common/`.
-* `zone.js` has been removed in favour of ZonelessChangeProtection.
-* `angular.json` has been removed and is no longer versioned.
-* The `base-angular.json` is now on core.
-
-====== Command Changes
-
-* `yarn run build:common` is no longer needed.
-* `yarn build` can be run to build in production.
-** `yarn build-dev` can be run to build in development.
-
-====== Extension Changes
-
-{{% notice warning %}}
-If using extensions please ensure to update extension configuration.
-{{% /notice %}}
-
-* Update `webpack.config.js`. (You can use the `webpack.config.js` on `defaultExt` as reference).
-* To build an extensions you must now run `yarn build:extension <extensions name>` e.g `yarn build:extension defaultExt`
-** `yarn build-dev:extension <extensions name>` to build in development
-* `yarn merge-angular-json` will merge all angular jsons from any extensions and core and merge them into the generated `angular.json`
-* Each extension should have its' own `angular.json` file.
-** This should not be commited
-* Removed `angular.json`. -> *No other structure changes for extensions*.
-
-===== icon:key[] Two-Factor Authentication
-
-We have added 2FA on SuiteCRM 8. See more information link:../../../../8.x/features/two-factor/two-factor[here.]
-
-===== icon:cog[] Record Mappers
-
-Mappers run at 2 levels, Api level and Entity level.
-
-Api level is called immediately *before* or *after* receiving or sending data to api.
-
-Entity leve is called within Entity level operations, e.g.:
-
-* retrieving a record
-* saving a record
-* etc...
-
-Entity Mappers will run regardless if they are called from the API or elsewhere.
-
-There are now 3 new types of mapper added for Entity and Api:
-
-* Field Mapper
-** Field Mapper is used to map a field on a module (e.g. `phone` on Accounts).
-* Field Type Mapper
-** Field Type Mapper is used to map field types specifically (e.g. `varchar` on Accounts).
-* Record Mapper
-** Record Mapper is used to map more than one field for module.
-
-====== Record Mapper Modes
-
-The above mappers are called on 3 different points; when retrieving a record, when saving a record and when getting a list of records.
-
-You can configure your mapper to run on any or all of these 3 points for that you have to set the mode(s) for your mapper:
-
-* retrieve
-** the `toInternal` method is never called for this mode.
-* list
-** the `toInternal` method is never called for this mode.
-* save
-
-====== Record Mapper Order
-
-When adding a new Record Mapper you will have the `getOrder` function to set the order/ priority in which the mappers run per mapper type.
-
-====== Set and Replace Default Type
-
-To set a default mapper for any of the mapper types, when adding the mapper return the key `default`.
-
-When adding new mappers, if there is already a `default` set for that mapper type (field, field type and record),
-and you wish to run a new mapper instead you will have to add:
-
-[source, php]
-    public function replaceDefaultTypeMapper(): bool
-    {
-        return true;
-    }
-
-This will run your new mapper and *not* run the default mapper.
-
-===== Save Handlers
-
-There are 3 different types of Save Handler:
-
-* After Save
-* Before Save
-* Save (on Save)
-
-The `Before Save` and `After Save` handler have similar logic to `before_save` and `after_save` logic hooks.
-
-These 3 types of Save Handler can be used on each of the Record Mapper Types:
-
-* Field
-* Field Type
-* Record
-
-====== Replace Default Type
-
-Similar to Record Mappers, Save Handlers have the ability to run a new mapper instead of the `default` if one is set.
-
 ==== icon:star[] Filtering on Favorites
 
 You can now filter by `Favorites` and `My Items`.
 
-image:Fav-Filter.gif[Favorites and Items Filter]
+===== icon:key[] Two-Factor Authentication
+
+We have added Two-factor authentication on SuiteCRM 8 using TOTP. See more information link:../../../../8.x/features/two-factor/two-factor[here.]
+
+image:enable-2fa-example.png[8.8.0-beta Enable Two-Factor Authentication]
 
 ==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
 
-image:Full-View-871.png[8.7.1 Full View]
+image:new-record-view.png[8.8.0-beta Record View]
 
-image:Full-View-880.png[8.8.0-beta Full View]
+* Record View
+** The fields within the record view now take up minimal space, allowing you to see the full record.
 
-===== Record View
+* Subpanels
+** Subpanels are now more compact and show the number of records a subpanel has.
+** The number of subpanels that show when collapsed is configurable via the `subpanel_buttons_panel_limits.yaml`.
+** Although it is recommended to do these changes within `defaultExt` or alternatively your own extension.
 
-image:871-RecordView.png[8.7.1 Record View]
+* Timeline
+** Following the other changes, the timeline is also more compact showing more information on the record without scrolling.
 
-image:880-RecordView.png[8.8.0-beta Record View]
+==== icon:cog[] Performance Updates
 
-The fields within the record view now take up minimal space, allowing you to see the full record.
-
-===== Subpanels
-
-image:871-Subpanels.png[8.7.1 Subpanels]
-
-image:880-Subpanels.png[8.8.0-beta Subpanels]
-
-Subpanels are now more compact and show the number of records a subpanel has.
-
-The number of subpanels that show when collapsed is configurable via the `subpanel_buttons_panel_limits.yaml`.
-
-Although it is recommended to do these changes within `defaultExt` or alternatively your own extension.
-
-===== Timeline
-
-image:871-History-Timeline.png[8.7.1 History Timeline]
-
-image:880-History-Timeline.png[8.8.0-beta History Timeline]
-
-Following the other changes, the timeline is also more compact showing more information on the record without scrolling.
-
-==== icon:cog[] Performance Upgrade
-
+* Disabled zone js, for faster front-end performance.
 * Added a delay to non-critical backend calls such as; recently viewed, metadata, and notifications.
 
-Below are a comparison of 8.7.1 and 8.8.0-beta
 
-image:871BulkPerformance.gif[8.7.1 Bulk Performance]
+==== icon:cog[] Record Mappers
 
-image:880BulkPerformance.gif[8.8.0-beta Bulk Performance]
+Record Mappers have been added to allow for more flexibility when extending SuiteCRM. They allow to add code for mapping a record to internal or to external format.
 
-image:871ListViewPerf.gif[8.7.1 Record Switching]
+See the link:../../../../8.x/developer/extensions/backend/record-mappers/[Record Mappers] section for more information.
 
-image:880ListViewPerf.gif[8.8.0-beta Record Switching]
+==== icon:cog[] Save Handlers
 
+Save handlers are classes that allow to run code before or after saving a record. They similar to the legacy before_save and after_save logic hooks on legacy.
+
+See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Handlers] section for more information.
 
 === icon:bug[] Known issues
 
