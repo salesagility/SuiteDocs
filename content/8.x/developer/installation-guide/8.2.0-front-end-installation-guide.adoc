@@ -1,6 +1,6 @@
 ---
-title: "Front-end Developer Install Guide"
-weight: 10
+title: "Front-end Developer Install Guide - 8.2.0+ (old)"
+weight: 40
 ---
 
 :imagesdir: /images/en/8.x/developer/extensions/front-end/fe-extensions-setup
@@ -66,22 +66,3 @@ yarn run build:common
 yarn run build:core
 yarn run build:shell
 ----
-
-==== 3.1 Build core 8.8+
-
-To build the core in 8.8+ you just need to run:
-
-[source,bash]
-----
-yarn merge-angular-json
-yarn build
-----
-
-You can run `core` and `shell` independently by running:
-
-[source,bash]
-----
-yarn build:core
-yarn build:shell
-----
-
