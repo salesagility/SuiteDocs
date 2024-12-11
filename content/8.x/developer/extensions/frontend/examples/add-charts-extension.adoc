@@ -27,7 +27,7 @@ This guide assumes that you have already setup the front extension on your local
 {{% /notice %}}
 
 
-For information on how to setup the frontend extension framework see the Setup guide link:../../fe-extensions-getting-started[here]
+For information on how to setup the frontend extension framework see the Setup guide link:../older/8x-fe-extensions-getting-started[here]
 
 == Example of Chart Metadata Configuration
 
@@ -107,7 +107,7 @@ As mentioned in the previous section it is possible to add new chart types to be
 This section explains how to add a new chart type.
 
 {{% notice info %}}
-Please ensure you have set up your front-end installation correctly by following the guide link:../../fe-extensions-getting-started[here].
+Please ensure you have set up your front-end installation correctly by following the guide link:../../older/fe-extensions-getting-started[here].
 {{% /notice %}}
 
 {{% notice info %}}

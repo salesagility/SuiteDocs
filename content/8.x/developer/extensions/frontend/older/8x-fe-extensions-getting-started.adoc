@@ -20,7 +20,7 @@ The following guide provides an explanation on how to get started with frontend 
 
 This base extension should have everything you need to get started and also provides a base structure for your frontend customizations.
 
-If you do not want to use the defaultExt extension you can create one from scratch by copying and renaming the defaultExt extension. To find out what you need to replace please look into the link:../fe-extensions-setup/[Frontend Extension Setup] guide, which explains how to setup a frontend extension from scratch
+If you do not want to use the defaultExt extension you can create one from scratch by copying and renaming the defaultExt extension. To find out what you need to replace please look into the link:../older/8x-fe-extensions-setup/[Frontend Extension Setup] guide, which explains how to setup a frontend extension from scratch
 
 {{% notice note %}}
 The following steps assume that you have a SuiteCRM-8.4.0 or greater installed and have an intact defaultExt extension under `extensions/defaultExt`

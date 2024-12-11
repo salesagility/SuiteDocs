@@ -1,0 +1,142 @@
+---
+title: "Setting Up a Front-End Extension Module 8.8+"
+weight: 20
+---
+
+:imagesdir: /images/en/8.x/developer/extensions/front-end/fe-extensions-setup
+
+{{% notice info %}}
+The following documentation is for SuiteCRM Version 8.8+; to see documentation for before Version 8.8, click link:./older/8x-fe-extensions-setup[here].
+{{% /notice %}}
+
+== Extension framework setup
+
+The following guide provides a ste-by-step explanation on how to set up a front-end extension module.
+Which will allow you to add new front-end customizations or to override existing features.
+
+== 1. Copy the original existing defaultExt
+
+The first thing is to copy the existing `defaultExt` extension and rename it.
+
+=== 1.1 Update the extension with the new name
+
+After copying `defaultExt` over you must update all instances of `defaultExt` to the new name of the extensions for example: `myExt`.
+
+The files that need updated are:
+
+* webpack.config.js
+* angular.json
+* extension.php
+* index.html
+
+==== app/webpack.config.js
+
+In this file there should only be 3 places that need updated:
+
+* uniqueName
+* filename
+* exposes
+** For extensions to work they need to have a main extension angular module.
+** This works like an `entrypoint`. It will be loaded by the `main`/`shell` app.
+** From there you can load all your custom code.
+** This is the module that we add within `exposes` on the `webpack.config.js`
+
+==== app/angular.json
+
+There are many places within this file that need updated.
+
+One to note is outputPath. When building in prod mode, this will need to be changed to `/extensions/<your-extension-name>/Resources/public`.
+
+==== config/extension.php
+
+* On this page you may wish to change/ remove some of the values. The 3 required fields are:
+** remoteEntry
+** remoteName
+** enabled
+* You should set `enabled` to false for now.
+
+==== app/src/index.html
+
+Only one place needs updated here. The href on the icon link.
+
+== 2. Updating the Angular code in our new Extensions
+
+Next we will update our `extension.module.ts` so that we can see when our extension is up and running
+(this can be removed once set up).
+
+[source,javascript,typescript]
+----
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+
+@NgModule({
+    declarations: [],
+    imports: [
+        CommonModule,
+    ],
+})
+export class ExtensionModule {
+    constructor() {
+        console.log('Dynamic extension myExt!');
+    }
+
+    init(): void {
+    }
+}
+----
+
+== 3. Rebuild the front-ent
+
+To rebuild the front end we must first run:
+
+`yarn merge-angular-json`
+
+This will merge the `angular.json` from your extension into the core generated `angular.json`.
+
+Next run:
+
+`yarn build`
+
+This will build both `core` and `shell` consecutively. To run them individually you can run:
+
+[source,bash]
+----
+yarn build:core
+yarn build:shell
+----
+
+== 4. Building your extension
+
+To build your extension simply run:
+
+`yarn build:extension <extension name>` e.g. `yarn build:extension myExt`
+
+To build in development run `yarn build-dev:extension <extension name>`
+
+{{% notice note %}}
+If running in production (without `-dev`) be sure to also run `./bin/console cache:clear`.
+{{% /notice %}}
+
+== 5. Enable your extension
+
+We have already setup and build our extension making it ready to use.
+
+It can be enabled within the `config/extension.php`:
+
+[source, php]
+----
+$extensions['<extension-name>'] = [
+'remoteEntry' => '../extensions/defaultExt/remoteEntry.js',
+'remoteName' => '<extension-name>',
+'enabled' => true,
+----
+
+== 6. Refresh your instance and test
+
+Now that we have configured and enabled our extension it should be loaded during the angular the app init.
+
+Please open you browser console before refreshing. After the page loads check your console, you should see the message we left on the `console.log` : `'Dynamic extension myExt!'`
+
+== 7. Making changes to your extension
+
+After making changes to your extension, to rebuild and see those changes just rebuild your link:./88x-fe-extensions-setup#_4_building_your_extension[extension].

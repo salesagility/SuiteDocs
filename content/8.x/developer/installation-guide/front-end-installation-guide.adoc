@@ -66,3 +66,22 @@ yarn run build:common
 yarn run build:core
 yarn run build:shell
 ----
+
+==== 3.1 Build core 8.8+
+
+To build the core in 8.8+ you just need to run:
+
+[source,bash]
+----
+yarn merge-angular-json
+yarn build
+----
+
+You can run `core` and `shell` independently by running:
+
+[source,bash]
+----
+yarn build:core
+yarn build:shell
+----
+
