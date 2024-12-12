@@ -20,32 +20,54 @@ In SuiteCRM 8.8 angular version has been updated to v18. This brought some chang
 
 == 2. Structure Changes
 
-* `core/app/common` is now inside `core/app/src/lib/common/`.
-* `zone.js` has been disabled (using provideExperimentalZonelessChangeDetection)
-* `angular.json` is now a generated file and is no longer under version control.
-** Using the `yarn merge-angular-json` it is generated from `base-angular.json` and any extensions' `angular.json`.
-** The `base-angular.json` is now under `core/angular/base-angular.json`.
+**Frontend common lib has been moved into core**
 
+* `core/app/common` is now inside `core/app/core/src/lib/common/`.
+
+**The angular.json file is now generated**
+
+* `angular.json` is now a generated file and is no longer under version control.
+* The angular.json file is not part of the base package, it should not be committed.
+* Using the `yarn merge-angular-json` it is generated from `base-angular.json` and any extensions' `angular.json`.
+* The `base-angular.json` is now under `core/angular/base-angular.json`.
+* Each extension should have its' own `angular.json` file.
+
+*Zone.js has been disabled*
+
+* `zone.js` has been disabled (using provideExperimentalZonelessChangeDetection)
+
+*Extension's webpack.config.js updated*
+
+* ⚠️ *Important*: If using extensions please ensure to update extension configuration.
+
+* Update `webpack.config.js`. (You can use the `webpack.config.js` on `defaultExt` as reference).
 
 == 3. Command Changes
 
+*Old yarn build:common removed*
+
 * `yarn run build:common` is no longer needed.
+
+*New yarn build added*
+
 * `yarn build` can be run to build in production.
 ** `yarn build-dev` can be run to build in development.
-* New command `yarn merge-angular-json` added. to merge all angular jsons from any extensions and core and merge them into the generated `angular.json`.
+
+*New yarn merge-angular-json added*
+
+* New command `yarn merge-angular-json` added to merge all angular jsons from any extensions and core and merge them into the generated `angular.json`.
+
+
+*New build:extension added*
+
 * `yarn build:extension <extensions name>` to build an extension. e.g `yarn build:extension defaultExt`.
 ** Replaces `yarn build:<extension>`, e.g. `yarn build:defaultExt`.
-
-== 4. Frontend Extension Configuration yarn run build:common changes
-
-{{% notice warning %}}
-If using extensions please ensure to update extension configuration.
-{{% /notice %}}
-
-* Update `webpack.config.js`. (You can use the `webpack.config.js` on `defaultExt` as reference).
-* To build an extensions you must now run `yarn build:extension <extensions name>` e.g `yarn build:extension defaultExt`
 ** `yarn build-dev:extension <extensions name>` to build in development
-* `yarn merge-angular-json` will merge all angular jsons from any extensions and core and merge them into the generated `angular.json`
-* Each extension should have its' own `angular.json` file.
-** This should not be commited
-* Removed `angular.json`. -> *No other structure changes for extensions*.
+
+
+
+
+
+
+
+

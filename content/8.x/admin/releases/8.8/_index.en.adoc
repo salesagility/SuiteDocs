@@ -33,9 +33,28 @@ See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8
 
 ==== icon:server[] System Requirement Changes - For development
 
+**Minimum node version - 20.11.1**
+
+The minimum yarn version is now 20.11.1.
+
 **Minimum yarn version - 4.5.0**
 
 The minimum yarn version is now 4.5.0.
+
+==== icon:code[] Backward Incompatible Changes
+
+* **Frontend common lib has been moved into core**
+** The common lib has been moved from `core/app/common` to `core/app/core/src/lib/common/`
+** See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+
+
+* **The angular.json file is now generated**
+** The `angular.json` file is now a generated file and is no longer under version control.
+** See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+
+
+* **The configuration for subpanel buttons widgets/stats is now under subpanelWidget**
+** The configuration key for subpanel button widgets has changed from `insightWidget` to `subpanelWidget`.
 
 ==== icon:book[] Documentation
 
@@ -69,6 +88,7 @@ image:new-record-view.png[8.8.0-beta Record View]
 
 * Record View
 ** The fields within the record view now take up minimal space, allowing you to see the full record.
+** The required field indicator has been moved to the left of the field label.
 
 * Subpanels
 ** Subpanels are now more compact and show the number of records a subpanel has.
@@ -101,6 +121,10 @@ See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Ha
 * 2FA not fully functional with LDAP and SAML setup.
 * History subpanel can show incorrect number of records.
 * History subpanel filter `My Items` styling is incorrect.
+* Top widget styling is not complete
+* User preferences page styling has issues for non-admin users.
+* If range search is not enabled, the filtering on datetime fields does not work.
+* Table sort direction icon does not change when sorting.
 
 === icon:heart[] Community
 
