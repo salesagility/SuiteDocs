@@ -7,7 +7,7 @@ theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 enableGitInfo = true
-timeout = 37000
+timeout = 47000
 ignoreErrors = ["error-remote-getjson"]
 
 [params]
