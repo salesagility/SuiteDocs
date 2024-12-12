@@ -10,7 +10,7 @@ Record mappers are classes that allow to add code for mapping a record to intern
 
 Mappers are have been added to allow for more flexibility when extending SuiteCRM.
 
-There split into levels, type and modes, there are:
+They are split into levels, type and modes, there are:
 
 Levels:
 
@@ -39,14 +39,14 @@ Mappers on the Api level is executed immediately *before* or *after* receiving o
 
 There are multiple scenarios where you can use these:
 - When you want to modify the data before sending/receiving it to the API.
-- When you want to inject custom fields / date to the response that goes to the frontend
+- When you want to inject custom fields / date to the response that goes to the frontend.
 
 === Entity Level
 
 Entity leve is called within Entity level operations, e.g.:
 
-* retrieving a record
-* saving a record
+* Retrieving a record.
+* Saving a record.
 * etc...
 
 Entity Mappers will run regardless if they are called from the API or elsewhere.
@@ -65,7 +65,7 @@ There are 3 types of mapper for Entity and Api:
 Field Mappers are only executed for the specified module and field. This is useful when you want to modify the data of a specific field (e.g. `phone_mobile` on Accounts).
 
 === Field Type Mapper
-Field type mappers are executed for all the all fields of a given type and for the specified module. This is useful when you want to add a generic transformation to all fields of a given type (e.g. `datetime` on Accounts).
+Field type mappers are executed for all the fields of a given type and for the specified module. This is useful when you want to add a generic transformation to all fields of a given type (e.g. `datetime` on Accounts).
 
 === Record Mapper
 
@@ -73,7 +73,7 @@ Record Mappers is executed at the "record scope", it is possible to change any n
 
 == Mapper Modes
 
-Mapper modes allow you to specify when the mapper should run, one or more of the following modes can be set: retrieve, list, save.
+Mapper modes allow you to specify when the mapper should run. One or more of the following modes can be set: retrieve, list, save.
 
 === Retrieve
 
@@ -98,7 +98,7 @@ When adding a new Record Mapper you will have the `getOrder` function to set the
 
 === Set and Replace Default Type
 
-To set a default mapper for any of the mapper types, when adding the mapper return the key `default`.
+To set a default mapper for any of the mapper types, when adding the mapper, return the key `default`.
 
 When adding new mappers, if there is already a `default` set for that mapper type (field, field type and record),
 and you wish to run a new mapper instead you will have to add:
@@ -109,4 +109,4 @@ and you wish to run a new mapper instead you will have to add:
         return true;
     }
 
-This will run your new mapper and *not* run the default mapper.
+This will run your new mapper and *not* the default mapper.
