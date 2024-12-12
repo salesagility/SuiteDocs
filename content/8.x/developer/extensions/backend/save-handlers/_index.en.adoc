@@ -6,11 +6,11 @@ weight: 30
 
 == Intro
 
-Save handlers are classes that allow to run code before or after saving a record. They similar to the legacy before_save and after_save logic hooks on legacy.
+Save handlers are classes that allow to run code before or after saving a record. They similar to the legacy before_save and after_save logic hooks.
 
-Mappers are have been added to allow for more flexibility when extending SuiteCRM.
+Mappers have been added to allow for more flexibility when extending SuiteCRM.
 
-There split into type and modes, there are:
+They are split into type and modes, there are:
 
 Types:
 - Field
@@ -24,14 +24,14 @@ Modes:
 
 == Mapper Types
 
-There are 3 types of Save handlers:
+There are 3 mapper types for Save handlers:
 
 === Field Mapper
 
 Field Save Handlers are only executed for the specified module and field. This is useful when you want to modify the data of a specific field (e.g. `phone_mobile` on Accounts).
 
 === Field Type Mapper
-Field Save Handlers are executed for all the all fields of a given type and for the specified module. This is useful when you want to add a generic transformation to all fields of a given type (e.g. `datetime` on Accounts).
+Field Save Handlers are executed for all the fields of a given type and for the specified module. This is useful when you want to add a generic transformation to all fields of a given type (e.g. `datetime` on Accounts).
 
 === Record Save Handler
 
@@ -39,7 +39,7 @@ Record Save Handlers is executed at the "record scope", it is possible to change
 
 == Save Handlers Modes
 
-Save handlers modes allow you to specify when the mapper should run, one or more of the following modes can be set: before-save, after-save.
+Save handlers modes allow you to specify when the mapper should run. One or more of the following modes can be set: before-save, after-save.
 
 === Before-save
 
