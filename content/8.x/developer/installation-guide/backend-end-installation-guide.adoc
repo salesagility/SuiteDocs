@@ -81,7 +81,7 @@ The install process will then create the needed tables.
 
 Before you continue with this guide you need to first setup the frontend part of the app.
 
-Please go through the link:../front-end-installation-guide/[Front-end Developer install guide]
+Please go through the link:../8.8.0-front-end-installation-guide[Front-end Developer install guide]
 
 == 4. Install dependencies
 

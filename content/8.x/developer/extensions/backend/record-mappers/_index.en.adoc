@@ -104,9 +104,11 @@ When adding new mappers, if there is already a `default` set for that mapper typ
 and you wish to run a new mapper instead you will have to add:
 
 [source, php]
+----
     public function replaceDefaultTypeMapper(): bool
     {
         return true;
     }
+----
 
 This will run your new mapper and *not* the default mapper.
