@@ -6,7 +6,7 @@ weight: 10
 :imagesdir: /images/en/8.x/developer/extensions/front-end/fe-extensions-setup
 
 {{% notice info %}}
-The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../../../developer/introduction[here].
+The following documentation is for SuiteCRM Version 8+; to see documentation for Version 7, click link:../../../../../../developer/introduction[here].
 {{% /notice %}}
 
 {{% notice note %}}
@@ -20,7 +20,7 @@ The following guide provides an explanation on how to get started with frontend 
 
 This base extension should have everything you need to get started and also provides a base structure for your frontend customizations.
 
-If you do not want to use the defaultExt extension you can create one from scratch by copying and renaming the defaultExt extension. To find out what you need to replace please look into the link:../fe-extensions-setup/[Frontend Extension Setup] guide, which explains how to setup a frontend extension from scratch
+If you do not want to use the defaultExt extension you can create one from scratch by copying and renaming the defaultExt extension. To find out what you need to replace please look into the link:../8x-fe-extensions-setup/[Frontend Extension Setup] guide, which explains how to setup a frontend extension from scratch
 
 {{% notice note %}}
 The following steps assume that you have a SuiteCRM-8.4.0 or greater installed and have an intact defaultExt extension under `extensions/defaultExt`
@@ -39,7 +39,7 @@ The only difference between the base package and the dev package, is that the de
 
 Including the `dist` folder should remove the need to rebuild the core frontend code.
 
-Please have a look at the  link:../../../installation-guide/front-end-installation-guide[Developer Install Guide] you want to rebuild the full core frontend.
+Please have a look at the  link:../../../../installation-guide/8.2.0-front-end-installation-guide[Developer Install Guide] you want to rebuild the full core frontend.
 
 == 2. Setup
 
@@ -55,7 +55,7 @@ Before you can start building extensions you first need to install the following
 * yarn
 * ng cli
 
-Go to the link:../../../../admin/compatibility-matrix/[Compatibility Matrix] page and check the specific versions under the `Additional requirements for Development` section for the SuiteCRM version you are using.
+Go to the link:../../../../../admin/compatibility-matrix/[Compatibility Matrix] page and check the specific versions under the `Additional requirements for Development` section for the SuiteCRM version you are using.
 
 After installing everything, open a terminal on the SuiteCRM folder and run:
 
@@ -169,7 +169,7 @@ yarn run build-dev:defaultExt --watch
 
 The command will stay on "watch" for changes to the files in the extension. It will automatically re-rebuild after code changes.
 
-See link:../../extension-structure#_4_2_1_development_build[DefaultExt package dev build setup] for more info on how it works.
+See link:../../../extension-structure#_4_2_1_development_build[DefaultExt package dev build setup] for more info on how it works.
 
 === 3.2 Production build
 
@@ -181,4 +181,4 @@ yarn run build:defaultExt
 
 This command will build the defaultExt extension in a production mode.
 
-See link:../../extension-structure#_4_2_2_production_build[DefaultExt package production build setup] for more info on how it works.
+See link:../../../extension-structure#_4_2_2_production_build[DefaultExt package production build setup] for more info on how it works.

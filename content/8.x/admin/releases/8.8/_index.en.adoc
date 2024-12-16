@@ -1,0 +1,141 @@
+---
+title: "8.8 Releases"
+weight: 9800
+aliases:
+  - /8.x/admin/releases/8.8/
+---
+
+:toc:
+:toc-title:
+:toclevels: 1
+:icons: font
+:imagesdir: /images/en/8.x/admin/release
+
+== 8.8.0-beta
+
+_Released 12 December 2024_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.8.0-beta[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
+* link:../../upgrading[SuiteCRM 8 Upgrade Guide]
+
+===  icon:check[] Release Notes
+
+==== icon:level-up-alt[] Platform upgrade
+
+SuiteCRM is now using angular 18. This brings some system requirement updates and breaking changes.
+
+⚠️ *Important:* SuiteCRM is still using Webpack and Module Federation. We will not be using esbuild and Native Federation for the time being.
+
+See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+
+==== icon:server[] System Requirement Changes - For development
+
+**Minimum node version - 20.11.1**
+
+The minimum yarn version is now 20.11.1.
+
+**Minimum yarn version - 4.5.0**
+
+The minimum yarn version is now 4.5.0.
+
+==== icon:code[] Backward Incompatible Changes
+
+* **Frontend common lib has been moved into core**
+** The common lib has been moved from `core/app/common` to `core/app/core/src/lib/common/`
+** See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+
+
+* **The angular.json file is now generated**
+** The `angular.json` file is now a generated file and is no longer under version control.
+** See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+
+
+* **The configuration for subpanel buttons widgets/stats is now under subpanelWidget**
+** The configuration key for subpanel button widgets has changed from `insightWidget` to `subpanelWidget`.
+
+==== icon:book[] Documentation
+
+We have added new documentation to set up Two-factor Authentication using TOTP on SuiteCRM 8 see the link:../../../../8.x/features/two-factor/two-factor[Two-factor Authentication] section for more information.
+
+==== icon:star[] Enhancements
+
+===== icon:code[] PHP 8.3 Support
+
+This release brings a number of adjustments and updates in order to support PHP 8.3.
+
+This includes:
+
+* Removal of deprecated functions/ features.
+* Fixed code to eliminate warnings/ errors from logs.
+* Update missing labels
+
+==== icon:star[] Filtering on Favorites
+
+You can now filter by `Favorites` and `My Items`.
+
+===== icon:key[] Two-Factor Authentication
+
+We have added Two-factor authentication on SuiteCRM 8 using TOTP. See more information link:../../../../8.x/features/two-factor/two-factor[here.]
+
+image:enable-2fa-example.png[8.8.0-beta Enable Two-Factor Authentication]
+
+==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
+
+image:new-record-view.png[8.8.0-beta Record View]
+
+* Record View
+** The fields within the record view now take up minimal space, allowing you to see the full record.
+** The required field indicator has been moved to the left of the field label.
+
+* Subpanels
+** Subpanels are now more compact and show the number of records a subpanel has.
+** The number of subpanels that show when collapsed is configurable via the `subpanel_buttons_panel_limits.yaml`.
+** Although it is recommended to do these changes within `defaultExt` or alternatively your own extension.
+
+* Timeline
+** Following the other changes, the timeline is also more compact showing more information on the record without scrolling.
+
+==== icon:cog[] Performance Updates
+
+* Disabled zone js, for faster front-end performance.
+* Added a delay to non-critical backend calls such as; recently viewed, metadata, and notifications.
+
+
+==== icon:cog[] Record Mappers
+
+Record Mappers have been added to allow for more flexibility when extending SuiteCRM. They allow to add code for mapping a record to internal or to external format.
+
+See the link:../../../../8.x/developer/extensions/backend/record-mappers/[Record Mappers] section for more information.
+
+==== icon:cog[] Save Handlers
+
+Save handlers are classes that allow to run code before or after saving a record. They similar to the legacy before_save and after_save logic hooks on legacy.
+
+See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Handlers] section for more information.
+
+=== icon:bug[] Known issues
+
+* 2FA not fully functional with LDAP and SAML setup.
+* History subpanel can show incorrect number of records.
+* History subpanel filter `My Items` styling is incorrect.
+* Top widget styling is not complete
+* User preferences page styling has issues for non-admin users.
+* If range search is not enabled, the filtering on datetime fields does not work.
+* Table sort direction icon does not change when sorting.
+
+=== icon:heart[] Community
+
+We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
+
+If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
+
+Please link:https://suitecrm.com/suitecrm-pre-release/[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our Security Process and send them directly to us via email security@suitecrm.com
+
+'''
