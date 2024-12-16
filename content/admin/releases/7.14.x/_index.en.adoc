@@ -9,6 +9,60 @@ weight: 9850
 :icons: font
 :imagesdir: /images/en/admin/release
 
+== 7.14.6
+
+_Released 05 November 2024_
+
+=== icon:box-open[] Assets
+
+* https://github.com/salesagility/SuiteCRM/releases/tag/v7.14.6[GitHub - Download]
+* link:../../installation-guide/downloading-installing[SuiteCRM 7 Install Guide]
+* link:../../installation-guide/upgrading[SuiteCRM 7 Upgrade Guide]
+
+===  icon:check[] Release Notes
+
+==== icon:lock[] Security
+
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-50335[CVE-2024-50335: XSS Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-8rw6-g96j-3w7m[GitHub Advisory] | Reporter: shellkraft
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-49773[CVE-2024-49773: SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-5hr4-r43c-6qf7[GitHub Advisory] | Reporter: dzentota
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-50332[CVE-2024-50332: SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-53xh-mjmq-j35p[GitHub Advisory] | Reporter: amame04
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-50333[CVE-2024-50333: RCE Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-qrv6-3q86-qv89[GitHub Advisory] | Reporter: dzentota
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-49772[CVE-2024-49772: SQL Injection Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-4xj8-hr85-hm3m[GitHub Advisory] | Reporter: LongHair00
+* CVE: https://nvd.nist.gov/vuln/detail/CVE-2024-49774[CVE-2024-49774: RCE Vulnerability] | https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-9v56-vhp4-x227[GitHub Advisory] | Reporter: dzentota
+
+==== icon:bug[] Bug Fixes
+
+* PR: https://github.com/salesagility/SuiteCRM/pull/10525[10525] - Fix https://github.com/salesagility/SuiteCRM/issues/5287[#5287] - Change secret field is too short
+* PR: https://github.com/salesagility/SuiteCRM/pull/10520[10520] - Fix #10520 - Discount Calculation incorrect when changing Currency
+* PR: https://github.com/salesagility/SuiteCRM/pull/10451[10451] - Fix https://github.com/salesagility/SuiteCRM/issues/10450[#10450] - Add check for empty value before searching array
+* PR: https://github.com/salesagility/SuiteCRM/pull/10523[10523] - Fix https://github.com/salesagility/SuiteCRM/issues/10503[#10503] - Item label in dropdown list is not displayed if it contains '<' character
+* PR: https://github.com/salesagility/SuiteCRM/pull/10101[10101] - Fix https://github.com/salesagility/SuiteCRM/issues/10099[#10099] - Workflow action create record on CRON set incorrect date field values from related entity
+* PR: https://github.com/salesagility/SuiteCRM/pull/10517[10517] - Fix https://github.com/salesagility/SuiteCRM-Core/issues/507[#507] - Calculated Fields - related field won't show up as parameter
+* PR: https://github.com/salesagility/SuiteCRM/pull/10225[10225] - Fix https://github.com/salesagility/SuiteCRM/pull/9036[#9036] - change log level according it message
+* PR: https://github.com/salesagility/SuiteCRM/pull/10288[10288] - Fix https://github.com/salesagility/SuiteCRM/issues/9737[#9737] - issue with campaigns displaying a blank email template
+* PR: https://github.com/salesagility/SuiteCRM/pull/10516[10516] - Fix https://github.com/salesagility/SuiteCRM/issues/10445[#10445] - Calendar: Calls still show even using Settings: 'Show Calls' = NO
+* PR: https://github.com/salesagility/SuiteCRM/pull/10489[10489] - Fix https://github.com/salesagility/SuiteCRM/issues/10488[#10488] - Expand the number of filters in message queue views
+* PR: https://github.com/salesagility/SuiteCRM/pull/10455[10455] - Add scrollbars for Toolbox and Layout | Studio
+* PR: https://github.com/salesagility/SuiteCRM/pull/10495[10495] - Fix https://github.com/salesagility/SuiteCRM/issues/9261[#9261] - Use decimal symbol configured in system and user
+* PR: https://github.com/salesagility/SuiteCRM/pull/10518[10518] - Fix https://github.com/salesagility/SuiteCRM/issues/8332[#8332] - Recipient Type [Language]
+* PR: https://github.com/salesagility/SuiteCRM/pull/10557[10557] - Fix https://github.com/salesagility/SuiteCRM/issues/10421[#10421] - Studio | Layout Editor CSS broken
+
+=== icon:heart[] Community
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors likhobory SinergiaCRM re8260 bch80 mubat timo-ecm2 DJUserkent kale1d0code %}}
+
+_Special thanks to everyone who reported the security issues addressed in this release!_
+
+{{% ghcontributors shellkraft LongHair00 amame04 dzentota %}}
+
+Please https://suitecrm.com/download[visit the official website] to find the appropriate upgrade package.
+
+To report any security issues please follow our link:../../../community/security-policy[Security Policy] and send them directly to us via email security@suitecrm.com
+
+'''
+
 == 7.14.5
 
 _Released 14 August 2024_
