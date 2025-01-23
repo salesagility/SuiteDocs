@@ -21,6 +21,19 @@ image:Qr-2FA.png[2FA Qr Code]
 
 After enabling 2FA a Qr Code will show. Scan that on your authenticator app. Enter the code the app shows.
 
+=== Unable to scan the QR Code?
+
+If you are unable to scan the QR code then you can get the secret to manually input it.
+
+Select `Unable to scan the QR Code?`
+
+image:QR-Code-Secret.png[QR Code Secret]
+
+If you need to add more than the code when setting up manually check out the
+link:two-factor.en.adoc/#_extra_configuration[Extra Config] section.
+
+== After Enabling
+
 image:Enabled-2FA.png[Enabled 2FA]
 
 After enabling a set of Recovery/ Backup codes will show.
@@ -58,3 +71,13 @@ image:New-Disable-2FA.png[Disable via Profile]
 If 2FA is enabled for your user, after login there will be a popup to enter your authentication code.
 
 image:Login-2FA.png[2FA Login]
+
+== Extra Configuration
+
+When setting up Two-Factor manually on some applications you may be asked to provide more information:
+
+* TOTP
+* Time based
+* Interval: 30 secs
+* Digits: 6
+* Sha: 1

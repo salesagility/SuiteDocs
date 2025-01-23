@@ -80,7 +80,7 @@ You can now filter by `Favorites` and `My Items`.
 
 We have added Two-factor authentication on SuiteCRM 8 using TOTP. See more information link:../../../../8.x/features/two-factor/two-factor[here.]
 
-image:enable-2fa-example.png[8.8.0-beta Enable Two-Factor Authentication]
+image:Qr-2FA.png[8.8.0-beta Enable Two-Factor Authentication]
 
 ==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
 
