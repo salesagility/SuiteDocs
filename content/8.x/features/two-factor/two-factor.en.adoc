@@ -30,7 +30,7 @@ Select `Unable to scan the QR Code?`
 image:QR-Code-Secret.png[QR Code Secret]
 
 If you need to add more than the code when setting up manually check out the
-link:two-factor.en.adoc/#_extra_configuration[Extra Config] section.
+link:./#_extra_configuration[Extra Config] section.
 
 == After Enabling
 
@@ -62,7 +62,7 @@ image:Disable-Two-Factor.gif[Disable 2FA]
 
 === Other ways to disable
 
-Admins can also disable the 2FA for users via their profile. If the user has 2FA enabled a new "Disable Users 2FA"
+Admins can also disable the 2FA for users via their profile. If the user has 2FA enabled a new "Disable 2FA"
 
 image:New-Disable-2FA.png[Disable via Profile]
 

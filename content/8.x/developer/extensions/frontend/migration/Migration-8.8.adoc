@@ -31,6 +31,7 @@ In SuiteCRM 8.8 angular version has been updated to v18. This brought some chang
 * Using the `yarn merge-angular-json` it is generated from `base-angular.json` and any extensions' `angular.json`.
 * The `base-angular.json` is now under `core/angular/base-angular.json`.
 * Each extension should have its' own `angular.json` file.
+** You can use the `angular.json` on defaultExt as a reference.
 
 *Zone.js has been disabled*
 

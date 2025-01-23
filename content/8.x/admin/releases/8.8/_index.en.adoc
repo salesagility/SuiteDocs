@@ -11,17 +11,31 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
-== 8.8.0-beta
+== 8.8.0
 
-_Released 12 December 2024_
+_Released 30 January 2025_
 
 === icon:box-open[] Assets
 
-* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.8.0-beta[GitHub - Download]
+* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.8.0[GitHub - Download]
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
 
 ===  icon:check[] Release Notes
+
+==== icon:file[] Changes on Upgrade Command/ Process
+
+⚠️ *Important:*  These changes will only apply when upgrading from an installed 8.8+ version to the next version
+
+* Starting with SuiteCRM 8.8.0 onwards, the upgrade process will now show warning message with the non-core files
+that will be deleted on upgrade.
+* All language files within core directories are now re-added at the end of the upgrade process.
+
+* Changes to the upgrade process configuration. The following directories were added to the toKeep section:
+** public/legacy/upload
+** public/legacy/vendor
+** .git
+** .gitignore
 
 ==== icon:level-up-alt[] Platform upgrade
 
@@ -35,7 +49,7 @@ See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8
 
 **Minimum node version - 20.11.1**
 
-The minimum yarn version is now 20.11.1.
+The minimum node version is now 20.11.1.
 
 **Minimum yarn version - 4.5.0**
 
@@ -80,29 +94,45 @@ You can now filter by `Favorites` and `My Items`.
 
 We have added Two-factor authentication on SuiteCRM 8 using TOTP. See more information link:../../../../8.x/features/two-factor/two-factor[here.]
 
-image:Qr-2FA.png[8.8.0-beta Enable Two-Factor Authentication]
+image:Qr-2FA.png[8.8.0 Enable Two-Factor Authentication]
+
+⚠️ *Important:* **For upgrades from 8.8-beta to 8.8.0 - Two Factor Totp Secret and Backup Codes are now encoded in the db.
+This can cause issues when using 2FA configured in the beta. 2FA might need disabled and re-enabled.**
 
 ==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
 
-image:new-record-view.png[8.8.0-beta Record View]
+image:new-record-view.png[8.8.0 Record View]
 
 * Record View
 ** The fields within the record view now take up minimal space, allowing you to see the full record.
 ** The required field indicator has been moved to the left of the field label.
 
 * Subpanels
-** Subpanels are now more compact and show the number of records a subpanel has.
+** Subpanels buttons are now more compact and show the number of records a subpanel has.
 ** The number of subpanels that show when collapsed is configurable via the `subpanel_buttons_panel_limits.yaml`.
 ** Although it is recommended to do these changes within `defaultExt` or alternatively your own extension.
 
 * Timeline
 ** Following the other changes, the timeline is also more compact showing more information on the record without scrolling.
 
+* Top Widget
+** The Top Widget has been moved to the insights panel, along with some styling adjustments.
+
+===== Demo Data
+
+SuiteCRM Demo Data has been updated to generate more date and optimized to run faster.
+
+==== icon:cog[] Log file Change
+
+* The log_dir has now been updated to log to `<root>/logs/legacy` instead of `<root>/public/legacy`.
+* For upgrade instances:
+** The `log_dir` on config.php will be updated to a new path, only if it was using the default path.
+** Old log files will not be moved
+
 ==== icon:cog[] Performance Updates
 
 * Disabled zone js, for faster front-end performance.
 * Added a delay to non-critical backend calls such as; recently viewed, metadata, and notifications.
-
 
 ==== icon:cog[] Record Mappers
 
@@ -116,19 +146,41 @@ Save handlers are classes that allow to run code before or after saving a record
 
 See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Handlers] section for more information.
 
-=== icon:bug[] Known issues
+==== icon:cog[] Field Logic Update
 
-* 2FA not fully functional with LDAP and SAML setup.
-* History subpanel can show incorrect number of records.
-* History subpanel filter `My Items` styling is incorrect.
-* Top widget styling is not complete
-* User preferences page styling has issues for non-admin users.
-* If range search is not enabled, the filtering on datetime fields does not work.
-* Table sort direction icon does not change when sorting.
+There are now 3 different types of `triggeringStatus`:
+
+* onDependencyChange
+** When the dependant field changes.
+* onAnyLogic
+** When anything happens (i.e. value update, rendering fields, saving etc...).
+* onFieldInitialize
+** When the Field is rendered (i.e. loading the recordview/ switching tabs on recordview).
+
+==== icon:bug[] Bug Fixes
+
+* Fixed: Subpanel not showing correctly on first load: https://github.com/salesagility/SuiteCRM-Core/issues/511[#511]
+* Fixed: Error field "amount" - SuiteCRM v. 8.5.1: https://github.com/salesagility/SuiteCRM-Core/issues/478[#478]
+* Fixed: Reorder modules from User profile does not change the order in navigation bar: https://github.com/salesagility/SuiteCRM-Core/issues/585[#585]
+* Fixed: Update scripts deletes files with no warning: https://github.com/salesagility/SuiteCRM-Core/issues/475[#475]
+* Fixed: Special character in database password creates issues: https://github.com/salesagility/SuiteCRM-Core/issues/553[#533]
+* Fixed: $addr creating unnecessary logs: https://github.com/salesagility/SuiteCRM-Core/issues/577[#577]
+* Fixed: Error on Email Detail View: https://github.com/salesagility/SuiteCRM-Core/issues/537[#537]
+* Fixed: Accented character (diacritic) displayed incorrectly: https://github.com/salesagility/SuiteCRM-Core/issues/542[#542]
+* Fixed: Accented letters displayed incorrectly: https://github.com/salesagility/SuiteCRM-Core/issues/583[#583]
+* Fixed: TextArea areas show data in html encoded: https://github.com/salesagility/SuiteCRM-Core/issues/589[#589]
+* Fixed: Views Incorrectly Encode UTF Characters as HTML Entities: https://github.com/salesagility/SuiteCRM-Core/issues/274[#274]
+* Fixed: Bug with the number field in case filters: https://github.com/salesagility/SuiteCRM-Core/issues/572[#572]
+* Fixed: Checkbox taking a while to respond with large data set: https://github.com/salesagility/SuiteCRM-Core/issues/597[#597]
+* Fixed: Update New Accounts per Month Chart: https://github.com/salesagility/SuiteCRM-Core/issues/75[#75]
 
 === icon:heart[] Community
 
 We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
+
+_Special thanks to the following members for their contributions and participation in this release!_
+
+{{% ghcontributors julibo likhobory GoryMoon cvillarongace  tdelsoglio abuzarfaris pgorod jschoder-ryl AlexMyddleware LoLei mraspor fmarsico70 isalos395 vladaman desarrollador20 %}}
 
 If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
 
