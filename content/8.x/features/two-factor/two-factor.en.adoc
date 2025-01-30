@@ -7,7 +7,7 @@ weight: 50
 
 == How to set up Two Factor in SuiteCRM 8?
 
-Visit your user profile and there will be a new "Two-Factor Authentication".
+Visit your user profile and there will be a new "Two-Factor Authentication" tab.
 
 image:2FA-Profile.png[2FA in Profile]
 
@@ -17,9 +17,9 @@ The `Two Factor Configuration` button will bring you to the page to enable Two-F
 
 image:Enable-2FA.png[Enable 2FA Page]
 
-image:Qr-2FA.png[2FA Qr Code]
+image:Qr-2FA.png[2FA QR Code]
 
-After enabling 2FA a Qr Code will show. Scan that on your authenticator app. Enter the code the app shows.
+After enabling 2FA a QR Code will show. Scan that on your authenticator app. Enter the code the app shows.
 
 === Unable to scan the QR Code?
 
@@ -40,7 +40,7 @@ After enabling a set of Recovery/ Backup codes will show.
 
 === What are Recovery/ Backup Codes?
 
-Backup codes are one time codes that can be when you are unable to log in with your authenticator app.
+Backup codes are one time codes that can be used when you are unable to log in with your authenticator app.
 After using a code once you will *not* be able to use it again.
 
 The 10 Backup Codes will only show *after* verifying your authentication code and will *not* show again when revisiting the page.
@@ -62,7 +62,7 @@ image:Disable-Two-Factor.gif[Disable 2FA]
 
 === Other ways to disable
 
-Admins can also disable the 2FA for users via their profile. If the user has 2FA enabled a new "Disable 2FA"
+Admins can also disable the 2FA for users via their profile. If the user has 2FA enabled a new "Disable 2FA" action will appear for Admin users, that will allow Admins to disable 2FA for that user.
 
 image:New-Disable-2FA.png[Disable via Profile]
 

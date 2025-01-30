@@ -27,7 +27,7 @@ _Released 30 January 2025_
 
 ⚠️ *Important:*  These changes will only apply when upgrading from an installed 8.8+ version to the next version
 
-* Starting with SuiteCRM 8.8.0 onwards, the upgrade process will now show warning message with the non-core files
+* Starting with SuiteCRM 8.8.0 onwards, the upgrade process will now show a warning message with the non-core files
 that will be deleted on upgrade.
 * All language files within core directories are now re-added at the end of the upgrade process.
 
@@ -96,7 +96,7 @@ We have added Two-factor authentication on SuiteCRM 8 using TOTP. See more infor
 
 image:Qr-2FA.png[8.8.0 Enable Two-Factor Authentication]
 
-⚠️ *Important:* **For upgrades from 8.8-beta to 8.8.0 - Two Factor Totp Secret and Backup Codes are now encoded in the db.
+⚠️ *Important:* **For upgrades from 8.8-beta to 8.8.0 - Two Factor TOTP Secret and Backup Codes are now encoded in the db.
 This can cause issues when using 2FA configured in the beta. 2FA might need disabled and re-enabled.**
 
 ==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
@@ -142,7 +142,7 @@ See the link:../../../../8.x/developer/extensions/backend/record-mappers/[Record
 
 ==== icon:cog[] Save Handlers
 
-Save handlers are classes that allow to run code before or after saving a record. They similar to the legacy before_save and after_save logic hooks on legacy.
+Save handlers are classes that allow the app to run code before or after saving a record. They are similar to the legacy before_save and after_save logic hooks.
 
 See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Handlers] section for more information.
 
