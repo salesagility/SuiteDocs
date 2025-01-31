@@ -11,15 +11,6 @@ aliases:
 :icons: font
 :imagesdir: /images/en/8.x/admin/release
 
-<<<<<<< HEAD
-== 8.8.0-beta
-
-_Released 12 December 2024_
-
-=== icon:box-open[] Assets
-
-* https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.8.0-beta[GitHub - Download]
-=======
 == 8.8.0
 
 _Released 30 January 2025_
@@ -27,14 +18,11 @@ _Released 30 January 2025_
 === icon:box-open[] Assets
 
 * https://github.com/salesagility/SuiteCRM-Core/releases/tag/v8.8.0[GitHub - Download]
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 * link:../../installation-guide/downloading-installing[SuiteCRM 8 Install Guide]
 * link:../../upgrading[SuiteCRM 8 Upgrade Guide]
 
 ===  icon:check[] Release Notes
 
-<<<<<<< HEAD
-=======
 ==== icon:file[] Changes on Upgrade Command/ Process
 
 ⚠️ *Important:*  These changes will only apply when upgrading from an installed 8.8+ version to the next version
@@ -49,7 +37,6 @@ that will be deleted on upgrade.
 ** .git
 ** .gitignore
 
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 ==== icon:level-up-alt[] Platform upgrade
 
 SuiteCRM is now using angular 18. This brings some system requirement updates and breaking changes.
@@ -62,11 +49,7 @@ See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8
 
 **Minimum node version - 20.11.1**
 
-<<<<<<< HEAD
-The minimum yarn version is now 20.11.1.
-=======
 The minimum node version is now 20.11.1.
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 
 **Minimum yarn version - 4.5.0**
 
@@ -111,13 +94,6 @@ You can now filter by `Favorites` and `My Items`.
 
 We have added Two-factor authentication on SuiteCRM 8 using TOTP. See more information link:../../../../8.x/features/two-factor/two-factor[here.]
 
-<<<<<<< HEAD
-image:enable-2fa-example.png[8.8.0-beta Enable Two-Factor Authentication]
-
-==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
-
-image:new-record-view.png[8.8.0-beta Record View]
-=======
 image:Qr-2FA.png[8.8.0 Enable Two-Factor Authentication]
 
 ⚠️ *Important:* **For upgrades from 8.8-beta to 8.8.0 - Two Factor TOTP Secret and Backup Codes are now encoded in the db.
@@ -126,26 +102,19 @@ This can cause issues when using 2FA configured in the beta. 2FA might need disa
 ==== icon:paint-brush[] Record View, Subpanel, Top Widget and Timeline Redesign
 
 image:new-record-view.png[8.8.0 Record View]
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 
 * Record View
 ** The fields within the record view now take up minimal space, allowing you to see the full record.
 ** The required field indicator has been moved to the left of the field label.
 
 * Subpanels
-<<<<<<< HEAD
-** Subpanels are now more compact and show the number of records a subpanel has.
-=======
 ** Subpanels buttons are now more compact and show the number of records a subpanel has.
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 ** The number of subpanels that show when collapsed is configurable via the `subpanel_buttons_panel_limits.yaml`.
 ** Although it is recommended to do these changes within `defaultExt` or alternatively your own extension.
 
 * Timeline
 ** Following the other changes, the timeline is also more compact showing more information on the record without scrolling.
 
-<<<<<<< HEAD
-=======
 * Top Widget
 ** The Top Widget has been moved to the insights panel, along with some styling adjustments.
 
@@ -160,16 +129,11 @@ SuiteCRM Demo Data has been updated to generate more date and optimized to run f
 ** The `log_dir` on config.php will be updated to a new path, only if it was using the default path.
 ** Old log files will not be moved
 
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 ==== icon:cog[] Performance Updates
 
 * Disabled zone js, for faster front-end performance.
 * Added a delay to non-critical backend calls such as; recently viewed, metadata, and notifications.
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 ==== icon:cog[] Record Mappers
 
 Record Mappers have been added to allow for more flexibility when extending SuiteCRM. They allow to add code for mapping a record to internal or to external format.
@@ -178,21 +142,6 @@ See the link:../../../../8.x/developer/extensions/backend/record-mappers/[Record
 
 ==== icon:cog[] Save Handlers
 
-<<<<<<< HEAD
-Save handlers are classes that allow to run code before or after saving a record. They similar to the legacy before_save and after_save logic hooks on legacy.
-
-See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Handlers] section for more information.
-
-=== icon:bug[] Known issues
-
-* 2FA not fully functional with LDAP and SAML setup.
-* History subpanel can show incorrect number of records.
-* History subpanel filter `My Items` styling is incorrect.
-* Top widget styling is not complete
-* User preferences page styling has issues for non-admin users.
-* If range search is not enabled, the filtering on datetime fields does not work.
-* Table sort direction icon does not change when sorting.
-=======
 Save handlers are classes that allow the app to run code before or after saving a record. They are similar to the legacy before_save and after_save logic hooks.
 
 See the link:../../../../8.x/developer/extensions/backend/save-handlers/[Save Handlers] section for more information.
@@ -224,19 +173,15 @@ There are now 3 different types of `triggeringStatus`:
 * Fixed: Bug with the number field in case filters: https://github.com/salesagility/SuiteCRM-Core/issues/572[#572]
 * Fixed: Checkbox taking a while to respond with large data set: https://github.com/salesagility/SuiteCRM-Core/issues/597[#597]
 * Fixed: Update New Accounts per Month Chart: https://github.com/salesagility/SuiteCRM-Core/issues/75[#75]
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 
 === icon:heart[] Community
 
 We would love to have your feedback and input to help make SuiteCRM 8 great for everyone.
 
-<<<<<<< HEAD
-=======
 _Special thanks to the following members for their contributions and participation in this release!_
 
 {{% ghcontributors julibo likhobory GoryMoon cvillarongace  tdelsoglio abuzarfaris pgorod jschoder-ryl AlexMyddleware LoLei mraspor fmarsico70 isalos395 vladaman desarrollador20 %}}
 
->>>>>>> 789afeed5eb1e4f86325216e3e408c04754993b8
 If you have found an issue you think we should know about, or have suggestion/feedback, please link:https://github.com/salesagility/SuiteCRM-Core/issues[Submit An Issue].
 
 If you want to get involved and submit a fix, fork the repo and when ready please link:https://github.com/salesagility/SuiteCRM-Core/pulls[Submit A PR] - More detail for developers can be found link:https://docs.suitecrm.com/8.x/developer/installation-guide/[here].
