@@ -43,7 +43,12 @@ SuiteCRM is now using angular 18. This brings some system requirement updates an
 
 ⚠️ *Important:* SuiteCRM is still using Webpack and Module Federation. We will not be using esbuild and Native Federation for the time being.
 
-See the link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information.
+*[For frontend development]* Please check:
+
+* The link:../../compatibility-matrix/[Compatibility Matrix] page for the updated versions of the required software.
+* The link:../../../../8.x/developer/extensions/frontend/migration/migration-8.8[Frontend extension - Migrate to SuiteCRM 8.8+] section for more information on how to upgrade/migrate extensions.
+
+
 
 ==== icon:server[] System Requirement Changes - For development
 

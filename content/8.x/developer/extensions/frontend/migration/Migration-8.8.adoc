@@ -65,8 +65,50 @@ In SuiteCRM 8.8 angular version has been updated to v18. This brought some chang
 ** Replaces `yarn build:<extension>`, e.g. `yarn build:defaultExt`.
 ** `yarn build-dev:extension <extensions name>` to build in development
 
+== 4. Steps to migrate the frontend extensions, including defaultExt
 
-
+1. Update `node` and `yarn` to the versions specified on the compatibility matrix.
+** You can check the compatibility matrix on the link:../../../../../admin/compatibility-matrix/[Compatibility Matrix] page.
+2. Unzip the package on the SuiteCRM 8.8+ version to somewhere outside the SuiteCRM directory.
+3. Update the config files on defaultExt. Copy the following files from the package to your instance.
+** `extensions/defaultExt/app/angular.json`
+** `extensions/defaultExt/app/karma.conf.js`
+** `extensions/defaultExt/app/tsconfig.app.json`
+** `extensions/defaultExt/app/tsconfig.spec.json`
+** `extensions/defaultExt/app/tslint.json`
+** `extensions/defaultExt/app/webpack.config.js`
+** `extensions/defaultExt/app/webpack.prod.config.js`
+4. Update the config files on your extension. Using defaultExt as a reference, update the following files.
+** `extensions/<extension>/app/angular.json`
+** `extensions/<extension>/app/karma.conf.js`
+** `extensions/<extension>/app/tsconfig.app.json`
+** `extensions/<extension>/app/tsconfig.spec.json`
+** `extensions/<extension>/app/tslint.json`
+** `extensions/<extension>/app/webpack.config.js`
+** `extensions/<extension>/app/webpack.prod.config.js`
+5. Update any references to the common lib used in extensions.
+** defaultExt: `extensions/defaultExt/app/src`.
+** Your extension: `extensions/<extension>/app/src`
+** You can search on the imports for `from 'common'` and replace with `from 'core'`.
+6. Update `extension.module.ts` on extensions
+** defaultExt: `extensions/defaultExt/app/src/extension.module.ts`.
+** Your extension: `extensions/<extension>/app/src/extension.module.ts`
+** Use `extensions/defaultExt/app/src/extension.module.ts` from the new package as a reference.
+7. Update `remoteEntry` inside `config/extension.php` and your extensions.
+** defaultExt: `extensions/defaultExt/config/extension.php`.
+** Your extension: `extensions/<extension>/config/extension.php`
+** The value of `remoteEntry` has changed from `./extensions/<extension>/remoteEntry.js` to `../extensions/<extension>/remoteEntry.js`
+8. Update your custom frontend code on `defaultExt` and your extensions to cope with any breaking changes.
+9. Run `yarn merge-angular-json` to generate the `angular.json` file.
+** This will generate the root `angular.json` file based on the `base-angular.json` and any extensions' `angular.json`.
+** The `angular.json` file is not part of the base package, it should not be committed.
+** This generated  `angular.json` is used by angular cli to build the main code and the extensions.
+10. Build extensions using `yarn build:extension <extension>`.
+** Build defaultExt: `yarn build:extension defaultExt`.
+** Build your extensions: `yarn build:extension <extension>`.
+11. ⚠️ You should not need to re-build the core frontend, as it should be updated during the upgrade.
+** The only reason you would need to build core is if you have made changes to the core. Which we highly discourage.
+** But if you really need, you can run `yarn build` to build the core. This should be done before building the extensions.
 
 
 
