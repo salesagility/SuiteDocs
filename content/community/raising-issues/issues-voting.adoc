@@ -1,23 +1,35 @@
 ---
-Title:  GitHub Issue Voting
+Title:  GitHub Issue & Pull Request Voting
 Weight: 20
 ---
 
 :imagesdir: /images/en/community
 
-== Voting for Issues on GitHub
+== Voting up GitHub Issues & Pull Requests
 
-Voting on issues will help to determine which ones are more important and as such, require consideration into future releases.
+Voting up GitHub Issues and Pull Requests is an important way to contribute to the project.  Voting helps us determine the key issues and priorities for future releases.
 
-To vote for an issue:
+To vote for an Issue or Pull Requests:
 
-* Locate the issue in the specific GitHub repository
-* Click the issue title to edit/view the issue
+* Locate the Issue or Pull Requests
+* Click the Issue or Pull Requests title to view the issue
 * At the bottom left hand corner on the original description, click on the 'smiley' face
 * Choose the 'thumbs up' icon
 
 {{% notice note %}}
-Any 'thumbs up' recorded on any other comments/notes will be disregarded and not counted.
+'thumbs up' recorded on any other comments/notes will be disregarded and not counted.
 {{% /notice %}}
 
 image:32Issue-Voting.gif[Issue Voting Demo]
+
+You can equally remove your vote for an Issue or Pull Request by clicking the numbered 'thumbs up' icon on the original description.
+
+== Sort Issues or Pull Requests by Votes
+
+To see the most popular issues or pull requests, you can filter to sort Issues or Pull Requests by voted up issues. To do so a list on GitHub you can either select the 'thumbs up' reaction in the 'Sort' selection or add following parameter to the filter
+
+----
+sort:reactions-+1-desc
+----
+
+
