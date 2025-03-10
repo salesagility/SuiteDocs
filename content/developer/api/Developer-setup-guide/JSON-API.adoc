@@ -246,7 +246,12 @@ LTE = '<=';
 
 ===== Logical
 [source,php]
-'AND', 'OR'
+'AND', 'OR', 'LIKE'
+
+Example Like:
+
+[source,html]
+{{suitecrm.url}}/Api/V8/module/Accounts?fields[Accounts]=name,account_type&filter[name][like]=%Robert%
 
 Example:
 
@@ -257,7 +262,6 @@ Example:
 
 [source,php]
 {{suitecrm.url}}/Api/V8/module/Accounts?filter[account_type][eq]=Customer
-
 
 
 Result:
