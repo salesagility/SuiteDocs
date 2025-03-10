@@ -59,6 +59,7 @@ Install on your server the required php modules:
 * zip
 * imap (optional)
 * ldap (optional)
+* auth-sasl (required to login to some email accounts)
 
 === Helpful Resources
 
